@@ -1,0 +1,294 @@
+[
+  {
+    "genre": "ai",
+    "sub": "ChatGPT",
+    "ytid": "J9QdxiZb8P4",
+    "level": "初級",
+    "minutes": 18,
+    "channel": "（公開前に確認）",
+    "score": 31,
+    "axisScores": [
+      { "axis": "実用性", "score": 4, "note": "登録から入力まで順を追いやすい" },
+      { "axis": "正確性・鮮度", "score": 4, "note": "2025年版として現行利用に寄せた内容" },
+      { "axis": "分かりやすさ", "score": 5, "note": "専門用語を避けた初学者向け" },
+      { "axis": "体系性", "score": 5, "note": "最初の1本として置きやすい" },
+      { "axis": "信頼性", "score": 4, "note": "基礎説明として標準以上" },
+      { "axis": "視聴体験", "score": 4, "note": "18分で要点を追える" },
+      { "axis": "規約・権利", "score": 5, "note": "公式リンク誘導のみで紹介可能" }
+    ],
+    "title": "【2025年最新版】超初心者OK！ChatGPTの使い方・基礎をわかりやすく解説！(資料付き)",
+    "url": "https://www.youtube.com/watch?v=J9QdxiZb8P4",
+    "tags": ["使い方", "基礎"],
+    "review": [
+      "ChatGPTを「まず触る」ための最初の1本。登録から入力まで順を追える。",
+      "専門用語を避けた説明で、はじめてでも置いていかれにくい。",
+      "学習の土台づくりに最適。次の応用編へ進むと定着する。"
+    ]
+  },
+  {
+    "genre": "ai",
+    "sub": "ChatGPT",
+    "ytid": "UIyokWUJHck",
+    "level": "中級",
+    "minutes": 35,
+    "channel": "（公開前に確認）",
+    "score": 29,
+    "axisScores": [
+      { "axis": "実用性", "score": 4, "note": "応用機能まで使い道を広げられる" },
+      { "axis": "正確性・鮮度", "score": 4, "note": "2025年版の入門として扱いやすい" },
+      { "axis": "分かりやすさ", "score": 4, "note": "6ステップで段階的" },
+      { "axis": "体系性", "score": 5, "note": "基礎後の広げ方に向く" },
+      { "axis": "信頼性", "score": 4, "note": "保存版として網羅性あり" },
+      { "axis": "視聴体験", "score": 3, "note": "長めなので分割視聴向き" },
+      { "axis": "規約・権利", "score": 5, "note": "独自レビュー主体で紹介可能" }
+    ],
+    "title": "【保存版】ChatGPT 2025年最新入門〜6つのステップで基礎〜応用機能までマスター（無料版対応）",
+    "url": "https://www.youtube.com/watch?v=UIyokWUJHck",
+    "tags": ["入門", "応用"],
+    "review": [
+      "基礎を触った人が「次の一歩」を踏める網羅的な保存版。",
+      "6ステップで無料版の応用機能まで段階的に学べる。",
+      "広く押さえたい人向け。休日にまとめ視聴がおすすめ。"
+    ]
+  },
+  {
+    "genre": "ai",
+    "sub": "Claude",
+    "ytid": "UdEIgP4B0Bs",
+    "level": "初級",
+    "minutes": 28,
+    "channel": "（公開前に確認）",
+    "score": 30,
+    "axisScores": [
+      { "axis": "実用性", "score": 4, "note": "主要機能の使いどころが見える" },
+      { "axis": "正確性・鮮度", "score": 4, "note": "Claude関連機能を幅広く扱う" },
+      { "axis": "分かりやすさ", "score": 4, "note": "全体像を実演ベースで追える" },
+      { "axis": "体系性", "score": 5, "note": "Claude入門の起点にしやすい" },
+      { "axis": "信頼性", "score": 4, "note": "機能整理として十分" },
+      { "axis": "視聴体験", "score": 4, "note": "長すぎず全体を把握できる" },
+      { "axis": "規約・権利", "score": 5, "note": "紹介範囲で扱える" }
+    ],
+    "title": "【完全版】Claudeの使い方入門・全機能をまるっと解説（Projects / Skills / Cowork / Claude Code）",
+    "url": "https://www.youtube.com/watch?v=UdEIgP4B0Bs",
+    "tags": ["Claude", "全機能"],
+    "review": [
+      "Claudeの全体像を1本でつかめる入門の決定版。",
+      "主要機能を実演ベースで紹介、何ができるか想像しやすい。",
+      "文章・資料整理の効率化を狙う人の最初の1本に。"
+    ]
+  },
+  {
+    "genre": "ai",
+    "sub": "自動化",
+    "ytid": "4NDb-X624gY",
+    "level": "中級",
+    "minutes": 9,
+    "channel": "（公開前に確認）",
+    "score": 29,
+    "axisScores": [
+      { "axis": "実用性", "score": 3, "note": "判断材料として要点を把握できる" },
+      { "axis": "正確性・鮮度", "score": 4, "note": "Claude Codeの入口として新しめ" },
+      { "axis": "分かりやすさ", "score": 4, "note": "短時間で全体像をつかめる" },
+      { "axis": "体系性", "score": 4, "note": "中級以降の橋渡しになる" },
+      { "axis": "信頼性", "score": 4, "note": "活用判断の材料として十分" },
+      { "axis": "視聴体験", "score": 5, "note": "9分で見切れる" },
+      { "axis": "規約・権利", "score": 5, "note": "規約回避を促す内容ではない想定" }
+    ],
+    "title": "【初心者】Claude Codeの全体像がたった9分で丸分かり！始め方〜活用法まで解説",
+    "url": "https://www.youtube.com/watch?v=4NDb-X624gY",
+    "tags": ["自動化", "短時間"],
+    "review": [
+      "「コードで自動化」の全体像を9分で。短時間で要点だけ。",
+      "始め方〜活用法を俯瞰でき、必要か判断しやすい。",
+      "深掘りは長尺講座へ進むのが効率的。"
+    ]
+  },
+  {
+    "genre": "ai",
+    "sub": "Claude",
+    "ytid": "OhO0WcRP6Ow",
+    "level": "中級",
+    "minutes": 40,
+    "channel": "（公開前に確認）",
+    "score": 28,
+    "axisScores": [
+      { "axis": "実用性", "score": 4, "note": "機能選定に役立つ" },
+      { "axis": "正確性・鮮度", "score": 4, "note": "最新版の総まとめとして扱える" },
+      { "axis": "分かりやすさ", "score": 4, "note": "便利機能を横断して見られる" },
+      { "axis": "体系性", "score": 4, "note": "応用前の総点検に向く" },
+      { "axis": "信頼性", "score": 4, "note": "機能紹介として標準以上" },
+      { "axis": "視聴体験", "score": 3, "note": "拾い見が効率的" },
+      { "axis": "規約・権利", "score": 5, "note": "独自解説主体で紹介可能" }
+    ],
+    "title": "【最新版】Claude（クロード）完全解説！20以上の便利機能をこの動画1本で全て解説",
+    "url": "https://www.youtube.com/watch?v=OhO0WcRP6Ow",
+    "tags": ["便利機能", "総まとめ"],
+    "review": [
+      "ひと通り触った後の機能総まとめ。",
+      "20以上の機能から自分に効くものを選びやすい。",
+      "気になる機能だけ拾い見する使い方でも価値がある。"
+    ]
+  },
+  {
+    "genre": "prog",
+    "sub": "Python",
+    "ytid": "HCZNs3AyFM8",
+    "level": "初級",
+    "minutes": 60,
+    "channel": "（公開前に確認）",
+    "score": null,
+    "axisScores": [],
+    "title": "【最新版】Python超入門講座（合併版）｜Pythonの超基本をたった1時間で",
+    "url": "https://www.youtube.com/watch?v=HCZNs3AyFM8",
+    "tags": ["Python", "入門"],
+    "review": [
+      "プログラミング未経験の最初の1本。基礎を1時間で通せる。",
+      "環境構築から基本文法まで手を動かして追える構成。",
+      "全体像を掴みたい人向け。次に長尺の基礎へ進むと定着。"
+    ]
+  },
+  {
+    "genre": "prog",
+    "sub": "Python",
+    "ytid": "iqNBNzlO_-4",
+    "level": "初級",
+    "minutes": 50,
+    "channel": "（公開前に確認）",
+    "score": null,
+    "axisScores": [],
+    "title": "【2026年最新】宇宙一簡単なPython入門講座！初心者OK（Windows/Mac対応）",
+    "url": "https://www.youtube.com/watch?v=iqNBNzlO_-4",
+    "tags": ["Python", "セットアップ"],
+    "review": [
+      "最新版で環境差(Win/Mac)に配慮、序盤で迷いにくい。",
+      "「いちばんやさしい」構成で専門用語が少なく親切。",
+      "1本目に観て、総集編で反復するのがおすすめ。"
+    ]
+  },
+  {
+    "genre": "prog",
+    "sub": "Python",
+    "ytid": "hv0w4ZCT-uQ",
+    "level": "中級",
+    "minutes": 180,
+    "channel": "（公開前に確認）",
+    "score": null,
+    "axisScores": [],
+    "title": "【総集編】Python入門講座｜基礎を3時間でしっかり（高校生・初心者向け）",
+    "url": "https://www.youtube.com/watch?v=hv0w4ZCT-uQ",
+    "tags": ["Python", "総集編"],
+    "review": [
+      "腰を据えて基礎を固める3時間総集編。体系的に学べる。",
+      "やさしい進行で1本で基礎を一周できる。",
+      "長尺ぶん分割視聴推奨。手を動かすと効果的。"
+    ]
+  },
+  {
+    "genre": "video",
+    "sub": "Premiere Pro",
+    "ytid": "jSNPN5NnB_E",
+    "level": "初級",
+    "minutes": 30,
+    "channel": "（公開前に確認）",
+    "score": null,
+    "axisScores": [],
+    "title": "【2025年最新】1本で丸わかり！初心者にも優しいYouTube動画編集のやり方【Premiere Pro】",
+    "url": "https://www.youtube.com/watch?v=jSNPN5NnB_E",
+    "tags": ["Premiere", "入門"],
+    "review": [
+      "編集の流れを1本で俯瞰。カット〜書き出しまで掴める。",
+      "初心者にやさしく、最初の1本を完走しやすい。",
+      "副業編集の入口に。次は機能別の深掘りへ。"
+    ]
+  },
+  {
+    "genre": "video",
+    "sub": "Premiere Pro",
+    "ytid": "w2GE8Ix_8Dc",
+    "level": "初級",
+    "minutes": 22,
+    "channel": "（公開前に確認）",
+    "score": null,
+    "axisScores": [],
+    "title": "【Premiere Pro初心者必見！】動画編集基礎編 2025年版 始め方・シーケンス設定",
+    "url": "https://www.youtube.com/watch?v=w2GE8Ix_8Dc",
+    "tags": ["Premiere", "初期設定"],
+    "review": [
+      "つまずきやすい初期設定(シーケンス)をていねいに解説。",
+      "2025年版で画面に沿って進められる。",
+      "基礎編として最適。慣れたらカット編集の実践へ。"
+    ]
+  },
+  {
+    "genre": "video",
+    "sub": "Premiere Pro",
+    "ytid": "4Up669PRU2M",
+    "level": "初級",
+    "minutes": 15,
+    "channel": "Adobe Creative Station（公式・要確認）",
+    "score": null,
+    "axisScores": [],
+    "title": "【Premiere Pro】初心者向け：基本操作とカット編集を覚えよう #1｜アドビ公式",
+    "url": "https://www.youtube.com/watch?v=4Up669PRU2M",
+    "tags": ["Premiere", "公式"],
+    "review": [
+      "Adobe公式の入門シリーズ第1回で情報の信頼性が高い。",
+      "基本操作とカット編集という最重要スキルから始められる。",
+      "シリーズで続けて学ぶと体系化できる。"
+    ]
+  },
+  {
+    "genre": "english",
+    "sub": "英会話",
+    "ytid": "qATcO0yjTdI",
+    "level": "初級",
+    "minutes": 20,
+    "channel": "（公開前に確認）",
+    "score": null,
+    "axisScores": [],
+    "title": "英語初心者でも独学で話せるようになる勉強法｜TOEIC満点が教える最短ロードマップ",
+    "url": "https://www.youtube.com/watch?v=qATcO0yjTdI",
+    "tags": ["独学", "ロードマップ"],
+    "review": [
+      "「何から始める？」に答える独学ロードマップ。遠回りを避けられる。",
+      "満点者の経験ベースで、つまずく順序を整理してくれる。",
+      "やり直し英語の地図として最初に観る価値がある。"
+    ]
+  },
+  {
+    "genre": "english",
+    "sub": "英会話",
+    "ytid": "3ghj8rPFpTs",
+    "level": "初級",
+    "minutes": 18,
+    "channel": "（公開前に確認）",
+    "score": null,
+    "axisScores": [],
+    "title": "多忙の社会人が3ヶ月で英語話せるようになった勉強法",
+    "url": "https://www.youtube.com/watch?v=3ghj8rPFpTs",
+    "tags": ["社会人", "時短"],
+    "review": [
+      "時間がない社会人向けの現実的な勉強法。スキマ活用が参考に。",
+      "3ヶ月の区切りで優先順位が明確、挫折しにくい。",
+      "忙しい人ほど効く。継続の仕組みづくりのヒント。"
+    ]
+  },
+  {
+    "genre": "english",
+    "sub": "TOEIC",
+    "ytid": "SCYKjFCslLk",
+    "level": "中級",
+    "minutes": 25,
+    "channel": "（公開前に確認）",
+    "score": null,
+    "axisScores": [],
+    "title": "英語を独学で伸ばしたい人へ｜迷わない参考書ルートと学習手順（完全版）",
+    "url": "https://www.youtube.com/watch?v=SCYKjFCslLk",
+    "tags": ["参考書", "学習手順"],
+    "review": [
+      "独学の「参考書ルート」を体系化。教材選びで迷わない。",
+      "学習手順が順序立ち、初級を抜けた人の次の一歩に。",
+      "保存版。自分のレベルに合う箇所から着手を。"
+    ]
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "genre": "ai",
+    "title": "生成AIロードマップ",
+    "steps": [
+      {
+        "label": "STEP1",
+        "level": "初級",
+        "goal": "アカウントを作り、AIに指示して回答を得られる。ChatGPTとClaudeの違いが分かる。",
+        "videos": ["J9QdxiZb8P4", "UdEIgP4B0Bs"]
+      },
+      {
+        "label": "STEP2",
+        "level": "中級",
+        "goal": "無料版の応用機能・主要機能を業務に当てはめて使える。",
+        "videos": ["UIyokWUJHck", "OhO0WcRP6Ow"]
+      },
+      {
+        "label": "STEP3",
+        "level": "中〜上級",
+        "goal": "AIに作業を任せる自動化の入口を理解し、必要性を判断できる。",
+        "videos": ["4NDb-X624gY"]
+      }
+    ]
+  },
+  {
+    "genre": "prog",
+    "title": "プログラミングロードマップ",
+    "steps": [
+      {
+        "label": "STEP1",
+        "level": "初級",
+        "goal": "Pythonの環境と基本文法を一周し、学習の全体像をつかむ。",
+        "videos": ["HCZNs3AyFM8", "iqNBNzlO_-4"]
+      },
+      {
+        "label": "STEP2",
+        "level": "中級",
+        "goal": "長尺で反復しながら、基礎を体系的に固める。",
+        "videos": ["hv0w4ZCT-uQ"]
+      }
+    ]
+  },
+  {
+    "genre": "video",
+    "title": "動画編集ロードマップ",
+    "steps": [
+      {
+        "label": "STEP1",
+        "level": "初級",
+        "goal": "編集の流れと初期設定を把握し、1本目の編集に着手できる。",
+        "videos": ["jSNPN5NnB_E", "w2GE8Ix_8Dc"]
+      },
+      {
+        "label": "STEP2",
+        "level": "中級",
+        "goal": "公式の基本操作を確認し、カット編集を安定して行える。",
+        "videos": ["4Up669PRU2M"]
+      }
+    ]
+  },
+  {
+    "genre": "english",
+    "title": "英語ロードマップ",
+    "steps": [
+      {
+        "label": "STEP1",
+        "level": "初級",
+        "goal": "独学の全体像をつかみ、最初にやることを決める。",
+        "videos": ["qATcO0yjTdI"]
+      },
+      {
+        "label": "STEP2",
+        "level": "初級",
+        "goal": "多忙な社会人でも続けられる学習サイクルを作る。",
+        "videos": ["3ghj8rPFpTs"]
+      },
+      {
+        "label": "STEP3",
+        "level": "中級",
+        "goal": "教材選びと手順を整理し、独学の迷いを減らす。",
+        "videos": ["SCYKjFCslLk"]
+      }
+    ]
+  }
+]

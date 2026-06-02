@@ -1,0 +1,816 @@
+"use client";
+
+import Fuse from "fuse.js";
+import Image from "next/image";
+import { useMemo, useState } from "react";
+import BrandLogo, { BrandMark } from "@/components/BrandLogo";
+import genresData from "@/content/genres.json";
+import roadmapsData from "@/content/roadmaps.json";
+import videosData from "@/content/videos.json";
+
+type GenreStatus = "published" | "preparing" | "checking";
+
+type Genre = {
+  key: string;
+  label: string;
+  icon: string;
+  status: GenreStatus;
+  note?: string;
+  subgenres: string[];
+  monetization: string;
+  prItems: string[];
+};
+
+type AxisScore = {
+  axis: string;
+  score: number;
+  note: string;
+};
+
+type Video = {
+  genre: string;
+  sub: string;
+  ytid: string;
+  level: "初級" | "中級" | "上級";
+  minutes: number;
+  channel: string;
+  score: number | null;
+  axisScores: AxisScore[];
+  title: string;
+  url: string;
+  tags: string[];
+  review: string[];
+};
+
+type Roadmap = {
+  genre: string;
+  title: string;
+  steps: {
+    label: string;
+    level: string;
+    goal: string;
+    videos: string[];
+  }[];
+};
+
+const genres = genresData as Genre[];
+const videos = videosData as Video[];
+const roadmaps = roadmapsData as Roadmap[];
+
+const publishedGenreKeys = genres
+  .filter((genre) => genre.status === "published")
+  .map((genre) => genre.key);
+
+const levels = ["すべて", "初級", "中級", "上級"] as const;
+const timeBuckets = [
+  { value: "all", label: "すべて" },
+  { value: "short", label: "〜10分" },
+  { value: "medium", label: "10〜30分" },
+  { value: "long", label: "30分〜" }
+] as const;
+
+function statusLabel(status: GenreStatus) {
+  if (status === "published") return "公開中";
+  if (status === "checking") return "確認中（注記）";
+  return "近日公開";
+}
+
+function statusClasses(status: GenreStatus) {
+  if (status === "published") return "bg-leaf text-white";
+  if (status === "checking") return "bg-amberSoft text-ink";
+  return "bg-mist text-ink";
+}
+
+function scoreClasses(score: number | null) {
+  if (score === null) return "border-dashed border-ink/30 bg-white text-muted";
+  if (score >= 28) return "border-leaf bg-leaf text-white";
+  if (score >= 23) return "border-amberSoft bg-amberSoft text-ink";
+  return "border-coral bg-coral text-white";
+}
+
+function timeMatches(minutes: number, bucket: string) {
+  if (bucket === "short") return minutes <= 10;
+  if (bucket === "medium") return minutes > 10 && minutes <= 30;
+  if (bucket === "long") return minutes > 30;
+  return true;
+}
+
+function genreName(key: string) {
+  const genre = genres.find((item) => item.key === key);
+  return genre ? genre.label : key;
+}
+
+const genreIconSources: Record<string, string> = {
+  ai: "/brand/icon-ai.png",
+  prog: "/brand/icon-prog.png",
+  video: "/brand/icon-video.png",
+  english: "/brand/icon-english.png"
+};
+
+export default function ManapickApp() {
+  const [selectedGenre, setSelectedGenre] = useState("all");
+  const [selectedSub, setSelectedSub] = useState("all");
+  const [selectedLevel, setSelectedLevel] = useState<(typeof levels)[number]>("すべて");
+  const [selectedTime, setSelectedTime] = useState("all");
+  const [keyword, setKeyword] = useState("");
+  const [activeRoadmapGenre, setActiveRoadmapGenre] = useState("ai");
+
+  const selectedGenreData =
+    selectedGenre === "all" ? null : genres.find((genre) => genre.key === selectedGenre) ?? null;
+
+  const subOptions = useMemo(() => {
+    if (selectedGenreData) return selectedGenreData.subgenres;
+    return Array.from(new Set(genres.flatMap((genre) => genre.subgenres))).sort();
+  }, [selectedGenreData]);
+
+  const fuse = useMemo(
+    () =>
+      new Fuse(videos, {
+        keys: ["title", "sub", "channel", "tags", "review"],
+        threshold: 0.35,
+        ignoreLocation: true
+      }),
+    []
+  );
+
+  const keywordMatchedIds = useMemo(() => {
+    const query = keyword.trim();
+    if (!query) return null;
+    const exactHits = videos.filter((video) => {
+      const haystack = [video.title, video.sub, video.channel, ...video.tags, ...video.review]
+        .join(" ")
+        .toLowerCase();
+      return haystack.includes(query.toLowerCase());
+    });
+    const fuzzyHits = fuse.search(query).map((result) => result.item);
+    return new Set([...exactHits, ...fuzzyHits].map((video) => video.ytid));
+  }, [fuse, keyword]);
+
+  const filteredVideos = useMemo(() => {
+    return videos.filter((video) => {
+      const genreOk =
+        selectedGenre === "all"
+          ? publishedGenreKeys.includes(video.genre)
+          : video.genre === selectedGenre;
+      const subOk = selectedSub === "all" || video.sub === selectedSub;
+      const levelOk = selectedLevel === "すべて" || video.level === selectedLevel;
+      const timeOk = timeMatches(video.minutes, selectedTime);
+      const keywordOk = keywordMatchedIds === null || keywordMatchedIds.has(video.ytid);
+      return genreOk && subOk && levelOk && timeOk && keywordOk;
+    });
+  }, [keywordMatchedIds, selectedGenre, selectedLevel, selectedSub, selectedTime]);
+
+  const roadmapTabs = useMemo(() => {
+    return roadmaps.filter((roadmap) => publishedGenreKeys.includes(roadmap.genre));
+  }, []);
+
+  const activeRoadmap = useMemo(() => {
+    return roadmapTabs.find((roadmap) => roadmap.genre === activeRoadmapGenre) ?? roadmapTabs[0] ?? null;
+  }, [activeRoadmapGenre, roadmapTabs]);
+
+  const visiblePrGenres = useMemo(() => {
+    if (selectedGenre === "all") {
+      return genres.filter((genre) => genre.status === "published");
+    }
+    return selectedGenreData ? [selectedGenreData] : [];
+  }, [selectedGenre, selectedGenreData]);
+
+  function handleGenreChange(nextGenre: string) {
+    setSelectedGenre(nextGenre);
+    setSelectedSub("all");
+  }
+
+  function resetFilters() {
+    setSelectedGenre("all");
+    setSelectedSub("all");
+    setSelectedLevel("すべて");
+    setSelectedTime("all");
+    setKeyword("");
+  }
+
+  function viewAiGenre() {
+    handleGenreChange("ai");
+    window.requestAnimationFrame(() => {
+      document.getElementById("search")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
+  return (
+    <main>
+      <header className="border-b border-line bg-surface/92 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 min-[720px]:flex-row min-[720px]:items-center min-[720px]:justify-between min-[720px]:px-6">
+          <a href="#top" className="min-w-0" aria-label="Manapick トップ">
+            <BrandLogo compact />
+          </a>
+          <nav className="flex flex-wrap gap-3 text-sm font-semibold text-muted" aria-label="サイト内リンク">
+            <a className="transition hover:text-accent" href="#search">
+              探す
+            </a>
+            <a className="transition hover:text-accent" href="#roadmap">
+              ロードマップ
+            </a>
+            <a className="transition hover:text-accent" href="#pr">
+              PR
+            </a>
+            <a className="transition hover:text-accent" href="/contact/">
+              お問い合わせ
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <section id="top" className="hero-section">
+        <div className="pointer-events-none absolute -left-24 top-14 -z-10 h-72 w-[32rem] rotate-[-18deg] rounded-[38%_62%_58%_42%] bg-[#1F3A8A]/[0.07] blur-2xl" aria-hidden="true" />
+        <div className="pointer-events-none absolute -right-24 bottom-4 -z-10 h-80 w-[34rem] rotate-12 rounded-[62%_38%_42%_58%] bg-[#0FA98B]/[0.08] blur-2xl" aria-hidden="true" />
+        <svg
+          className="pointer-events-none absolute inset-x-0 top-10 -z-10 h-full w-full opacity-[0.07]"
+          viewBox="0 0 1200 520"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M86 404 L260 276 L416 314 L608 164 L760 202 L1018 64"
+            stroke="#1F3A8A"
+            strokeWidth="18"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M962 72 L1030 52 L1014 122"
+            stroke="#0FA98B"
+            strokeWidth="18"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+
+        <div className="hero-container">
+          <div className="hero-copy-column">
+            <p className="hero-eyebrow">
+              社会人のリスキリング動画キュレーション
+            </p>
+            <h1 className="hero-title">
+              <span className="hero-title-line">
+                <span className="hero-title-highlight">見るべき一本</span>だけを、
+              </span>
+              <span className="hero-title-line">迷わせない。</span>
+            </h1>
+            <p className="hero-lead">
+              AI・IT・英語・動画編集など、キャリアに効く学習動画を“Manapickスコア（35点満点）”で厳選。初級→上級のロードマップで、何から見るかもう迷わない。
+            </p>
+
+            <div className="hero-chip-grid">
+              <ValueChip iconSrc="/brand/icon-curate.png" title="Manapickスコアで厳選" body="35点満点で採点" />
+              <ValueChip iconSrc="/brand/icon-roadmap.png" title="ロードマップで迷わない" body="初級→上級" />
+              <ValueChip iconSrc="/brand/icon-safe.png" title="公式埋め込みだけ・安心" body="規約順守" />
+            </div>
+
+            <div className="hero-actions">
+              <button type="button" onClick={viewAiGenre} className="btn btn-primary w-full min-[520px]:w-auto">
+                生成AIから見る →
+              </button>
+              <a href="#roadmap" className="btn btn-secondary w-full min-[520px]:w-auto">
+                学習ロードマップ
+              </a>
+            </div>
+
+            <p className="hero-proof">
+              公開中4ジャンル ／ 14本を厳選 ／ 順次拡大
+            </p>
+          </div>
+          <div className="hero-kv-wrap">
+            <Image
+              src="/brand/hero-kv.png"
+              alt="多数の学習動画から選ばれた一本と、上昇する学習ルートのイラスト"
+              width={1122}
+              height={1402}
+              priority
+              sizes="(min-width: 980px) 520px, (min-width: 760px) 44vw, 88vw"
+              className="hero-kv-image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="search" className="border-b border-line bg-white/64">
+        <div className="mx-auto max-w-7xl px-4 py-7 min-[760px]:px-6">
+          <div className="mb-5 flex flex-col gap-2 min-[720px]:flex-row min-[720px]:items-end min-[720px]:justify-between">
+            <div>
+              <p className="text-sm font-bold text-leaf">①ざっくり探す</p>
+              <h2 className="text-2xl font-black text-ink">ジャンルから選ぶ</h2>
+            </div>
+            <div className="flex flex-wrap gap-2 text-xs font-bold text-muted">
+              <span className="rounded-full bg-leaf px-3 py-1 text-white">公開中</span>
+              <span className="rounded-full bg-mist px-3 py-1">近日公開</span>
+              <span className="rounded-full bg-amberSoft px-3 py-1">確認中（注記）</span>
+            </div>
+          </div>
+
+          <div className="grid gap-2 min-[560px]:grid-cols-2 min-[880px]:grid-cols-5" role="group" aria-label="ジャンル">
+            <button
+              type="button"
+              onClick={() => handleGenreChange("all")}
+              className={`rounded-lg border px-3 py-3 text-left transition ${
+                selectedGenre === "all"
+                  ? "border-leaf bg-leaf text-white"
+                  : "border-line bg-white hover:border-accent/50 hover:shadow-card"
+              }`}
+            >
+              <span className="block text-sm font-black">すべての公開中ジャンル</span>
+              <span className="mt-1 block text-xs opacity-80">{videos.length}本から探す</span>
+            </button>
+            {genres.map((genre) => (
+              <button
+                type="button"
+                key={genre.key}
+                onClick={() => handleGenreChange(genre.key)}
+                className={`rounded-lg border px-3 py-3 text-left transition ${
+                  selectedGenre === genre.key
+                    ? "border-leaf bg-leaf text-white"
+                    : "border-line bg-white hover:border-accent/50 hover:shadow-card"
+                }`}
+              >
+                <span className="flex items-start gap-2 text-sm font-black">
+                  <GenreIcon genreKey={genre.key} className="genre-selector-icon" />
+                  <span>{genre.label}</span>
+                </span>
+                <span
+                  className={`mt-2 inline-flex rounded-full px-2 py-1 text-xs font-bold ${
+                    selectedGenre === genre.key ? "bg-white/18 text-white" : statusClasses(genre.status)
+                  }`}
+                >
+                  {statusLabel(genre.status)}
+                </span>
+                {genre.note ? <span className="mt-1 block text-xs opacity-75">{genre.note}</span> : null}
+              </button>
+            ))}
+          </div>
+
+          <div className="mt-7 border-t border-line pt-6">
+            <div className="mb-4">
+              <p className="text-sm font-bold text-leaf">②詳細に探す</p>
+              <h2 className="text-2xl font-black text-ink">条件で絞り込む</h2>
+            </div>
+            <div className="grid gap-3 min-[560px]:grid-cols-2 min-[940px]:grid-cols-[1fr_0.8fr_0.9fr_1.4fr_auto] min-[940px]:items-end">
+              <label className="block">
+                <span className="mb-1 block text-sm font-bold text-muted">サブジャンル</span>
+                <select
+                  value={selectedSub}
+                  onChange={(event) => setSelectedSub(event.target.value)}
+                  className="h-12 w-full rounded-lg border border-line bg-white px-3 text-base"
+                >
+                  <option value="all">すべて</option>
+                  {subOptions.map((sub) => (
+                    <option key={sub} value={sub}>
+                      {sub}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="block">
+                <span className="mb-1 block text-sm font-bold text-muted">レベル</span>
+                <select
+                  value={selectedLevel}
+                  onChange={(event) => setSelectedLevel(event.target.value as (typeof levels)[number])}
+                  className="h-12 w-full rounded-lg border border-line bg-white px-3 text-base"
+                >
+                  {levels.map((level) => (
+                    <option key={level} value={level}>
+                      {level}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="block">
+                <span className="mb-1 block text-sm font-bold text-muted">所要時間</span>
+                <select
+                  value={selectedTime}
+                  onChange={(event) => setSelectedTime(event.target.value)}
+                  className="h-12 w-full rounded-lg border border-line bg-white px-3 text-base"
+                >
+                  {timeBuckets.map((bucket) => (
+                    <option key={bucket.value} value={bucket.value}>
+                      {bucket.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="block">
+                <span className="mb-1 block text-sm font-bold text-muted">キーワード</span>
+                <input
+                  value={keyword}
+                  onChange={(event) => setKeyword(event.target.value)}
+                  placeholder="例: Claude / Python / 独学"
+                  className="h-12 w-full rounded-lg border border-line bg-white px-3 text-base"
+                />
+              </label>
+              <button
+                type="button"
+                onClick={resetFilters}
+                className="h-12 rounded-lg border border-line bg-paper px-4 text-sm font-black text-ink transition hover:border-accent/50 hover:shadow-card"
+              >
+                条件リセット
+              </button>
+            </div>
+
+            <div className="mt-5 flex flex-col gap-2 text-sm text-muted min-[680px]:flex-row min-[680px]:items-center min-[680px]:justify-between">
+              <p>
+                <span className="font-black text-ink">{filteredVideos.length}</span>件ヒット
+                {selectedGenreData?.status === "preparing" ? "。このジャンルは近日公開です。" : ""}
+                {selectedGenreData?.status === "checking" ? "。このジャンルは確認中です。" : ""}
+              </p>
+              <p>視聴はYouTube公式リンクのみ。動画のダウンロード機能はありません。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-8 min-[760px]:px-6" aria-label="動画一覧">
+        {selectedGenreData?.status !== "published" && selectedGenreData ? (
+          <div className="rounded-lg border border-line bg-surface p-5 shadow-card">
+            <p className="flex items-center gap-2 text-sm font-bold text-leaf">
+              <GenreIcon genreKey={selectedGenreData.key} className="selected-genre-icon" />
+              <span>{genreName(selectedGenreData.key)}</span>
+            </p>
+            <h2 className="mt-2 text-2xl font-black">
+              {selectedGenreData.status === "checking" ? "確認中（注記）" : "近日公開"}
+            </h2>
+            <p className="mt-2 leading-7 text-muted">
+              種コンテンツが揃い次第、独自3行レビューとロードマップを追加します。
+            </p>
+          </div>
+        ) : filteredVideos.length === 0 ? (
+          <div className="rounded-lg border border-line bg-surface p-5 shadow-card">
+            <h2 className="text-2xl font-black">該当する動画がありません</h2>
+            <p className="mt-2 leading-7 text-muted">条件を少し広げて探してください。</p>
+          </div>
+        ) : (
+          <div className="grid gap-4 min-[560px]:grid-cols-2 min-[880px]:grid-cols-3">
+            {filteredVideos.map((video) => (
+              <VideoCard key={video.ytid} video={video} />
+            ))}
+          </div>
+        )}
+      </section>
+
+      <section id="roadmap" className="roadmap-section">
+        <div className="roadmap-shell">
+          <div className="roadmap-heading">
+            <p className="section-eyebrow">学習ロードマップ</p>
+            <h2 className="section-title">初級→中級→上級の順番で迷わず進む</h2>
+          </div>
+          {roadmapTabs.length === 0 || activeRoadmap === null ? (
+            <p className="rounded-lg border border-line bg-surface p-5 shadow-card text-muted">
+              このジャンルのロードマップは近日公開です。
+            </p>
+          ) : (
+            <>
+              <div className="roadmap-tabs" role="tablist" aria-label="ロードマップのジャンル">
+                {roadmapTabs.map((roadmap) => (
+                  <button
+                    key={roadmap.genre}
+                    type="button"
+                    role="tab"
+                    aria-selected={activeRoadmap.genre === roadmap.genre}
+                    aria-controls="roadmap-panel"
+                    onClick={() => setActiveRoadmapGenre(roadmap.genre)}
+                    className={activeRoadmap.genre === roadmap.genre ? "roadmap-tab is-active" : "roadmap-tab"}
+                  >
+                    {genreLabel(roadmap.genre)}
+                  </button>
+                ))}
+              </div>
+              <RoadmapTimeline roadmap={activeRoadmap} />
+            </>
+          )}
+        </div>
+      </section>
+
+      <section id="pr" className="mx-auto max-w-7xl px-4 py-8 min-[760px]:px-6">
+        <div className="mb-5">
+          <p className="text-sm font-bold text-coral">PR / 広告</p>
+          <h2 className="text-2xl font-black text-ink">おすすめ教材・スクール（PR）</h2>
+          <p className="mt-2 max-w-3xl leading-7 text-muted">
+            v1では実リンク未設置です。ASP提携後、承認ゲートを通して
+            <code className="mx-1 rounded bg-white px-1">rel=&quot;sponsored noopener&quot;</code>
+            付きリンクを差し込みます。
+          </p>
+        </div>
+        <div className="grid gap-4 min-[640px]:grid-cols-2 min-[980px]:grid-cols-4">
+          {visiblePrGenres.map((genre) => (
+            <PrBlock key={genre.key} genre={genre} />
+          ))}
+        </div>
+      </section>
+
+      <footer className="border-t border-primaryInk bg-ink text-white">
+        <div className="mx-auto flex max-w-7xl flex-col gap-5 px-4 py-7 min-[760px]:flex-row min-[760px]:items-center min-[760px]:justify-between min-[760px]:px-6">
+          <div>
+            <p className="flex items-center gap-2 text-xl font-black">
+              <BrandMark className="h-8 w-8" />
+              <span>Manapick</span>
+            </p>
+            <p className="mt-1 text-sm text-white/68">学び直しを、最短ルートに。</p>
+          </div>
+          <nav className="flex flex-wrap gap-4 text-sm font-bold text-white/78" aria-label="固定ページ">
+            <a className="hover:text-white" href="/operator/">
+              運営者情報
+            </a>
+            <a className="hover:text-white" href="/privacy/">
+              プライバシーポリシー
+            </a>
+            <a className="hover:text-white" href="/disclaimer/">
+              免責事項
+            </a>
+            <a className="hover:text-white" href="/contact/">
+              お問い合わせ
+            </a>
+          </nav>
+        </div>
+      </footer>
+    </main>
+  );
+}
+
+function VideoCard({ video }: { video: Video }) {
+  const scoreText = video.score === null ? "要採点" : video.score + "/35";
+
+  return (
+    <article
+      id={video.ytid}
+      className="group flex min-w-0 scroll-mt-6 flex-col overflow-hidden rounded-lg border border-line bg-surface shadow-card transition duration-300 ease-[var(--ease-standard)] hover:-translate-y-1 hover:shadow-cardHover focus-within:shadow-cardHover motion-reduce:transform-none motion-reduce:transition-none"
+    >
+      <a
+        href={video.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={video.title + "をYouTubeで開く"}
+        className="block overflow-hidden bg-bgSoft"
+      >
+        <div className="relative aspect-video bg-bgSoft">
+          <Image
+            src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"}
+            alt=""
+            fill
+            sizes="(min-width: 880px) 33vw, (min-width: 560px) 50vw, 100vw"
+            loading="lazy"
+            className="h-full w-full object-cover transition-transform duration-300 ease-[var(--ease-standard)] group-hover:scale-[1.025] motion-reduce:transform-none motion-reduce:transition-none"
+          />
+          <span className="absolute left-3 top-3 rounded-pill bg-ink/88 px-2.5 py-1 text-xs font-black text-white shadow-line">
+            {video.minutes}分
+          </span>
+          <span
+            className={["absolute right-3 top-3 rounded-pill border px-3 py-1 text-xs font-black shadow-line", scoreClasses(video.score)].join(" ")}
+            title={video.score === null ? "視聴後に採点確定" : "Manapickスコア"}
+          >
+            {scoreText}
+          </span>
+        </div>
+      </a>
+      <div className="flex flex-1 flex-col gap-3 p-4">
+        <div className="flex flex-wrap gap-2">
+          <span className="rounded-pill bg-bgSoft px-2.5 py-1 text-xs font-black text-primaryInk">{video.level}</span>
+          <span className="rounded-pill bg-bg px-2.5 py-1 text-xs font-black text-ink">{video.sub}</span>
+        </div>
+        <h3 className="line-clamp-2 text-base font-black leading-6 text-ink">
+          <a className="transition hover:text-accent" href={video.url} target="_blank" rel="noopener noreferrer">
+            {video.title}
+          </a>
+        </h3>
+        <p className="text-sm font-bold text-muted">チャンネル: {video.channel}</p>
+        <ol className="grid gap-2 text-sm leading-6 text-ink/76">
+          {video.review.map((line, index) => (
+            <li key={line} className="flex gap-2">
+              <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-pill bg-bgSoft text-xs font-black text-primaryInk">
+                {index + 1}
+              </span>
+              <span>{line}</span>
+            </li>
+          ))}
+        </ol>
+        <div className="flex flex-wrap gap-2">
+          {video.tags.map((tag) => (
+            <span key={tag} className="rounded-pill border border-line bg-white px-2 py-1 text-xs font-bold text-muted">
+              #{tag}
+            </span>
+          ))}
+        </div>
+        {video.axisScores.length > 0 ? (
+          <details className="rounded-md border border-line bg-bg px-3 py-2 text-sm open:bg-white">
+            <summary className="cursor-pointer font-black text-primaryInk">詳細スコアを見る</summary>
+            <dl className="mt-3 grid gap-2">
+              {video.axisScores.map((axis) => (
+                <div key={axis.axis} className="grid gap-1 border-t border-line pt-2 first:border-t-0 first:pt-0">
+                  <dt className="font-black text-ink">
+                    {axis.axis} {axis.score}/5
+                  </dt>
+                  <dd className="leading-6 text-muted">{axis.note}</dd>
+                </div>
+              ))}
+            </dl>
+          </details>
+        ) : (
+          <p className="rounded-md border border-dashed border-line bg-bg px-3 py-2 text-sm font-bold text-muted">
+            Manapickスコアは公開前の視聴確認で確定します。
+          </p>
+        )}
+        <a
+          className="mt-auto inline-flex h-11 items-center justify-center rounded-md bg-accent px-4 text-sm font-black text-white shadow-button transition duration-200 ease-[var(--ease-standard)] hover:bg-primary focus-visible:outline-primary motion-reduce:transition-none"
+          href={video.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          YouTubeで視聴
+        </a>
+      </div>
+    </article>
+  );
+}
+
+
+function GenreIcon({ genreKey, className = "" }: { genreKey: string; className?: string }) {
+  const src = genreIconSources[genreKey];
+
+  return (
+    <span aria-hidden="true" className={`genre-icon-shell ${className}`}>
+      {src ? (
+        <Image src={src} alt="" width={32} height={32} className="genre-icon-image" />
+      ) : (
+        <LineGenreIcon genreKey={genreKey} />
+      )}
+    </span>
+  );
+}
+
+function LineGenreIcon({ genreKey }: { genreKey: string }) {
+  if (genreKey === "data") {
+    return (
+      <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+        <path d="M5 19V9" />
+        <path d="M12 19V5" />
+        <path d="M19 19v-7" />
+        <path d="M4 19h17" />
+      </svg>
+    );
+  }
+
+  if (genreKey === "marke") {
+    return (
+      <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+        <path d="m4 16 5-5 4 4 7-8" />
+        <path d="M15 7h5v5" />
+        <path d="M4 20h17" />
+      </svg>
+    );
+  }
+
+  if (genreKey === "biz") {
+    return (
+      <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+        <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+        <path d="M4 7h16v13H4z" />
+        <path d="M9 12h6" />
+      </svg>
+    );
+  }
+
+  if (genreKey === "shikaku") {
+    return (
+      <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+        <path d="M7 4h10v16H7z" />
+        <path d="M9 8h6" />
+        <path d="M9 12h6" />
+        <path d="M9 16h4" />
+      </svg>
+    );
+  }
+
+  if (genreKey === "kaikei") {
+    return (
+      <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+        <path d="M5 4h14v16H5z" />
+        <path d="M8 8h8" />
+        <path d="M8 12h2" />
+        <path d="M14 12h2" />
+        <path d="M8 16h2" />
+        <path d="M14 16h2" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+      <path d="M12 3v18" />
+      <path d="M6 8h9a4 4 0 0 1 0 8H6" />
+      <path d="M9 5v16" />
+    </svg>
+  );
+}
+
+function ValueChip({ iconSrc, title, body }: { iconSrc: string; title: string; body: string }) {
+  return (
+    <div className="min-w-0 rounded-md border border-line bg-white/82 p-3 shadow-card backdrop-blur">
+      <div className="flex items-start gap-3">
+        <Image
+          src={iconSrc}
+          alt=""
+          width={40}
+          height={40}
+          aria-hidden="true"
+          className="h-9 w-9 shrink-0 object-contain"
+        />
+        <div className="min-w-0">
+          <p className="text-sm font-black leading-5 text-ink">{title}</p>
+          <p className="mt-1 text-xs font-bold leading-5 text-muted">{body}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function genreLabel(key: string) {
+  const shortLabels: Record<string, string> = {
+    ai: "生成AI",
+    prog: "プログラミング",
+    video: "動画編集",
+    english: "英語"
+  };
+  const genre = genres.find((item) => item.key === key);
+  return shortLabels[key] ?? (genre ? genre.label : key);
+}
+
+function RoadmapTimeline({ roadmap }: { roadmap: Roadmap }) {
+  return (
+    <section id="roadmap-panel" className="roadmap-panel" role="tabpanel">
+      <div className="roadmap-title-row">
+        <h3>{roadmap.title}</h3>
+        <span aria-hidden="true" className="roadmap-star">★</span>
+      </div>
+      <ol className="roadmap-timeline">
+        {roadmap.steps.map((step, index) => (
+          <li key={roadmap.genre + "-" + step.label} className="roadmap-step">
+            <div className="roadmap-node" aria-label={step.label + " " + step.level}>
+              {index + 1}
+            </div>
+            <div className="roadmap-step-card">
+              <div className="roadmap-step-meta">
+                <span className="roadmap-step-label">{step.label}</span>
+                <span className="roadmap-level">{step.level}</span>
+              </div>
+              <h4>{step.goal}</h4>
+              <div className="roadmap-video-grid">
+                {step.videos.map((ytid) => {
+                  const video = videos.find((item) => item.ytid === ytid);
+                  return video ? <RoadmapMiniVideo key={ytid} video={video} /> : null;
+                })}
+              </div>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
+
+function RoadmapMiniVideo({ video }: { video: Video }) {
+  return (
+    <a className="roadmap-mini-card" href={"#" + video.ytid}>
+      <span className="roadmap-mini-thumb">
+        <Image
+          src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"}
+          alt=""
+          fill
+          sizes="(min-width: 760px) 160px, 35vw"
+          loading="lazy"
+          className="object-cover"
+        />
+      </span>
+      <span className="roadmap-mini-body">
+        <span className="roadmap-mini-title">{video.title}</span>
+        <span className="roadmap-mini-meta">{video.minutes}分 / {video.level}</span>
+      </span>
+    </a>
+  );
+}
+
+function PrBlock({ genre }: { genre: Genre }) {
+  return (
+    <section className="rounded-lg border border-line bg-surface p-4 shadow-card">
+      <div className="flex items-start justify-between gap-3">
+        <h3 className="flex items-center gap-2 font-black leading-6">
+          <GenreIcon genreKey={genre.key} className="pr-genre-icon" />
+          <span>{genre.label}</span>
+        </h3>
+        <span className="rounded-full bg-coral px-2 py-1 text-xs font-black text-white">PR</span>
+      </div>
+      <p className="mt-2 text-sm font-bold text-ink/62">{genre.monetization}</p>
+      <ul className="mt-3 grid gap-2 text-sm text-muted">
+        {genre.prItems.map((item) => (
+          <li key={item} className="rounded-lg bg-paper px-3 py-2">
+            {item}
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}

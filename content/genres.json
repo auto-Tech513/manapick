@@ -1,0 +1,94 @@
+[
+  {
+    "key": "ai",
+    "label": "生成AI",
+    "icon": "🤖",
+    "status": "published",
+    "subgenres": ["ChatGPT", "Claude", "Gemini", "画像生成", "自動化"],
+    "monetization": "AIスクール / 書籍 / AdSense",
+    "prItems": ["AI実践講座", "プロンプト設計の入門書", "業務効率化ツール比較"]
+  },
+  {
+    "key": "prog",
+    "label": "プログラミング・IT",
+    "icon": "💻",
+    "status": "published",
+    "subgenres": ["Python", "Web開発", "アプリ", "インフラ"],
+    "monetization": "プログラミングスクール",
+    "prItems": ["Python基礎スクール", "Web開発ロードマップ講座", "未経験向け学習相談"]
+  },
+  {
+    "key": "video",
+    "label": "動画編集・クリエイティブ",
+    "icon": "🎬",
+    "status": "published",
+    "subgenres": ["Premiere Pro", "CapCut", "After Effects", "デザイン"],
+    "monetization": "編集スクール / Adobe / PC機材",
+    "prItems": ["Premiere Pro講座", "動画編集スクール", "クリエイター向けPC機材"]
+  },
+  {
+    "key": "english",
+    "label": "語学・英語",
+    "icon": "🗣️",
+    "status": "published",
+    "subgenres": ["英会話", "TOEIC", "発音", "ビジネス英語"],
+    "monetization": "オンライン英会話",
+    "prItems": ["オンライン英会話", "TOEIC対策講座", "発音トレーニング"]
+  },
+  {
+    "key": "data",
+    "label": "データ分析・DX",
+    "icon": "📊",
+    "status": "preparing",
+    "subgenres": ["Excel", "データサイエンス", "BI"],
+    "monetization": "データ分析スクール",
+    "prItems": ["Excel実務講座", "BIツール入門", "データ分析スクール"]
+  },
+  {
+    "key": "marke",
+    "label": "Webマーケ・SNS運用",
+    "icon": "📈",
+    "status": "preparing",
+    "subgenres": ["SEO", "広告", "SNS"],
+    "monetization": "Webマーケスクール",
+    "prItems": ["SEO基礎講座", "広告運用スクール", "SNS運用講座"]
+  },
+  {
+    "key": "biz",
+    "label": "ビジネススキル",
+    "icon": "💼",
+    "status": "preparing",
+    "subgenres": ["資料作成", "Excel", "プレゼン", "思考法"],
+    "monetization": "Udemy / 書籍",
+    "prItems": ["資料作成講座", "Excel実務本", "プレゼン講座"]
+  },
+  {
+    "key": "shikaku",
+    "label": "資格・検定（非会計）",
+    "icon": "📑",
+    "status": "preparing",
+    "subgenres": ["宅建", "TOEIC", "IT", "AI検定"],
+    "monetization": "資格スクール",
+    "prItems": ["宅建通信講座", "IT資格講座", "AI検定対策"]
+  },
+  {
+    "key": "kaikei",
+    "label": "会計・経営系資格",
+    "icon": "🧮",
+    "status": "preparing",
+    "note": "①承認済・非競合確定",
+    "subgenres": ["簿記", "FP", "税理士", "中小企業診断士"],
+    "monetization": "資格スクール",
+    "prItems": ["簿記講座", "FP講座", "診断士スクール"]
+  },
+  {
+    "key": "money",
+    "label": "お金・投資",
+    "icon": "💰",
+    "status": "preparing",
+    "note": "①承認済・非競合確定。個別銘柄推奨は扱わない",
+    "subgenres": ["NISA", "投資", "家計"],
+    "monetization": "投資スクール / 書籍",
+    "prItems": ["NISA入門書", "家計管理講座", "資産形成の基礎講座"]
+  }
+]
