@@ -7,19 +7,28 @@
         "label": "STEP1",
         "level": "初級",
         "goal": "アカウントを作り、AIに指示して回答を得られる。ChatGPTとClaudeの違いが分かる。",
-        "videos": ["J9QdxiZb8P4", "UdEIgP4B0Bs"]
+        "videos": [
+          "J9QdxiZb8P4",
+          "UdEIgP4B0Bs"
+        ]
       },
       {
         "label": "STEP2",
         "level": "中級",
         "goal": "無料版の応用機能・主要機能を業務に当てはめて使える。",
-        "videos": ["UIyokWUJHck", "OhO0WcRP6Ow"]
+        "videos": [
+          "UIyokWUJHck",
+          "OhO0WcRP6Ow"
+        ]
       },
       {
         "label": "STEP3",
         "level": "中〜上級",
-        "goal": "AIに作業を任せる自動化の入口を理解し、必要性を判断できる。",
-        "videos": ["4NDb-X624gY"]
+        "goal": "AIに作業を任せる自動化と、プロンプト設計の入口を理解して使い分けられる。",
+        "videos": [
+          "4NDb-X624gY",
+          "MNBAisqU5ZY"
+        ]
       }
     ]
   },
@@ -31,13 +40,26 @@
         "label": "STEP1",
         "level": "初級",
         "goal": "Pythonの環境と基本文法を一周し、学習の全体像をつかむ。",
-        "videos": ["HCZNs3AyFM8", "iqNBNzlO_-4"]
+        "videos": [
+          "HCZNs3AyFM8",
+          "iqNBNzlO_-4"
+        ]
       },
       {
         "label": "STEP2",
         "level": "中級",
         "goal": "長尺で反復しながら、基礎を体系的に固める。",
-        "videos": ["hv0w4ZCT-uQ"]
+        "videos": [
+          "hv0w4ZCT-uQ"
+        ]
+      },
+      {
+        "label": "STEP3",
+        "level": "上級",
+        "goal": "PythonでWebアプリ開発の入口に進み、作れるものを広げる。",
+        "videos": [
+          "bzbrpkbjWe8"
+        ]
       }
     ]
   },
@@ -49,13 +71,27 @@
         "label": "STEP1",
         "level": "初級",
         "goal": "編集の流れと初期設定を把握し、1本目の編集に着手できる。",
-        "videos": ["jSNPN5NnB_E", "w2GE8Ix_8Dc"]
+        "videos": [
+          "jSNPN5NnB_E",
+          "w2GE8Ix_8Dc"
+        ]
       },
       {
         "label": "STEP2",
         "level": "中級",
         "goal": "公式の基本操作を確認し、カット編集を安定して行える。",
-        "videos": ["4Up669PRU2M"]
+        "videos": [
+          "4Up669PRU2M"
+        ]
+      },
+      {
+        "label": "STEP3",
+        "level": "上級",
+        "goal": "After Effectsとモーショングラフィックスで表現の幅を広げる。",
+        "videos": [
+          "P3uuxoN35V8",
+          "iSQ0BRX0L4M"
+        ]
       }
     ]
   },
@@ -67,19 +103,101 @@
         "label": "STEP1",
         "level": "初級",
         "goal": "独学の全体像をつかみ、最初にやることを決める。",
-        "videos": ["qATcO0yjTdI"]
+        "videos": [
+          "qATcO0yjTdI"
+        ]
       },
       {
         "label": "STEP2",
         "level": "初級",
         "goal": "多忙な社会人でも続けられる学習サイクルを作る。",
-        "videos": ["3ghj8rPFpTs"]
+        "videos": [
+          "3ghj8rPFpTs"
+        ]
+      }
+    ]
+  },
+  {
+    "genre": "data",
+    "title": "データ分析・DXロードマップ",
+    "steps": [
+      {
+        "label": "STEP1",
+        "level": "初級",
+        "goal": "Excelでデータ分析の入口を体験し、分析の考え方をつかむ。",
+        "videos": [
+          "ok8-ekot_dc",
+          "M4UjGiUrGaM"
+        ]
       },
       {
-        "label": "STEP3",
+        "label": "STEP2",
         "level": "中級",
-        "goal": "教材選びと手順を整理し、独学の迷いを減らす。",
-        "videos": ["SCYKjFCslLk"]
+        "goal": "長尺講義でExcelデータ分析を体系化し、実務に転用する土台を作る。",
+        "videos": [
+          "xz151IIp6us"
+        ]
+      }
+    ]
+  },
+  {
+    "genre": "marke",
+    "title": "Webマーケ・SNS運用ロードマップ",
+    "steps": [
+      {
+        "label": "STEP1",
+        "level": "初級",
+        "goal": "Webマーケティングの全体像を短時間でつかみ、学ぶ順番を決める。",
+        "videos": [
+          "kt5GIVHtCPM"
+        ]
+      },
+      {
+        "label": "STEP2",
+        "level": "中級",
+        "goal": "SEOの基本と具体策を押さえ、AI時代の集客を理解する。",
+        "videos": [
+          "vn1BTbqlvY4",
+          "SOg2c8WrdT0"
+        ]
+      }
+    ]
+  },
+  {
+    "genre": "biz",
+    "title": "ビジネススキルロードマップ",
+    "steps": [
+      {
+        "label": "STEP1",
+        "level": "初級",
+        "goal": "PowerPointの基本操作を押さえ、資料作成の不安を減らす。",
+        "videos": [
+          "FNV4uSQkUsM"
+        ]
+      },
+      {
+        "label": "STEP2",
+        "level": "中級",
+        "goal": "伝わる資料の型と見やすくするコツを使い、実務資料を磨く。",
+        "videos": [
+          "z8R_ZtLplFc",
+          "Qfn49-nP6lY"
+        ]
+      }
+    ]
+  },
+  {
+    "genre": "shikaku",
+    "title": "資格・検定ロードマップ",
+    "steps": [
+      {
+        "label": "STEP1",
+        "level": "初級",
+        "goal": "宅建学習のスケジュールと独学の進め方を決める。",
+        "videos": [
+          "Uro2W4fsAIA",
+          "93pwkoYJjFE"
+        ]
       }
     ]
   }

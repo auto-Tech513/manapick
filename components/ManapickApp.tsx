@@ -42,15 +42,21 @@ type Video = {
   review: string[];
 };
 
+type RoadmapStep = {
+  label: string;
+  level: string;
+  goal: string;
+  videos: string[];
+};
+
+type DisplayRoadmapStep = RoadmapStep & {
+  isPlaceholder?: boolean;
+};
+
 type Roadmap = {
   genre: string;
   title: string;
-  steps: {
-    label: string;
-    level: string;
-    goal: string;
-    videos: string[];
-  }[];
+  steps: RoadmapStep[];
 };
 
 const genres = genresData as Genre[];
@@ -73,12 +79,6 @@ function statusLabel(status: GenreStatus) {
   if (status === "published") return "公開中";
   if (status === "checking") return "確認中（注記）";
   return "近日公開";
-}
-
-function statusClasses(status: GenreStatus) {
-  if (status === "published") return "bg-leaf text-white";
-  if (status === "checking") return "bg-amberSoft text-ink";
-  return "bg-mist text-ink";
 }
 
 function scoreClasses(score: number | null) {
@@ -168,12 +168,28 @@ export default function ManapickApp() {
     return roadmapTabs.find((roadmap) => roadmap.genre === activeRoadmapGenre) ?? roadmapTabs[0] ?? null;
   }, [activeRoadmapGenre, roadmapTabs]);
 
+  const publishedGenres = useMemo(() => {
+    return genres.filter((genre) => genre.status === "published");
+  }, []);
+
+  const upcomingGenres = useMemo(() => {
+    return genres.filter((genre) => genre.status !== "published");
+  }, []);
+
   const visiblePrGenres = useMemo(() => {
     if (selectedGenre === "all") {
-      return genres.filter((genre) => genre.status === "published");
+      return publishedGenres;
     }
     return selectedGenreData ? [selectedGenreData] : [];
-  }, [selectedGenre, selectedGenreData]);
+  }, [publishedGenres, selectedGenre, selectedGenreData]);
+
+  const weeklyPick = useMemo(() => {
+    return videos.reduce<Video | null>((best, video) => {
+      if (video.score === null) return best;
+      if (best === null || best.score === null || video.score > best.score) return video;
+      return best;
+    }, null);
+  }, []);
 
   function handleGenreChange(nextGenre: string) {
     setSelectedGenre(nextGenre);
@@ -259,6 +275,8 @@ export default function ManapickApp() {
               AI・IT・英語・動画編集など、キャリアに効く学習動画を“Manapickスコア（35点満点）”で厳選。初級→上級のロードマップで、何から見るかもう迷わない。
             </p>
 
+            <HeroTrustStats totalVideos={videos.length} />
+
             <div className="hero-chip-grid">
               <ValueChip iconSrc="/brand/icon-curate.png" title="Manapickスコアで厳選" body="35点満点で採点" />
               <ValueChip iconSrc="/brand/icon-roadmap.png" title="ロードマップで迷わない" body="初級→上級" />
@@ -266,7 +284,7 @@ export default function ManapickApp() {
             </div>
 
             <div className="hero-actions">
-              <button type="button" onClick={viewAiGenre} className="btn btn-primary w-full min-[520px]:w-auto">
+              <button type="button" onClick={viewAiGenre} className="btn btn-primary hero-primary-cta w-full min-[520px]:w-auto">
                 生成AIから見る →
               </button>
               <a href="#roadmap" className="btn btn-secondary w-full min-[520px]:w-auto">
@@ -275,19 +293,22 @@ export default function ManapickApp() {
             </div>
 
             <p className="hero-proof">
-              公開中4ジャンル ／ 14本を厳選 ／ 順次拡大
+              公開中{publishedGenres.length}ジャンル ／ {videos.length}本を厳選 ／ 順次拡大
             </p>
           </div>
-          <div className="hero-kv-wrap">
-            <Image
-              src="/brand/hero-kv.png"
-              alt="多数の学習動画から選ばれた一本と、上昇する学習ルートのイラスト"
-              width={1122}
-              height={1402}
-              priority
-              sizes="(min-width: 980px) 520px, (min-width: 760px) 44vw, 88vw"
-              className="hero-kv-image"
-            />
+          <div className="hero-visual-column">
+            <div className="hero-kv-wrap">
+              <Image
+                src="/brand/hero-kv.png"
+                alt="多数の学習動画から選ばれた一本と、上昇する学習ルートのイラスト"
+                width={1122}
+                height={1402}
+                priority
+                sizes="(min-width: 980px) 420px, (min-width: 760px) 38vw, 82vw"
+                className="hero-kv-image"
+              />
+            </div>
+            {weeklyPick ? <WeeklyPickCard video={weeklyPick} /> : null}
           </div>
         </div>
       </section>
@@ -306,44 +327,54 @@ export default function ManapickApp() {
             </div>
           </div>
 
-          <div className="grid gap-2 min-[560px]:grid-cols-2 min-[880px]:grid-cols-5" role="group" aria-label="ジャンル">
-            <button
-              type="button"
-              onClick={() => handleGenreChange("all")}
-              className={`rounded-lg border px-3 py-3 text-left transition ${
-                selectedGenre === "all"
-                  ? "border-leaf bg-leaf text-white"
-                  : "border-line bg-white hover:border-accent/50 hover:shadow-card"
-              }`}
-            >
-              <span className="block text-sm font-black">すべての公開中ジャンル</span>
-              <span className="mt-1 block text-xs opacity-80">{videos.length}本から探す</span>
-            </button>
-            {genres.map((genre) => (
-              <button
-                type="button"
-                key={genre.key}
-                onClick={() => handleGenreChange(genre.key)}
-                className={`rounded-lg border px-3 py-3 text-left transition ${
-                  selectedGenre === genre.key
-                    ? "border-leaf bg-leaf text-white"
-                    : "border-line bg-white hover:border-accent/50 hover:shadow-card"
-                }`}
-              >
-                <span className="flex items-start gap-2 text-sm font-black">
-                  <GenreIcon genreKey={genre.key} className="genre-selector-icon" />
-                  <span>{genre.label}</span>
-                </span>
-                <span
-                  className={`mt-2 inline-flex rounded-full px-2 py-1 text-xs font-bold ${
-                    selectedGenre === genre.key ? "bg-white/18 text-white" : statusClasses(genre.status)
-                  }`}
+          <div className="genre-selector-layout">
+            <div>
+              <p className="genre-group-title">公開中</p>
+              <div className="published-genre-grid" role="group" aria-label="公開中ジャンル">
+                <button
+                  type="button"
+                  onClick={() => handleGenreChange("all")}
+                  className={`genre-card genre-card-all ${selectedGenre === "all" ? "is-active" : ""}`}
                 >
-                  {statusLabel(genre.status)}
-                </span>
-                {genre.note ? <span className="mt-1 block text-xs opacity-75">{genre.note}</span> : null}
-              </button>
-            ))}
+                  <span className="block text-sm font-black">すべての公開中ジャンル</span>
+                  <span className="mt-1 block text-xs opacity-80">{videos.length}本から探す</span>
+                </button>
+                {publishedGenres.map((genre) => (
+                  <button
+                    type="button"
+                    key={genre.key}
+                    onClick={() => handleGenreChange(genre.key)}
+                    className={`genre-card ${selectedGenre === genre.key ? "is-active" : ""}`}
+                  >
+                    <span className="flex items-start gap-2 text-sm font-black">
+                      <GenreIcon genreKey={genre.key} className="genre-selector-icon" />
+                      <span>{genre.label}</span>
+                    </span>
+                    <span className="genre-status-chip">{statusLabel(genre.status)}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="upcoming-genre-strip">
+              <p className="genre-group-title compact">順次公開予定</p>
+              <div className="upcoming-genre-list" role="group" aria-label="順次公開予定ジャンル">
+                {upcomingGenres.map((genre) => (
+                  <button
+                    type="button"
+                    key={genre.key}
+                    onClick={() => handleGenreChange(genre.key)}
+                    className={`upcoming-genre-pill ${selectedGenre === genre.key ? "is-active" : ""}`}
+                    title={genre.note ?? statusLabel(genre.status)}
+                  >
+                    <GenreIcon genreKey={genre.key} className="upcoming-genre-icon" />
+                    <span>{genre.label}</span>
+                    <span className="upcoming-status">{statusLabel(genre.status)}</span>
+                    {genre.note ? <span className="upcoming-note">{genre.note}</span> : null}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
 
           <div className="mt-7 border-t border-line pt-6">
@@ -530,6 +561,112 @@ export default function ManapickApp() {
       </footer>
     </main>
   );
+}
+
+
+function HeroTrustStats({ totalVideos }: { totalVideos: number }) {
+  const stats = [
+    {
+      label: totalVideos + "本を厳選",
+      icon: (
+        <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+          <path d="m5 12 4 4L19 6" />
+        </svg>
+      )
+    },
+    {
+      label: "7軸35点で採点",
+      icon: (
+        <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+          <path d="M12 3v18" />
+          <path d="M5 8h14" />
+          <path d="M7 14h10" />
+        </svg>
+      )
+    },
+    {
+      label: "公式埋め込みのみ・無料",
+      icon: (
+        <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+          <path d="M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6z" />
+          <path d="m9 12 2 2 4-5" />
+        </svg>
+      )
+    }
+  ];
+
+  return (
+    <div className="hero-trust-band" aria-label="Manapickの信頼指標">
+      {stats.map((stat) => (
+        <span key={stat.label} className="hero-trust-pill">
+          <span aria-hidden="true" className="hero-trust-icon">
+            {stat.icon}
+          </span>
+          <span>{stat.label}</span>
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function WeeklyPickCard({ video }: { video: Video }) {
+  const scoreText = video.score === null ? "要採点" : video.score + "/35";
+  const reviewLine = video.review[0] ?? "今週まず見てほしい、Manapick最高スコアの一本です。";
+
+  return (
+    <article className="weekly-pick-card" aria-label="今週のイチオシ">
+      <div className="weekly-pick-thumb">
+        <Image
+          src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"}
+          alt=""
+          fill
+          sizes="(min-width: 980px) 360px, (min-width: 760px) 38vw, 86vw"
+          loading="eager"
+          className="object-cover"
+        />
+        <span className="weekly-pick-score">{scoreText}</span>
+      </div>
+      <div className="weekly-pick-body">
+        <p className="weekly-pick-eyebrow">今週のイチオシ</p>
+        <h2>{video.title}</h2>
+        <p>{reviewLine}</p>
+        <a className="weekly-pick-button" href={video.url} target="_blank" rel="noopener noreferrer">
+          YouTubeで視聴
+        </a>
+      </div>
+    </article>
+  );
+}
+
+function buildRoadmapSteps(roadmap: Roadmap): DisplayRoadmapStep[] {
+  const steps = roadmap.steps.slice(0, 3) as DisplayRoadmapStep[];
+
+  while (steps.length < 3) {
+    const nextIndex = steps.length + 1;
+    const isFinal = nextIndex === 3;
+    steps.push({
+      label: "STEP" + nextIndex,
+      level: "近日追加",
+      goal: isFinal
+        ? "上級動画を追加し、実務で使い切る段階まで進めるルートを整備中です。"
+        : "中級動画を追加し、基礎から実務へ進む橋渡しを整備中です。",
+      videos: [],
+      isPlaceholder: true
+    });
+  }
+
+  const hasAdvancedStep = steps.some((step) => step.level.includes("上級") && !step.isPlaceholder);
+  if (!hasAdvancedStep && !steps[2].isPlaceholder) {
+    steps[2] = {
+      label: "STEP3",
+      level: "近日追加",
+      goal: "上級動画を追加し、実務で使い切る段階まで進めるルートを整備中です。",
+      videos: [],
+      isPlaceholder: true
+    };
+  }
+
+  return steps;
 }
 
 function VideoCard({ video }: { video: Video }) {
@@ -733,13 +870,19 @@ function genreLabel(key: string) {
     ai: "生成AI",
     prog: "プログラミング",
     video: "動画編集",
-    english: "英語"
+    english: "英語",
+    data: "データ分析",
+    marke: "Webマーケ",
+    biz: "ビジネス",
+    shikaku: "資格"
   };
   const genre = genres.find((item) => item.key === key);
   return shortLabels[key] ?? (genre ? genre.label : key);
 }
 
 function RoadmapTimeline({ roadmap }: { roadmap: Roadmap }) {
+  const steps = buildRoadmapSteps(roadmap);
+
   return (
     <section id="roadmap-panel" className="roadmap-panel" role="tabpanel">
       <div className="roadmap-title-row">
@@ -747,8 +890,11 @@ function RoadmapTimeline({ roadmap }: { roadmap: Roadmap }) {
         <span aria-hidden="true" className="roadmap-star">★</span>
       </div>
       <ol className="roadmap-timeline">
-        {roadmap.steps.map((step, index) => (
-          <li key={roadmap.genre + "-" + step.label} className="roadmap-step">
+        {steps.map((step, index) => (
+          <li
+            key={roadmap.genre + "-" + step.label + "-" + index}
+            className={step.isPlaceholder ? "roadmap-step is-placeholder" : "roadmap-step"}
+          >
             <div className="roadmap-node" aria-label={step.label + " " + step.level}>
               {index + 1}
             </div>
@@ -757,13 +903,21 @@ function RoadmapTimeline({ roadmap }: { roadmap: Roadmap }) {
                 <span className="roadmap-step-label">{step.label}</span>
                 <span className="roadmap-level">{step.level}</span>
               </div>
-              <h4>{step.goal}</h4>
-              <div className="roadmap-video-grid">
-                {step.videos.map((ytid) => {
-                  const video = videos.find((item) => item.ytid === ytid);
-                  return video ? <RoadmapMiniVideo key={ytid} video={video} /> : null;
-                })}
-              </div>
+              <h4>
+                <strong>{step.goal}</strong>
+              </h4>
+              {step.isPlaceholder ? (
+                <p className="roadmap-placeholder-copy">
+                  上級動画を選定中です。追加後にここへ公式サムネ付きで表示します。
+                </p>
+              ) : (
+                <div className="roadmap-video-grid">
+                  {step.videos.map((ytid) => {
+                    const video = videos.find((item) => item.ytid === ytid);
+                    return video ? <RoadmapMiniVideo key={ytid} video={video} /> : null;
+                  })}
+                </div>
+              )}
             </div>
           </li>
         ))}
