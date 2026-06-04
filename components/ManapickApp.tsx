@@ -308,10 +308,21 @@ export default function ManapickApp() {
                 className="hero-kv-image"
               />
             </div>
-            {weeklyPick ? <WeeklyPickCard video={weeklyPick} /> : null}
           </div>
         </div>
       </section>
+
+      {weeklyPick ? (
+        <section className="weekly-pick-section" aria-labelledby="weekly-pick-title">
+          <div className="weekly-pick-shell">
+            <div className="weekly-pick-heading">
+              <p className="section-eyebrow">今週のイチオシ</p>
+              <h2 id="weekly-pick-title" className="section-title">最高スコアの一本から始める</h2>
+            </div>
+            <WeeklyPickCard video={weeklyPick} />
+          </div>
+        </section>
+      ) : null}
 
       <section id="search" className="border-b border-line bg-white/64">
         <div className="mx-auto max-w-7xl px-4 py-7 min-[760px]:px-6">
