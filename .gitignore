@@ -4,3 +4,8 @@ node_modules
 .DS_Store
 *.log
 .env*
+data/candidates.json
+data/drafts.json
+data/*.tmp
+data/*.bak
+content/*.bak

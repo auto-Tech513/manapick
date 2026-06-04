@@ -1,0 +1,161 @@
+{
+  "defaults": {
+    "regionCode": "JP",
+    "relevanceLanguage": "ja",
+    "maxResults": 25,
+    "minViews": 10000,
+    "freshYears": 8,
+    "minDurationMin": 4,
+    "maxDurationMin": 240
+  },
+  "genres": [
+    {
+      "genre": "ai",
+      "label": "生成AI",
+      "queries": [
+        {
+          "sub": "ChatGPT",
+          "keyword": "ChatGPT 使い方 初心者 日本語"
+        },
+        {
+          "sub": "Claude",
+          "keyword": "Claude 使い方 初心者 日本語"
+        },
+        {
+          "sub": "プロンプト",
+          "keyword": "プロンプトエンジニアリング 入門 日本語"
+        },
+        {
+          "sub": "自動化",
+          "keyword": "生成AI 自動化 入門 日本語"
+        }
+      ]
+    },
+    {
+      "genre": "prog",
+      "label": "プログラミング・IT",
+      "queries": [
+        {
+          "sub": "Python",
+          "keyword": "Python 入門 講座 初心者 日本語"
+        },
+        {
+          "sub": "Web開発",
+          "keyword": "Webアプリ 開発 入門 Python 日本語"
+        },
+        {
+          "sub": "インフラ",
+          "keyword": "IT インフラ 入門 初心者 日本語"
+        }
+      ]
+    },
+    {
+      "genre": "video",
+      "label": "動画編集・クリエイティブ",
+      "queries": [
+        {
+          "sub": "Premiere Pro",
+          "keyword": "Premiere Pro 初心者 講座 日本語"
+        },
+        {
+          "sub": "After Effects",
+          "keyword": "After Effects 入門 講座 日本語"
+        },
+        {
+          "sub": "CapCut",
+          "keyword": "CapCut 使い方 初心者 日本語"
+        }
+      ]
+    },
+    {
+      "genre": "english",
+      "label": "語学・英語",
+      "queries": [
+        {
+          "sub": "英会話",
+          "keyword": "英会話 独学 初心者 ロードマップ"
+        },
+        {
+          "sub": "TOEIC",
+          "keyword": "TOEIC 勉強法 初心者 日本語"
+        },
+        {
+          "sub": "ビジネス英語",
+          "keyword": "ビジネス英語 学習法 社会人 日本語"
+        }
+      ]
+    },
+    {
+      "genre": "data",
+      "label": "データ分析・DX",
+      "queries": [
+        {
+          "sub": "Excel",
+          "keyword": "Excel データ分析 入門 実務 日本語"
+        },
+        {
+          "sub": "データサイエンス",
+          "keyword": "データサイエンス 入門 初心者 日本語"
+        },
+        {
+          "sub": "BI",
+          "keyword": "BI ツール 入門 データ分析 日本語"
+        }
+      ]
+    },
+    {
+      "genre": "marke",
+      "label": "Webマーケ・SNS運用",
+      "queries": [
+        {
+          "sub": "Webマーケ",
+          "keyword": "Webマーケティング 入門 初心者 日本語"
+        },
+        {
+          "sub": "SEO",
+          "keyword": "SEO 入門 初心者 講座 日本語"
+        },
+        {
+          "sub": "SNS",
+          "keyword": "SNS運用 入門 初心者 日本語"
+        }
+      ]
+    },
+    {
+      "genre": "biz",
+      "label": "ビジネススキル",
+      "queries": [
+        {
+          "sub": "資料作成",
+          "keyword": "PowerPoint 資料作成 入門 社会人"
+        },
+        {
+          "sub": "Excel",
+          "keyword": "Excel 実務 入門 社会人 日本語"
+        },
+        {
+          "sub": "プレゼン",
+          "keyword": "プレゼン 資料 作り方 初心者 日本語"
+        }
+      ]
+    },
+    {
+      "genre": "shikaku",
+      "label": "資格・検定（非会計）",
+      "queries": [
+        {
+          "sub": "宅建",
+          "keyword": "宅建 勉強法 初心者 2026"
+        },
+        {
+          "sub": "IT",
+          "keyword": "ITパスポート 勉強法 初心者 日本語"
+        },
+        {
+          "sub": "AI検定",
+          "keyword": "AI検定 勉強法 初心者 日本語"
+        }
+      ]
+    }
+  ]
+}

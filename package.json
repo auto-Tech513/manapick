@@ -7,7 +7,10 @@
     "build": "next build --webpack",
     "start": "next dev --webpack",
     "lint": "eslint .",
-    "brand:assets": "node scripts/generate-brand-assets.mjs"
+    "brand:assets": "node scripts/generate-brand-assets.mjs",
+    "pipeline:fetch": "node scripts/fetch-candidates.mjs",
+    "pipeline:score": "node scripts/score-draft.mjs",
+    "pipeline:ingest": "node scripts/ingest.mjs"
   },
   "dependencies": {
     "fuse.js": "^7.0.0",
