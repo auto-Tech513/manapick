@@ -102,7 +102,7 @@ function scoreStatus(video: Video): ScoreStatus {
 }
 
 function scoreText(video: Video) {
-  return video.score === null ? "要採点" : video.score + "/35";
+  return video.score === null ? "スコア準備中" : video.score + "/35";
 }
 
 function scoreClasses(video: Video) {
@@ -124,6 +124,12 @@ function timeMatches(minutes: number, bucket: string) {
 function genreName(key: string) {
   const genre = genres.find((item) => item.key === key);
   return genre ? genre.label : key;
+}
+
+function displayChannel(video: Video) {
+  const channel = video.channel?.trim();
+  if (!channel || channel.includes("確認")) return null;
+  return channel;
 }
 
 function levelMeta(level: Video["level"]) {
@@ -459,7 +465,9 @@ export default function ManapickApp() {
             </div>
 
             <p className="hero-proof">
-              公開中{publishedGenres.length}ジャンル ／ 確認済{confirmedCount}本 ／ 順次拡大
+              公開中{publishedGenres.length}ジャンル
+              {confirmedCount > 0 ? " ／ 確認済" + confirmedCount + "本" : ""}
+              {" ／ 順次拡大"}
             </p>
           </div>
           <div className="hero-visual-column">
@@ -1102,6 +1110,8 @@ function buildRoadmapSteps(roadmap: Roadmap): DisplayRoadmapStep[] {
 }
 
 function VideoCard({ video }: { video: Video }) {
+  const channel = displayChannel(video);
+
   return (
     <article
       id={video.ytid}
@@ -1144,7 +1154,7 @@ function VideoCard({ video }: { video: Video }) {
             {video.title}
           </a>
         </h3>
-        <p className="text-sm font-bold text-muted">チャンネル: {video.channel}</p>
+        {channel ? <p className="text-sm font-bold text-muted">チャンネル: {channel}</p> : null}
         {video.editorNote ? <p className="editor-note">編集メモ: {video.editorNote}</p> : null}
         <ol className="grid gap-2 text-sm leading-6 text-ink/76">
           {video.review.map((line, index) => (
