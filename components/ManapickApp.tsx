@@ -27,6 +27,8 @@ type AxisScore = {
   note: string;
 };
 
+type ScoreStatus = "confirmed" | "provisional";
+
 type Video = {
   genre: string;
   sub: string;
@@ -35,6 +37,8 @@ type Video = {
   minutes: number;
   channel: string;
   score: number | null;
+  scoreStatus?: ScoreStatus;
+  editorNote?: string;
   axisScores: AxisScore[];
   title: string;
   url: string;
@@ -81,11 +85,21 @@ function statusLabel(status: GenreStatus) {
   return "近日公開";
 }
 
-function scoreClasses(score: number | null) {
-  if (score === null) return "border-dashed border-ink/30 bg-white text-muted";
-  if (score >= 28) return "border-leaf bg-leaf text-white";
-  if (score >= 23) return "border-amberSoft bg-amberSoft text-ink";
-  return "border-coral bg-coral text-white";
+function scoreStatus(video: Video): ScoreStatus {
+  return video.scoreStatus === "confirmed" ? "confirmed" : "provisional";
+}
+
+function scoreText(video: Video) {
+  return video.score === null ? "要採点" : video.score + "/35";
+}
+
+function scoreClasses(video: Video) {
+  const status = scoreStatus(video);
+  if (status === "provisional") return "score-badge is-provisional";
+  if (video.score === null) return "score-badge is-empty";
+  if (video.score >= 28) return "score-badge is-confirmed is-high";
+  if (video.score >= 23) return "score-badge is-confirmed is-mid";
+  return "score-badge is-confirmed is-low";
 }
 
 function timeMatches(minutes: number, bucket: string) {
@@ -183,6 +197,8 @@ export default function ManapickApp() {
     return selectedGenreData ? [selectedGenreData] : [];
   }, [publishedGenres, selectedGenre, selectedGenreData]);
 
+  const confirmedCount = useMemo(() => videos.filter((video) => scoreStatus(video) === "confirmed").length, []);
+
   const weeklyPick = useMemo(() => {
     return videos.reduce<Video | null>((best, video) => {
       if (video.score === null) return best;
@@ -275,7 +291,7 @@ export default function ManapickApp() {
               AI・IT・英語・動画編集など、キャリアに効く学習動画を“Manapickスコア（35点満点）”で厳選。初級→上級のロードマップで、何から見るかもう迷わない。
             </p>
 
-            <HeroTrustStats totalVideos={videos.length} />
+            <HeroTrustStats totalVideos={videos.length} confirmedCount={confirmedCount} />
 
             <div className="hero-chip-grid">
               <ValueChip iconSrc="/brand/icon-curate.png" title="Manapickスコアで厳選" body="35点満点で採点" />
@@ -293,7 +309,7 @@ export default function ManapickApp() {
             </div>
 
             <p className="hero-proof">
-              公開中{publishedGenres.length}ジャンル ／ {videos.length}本を厳選 ／ 順次拡大
+              公開中{publishedGenres.length}ジャンル ／ 確認済{confirmedCount}本 ／ 順次拡大
             </p>
           </div>
           <div className="hero-visual-column">
@@ -555,6 +571,9 @@ export default function ManapickApp() {
             <p className="mt-1 text-sm text-white/68">学び直しを、最短ルートに。</p>
           </div>
           <nav className="flex flex-wrap gap-4 text-sm font-bold text-white/78" aria-label="固定ページ">
+            <a className="hover:text-white" href="/about-score/">
+              採点方法
+            </a>
             <a className="hover:text-white" href="/operator/">
               運営者情報
             </a>
@@ -575,23 +594,24 @@ export default function ManapickApp() {
 }
 
 
-function HeroTrustStats({ totalVideos }: { totalVideos: number }) {
+function HeroTrustStats({ totalVideos, confirmedCount }: { totalVideos: number; confirmedCount: number }) {
   const stats = [
     {
-      label: totalVideos + "本を厳選",
+      label: "確認済" + confirmedCount + "本",
       icon: (
         <svg viewBox="0 0 24 24" role="presentation" focusable="false">
-          <path d="m5 12 4 4L19 6" />
+          <path d="M20 6 9 17l-5-5" />
         </svg>
       )
     },
     {
-      label: "7軸35点で採点",
+      label: "毎週更新",
       icon: (
         <svg viewBox="0 0 24 24" role="presentation" focusable="false">
-          <path d="M12 3v18" />
-          <path d="M5 8h14" />
-          <path d="M7 14h10" />
+          <path d="M4 12a8 8 0 0 1 13-6" />
+          <path d="M17 3v5h-5" />
+          <path d="M20 12a8 8 0 0 1-13 6" />
+          <path d="M7 21v-5h5" />
         </svg>
       )
     },
@@ -616,12 +636,35 @@ function HeroTrustStats({ totalVideos }: { totalVideos: number }) {
           <span>{stat.label}</span>
         </span>
       ))}
+      <a className="hero-score-link" href="/about-score/">採点方法を見る</a>
+      <span className="sr-only">現在の掲載動画数は{totalVideos}本です。</span>
     </div>
   );
 }
 
+
+function ScoreBadge({ video, compact = false }: { video: Video; compact?: boolean }) {
+  const status = scoreStatus(video);
+  const label = status === "confirmed" ? scoreText(video) + " ✓確認済" : scoreText(video) + " 暫定";
+
+  return (
+    <a
+      className={[scoreClasses(video), compact ? "is-compact" : ""].filter(Boolean).join(" ")}
+      href="/about-score/"
+      aria-label={label + "。採点方法を開く"}
+      title="採点方法を開く"
+    >
+      <span>{label}</span>
+    </a>
+  );
+}
+
+function ScoreStatusNote({ video }: { video: Video }) {
+  if (scoreStatus(video) === "confirmed") return null;
+  return <span className="score-status-note">順次確認中</span>;
+}
+
 function WeeklyPickCard({ video }: { video: Video }) {
-  const scoreText = video.score === null ? "要採点" : video.score + "/35";
   const reviewLine = video.review[0] ?? "今週まず見てほしい、Manapick最高スコアの一本です。";
 
   return (
@@ -635,12 +678,16 @@ function WeeklyPickCard({ video }: { video: Video }) {
           loading="eager"
           className="object-cover"
         />
-        <span className="weekly-pick-score">{scoreText}</span>
+        <div className="weekly-score-wrap">
+          <ScoreBadge video={video} compact />
+          <ScoreStatusNote video={video} />
+        </div>
       </div>
       <div className="weekly-pick-body">
         <p className="weekly-pick-eyebrow">今週のイチオシ</p>
         <h2>{video.title}</h2>
         <p>{reviewLine}</p>
+        {video.editorNote ? <p className="editor-note">編集メモ: {video.editorNote}</p> : null}
         <a className="weekly-pick-button" href={video.url} target="_blank" rel="noopener noreferrer">
           YouTubeで視聴
         </a>
@@ -648,6 +695,7 @@ function WeeklyPickCard({ video }: { video: Video }) {
     </article>
   );
 }
+
 
 function buildRoadmapSteps(roadmap: Roadmap): DisplayRoadmapStep[] {
   const steps = roadmap.steps.slice(0, 3) as DisplayRoadmapStep[];
@@ -681,40 +729,38 @@ function buildRoadmapSteps(roadmap: Roadmap): DisplayRoadmapStep[] {
 }
 
 function VideoCard({ video }: { video: Video }) {
-  const scoreText = video.score === null ? "要採点" : video.score + "/35";
-
   return (
     <article
       id={video.ytid}
       className="group flex min-w-0 scroll-mt-6 flex-col overflow-hidden rounded-lg border border-line bg-surface shadow-card transition duration-300 ease-[var(--ease-standard)] hover:-translate-y-1 hover:shadow-cardHover focus-within:shadow-cardHover motion-reduce:transform-none motion-reduce:transition-none"
     >
-      <a
-        href={video.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={video.title + "をYouTubeで開く"}
-        className="block overflow-hidden bg-bgSoft"
-      >
-        <div className="relative aspect-video bg-bgSoft">
-          <Image
-            src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"}
-            alt=""
-            fill
-            sizes="(min-width: 880px) 33vw, (min-width: 560px) 50vw, 100vw"
-            loading="lazy"
-            className="h-full w-full object-cover transition-transform duration-300 ease-[var(--ease-standard)] group-hover:scale-[1.025] motion-reduce:transform-none motion-reduce:transition-none"
-          />
-          <span className="absolute left-3 top-3 rounded-pill bg-ink/88 px-2.5 py-1 text-xs font-black text-white shadow-line">
-            {video.minutes}分
-          </span>
-          <span
-            className={["absolute right-3 top-3 rounded-pill border px-3 py-1 text-xs font-black shadow-line", scoreClasses(video.score)].join(" ")}
-            title={video.score === null ? "視聴後に採点確定" : "Manapickスコア"}
-          >
-            {scoreText}
-          </span>
+      <div className="relative overflow-hidden bg-bgSoft">
+        <a
+          href={video.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={video.title + "をYouTubeで開く"}
+          className="block"
+        >
+          <div className="relative aspect-video bg-bgSoft">
+            <Image
+              src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"}
+              alt=""
+              fill
+              sizes="(min-width: 880px) 33vw, (min-width: 560px) 50vw, 100vw"
+              loading="lazy"
+              className="h-full w-full object-cover transition-transform duration-300 ease-[var(--ease-standard)] group-hover:scale-[1.025] motion-reduce:transform-none motion-reduce:transition-none"
+            />
+            <span className="absolute left-3 top-3 rounded-pill bg-ink/88 px-2.5 py-1 text-xs font-black text-white shadow-line">
+              {video.minutes}分
+            </span>
+          </div>
+        </a>
+        <div className="card-score-wrap">
+          <ScoreBadge video={video} compact />
+          <ScoreStatusNote video={video} />
         </div>
-      </a>
+      </div>
       <div className="flex flex-1 flex-col gap-3 p-4">
         <div className="flex flex-wrap gap-2">
           <span className="rounded-pill bg-bgSoft px-2.5 py-1 text-xs font-black text-primaryInk">{video.level}</span>
@@ -726,6 +772,7 @@ function VideoCard({ video }: { video: Video }) {
           </a>
         </h3>
         <p className="text-sm font-bold text-muted">チャンネル: {video.channel}</p>
+        {video.editorNote ? <p className="editor-note">編集メモ: {video.editorNote}</p> : null}
         <ol className="grid gap-2 text-sm leading-6 text-ink/76">
           {video.review.map((line, index) => (
             <li key={line} className="flex gap-2">
@@ -746,6 +793,10 @@ function VideoCard({ video }: { video: Video }) {
         {video.axisScores.length > 0 ? (
           <details className="rounded-md border border-line bg-bg px-3 py-2 text-sm open:bg-white">
             <summary className="cursor-pointer font-black text-primaryInk">詳細スコアを見る</summary>
+            <p className="mt-2 text-xs font-bold text-muted">
+              <a className="underline decoration-dotted underline-offset-4" href="/about-score/">採点方法</a>
+              も確認できます。
+            </p>
             <dl className="mt-3 grid gap-2">
               {video.axisScores.map((axis) => (
                 <div key={axis.axis} className="grid gap-1 border-t border-line pt-2 first:border-t-0 first:pt-0">

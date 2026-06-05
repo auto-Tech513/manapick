@@ -157,5 +157,17 @@
         }
       ]
     }
+  ],
+  "exclude_ytids": [
+    "IcQwLGDzmVQ",
+    "YNT-KnjbVkU",
+    "hNGAW5Z1vgQ",
+    "rN8D_d21Mdk"
+  ],
+  "weak_title_terms": [
+    "稼ぐ",
+    "副業",
+    "切り抜き",
+    "食いっぱぐれ"
   ]
 }

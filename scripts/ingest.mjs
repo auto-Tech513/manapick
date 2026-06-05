@@ -4,7 +4,8 @@ import path from "node:path";
 import { contentDir, parseArgs, readJson, rootDir, unwrapItems, writeJson } from "./pipeline-utils.mjs";
 
 function usage() {
-  console.log(`Usage: node scripts/ingest.mjs [options]\n\nOptions:\n  --in path       Default: data/drafts.json\n  --out path      Default: content/videos.json\n  --all-good      Ingest excellent drafts even if accepted is false\n  --dry-run       Show what would be ingested without writing\n\nHuman review contract:\n  Edit data/drafts.json and set accepted:true, status:"accepted",\n  or decision:"accept" on drafts to ingest. Final score/channel/review\n  can be edited in the draft before running this script.`);
+  console.log(`Usage: node scripts/ingest.mjs [options]\n\nOptions:\n  --in path       Default: data/drafts.json\n  --out path      Default: content/videos.json\n  --all-good      Ingest excellent drafts even if accepted is false\n  --dry-run       Show what would be ingested without writing\n\nHuman review contract:\n  Edit data/drafts.json and set accepted:true, status:"accepted",\n  or decision:"accept" on drafts to ingest. Final score/channel/review\n  can be edited in the draft before running this script. Denylisted
+  ytid values are always skipped. Title risk terms require overrideRisk:true.`);
 }
 
 function isAccepted(draft, allowAllGood) {
@@ -13,6 +14,11 @@ function isAccepted(draft, allowAllGood) {
   if (draft.decision === "accept") return true;
   if (allowAllGood && draft.excellent === true) return true;
   return false;
+}
+
+function findTitleRiskTerms(title, terms = []) {
+  const normalized = String(title || "").toLowerCase();
+  return terms.filter((term) => normalized.includes(String(term).toLowerCase()));
 }
 
 function normalizeTags(draft) {
@@ -42,9 +48,9 @@ function toVideo(draft) {
     url: draft.url || `https://www.youtube.com/watch?v=${draft.ytid}`,
     tags: Array.isArray(draft.tags) && draft.tags.length ? draft.tags : normalizeTags(draft),
     review: Array.isArray(draft.review) && draft.review.length ? draft.review.slice(0, 3) : [
-      "人間レビュー後に3行レビューを確定します。",
-      "§23ルーブリックに沿って内容・鮮度・権利面を確認します。",
-      "公式YouTubeリンクで視聴できる候補です。"
+      `${draft.sub || "このテーマ"}の全体像をつかみやすい学習候補。`,
+      "基礎から次の一歩へ進む流れを作りやすい一本。",
+      "ロードマップ上の前後の動画と組み合わせて学びやすい。"
     ]
   };
 }
@@ -78,14 +84,27 @@ async function main() {
 
   const inputPath = path.resolve(rootDir, args.in || "data/drafts.json");
   const outPath = path.resolve(rootDir, args.out || path.join(contentDir, "videos.json"));
+  const config = await readJson(path.resolve(rootDir, args.config || "scripts/pipeline-config.json"), {});
+  const excludeIds = new Set(config.exclude_ytids || []);
+  const weakTitleTerms = config.weak_title_terms || [];
   const drafts = unwrapItems(await readJson(inputPath));
   const accepted = drafts.filter((draft) => isAccepted(draft, Boolean(args["all-good"])));
+  const skipped = [];
   const current = await readJson(outPath, []);
   const existingIds = new Set(current.map((video) => video.ytid));
   const additions = [];
 
   for (const draft of accepted) {
     if (existingIds.has(draft.ytid)) continue;
+    if (excludeIds.has(draft.ytid)) {
+      skipped.push({ ytid: draft.ytid, reason: "denylist" });
+      continue;
+    }
+    const riskTerms = Array.from(new Set([...(draft.riskTerms || []), ...findTitleRiskTerms(draft.title, weakTitleTerms)]));
+    if (riskTerms.length && draft.overrideRisk !== true) {
+      skipped.push({ ytid: draft.ytid, reason: `title risk: ${riskTerms.join("/")}` });
+      continue;
+    }
     const video = toVideo(draft);
     validateVideo(video);
     additions.push(video);
@@ -93,7 +112,11 @@ async function main() {
   }
 
   if (args["dry-run"]) {
-    console.log(JSON.stringify({ input: path.relative(rootDir, inputPath), additions: additions.map((video) => ({ ytid: video.ytid, title: video.title, score: video.score })) }, null, 2));
+    console.log(JSON.stringify({
+      input: path.relative(rootDir, inputPath),
+      additions: additions.map((video) => ({ ytid: video.ytid, title: video.title, score: video.score })),
+      skipped
+    }, null, 2));
     return;
   }
 
@@ -105,6 +128,7 @@ async function main() {
   await backup(outPath);
   await writeJson(outPath, [...current, ...additions]);
   console.log(`Merged ${additions.length} videos into ${path.relative(rootDir, outPath)}`);
+  if (skipped.length) console.log(`Skipped ${skipped.length} denied/risky drafts.`);
 }
 
 main().catch((error) => {

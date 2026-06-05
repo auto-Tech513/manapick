@@ -60,13 +60,21 @@ npm run pipeline:score
 
 出力: `data/drafts.json`
 
-ローカルOllamaを使う場合:
+ローカルOllamaは既定で試行します。無効化する場合のみ `--no-ollama` を付けます。
 
 ```sh
-node scripts/score-draft.mjs --ollama --ollama-model qwen3.6
+node scripts/score-draft.mjs
+node scripts/score-draft.mjs --no-ollama
 ```
 
-Ollamaに接続できない場合はテンプレ草案へ自動フォールバックします。
+Ollamaの既定モデルは `qwen3.6:35b-a3b` です。`OLLAMA_MODEL` または `--ollama-model` があればそちらを優先します。エンドポイントは `http://localhost:11434/api/generate` 固定です。各対象動画ごとに `OLLAMA ok ytid=...` または `OLLAMA fail ytid=... reason=...` をstderrへ出し、最後に成功数を集計します。接続・生成に失敗した場合はテンプレ草案へフォールバックします。既定タイムアウトは120秒です。
+
+重いモデルを使う場合の例:
+
+```sh
+node scripts/score-draft.mjs --limit 5
+node scripts/score-draft.mjs --ollama-excellent-only --ollama-timeout 180000
+```
 
 採点軸:
 
@@ -79,6 +87,18 @@ Ollamaに接続できない場合はテンプレ草案へ自動フォールバ�
 - 規約・権利
 
 合計28点以上かつ足切りなしを `excellent: true` にします。これは採用確定ではなく、人間レビューの優先順位です。
+
+
+## Denylist / リスク語
+
+`scripts/pipeline-config.json` の `exclude_ytids` は、fetch/score/ingestで除外します。現在の除外ID:
+
+- `IcQwLGDzmVQ`
+- `YNT-KnjbVkU`
+- `hNGAW5Z1vgQ`
+- `rN8D_d21Mdk`
+
+`weak_title_terms` は「稼ぐ」「副業」「切り抜き」「食いっぱぐれ」などの強い煽り語です。score-draftでは減点と足切り理由に入り、ingestでは `overrideRisk: true` を付けない限り取り込みません。
 
 ## 4. 人間レビュー
 
@@ -94,7 +114,7 @@ Ollamaに接続できない場合はテンプレ草案へ自動フォールバ�
 "status": "accepted"
 ```
 
-この段階で以下も必要に応じて修正します。
+この段階で以下も必要に応じて修正します。リスク語タイトルを例外採用する場合のみ `overrideRisk: true` を明示します。
 
 - `level`
 - `score` または `finalScore`

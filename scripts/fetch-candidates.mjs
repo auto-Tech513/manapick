@@ -49,6 +49,11 @@ function flattenQueries(config, selectedGenres) {
     .flatMap((genre) => genre.queries.map((query) => ({ ...query, genre: genre.genre, genreLabel: genre.label })));
 }
 
+function findTitleRiskTerms(title, terms = []) {
+  const normalized = String(title || "").toLowerCase();
+  return terms.filter((term) => normalized.includes(String(term).toLowerCase()));
+}
+
 function passesFilters(video, query, options) {
   const snippet = video.snippet || {};
   const stats = video.statistics || {};
@@ -61,6 +66,7 @@ function passesFilters(video, query, options) {
   const languageHint = snippet.defaultAudioLanguage || snippet.defaultLanguage || "";
   const japanese = languageHint.startsWith("ja") || isLikelyJapanese(`${title} ${description}`);
 
+  const riskTerms = findTitleRiskTerms(title, options.weakTitleTerms);
   const reasons = [];
   if (!japanese) reasons.push("not_japanese");
   if (viewCount < options.minViews) reasons.push("low_views");
@@ -81,7 +87,8 @@ function passesFilters(video, query, options) {
       genre: query.genre,
       sub: query.sub,
       keyword: query.keyword,
-      url: youtubeUrl(video.id)
+      url: youtubeUrl(video.id),
+      riskTerms
     }
   };
 }
@@ -105,7 +112,8 @@ async function main() {
     minViews: toNumber(args["min-views"], defaults.minViews || 10000),
     freshYears: toNumber(args["fresh-years"], defaults.freshYears || 8),
     minDurationMin: toNumber(args["min-duration"], defaults.minDurationMin || 4),
-    maxDurationMin: toNumber(args["max-duration"], defaults.maxDurationMin || 240)
+    maxDurationMin: toNumber(args["max-duration"], defaults.maxDurationMin || 240),
+    weakTitleTerms: config.weak_title_terms || defaults.weakTitleTerms || []
   };
   const queries = flattenQueries(config, args.genre);
 
@@ -118,7 +126,8 @@ async function main() {
   if (!apiKey) throw new Error("YT_API_KEY is required. Set it in your shell or local .env (not committed).");
 
   const knownIds = await existingVideoIds();
-  const seenIds = new Set(knownIds);
+  const denyIds = new Set(config.exclude_ytids || []);
+  const seenIds = new Set([...knownIds, ...denyIds]);
   const searchHits = [];
 
   for (const query of queries) {
