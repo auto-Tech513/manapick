@@ -2,7 +2,7 @@
 
 import Fuse from "fuse.js";
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import BrandLogo, { BrandMark } from "@/components/BrandLogo";
 import genresData from "@/content/genres.json";
 import roadmapsData from "@/content/roadmaps.json";
@@ -37,6 +37,8 @@ type Video = {
   minutes: number;
   channel: string;
   score: number | null;
+  viewCount?: number;
+  publishedAt?: string;
   scoreStatus?: ScoreStatus;
   editorNote?: string;
   axisScores: AxisScore[];
@@ -79,6 +81,16 @@ const timeBuckets = [
   { value: "long", label: "30分〜" }
 ] as const;
 
+const PAGE_SIZE = 24;
+
+type PopularTab = "popular" | "new" | "score";
+
+const purposeLinks = [
+  { label: "AIを仕事で使いたい", genre: "ai" },
+  { label: "英語をやり直したい", genre: "english" },
+  { label: "資格を取りたい", genre: "shikaku" }
+];
+
 function statusLabel(status: GenreStatus) {
   if (status === "published") return "公開中";
   if (status === "checking") return "確認中（注記）";
@@ -114,6 +126,55 @@ function genreName(key: string) {
   return genre ? genre.label : key;
 }
 
+function levelMeta(level: Video["level"]) {
+  if (level === "中級") return { icon: "▲", className: "is-mid" };
+  if (level === "上級") return { icon: "★", className: "is-high" };
+  return { icon: "●", className: "is-beginner" };
+}
+
+function topScoredVideo(items: Video[]) {
+  return items.reduce<Video | null>((best, video) => {
+    if (video.score === null) return best;
+    if (best === null || best.score === null || video.score > best.score) return video;
+    return best;
+  }, null);
+}
+
+function topicCounts(items: Video[]) {
+  return Array.from(
+    items.reduce<Map<string, number>>((map, video) => {
+      map.set(video.sub, (map.get(video.sub) || 0) + 1);
+      return map;
+    }, new Map())
+  ).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "ja"));
+}
+
+function groupVideosByGenre(items: Video[]) {
+  return publishedGenreKeys
+    .map((genreKey) => ({ genreKey, items: items.filter((video) => video.genre === genreKey) }))
+    .filter((group) => group.items.length > 0);
+}
+
+function monthsSincePublished(video: Video) {
+  if (!video.publishedAt) return 36;
+  const date = new Date(video.publishedAt);
+  if (Number.isNaN(date.getTime())) return 36;
+  const diff = Date.now() - date.getTime();
+  return Math.max(0, diff / (1000 * 60 * 60 * 24 * 30.4375));
+}
+
+function popularityScore(video: Video) {
+  const viewCount = Math.max(0, Number(video.viewCount || 0));
+  if (viewCount <= 0) return 0;
+  return Math.log10(viewCount) / Math.pow(monthsSincePublished(video) + 2, 0.6);
+}
+
+function publishedTime(video: Video) {
+  if (!video.publishedAt) return 0;
+  const time = new Date(video.publishedAt).getTime();
+  return Number.isNaN(time) ? 0 : time;
+}
+
 const genreIconSources: Record<string, string> = {
   ai: "/brand/icon-ai.png",
   prog: "/brand/icon-prog.png",
@@ -128,14 +189,19 @@ export default function ManapickApp() {
   const [selectedTime, setSelectedTime] = useState("all");
   const [keyword, setKeyword] = useState("");
   const [activeRoadmapGenre, setActiveRoadmapGenre] = useState("ai");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [popularTab, setPopularTab] = useState<PopularTab>("popular");
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const filtersMountedRef = useRef(false);
 
   const selectedGenreData =
     selectedGenre === "all" ? null : genres.find((genre) => genre.key === selectedGenre) ?? null;
+  const searchActive = keyword.trim().length > 0;
 
   const subOptions = useMemo(() => {
-    if (selectedGenreData) return selectedGenreData.subgenres;
-    return Array.from(new Set(genres.flatMap((genre) => genre.subgenres))).sort();
-  }, [selectedGenreData]);
+    if (selectedGenreData && !searchActive) return selectedGenreData.subgenres;
+    return Array.from(new Set(videos.map((video) => video.sub))).sort((a, b) => a.localeCompare(b, "ja"));
+  }, [selectedGenreData, searchActive]);
 
   const fuse = useMemo(
     () =>
@@ -162,8 +228,9 @@ export default function ManapickApp() {
 
   const filteredVideos = useMemo(() => {
     return videos.filter((video) => {
-      const genreOk =
-        selectedGenre === "all"
+      const genreOk = searchActive
+        ? true
+        : selectedGenre === "all"
           ? publishedGenreKeys.includes(video.genre)
           : video.genre === selectedGenre;
       const subOk = selectedSub === "all" || video.sub === selectedSub;
@@ -172,7 +239,7 @@ export default function ManapickApp() {
       const keywordOk = keywordMatchedIds === null || keywordMatchedIds.has(video.ytid);
       return genreOk && subOk && levelOk && timeOk && keywordOk;
     });
-  }, [keywordMatchedIds, selectedGenre, selectedLevel, selectedSub, selectedTime]);
+  }, [keywordMatchedIds, searchActive, selectedGenre, selectedLevel, selectedSub, selectedTime]);
 
   const roadmapTabs = useMemo(() => {
     return roadmaps.filter((roadmap) => publishedGenreKeys.includes(roadmap.genre));
@@ -199,6 +266,32 @@ export default function ManapickApp() {
 
   const confirmedCount = useMemo(() => videos.filter((video) => scoreStatus(video) === "confirmed").length, []);
 
+  const selectedPublishedVideos = useMemo(() => {
+    if (selectedGenre === "all") return [];
+    return videos.filter((video) => video.genre === selectedGenre);
+  }, [selectedGenre]);
+
+  const selectedGenreTopVideo = useMemo(() => topScoredVideo(selectedPublishedVideos), [selectedPublishedVideos]);
+  const selectedGenreTopics = useMemo(() => topicCounts(selectedPublishedVideos), [selectedPublishedVideos]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredVideos.length / PAGE_SIZE));
+  const safeCurrentPage = Math.min(currentPage, totalPages);
+  const pageStartIndex = filteredVideos.length === 0 ? 0 : (safeCurrentPage - 1) * PAGE_SIZE;
+  const pageVideos = filteredVideos.slice(pageStartIndex, pageStartIndex + PAGE_SIZE);
+  const groupedPageVideos = useMemo(() => groupVideosByGenre(pageVideos), [pageVideos]);
+
+  const popularVideos = useMemo(() => {
+    const ranked = [...videos].filter((video) => publishedGenreKeys.includes(video.genre));
+    if (popularTab === "new") {
+      ranked.sort((a, b) => publishedTime(b) - publishedTime(a) || (b.score || 0) - (a.score || 0));
+    } else if (popularTab === "score") {
+      ranked.sort((a, b) => (b.score || 0) - (a.score || 0));
+    } else {
+      ranked.sort((a, b) => popularityScore(b) - popularityScore(a) || (b.score || 0) - (a.score || 0));
+    }
+    return ranked.slice(0, 12);
+  }, [popularTab]);
+
   const weeklyPick = useMemo(() => {
     return videos.reduce<Video | null>((best, video) => {
       if (video.score === null) return best;
@@ -206,6 +299,47 @@ export default function ManapickApp() {
       return best;
     }, null);
   }, []);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const page = Number(params.get("page") || "1");
+    if (Number.isFinite(page) && page > 1) setCurrentPage(Math.floor(page));
+  }, []);
+
+  useEffect(() => {
+    function handleKeydown(event: KeyboardEvent) {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        searchInputRef.current?.focus();
+      }
+    }
+    window.addEventListener("keydown", handleKeydown);
+    return () => window.removeEventListener("keydown", handleKeydown);
+  }, []);
+
+  useEffect(() => {
+    if (!filtersMountedRef.current) {
+      filtersMountedRef.current = true;
+      return;
+    }
+    setCurrentPage(1);
+    const url = new URL(window.location.href);
+    url.searchParams.delete("page");
+    window.history.replaceState(null, "", url);
+  }, [keyword, selectedGenre, selectedLevel, selectedSub, selectedTime]);
+
+  useEffect(() => {
+    if (currentPage > totalPages) setCurrentPage(totalPages);
+  }, [currentPage, totalPages]);
+
+  function updatePage(nextPage: number) {
+    const bounded = Math.min(Math.max(1, nextPage), totalPages);
+    setCurrentPage(bounded);
+    const url = new URL(window.location.href);
+    if (bounded > 1) url.searchParams.set("page", String(bounded));
+    else url.searchParams.delete("page");
+    window.history.replaceState(null, "", url);
+  }
 
   function handleGenreChange(nextGenre: string) {
     setSelectedGenre(nextGenre);
@@ -221,7 +355,11 @@ export default function ManapickApp() {
   }
 
   function viewAiGenre() {
-    handleGenreChange("ai");
+    jumpToGenre("ai");
+  }
+
+  function jumpToGenre(genreKey: string) {
+    handleGenreChange(genreKey);
     window.requestAnimationFrame(() => {
       document.getElementById("search")?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
@@ -234,6 +372,17 @@ export default function ManapickApp() {
           <a href="#top" className="min-w-0" aria-label="Manapick トップ">
             <BrandLogo compact />
           </a>
+          <label className="top-search" aria-label="動画を検索">
+            <span className="sr-only">動画を検索</span>
+            <input
+              ref={searchInputRef}
+              value={keyword}
+              onChange={(event) => setKeyword(event.target.value)}
+              placeholder="動画を検索"
+              className="top-search-input"
+            />
+            <span className="top-search-key" aria-hidden="true">⌘K</span>
+          </label>
           <nav className="flex flex-wrap gap-3 text-sm font-semibold text-muted" aria-label="サイト内リンク">
             <a className="transition hover:text-accent" href="#search">
               探す
@@ -292,6 +441,7 @@ export default function ManapickApp() {
             </p>
 
             <HeroTrustStats totalVideos={videos.length} confirmedCount={confirmedCount} />
+            <PurposeNav onSelect={jumpToGenre} />
 
             <div className="hero-chip-grid">
               <ValueChip iconSrc="/brand/icon-curate.png" title="Manapickスコアで厳選" body="35点満点で採点" />
@@ -339,6 +489,8 @@ export default function ManapickApp() {
           </div>
         </section>
       ) : null}
+
+      <PopularVideos videos={popularVideos} activeTab={popularTab} onTabChange={setPopularTab} onGenreSelect={jumpToGenre} />
 
       <section id="search" className="border-b border-line bg-white/64">
         <div className="mx-auto max-w-7xl px-4 py-7 min-[760px]:px-6">
@@ -461,6 +613,7 @@ export default function ManapickApp() {
                   placeholder="例: Claude / Python / 独学"
                   className="h-12 w-full rounded-lg border border-line bg-white px-3 text-base"
                 />
+                <span className="mt-1 block text-xs font-bold text-muted">⌘Kでも検索できます</span>
               </label>
               <button
                 type="button"
@@ -484,7 +637,17 @@ export default function ManapickApp() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-8 min-[760px]:px-6" aria-label="動画一覧">
-        {selectedGenreData?.status !== "published" && selectedGenreData ? (
+        {!searchActive && selectedGenre === "all" ? <AllGenreHighlights onGenreSelect={jumpToGenre} /> : null}
+        {!searchActive && selectedGenreData?.status === "published" ? (
+          <GenreSummaryPanel
+            genre={selectedGenreData}
+            topics={selectedGenreTopics}
+            topVideo={selectedGenreTopVideo}
+            selectedSub={selectedSub}
+            onTopicSelect={setSelectedSub}
+          />
+        ) : null}
+        {selectedGenreData?.status !== "published" && selectedGenreData && !searchActive ? (
           <div className="rounded-lg border border-line bg-surface p-5 shadow-card">
             <p className="flex items-center gap-2 text-sm font-bold text-leaf">
               <GenreIcon genreKey={selectedGenreData.key} className="selected-genre-icon" />
@@ -503,11 +666,26 @@ export default function ManapickApp() {
             <p className="mt-2 leading-7 text-muted">条件を少し広げて探してください。</p>
           </div>
         ) : (
-          <div className="grid gap-4 min-[560px]:grid-cols-2 min-[880px]:grid-cols-3">
-            {filteredVideos.map((video) => (
-              <VideoCard key={video.ytid} video={video} />
-            ))}
-          </div>
+          <>
+            <ResultSummary total={filteredVideos.length} start={pageStartIndex + 1} end={Math.min(pageStartIndex + pageVideos.length, filteredVideos.length)} searchActive={searchActive} />
+            {searchActive ? (
+              <div className="search-result-groups">
+                {groupedPageVideos.map((group) => (
+                  <section key={group.genreKey} className="search-result-group">
+                    <h2>{genreLabel(group.genreKey)} <span>{group.items.length}件</span></h2>
+                    <div className="grid gap-4 min-[560px]:grid-cols-2 min-[880px]:grid-cols-3">
+                      {group.items.map((video) => <VideoCard key={video.ytid} video={video} />)}
+                    </div>
+                  </section>
+                ))}
+              </div>
+            ) : (
+              <div className="grid gap-4 min-[560px]:grid-cols-2 min-[880px]:grid-cols-3">
+                {pageVideos.map((video) => <VideoCard key={video.ytid} video={video} />)}
+              </div>
+            )}
+            <PaginationControls currentPage={safeCurrentPage} totalPages={totalPages} onPageChange={updatePage} />
+          </>
         )}
       </section>
 
@@ -597,10 +775,10 @@ export default function ManapickApp() {
 function HeroTrustStats({ totalVideos, confirmedCount }: { totalVideos: number; confirmedCount: number }) {
   const stats = [
     {
-      label: "確認済" + confirmedCount + "本",
+      label: "厳選" + totalVideos + "本掲載",
       icon: (
         <svg viewBox="0 0 24 24" role="presentation" focusable="false">
-          <path d="M20 6 9 17l-5-5" />
+          <path d="m5 12 4 4L19 6" />
         </svg>
       )
     },
@@ -626,6 +804,17 @@ function HeroTrustStats({ totalVideos, confirmedCount }: { totalVideos: number; 
     }
   ];
 
+  if (confirmedCount > 0) {
+    stats.push({
+      label: "確認済" + confirmedCount + "本",
+      icon: (
+        <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+          <path d="M20 6 9 17l-5-5" />
+        </svg>
+      )
+    });
+  }
+
   return (
     <div className="hero-trust-band" aria-label="Manapickの信頼指標">
       {stats.map((stat) => (
@@ -637,8 +826,192 @@ function HeroTrustStats({ totalVideos, confirmedCount }: { totalVideos: number; 
         </span>
       ))}
       <a className="hero-score-link" href="/about-score/">採点方法を見る</a>
-      <span className="sr-only">現在の掲載動画数は{totalVideos}本です。</span>
     </div>
+  );
+}
+
+function PurposeNav({ onSelect }: { onSelect: (genreKey: string) => void }) {
+  return (
+    <div className="purpose-nav" aria-label="目的から選ぶ">
+      <p>目的から選ぶ</p>
+      <div>
+        {purposeLinks.map((item) => (
+          <button key={item.genre} type="button" onClick={() => onSelect(item.genre)}>
+            {item.label}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ResultSummary({ total, start, end, searchActive }: { total: number; start: number; end: number; searchActive: boolean }) {
+  return (
+    <div className="result-summary">
+      <p>{total}件中 {start}–{end}件を表示{searchActive ? "（全ジャンル横断検索）" : ""}</p>
+    </div>
+  );
+}
+
+function PaginationControls({ currentPage, totalPages, onPageChange }: { currentPage: number; totalPages: number; onPageChange: (page: number) => void }) {
+  if (totalPages <= 1) return null;
+  const pages = Array.from(new Set([1, currentPage - 1, currentPage, currentPage + 1, totalPages]))
+    .filter((page) => page >= 1 && page <= totalPages)
+    .sort((a, b) => a - b);
+
+  return (
+    <nav className="pagination" aria-label="動画一覧ページ">
+      <button type="button" onClick={() => onPageChange(currentPage - 1)} disabled={currentPage <= 1}>前へ</button>
+      <div>
+        {pages.map((page) => (
+          <button key={page} type="button" onClick={() => onPageChange(page)} aria-current={page === currentPage ? "page" : undefined}>
+            {page}
+          </button>
+        ))}
+      </div>
+      <button type="button" onClick={() => onPageChange(currentPage + 1)} disabled={currentPage >= totalPages}>次へ</button>
+      {currentPage < totalPages ? (
+        <button type="button" className="pagination-more" onClick={() => onPageChange(currentPage + 1)}>もっと見る</button>
+      ) : null}
+    </nav>
+  );
+}
+
+function AllGenreHighlights({ onGenreSelect }: { onGenreSelect: (genreKey: string) => void }) {
+  const highlights = publishedGenreKeys
+    .map((genreKey) => ({ genreKey, video: topScoredVideo(videos.filter((video) => video.genre === genreKey)) }))
+    .filter((item): item is { genreKey: string; video: Video } => item.video !== null);
+
+  return (
+    <section className="all-genre-highlights" aria-labelledby="all-genre-highlights-title">
+      <div className="section-heading-row">
+        <div>
+          <p className="section-eyebrow">まず見るべき1本</p>
+          <h2 id="all-genre-highlights-title" className="section-title">ジャンル別の入口</h2>
+        </div>
+      </div>
+      <div className="highlight-grid">
+        {highlights.map(({ genreKey, video }) => (
+          <button key={genreKey} type="button" className="highlight-card" onClick={() => onGenreSelect(genreKey)}>
+            <span className="highlight-genre">{genreLabel(genreKey)}</span>
+            <span className="highlight-title">{video.title}</span>
+            <span className="highlight-meta">{scoreText(video)} / {video.minutes}分</span>
+          </button>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function GenreSummaryPanel({
+  genre,
+  topics,
+  topVideo,
+  selectedSub,
+  onTopicSelect
+}: {
+  genre: Genre;
+  topics: [string, number][];
+  topVideo: Video | null;
+  selectedSub: string;
+  onTopicSelect: (sub: string) => void;
+}) {
+  return (
+    <section className="genre-summary-panel" aria-labelledby="genre-summary-title">
+      <div className="genre-summary-heading">
+        <div>
+          <p className="section-eyebrow">{genre.label}</p>
+          <h2 id="genre-summary-title" className="section-title">トピックから絞り込む</h2>
+        </div>
+        {selectedSub !== "all" ? <button type="button" onClick={() => onTopicSelect("all")}>絞り込み解除</button> : null}
+      </div>
+      <div className="topic-chip-row" role="group" aria-label="サブジャンルトピック">
+        {topics.map(([sub, count]) => (
+          <button key={sub} type="button" className={selectedSub === sub ? "topic-chip is-active" : "topic-chip"} onClick={() => onTopicSelect(sub)}>
+            <span>{sub}</span>
+            <strong>{count}</strong>
+          </button>
+        ))}
+      </div>
+      {topVideo ? <FeaturedVideoCard video={topVideo} /> : null}
+    </section>
+  );
+}
+
+function FeaturedVideoCard({ video }: { video: Video }) {
+  return (
+    <article className="featured-video-card">
+      <div className="featured-video-thumb">
+        <Image src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"} alt="" fill sizes="(min-width: 760px) 320px, 92vw" className="object-cover" />
+        <ScoreBadge video={video} compact />
+      </div>
+      <div>
+        <p className="featured-video-eyebrow">まず見るべき1本</p>
+        <h3>{video.title}</h3>
+        <p>{video.review[0]}</p>
+        <a href={"#" + video.ytid}>一覧内で見る</a>
+      </div>
+    </article>
+  );
+}
+
+function PopularVideos({
+  videos,
+  activeTab,
+  onTabChange,
+  onGenreSelect
+}: {
+  videos: Video[];
+  activeTab: PopularTab;
+  onTabChange: (tab: PopularTab) => void;
+  onGenreSelect: (genreKey: string) => void;
+}) {
+  const tabs: { key: PopularTab; label: string }[] = [
+    { key: "popular", label: "総合人気" },
+    { key: "new", label: "新着" },
+    { key: "score", label: "Manapickスコア順" }
+  ];
+
+  return (
+    <section className="popular-section" aria-labelledby="popular-title">
+      <div className="popular-shell">
+        <div className="section-heading-row">
+          <div>
+            <p className="section-eyebrow">人気の学習動画</p>
+            <h2 id="popular-title" className="section-title">いま選びやすい12本</h2>
+          </div>
+          <p className="popular-note">総合人気はYouTube再生数ベース</p>
+        </div>
+        <div className="popular-tabs" role="tablist" aria-label="人気動画の並び替え">
+          {tabs.map((tab) => (
+            <button key={tab.key} type="button" role="tab" aria-selected={activeTab === tab.key} className={activeTab === tab.key ? "is-active" : ""} onClick={() => onTabChange(tab.key)}>
+              {tab.label}
+            </button>
+          ))}
+        </div>
+        <div className="popular-card-grid">
+          {videos.map((video, index) => (
+            <RankedVideoCard key={video.ytid} video={video} rank={index + 1} onGenreSelect={onGenreSelect} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function RankedVideoCard({ video, rank, onGenreSelect }: { video: Video; rank: number; onGenreSelect: (genreKey: string) => void }) {
+  return (
+    <article className="ranked-video-card">
+      <a href={video.url} target="_blank" rel="noopener noreferrer" className="ranked-thumb" aria-label={video.title + "をYouTubeで開く"}>
+        <Image src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"} alt="" fill sizes="(min-width: 900px) 180px, 42vw" className="object-cover" />
+        <span>{rank}</span>
+      </a>
+      <div className="ranked-body">
+        <button type="button" onClick={() => onGenreSelect(video.genre)}>{genreLabel(video.genre)}</button>
+        <h3><a href={video.url} target="_blank" rel="noopener noreferrer">{video.title}</a></h3>
+        <p>{scoreText(video)} / {video.minutes}分</p>
+      </div>
+    </article>
   );
 }
 
@@ -763,7 +1136,7 @@ function VideoCard({ video }: { video: Video }) {
       </div>
       <div className="flex flex-1 flex-col gap-3 p-4">
         <div className="flex flex-wrap gap-2">
-          <span className="rounded-pill bg-bgSoft px-2.5 py-1 text-xs font-black text-primaryInk">{video.level}</span>
+          <LevelBadge level={video.level} />
           <span className="rounded-pill bg-bg px-2.5 py-1 text-xs font-black text-ink">{video.sub}</span>
         </div>
         <h3 className="line-clamp-2 text-base font-black leading-6 text-ink">
@@ -826,6 +1199,17 @@ function VideoCard({ video }: { video: Video }) {
   );
 }
 
+
+
+function LevelBadge({ level }: { level: Video["level"] }) {
+  const meta = levelMeta(level);
+  return (
+    <span className={["level-badge", meta.className].join(" ")}>
+      <span aria-hidden="true">{meta.icon}</span>
+      <span>{level}</span>
+    </span>
+  );
+}
 
 function GenreIcon({ genreKey, className = "" }: { genreKey: string; className?: string }) {
   const src = genreIconSources[genreKey];
@@ -1003,7 +1387,10 @@ function RoadmapMiniVideo({ video }: { video: Video }) {
       </span>
       <span className="roadmap-mini-body">
         <span className="roadmap-mini-title">{video.title}</span>
-        <span className="roadmap-mini-meta">{video.minutes}分 / {video.level}</span>
+        <span className="roadmap-mini-meta">
+          <span>{video.minutes}分</span>
+          <LevelBadge level={video.level} />
+        </span>
       </span>
     </a>
   );
