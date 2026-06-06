@@ -502,10 +502,6 @@ export default function ManapickApp() {
     setSuggestionsOpen(false);
   }
 
-  function viewAiGenre() {
-    jumpToGenre("ai");
-  }
-
   function jumpToGenre(genreKey: string) {
     handleGenreChange(genreKey);
     window.requestAnimationFrame(() => {
@@ -617,21 +613,6 @@ export default function ManapickApp() {
 
             <HeroTrustStats totalVideos={videos.length} confirmedCount={confirmedCount} />
             <PurposeNav onSelect={jumpToGenre} />
-
-            <div className="hero-chip-grid">
-              <ValueChip iconSrc="/brand/icon-curate.png" title="Manapickスコアで厳選" body="35点満点で採点" />
-              <ValueChip iconSrc="/brand/icon-roadmap.png" title="ロードマップで迷わない" body="初級→上級" />
-              <ValueChip iconSrc="/brand/icon-safe.png" title="公式埋め込みだけ・安心" body="規約順守" />
-            </div>
-
-            <div className="hero-actions">
-              <button type="button" onClick={viewAiGenre} className="btn btn-primary hero-primary-cta w-full min-[520px]:w-auto">
-                生成AIから見る →
-              </button>
-              <a href="#roadmap" className="btn btn-secondary w-full min-[520px]:w-auto">
-                学習ロードマップ
-              </a>
-            </div>
 
             <p className="hero-proof">
               公開中{publishedGenres.length}ジャンル
@@ -1138,12 +1119,20 @@ function PurposeNav({ onSelect }: { onSelect: (genreKey: string) => void }) {
               <span className="purpose-label">{item.label}</span>
             </a>
           ) : (
-            <button key={item.number} type="button" onClick={() => onSelect(item.genre)} className="purpose-block">
+            <a
+              key={item.number}
+              href="#search"
+              onClick={(event) => {
+                event.preventDefault();
+                onSelect(item.genre);
+              }}
+              className="purpose-block"
+            >
               <PurposeIcon icon={item.icon} />
               <span className="purpose-number">{item.number}</span>
               <span className="purpose-title">{item.title}</span>
               <span className="purpose-label">{item.label}</span>
-            </button>
+            </a>
           )
         ))}
       </div>

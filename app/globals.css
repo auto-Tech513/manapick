@@ -1162,13 +1162,24 @@ img {
   backdrop-filter: blur(14px);
 }
 
+.category-tab-nav::after {
+  position: absolute;
+  inset-block: 0;
+  right: 0;
+  width: 52px;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.96));
+  content: "";
+}
+
 .category-tab-track {
   display: flex;
   width: min(100%, 1280px);
   margin-inline: auto;
   gap: 8px;
   overflow-x: auto;
-  padding: 8px 16px;
+  padding: 8px 64px 8px 16px;
+  scroll-padding-inline: 16px 64px;
   scrollbar-width: none;
 }
 
@@ -1233,6 +1244,38 @@ img {
   font-size: 0.62rem;
   font-weight: 900;
   letter-spacing: 0;
+}
+
+@media (min-width: 1280px) {
+  .category-tab-nav::after {
+    display: none;
+  }
+
+  .category-tab-track {
+    gap: 6px;
+    overflow-x: visible;
+    padding-inline: 12px;
+  }
+
+  .category-tab {
+    min-width: 0;
+    flex: 1 1 0;
+    gap: 7px;
+    padding: 6px 8px;
+  }
+
+  .category-tab-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .category-tab-text span {
+    font-size: 0.78rem;
+  }
+
+  .category-tab-text small {
+    font-size: 0.56rem;
+  }
 }
 
 .score-badge {
