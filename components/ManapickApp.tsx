@@ -668,8 +668,8 @@ export default function ManapickApp() {
               <p className="text-sm font-bold text-leaf">②詳細に探す</p>
               <h2 className="text-2xl font-black text-ink">条件で絞り込む</h2>
             </div>
-            <div className="grid gap-3 min-[560px]:grid-cols-2 min-[940px]:grid-cols-[1fr_0.8fr_0.9fr_1.4fr_auto] min-[940px]:items-end">
-              <label className="block">
+            <div className="filter-control-grid grid gap-3 min-[560px]:grid-cols-2 min-[940px]:grid-cols-[1fr_0.8fr_0.9fr_1.4fr_auto]">
+              <label className="filter-control">
                 <span className="mb-1 block text-sm font-bold text-muted">サブジャンル</span>
                 <select
                   value={selectedSub}
@@ -684,7 +684,7 @@ export default function ManapickApp() {
                   ))}
                 </select>
               </label>
-              <label className="block">
+              <label className="filter-control">
                 <span className="mb-1 block text-sm font-bold text-muted">レベル</span>
                 <select
                   value={selectedLevel}
@@ -698,7 +698,7 @@ export default function ManapickApp() {
                   ))}
                 </select>
               </label>
-              <label className="block">
+              <label className="filter-control">
                 <span className="mb-1 block text-sm font-bold text-muted">所要時間</span>
                 <select
                   value={selectedTime}
@@ -712,7 +712,7 @@ export default function ManapickApp() {
                   ))}
                 </select>
               </label>
-              <label className="block">
+              <label className="filter-control filter-control-keyword">
                 <span className="mb-1 block text-sm font-bold text-muted">キーワード</span>
                 <input
                   value={searchDraft}
@@ -726,12 +726,12 @@ export default function ManapickApp() {
                   className="h-12 w-full rounded-lg border border-line bg-white px-3 text-base"
                   autoComplete="off"
                 />
-                <span className="mt-1 block text-xs font-bold text-muted">⌘Kでも検索できます</span>
+                <span className="filter-hint text-xs font-bold text-muted">⌘Kでも検索できます</span>
               </label>
               <button
                 type="button"
                 onClick={resetFilters}
-                className="h-12 rounded-lg border border-line bg-paper px-4 text-sm font-black text-ink transition hover:border-accent/50 hover:shadow-card"
+                className="filter-reset h-12 rounded-lg border border-line bg-paper px-4 text-sm font-black text-ink transition hover:border-accent/50 hover:shadow-card"
               >
                 条件リセット
               </button>

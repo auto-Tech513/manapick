@@ -1936,6 +1936,52 @@ img {
   gap: 4px;
 }
 
+.filter-control-grid {
+  align-items: start;
+}
+
+.filter-control {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  grid-template-rows: 22px 48px;
+  gap: 4px;
+}
+
+.filter-control > span:first-child {
+  align-self: end;
+  margin-bottom: 0;
+  line-height: 1.25;
+}
+
+.filter-control select,
+.filter-control input {
+  min-height: 48px;
+}
+
+.filter-control-keyword {
+  padding-bottom: 22px;
+}
+
+.filter-hint {
+  position: absolute;
+  top: 76px;
+  left: 0;
+  display: block;
+  max-width: 100%;
+  line-height: 1.35;
+}
+
+.filter-reset {
+  min-height: 48px;
+}
+
+@media (min-width: 940px) {
+  .filter-reset {
+    margin-top: 26px;
+  }
+}
+
 .top-search-wrap .top-search {
   width: 100%;
 }

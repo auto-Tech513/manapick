@@ -10,3 +10,4 @@ data/*.tmp
 data/*.bak
 content/*.bak
 content/*.bak*
+content/*.bak*
