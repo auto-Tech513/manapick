@@ -687,35 +687,46 @@ export default function ManapickApp() {
               aria-label={menuOpen ? "メニューを閉じる" : "メニューを開く"}
               aria-controls="site-menu"
               aria-expanded={menuOpen}
-              onClick={() => setMenuOpen(true)}
+              onClick={() => setMenuOpen((open) => !open)}
             >
-              <span aria-hidden="true" />
-              <span aria-hidden="true" />
-              <span aria-hidden="true" />
+              <svg className="menu-toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
+                {menuOpen ? (
+                  <>
+                    <path d="M6.5 6.5 17.5 17.5" />
+                    <path d="M17.5 6.5 6.5 17.5" />
+                  </>
+                ) : (
+                  <>
+                    <path d="M5 7h14" />
+                    <path d="M5 12h14" />
+                    <path d="M5 17h14" />
+                  </>
+                )}
+              </svg>
             </button>
           </div>
         </div>
-        {menuOpen ? (
-          <SiteMenuDrawer
-            genres={publishedGenres}
-            drawerRef={menuDrawerRef}
-            onKeyDown={handleMenuKeyDown}
-            onClose={() => setMenuOpen(false)}
-            onGenreSelect={(genreKey) => {
-              setMenuOpen(false);
-              handleGenreChange(genreKey);
-            }}
-            onGenreList={() => {
-              setMenuOpen(false);
-              showGenrePicker();
-            }}
-            onSectionSelect={(sectionId) => {
-              setMenuOpen(false);
-              scrollToElement(sectionId);
-            }}
-          />
-        ) : null}
       </header>
+      {menuOpen ? (
+        <SiteMenuDrawer
+          genres={publishedGenres}
+          drawerRef={menuDrawerRef}
+          onKeyDown={handleMenuKeyDown}
+          onClose={() => setMenuOpen(false)}
+          onGenreSelect={(genreKey) => {
+            setMenuOpen(false);
+            handleGenreChange(genreKey);
+          }}
+          onGenreList={() => {
+            setMenuOpen(false);
+            showGenrePicker();
+          }}
+          onSectionSelect={(sectionId) => {
+            setMenuOpen(false);
+            scrollToElement(sectionId);
+          }}
+        />
+      ) : null}
 
       <CategoryTabNav
         genres={publishedGenres}
@@ -1645,20 +1656,21 @@ function WeeklyPickCard({ video }: { video: Video }) {
             src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"}
             alt=""
             fill
-            sizes="(min-width: 980px) 360px, (min-width: 760px) 38vw, 86vw"
+            sizes="(min-width: 1320px) 680px, (min-width: 760px) 92vw, 92vw"
             loading="eager"
             className="object-cover"
           />
         </a>
-        <div className="weekly-score-wrap">
-          <ScoreBadge video={video} compact />
-        </div>
       </div>
       <div className="weekly-pick-body">
         <p className="weekly-pick-eyebrow">今週のイチオシ</p>
         <h2><a href={videoDetailHref(video)}>{video.title}</a></h2>
         <p>{reviewLine}</p>
         {video.editorNote ? <p className="editor-note">編集メモ: {video.editorNote}</p> : null}
+        <div className="weekly-pick-meta">
+          <ScoreBadge video={video} compact />
+          <span>{video.minutes}分</span>
+        </div>
         <a className="weekly-pick-button" href={video.url} target="_blank" rel="noopener noreferrer">
           YouTubeで視聴
         </a>
