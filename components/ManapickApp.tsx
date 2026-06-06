@@ -86,9 +86,9 @@ const PAGE_SIZE = 24;
 type PopularTab = "popular" | "new" | "score";
 
 const purposeLinks = [
-  { label: "AIを仕事で使いたい", genre: "ai" },
-  { label: "英語をやり直したい", genre: "english" },
-  { label: "資格を取りたい", genre: "shikaku" }
+  { number: "01", title: "目的から選ぶ", label: "AIを仕事で使いたい", genre: "ai", icon: "target" },
+  { number: "02", title: "ジャンルから選ぶ", label: "8ジャンルから探す", genre: "all", icon: "grid" },
+  { number: "03", title: "ロードマップで学ぶ", label: "順番を見て進む", genre: "roadmap", icon: "path" }
 ];
 
 function statusLabel(status: GenreStatus) {
@@ -156,9 +156,17 @@ function topicCounts(items: Video[]) {
 }
 
 function groupVideosByGenre(items: Video[]) {
-  return publishedGenreKeys
-    .map((genreKey) => ({ genreKey, items: items.filter((video) => video.genre === genreKey) }))
-    .filter((group) => group.items.length > 0);
+  const groups: { genreKey: string; items: Video[] }[] = [];
+  items.forEach((video) => {
+    if (!publishedGenreKeys.includes(video.genre)) return;
+    const group = groups.find((item) => item.genreKey === video.genre);
+    if (group) {
+      group.items.push(video);
+    } else {
+      groups.push({ genreKey: video.genre, items: [video] });
+    }
+  });
+  return groups;
 }
 
 function monthsSincePublished(video: Video) {
@@ -179,6 +187,61 @@ function publishedTime(video: Video) {
   if (!video.publishedAt) return 0;
   const time = new Date(video.publishedAt).getTime();
   return Number.isNaN(time) ? 0 : time;
+}
+
+function normalizedTerms(query: string) {
+  return query
+    .toLocaleLowerCase("ja")
+    .split(/\s+/)
+    .map((term) => term.trim())
+    .filter(Boolean);
+}
+
+function fieldMatchesTerms(value: string, terms: string[]) {
+  const normalized = value.toLocaleLowerCase("ja");
+  return terms.length > 0 && terms.every((term) => normalized.includes(term));
+}
+
+function searchRelevance(video: Video, query: string) {
+  const terms = normalizedTerms(query);
+  if (terms.length === 0) return 0;
+  if (fieldMatchesTerms(video.sub, terms)) return 0;
+  if (fieldMatchesTerms(video.title, terms)) return 1;
+  if (fieldMatchesTerms(video.tags.join(" "), terms)) return 2;
+  if (fieldMatchesTerms(video.channel, terms)) return 3;
+  if (fieldMatchesTerms(video.review.join(" "), terms)) return 4;
+  return 5;
+}
+
+function sortBySearchRelevance(items: Video[], query: string) {
+  return [...items].sort((a, b) => {
+    const relevance = searchRelevance(a, query) - searchRelevance(b, query);
+    if (relevance !== 0) return relevance;
+    return (b.score ?? -1) - (a.score ?? -1);
+  });
+}
+
+function publishedAgeLabel(video: Video) {
+  if (!video.publishedAt) return null;
+  const date = new Date(video.publishedAt);
+  if (Number.isNaN(date.getTime())) return null;
+  const months = Math.max(0, Math.floor(monthsSincePublished(video)));
+  if (months < 12) return Math.max(1, months) + "ヶ月前公開";
+  return Math.max(1, Math.floor(months / 12)) + "年前公開";
+}
+
+function genreEnglishLabel(key: string) {
+  const labels: Record<string, string> = {
+    ai: "GENERATIVE AI",
+    prog: "PROGRAMMING",
+    video: "CREATIVE",
+    english: "ENGLISH",
+    data: "DATA / DX",
+    marke: "MARKETING",
+    biz: "BUSINESS",
+    shikaku: "CERTIFICATION"
+  };
+  return labels[key] ?? key.toLocaleUpperCase("en-US");
 }
 
 const genreIconSources: Record<string, string> = {
@@ -238,7 +301,7 @@ export default function ManapickApp() {
   }, [fuse, keyword]);
 
   const filteredVideos = useMemo(() => {
-    return videos.filter((video) => {
+    const filtered = videos.filter((video) => {
       const genreOk = searchActive
         ? true
         : selectedGenre === "all"
@@ -250,7 +313,8 @@ export default function ManapickApp() {
       const keywordOk = keywordMatchedIds === null || keywordMatchedIds.has(video.ytid);
       return genreOk && subOk && levelOk && timeOk && keywordOk;
     });
-  }, [keywordMatchedIds, searchActive, selectedGenre, selectedLevel, selectedSub, selectedTime]);
+    return searchActive ? sortBySearchRelevance(filtered, keyword) : filtered;
+  }, [keyword, keywordMatchedIds, searchActive, selectedGenre, selectedLevel, selectedSub, selectedTime]);
 
   const roadmapTabs = useMemo(() => {
     return roadmaps.filter((roadmap) => publishedGenreKeys.includes(roadmap.genre));
@@ -504,6 +568,12 @@ export default function ManapickApp() {
           </nav>
         </div>
       </header>
+
+      <CategoryTabNav
+        genres={publishedGenres}
+        activeGenre={selectedGenre}
+        onSelect={jumpToGenre}
+      />
 
       <section id="top" className="hero-section">
         <div className="pointer-events-none absolute -left-24 top-14 -z-10 h-72 w-[32rem] rotate-[-18deg] rounded-[38%_62%_58%_42%] bg-[#1F3A8A]/[0.07] blur-2xl" aria-hidden="true" />
@@ -965,6 +1035,38 @@ function LiveSearchPanel({
   );
 }
 
+function CategoryTabNav({
+  genres,
+  activeGenre,
+  onSelect
+}: {
+  genres: Genre[];
+  activeGenre: string;
+  onSelect: (genreKey: string) => void;
+}) {
+  return (
+    <nav className="category-tab-nav" aria-label="公開中ジャンル">
+      <div className="category-tab-track">
+        {genres.map((genre) => (
+          <button
+            key={genre.key}
+            type="button"
+            className={activeGenre === genre.key ? "category-tab is-active" : "category-tab"}
+            onClick={() => onSelect(genre.key)}
+            aria-current={activeGenre === genre.key ? "page" : undefined}
+          >
+            <GenreIcon genreKey={genre.key} className="category-tab-icon" />
+            <span className="category-tab-text">
+              <span>{genreLabel(genre.key)}</span>
+              <small>{genreEnglishLabel(genre.key)}</small>
+            </span>
+          </button>
+        ))}
+      </div>
+    </nav>
+  );
+}
+
 function HeroTrustStats({ totalVideos, confirmedCount }: { totalVideos: number; confirmedCount: number }) {
   const stats = [
     {
@@ -1026,15 +1128,66 @@ function HeroTrustStats({ totalVideos, confirmedCount }: { totalVideos: number; 
 function PurposeNav({ onSelect }: { onSelect: (genreKey: string) => void }) {
   return (
     <div className="purpose-nav" aria-label="目的から選ぶ">
-      <p>目的から選ぶ</p>
       <div>
         {purposeLinks.map((item) => (
-          <button key={item.genre} type="button" onClick={() => onSelect(item.genre)}>
-            {item.label}
-          </button>
+          item.genre === "roadmap" ? (
+            <a key={item.number} href="#roadmap" className="purpose-block">
+              <PurposeIcon icon={item.icon} />
+              <span className="purpose-number">{item.number}</span>
+              <span className="purpose-title">{item.title}</span>
+              <span className="purpose-label">{item.label}</span>
+            </a>
+          ) : (
+            <button key={item.number} type="button" onClick={() => onSelect(item.genre)} className="purpose-block">
+              <PurposeIcon icon={item.icon} />
+              <span className="purpose-number">{item.number}</span>
+              <span className="purpose-title">{item.title}</span>
+              <span className="purpose-label">{item.label}</span>
+            </button>
+          )
         ))}
       </div>
     </div>
+  );
+}
+
+function PurposeIcon({ icon }: { icon: string }) {
+  if (icon === "grid") {
+    return (
+      <span aria-hidden="true" className="purpose-icon">
+        <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+          <path d="M4 4h7v7H4z" />
+          <path d="M13 4h7v7h-7z" />
+          <path d="M4 13h7v7H4z" />
+          <path d="M13 13h7v7h-7z" />
+        </svg>
+      </span>
+    );
+  }
+  if (icon === "path") {
+    return (
+      <span aria-hidden="true" className="purpose-icon">
+        <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+          <path d="M5 18c4-9 9 0 14-9" />
+          <path d="M16 7h4v4" />
+          <path d="M5 18h.01" />
+          <path d="M12 13h.01" />
+          <path d="M19 9h.01" />
+        </svg>
+      </span>
+    );
+  }
+  return (
+    <span aria-hidden="true" className="purpose-icon">
+      <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+        <circle cx="12" cy="12" r="8" />
+        <circle cx="12" cy="12" r="3" />
+        <path d="M12 2v3" />
+        <path d="M12 19v3" />
+        <path d="M2 12h3" />
+        <path d="M19 12h3" />
+      </svg>
+    </span>
   );
 }
 
@@ -1204,16 +1357,18 @@ function PopularVideos({
 }
 
 function RankedVideoCard({ video, rank, onGenreSelect }: { video: Video; rank: number; onGenreSelect: (genreKey: string) => void }) {
+  const ageLabel = publishedAgeLabel(video);
+
   return (
     <article className="ranked-video-card">
       <a href={video.url} target="_blank" rel="noopener noreferrer" className="ranked-thumb" aria-label={video.title + "をYouTubeで開く"}>
         <Image src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"} alt="" fill sizes="(min-width: 900px) 180px, 42vw" className="object-cover" />
-        <span>{rank}</span>
+        <span className={`rank-badge rank-${Math.min(rank, 4)}`}>{rank}</span>
       </a>
       <div className="ranked-body">
         <button type="button" onClick={() => onGenreSelect(video.genre)}>{genreLabel(video.genre)}</button>
         <h3><a href={video.url} target="_blank" rel="noopener noreferrer">{video.title}</a></h3>
-        <p>{scoreText(video)} / {video.minutes}分</p>
+        <p>{scoreText(video)} / {video.minutes}分{ageLabel ? " / " + ageLabel : ""}</p>
       </div>
     </article>
   );
@@ -1307,6 +1462,7 @@ function buildRoadmapSteps(roadmap: Roadmap): DisplayRoadmapStep[] {
 
 function VideoCard({ video, highlighted = false }: { video: Video; highlighted?: boolean }) {
   const channel = displayChannel(video);
+  const ageLabel = publishedAgeLabel(video);
 
   return (
     <article
@@ -1344,6 +1500,7 @@ function VideoCard({ video, highlighted = false }: { video: Video; highlighted?:
         <div className="flex flex-wrap gap-2">
           <LevelBadge level={video.level} />
           <span className="rounded-pill bg-bg px-2.5 py-1 text-xs font-black text-ink">{video.sub}</span>
+          {ageLabel ? <span className="published-age">{ageLabel}</span> : null}
         </div>
         <h3 className="line-clamp-2 text-base font-black leading-6 text-ink">
           <a className="transition hover:text-accent" href={video.url} target="_blank" rel="noopener noreferrer">
