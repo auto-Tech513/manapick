@@ -47,6 +47,24 @@ export default function AboutScorePage() {
         </article>
       </section>
 
+      <section className="score-section" id="level-definitions">
+        <h2>レベルの定義</h2>
+        <div className="score-axis-grid">
+          <article>
+            <h3>初級</h3>
+            <p>前提知識なしで見られる、学び始めの入口になる1本です。</p>
+          </article>
+          <article>
+            <h3>中級</h3>
+            <p>基礎を一通り触れた人向けに、応用や体系化へ進むための動画です。</p>
+          </article>
+          <article>
+            <h3>上級</h3>
+            <p>実務応用や専門特化など、より深い目的に合わせて選ぶ動画です。</p>
+          </article>
+        </div>
+      </section>
+
       <section className="score-section">
         <h2>7軸×5点で見る理由</h2>
         <div className="score-axis-grid">

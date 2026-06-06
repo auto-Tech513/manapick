@@ -81,7 +81,7 @@ const timeBuckets = [
   { value: "long", label: "30分〜" }
 ] as const;
 
-const PAGE_SIZE = 15;
+const PAGE_SIZE = 9;
 
 type PopularTab = "popular" | "new" | "score";
 
@@ -1144,7 +1144,15 @@ function HeroVideoCarousel({ slides }: { slides: HeroCarouselSlide[] }) {
       }}
     >
       <div className="hero-carousel-header">
-        <h2>注目の12本</h2>
+        <div className="hero-carousel-title-group">
+          <span className="hero-carousel-heading-icon" aria-hidden="true">
+            <Image src="/brand/ranking-podium.png" alt="" width={44} height={44} loading="lazy" />
+          </span>
+          <span>
+            <h2>注目の12本</h2>
+            <p>人気・新着・高スコアから選んだ12本</p>
+          </span>
+        </div>
         <div className="hero-carousel-tabs" role="tablist" aria-label="ランキングの種類">
           {modes.map((mode) => (
             <button
@@ -1638,8 +1646,17 @@ function VideoCard({ video, highlighted = false }: { video: Video; highlighted?:
 
 function LevelBadge({ level }: { level: Video["level"] }) {
   const meta = levelMeta(level);
+  const definitions = {
+    初級: "初級: 前提知識なしで見られる入口の1本",
+    中級: "中級: 基礎を一通り触れた人向けの応用・体系化",
+    上級: "上級: 実務応用・専門特化"
+  } satisfies Record<Video["level"], string>;
+
   return (
-    <span className={["level-badge", meta.className].join(" ")}>
+    <span
+      className={["level-badge", meta.className].join(" ")}
+      title={definitions[level] + "。詳しくは採点方法ページのレベル定義をご覧ください。"}
+    >
       <span aria-hidden="true">{meta.icon}</span>
       <span>{level}</span>
     </span>
