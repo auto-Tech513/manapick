@@ -1716,6 +1716,24 @@ img {
   text-underline-offset: 3px;
 }
 
+.video-duration-badge {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 2;
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+  border-radius: 999px;
+  background: rgba(22, 27, 34, 0.88);
+  color: #fff;
+  padding: 4px 9px;
+  font-size: 0.75rem;
+  font-weight: 950;
+  line-height: 1.2;
+  box-shadow: var(--shadow-line);
+}
+
 .card-score-wrap,
 .weekly-score-wrap {
   position: absolute;

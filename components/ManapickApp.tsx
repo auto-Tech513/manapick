@@ -81,7 +81,7 @@ const timeBuckets = [
   { value: "long", label: "30分〜" }
 ] as const;
 
-const PAGE_SIZE = 24;
+const PAGE_SIZE = 15;
 
 type PopularTab = "popular" | "new" | "score";
 
@@ -1103,7 +1103,7 @@ function HeroVideoCarousel({ slides }: { slides: HeroCarouselSlide[] }) {
   return (
     <section
       className="hero-carousel"
-      aria-label="いま選びやすい12本"
+      aria-label="注目の12本"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onFocus={() => setIsPaused(true)}
@@ -1118,7 +1118,7 @@ function HeroVideoCarousel({ slides }: { slides: HeroCarouselSlide[] }) {
       }}
     >
       <div className="hero-carousel-header">
-        <h2>いま選びやすい12本</h2>
+        <h2>注目の12本</h2>
         <div className="hero-carousel-tabs" role="tablist" aria-label="ランキングの種類">
           {modes.map((mode) => (
             <button
@@ -1529,7 +1529,7 @@ function VideoCard({ video, highlighted = false }: { video: Video; highlighted?:
               loading="lazy"
               className="h-full w-full object-cover transition-transform duration-300 ease-[var(--ease-standard)] group-hover:scale-[1.025] motion-reduce:transform-none motion-reduce:transition-none"
             />
-            <span className="absolute left-3 top-3 rounded-pill bg-ink/88 px-2.5 py-1 text-xs font-black text-white shadow-line">
+            <span className="video-duration-badge">
               {video.minutes}分
             </span>
           </div>
