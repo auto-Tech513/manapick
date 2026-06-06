@@ -157,7 +157,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
       <article className="guide-article">
         <header className="guide-hero">
           <p className="section-eyebrow">{genreDisplayName(guide.genre)}ロードマップ</p>
-          <h1>{guide.title}</h1>
+          <h1>{guideTitle(guide.title)}</h1>
           <p>{strongText(guide.intro)}</p>
           <div className="guide-trust-row" aria-label="記事の信頼情報">
             <span>最終更新日: {formatDate(buildDate)}</span>
@@ -167,7 +167,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         </header>
 
         <section className="guide-section" aria-labelledby="guide-conclusion-title">
-          <h2 id="guide-conclusion-title">[1] 結論：この順番で見れば最短です</h2>
+          <h2 id="guide-conclusion-title">結論：この順番で見れば最短です</h2>
           <p>{strongText(guide.intro)}</p>
           <ul className="guide-step-summary">
             {guide.conclusionBullets.map((item) => (
@@ -177,19 +177,18 @@ export default async function GuidePage({ params }: GuidePageProps) {
               </li>
             ))}
           </ul>
-          <p>{guide.conclusionClosing.replace("合計6本・約4時間ぶん", "合計" + totalVideos + "本・約" + Math.round(totalMinutes / 60) + "時間ぶん")}</p>
+          <p>合計{totalVideos}本・約{durationLabel(totalMinutes)}ぶん。{guide.conclusionClosing}</p>
         </section>
 
         <section className="guide-section" aria-labelledby="guide-reason-title">
-          <h2 id="guide-reason-title">[2] なぜこの順番か（多くの人がつまずく理由）</h2>
+          <h2 id="guide-reason-title">なぜこの順番か（多くの人がつまずく理由）</h2>
           {guide.reasonParagraphs.map((paragraph) => (
             <p key={paragraph}>{strongText(paragraph)}</p>
           ))}
         </section>
 
         <section className="guide-section" aria-labelledby="guide-videos-title">
-          <h2 id="guide-videos-title">[3] 各STEPの厳選動画</h2>
-          <p>カードは videos.json から自動描画しています。</p>
+          <h2 id="guide-videos-title">各STEPの厳選動画</h2>
           <div className="guide-step-list">
             {guide.steps.map((step) => {
               const items = guideStepVideos(step);
@@ -213,7 +212,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         </section>
 
         <section className="guide-section" aria-labelledby="guide-next-title">
-          <h2 id="guide-next-title">[4] よくあるつまずきと次の一歩</h2>
+          <h2 id="guide-next-title">よくあるつまずきと次の一歩</h2>
           <ul className="guide-advice-list">
             {guide.stumblingBlocks.map((item) => (
               <li key={item.label}>
@@ -225,7 +224,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         </section>
 
         <section className="guide-section" aria-labelledby="guide-faq-title">
-          <h2 id="guide-faq-title">[5] FAQ</h2>
+          <h2 id="guide-faq-title">FAQ</h2>
           <div className="guide-faq-list">
             {guide.faq.map((item) => (
               <details key={item.question}>
@@ -236,16 +235,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
           </div>
         </section>
 
-        <section className="guide-section guide-section-muted" aria-labelledby="guide-trust-title">
-          <h2 id="guide-trust-title">[6] 信頼ブロック</h2>
-          <p>
-            最終更新日（ビルド日時）を表示し、採点方法ページへの導線を置いています。
-            Manapickでは、情報商材誘導・誇大表現の動画は除外します。
-          </p>
-        </section>
-
         <section className="guide-section guide-section-muted" aria-labelledby="guide-cta-title">
-          <h2 id="guide-cta-title">[7] CTA・内部リンク</h2>
+          <h2 id="guide-cta-title">関連ロードマップ</h2>
           <div className="guide-cta-row">
             <a href="/#roadmap">関連：プログラミングロードマップ／データ分析ロードマップ</a>
             <a href="/#genre-picker">8ジャンルの地図を見る</a>
@@ -294,6 +285,20 @@ function GuideVideoCard({ video, why }: { video: Video; why: string }) {
   );
 }
 
+function guideTitle(title: string) {
+  if (title === "生成AIを独学する完全ロードマップ【YouTube無料・2026年版】") {
+    return (
+      <>
+        <span>生成AIを独学する</span>
+        <span className="guide-title-nowrap">完全ロードマップ</span>
+        <span className="guide-title-nowrap">【YouTube無料・</span>
+        <span className="guide-title-nowrap">2026年版】</span>
+      </>
+    );
+  }
+  return title;
+}
+
 function GuideLevelBadge({ level }: { level: Video["level"] }) {
   const meta = {
     初級: { icon: "●", className: "is-beginner" },
@@ -321,8 +326,17 @@ function formatDate(date: Date) {
   return new Intl.DateTimeFormat("ja-JP", {
     year: "numeric",
     month: "2-digit",
-    day: "2-digit"
+    day: "2-digit",
+    timeZone: "Asia/Tokyo"
   }).format(date);
+}
+
+function durationLabel(minutes: number) {
+  const hours = Math.floor(minutes / 60);
+  const rest = minutes % 60;
+  if (hours <= 0) return rest + "分";
+  if (rest === 0) return hours + "時間";
+  return hours + "時間" + rest + "分";
 }
 
 function strongText(text: string) {

@@ -6,9 +6,10 @@
       {
         "label": "STEP1",
         "level": "初級",
-        "goal": "アカウントを作り、AIに指示して回答を得られる。ChatGPTとClaudeの違いが分かる。",
+        "goal": "アカウントを作り、AIに指示して回答を得られる。ChatGPT/Gemini/Claudeの違いが分かる。",
         "videos": [
           "J9QdxiZb8P4",
+          "k1qFX5zJwLk",
           "UdEIgP4B0Bs"
         ]
       },
