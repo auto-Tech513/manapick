@@ -121,9 +121,14 @@ function timeMatches(minutes: number, bucket: string) {
   return true;
 }
 
-function genreName(key: string) {
+function genreDisplayName(key: string) {
+  if (key === "biz") return "Office・資料作成";
   const genre = genres.find((item) => item.key === key);
   return genre ? genre.label : key;
+}
+
+function genreName(key: string) {
+  return genreDisplayName(key);
 }
 
 function displayChannel(video: Video) {
@@ -238,7 +243,7 @@ function genreEnglishLabel(key: string) {
     english: "ENGLISH",
     data: "DATA / DX",
     marke: "MARKETING",
-    biz: "BUSINESS",
+    biz: "OFFICE SKILLS",
     shikaku: "CERTIFICATION"
   };
   return labels[key] ?? key.toLocaleUpperCase("en-US");
@@ -248,7 +253,11 @@ const genreIconSources: Record<string, string> = {
   ai: "/brand/icon-ai.png",
   prog: "/brand/icon-prog.png",
   video: "/brand/icon-video.png",
-  english: "/brand/icon-english.png"
+  english: "/brand/icon-english.png",
+  data: "/brand/icon-data.png",
+  marke: "/brand/icon-marke.png",
+  biz: "/brand/icon-biz.png",
+  shikaku: "/brand/icon-shikaku.png"
 };
 
 export default function ManapickApp() {
@@ -685,7 +694,7 @@ export default function ManapickApp() {
                   >
                     <span className="flex items-start gap-2 text-sm font-black">
                       <GenreIcon genreKey={genre.key} className="genre-selector-icon" />
-                      <span>{genre.label}</span>
+                      <span>{genreName(genre.key)}</span>
                     </span>
                     <span className="genre-status-chip">{statusLabel(genre.status)}</span>
                   </button>
@@ -705,7 +714,7 @@ export default function ManapickApp() {
                     title={genre.note ?? statusLabel(genre.status)}
                   >
                     <GenreIcon genreKey={genre.key} className="upcoming-genre-icon" />
-                    <span>{genre.label}</span>
+                    <span>{genreName(genre.key)}</span>
                     <span className="upcoming-status">{statusLabel(genre.status)}</span>
                     {genre.note ? <span className="upcoming-note">{genre.note}</span> : null}
                   </button>
@@ -1255,7 +1264,7 @@ function GenreSummaryPanel({
     <section className="genre-summary-panel" aria-labelledby="genre-summary-title">
       <div className="genre-summary-heading">
         <div>
-          <p className="section-eyebrow">{genre.label}</p>
+          <p className="section-eyebrow">{genreName(genre.key)}</p>
           <h2 id="genre-summary-title" className="section-title">トピックから絞り込む</h2>
         </div>
         {selectedSub !== "all" ? <button type="button" onClick={() => onTopicSelect("all")}>絞り込み解除</button> : null}
@@ -1671,11 +1680,15 @@ function genreLabel(key: string) {
     english: "英語",
     data: "データ分析",
     marke: "Webマーケ",
-    biz: "ビジネス",
+    biz: "Office・資料",
     shikaku: "資格"
   };
-  const genre = genres.find((item) => item.key === key);
-  return shortLabels[key] ?? (genre ? genre.label : key);
+  return shortLabels[key] ?? genreDisplayName(key);
+}
+
+function roadmapTitle(roadmap: Roadmap) {
+  if (roadmap.genre === "biz") return "Office・資料作成ロードマップ";
+  return roadmap.title;
 }
 
 function RoadmapTimeline({ roadmap }: { roadmap: Roadmap }) {
@@ -1684,7 +1697,7 @@ function RoadmapTimeline({ roadmap }: { roadmap: Roadmap }) {
   return (
     <section id="roadmap-panel" className="roadmap-panel" role="tabpanel">
       <div className="roadmap-title-row">
-        <h3>{roadmap.title}</h3>
+        <h3>{roadmapTitle(roadmap)}</h3>
         <span aria-hidden="true" className="roadmap-star">★</span>
       </div>
       <ol className="roadmap-timeline">
@@ -1754,7 +1767,7 @@ function PrBlock({ genre }: { genre: Genre }) {
       <div className="flex items-start justify-between gap-3">
         <h3 className="flex items-center gap-2 font-black leading-6">
           <GenreIcon genreKey={genre.key} className="pr-genre-icon" />
-          <span>{genre.label}</span>
+          <span>{genreName(genre.key)}</span>
         </h3>
         <span className="rounded-full bg-coral px-2 py-1 text-xs font-black text-white">PR</span>
       </div>
