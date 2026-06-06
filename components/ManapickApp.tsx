@@ -562,7 +562,7 @@ export default function ManapickApp() {
     });
   }
 
-  function handleGenreChange(nextGenre: string) {
+  function handleGenreChange(nextGenre: string, scrollTarget: "results" | "topics" = "results") {
     setSelectedGenre(nextGenre);
     setSelectedSub("all");
     setSelectedLevel("すべて");
@@ -572,6 +572,10 @@ export default function ManapickApp() {
     setSuggestionsOpen(false);
     setActiveSuggestionIndex(0);
     resetPageParam();
+    if (scrollTarget === "topics" && nextGenre !== "all") {
+      scrollToElement("topic-filter-anchor");
+      return;
+    }
     scrollToResults();
   }
 
@@ -586,7 +590,7 @@ export default function ManapickApp() {
   }
 
   function jumpToGenre(genreKey: string) {
-    handleGenreChange(genreKey);
+    handleGenreChange(genreKey, "topics");
   }
 
   function showGenrePicker() {
@@ -1035,6 +1039,11 @@ export default function ManapickApp() {
                   </button>
                 ))}
               </div>
+              {activeRoadmapGenre === "ai" ? (
+                <a className="roadmap-guide-link" href="/guide/generative-ai/">
+                  📖 文章で読む完全ロードマップ
+                </a>
+              ) : null}
               <RoadmapTimeline roadmap={activeRoadmap} />
             </>
           )}
@@ -1070,6 +1079,9 @@ export default function ManapickApp() {
           <nav className="flex flex-wrap gap-4 text-sm font-bold text-white/78" aria-label="固定ページ">
             <a className="hover:text-white" href="/about-score/">
               採点方法
+            </a>
+            <a className="hover:text-white" href="/guide/generative-ai/">
+              生成AIロードマップ
             </a>
             <a className="hover:text-white" href="/operator/">
               運営者情報
@@ -1602,7 +1614,7 @@ function GenreSummaryPanel({
   onTopicSelect: (sub: string) => void;
 }) {
   return (
-    <section className="genre-summary-panel" aria-labelledby="genre-summary-title">
+    <section id="topic-filter-anchor" className="genre-summary-panel" aria-labelledby="genre-summary-title">
       <div className="genre-summary-heading">
         <div>
           <p className="section-eyebrow">{genreName(genre.key)}</p>

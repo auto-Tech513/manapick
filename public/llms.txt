@@ -21,6 +21,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 
 ## 主要URL
 - トップ: https://manapick.app/
+- 生成AIロードマップ記事: https://manapick.app/guide/generative-ai/
 - 採点方法: https://manapick.app/about-score/
 - お問い合わせ: https://manapick.app/contact/
 - 運営者情報: https://manapick.app/operator/
