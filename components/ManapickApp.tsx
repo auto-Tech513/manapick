@@ -501,6 +501,7 @@ export default function ManapickApp() {
     if (bounded > 1) url.searchParams.set("page", String(bounded));
     else url.searchParams.delete("page");
     window.history.replaceState(null, "", url);
+    scrollToResults();
   }
 
   function resetPageParam() {
@@ -722,25 +723,6 @@ export default function ManapickApp() {
               </div>
             </div>
 
-            <div className="upcoming-genre-strip">
-              <p className="genre-group-title compact">順次公開予定</p>
-              <div className="upcoming-genre-list" role="group" aria-label="順次公開予定ジャンル">
-                {upcomingGenres.map((genre) => (
-                  <button
-                    type="button"
-                    key={genre.key}
-                    onClick={() => handleGenreChange(genre.key)}
-                    className={`upcoming-genre-pill ${selectedGenre === genre.key ? "is-active" : ""}`}
-                    title={genre.note ?? statusLabel(genre.status)}
-                  >
-                    <GenreIcon genreKey={genre.key} className="upcoming-genre-icon" />
-                    <span>{genreName(genre.key)}</span>
-                    <span className="upcoming-status">{statusLabel(genre.status)}</span>
-                    {genre.note ? <span className="upcoming-note">{genre.note}</span> : null}
-                  </button>
-                ))}
-              </div>
-            </div>
           </div>
 
           <div className="mt-7 border-t border-line pt-6">
@@ -826,6 +808,11 @@ export default function ManapickApp() {
               <p>視聴はYouTube公式リンクのみ。動画のダウンロード機能はありません。</p>
             </div>
           </div>
+          {upcomingGenres.length > 0 ? (
+            <p className="upcoming-genre-note">
+              順次公開予定: {upcomingGenres.map((genre) => genreName(genre.key)).join(" / ")} は準備中です。
+            </p>
+          ) : null}
         </div>
       </section>
 
@@ -1458,6 +1445,7 @@ function FeaturedVideoCard({ video }: { video: Video }) {
 function ScoreBadge({ video, compact = false }: { video: Video; compact?: boolean }) {
   const status = scoreStatus(video);
   const label = status === "confirmed" ? scoreText(video) + " ✓確認済" : scoreText(video) + " 暫定";
+  const statusLabel = status === "confirmed" ? "✓確認済" : "暫定";
 
   return (
     <a
@@ -1466,14 +1454,10 @@ function ScoreBadge({ video, compact = false }: { video: Video; compact?: boolea
       aria-label={label + "。採点方法を開く"}
       title="採点方法を開く"
     >
-      <span>{label}</span>
+      <span>{scoreText(video)}</span>
+      <span className={`score-badge-status is-${status}`}>{statusLabel}</span>
     </a>
   );
-}
-
-function ScoreStatusNote({ video }: { video: Video }) {
-  if (scoreStatus(video) === "confirmed") return null;
-  return <span className="score-status-note">順次確認中</span>;
 }
 
 function WeeklyPickCard({ video }: { video: Video }) {
@@ -1494,7 +1478,6 @@ function WeeklyPickCard({ video }: { video: Video }) {
         </a>
         <div className="weekly-score-wrap">
           <ScoreBadge video={video} compact />
-          <ScoreStatusNote video={video} />
         </div>
       </div>
       <div className="weekly-pick-body">
@@ -1573,7 +1556,6 @@ function VideoCard({ video, highlighted = false }: { video: Video; highlighted?:
         </a>
         <div className="card-score-wrap">
           <ScoreBadge video={video} compact />
-          <ScoreStatusNote video={video} />
         </div>
       </div>
       <div className="flex flex-1 flex-col gap-3 p-4">
@@ -1845,7 +1827,6 @@ function RoadmapMiniVideo({ video }: { video: Video }) {
         <span className="roadmap-mini-title">{video.title}</span>
         <span className="roadmap-mini-meta">
           <span>{video.minutes}分</span>
-          <LevelBadge level={video.level} />
         </span>
       </span>
     </a>
