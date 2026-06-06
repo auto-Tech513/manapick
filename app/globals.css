@@ -84,6 +84,11 @@ img {
   max-width: 100%;
 }
 
+.site-header {
+  position: relative;
+  z-index: 120;
+}
+
 .site-header-inner {
   position: relative;
 }
@@ -3330,6 +3335,12 @@ img {
   height: auto;
   max-height: 42px;
   overflow: hidden;
+}
+
+.live-search-panel.has-query {
+  height: auto;
+  max-height: min(72vh, 480px);
+  overflow: auto;
 }
 
 .live-search-status {

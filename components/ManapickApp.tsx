@@ -632,7 +632,7 @@ export default function ManapickApp() {
 
   return (
     <main>
-      <header className="border-b border-line bg-surface/92 backdrop-blur">
+      <header className="site-header border-b border-line bg-surface/92 backdrop-blur">
         <div className="site-header-inner mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 min-[720px]:flex-row min-[720px]:items-center min-[720px]:justify-between min-[720px]:px-6">
           <a href="#top" className="min-w-0" aria-label="Manapick トップ">
             <BrandLogo compact />
