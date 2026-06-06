@@ -85,6 +85,14 @@ const PAGE_SIZE = 24;
 
 type PopularTab = "popular" | "new" | "score";
 
+type HeroCarouselSlide = {
+  video: Video;
+  mode: PopularTab;
+  modeLabel: string;
+  rank: number;
+  key: string;
+};
+
 const purposeLinks = [
   { number: "01", title: "目的から選ぶ", label: "AIを仕事で使いたい", genre: "ai", icon: "target" },
   { number: "02", title: "ジャンルから選ぶ", label: "8ジャンルから探す", genre: "all", icon: "grid" },
@@ -192,6 +200,36 @@ function popularityScore(video: Video) {
   return Math.log10(viewCount) / Math.pow(monthsSincePublished(video) + 2, 0.6);
 }
 
+function rankedVideosByTab(tab: PopularTab, limit: number) {
+  const ranked = [...videos].filter((video) => publishedGenreKeys.includes(video.genre));
+  if (tab === "new") {
+    ranked.sort((a, b) => publishedTime(b) - publishedTime(a) || (b.score || 0) - (a.score || 0));
+  } else if (tab === "score") {
+    ranked.sort((a, b) => (b.score || 0) - (a.score || 0));
+  } else {
+    ranked.sort((a, b) => popularityScore(b) - popularityScore(a) || (b.score || 0) - (a.score || 0));
+  }
+  return ranked.slice(0, limit);
+}
+
+function buildHeroCarouselSlides(): HeroCarouselSlide[] {
+  const modes: { mode: PopularTab; modeLabel: string }[] = [
+    { mode: "popular", modeLabel: "総合人気" },
+    { mode: "new", modeLabel: "新着" },
+    { mode: "score", modeLabel: "スコア順" }
+  ];
+
+  return modes.flatMap(({ mode, modeLabel }) =>
+    rankedVideosByTab(mode, 4).map((video, index) => ({
+      video,
+      mode,
+      modeLabel,
+      rank: index + 1,
+      key: mode + "-" + video.ytid
+    }))
+  );
+}
+
 function publishedTime(video: Video) {
   if (!video.publishedAt) return 0;
   const time = new Date(video.publishedAt).getTime();
@@ -276,7 +314,6 @@ export default function ManapickApp() {
   const [highlightedVideoId, setHighlightedVideoId] = useState<string | null>(null);
   const [activeRoadmapGenre, setActiveRoadmapGenre] = useState("ai");
   const [currentPage, setCurrentPage] = useState(1);
-  const [popularTab, setPopularTab] = useState<PopularTab>("popular");
   const searchInputRef = useRef<HTMLInputElement>(null);
   const filtersMountedRef = useRef(false);
   const skipNextFilterResetRef = useRef(false);
@@ -368,17 +405,8 @@ export default function ManapickApp() {
   const pageVideos = filteredVideos.slice(pageStartIndex, pageStartIndex + PAGE_SIZE);
   const groupedPageVideos = useMemo(() => groupVideosByGenre(pageVideos), [pageVideos]);
 
-  const popularVideos = useMemo(() => {
-    const ranked = [...videos].filter((video) => publishedGenreKeys.includes(video.genre));
-    if (popularTab === "new") {
-      ranked.sort((a, b) => publishedTime(b) - publishedTime(a) || (b.score || 0) - (a.score || 0));
-    } else if (popularTab === "score") {
-      ranked.sort((a, b) => (b.score || 0) - (a.score || 0));
-    } else {
-      ranked.sort((a, b) => popularityScore(b) - popularityScore(a) || (b.score || 0) - (a.score || 0));
-    }
-    return ranked.slice(0, 12);
-  }, [popularTab]);
+  const heroCarouselSlides = useMemo(() => buildHeroCarouselSlides(), []);
+  const popularFallbackVideos = useMemo(() => rankedVideosByTab("popular", 12), []);
 
   const searchSuggestions = useMemo(() => (searchActive ? filteredVideos.slice(0, 5) : []), [filteredVideos, searchActive]);
   const liveSearchTotal = searchActive ? filteredVideos.length : videos.length;
@@ -531,7 +559,7 @@ export default function ManapickApp() {
               suggestions={searchSuggestions}
               activeIndex={activeSuggestionIndex}
               open={suggestionsOpen}
-              popularVideos={popularVideos}
+              popularVideos={popularFallbackVideos}
               onSelect={openVideoPage}
               onClose={() => setSuggestionsOpen(false)}
             />
@@ -609,17 +637,7 @@ export default function ManapickApp() {
             </p>
           </div>
           <div className="hero-visual-column">
-            <div className="hero-kv-wrap">
-              <Image
-                src="/brand/hero-kv-v2.png"
-                alt="多数の学習動画から選ばれた一本と、上昇する学習ルートのイラスト"
-                width={1600}
-                height={900}
-                priority
-                sizes="(min-width: 980px) 420px, (min-width: 760px) 38vw, 82vw"
-                className="hero-kv-image"
-              />
-            </div>
+            <HeroVideoCarousel slides={heroCarouselSlides} />
           </div>
         </div>
       </section>
@@ -635,8 +653,6 @@ export default function ManapickApp() {
           </div>
         </section>
       ) : null}
-
-      <PopularVideos videos={popularVideos} activeTab={popularTab} onTabChange={setPopularTab} onGenreSelect={jumpToGenre} />
 
       <section id="search" className="border-b border-line bg-white/64">
         <div className="mx-auto max-w-7xl px-4 py-7 min-[760px]:px-6">
@@ -1036,6 +1052,119 @@ function CategoryTabNav({
   );
 }
 
+function HeroVideoCarousel({ slides }: { slides: HeroCarouselSlide[] }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(true);
+  const touchStartX = useRef<number | null>(null);
+  const slideCount = slides.length;
+  const activeSlide = slides[activeIndex] ?? slides[0];
+
+  useEffect(() => {
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const syncReducedMotion = () => setReducedMotion(media.matches);
+    syncReducedMotion();
+    media.addEventListener("change", syncReducedMotion);
+    return () => media.removeEventListener("change", syncReducedMotion);
+  }, []);
+
+  useEffect(() => {
+    if (reducedMotion || isPaused || slideCount <= 1) return;
+    const interval = window.setInterval(() => {
+      setActiveIndex((index) => (index + 1) % slideCount);
+    }, 4000);
+    return () => window.clearInterval(interval);
+  }, [isPaused, reducedMotion, slideCount]);
+
+  if (!activeSlide) return null;
+
+  function moveSlide(delta: number) {
+    setActiveIndex((index) => (index + delta + slideCount) % slideCount);
+  }
+
+  function handleTouchEnd(clientX: number) {
+    if (touchStartX.current === null) return;
+    const distance = touchStartX.current - clientX;
+    touchStartX.current = null;
+    if (Math.abs(distance) < 36) return;
+    moveSlide(distance > 0 ? 1 : -1);
+  }
+
+  return (
+    <section
+      className="hero-carousel"
+      aria-label="いま選びやすい12本"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocus={() => setIsPaused(true)}
+      onBlur={() => setIsPaused(false)}
+      onTouchStart={(event) => {
+        touchStartX.current = event.touches[0]?.clientX ?? null;
+        setIsPaused(true);
+      }}
+      onTouchEnd={(event) => {
+        handleTouchEnd(event.changedTouches[0]?.clientX ?? 0);
+        setIsPaused(false);
+      }}
+    >
+      <div className="hero-carousel-topline">
+        <div>
+          <p>いま選びやすい12本</p>
+          <span>{activeSlide.modeLabel}</span>
+        </div>
+        <span>{activeIndex + 1}/{slideCount}</span>
+      </div>
+
+      <a
+        key={activeSlide.key}
+        className="hero-carousel-slide"
+        href={videoDetailHref(activeSlide.video)}
+        aria-label={activeSlide.video.title + "の詳細ページを開く"}
+      >
+        <span className="hero-carousel-media">
+          <Image
+            src={"https://i.ytimg.com/vi/" + activeSlide.video.ytid + "/hqdefault.jpg"}
+            alt=""
+            fill
+            sizes="(min-width: 980px) 500px, (min-width: 760px) 42vw, 92vw"
+            priority={activeIndex === 0}
+            className="object-cover"
+          />
+        </span>
+        <span className="hero-carousel-content">
+          <span className="hero-carousel-meta">
+            <span className="hero-carousel-mode">{activeSlide.modeLabel}</span>
+            <span className={`rank-badge rank-${Math.min(activeSlide.rank, 4)}`}>{activeSlide.rank}</span>
+          </span>
+          <span className="hero-carousel-title">{activeSlide.video.title}</span>
+          <span className="hero-carousel-sub">{scoreText(activeSlide.video)} / {activeSlide.video.minutes}分</span>
+        </span>
+      </a>
+
+      <button type="button" className="hero-carousel-arrow is-prev" onClick={() => moveSlide(-1)} aria-label="前の動画">
+        ‹
+      </button>
+      <button type="button" className="hero-carousel-arrow is-next" onClick={() => moveSlide(1)} aria-label="次の動画">
+        ›
+      </button>
+
+      <div className="hero-carousel-dots" role="tablist" aria-label="カルーセルのスライド">
+        {slides.map((slide, index) => (
+          <button
+            key={slide.key}
+            type="button"
+            className={index === activeIndex ? "is-active" : ""}
+            onClick={() => setActiveIndex(index)}
+            aria-label={(index + 1) + "枚目: " + slide.modeLabel}
+            aria-selected={index === activeIndex}
+            role="tab"
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function HeroTrustStats({ totalVideos, confirmedCount }: { totalVideos: number; confirmedCount: number }) {
   const stats = [
     {
@@ -1279,80 +1408,6 @@ function FeaturedVideoCard({ video }: { video: Video }) {
     </article>
   );
 }
-
-function PopularVideos({
-  videos,
-  activeTab,
-  onTabChange,
-  onGenreSelect
-}: {
-  videos: Video[];
-  activeTab: PopularTab;
-  onTabChange: (tab: PopularTab) => void;
-  onGenreSelect: (genreKey: string) => void;
-}) {
-  const tabs: { key: PopularTab; label: string }[] = [
-    { key: "popular", label: "総合人気" },
-    { key: "new", label: "新着" },
-    { key: "score", label: "Manapickスコア順" }
-  ];
-
-  return (
-    <section className="popular-section" aria-labelledby="popular-title">
-      <div className="popular-shell">
-        <div className="section-heading-row">
-          <div className="popular-title-wrap">
-            <div>
-              <p className="section-eyebrow">人気の学習動画</p>
-              <h2 id="popular-title" className="section-title">いま選びやすい12本</h2>
-            </div>
-            <Image
-              src="/brand/ranking-podium.png"
-              alt="人気動画ランキングの表彰台"
-              width={1200}
-              height={1200}
-              loading="lazy"
-              sizes="64px"
-              className="popular-heading-icon"
-            />
-          </div>
-          <p className="popular-note">総合人気はYouTube再生数ベース</p>
-        </div>
-        <div className="popular-tabs" role="tablist" aria-label="人気動画の並び替え">
-          {tabs.map((tab) => (
-            <button key={tab.key} type="button" role="tab" aria-selected={activeTab === tab.key} className={activeTab === tab.key ? "is-active" : ""} onClick={() => onTabChange(tab.key)}>
-              {tab.label}
-            </button>
-          ))}
-        </div>
-        <div className="popular-card-grid">
-          {videos.map((video, index) => (
-            <RankedVideoCard key={video.ytid} video={video} rank={index + 1} onGenreSelect={onGenreSelect} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function RankedVideoCard({ video, rank, onGenreSelect }: { video: Video; rank: number; onGenreSelect: (genreKey: string) => void }) {
-  const ageLabel = publishedAgeLabel(video);
-
-  return (
-    <article className="ranked-video-card">
-      <a href={videoDetailHref(video)} className="ranked-thumb" aria-label={video.title + "の詳細ページを開く"}>
-        <Image src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"} alt="" fill sizes="(min-width: 900px) 180px, 42vw" className="object-cover" />
-        <span className={`rank-badge rank-${Math.min(rank, 4)}`}>{rank}</span>
-      </a>
-      <div className="ranked-body">
-        <button type="button" onClick={() => onGenreSelect(video.genre)}>{genreLabel(video.genre)}</button>
-        <h3><a href={videoDetailHref(video)}>{video.title}</a></h3>
-        <p>{scoreText(video)} / {video.minutes}分{ageLabel ? " / " + ageLabel : ""}</p>
-      </div>
-    </article>
-  );
-}
-
 
 function ScoreBadge({ video, compact = false }: { video: Video; compact?: boolean }) {
   const status = scoreStatus(video);
