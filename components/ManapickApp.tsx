@@ -503,9 +503,37 @@ export default function ManapickApp() {
     window.history.replaceState(null, "", url);
   }
 
+  function resetPageParam() {
+    setCurrentPage(1);
+    const url = new URL(window.location.href);
+    url.searchParams.delete("page");
+    window.history.replaceState(null, "", url);
+  }
+
+  function scrollToResults() {
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        const target = document.getElementById("results-anchor") ?? document.querySelector("[aria-label='動画一覧']");
+        if (!target) return;
+        const stickyOffset = (document.querySelector(".category-tab-nav")?.getBoundingClientRect().height ?? 0) + 16;
+        const top = target.getBoundingClientRect().top + window.scrollY - stickyOffset;
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.scrollTo({ top: Math.max(0, top), behavior: reducedMotion ? "auto" : "smooth" });
+      });
+    });
+  }
+
   function handleGenreChange(nextGenre: string) {
     setSelectedGenre(nextGenre);
     setSelectedSub("all");
+    setSelectedLevel("すべて");
+    setSelectedTime("all");
+    setSearchDraft("");
+    setKeyword("");
+    setSuggestionsOpen(false);
+    setActiveSuggestionIndex(0);
+    resetPageParam();
+    scrollToResults();
   }
 
   function resetFilters() {
@@ -520,9 +548,6 @@ export default function ManapickApp() {
 
   function jumpToGenre(genreKey: string) {
     handleGenreChange(genreKey);
-    window.requestAnimationFrame(() => {
-      document.getElementById("search")?.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
   }
 
   return (
@@ -815,6 +840,7 @@ export default function ManapickApp() {
             onTopicSelect={setSelectedSub}
           />
         ) : null}
+        <div id="results-anchor" className="results-anchor" aria-hidden="true" />
         {selectedGenreData?.status !== "published" && selectedGenreData && !searchActive ? (
           <div className="rounded-lg border border-line bg-surface p-5 shadow-card">
             <p className="flex items-center gap-2 text-sm font-bold text-leaf">
@@ -1309,7 +1335,10 @@ function PurposeIcon({ icon }: { icon: string }) {
 function ResultSummary({ total, start, end, searchActive }: { total: number; start: number; end: number; searchActive: boolean }) {
   return (
     <div className="result-summary">
-      <p>{total}件中 {start}–{end}件を表示{searchActive ? "（全ジャンル横断検索）" : ""}</p>
+      <div>
+        <p>{total}件中 {start}–{end}件を表示</p>
+        {searchActive ? <p className="result-search-note">全ジャンル横断検索中。ジャンルを選ぶと検索を解除します。</p> : null}
+      </div>
     </div>
   );
 }

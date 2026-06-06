@@ -2808,8 +2808,21 @@ img {
   font-weight: 850;
 }
 
+.results-anchor {
+  height: 0;
+  scroll-margin-top: 96px;
+}
+
 .result-summary p {
   margin: 0;
+}
+
+.result-search-note {
+  margin-top: 3px !important;
+  color: var(--color-primary-ink);
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1.6;
 }
 
 .search-result-groups {
