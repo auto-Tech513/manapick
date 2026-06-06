@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: VideoPageProps): Promise<Meta
           url: image,
           width: 480,
           height: 360,
-          alt: video.title
+          alt: video.title + "のサムネイル"
         }
       ]
     },
@@ -76,25 +76,51 @@ export default async function VideoPage({ params }: VideoPageProps) {
 
   const channel = displayChannel(video);
   const related = relatedVideos(video);
+  const pageUrl = absoluteUrl(videoPath(video.ytid));
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "VideoObject",
-    name: video.title,
-    description: videoDescription(video),
-    thumbnailUrl: [youtubeThumbnail(video.ytid)],
-    uploadDate: video.publishedAt,
-    duration: isoDuration(video.minutes),
-    embedUrl: youtubeEmbedUrl(video.ytid),
-    contentUrl: video.url,
-    url: absoluteUrl(videoPath(video.ytid)),
-    isAccessibleForFree: true,
-    inLanguage: "ja",
-    genre: genreDisplayName(video.genre),
-    publisher: {
-      "@type": "Organization",
-      name: "Manapick",
-      url: absoluteUrl("/")
-    }
+    "@graph": [
+      {
+        "@type": "VideoObject",
+        name: video.title,
+        description: videoDescription(video),
+        thumbnailUrl: [youtubeThumbnail(video.ytid)],
+        uploadDate: video.publishedAt,
+        duration: isoDuration(video.minutes),
+        embedUrl: youtubeEmbedUrl(video.ytid),
+        contentUrl: video.url,
+        url: pageUrl,
+        isAccessibleForFree: true,
+        inLanguage: "ja",
+        genre: genreDisplayName(video.genre),
+        publisher: {
+          "@id": absoluteUrl("/#organization")
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "ホーム",
+            item: absoluteUrl("/")
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: genreDisplayName(video.genre),
+            item: absoluteUrl("/#search")
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: video.title,
+            item: pageUrl
+          }
+        ]
+      }
+    ]
   };
 
   return (
@@ -122,7 +148,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
         <div className="video-detail-media">
           <Image
             src={youtubeThumbnail(video.ytid)}
-            alt={video.title}
+            alt={video.title + "のサムネイル"}
             width={480}
             height={360}
             priority
@@ -196,11 +222,12 @@ export default async function VideoPage({ params }: VideoPageProps) {
               <span className="video-related-thumb">
                 <Image
                   src={youtubeThumbnail(item.ytid)}
-                  alt=""
-                  fill
+                  alt={item.title + "のサムネイル"}
+                  width={480}
+                  height={270}
                   sizes="(min-width: 920px) 180px, (min-width: 560px) 45vw, 92vw"
                   loading="lazy"
-                  className="object-cover"
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
               </span>
               <span className="video-related-body">

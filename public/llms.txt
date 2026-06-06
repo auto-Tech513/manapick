@@ -1,0 +1,32 @@
+# Manapick
+
+Manapickは、社会人の学び直し・リスキリングに役立つYouTube学習動画を、独自レビューとManapickスコアで整理するキュレーションサイトです。
+動画は公式YouTubeへのリンクまたは公式埋め込みを前提に紹介し、ダウンロードや再配布は扱いません。
+
+## 公開中の8ジャンル
+- 生成AI: ChatGPT / Claude / Gemini / 画像生成 / 自動化 / AI資格
+- プログラミング・IT: Python / Web開発 / アプリ / インフラ
+- 動画編集・クリエイティブ: Premiere Pro / CapCut / After Effects / デザイン
+- 語学・英語: 英会話 / TOEIC / 発音 / ビジネス英語
+- データ分析・DX: Excel / データサイエンス / BI
+- Webマーケ・SNS運用: SEO / 広告 / SNS
+- Office・資料作成: 資料作成 / Excel / プレゼン / 思考法
+- 資格・検定（非会計）: 宅建 / TOEIC / IT / AI検定
+
+## 採点方法
+- Manapickスコアは7軸×5点=35点満点です。
+- 評価軸は実用性、正確性・鮮度、分かりやすさ、体系性、信頼性、視聴体験、規約・権利です。
+- 誤情報、釣り、情報商材誘導、過度な成果保証を含む動画は不採用にします。
+- スコアには確認済と暫定があり、暫定動画は順次、人の視聴確認で確定します。
+
+## 主要URL
+- トップ: https://manapick.app/
+- 採点方法: https://manapick.app/about-score/
+- お問い合わせ: https://manapick.app/contact/
+- 運営者情報: https://manapick.app/operator/
+- 免責事項: https://manapick.app/disclaimer/
+- プライバシーポリシー: https://manapick.app/privacy/
+- サイトマップ: https://manapick.app/sitemap.xml
+
+## クローラー向け補足
+Manapickの本文、見出し、動画タイトル、レビューはHTMLテキストとして提供しています。検索・絞り込みUIは補助機能であり、主要な動画詳細ページは静的URLで参照できます。

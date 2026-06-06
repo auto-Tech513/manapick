@@ -143,6 +143,10 @@ function videoDetailHref(video: Video) {
   return "/video/" + video.ytid + "/";
 }
 
+function thumbnailAlt(video: Video) {
+  return video.title + "のサムネイル";
+}
+
 function displayChannel(video: Video) {
   const channel = video.channel?.trim();
   if (!channel || channel.includes("確認")) return null;
@@ -1357,11 +1361,12 @@ function HeroVideoCarousel({ slides }: { slides: HeroCarouselSlide[] }) {
           <span className="hero-carousel-media">
             <Image
               src={"https://i.ytimg.com/vi/" + activeSlide.video.ytid + "/hqdefault.jpg"}
-              alt=""
-              fill
+              alt={thumbnailAlt(activeSlide.video)}
+              width={480}
+              height={270}
               sizes="(min-width: 1440px) 760px, (min-width: 1280px) 640px, (min-width: 760px) 52vw, 92vw"
               priority={activeIndex === 0}
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </span>
           <span className={`rank-badge rank-${Math.min(activeSlide.rank, 4)}`}>{activeSlide.rank}</span>
@@ -1613,7 +1618,14 @@ function FeaturedVideoCard({ video }: { video: Video }) {
     <article className="featured-video-card">
       <div className="featured-video-thumb">
         <a className="featured-video-thumb-link" href={videoDetailHref(video)} aria-label={video.title + "の詳細ページを開く"}>
-          <Image src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"} alt="" fill sizes="(min-width: 760px) 320px, 92vw" className="object-cover" />
+          <Image
+            src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"}
+            alt={thumbnailAlt(video)}
+            width={480}
+            height={270}
+            sizes="(min-width: 760px) 320px, 92vw"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
         </a>
         <ScoreBadge video={video} compact />
       </div>
@@ -1654,11 +1666,12 @@ function WeeklyPickCard({ video }: { video: Video }) {
         <a className="weekly-pick-thumb-link" href={videoDetailHref(video)} aria-label={video.title + "の詳細ページを開く"}>
           <Image
             src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"}
-            alt=""
-            fill
+            alt={thumbnailAlt(video)}
+            width={480}
+            height={270}
             sizes="(min-width: 1320px) 680px, (min-width: 760px) 92vw, 92vw"
             loading="eager"
-            className="object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         </a>
       </div>
@@ -1726,14 +1739,15 @@ function VideoCard({ video, highlighted = false }: { video: Video; highlighted?:
           aria-label={video.title + "の詳細ページを開く"}
           className="block"
         >
-          <div className="relative aspect-video bg-bgSoft">
+          <div className="video-card-thumb relative aspect-video bg-bgSoft">
             <Image
               src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"}
-              alt=""
-              fill
+              alt={thumbnailAlt(video)}
+              width={480}
+              height={270}
               sizes="(min-width: 880px) 33vw, (min-width: 560px) 50vw, 100vw"
               loading="lazy"
-              className="h-full w-full object-cover transition-transform duration-300 ease-[var(--ease-standard)] group-hover:scale-[1.025] motion-reduce:transform-none motion-reduce:transition-none"
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 ease-[var(--ease-standard)] group-hover:scale-[1.025] motion-reduce:transform-none motion-reduce:transition-none"
             />
             <span className="video-duration-badge">
               {video.minutes}分
@@ -1833,11 +1847,12 @@ function LevelBadge({ level }: { level: Video["level"] }) {
 
 function GenreIcon({ genreKey, className = "" }: { genreKey: string; className?: string }) {
   const src = genreIconSources[genreKey];
+  const label = genreDisplayName(genreKey) + "のアイコン";
 
   return (
-    <span aria-hidden="true" className={`genre-icon-shell ${className}`}>
+    <span className={`genre-icon-shell ${className}`} {...(src ? {} : { role: "img", "aria-label": label })}>
       {src ? (
-        <Image src={src} alt="" width={32} height={32} className="genre-icon-image" />
+        <Image src={src} alt={label} width={32} height={32} className="genre-icon-image" />
       ) : (
         <LineGenreIcon genreKey={genreKey} />
       )}
@@ -2002,11 +2017,12 @@ function RoadmapMiniVideo({ video }: { video: Video }) {
       <span className="roadmap-mini-thumb">
         <Image
           src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"}
-          alt=""
-          fill
+          alt={thumbnailAlt(video)}
+          width={480}
+          height={270}
           sizes="(min-width: 760px) 160px, 35vw"
           loading="lazy"
-          className="object-cover"
+          className="absolute inset-0 h-full w-full object-cover"
         />
       </span>
       <span className="roadmap-mini-body">

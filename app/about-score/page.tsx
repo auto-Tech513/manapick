@@ -1,9 +1,27 @@
 import type { Metadata } from "next";
 import BrandLogo, { BrandMark } from "@/components/BrandLogo";
+import { absoluteUrl } from "@/lib/manapick";
+
+const scorePageTitle = "採点方法 | Manapick";
+const scorePageDescription = "Manapickスコアの考え方、確認済と暫定の違い、除外方針を説明します。";
 
 export const metadata: Metadata = {
-  title: "採点方法 | Manapick",
-  description: "Manapickスコアの考え方、確認済と暫定の違い、除外方針を説明します。"
+  title: scorePageTitle,
+  description: scorePageDescription,
+  alternates: {
+    canonical: absoluteUrl("/about-score/")
+  },
+  openGraph: {
+    title: scorePageTitle,
+    description: scorePageDescription,
+    url: absoluteUrl("/about-score/"),
+    type: "article"
+  },
+  twitter: {
+    card: "summary",
+    title: scorePageTitle,
+    description: scorePageDescription
+  }
 };
 
 const axes = [
@@ -16,14 +34,66 @@ const axes = [
   ["規約・権利", "公式YouTubeで視聴でき、紹介上のリスクが低いか"]
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Manapickスコアは何点満点ですか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Manapickスコアは、実用性、正確性・鮮度、分かりやすさ、体系性、信頼性、視聴体験、規約・権利の7軸を各5点で見た35点満点です。"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "確認済と暫定の違いは何ですか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "確認済は編集者が動画本編を確認した状態です。暫定は自動採点やメタデータをもとにした候補で、順次、人の視聴確認で確定します。"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "どのような動画は掲載しませんか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "正確性・鮮度が低い動画、規約・権利面で扱いにくい動画、誤情報、釣りタイトル、情報商材への強い誘導、過度な収益保証を含む動画は不採用にします。"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "レベルはどのように分けていますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "初級は前提知識なしで見られる入口、中級は基礎を触れた人向けの応用・体系化、上級は実務応用や専門特化の動画です。"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "編集メモは何を示していますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "編集メモは、スコアとは別に人間の編集者がその動画をなぜ選んだかを1行で補足するものです。空の動画では表示しません。"
+      }
+    }
+  ]
+};
+
 export default function AboutScorePage() {
   return (
-    <main className="score-page">
-      <header className="score-page-header">
-        <a href="/" aria-label="Manapick トップへ">
-          <BrandLogo compact />
-        </a>
-      </header>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }}
+      />
+      <main className="score-page">
+        <header className="score-page-header">
+          <a href="/" aria-label="Manapick トップへ">
+            <BrandLogo compact />
+          </a>
+        </header>
 
       <section className="score-hero">
         <p className="section-eyebrow">Manapickスコア</p>
@@ -93,13 +163,14 @@ export default function AboutScorePage() {
         </p>
       </section>
 
-      <footer className="score-page-footer">
-        <p>
-          <BrandMark className="h-7 w-7" />
-          <span>Manapick</span>
-        </p>
-        <a href="/">トップへ戻る</a>
-      </footer>
-    </main>
+        <footer className="score-page-footer">
+          <p>
+            <BrandMark className="h-7 w-7" />
+            <span>Manapick</span>
+          </p>
+          <a href="/">トップへ戻る</a>
+        </footer>
+      </main>
+    </>
   );
 }

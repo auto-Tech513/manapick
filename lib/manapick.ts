@@ -1,7 +1,19 @@
 import genresData from "@/content/genres.json";
 import videosData from "@/content/videos.json";
 
-export const SITE_URL = "https://manapick.pages.dev";
+const FALLBACK_SITE_URL = "https://manapick.pages.dev";
+
+function normalizeSiteUrl(value: string | undefined) {
+  const raw = value?.trim() || FALLBACK_SITE_URL;
+
+  try {
+    return new URL(raw).origin;
+  } catch {
+    return FALLBACK_SITE_URL;
+  }
+}
+
+export const SITE_URL = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL);
 
 export type GenreStatus = "published" | "preparing" | "checking";
 
@@ -63,7 +75,7 @@ export function youtubeThumbnail(ytid: string) {
 }
 
 export function youtubeEmbedUrl(ytid: string) {
-  return "https://www.youtube.com/embed/" + ytid;
+  return "https://www.youtube-nocookie.com/embed/" + ytid;
 }
 
 export function genreDisplayName(key: string) {
