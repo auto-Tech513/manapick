@@ -572,10 +572,10 @@ export default function ManapickApp() {
           <div className="hero-visual-column">
             <div className="hero-kv-wrap">
               <Image
-                src="/brand/hero-kv.png"
+                src="/brand/hero-kv-v2.png"
                 alt="多数の学習動画から選ばれた一本と、上昇する学習ルートのイラスト"
-                width={1122}
-                height={1402}
+                width={1600}
+                height={900}
                 priority
                 sizes="(min-width: 980px) 420px, (min-width: 760px) 38vw, 82vw"
                 className="hero-kv-image"
@@ -805,8 +805,19 @@ export default function ManapickApp() {
       <section id="roadmap" className="roadmap-section">
         <div className="roadmap-shell">
           <div className="roadmap-heading">
-            <p className="section-eyebrow">学習ロードマップ</p>
-            <h2 className="section-title">初級→中級→上級の順番で迷わず進む</h2>
+            <div>
+              <p className="section-eyebrow">学習ロードマップ</p>
+              <h2 className="section-title">初級→中級→上級の順番で迷わず進む</h2>
+            </div>
+            <Image
+              src="/brand/roadmap-path.png"
+              alt="初級から上級へ進むロードマップの道筋"
+              width={1200}
+              height={400}
+              loading="lazy"
+              sizes="(min-width: 760px) 360px, 82vw"
+              className="roadmap-heading-art"
+            />
           </div>
           {roadmapTabs.length === 0 || activeRoadmap === null ? (
             <p className="rounded-lg border border-line bg-surface p-5 shadow-card text-muted">
@@ -1158,9 +1169,20 @@ function PopularVideos({
     <section className="popular-section" aria-labelledby="popular-title">
       <div className="popular-shell">
         <div className="section-heading-row">
-          <div>
-            <p className="section-eyebrow">人気の学習動画</p>
-            <h2 id="popular-title" className="section-title">いま選びやすい12本</h2>
+          <div className="popular-title-wrap">
+            <div>
+              <p className="section-eyebrow">人気の学習動画</p>
+              <h2 id="popular-title" className="section-title">いま選びやすい12本</h2>
+            </div>
+            <Image
+              src="/brand/ranking-podium.png"
+              alt="人気動画ランキングの表彰台"
+              width={1200}
+              height={1200}
+              loading="lazy"
+              sizes="64px"
+              className="popular-heading-icon"
+            />
           </div>
           <p className="popular-note">総合人気はYouTube再生数ベース</p>
         </div>

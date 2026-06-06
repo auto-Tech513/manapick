@@ -552,6 +552,17 @@ img {
   .hero-kv-image {
     width: min(34vw, 390px);
   }
+
+  .roadmap-heading {
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 360px);
+    align-items: end;
+    gap: 24px;
+  }
+
+  .roadmap-heading-art {
+    width: min(30vw, 360px);
+    justify-self: end;
+  }
 }
 
 
@@ -778,6 +789,16 @@ img {
   display: grid;
   gap: 2px;
   margin-bottom: 18px;
+}
+
+.roadmap-heading-art {
+  width: min(82vw, 280px);
+  height: auto;
+  justify-self: start;
+  border-radius: var(--radius-md);
+  filter: drop-shadow(0 10px 24px rgba(31, 58, 138, 0.08));
+  mix-blend-mode: multiply;
+  opacity: 0.86;
 }
 
 .roadmap-tabs {
@@ -1509,6 +1530,21 @@ img {
   flex-direction: column;
   gap: 8px;
   margin-bottom: 14px;
+}
+
+.popular-title-wrap {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 10px;
+}
+
+.popular-heading-icon {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(31, 58, 138, 0.1));
 }
 
 .popular-note {
