@@ -1059,6 +1059,11 @@ function HeroVideoCarousel({ slides }: { slides: HeroCarouselSlide[] }) {
   const touchStartX = useRef<number | null>(null);
   const slideCount = slides.length;
   const activeSlide = slides[activeIndex] ?? slides[0];
+  const modes: { mode: PopularTab; label: string }[] = [
+    { mode: "popular", label: "総合人気" },
+    { mode: "new", label: "新着" },
+    { mode: "score", label: "スコア順" }
+  ];
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -1090,6 +1095,11 @@ function HeroVideoCarousel({ slides }: { slides: HeroCarouselSlide[] }) {
     moveSlide(distance > 0 ? 1 : -1);
   }
 
+  function jumpToMode(mode: PopularTab) {
+    const nextIndex = slides.findIndex((slide) => slide.mode === mode);
+    if (nextIndex >= 0) setActiveIndex(nextIndex);
+  }
+
   return (
     <section
       className="hero-carousel"
@@ -1107,59 +1117,58 @@ function HeroVideoCarousel({ slides }: { slides: HeroCarouselSlide[] }) {
         setIsPaused(false);
       }}
     >
-      <div className="hero-carousel-topline">
-        <div>
-          <p>いま選びやすい12本</p>
-          <span>{activeSlide.modeLabel}</span>
+      <div className="hero-carousel-header">
+        <h2>いま選びやすい12本</h2>
+        <div className="hero-carousel-tabs" role="tablist" aria-label="ランキングの種類">
+          {modes.map((mode) => (
+            <button
+              key={mode.mode}
+              type="button"
+              className={activeSlide.mode === mode.mode ? "is-active" : ""}
+              onClick={() => jumpToMode(mode.mode)}
+              role="tab"
+              aria-selected={activeSlide.mode === mode.mode}
+            >
+              {mode.label}
+            </button>
+          ))}
         </div>
-        <span>{activeIndex + 1}/{slideCount}</span>
       </div>
 
-      <a
-        key={activeSlide.key}
-        className="hero-carousel-slide"
-        href={videoDetailHref(activeSlide.video)}
-        aria-label={activeSlide.video.title + "の詳細ページを開く"}
-      >
-        <span className="hero-carousel-media">
-          <Image
-            src={"https://i.ytimg.com/vi/" + activeSlide.video.ytid + "/hqdefault.jpg"}
-            alt=""
-            fill
-            sizes="(min-width: 980px) 500px, (min-width: 760px) 42vw, 92vw"
-            priority={activeIndex === 0}
-            className="object-cover"
-          />
-        </span>
-        <span className="hero-carousel-content">
-          <span className="hero-carousel-meta">
-            <span className="hero-carousel-mode">{activeSlide.modeLabel}</span>
-            <span className={`rank-badge rank-${Math.min(activeSlide.rank, 4)}`}>{activeSlide.rank}</span>
+      <div className="hero-carousel-frame">
+        <a
+          key={activeSlide.key}
+          className="hero-carousel-slide"
+          href={videoDetailHref(activeSlide.video)}
+          aria-label={activeSlide.video.title + "の詳細ページを開く"}
+        >
+          <span className="hero-carousel-media">
+            <Image
+              src={"https://i.ytimg.com/vi/" + activeSlide.video.ytid + "/hqdefault.jpg"}
+              alt=""
+              fill
+              sizes="(min-width: 1440px) 760px, (min-width: 1280px) 640px, (min-width: 760px) 52vw, 92vw"
+              priority={activeIndex === 0}
+              className="object-cover"
+            />
           </span>
-          <span className="hero-carousel-title">{activeSlide.video.title}</span>
-          <span className="hero-carousel-sub">{scoreText(activeSlide.video)} / {activeSlide.video.minutes}分</span>
-        </span>
-      </a>
+          <span className={`rank-badge rank-${Math.min(activeSlide.rank, 4)}`}>{activeSlide.rank}</span>
+          <span className="hero-carousel-content">
+            <span className="hero-carousel-title">{activeSlide.video.title}</span>
+            <span className="hero-carousel-sub">{scoreText(activeSlide.video)} / {activeSlide.video.minutes}分</span>
+          </span>
+        </a>
 
-      <button type="button" className="hero-carousel-arrow is-prev" onClick={() => moveSlide(-1)} aria-label="前の動画">
-        ‹
-      </button>
-      <button type="button" className="hero-carousel-arrow is-next" onClick={() => moveSlide(1)} aria-label="次の動画">
-        ›
-      </button>
+        <button type="button" className="hero-carousel-arrow is-prev" onClick={() => moveSlide(-1)} aria-label="前の動画">
+          ‹
+        </button>
+        <button type="button" className="hero-carousel-arrow is-next" onClick={() => moveSlide(1)} aria-label="次の動画">
+          ›
+        </button>
 
-      <div className="hero-carousel-dots" role="tablist" aria-label="カルーセルのスライド">
-        {slides.map((slide, index) => (
-          <button
-            key={slide.key}
-            type="button"
-            className={index === activeIndex ? "is-active" : ""}
-            onClick={() => setActiveIndex(index)}
-            aria-label={(index + 1) + "枚目: " + slide.modeLabel}
-            aria-selected={index === activeIndex}
-            role="tab"
-          />
-        ))}
+        <div className="hero-carousel-count" aria-live="polite">
+          {activeIndex + 1}/{slideCount}
+        </div>
       </div>
     </section>
   );

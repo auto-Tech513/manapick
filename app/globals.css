@@ -573,6 +573,155 @@ img {
   background: #fff;
 }
 
+.hero-carousel {
+  display: grid;
+  width: 100%;
+  max-width: 760px;
+  aspect-ratio: auto;
+  gap: 12px;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.hero-carousel::after {
+  content: none;
+}
+
+.hero-carousel-header {
+  display: grid;
+  gap: 10px;
+}
+
+.hero-carousel-header h2 {
+  margin: 0;
+  color: var(--color-ink);
+  font-size: clamp(1.18rem, 2.2vw, 1.65rem);
+  font-weight: 950;
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+.hero-carousel-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.hero-carousel-tabs button {
+  min-height: 40px;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 15%, var(--color-line));
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--color-primary-ink);
+  padding: 8px 10px;
+  font-size: 0.82rem;
+  font-weight: 950;
+  line-height: 1.15;
+  box-shadow: var(--shadow-line);
+}
+
+.hero-carousel-tabs button.is-active {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: var(--shadow-button);
+}
+
+.hero-carousel-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 14%, var(--color-line));
+  border-radius: var(--radius-lg);
+  background: #0f172a;
+  box-shadow: var(--shadow-card-hover);
+  isolation: isolate;
+}
+
+.hero-carousel-frame::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 42%, rgba(15, 23, 42, 0.18) 58%, rgba(15, 23, 42, 0.92) 100%);
+  content: "";
+}
+
+.hero-carousel-frame .rank-badge {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  z-index: 4;
+  min-width: 42px;
+  min-height: 42px;
+  border-radius: 14px;
+  font-size: 1.08rem;
+}
+
+.hero-carousel-content {
+  inset-inline: 18px 72px;
+  bottom: 18px;
+  z-index: 3;
+  gap: 5px;
+  max-width: none;
+}
+
+.hero-carousel-title {
+  display: block;
+  overflow: hidden;
+  color: #fff;
+  font-size: clamp(1.05rem, 1.65vw, 1.36rem);
+  font-weight: 950;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.72);
+  white-space: nowrap;
+}
+
+.hero-carousel-sub {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.88rem;
+  font-weight: 950;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.72);
+}
+
+.hero-carousel-arrow {
+  width: 42px;
+  height: 42px;
+  border-color: rgba(255, 255, 255, 0.42);
+  background: rgba(15, 23, 42, 0.62);
+  font-size: 1.7rem;
+  backdrop-filter: blur(8px);
+}
+
+.hero-carousel-arrow.is-prev {
+  left: 14px;
+}
+
+.hero-carousel-arrow.is-next {
+  right: 14px;
+}
+
+.hero-carousel-count {
+  position: absolute;
+  right: 16px;
+  bottom: 17px;
+  z-index: 4;
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.72);
+  color: #fff;
+  padding: 4px 9px;
+  font-size: 0.78rem;
+  font-weight: 950;
+  line-height: 1.2;
+  backdrop-filter: blur(8px);
+}
+
 .hero-kv-wrap {
   display: flex;
   min-width: 0;
@@ -774,6 +923,33 @@ img {
   .roadmap-heading-art {
     width: min(30vw, 360px);
     justify-self: end;
+  }
+}
+
+@media (min-width: 1180px) {
+  .hero-container {
+    max-width: min(100% - 48px, 1432px);
+    grid-template-columns: minmax(0, 560px) minmax(0, 1fr);
+    gap: clamp(40px, 4vw, 56px);
+  }
+
+  .hero-visual-column {
+    width: min(100%, 760px);
+  }
+
+  .hero-carousel {
+    justify-self: end;
+  }
+
+  .hero-carousel-header {
+    grid-template-columns: minmax(0, 1fr) minmax(330px, 0.74fr);
+    align-items: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-carousel-slide {
+    animation: none !important;
   }
 }
 
