@@ -131,6 +131,10 @@ function genreName(key: string) {
   return genreDisplayName(key);
 }
 
+function videoDetailHref(video: Video) {
+  return "/video/" + video.ytid + "/";
+}
+
 function displayChannel(video: Video) {
   const channel = video.channel?.trim();
   if (!channel || channel.includes("確認")) return null;
@@ -433,34 +437,9 @@ export default function ManapickApp() {
     if (currentPage > totalPages) setCurrentPage(totalPages);
   }, [currentPage, totalPages]);
 
-  function scrollToVideo(video: Video) {
-    const index = filteredVideos.findIndex((item) => item.ytid === video.ytid);
-    if (index >= 0) {
-      updatePage(Math.floor(index / PAGE_SIZE) + 1);
-    } else {
-      const genreItems = videos.filter((item) => item.genre === video.genre);
-      const genreIndex = genreItems.findIndex((item) => item.ytid === video.ytid);
-      const nextPage = genreIndex >= 0 ? Math.floor(genreIndex / PAGE_SIZE) + 1 : 1;
-      skipNextFilterResetRef.current = true;
-      setSearchDraft("");
-      setKeyword("");
-      setSelectedGenre(video.genre);
-      setSelectedSub("all");
-      setSelectedLevel("すべて");
-      setSelectedTime("all");
-      setCurrentPage(nextPage);
-      const url = new URL(window.location.href);
-      if (nextPage > 1) url.searchParams.set("page", String(nextPage));
-      else url.searchParams.delete("page");
-      window.history.replaceState(null, "", url);
-    }
+  function openVideoPage(video: Video) {
     setSuggestionsOpen(false);
-    window.setTimeout(() => {
-      const target = document.getElementById(video.ytid);
-      target?.scrollIntoView({ behavior: "smooth", block: "center" });
-      setHighlightedVideoId(video.ytid);
-      window.setTimeout(() => setHighlightedVideoId(null), 1500);
-    }, 80);
+    window.location.href = videoDetailHref(video);
   }
 
   function handleSearchKeyDown(event: ReactKeyboardEvent<HTMLInputElement>) {
@@ -483,7 +462,7 @@ export default function ManapickApp() {
     }
     if (event.key === "Enter") {
       event.preventDefault();
-      scrollToVideo(searchSuggestions[activeSuggestionIndex] ?? searchSuggestions[0]);
+      openVideoPage(searchSuggestions[activeSuggestionIndex] ?? searchSuggestions[0]);
     }
   }
 
@@ -553,7 +532,7 @@ export default function ManapickApp() {
               activeIndex={activeSuggestionIndex}
               open={suggestionsOpen}
               popularVideos={popularVideos}
-              onSelect={scrollToVideo}
+              onSelect={openVideoPage}
               onClose={() => setSuggestionsOpen(false)}
             />
           </div>
@@ -1286,14 +1265,16 @@ function FeaturedVideoCard({ video }: { video: Video }) {
   return (
     <article className="featured-video-card">
       <div className="featured-video-thumb">
-        <Image src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"} alt="" fill sizes="(min-width: 760px) 320px, 92vw" className="object-cover" />
+        <a className="featured-video-thumb-link" href={videoDetailHref(video)} aria-label={video.title + "の詳細ページを開く"}>
+          <Image src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"} alt="" fill sizes="(min-width: 760px) 320px, 92vw" className="object-cover" />
+        </a>
         <ScoreBadge video={video} compact />
       </div>
       <div>
         <p className="featured-video-eyebrow">まず見るべき1本</p>
-        <h3>{video.title}</h3>
+        <h3><a href={videoDetailHref(video)}>{video.title}</a></h3>
         <p>{video.review[0]}</p>
-        <a href={"#" + video.ytid}>一覧内で見る</a>
+        <a href={videoDetailHref(video)}>詳細を見る</a>
       </div>
     </article>
   );
@@ -1359,13 +1340,13 @@ function RankedVideoCard({ video, rank, onGenreSelect }: { video: Video; rank: n
 
   return (
     <article className="ranked-video-card">
-      <a href={video.url} target="_blank" rel="noopener noreferrer" className="ranked-thumb" aria-label={video.title + "をYouTubeで開く"}>
+      <a href={videoDetailHref(video)} className="ranked-thumb" aria-label={video.title + "の詳細ページを開く"}>
         <Image src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"} alt="" fill sizes="(min-width: 900px) 180px, 42vw" className="object-cover" />
         <span className={`rank-badge rank-${Math.min(rank, 4)}`}>{rank}</span>
       </a>
       <div className="ranked-body">
         <button type="button" onClick={() => onGenreSelect(video.genre)}>{genreLabel(video.genre)}</button>
-        <h3><a href={video.url} target="_blank" rel="noopener noreferrer">{video.title}</a></h3>
+        <h3><a href={videoDetailHref(video)}>{video.title}</a></h3>
         <p>{scoreText(video)} / {video.minutes}分{ageLabel ? " / " + ageLabel : ""}</p>
       </div>
     </article>
@@ -1400,14 +1381,16 @@ function WeeklyPickCard({ video }: { video: Video }) {
   return (
     <article className="weekly-pick-card" aria-label="今週のイチオシ">
       <div className="weekly-pick-thumb">
-        <Image
-          src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"}
-          alt=""
-          fill
-          sizes="(min-width: 980px) 360px, (min-width: 760px) 38vw, 86vw"
-          loading="eager"
-          className="object-cover"
-        />
+        <a className="weekly-pick-thumb-link" href={videoDetailHref(video)} aria-label={video.title + "の詳細ページを開く"}>
+          <Image
+            src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"}
+            alt=""
+            fill
+            sizes="(min-width: 980px) 360px, (min-width: 760px) 38vw, 86vw"
+            loading="eager"
+            className="object-cover"
+          />
+        </a>
         <div className="weekly-score-wrap">
           <ScoreBadge video={video} compact />
           <ScoreStatusNote video={video} />
@@ -1415,7 +1398,7 @@ function WeeklyPickCard({ video }: { video: Video }) {
       </div>
       <div className="weekly-pick-body">
         <p className="weekly-pick-eyebrow">今週のイチオシ</p>
-        <h2>{video.title}</h2>
+        <h2><a href={videoDetailHref(video)}>{video.title}</a></h2>
         <p>{reviewLine}</p>
         {video.editorNote ? <p className="editor-note">編集メモ: {video.editorNote}</p> : null}
         <a className="weekly-pick-button" href={video.url} target="_blank" rel="noopener noreferrer">
@@ -1469,10 +1452,8 @@ function VideoCard({ video, highlighted = false }: { video: Video; highlighted?:
     >
       <div className="relative overflow-hidden bg-bgSoft">
         <a
-          href={video.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={video.title + "をYouTubeで開く"}
+          href={videoDetailHref(video)}
+          aria-label={video.title + "の詳細ページを開く"}
           className="block"
         >
           <div className="relative aspect-video bg-bgSoft">
@@ -1501,7 +1482,7 @@ function VideoCard({ video, highlighted = false }: { video: Video; highlighted?:
           {ageLabel ? <span className="published-age">{ageLabel}</span> : null}
         </div>
         <h3 className="line-clamp-2 text-base font-black leading-6 text-ink">
-          <a className="transition hover:text-accent" href={video.url} target="_blank" rel="noopener noreferrer">
+          <a className="transition hover:text-accent" href={videoDetailHref(video)}>
             {video.title}
           </a>
         </h3>
@@ -1739,7 +1720,7 @@ function RoadmapTimeline({ roadmap }: { roadmap: Roadmap }) {
 
 function RoadmapMiniVideo({ video }: { video: Video }) {
   return (
-    <a className="roadmap-mini-card" href={"#" + video.ytid}>
+    <a className="roadmap-mini-card" href={videoDetailHref(video)}>
       <span className="roadmap-mini-thumb">
         <Image
           src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"}
