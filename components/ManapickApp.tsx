@@ -1114,9 +1114,14 @@ function LiveSearchPanel({
 }) {
   const hasQuery = query.trim().length > 0;
   const fallbackVideos = popularVideos.slice(0, 3);
+  const panelClassName = [
+    "live-search-panel",
+    open ? "is-open" : "",
+    hasQuery ? "has-query" : "is-empty-query"
+  ].filter(Boolean).join(" ");
 
   return (
-    <div id={id} className={open ? "live-search-panel is-open" : "live-search-panel"} role="status" aria-live="polite">
+    <div id={id} className={panelClassName} role="status" aria-live="polite">
       <div className="live-search-status">
         {hasQuery ? (
           total > 0 ? <span>{total}件ヒット</span> : <span>見つかりませんでした</span>
@@ -1138,7 +1143,12 @@ function LiveSearchPanel({
                 aria-selected={index === activeIndex}
               >
                 <span className="live-suggestion-title">{video.title}</span>
-                <span className="live-suggestion-meta">{genreLabel(video.genre)} / {scoreText(video)} / {video.minutes}分</span>
+                <span className="live-suggestion-meta">
+                  <LevelBadge level={video.level} />
+                  <span>{genreLabel(video.genre)}</span>
+                  <span>{scoreText(video)}</span>
+                  <span>{video.minutes}分</span>
+                </span>
               </button>
             </li>
           ))}
