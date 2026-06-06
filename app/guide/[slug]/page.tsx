@@ -181,7 +181,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         </section>
 
         <section className="guide-section" aria-labelledby="guide-reason-title">
-          <h2 id="guide-reason-title">なぜこの順番か（多くの人がつまずく理由）</h2>
+          <h2 id="guide-reason-title">{guide.reasonTitle ?? "なぜこの順番か（多くの人がつまずく理由）"}</h2>
           {guide.reasonParagraphs.map((paragraph) => (
             <p key={paragraph}>{strongText(paragraph)}</p>
           ))}
@@ -238,8 +238,9 @@ export default async function GuidePage({ params }: GuidePageProps) {
         <section className="guide-section guide-section-muted" aria-labelledby="guide-cta-title">
           <h2 id="guide-cta-title">関連ロードマップ</h2>
           <div className="guide-cta-row">
-            <a href="/#roadmap">関連：プログラミングロードマップ／データ分析ロードマップ</a>
-            <a href="/#genre-picker">8ジャンルの地図を見る</a>
+            {guide.relatedLinks.map((link) => (
+              <a key={link.href + link.label} href={link.href}>{link.label}</a>
+            ))}
           </div>
         </section>
       </article>
@@ -286,10 +287,12 @@ function GuideVideoCard({ video, why }: { video: Video; why: string }) {
 }
 
 function guideTitle(title: string) {
-  if (title === "生成AIを独学する完全ロードマップ【YouTube無料・2026年版】") {
+  const suffix = "完全ロードマップ【YouTube無料・2026年版】";
+  if (title.endsWith(suffix)) {
+    const prefix = title.slice(0, -suffix.length);
     return (
       <>
-        <span>生成AIを独学する</span>
+        <span>{prefix}</span>
         <span className="guide-title-nowrap">完全ロードマップ</span>
         <span className="guide-title-nowrap">【YouTube無料・</span>
         <span className="guide-title-nowrap">2026年版】</span>

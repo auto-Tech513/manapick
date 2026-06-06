@@ -112,6 +112,20 @@ const generativeAiGuide = {
       answer:
         "Manapickは毎週更新で、古くなった動画は差し替えます。このページの「最終更新日」をご確認ください。"
     }
+  ],
+  relatedLinks: [
+    {
+      label: "Pythonロードマップ",
+      href: "/guide/python/"
+    },
+    {
+      label: "プログラミングロードマップ",
+      href: "/#roadmap"
+    },
+    {
+      label: "8ジャンルの地図を見る",
+      href: "/#genre-picker"
+    }
   ]
 } as const;
 

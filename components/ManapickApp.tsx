@@ -306,6 +306,11 @@ const genreIconSources: Record<string, string> = {
   shikaku: "/brand/icon-shikaku.png"
 };
 
+const roadmapGuideLinks: Record<string, { href: string }> = {
+  ai: { href: "/guide/generative-ai/" },
+  prog: { href: "/guide/python/" }
+};
+
 export default function ManapickApp() {
   const [selectedGenre, setSelectedGenre] = useState("all");
   const [selectedSub, setSelectedSub] = useState("all");
@@ -1039,8 +1044,8 @@ export default function ManapickApp() {
                   </button>
                 ))}
               </div>
-              {activeRoadmapGenre === "ai" ? (
-                <a className="roadmap-guide-link" href="/guide/generative-ai/">
+              {roadmapGuideLinks[activeRoadmapGenre] ? (
+                <a className="roadmap-guide-link" href={roadmapGuideLinks[activeRoadmapGenre].href}>
                   📖 文章で読む完全ロードマップ
                 </a>
               ) : null}
@@ -1082,6 +1087,9 @@ export default function ManapickApp() {
             </a>
             <a className="hover:text-white" href="/guide/generative-ai/">
               生成AIロードマップ
+            </a>
+            <a className="hover:text-white" href="/guide/python/">
+              Pythonロードマップ
             </a>
             <a className="hover:text-white" href="/operator/">
               運営者情報

@@ -19,9 +19,12 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 誤情報、釣り、情報商材誘導、過度な成果保証を含む動画は不採用にします。
 - スコアには確認済と暫定があり、暫定動画は順次、人の視聴確認で確定します。
 
+## ガイド記事
+- 生成AIロードマップ記事: https://manapick.app/guide/generative-ai/
+- Pythonロードマップ記事: https://manapick.app/guide/python/
+
 ## 主要URL
 - トップ: https://manapick.app/
-- 生成AIロードマップ記事: https://manapick.app/guide/generative-ai/
 - 採点方法: https://manapick.app/about-score/
 - お問い合わせ: https://manapick.app/contact/
 - 運営者情報: https://manapick.app/operator/

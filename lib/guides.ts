@@ -1,11 +1,45 @@
 import generativeAiGuide from "@/content/guides/generative-ai";
+import pythonGuide from "@/content/guides/python";
 import { videos, type Video } from "@/lib/manapick";
 
-export type Guide = typeof generativeAiGuide;
+export type Guide = {
+  slug: string;
+  genre: string;
+  title: string;
+  description: string;
+  publishedAt: string;
+  intro: string;
+  conclusionBullets: readonly {
+    label: string;
+    text: string;
+  }[];
+  conclusionClosing: string;
+  reasonTitle?: string;
+  reasonParagraphs: readonly string[];
+  steps: readonly {
+    title: string;
+    videos: readonly {
+      title: string;
+      why: string;
+    }[];
+  }[];
+  stumblingBlocks: readonly {
+    label: string;
+    text: string;
+  }[];
+  faq: readonly {
+    question: string;
+    answer: string;
+  }[];
+  relatedLinks: readonly {
+    label: string;
+    href: string;
+  }[];
+};
 export type GuideStep = Guide["steps"][number];
 export type GuideStepVideo = GuideStep["videos"][number];
 
-export const guides = [generativeAiGuide] as Guide[];
+export const guides: readonly Guide[] = [generativeAiGuide, pythonGuide];
 
 export function guidePath(slug: string) {
   return "/guide/" + slug + "/";
