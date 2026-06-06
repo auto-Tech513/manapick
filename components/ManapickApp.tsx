@@ -2,7 +2,7 @@
 
 import Fuse from "fuse.js";
 import Image from "next/image";
-import { type KeyboardEvent as ReactKeyboardEvent, useEffect, useMemo, useRef, useState } from "react";
+import { type KeyboardEvent as ReactKeyboardEvent, type RefObject, useEffect, useMemo, useRef, useState } from "react";
 import BrandLogo, { BrandMark } from "@/components/BrandLogo";
 import genresData from "@/content/genres.json";
 import roadmapsData from "@/content/roadmaps.json";
@@ -314,7 +314,10 @@ export default function ManapickApp() {
   const [highlightedVideoId, setHighlightedVideoId] = useState<string | null>(null);
   const [activeRoadmapGenre, setActiveRoadmapGenre] = useState("ai");
   const [currentPage, setCurrentPage] = useState(1);
+  const [menuOpen, setMenuOpen] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const menuDrawerRef = useRef<HTMLElement>(null!);
   const filtersMountedRef = useRef(false);
   const skipNextFilterResetRef = useRef(false);
 
@@ -465,6 +468,33 @@ export default function ManapickApp() {
     if (currentPage > totalPages) setCurrentPage(totalPages);
   }, [currentPage, totalPages]);
 
+  useEffect(() => {
+    if (!menuOpen) return;
+    const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const previousOverflow = document.body.style.overflow;
+
+    function handleKeydown(event: KeyboardEvent) {
+      if (event.key === "Escape") setMenuOpen(false);
+    }
+
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", handleKeydown);
+    window.setTimeout(() => {
+      const firstFocusable = menuDrawerRef.current?.querySelector<HTMLElement>("button, a");
+      firstFocusable?.focus();
+    }, 0);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeydown);
+      if (menuButtonRef.current) {
+        menuButtonRef.current?.focus();
+      } else if (previousFocus && document.contains(previousFocus)) {
+        previousFocus.focus();
+      }
+    };
+  }, [menuOpen]);
+
   function openVideoPage(video: Video) {
     setSuggestionsOpen(false);
     window.location.href = videoDetailHref(video);
@@ -512,9 +542,13 @@ export default function ManapickApp() {
   }
 
   function scrollToResults() {
+    scrollToElement("results-anchor");
+  }
+
+  function scrollToElement(elementId: string) {
     window.requestAnimationFrame(() => {
       window.requestAnimationFrame(() => {
-        const target = document.getElementById("results-anchor") ?? document.querySelector("[aria-label='動画一覧']");
+        const target = document.getElementById(elementId);
         if (!target) return;
         const stickyOffset = (document.querySelector(".category-tab-nav")?.getBoundingClientRect().height ?? 0) + 16;
         const top = target.getBoundingClientRect().top + window.scrollY - stickyOffset;
@@ -551,10 +585,51 @@ export default function ManapickApp() {
     handleGenreChange(genreKey);
   }
 
+  function showGenrePicker() {
+    setSelectedGenre("all");
+    setSelectedSub("all");
+    setSelectedLevel("すべて");
+    setSelectedTime("all");
+    setSearchDraft("");
+    setKeyword("");
+    setSuggestionsOpen(false);
+    setActiveSuggestionIndex(0);
+    resetPageParam();
+    scrollToElement("genre-picker");
+  }
+
+  function handlePurposeSelect(target: string) {
+    if (target === "roadmap") {
+      scrollToElement("roadmap");
+      return;
+    }
+    if (target === "all") {
+      showGenrePicker();
+      return;
+    }
+    handleGenreChange(target);
+  }
+
+  function handleMenuKeyDown(event: ReactKeyboardEvent<HTMLElement>) {
+    if (event.key !== "Tab") return;
+    const focusable = Array.from(menuDrawerRef.current?.querySelectorAll<HTMLElement>("button, a") ?? [])
+      .filter((item) => !item.hasAttribute("disabled"));
+    if (focusable.length === 0) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
+
   return (
     <main>
       <header className="border-b border-line bg-surface/92 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 min-[720px]:flex-row min-[720px]:items-center min-[720px]:justify-between min-[720px]:px-6">
+        <div className="site-header-inner mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 min-[720px]:flex-row min-[720px]:items-center min-[720px]:justify-between min-[720px]:px-6">
           <a href="#top" className="min-w-0" aria-label="Manapick トップ">
             <BrandLogo compact />
           </a>
@@ -590,21 +665,56 @@ export default function ManapickApp() {
               onClose={() => setSuggestionsOpen(false)}
             />
           </div>
-          <nav className="flex flex-wrap gap-3 text-sm font-semibold text-muted" aria-label="サイト内リンク">
-            <a className="transition hover:text-accent" href="#search">
-              探す
-            </a>
-            <a className="transition hover:text-accent" href="#roadmap">
-              ロードマップ
-            </a>
-            <a className="transition hover:text-accent" href="#pr">
-              PR
-            </a>
-            <a className="transition hover:text-accent" href="/contact/">
-              お問い合わせ
-            </a>
-          </nav>
+          <div className="header-actions">
+            <nav className="site-nav flex flex-wrap gap-3 text-sm font-semibold text-muted" aria-label="サイト内リンク">
+              <a className="transition hover:text-accent" href="#search">
+                探す
+              </a>
+              <a className="transition hover:text-accent" href="#roadmap">
+                ロードマップ
+              </a>
+              <a className="transition hover:text-accent" href="#pr">
+                PR
+              </a>
+              <a className="transition hover:text-accent" href="/contact/">
+                お問い合わせ
+              </a>
+            </nav>
+            <button
+              ref={menuButtonRef}
+              type="button"
+              className="menu-toggle"
+              aria-label={menuOpen ? "メニューを閉じる" : "メニューを開く"}
+              aria-controls="site-menu"
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen(true)}
+            >
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+            </button>
+          </div>
         </div>
+        {menuOpen ? (
+          <SiteMenuDrawer
+            genres={publishedGenres}
+            drawerRef={menuDrawerRef}
+            onKeyDown={handleMenuKeyDown}
+            onClose={() => setMenuOpen(false)}
+            onGenreSelect={(genreKey) => {
+              setMenuOpen(false);
+              handleGenreChange(genreKey);
+            }}
+            onGenreList={() => {
+              setMenuOpen(false);
+              showGenrePicker();
+            }}
+            onSectionSelect={(sectionId) => {
+              setMenuOpen(false);
+              scrollToElement(sectionId);
+            }}
+          />
+        ) : null}
       </header>
 
       <CategoryTabNav
@@ -654,7 +764,7 @@ export default function ManapickApp() {
             </p>
 
             <HeroTrustStats totalVideos={videos.length} confirmedCount={confirmedCount} />
-            <PurposeNav onSelect={jumpToGenre} />
+            <PurposeNav onSelect={handlePurposeSelect} />
 
             <p className="hero-proof">
               公開中{publishedGenres.length}ジャンル
@@ -671,18 +781,21 @@ export default function ManapickApp() {
       {weeklyPick ? (
         <section className="weekly-pick-section" aria-labelledby="weekly-pick-title">
           <div className="weekly-pick-shell">
-            <div className="weekly-pick-heading">
-              <p className="section-eyebrow">今週のイチオシ</p>
-              <h2 id="weekly-pick-title" className="section-title">最高スコアの一本から始める</h2>
+            <div className="weekly-pick-column">
+              <div className="weekly-pick-heading">
+                <p className="section-eyebrow">今週のイチオシ</p>
+                <h2 id="weekly-pick-title" className="section-title">最高スコアの一本から始める</h2>
+              </div>
+              <WeeklyPickCard video={weeklyPick} />
             </div>
-            <WeeklyPickCard video={weeklyPick} />
+            <AllGenreHighlights onGenreSelect={jumpToGenre} />
           </div>
         </section>
       ) : null}
 
       <section id="search" className="border-b border-line bg-white/64">
         <div className="mx-auto max-w-7xl px-4 py-7 min-[760px]:px-6">
-          <div className="mb-5 flex flex-col gap-2 min-[720px]:flex-row min-[720px]:items-end min-[720px]:justify-between">
+          <div id="genre-picker" className="mb-5 flex flex-col gap-2 min-[720px]:flex-row min-[720px]:items-end min-[720px]:justify-between">
             <div>
               <p className="text-sm font-bold text-leaf">①ざっくり探す</p>
               <h2 className="text-2xl font-black text-ink">ジャンルから選ぶ</h2>
@@ -817,7 +930,6 @@ export default function ManapickApp() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-8 min-[760px]:px-6" aria-label="動画一覧">
-        {!searchActive && selectedGenre === "all" ? <AllGenreHighlights onGenreSelect={jumpToGenre} /> : null}
         {!searchActive && selectedGenreData?.status === "published" ? (
           <GenreSummaryPanel
             genre={selectedGenreData}
@@ -1029,6 +1141,74 @@ function LiveSearchPanel({
           </div>
         </div>
       ) : null}
+    </div>
+  );
+}
+
+function SiteMenuDrawer({
+  genres,
+  drawerRef,
+  onKeyDown,
+  onClose,
+  onGenreSelect,
+  onGenreList,
+  onSectionSelect
+}: {
+  genres: Genre[];
+  drawerRef: RefObject<HTMLElement>;
+  onKeyDown: (event: ReactKeyboardEvent<HTMLElement>) => void;
+  onClose: () => void;
+  onGenreSelect: (genreKey: string) => void;
+  onGenreList: () => void;
+  onSectionSelect: (sectionId: string) => void;
+}) {
+  return (
+    <div className="site-menu-layer">
+      <button type="button" className="site-menu-backdrop" aria-label="メニューを閉じる" onClick={onClose} />
+      <aside
+        id="site-menu"
+        ref={drawerRef}
+        className="site-menu-drawer"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="site-menu-title"
+        onKeyDown={onKeyDown}
+      >
+        <div className="site-menu-head">
+          <div>
+            <p className="section-eyebrow">Manapick</p>
+            <h2 id="site-menu-title">メニュー</h2>
+          </div>
+          <button type="button" className="site-menu-close" onClick={onClose} aria-label="メニューを閉じる">
+            ×
+          </button>
+        </div>
+        <nav className="site-menu-links" aria-label="メニューリンク">
+          <button type="button" className="site-menu-link" onClick={onGenreList}>
+            8ジャンル一覧
+          </button>
+          <div className="site-menu-genre-grid" role="group" aria-label="ジャンル一覧">
+            {genres.map((genre) => (
+              <button key={genre.key} type="button" onClick={() => onGenreSelect(genre.key)}>
+                <GenreIcon genreKey={genre.key} className="site-menu-genre-icon" />
+                <span>{genreLabel(genre.key)}</span>
+              </button>
+            ))}
+          </div>
+          <button type="button" className="site-menu-link" onClick={() => onSectionSelect("roadmap")}>
+            ロードマップ
+          </button>
+          <a className="site-menu-link" href="/about-score/" onClick={onClose}>
+            採点方法
+          </a>
+          <button type="button" className="site-menu-link" onClick={() => onSectionSelect("pr")}>
+            PR
+          </button>
+          <a className="site-menu-link" href="/contact/" onClick={onClose}>
+            お問い合わせ
+          </a>
+        </nav>
+      </aside>
     </div>
   );
 }
@@ -1257,18 +1437,12 @@ function PurposeNav({ onSelect }: { onSelect: (genreKey: string) => void }) {
   return (
     <div className="purpose-nav" aria-label="目的から選ぶ">
       <div>
-        {purposeLinks.map((item) => (
-          item.genre === "roadmap" ? (
-            <a key={item.number} href="#roadmap" className="purpose-block">
-              <PurposeIcon icon={item.icon} />
-              <span className="purpose-number">{item.number}</span>
-              <span className="purpose-title">{item.title}</span>
-              <span className="purpose-label">{item.label}</span>
-            </a>
-          ) : (
+        {purposeLinks.map((item) => {
+          const href = item.genre === "roadmap" ? "#roadmap" : item.genre === "all" ? "#genre-picker" : "#search";
+          return (
             <a
               key={item.number}
-              href="#search"
+              href={href}
               onClick={(event) => {
                 event.preventDefault();
                 onSelect(item.genre);
@@ -1280,8 +1454,8 @@ function PurposeNav({ onSelect }: { onSelect: (genreKey: string) => void }) {
               <span className="purpose-title">{item.title}</span>
               <span className="purpose-label">{item.label}</span>
             </a>
-          )
-        ))}
+          );
+        })}
       </div>
     </div>
   );
