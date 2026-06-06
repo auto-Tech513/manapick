@@ -2,7 +2,7 @@
 
 import Fuse from "fuse.js";
 import Image from "next/image";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { type KeyboardEvent as ReactKeyboardEvent, useEffect, useMemo, useRef, useState } from "react";
 import BrandLogo, { BrandMark } from "@/components/BrandLogo";
 import genresData from "@/content/genres.json";
 import roadmapsData from "@/content/roadmaps.json";
@@ -193,12 +193,17 @@ export default function ManapickApp() {
   const [selectedSub, setSelectedSub] = useState("all");
   const [selectedLevel, setSelectedLevel] = useState<(typeof levels)[number]>("すべて");
   const [selectedTime, setSelectedTime] = useState("all");
+  const [searchDraft, setSearchDraft] = useState("");
   const [keyword, setKeyword] = useState("");
+  const [suggestionsOpen, setSuggestionsOpen] = useState(false);
+  const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(0);
+  const [highlightedVideoId, setHighlightedVideoId] = useState<string | null>(null);
   const [activeRoadmapGenre, setActiveRoadmapGenre] = useState("ai");
   const [currentPage, setCurrentPage] = useState(1);
   const [popularTab, setPopularTab] = useState<PopularTab>("popular");
   const searchInputRef = useRef<HTMLInputElement>(null);
   const filtersMountedRef = useRef(false);
+  const skipNextFilterResetRef = useRef(false);
 
   const selectedGenreData =
     selectedGenre === "all" ? null : genres.find((genre) => genre.key === selectedGenre) ?? null;
@@ -298,6 +303,9 @@ export default function ManapickApp() {
     return ranked.slice(0, 12);
   }, [popularTab]);
 
+  const searchSuggestions = useMemo(() => (searchActive ? filteredVideos.slice(0, 5) : []), [filteredVideos, searchActive]);
+  const liveSearchTotal = searchActive ? filteredVideos.length : videos.length;
+
   const weeklyPick = useMemo(() => {
     return videos.reduce<Video | null>((best, video) => {
       if (video.score === null) return best;
@@ -317,6 +325,7 @@ export default function ManapickApp() {
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
         event.preventDefault();
         searchInputRef.current?.focus();
+        setSuggestionsOpen(true);
       }
     }
     window.addEventListener("keydown", handleKeydown);
@@ -324,8 +333,21 @@ export default function ManapickApp() {
   }, []);
 
   useEffect(() => {
+    const timeout = window.setTimeout(() => setKeyword(searchDraft), 150);
+    return () => window.clearTimeout(timeout);
+  }, [searchDraft]);
+
+  useEffect(() => {
+    setActiveSuggestionIndex(0);
+  }, [keyword, selectedLevel, selectedSub, selectedTime]);
+
+  useEffect(() => {
     if (!filtersMountedRef.current) {
       filtersMountedRef.current = true;
+      return;
+    }
+    if (skipNextFilterResetRef.current) {
+      skipNextFilterResetRef.current = false;
       return;
     }
     setCurrentPage(1);
@@ -337,6 +359,60 @@ export default function ManapickApp() {
   useEffect(() => {
     if (currentPage > totalPages) setCurrentPage(totalPages);
   }, [currentPage, totalPages]);
+
+  function scrollToVideo(video: Video) {
+    const index = filteredVideos.findIndex((item) => item.ytid === video.ytid);
+    if (index >= 0) {
+      updatePage(Math.floor(index / PAGE_SIZE) + 1);
+    } else {
+      const genreItems = videos.filter((item) => item.genre === video.genre);
+      const genreIndex = genreItems.findIndex((item) => item.ytid === video.ytid);
+      const nextPage = genreIndex >= 0 ? Math.floor(genreIndex / PAGE_SIZE) + 1 : 1;
+      skipNextFilterResetRef.current = true;
+      setSearchDraft("");
+      setKeyword("");
+      setSelectedGenre(video.genre);
+      setSelectedSub("all");
+      setSelectedLevel("すべて");
+      setSelectedTime("all");
+      setCurrentPage(nextPage);
+      const url = new URL(window.location.href);
+      if (nextPage > 1) url.searchParams.set("page", String(nextPage));
+      else url.searchParams.delete("page");
+      window.history.replaceState(null, "", url);
+    }
+    setSuggestionsOpen(false);
+    window.setTimeout(() => {
+      const target = document.getElementById(video.ytid);
+      target?.scrollIntoView({ behavior: "smooth", block: "center" });
+      setHighlightedVideoId(video.ytid);
+      window.setTimeout(() => setHighlightedVideoId(null), 1500);
+    }, 80);
+  }
+
+  function handleSearchKeyDown(event: ReactKeyboardEvent<HTMLInputElement>) {
+    if (event.key === "Escape") {
+      setSuggestionsOpen(false);
+      return;
+    }
+    if (!searchSuggestions.length) return;
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      setSuggestionsOpen(true);
+      setActiveSuggestionIndex((index) => Math.min(index + 1, searchSuggestions.length - 1));
+      return;
+    }
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+      setSuggestionsOpen(true);
+      setActiveSuggestionIndex((index) => Math.max(index - 1, 0));
+      return;
+    }
+    if (event.key === "Enter") {
+      event.preventDefault();
+      scrollToVideo(searchSuggestions[activeSuggestionIndex] ?? searchSuggestions[0]);
+    }
+  }
 
   function updatePage(nextPage: number) {
     const bounded = Math.min(Math.max(1, nextPage), totalPages);
@@ -357,7 +433,9 @@ export default function ManapickApp() {
     setSelectedSub("all");
     setSelectedLevel("すべて");
     setSelectedTime("all");
+    setSearchDraft("");
     setKeyword("");
+    setSuggestionsOpen(false);
   }
 
   function viewAiGenre() {
@@ -378,17 +456,38 @@ export default function ManapickApp() {
           <a href="#top" className="min-w-0" aria-label="Manapick トップ">
             <BrandLogo compact />
           </a>
-          <label className="top-search" aria-label="動画を検索">
-            <span className="sr-only">動画を検索</span>
-            <input
-              ref={searchInputRef}
-              value={keyword}
-              onChange={(event) => setKeyword(event.target.value)}
-              placeholder="動画を検索"
-              className="top-search-input"
+          <div className="top-search-wrap">
+            <label className="top-search" aria-label="動画を検索">
+              <span className="sr-only">動画を検索</span>
+              <input
+                ref={searchInputRef}
+                value={searchDraft}
+                onChange={(event) => {
+                  setSearchDraft(event.target.value);
+                  setSuggestionsOpen(true);
+                }}
+                onFocus={() => setSuggestionsOpen(true)}
+                onKeyDown={handleSearchKeyDown}
+                placeholder="動画を検索"
+                className="top-search-input"
+                autoComplete="off"
+                aria-controls="search-suggestions"
+                aria-expanded={suggestionsOpen}
+              />
+              <span className="top-search-key" aria-hidden="true">⌘K</span>
+            </label>
+            <LiveSearchPanel
+              id="search-suggestions"
+              query={keyword}
+              total={liveSearchTotal}
+              suggestions={searchSuggestions}
+              activeIndex={activeSuggestionIndex}
+              open={suggestionsOpen}
+              popularVideos={popularVideos}
+              onSelect={scrollToVideo}
+              onClose={() => setSuggestionsOpen(false)}
             />
-            <span className="top-search-key" aria-hidden="true">⌘K</span>
-          </label>
+          </div>
           <nav className="flex flex-wrap gap-3 text-sm font-semibold text-muted" aria-label="サイト内リンク">
             <a className="transition hover:text-accent" href="#search">
               探す
@@ -616,10 +715,16 @@ export default function ManapickApp() {
               <label className="block">
                 <span className="mb-1 block text-sm font-bold text-muted">キーワード</span>
                 <input
-                  value={keyword}
-                  onChange={(event) => setKeyword(event.target.value)}
+                  value={searchDraft}
+                  onChange={(event) => {
+                    setSearchDraft(event.target.value);
+                    setSuggestionsOpen(true);
+                  }}
+                  onFocus={() => setSuggestionsOpen(true)}
+                  onKeyDown={handleSearchKeyDown}
                   placeholder="例: Claude / Python / 独学"
                   className="h-12 w-full rounded-lg border border-line bg-white px-3 text-base"
+                  autoComplete="off"
                 />
                 <span className="mt-1 block text-xs font-bold text-muted">⌘Kでも検索できます</span>
               </label>
@@ -682,14 +787,14 @@ export default function ManapickApp() {
                   <section key={group.genreKey} className="search-result-group">
                     <h2>{genreLabel(group.genreKey)} <span>{group.items.length}件</span></h2>
                     <div className="grid gap-4 min-[560px]:grid-cols-2 min-[880px]:grid-cols-3">
-                      {group.items.map((video) => <VideoCard key={video.ytid} video={video} />)}
+                      {group.items.map((video) => <VideoCard key={video.ytid} video={video} highlighted={highlightedVideoId === video.ytid} />)}
                     </div>
                   </section>
                 ))}
               </div>
             ) : (
               <div className="grid gap-4 min-[560px]:grid-cols-2 min-[880px]:grid-cols-3">
-                {pageVideos.map((video) => <VideoCard key={video.ytid} video={video} />)}
+                {pageVideos.map((video) => <VideoCard key={video.ytid} video={video} highlighted={highlightedVideoId === video.ytid} />)}
               </div>
             )}
             <PaginationControls currentPage={safeCurrentPage} totalPages={totalPages} onPageChange={updatePage} />
@@ -779,6 +884,75 @@ export default function ManapickApp() {
   );
 }
 
+
+function LiveSearchPanel({
+  id,
+  query,
+  total,
+  suggestions,
+  activeIndex,
+  open,
+  popularVideos,
+  onSelect,
+  onClose
+}: {
+  id: string;
+  query: string;
+  total: number;
+  suggestions: Video[];
+  activeIndex: number;
+  open: boolean;
+  popularVideos: Video[];
+  onSelect: (video: Video) => void;
+  onClose: () => void;
+}) {
+  const hasQuery = query.trim().length > 0;
+  const fallbackVideos = popularVideos.slice(0, 3);
+
+  return (
+    <div id={id} className={open ? "live-search-panel is-open" : "live-search-panel"} role="status" aria-live="polite">
+      <div className="live-search-status">
+        {hasQuery ? (
+          total > 0 ? <span>{total}件ヒット</span> : <span>見つかりませんでした</span>
+        ) : (
+          <span>キーワードで全動画を検索できます</span>
+        )}
+        <button type="button" onClick={onClose} aria-label="候補を閉じる">閉じる</button>
+      </div>
+      {hasQuery && suggestions.length > 0 ? (
+        <ol className="live-suggestion-list" role="listbox" aria-label="検索候補">
+          {suggestions.map((video, index) => (
+            <li key={video.ytid}>
+              <button
+                type="button"
+                className={index === activeIndex ? "is-active" : ""}
+                onMouseDown={(event) => event.preventDefault()}
+                onClick={() => onSelect(video)}
+                role="option"
+                aria-selected={index === activeIndex}
+              >
+                <span className="live-suggestion-title">{video.title}</span>
+                <span className="live-suggestion-meta">{genreLabel(video.genre)} / {scoreText(video)} / {video.minutes}分</span>
+              </button>
+            </li>
+          ))}
+        </ol>
+      ) : null}
+      {hasQuery && total === 0 ? (
+        <div className="live-search-empty">
+          <p>条件を少し広げるか、人気の動画から始められます。</p>
+          <div>
+            {fallbackVideos.map((video) => (
+              <button key={video.ytid} type="button" onMouseDown={(event) => event.preventDefault()} onClick={() => onSelect(video)}>
+                {video.title}
+              </button>
+            ))}
+          </div>
+        </div>
+      ) : null}
+    </div>
+  );
+}
 
 function HeroTrustStats({ totalVideos, confirmedCount }: { totalVideos: number; confirmedCount: number }) {
   const stats = [
@@ -1109,13 +1283,13 @@ function buildRoadmapSteps(roadmap: Roadmap): DisplayRoadmapStep[] {
   return steps;
 }
 
-function VideoCard({ video }: { video: Video }) {
+function VideoCard({ video, highlighted = false }: { video: Video; highlighted?: boolean }) {
   const channel = displayChannel(video);
 
   return (
     <article
       id={video.ytid}
-      className="group flex min-w-0 scroll-mt-6 flex-col overflow-hidden rounded-lg border border-line bg-surface shadow-card transition duration-300 ease-[var(--ease-standard)] hover:-translate-y-1 hover:shadow-cardHover focus-within:shadow-cardHover motion-reduce:transform-none motion-reduce:transition-none"
+      className={["group flex min-w-0 scroll-mt-6 flex-col overflow-hidden rounded-lg border border-line bg-surface shadow-card transition duration-300 ease-[var(--ease-standard)] hover:-translate-y-1 hover:shadow-cardHover focus-within:shadow-cardHover motion-reduce:transform-none motion-reduce:transition-none", highlighted ? "is-search-highlighted" : ""].join(" ")}
     >
       <div className="relative overflow-hidden bg-bgSoft">
         <a
