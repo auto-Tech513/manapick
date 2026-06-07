@@ -119,8 +119,8 @@ const generativeAiGuide = {
       href: "/guide/python/"
     },
     {
-      label: "プログラミングロードマップ",
-      href: "/#roadmap"
+      label: "Excelデータ分析ロードマップ",
+      href: "/guide/excel-data/"
     },
     {
       label: "8ジャンルの地図を見る",

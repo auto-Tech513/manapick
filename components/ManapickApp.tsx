@@ -308,7 +308,8 @@ const genreIconSources: Record<string, string> = {
 
 const roadmapGuideLinks: Record<string, { href: string }> = {
   ai: { href: "/guide/generative-ai/" },
-  prog: { href: "/guide/python/" }
+  prog: { href: "/guide/python/" },
+  data: { href: "/guide/excel-data/" }
 };
 
 export default function ManapickApp() {
@@ -1090,6 +1091,9 @@ export default function ManapickApp() {
             </a>
             <a className="hover:text-white" href="/guide/python/">
               Pythonロードマップ
+            </a>
+            <a className="hover:text-white" href="/guide/excel-data/">
+              Excelデータ分析ロードマップ
             </a>
             <a className="hover:text-white" href="/operator/">
               運営者情報

@@ -52,6 +52,7 @@ const lines = [
   "## ガイド記事",
   `- 生成AIロードマップ記事: ${absoluteUrl(siteUrl, "/guide/generative-ai/")}`,
   `- Pythonロードマップ記事: ${absoluteUrl(siteUrl, "/guide/python/")}`,
+  `- Excelデータ分析ロードマップ記事: ${absoluteUrl(siteUrl, "/guide/excel-data/")}`,
   "",
   "## 主要URL",
   `- トップ: ${absoluteUrl(siteUrl, "/")}`,

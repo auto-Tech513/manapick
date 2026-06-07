@@ -1,3 +1,4 @@
+import excelDataGuide from "@/content/guides/excel-data";
 import generativeAiGuide from "@/content/guides/generative-ai";
 import pythonGuide from "@/content/guides/python";
 import { videos, type Video } from "@/lib/manapick";
@@ -39,7 +40,7 @@ export type Guide = {
 export type GuideStep = Guide["steps"][number];
 export type GuideStepVideo = GuideStep["videos"][number];
 
-export const guides: readonly Guide[] = [generativeAiGuide, pythonGuide];
+export const guides: readonly Guide[] = [generativeAiGuide, pythonGuide, excelDataGuide];
 
 export function guidePath(slug: string) {
   return "/guide/" + slug + "/";
