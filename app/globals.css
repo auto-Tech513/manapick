@@ -1349,6 +1349,35 @@ img {
   }
 }
 
+@media (max-width: 767px) {
+  .published-genre-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .genre-card {
+    min-height: 84px;
+    padding: 10px;
+  }
+
+  .genre-card-all {
+    grid-column: 1 / -1;
+    min-height: 64px;
+    padding: 12px;
+  }
+
+  .genre-status-chip {
+    margin-top: 8px;
+    padding: 3px 7px;
+    font-size: 0.68rem;
+  }
+
+  .genre-selector-icon {
+    width: 1.55rem;
+    height: 1.55rem;
+  }
+}
+
 .genre-icon-shell {
   display: inline-grid;
   width: 1.8rem;
