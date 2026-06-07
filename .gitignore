@@ -2,6 +2,7 @@
 out
 node_modules
 .DS_Store
+.playwright-cli/
 *.log
 .env*
 data/candidates.json

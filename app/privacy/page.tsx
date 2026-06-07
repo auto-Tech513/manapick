@@ -4,7 +4,7 @@ export default function PrivacyPage() {
   return (
     <PolicyPage
       title="プライバシーポリシー"
-      lead="Manapickでは、アクセス解析や広告配信を導入する場合、必要な範囲でCookie等を利用することがあります。v1では本番IDは未設定です。"
+      lead="Manapickでは、アクセス解析や広告配信を導入する場合、必要な範囲でCookie等を利用することがあります。"
       sections={[
         {
           heading: "取得する情報",
