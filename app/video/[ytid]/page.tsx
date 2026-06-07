@@ -63,6 +63,7 @@ export async function generateMetadata({ params }: VideoPageProps): Promise<Meta
     },
     twitter: {
       card: "summary_large_image",
+      site: "@manapick_app",
       title,
       description,
       images: [image]

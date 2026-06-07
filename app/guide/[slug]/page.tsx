@@ -59,6 +59,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
     },
     twitter: {
       card: "summary_large_image",
+      site: "@manapick_app",
       title: guide.title,
       description: guide.description,
       images: [guideOgImage]

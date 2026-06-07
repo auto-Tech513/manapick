@@ -1125,6 +1125,15 @@ export default function ManapickApp() {
             <a className="hover:text-white" href="/contact/">
               お問い合わせ
             </a>
+            <a className="inline-flex items-center gap-1.5 hover:text-white" href="https://x.com/manapick_app" target="_blank" rel="noopener">
+              <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  fill="currentColor"
+                  d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.81-5.96 6.81H1.69l7.73-8.84L1.25 2.25h6.82l4.71 6.23 5.46-6.23Zm-1.16 17.77h1.84L7.08 3.88H5.11l11.97 16.14Z"
+                />
+              </svg>
+              <span>公式X</span>
+            </a>
           </nav>
         </div>
       </footer>

@@ -6,6 +6,8 @@ import "./globals.css";
 const gaId = process.env.NEXT_PUBLIC_GA_ID?.trim();
 const adsenseId = process.env.NEXT_PUBLIC_ADSENSE_ID?.trim();
 const ogImageUrl = absoluteUrl("/brand/ogp-manapick.png");
+const xAccountUrl = "https://x.com/manapick_app";
+const xAccountHandle = "@manapick_app";
 
 const commonJsonLd = {
   "@context": "https://schema.org",
@@ -16,7 +18,7 @@ const commonJsonLd = {
       name: "Manapick",
       url: absoluteUrl("/"),
       logo: absoluteUrl("/brand/manapick-logo-master.png"),
-      sameAs: []
+      sameAs: [xAccountUrl]
     },
     {
       "@type": "WebSite",
@@ -61,6 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: xAccountHandle,
     title: "Manapick",
     description: "学び直しを、最短ルートに。",
     images: [ogImageUrl]

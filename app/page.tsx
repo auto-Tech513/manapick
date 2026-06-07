@@ -28,6 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@manapick_app",
     title: homeTitle,
     description: homeDescription,
     images: [homeOgImage]
