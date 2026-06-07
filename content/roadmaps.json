@@ -103,17 +103,26 @@
       {
         "label": "STEP1",
         "level": "初級",
-        "goal": "独学の全体像をつかみ、最初にやることを決める。",
+        "goal": "英語学習の全体像と『やる順番』を知り、遠回りを避ける。",
         "videos": [
-          "qATcO0yjTdI"
+          "DBUpkM6X-JM",
+          "MYBhnoRnj8E"
         ]
       },
       {
         "label": "STEP2",
         "level": "初級",
-        "goal": "多忙な社会人でも続けられる学習サイクルを作る。",
+        "goal": "毎日続けられる学習サイクルを作り、話す練習を始める。",
         "videos": [
-          "3ghj8rPFpTs"
+          "3fk1LsjHZnk"
+        ]
+      },
+      {
+        "label": "STEP3",
+        "level": "初級〜中級",
+        "goal": "TOEICで伸びを数字で測り、学習を軌道に乗せる。",
+        "videos": [
+          "aRKYpz19vPE"
         ]
       }
     ]

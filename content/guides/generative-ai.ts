@@ -123,6 +123,10 @@ const generativeAiGuide = {
       href: "/guide/excel-data/"
     },
     {
+      label: "英語ロードマップ",
+      href: "/guide/english/"
+    },
+    {
       label: "8ジャンルの地図を見る",
       href: "/#genre-picker"
     }

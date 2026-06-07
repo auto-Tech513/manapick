@@ -1,4 +1,5 @@
 import excelDataGuide from "@/content/guides/excel-data";
+import englishGuide from "@/content/guides/english";
 import generativeAiGuide from "@/content/guides/generative-ai";
 import pythonGuide from "@/content/guides/python";
 import { videos, type Video } from "@/lib/manapick";
@@ -21,6 +22,7 @@ export type Guide = {
     title: string;
     videos: readonly {
       title: string;
+      ytid?: string;
       why: string;
     }[];
   }[];
@@ -40,7 +42,7 @@ export type Guide = {
 export type GuideStep = Guide["steps"][number];
 export type GuideStepVideo = GuideStep["videos"][number];
 
-export const guides: readonly Guide[] = [generativeAiGuide, pythonGuide, excelDataGuide];
+export const guides: readonly Guide[] = [generativeAiGuide, pythonGuide, excelDataGuide, englishGuide];
 
 export function guidePath(slug: string) {
   return "/guide/" + slug + "/";
@@ -51,6 +53,14 @@ export function findGuide(slug: string) {
 }
 
 export function findGuideVideo(item: GuideStepVideo): Video {
+  if (item.ytid) {
+    const videoById = videos.find((candidate) => candidate.ytid === item.ytid);
+    if (!videoById) {
+      throw new Error("Guide video ytid not found in videos.json: " + item.ytid);
+    }
+    return videoById;
+  }
+
   const video = videos.find((candidate) => candidate.title === item.title);
   if (!video) {
     throw new Error("Guide video title not found in videos.json: " + item.title);

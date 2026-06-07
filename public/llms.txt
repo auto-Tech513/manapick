@@ -23,6 +23,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 生成AIロードマップ記事: https://manapick.app/guide/generative-ai/
 - Pythonロードマップ記事: https://manapick.app/guide/python/
 - Excelデータ分析ロードマップ記事: https://manapick.app/guide/excel-data/
+- 英語ロードマップ記事: https://manapick.app/guide/english/
 
 ## 主要URL
 - トップ: https://manapick.app/

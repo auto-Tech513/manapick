@@ -323,6 +323,7 @@ const genreIconSources: Record<string, string> = {
 const roadmapGuideLinks: Record<string, { href: string }> = {
   ai: { href: "/guide/generative-ai/" },
   prog: { href: "/guide/python/" },
+  english: { href: "/guide/english/" },
   data: { href: "/guide/excel-data/" }
 };
 
@@ -1109,6 +1110,9 @@ export default function ManapickApp() {
             <a className="hover:text-white" href="/guide/excel-data/">
               Excelデータ分析ロードマップ
             </a>
+            <a className="hover:text-white" href="/guide/english/">
+              英語ロードマップ
+            </a>
             <a className="hover:text-white" href="/operator/">
               運営者情報
             </a>
@@ -1763,8 +1767,7 @@ function buildRoadmapSteps(roadmap: Roadmap): DisplayRoadmapStep[] {
     });
   }
 
-  const hasAdvancedStep = steps.some((step) => step.level.includes("上級") && !step.isPlaceholder);
-  if (!hasAdvancedStep && !steps[2].isPlaceholder) {
+  if (!steps[2].isPlaceholder && steps[2].videos.length === 0) {
     steps[2] = {
       label: "STEP3",
       level: "近日追加",

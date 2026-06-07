@@ -117,6 +117,10 @@ const excelDataGuide = {
       href: "/guide/generative-ai/"
     },
     {
+      label: "英語ロードマップ",
+      href: "/guide/english/"
+    },
+    {
       label: "8ジャンルの地図を見る",
       href: "/#genre-picker"
     }
