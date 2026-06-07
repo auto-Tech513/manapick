@@ -82,7 +82,8 @@ const timeBuckets = [
   { value: "long", label: "30分〜" }
 ] as const;
 
-const PAGE_SIZE = 9;
+const DESKTOP_PAGE_SIZE = 9;
+const MOBILE_PAGE_SIZE = 5;
 const SHOW_TOP_PR_SECTION = false;
 
 type PopularTab = "popular" | "new" | "score";
@@ -340,12 +341,14 @@ export default function ManapickApp() {
   const [highlightedVideoId, setHighlightedVideoId] = useState<string | null>(null);
   const [activeRoadmapGenre, setActiveRoadmapGenre] = useState("ai");
   const [currentPage, setCurrentPage] = useState(1);
+  const [pageSize, setPageSize] = useState(DESKTOP_PAGE_SIZE);
   const [menuOpen, setMenuOpen] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const menuDrawerRef = useRef<HTMLElement>(null!);
   const filtersMountedRef = useRef(false);
   const skipNextFilterResetRef = useRef(false);
+  const menuSwipeRef = useRef<{ x: number; y: number; edge: boolean; ignored: boolean } | null>(null);
 
   const selectedGenreData =
     selectedGenre === "all" ? null : genres.find((genre) => genre.key === selectedGenre) ?? null;
@@ -428,10 +431,10 @@ export default function ManapickApp() {
   const selectedGenreTopVideo = useMemo(() => topScoredVideo(selectedPublishedVideos), [selectedPublishedVideos]);
   const selectedGenreTopics = useMemo(() => topicCounts(selectedPublishedVideos), [selectedPublishedVideos]);
 
-  const totalPages = Math.max(1, Math.ceil(filteredVideos.length / PAGE_SIZE));
+  const totalPages = Math.max(1, Math.ceil(filteredVideos.length / pageSize));
   const safeCurrentPage = Math.min(currentPage, totalPages);
-  const pageStartIndex = filteredVideos.length === 0 ? 0 : (safeCurrentPage - 1) * PAGE_SIZE;
-  const pageVideos = filteredVideos.slice(pageStartIndex, pageStartIndex + PAGE_SIZE);
+  const pageStartIndex = filteredVideos.length === 0 ? 0 : (safeCurrentPage - 1) * pageSize;
+  const pageVideos = filteredVideos.slice(pageStartIndex, pageStartIndex + pageSize);
   const groupedPageVideos = useMemo(() => groupVideosByGenre(pageVideos), [pageVideos]);
 
   const heroCarouselSlides = useMemo(() => buildHeroCarouselSlides(), []);
@@ -452,6 +455,18 @@ export default function ManapickApp() {
     const params = new URLSearchParams(window.location.search);
     const page = Number(params.get("page") || "1");
     if (Number.isFinite(page) && page > 1) setCurrentPage(Math.floor(page));
+  }, []);
+
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 767px)");
+    const syncPageSize = () => setPageSize(media.matches ? MOBILE_PAGE_SIZE : DESKTOP_PAGE_SIZE);
+    syncPageSize();
+    if (typeof media.addEventListener === "function") {
+      media.addEventListener("change", syncPageSize);
+      return () => media.removeEventListener("change", syncPageSize);
+    }
+    media.addListener(syncPageSize);
+    return () => media.removeListener(syncPageSize);
   }, []);
 
   useEffect(() => {
@@ -518,6 +533,54 @@ export default function ManapickApp() {
       } else if (previousFocus && document.contains(previousFocus)) {
         previousFocus.focus();
       }
+    };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    const ignoredSwipeSelectors = ".hero-carousel, .roadmap-timeline, .roadmap-tabs, .category-tab-nav";
+
+    function touchTargetIsIgnored(target: EventTarget | null) {
+      return target instanceof Element && target.closest(ignoredSwipeSelectors) !== null;
+    }
+
+    function handleTouchStart(event: TouchEvent) {
+      if (window.innerWidth > 767) {
+        menuSwipeRef.current = null;
+        return;
+      }
+      const touch = event.touches[0];
+      if (!touch) return;
+      menuSwipeRef.current = {
+        x: touch.clientX,
+        y: touch.clientY,
+        edge: touch.clientX >= window.innerWidth - 24,
+        ignored: !menuOpen && touchTargetIsIgnored(event.target)
+      };
+    }
+
+    function handleTouchEnd(event: TouchEvent) {
+      const start = menuSwipeRef.current;
+      menuSwipeRef.current = null;
+      if (!start || start.ignored) return;
+      const touch = event.changedTouches[0];
+      if (!touch) return;
+      const deltaX = touch.clientX - start.x;
+      const deltaY = touch.clientY - start.y;
+      const absX = Math.abs(deltaX);
+      const absY = Math.abs(deltaY);
+      if (absX < 50 || absX <= absY) return;
+      if (menuOpen) {
+        if (deltaX >= 50) setMenuOpen(false);
+        return;
+      }
+      if (start.edge && deltaX <= -50) setMenuOpen(true);
+    }
+
+    window.addEventListener("touchstart", handleTouchStart, { passive: true });
+    window.addEventListener("touchend", handleTouchEnd, { passive: true });
+    return () => {
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchend", handleTouchEnd);
     };
   }, [menuOpen]);
 
@@ -2074,6 +2137,14 @@ function RoadmapTimeline({ roadmap }: { roadmap: Roadmap }) {
           </li>
         ))}
       </ol>
+      <div className="roadmap-swipe-hint" aria-hidden="true">
+        <span className="roadmap-swipe-dots">
+          <span />
+          <span />
+          <span />
+        </span>
+        <span>スワイプ→</span>
+      </div>
     </section>
   );
 }
