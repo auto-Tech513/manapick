@@ -107,6 +107,18 @@ const pythonGuide = {
         "Manapickは毎週更新で、古くなった動画は差し替えます。このページの「最終更新日」をご確認ください。"
     }
   ],
+  prItems: [
+    {
+      title: "スッキリわかるPython入門 第2版",
+      href: "https://a.r10.to/h5go8D",
+      note: "動画で一周したPythonの基礎を、章立てに沿って復習するための補助教材です。"
+    },
+    {
+      title: "独学プログラマー",
+      href: "https://a.r10.to/hFsZCu",
+      note: "独学でコードを書く習慣を作りたい人が、動画ロードマップと併用しやすい読み物です。"
+    }
+  ],
   relatedLinks: [
     {
       label: "生成AIロードマップ",

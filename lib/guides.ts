@@ -34,6 +34,11 @@ export type Guide = {
     question: string;
     answer: string;
   }[];
+  prItems?: readonly {
+    title: string;
+    href: string;
+    note: string;
+  }[];
   relatedLinks: readonly {
     label: string;
     href: string;

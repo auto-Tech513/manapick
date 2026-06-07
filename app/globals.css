@@ -2901,6 +2901,36 @@ img {
   padding: 13px;
 }
 
+.guide-pr-card.is-link {
+  border-style: solid;
+  background: #fff;
+  color: var(--color-muted);
+  text-decoration: none;
+  transition: transform 160ms var(--ease-standard), border-color 160ms var(--ease-standard), box-shadow 160ms var(--ease-standard);
+}
+
+.guide-pr-card.is-link:hover {
+  border-color: color-mix(in srgb, var(--color-primary) 42%, var(--color-line));
+  box-shadow: var(--shadow-card);
+  transform: translateY(-1px);
+}
+
+.guide-pr-card.is-link:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-primary) 34%, transparent);
+  outline-offset: 3px;
+}
+
+.guide-pr-card-pr {
+  width: fit-content;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-coral) 12%, white);
+  color: var(--color-coral);
+  padding: 3px 8px;
+  font-size: 0.72rem;
+  font-weight: 950;
+  line-height: 1.35;
+}
+
 .guide-pr-card strong {
   color: var(--color-ink);
   font-size: 0.95rem;
@@ -2914,6 +2944,11 @@ img {
   line-height: 1.65;
 }
 
+.guide-pr-card span.guide-pr-card-pr {
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
 .guide-pr-card em {
   width: fit-content;
   border-radius: 999px;
@@ -2923,6 +2958,11 @@ img {
   font-size: 0.72rem;
   font-style: normal;
   font-weight: 950;
+}
+
+.guide-pr-card.is-link em {
+  background: var(--color-primary);
+  color: #fff;
 }
 
 @media (min-width: 760px) {

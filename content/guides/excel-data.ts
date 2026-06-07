@@ -107,6 +107,18 @@ const excelDataGuide = {
         "Manapickは毎週更新で、古くなった動画は差し替えます。このページの「最終更新日」をご確認ください。"
     }
   ],
+  prItems: [
+    {
+      title: "できるYouTuber式 Excel パワークエリ 現場の教科書",
+      href: "https://a.r10.to/hFmbkA",
+      note: "動画で学んだパワークエリの考え方を、現場の例で復習するための補助教材です。"
+    },
+    {
+      title: "Excelパワークエリ データ収集・整形を自由自在にする本",
+      href: "https://a.r10.to/hPj8KF",
+      note: "データ収集と整形の手順を手元で確認し、動画ロードマップの実践を支える一冊です。"
+    }
+  ],
   relatedLinks: [
     {
       label: "Pythonロードマップ",

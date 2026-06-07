@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import BrandLogo from "@/components/BrandLogo";
-import { findGuide, guidePath, guides, guideStepVideos } from "@/lib/guides";
+import { findGuide, guidePath, guides, guideStepVideos, type Guide } from "@/lib/guides";
 import {
   absoluteUrl,
   genreDisplayName,
@@ -244,14 +244,44 @@ export default async function GuidePage({ params }: GuidePageProps) {
           </div>
         </section>
 
-        <GuidePrPlaceholder />
+        <GuidePrSection guide={guide} />
       </article>
     </main>
   );
 }
 
-function GuidePrPlaceholder() {
-  const items = [
+function GuidePrSection({ guide }: { guide: Guide }) {
+  if (guide.prItems && guide.prItems.length > 0) {
+    return (
+      <section className="guide-section guide-pr-section" aria-labelledby="guide-pr-title">
+        <div className="guide-pr-heading">
+          <div>
+            <p className="section-eyebrow">【PR】広告 / 楽天アフィリエイト</p>
+            <h2 id="guide-pr-title">あわせて読みたい教材(PR)</h2>
+          </div>
+          <span className="guide-pr-badge">PR</span>
+        </div>
+        <div className="guide-pr-grid">
+          {guide.prItems.map((item) => (
+            <a
+              key={item.href}
+              className="guide-pr-card is-link"
+              href={item.href}
+              target="_blank"
+              rel="sponsored noopener"
+            >
+              <span className="guide-pr-card-pr">【PR】楽天ブックス</span>
+              <strong>{item.title}</strong>
+              <span>{item.note}</span>
+              <em>楽天ブックスで見る</em>
+            </a>
+          ))}
+        </div>
+      </section>
+    );
+  }
+
+  const placeholderItems = [
     {
       title: "入門書・参考書",
       body: "基礎を手元で確認したい人向けの教材枠です。"
@@ -276,7 +306,7 @@ function GuidePrPlaceholder() {
         <span className="guide-pr-badge">PR</span>
       </div>
       <div className="guide-pr-grid">
-        {items.map((item) => (
+        {placeholderItems.map((item) => (
           <div key={item.title} className="guide-pr-card" aria-disabled="true">
             <strong>{item.title}</strong>
             <span>{item.body}</span>
