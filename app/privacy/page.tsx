@@ -17,6 +17,14 @@ export default function PrivacyPage() {
         {
           heading: "外部サービス",
           body: "Search Console、GA4、Microsoft Clarity、広告配信サービス等を導入する場合があります。導入時は各サービスの規約に従います。"
+        },
+        {
+          heading: "広告配信について",
+          body: "Manapickでは、今後Google AdSenseを利用する予定です。Google AdSenseでは、利用者の興味に応じた広告を表示するためCookieを使用する場合があります。パーソナライズ広告はGoogleの広告設定ページで無効にできます。また、当サイトはAmazonアソシエイトおよび楽天アフィリエイトのプログラムに参加する予定です。当サイトは適格販売により収入を得る場合があります。実際に広告やアフィリエイトリンクを掲載する場合は、PR表記など読者が広告と分かる表示を行います。"
+        },
+        {
+          heading: "アクセス解析について",
+          body: "Manapickでは、サイト改善のためGoogle Analytics 4（GA4）を利用する場合があります。GA4はCookieを使用して閲覧状況を集計しますが、個人を直接特定する目的では利用しません。Cookieの利用を望まない場合は、ブラウザ設定でCookieを無効にするか、Google アナリティクス オプトアウト アドオンをご利用ください。"
         }
       ]}
     />

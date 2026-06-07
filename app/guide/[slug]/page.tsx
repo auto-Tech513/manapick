@@ -243,8 +243,48 @@ export default async function GuidePage({ params }: GuidePageProps) {
             ))}
           </div>
         </section>
+
+        <GuidePrPlaceholder />
       </article>
     </main>
+  );
+}
+
+function GuidePrPlaceholder() {
+  const items = [
+    {
+      title: "入門書・参考書",
+      body: "基礎を手元で確認したい人向けの教材枠です。"
+    },
+    {
+      title: "動画講座・スクール",
+      body: "独学後に演習量を増やしたい人向けの比較枠です。"
+    },
+    {
+      title: "実務テンプレート・ツール",
+      body: "学んだ内容を仕事に移すための補助教材枠です。"
+    }
+  ];
+
+  return (
+    <section className="guide-section guide-pr-section" aria-labelledby="guide-pr-title">
+      <div className="guide-pr-heading">
+        <div>
+          <p className="section-eyebrow">PR / 広告</p>
+          <h2 id="guide-pr-title">あわせて読みたい教材(PR)</h2>
+        </div>
+        <span className="guide-pr-badge">PR</span>
+      </div>
+      <div className="guide-pr-grid">
+        {items.map((item) => (
+          <div key={item.title} className="guide-pr-card" aria-disabled="true">
+            <strong>{item.title}</strong>
+            <span>{item.body}</span>
+            <em>掲載準備中</em>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
 

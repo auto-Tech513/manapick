@@ -4,6 +4,7 @@ import { absoluteUrl, SITE_URL } from "@/lib/manapick";
 import "./globals.css";
 
 const gaId = process.env.NEXT_PUBLIC_GA_ID?.trim();
+const adsenseId = process.env.NEXT_PUBLIC_ADSENSE_ID?.trim();
 const ogImageUrl = absoluteUrl("/brand/ogp-manapick.png");
 
 const commonJsonLd = {
@@ -79,6 +80,13 @@ export default function RootLayout({
     <html lang="ja">
       <head>
         <link rel="preconnect" href="https://i.ytimg.com" />
+        {adsenseId ? (
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${encodeURIComponent(adsenseId)}`}
+            crossOrigin="anonymous"
+          />
+        ) : null}
       </head>
       <body>
         <script
