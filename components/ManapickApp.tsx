@@ -102,6 +102,41 @@ const purposeLinks = [
   { number: "03", title: "ロードマップで学ぶ", label: "順番を見て進む", genre: "roadmap", icon: "path" }
 ];
 
+type FooterLink = {
+  label: string;
+  href: string;
+  external?: boolean;
+  icon?: "x";
+};
+
+const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
+  {
+    title: "学ぶ",
+    links: [
+      { label: "採点方法", href: "/about-score/" },
+      { label: "生成AIロードマップ", href: "/guide/generative-ai/" },
+      { label: "Pythonロードマップ", href: "/guide/python/" },
+      { label: "Excelデータ分析ロードマップ", href: "/guide/excel-data/" },
+      { label: "英語ロードマップ", href: "/guide/english/" }
+    ]
+  },
+  {
+    title: "サイト情報",
+    links: [
+      { label: "運営者情報", href: "/operator/" },
+      { label: "プライバシーポリシー", href: "/privacy/" },
+      { label: "免責事項", href: "/disclaimer/" }
+    ]
+  },
+  {
+    title: "つながる",
+    links: [
+      { label: "お問い合わせ", href: "/contact/" },
+      { label: "公式X", href: "https://x.com/manapick_app", external: true, icon: "x" }
+    ]
+  }
+];
+
 function statusLabel(status: GenreStatus) {
   if (status === "published") return "公開中";
   if (status === "checking") return "確認中（注記）";
@@ -1160,43 +1195,32 @@ export default function ManapickApp() {
             </p>
             <p className="mt-1 text-sm text-white/68">学び直しを、最短ルートに。</p>
           </div>
-          <nav className="flex flex-wrap gap-4 text-sm font-bold text-white/78" aria-label="固定ページ">
-            <a className="hover:text-white" href="/about-score/">
-              採点方法
-            </a>
-            <a className="hover:text-white" href="/guide/generative-ai/">
-              生成AIロードマップ
-            </a>
-            <a className="hover:text-white" href="/guide/python/">
-              Pythonロードマップ
-            </a>
-            <a className="hover:text-white" href="/guide/excel-data/">
-              Excelデータ分析ロードマップ
-            </a>
-            <a className="hover:text-white" href="/guide/english/">
-              英語ロードマップ
-            </a>
-            <a className="hover:text-white" href="/operator/">
-              運営者情報
-            </a>
-            <a className="hover:text-white" href="/privacy/">
-              プライバシーポリシー
-            </a>
-            <a className="hover:text-white" href="/disclaimer/">
-              免責事項
-            </a>
-            <a className="hover:text-white" href="/contact/">
-              お問い合わせ
-            </a>
-            <a className="inline-flex items-center gap-1.5 hover:text-white" href="https://x.com/manapick_app" target="_blank" rel="noopener">
-              <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path
-                  fill="currentColor"
-                  d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.81-5.96 6.81H1.69l7.73-8.84L1.25 2.25h6.82l4.71 6.23 5.46-6.23Zm-1.16 17.77h1.84L7.08 3.88H5.11l11.97 16.14Z"
-                />
-              </svg>
-              <span>公式X</span>
-            </a>
+          <nav className="footer-nav flex flex-wrap gap-4 text-sm font-bold text-white/78" aria-label="固定ページ">
+            {footerLinkGroups.map((group) => (
+              <div key={group.title} className="footer-link-group">
+                <p className="footer-group-title">{group.title}</p>
+                <div className="footer-group-links">
+                  {group.links.map((link) => (
+                    <a
+                      key={link.label}
+                      className={link.icon === "x" ? "footer-link footer-x-link" : "footer-link"}
+                      href={link.href}
+                      {...(link.external ? { target: "_blank", rel: "noopener" } : {})}
+                    >
+                      {link.icon === "x" ? (
+                        <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                          <path
+                            fill="currentColor"
+                            d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.81-5.96 6.81H1.69l7.73-8.84L1.25 2.25h6.82l4.71 6.23 5.46-6.23Zm-1.16 17.77h1.84L7.08 3.88H5.11l11.97 16.14Z"
+                          />
+                        </svg>
+                      ) : null}
+                      <span>{link.label}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
           </nav>
         </div>
       </footer>
