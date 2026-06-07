@@ -83,6 +83,7 @@ const timeBuckets = [
 ] as const;
 
 const PAGE_SIZE = 9;
+const SHOW_TOP_PR_SECTION = false;
 
 type PopularTab = "popular" | "new" | "score";
 
@@ -702,9 +703,11 @@ export default function ManapickApp() {
               <a className="transition hover:text-accent" href="#roadmap">
                 ロードマップ
               </a>
-              <a className="transition hover:text-accent" href="#pr">
-                PR
-              </a>
+              {SHOW_TOP_PR_SECTION ? (
+                <a className="transition hover:text-accent" href="#pr">
+                  PR
+                </a>
+              ) : null}
               <a className="transition hover:text-accent" href="/contact/">
                 お問い合わせ
               </a>
@@ -791,7 +794,7 @@ export default function ManapickApp() {
         <div className="hero-container">
           <div className="hero-copy-column">
             <p className="hero-eyebrow">
-              社会人のリスキリング動画キュレーション
+              社会人の学び直し動画キュレーション
             </p>
             <h1 className="hero-title">
               <span className="hero-title-line">
@@ -800,7 +803,7 @@ export default function ManapickApp() {
               <span className="hero-title-line">迷わせない。</span>
             </h1>
             <p className="hero-lead">
-              AI・IT・英語・動画編集など、キャリアに効く学習動画を“Manapickスコア（35点満点）”で厳選。初級→上級のロードマップで、何から見るかもう迷わない。
+              AI・IT・英語・動画編集など、キャリアに効く学習動画を“Manapickスコア（35点満点）”で厳選。初級→上級のロードマップで、何から見るかもう迷わない。会員登録は不要。通勤の15分など、スキマ時間から始められます。
             </p>
 
             <HeroTrustStats totalVideos={videos.length} confirmedCount={confirmedCount} />
@@ -1071,22 +1074,19 @@ export default function ManapickApp() {
         </div>
       </section>
 
-      <section id="pr" className="mx-auto max-w-7xl px-4 py-8 min-[760px]:px-6">
-        <div className="mb-5">
-          <p className="text-sm font-bold text-coral">PR / 広告</p>
-          <h2 className="text-2xl font-black text-ink">おすすめ教材・スクール（PR）</h2>
-          <p className="mt-2 max-w-3xl leading-7 text-muted">
-            v1では実リンク未設置です。ASP提携後、承認ゲートを通して
-            <code className="mx-1 rounded bg-white px-1">rel=&quot;sponsored noopener&quot;</code>
-            付きリンクを差し込みます。
-          </p>
-        </div>
-        <div className="grid gap-4 min-[640px]:grid-cols-2 min-[980px]:grid-cols-4">
-          {visiblePrGenres.map((genre) => (
-            <PrBlock key={genre.key} genre={genre} />
-          ))}
-        </div>
-      </section>
+      {SHOW_TOP_PR_SECTION ? (
+        <section id="pr" className="mx-auto max-w-7xl px-4 py-8 min-[760px]:px-6">
+          <div className="mb-5">
+            <p className="text-sm font-bold text-coral">PR / 広告</p>
+            <h2 className="text-2xl font-black text-ink">おすすめ教材・スクール（PR）</h2>
+          </div>
+          <div className="grid gap-4 min-[640px]:grid-cols-2 min-[980px]:grid-cols-4">
+            {visiblePrGenres.map((genre) => (
+              <PrBlock key={genre.key} genre={genre} />
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <footer className="border-t border-primaryInk bg-ink text-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-5 px-4 py-7 min-[760px]:flex-row min-[760px]:items-center min-[760px]:justify-between min-[760px]:px-6">
@@ -1269,9 +1269,11 @@ function SiteMenuDrawer({
           <a className="site-menu-link" href="/about-score/" onClick={onClose}>
             採点方法
           </a>
-          <button type="button" className="site-menu-link" onClick={() => onSectionSelect("pr")}>
-            PR
-          </button>
+          {SHOW_TOP_PR_SECTION ? (
+            <button type="button" className="site-menu-link" onClick={() => onSectionSelect("pr")}>
+              PR
+            </button>
+          ) : null}
           <a className="site-menu-link" href="/contact/" onClick={onClose}>
             お問い合わせ
           </a>
@@ -1466,7 +1468,7 @@ function HeroTrustStats({ totalVideos, confirmedCount }: { totalVideos: number; 
       )
     },
     {
-      label: "公式埋め込みのみ・無料",
+      label: "YouTube公式動画・すべて無料",
       icon: (
         <svg viewBox="0 0 24 24" role="presentation" focusable="false">
           <path d="M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6z" />
