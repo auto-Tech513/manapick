@@ -47,6 +47,7 @@ export type Video = {
   viewCount?: number;
   publishedAt?: string;
   scoreStatus?: ScoreStatus;
+  scoreConfirmedAt?: string;
   editorNote?: string;
   axisScores: AxisScore[];
   title: string;
@@ -107,7 +108,12 @@ export function scoreText(video: Video) {
 }
 
 export function scoreLabel(video: Video) {
-  return scoreStatus(video) === "confirmed" ? scoreText(video) + " ✓確認済" : scoreText(video) + " 暫定";
+  return scoreStatus(video) === "confirmed" ? scoreText(video) + " ✓ 確認済" : scoreText(video) + " 暫定";
+}
+
+export function scoreConfirmationDate(video: Video) {
+  if (scoreStatus(video) !== "confirmed" || !video.scoreConfirmedAt) return null;
+  return video.scoreConfirmedAt.replace(/-/g, "/");
 }
 
 export function displayChannel(video: Video) {

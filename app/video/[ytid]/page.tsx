@@ -10,6 +10,7 @@ import {
   genreLabel,
   isoDuration,
   relatedVideos,
+  scoreConfirmationDate,
   scoreLabel,
   scoreStatus,
   scoreText,
@@ -77,6 +78,11 @@ export default async function VideoPage({ params }: VideoPageProps) {
   const channel = displayChannel(video);
   const related = relatedVideos(video);
   const pageUrl = absoluteUrl(videoPath(video.ytid));
+  const isConfirmed = scoreStatus(video) === "confirmed";
+  const confirmationDate = scoreConfirmationDate(video);
+  const scoreConfirmationText = isConfirmed
+    ? "運営者が視聴のうえ確認済みのスコアです" + (confirmationDate ? "(確認日: " + confirmationDate + ")" : "")
+    : "Manapickスコアは公開前の視聴確認で確定します。";
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -167,10 +173,11 @@ export default async function VideoPage({ params }: VideoPageProps) {
             <span>{video.minutes}分</span>
           </div>
           {channel ? <p className="video-channel">チャンネル: {channel}</p> : null}
-          <div className={scoreStatus(video) === "confirmed" ? "video-score-card is-confirmed" : "video-score-card"}>
+          <div className={isConfirmed ? "video-score-card is-confirmed" : "video-score-card"}>
             <p>{scoreLabel(video)}</p>
-            <span>{scoreStatus(video) === "confirmed" ? "編集者が視聴確認済み" : "自動採点・順次確認中"}</span>
+            <span>{isConfirmed ? "運営者が視聴確認済み" : "自動採点・順次確認中"}</span>
           </div>
+          {isConfirmed ? <p className="video-score-note is-confirmed">{scoreConfirmationText}</p> : null}
           <ol className="video-review-list">
             {video.review.map((line, index) => (
               <li key={line}>
@@ -204,7 +211,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
             ))}
           </dl>
         ) : (
-          <p className="video-empty-score">Manapickスコアは公開前の視聴確認で確定します。</p>
+          <p className="video-empty-score">{scoreConfirmationText}</p>
         )}
       </section>
 

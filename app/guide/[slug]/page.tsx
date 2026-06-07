@@ -270,7 +270,7 @@ function GuideVideoCard({ video, why }: { video: Video; why: string }) {
           <a className={guideScoreClass(video)} href="/about-score/" aria-label={scoreText(video) + "。採点方法を開く"}>
             <span>{scoreText(video)}</span>
             <span className={`score-badge-status is-${scoreStatus(video)}`}>
-              {scoreStatus(video) === "confirmed" ? "✓確認済" : "暫定"}
+              {scoreStatus(video) === "confirmed" ? "✓ 確認済" : "暫定"}
             </span>
           </a>
         </div>

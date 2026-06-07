@@ -54,7 +54,9 @@
       "ChatGPTを「まず触る」ための最初の1本。登録から入力まで順を追える。",
       "専門用語を避けた説明で、はじめてでも置いていかれにくい。",
       "学習の土台づくりに最適。次の応用編へ進むと定着する。"
-    ]
+    ],
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-06-07"
   },
   {
     "genre": "ai",
@@ -551,7 +553,9 @@
     "review": [
       "9分で全体像。何から学ぶかの地図になる。",
       "短時間で迷子を防げる最初の1本。"
-    ]
+    ],
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-06-07"
   },
   {
     "genre": "marke",
@@ -831,7 +835,9 @@
       "実用的な機能解説が含まれており、技術への理解を深めたい層に適した構成です。"
     ],
     "viewCount": 286093,
-    "publishedAt": "2025-07-31T10:01:20Z"
+    "publishedAt": "2025-07-31T10:01:20Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-06-07"
   },
   {
     "genre": "ai",
@@ -950,7 +956,9 @@
       "単なる手法の紹介にとどまらず、長期的な視点での学習計画を解説する内容です。"
     ],
     "viewCount": 227623,
-    "publishedAt": "2023-10-06T09:00:14Z"
+    "publishedAt": "2023-10-06T09:00:14Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-06-07"
   },
   {
     "genre": "video",
@@ -1905,7 +1913,9 @@
       "基本的な機能の活用法を整理しており、実務で通用する構成を習得できます。"
     ],
     "viewCount": 558279,
-    "publishedAt": "2024-01-20T05:00:09Z"
+    "publishedAt": "2024-01-20T05:00:09Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-06-07"
   },
   {
     "genre": "video",
@@ -2381,7 +2391,9 @@
       "基礎概念と操作手順を順序立てて構成しており、導入初期の学習に適した内容です。"
     ],
     "viewCount": 98126,
-    "publishedAt": "2025-03-07T11:45:06Z"
+    "publishedAt": "2025-03-07T11:45:06Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-06-07"
   },
   {
     "genre": "data",
@@ -3161,7 +3173,9 @@
       "カット編集やエフェクトの適用手順が順を追って示されるため、体系的に学べます。"
     ],
     "viewCount": 22779,
-    "publishedAt": "2025-10-13T10:01:41Z"
+    "publishedAt": "2025-10-13T10:01:41Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-06-07"
   },
   {
     "genre": "video",
@@ -3342,7 +3356,9 @@
       "基礎知識から積み上げる段階を踏まえつつ、目標に向けた学習順序を体系的に解説します。"
     ],
     "viewCount": 13725,
-    "publishedAt": "2026-01-16T09:00:23Z"
+    "publishedAt": "2026-01-16T09:00:23Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-06-07"
   },
   {
     "genre": "video",
@@ -4904,7 +4920,9 @@
       "プログラミング学習の第一歩として、必要な要素を簡潔にまとめた講座です。"
     ],
     "viewCount": 47373,
-    "publishedAt": "2025-12-14T10:34:11Z"
+    "publishedAt": "2025-12-14T10:34:11Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-06-07"
   },
   {
     "genre": "ai",

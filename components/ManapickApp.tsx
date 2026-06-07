@@ -40,6 +40,7 @@ type Video = {
   viewCount?: number;
   publishedAt?: string;
   scoreStatus?: ScoreStatus;
+  scoreConfirmedAt?: string;
   editorNote?: string;
   axisScores: AxisScore[];
   title: string;
@@ -111,6 +112,19 @@ function scoreStatus(video: Video): ScoreStatus {
 
 function scoreText(video: Video) {
   return video.score === null ? "スコア準備中" : video.score + "/35";
+}
+
+function scoreStatusText(video: Video) {
+  return scoreStatus(video) === "confirmed" ? "✓ 確認済" : "暫定";
+}
+
+function scoreConfirmationText(video: Video) {
+  if (scoreStatus(video) !== "confirmed") {
+    return "Manapickスコアは公開前の視聴確認で確定します。";
+  }
+
+  const date = video.scoreConfirmedAt ? video.scoreConfirmedAt.replace(/-/g, "/") : null;
+  return "運営者が視聴のうえ確認済みのスコアです" + (date ? "(確認日: " + date + ")" : "");
 }
 
 function scoreClasses(video: Video) {
@@ -1171,6 +1185,7 @@ function LiveSearchPanel({
                   <LevelBadge level={video.level} />
                   <span>{genreLabel(video.genre)}</span>
                   <span>{scoreText(video)}</span>
+                  <span className={`score-badge-status is-${scoreStatus(video)}`}>{scoreStatusText(video)}</span>
                   <span>{video.minutes}分</span>
                 </span>
               </button>
@@ -1459,7 +1474,7 @@ function HeroTrustStats({ totalVideos, confirmedCount }: { totalVideos: number; 
 
   if (confirmedCount > 0) {
     stats.push({
-      label: "確認済" + confirmedCount + "本",
+      label: "✓ 視聴確認済" + confirmedCount + "本",
       icon: (
         <svg viewBox="0 0 24 24" role="presentation" focusable="false">
           <path d="M20 6 9 17l-5-5" />
@@ -1604,7 +1619,11 @@ function AllGenreHighlights({ onGenreSelect }: { onGenreSelect: (genreKey: strin
           <button key={genreKey} type="button" className="highlight-card" onClick={() => onGenreSelect(genreKey)}>
             <span className="highlight-genre">{genreLabel(genreKey)}</span>
             <span className="highlight-title">{video.title}</span>
-            <span className="highlight-meta">{scoreText(video)} / {video.minutes}分</span>
+            <span className="highlight-meta">
+              <span>{scoreText(video)}</span>
+              <span className={`score-badge-status is-${scoreStatus(video)}`}>{scoreStatusText(video)}</span>
+              <span>{video.minutes}分</span>
+            </span>
           </button>
         ))}
       </div>
@@ -1675,8 +1694,8 @@ function FeaturedVideoCard({ video }: { video: Video }) {
 
 function ScoreBadge({ video, compact = false }: { video: Video; compact?: boolean }) {
   const status = scoreStatus(video);
-  const label = status === "confirmed" ? scoreText(video) + " ✓確認済" : scoreText(video) + " 暫定";
-  const statusLabel = status === "confirmed" ? "✓確認済" : "暫定";
+  const label = status === "confirmed" ? scoreText(video) + " ✓ 確認済" : scoreText(video) + " 暫定";
+  const statusLabel = scoreStatusText(video);
 
   return (
     <a
@@ -1842,7 +1861,7 @@ function VideoCard({ video, highlighted = false }: { video: Video; highlighted?:
           </details>
         ) : (
           <p className="rounded-md border border-dashed border-line bg-bg px-3 py-2 text-sm font-bold text-muted">
-            Manapickスコアは公開前の視聴確認で確定します。
+            {scoreConfirmationText(video)}
           </p>
         )}
         <a

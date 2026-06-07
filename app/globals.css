@@ -1997,6 +1997,14 @@ img {
   color: #64748b;
 }
 
+.score-badge-status.is-confirmed {
+  color: var(--color-accent);
+}
+
+.score-badge.is-confirmed .score-badge-status.is-confirmed {
+  color: currentColor;
+}
+
 .score-badge:hover {
   filter: brightness(0.98);
   text-decoration: underline;
@@ -2352,6 +2360,24 @@ img {
 .video-score-card span {
   font-size: 0.8rem;
   font-weight: 850;
+}
+
+.video-score-note {
+  margin: -4px 0 0;
+  border: 1px solid #c7ced8;
+  border-radius: var(--radius-sm);
+  background: rgba(248, 250, 252, 0.72);
+  color: #475569;
+  padding: 9px 11px;
+  font-size: 0.82rem;
+  font-weight: 850;
+  line-height: 1.65;
+}
+
+.video-score-note.is-confirmed {
+  border-color: color-mix(in srgb, var(--color-accent) 38%, var(--color-line));
+  background: color-mix(in srgb, var(--color-accent) 7%, white);
+  color: var(--color-primary-ink);
 }
 
 .video-review-list {
@@ -3277,6 +3303,10 @@ img {
 }
 
 .highlight-meta {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 7px;
   color: var(--color-muted);
   font-size: 0.76rem;
   font-weight: 850;

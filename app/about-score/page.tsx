@@ -51,7 +51,7 @@ const faqJsonLd = {
       name: "確認済と暫定の違いは何ですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "確認済は編集者が動画本編を確認した状態です。暫定は自動採点やメタデータをもとにした候補で、順次、人の視聴確認で確定します。"
+        text: "確認済は運営者が動画本編を視聴し、タイトル・内容の一致と品質を確認した状態です。暫定は自動採点やメタデータをもとにした候補で、順次、人の視聴確認で確定します。"
       }
     },
     {
@@ -106,9 +106,9 @@ export default function AboutScorePage() {
 
       <section className="score-explain-grid" aria-label="スコア表示の種類">
         <article>
-          <span className="score-page-badge confirmed">31/35 ✓確認済</span>
+          <span className="score-page-badge confirmed">31/35 ✓ 確認済</span>
           <h2>確認済</h2>
-          <p>編集者が動画本編を確認し、内容・誘導・権利面を見たうえで公開している状態です。</p>
+          <p>運営者が動画本編を視聴し、タイトル・内容の一致と品質を確認したうえで公開している状態です。</p>
         </article>
         <article>
           <span className="score-page-badge provisional">31/35 暫定</span>
