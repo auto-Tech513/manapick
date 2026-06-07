@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import BrandLogo from "@/components/BrandLogo";
 
 type PolicyPageProps = {
@@ -8,9 +9,10 @@ type PolicyPageProps = {
     heading: string;
     body: string;
   }[];
+  children?: ReactNode;
 };
 
-export default function PolicyPage({ title, lead, sections }: PolicyPageProps) {
+export default function PolicyPage({ title, lead, sections, children }: PolicyPageProps) {
   return (
     <main className="min-h-screen bg-paper text-ink">
       <header className="border-b border-ink/10 bg-white">
@@ -35,6 +37,7 @@ export default function PolicyPage({ title, lead, sections }: PolicyPageProps) {
             </section>
           ))}
         </div>
+        {children ? <div className="mt-8">{children}</div> : null}
       </article>
     </main>
   );

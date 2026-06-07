@@ -1,7 +1,6 @@
 # 生成AIを独学する完全ロードマップ【YouTube無料・2026年版】
 
-> Manapick 記事第1弾（戦略C・SEO基幹記事）。サイトの実ロードマップ（STEP1〜3・掲載6本）と完全整合。
-> 動画カードのスコア/時間/サムネは videos.json から自動描画（数値の手書き転記はしない＝非捏造原則）。
+> Manapick 記事第1弾。生成AI学習を動画で進めるためのロードマップです。
 
 ---
 
@@ -64,31 +63,7 @@ A. まず両方の無料版を触ってください（STEP1の2本がその設�
 **Q. 動画は古くならない？**
 A. Manapickは毎週更新で、古くなった動画は差し替えます。このページの「最終更新日」をご確認ください。
 
-## [6] 信頼ブロック（実装時に自動挿入）
-- 最終更新日（ビルド日時）／採点方法ページへのリンク／選定ポリシー（情報商材誘導・誇大表現の動画は除外）
-
-## [7] CTA・内部リンク
+## 関連ロードマップ
 - 各動画カード → /video/[ytid]（既存詳細ページ）
 - 関連：プログラミングロードマップ／データ分析ロードマップ（サイト内アンカー）
 - フッターCTA：「8ジャンルの地図を見る」→ トップへ
-
----
-
-# Codex発注文（記事インフラ＋本記事の実装）
-
-```
-SEO記事セクション新設＋ロードマップ記事第1弾。manapick-repo配下のみ・push無し・既存機能不変・UI/レイアウト崩れ絶対NG。
-1) [記事ルート] app/guide/[slug]/page.tsx を新設(SSG・generateStaticParams)。記事データは content/guides/ 配下のファイルで管理(第1弾: generative-ai)。
-2) [第1弾記事] workspace提供の原稿(ロードマップ記事_生成AI_v1)の構成・本文をそのまま実装。
-- [3]の動画は タイトル一致で videos.json から引き、既存の動画カードコンポーネント(サムネ/スコア/時間/レベル/詳細リンク)で描画。スコア等の手書き転記禁止。
-- 「なぜ選んだか」1行は原稿の文言を使用。
-3) [SEO] タイトル「生成AIを独学する完全ロードマップ【YouTube無料・2026年版】」、meta description、canonical(SITE_URL基準)、Article+FAQPage JSON-LD(FAQは原稿[5]から)、BreadcrumbList、最終更新日表示(ビルド日)。sitemap.tsに/guide/*を追加。llms.txtに記事URLを追記。
-4) [導線] トップの学習ロードマップ節の生成AIタブ付近に「📖 文章で読む完全ロードマップ」リンク、フッターにガイド一覧リンクを追加。
-完了後 npx next build、375/768/1280/1920で崩れゼロ・動画カード描画・JSON-LD出力を確認。
-```
-
-# 公開（Codex完了後・ターミナル1行）
-
-```
-cd "/Users/mu/Documents/Codex/2026-05-24/files-mentioned-by-the-user-app/manapick-repo" && npx next build && git add -A && git commit -m "feat: guide section + generative-ai roadmap article" && git push
-```

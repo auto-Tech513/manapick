@@ -1,6 +1,6 @@
 # Pythonを独学する完全ロードマップ【YouTube無料・2026年版】
 
-> Manapick 記事第2弾・原稿v2（第1弾の完成形フォーマット準拠／内部メモは本文から分離済み）
+> Manapick 記事第2弾。Python学習を動画で進めるためのロードマップです。
 
 ---
 
@@ -66,28 +66,3 @@ A. Manapickは毎週更新で、古くなった動画は差し替えます。こ
 - 生成AIロードマップ（/guide/generative-ai）
 - データ分析ロードマップ（トップのロードマップ節へ）
 - 8ジャンルの地図を見る（トップへ）
-
----
-
-# Codex発注文（第2弾の追加）
-
-```
-ガイド記事第2弾(Python)追加。manapick-repo配下のみ・push無し・既存機能不変・UI/レイアウト崩れ絶対NG。
-1) content/guide-draft-python.md の原稿を、既存ガイド基盤(app/guide/[slug]/・content/guides/・lib/guides.ts)に slug: python で追加。見出し・カード・FAQ開閉・関連リンク等は第1弾(generative-ai)の現行スタイルと完全に同形式。原稿の「---」以降(Codex発注文)は記事に含めない。
-2) 動画4本はタイトル一致でvideos.jsonから引き、既存の動画カードで描画。スコア等の手書き転記禁止。「なぜ選んだか」は原稿の文言。合計本数・時間は実データから算出して表記を確認。
-3) SEO: タイトル「Pythonを独学する完全ロードマップ【YouTube無料・2026年版】」、meta description、canonical、Article+FAQPage+BreadcrumbList JSON-LD、最終更新日(JST)。sitemap自動反映を確認。llms.txtに記事URL追記。
-4) 導線: トップのロードマップ節・プログラミングタブ付近に「📖 文章で読む完全ロードマップ」リンク追加。第1弾記事の関連ロードマップに本記事を、本記事の関連ロードマップに第1弾を相互設置。
-完了後 npx next build、375/768/1280/1920で崩れゼロ・動画カード4本描画・JSON-LD出力・内部メモ非表示を確認。
-```
-
-# 手順
-
-1. 原稿コピー（ターミナル1行）:
-```
-cp "/Users/mu/Documents/Claude/Projects/manapickプロジェクト/ロードマップ記事_Python_v2_2026-06-07.md" "/Users/mu/Documents/Codex/2026-05-24/files-mentioned-by-the-user-app/manapick-repo/content/guide-draft-python.md"
-```
-2. 上のCodex発注文を実行
-3. 公開（ターミナル1行）:
-```
-cd "/Users/mu/Documents/Codex/2026-05-24/files-mentioned-by-the-user-app/manapick-repo" && npx next build && git add -A && git commit -m "feat: guide article python" && git push
-```
