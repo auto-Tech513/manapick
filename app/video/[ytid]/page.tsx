@@ -84,26 +84,27 @@ export default async function VideoPage({ params }: VideoPageProps) {
   const scoreConfirmationText = isConfirmed
     ? "運営者が視聴のうえ確認済みのスコアです" + (confirmationDate ? "(確認日: " + confirmationDate + ")" : "")
     : "Manapickスコアは公開前の視聴確認で確定します。";
+  const videoObject = {
+    "@type": "VideoObject",
+    name: video.title,
+    description: videoDescription(video),
+    thumbnailUrl: [youtubeThumbnail(video.ytid)],
+    ...(video.publishedAt ? { uploadDate: video.publishedAt } : {}),
+    duration: isoDuration(video.minutes),
+    embedUrl: youtubeEmbedUrl(video.ytid),
+    contentUrl: video.url,
+    url: pageUrl,
+    isAccessibleForFree: true,
+    inLanguage: "ja",
+    genre: genreDisplayName(video.genre),
+    publisher: {
+      "@id": absoluteUrl("/#organization")
+    }
+  };
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "VideoObject",
-        name: video.title,
-        description: videoDescription(video),
-        thumbnailUrl: [youtubeThumbnail(video.ytid)],
-        uploadDate: video.publishedAt,
-        duration: isoDuration(video.minutes),
-        embedUrl: youtubeEmbedUrl(video.ytid),
-        contentUrl: video.url,
-        url: pageUrl,
-        isAccessibleForFree: true,
-        inLanguage: "ja",
-        genre: genreDisplayName(video.genre),
-        publisher: {
-          "@id": absoluteUrl("/#organization")
-        }
-      },
+      videoObject,
       {
         "@type": "BreadcrumbList",
         itemListElement: [
