@@ -378,6 +378,7 @@ export default function ManapickApp() {
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(DESKTOP_PAGE_SIZE);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const menuDrawerRef = useRef<HTMLElement>(null!);
@@ -447,6 +448,10 @@ export default function ManapickApp() {
 
   const upcomingGenres = useMemo(() => {
     return genres.filter((genre) => genre.status !== "published");
+  }, []);
+
+  const checkingGenres = useMemo(() => {
+    return genres.filter((genre) => genre.status === "checking");
   }, []);
 
   const visiblePrGenres = useMemo(() => {
@@ -903,8 +908,14 @@ export default function ManapickApp() {
             <p className="hero-lead">
               AI・IT・英語・動画編集など、キャリアに効く学習動画を“Manapickスコア（35点満点）”で厳選。初級→上級のロードマップで、何から見るかもう迷わない。会員登録は不要。通勤の15分など、スキマ時間から始められます。
             </p>
+            <p className="hero-lead-mobile">
+              YouTube学習動画を35点満点で採点。見る順に整理し、登録不要・スキマ時間から。
+            </p>
 
             <HeroTrustStats totalVideos={videos.length} confirmedCount={confirmedCount} />
+            <a className="mobile-hero-primary-cta" href="#mobile-weekly-pick">
+              ▶ 迷ったら、まずこの1本
+            </a>
             <PurposeNav onSelect={handlePurposeSelect} />
 
             <p className="hero-proof">
@@ -913,6 +924,15 @@ export default function ManapickApp() {
               {" ／ 順次拡大"}
             </p>
           </div>
+          {weeklyPick ? (
+            <section id="mobile-weekly-pick" className="mobile-weekly-pick-section" aria-labelledby="mobile-weekly-pick-title">
+              <div className="weekly-pick-heading">
+                <p className="section-eyebrow">今週のイチオシ</p>
+                <h2 id="mobile-weekly-pick-title" className="section-title">最高スコアの一本から始める</h2>
+              </div>
+              <WeeklyPickCard video={weeklyPick} />
+            </section>
+          ) : null}
           <div className="hero-visual-column">
             <HeroVideoCarousel slides={heroCarouselSlides} />
           </div>
@@ -920,7 +940,7 @@ export default function ManapickApp() {
       </section>
 
       {weeklyPick ? (
-        <section className="weekly-pick-section" aria-labelledby="weekly-pick-title">
+        <section className="weekly-pick-section desktop-weekly-pick-section" aria-labelledby="weekly-pick-title">
           <div className="weekly-pick-shell">
             <div className="weekly-pick-column">
               <div className="weekly-pick-heading">
@@ -941,7 +961,7 @@ export default function ManapickApp() {
               <p className="text-sm font-bold text-leaf">①ざっくり探す</p>
               <h2 className="text-2xl font-black text-ink">ジャンルから選ぶ</h2>
             </div>
-            <div className="flex flex-wrap gap-2 text-xs font-bold text-muted">
+            <div className="genre-state-legend flex flex-wrap gap-2 text-xs font-bold text-muted">
               <span className="rounded-full bg-leaf px-3 py-1 text-white">公開中</span>
               <span className="rounded-full bg-mist px-3 py-1">近日公開</span>
               <span className="rounded-full bg-amberSoft px-3 py-1">確認中（注記）</span>
@@ -975,91 +995,109 @@ export default function ManapickApp() {
                   </button>
                 ))}
               </div>
+              <p className="mobile-genre-status-note">
+                公開中{publishedGenres.length}ジャンル
+                {upcomingGenres.length > 0 ? " / 近日公開" + upcomingGenres.length + "ジャンル" : ""}
+                {checkingGenres.length > 0 ? " / 確認中" + checkingGenres.length + "ジャンル" : ""}
+                {" / 順次拡大"}
+              </p>
             </div>
 
           </div>
 
-          <div className="mt-7 border-t border-line pt-6">
-            <div className="mb-4">
+          <div className={mobileFiltersOpen ? "filter-section is-mobile-open mt-7 border-t border-line pt-6" : "filter-section mt-7 border-t border-line pt-6"}>
+            <button
+              type="button"
+              className="mobile-filter-toggle"
+              aria-expanded={mobileFiltersOpen}
+              aria-controls="filter-accordion-body"
+              onClick={() => setMobileFiltersOpen((open) => !open)}
+            >
+              <span>🔍 条件で絞り込む</span>
+              <span aria-hidden="true">{mobileFiltersOpen ? "閉じる" : "開く"}</span>
+            </button>
+            <div className="filter-heading mb-4">
               <p className="text-sm font-bold text-leaf">②詳細に探す</p>
               <h2 className="text-2xl font-black text-ink">条件で絞り込む</h2>
             </div>
-            <div className="filter-control-grid grid gap-3 min-[560px]:grid-cols-2 min-[940px]:grid-cols-[1fr_0.8fr_0.9fr_1.4fr_auto]">
-              <label className="filter-control">
-                <span className="mb-1 block text-sm font-bold text-muted">サブジャンル</span>
-                <select
-                  value={selectedSub}
-                  onChange={(event) => setSelectedSub(event.target.value)}
-                  className="h-12 w-full rounded-lg border border-line bg-white px-3 text-base"
+            <div id="filter-accordion-body" className="filter-accordion-body">
+              <div className="filter-control-grid grid gap-3 min-[560px]:grid-cols-2 min-[940px]:grid-cols-[1fr_0.8fr_0.9fr_1.4fr_auto]">
+                <label className="filter-control">
+                  <span className="mb-1 block text-sm font-bold text-muted">サブジャンル</span>
+                  <select
+                    value={selectedSub}
+                    onChange={(event) => setSelectedSub(event.target.value)}
+                    className="h-12 w-full rounded-lg border border-line bg-white px-3 text-base"
+                  >
+                    <option value="all">すべて</option>
+                    {subOptions.map((sub) => (
+                      <option key={sub} value={sub}>
+                        {sub}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label className="filter-control">
+                  <span className="mb-1 block text-sm font-bold text-muted">レベル</span>
+                  <select
+                    value={selectedLevel}
+                    onChange={(event) => setSelectedLevel(event.target.value as (typeof levels)[number])}
+                    className="h-12 w-full rounded-lg border border-line bg-white px-3 text-base"
+                  >
+                    {levels.map((level) => (
+                      <option key={level} value={level}>
+                        {level}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label className="filter-control">
+                  <span className="mb-1 block text-sm font-bold text-muted">所要時間</span>
+                  <select
+                    value={selectedTime}
+                    onChange={(event) => setSelectedTime(event.target.value)}
+                    className="h-12 w-full rounded-lg border border-line bg-white px-3 text-base"
+                  >
+                    {timeBuckets.map((bucket) => (
+                      <option key={bucket.value} value={bucket.value}>
+                        {bucket.label}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label className="filter-control filter-control-keyword">
+                  <span className="mb-1 block text-sm font-bold text-muted">キーワード</span>
+                  <input
+                    value={searchDraft}
+                    onChange={(event) => {
+                      setSearchDraft(event.target.value);
+                      setSuggestionsOpen(true);
+                    }}
+                    onFocus={() => setSuggestionsOpen(true)}
+                    onKeyDown={handleSearchKeyDown}
+                    placeholder="例: Claude / Python / 独学"
+                    className="h-12 w-full rounded-lg border border-line bg-white px-3 text-base"
+                    autoComplete="off"
+                  />
+                  <span className="filter-hint text-xs font-bold text-muted">⌘Kでも検索できます</span>
+                </label>
+                <button
+                  type="button"
+                  onClick={resetFilters}
+                  className="filter-reset h-12 rounded-lg border border-line bg-paper px-4 text-sm font-black text-ink transition hover:border-accent/50 hover:shadow-card"
                 >
-                  <option value="all">すべて</option>
-                  {subOptions.map((sub) => (
-                    <option key={sub} value={sub}>
-                      {sub}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label className="filter-control">
-                <span className="mb-1 block text-sm font-bold text-muted">レベル</span>
-                <select
-                  value={selectedLevel}
-                  onChange={(event) => setSelectedLevel(event.target.value as (typeof levels)[number])}
-                  className="h-12 w-full rounded-lg border border-line bg-white px-3 text-base"
-                >
-                  {levels.map((level) => (
-                    <option key={level} value={level}>
-                      {level}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label className="filter-control">
-                <span className="mb-1 block text-sm font-bold text-muted">所要時間</span>
-                <select
-                  value={selectedTime}
-                  onChange={(event) => setSelectedTime(event.target.value)}
-                  className="h-12 w-full rounded-lg border border-line bg-white px-3 text-base"
-                >
-                  {timeBuckets.map((bucket) => (
-                    <option key={bucket.value} value={bucket.value}>
-                      {bucket.label}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label className="filter-control filter-control-keyword">
-                <span className="mb-1 block text-sm font-bold text-muted">キーワード</span>
-                <input
-                  value={searchDraft}
-                  onChange={(event) => {
-                    setSearchDraft(event.target.value);
-                    setSuggestionsOpen(true);
-                  }}
-                  onFocus={() => setSuggestionsOpen(true)}
-                  onKeyDown={handleSearchKeyDown}
-                  placeholder="例: Claude / Python / 独学"
-                  className="h-12 w-full rounded-lg border border-line bg-white px-3 text-base"
-                  autoComplete="off"
-                />
-                <span className="filter-hint text-xs font-bold text-muted">⌘Kでも検索できます</span>
-              </label>
-              <button
-                type="button"
-                onClick={resetFilters}
-                className="filter-reset h-12 rounded-lg border border-line bg-paper px-4 text-sm font-black text-ink transition hover:border-accent/50 hover:shadow-card"
-              >
-                条件リセット
-              </button>
-            </div>
+                  条件リセット
+                </button>
+              </div>
 
-            <div className="mt-5 flex flex-col gap-2 text-sm text-muted min-[680px]:flex-row min-[680px]:items-center min-[680px]:justify-between">
-              <p>
-                <span className="font-black text-ink">{filteredVideos.length}</span>件ヒット
-                {selectedGenreData?.status === "preparing" ? "。このジャンルは近日公開です。" : ""}
-                {selectedGenreData?.status === "checking" ? "。このジャンルは確認中です。" : ""}
-              </p>
-              <p>視聴はYouTube公式リンクのみ。動画のダウンロード機能はありません。</p>
+              <div className="mt-5 flex flex-col gap-2 text-sm text-muted min-[680px]:flex-row min-[680px]:items-center min-[680px]:justify-between">
+                <p>
+                  <span className="font-black text-ink">{filteredVideos.length}</span>件ヒット
+                  {selectedGenreData?.status === "preparing" ? "。このジャンルは近日公開です。" : ""}
+                  {selectedGenreData?.status === "checking" ? "。このジャンルは確認中です。" : ""}
+                </p>
+                <p>視聴はYouTube公式リンクのみ。動画のダウンロード機能はありません。</p>
+              </div>
             </div>
           </div>
           {upcomingGenres.length > 0 ? (
