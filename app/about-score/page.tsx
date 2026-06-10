@@ -170,6 +170,8 @@ export default function AboutScorePage() {
             <span>Manapick</span>
           </p>
           <a href="/">トップへ戻る</a>
+          <a href="/guide/generative-ai/">ガイド記事を読む</a>
+          <a href="/contact/">お問い合わせ</a>
         </footer>
       </main>
     </>

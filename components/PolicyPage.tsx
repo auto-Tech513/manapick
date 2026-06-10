@@ -38,6 +38,17 @@ export default function PolicyPage({ title, lead, sections, children }: PolicyPa
           ))}
         </div>
         {children ? <div className="mt-8">{children}</div> : null}
+        <nav className="mt-10 grid gap-3 rounded-xl border border-ink/10 bg-white p-4 shadow-line sm:grid-cols-3" aria-label="次に見るページ">
+          <Link className="rounded-lg border border-ink/10 px-4 py-3 text-sm font-black text-primary hover:border-leaf" href="/">
+            トップへ戻る
+          </Link>
+          <Link className="rounded-lg border border-ink/10 px-4 py-3 text-sm font-black text-primary hover:border-leaf" href="/#roadmap">
+            ロードマップを見る
+          </Link>
+          <Link className="rounded-lg border border-ink/10 px-4 py-3 text-sm font-black text-primary hover:border-leaf" href="/guide/generative-ai/">
+            ガイド記事を読む
+          </Link>
+        </nav>
       </article>
     </main>
   );
