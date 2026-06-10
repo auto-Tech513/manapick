@@ -1,19 +1,20 @@
 # Manapick ingest report 2026-06-10
 
-- generatedAt: 2026-06-10T12:59:59.243Z
-- input: data/drafts.json (run1: all genres; run2: data/marke/biz/shikaku/prog/english)
+- generatedAt: 2026-06-10T13:09:37.680Z
+- input: data/drafts.json (run1: all genres; run2: data/marke/biz/shikaku/prog/english); run3: money refill
 - output: content/videos.json
 - minScore: 28
 - currentBefore: 193
-- additions: 278
-- skipped: 945
-- quotaEstimate: search.list 86 calls = 8,600 units + videos.list batch calls/channel补完 (approx. 72 units)
-- postProcess: channel-cap removals 2, provisional scores added 9
+- additions: 270
+- skipped: 1017
+- quotaEstimate: search.list 90 calls = 9,000 units + videos.list batch calls/channel補完 (approx. 75 units)
+- postProcess: channel-cap removals 2, money-safety removals 12, provisional scores added 9
 
 ## Runs
 
 - run1: additions 246, skipped 518, currentBefore 193
 - run2: additions 34, skipped 425, currentBefore 439
+- run3-money-refill: additions 4, skipped 60, currentBefore 459
 
 ## Additions by genre
 
@@ -23,25 +24,52 @@
 - english: 26
 - kaikei: 28
 - marke: 20
-- money: 35
+- money: 27
 - prog: 43
 - shikaku: 18
 - video: 28
 
 ## Skipped summary
 
-- below_min_score_or_cutoff: 889
-- channel_cap: 36
-- deny_title:絶対: 9
-- deny_title:誰でも: 7
+- below_min_score_or_cutoff: 929
+- channel_cap: 39
+- post_ingest_money_safety: 12
+- deny_title:絶対: 10
+- deny_title:誰でも: 8
+- money_deny_title:おすすめ銘柄: 4
 - post_ingest_channel_cap: 2
+- money_deny_title:[0-9０-９]+万円.*貯め: 2
+- money_deny_title:老後安泰: 2
 - deny_title:FX: 1
 - kaikei_upper_qualification_cap: 1
+- money_deny_title:1億円: 1
+- money_deny_title:買うべき: 1
+- money_safety_scope: 1
+- money_deny_title:おすすめ投資信託: 1
+- money_deny_title:失敗します: 1
+- money_deny_title:最強: 1
+- deny_title:億り人: 1
 
 ## Post process
 
 - channel_cap removal: ai / mikimiki web スクール / jyZ1D9dP4fI / 【最新版】超初心者OK! 最強画像生成AI Midjourneyの始め方・基礎講座(資料付き）
 - channel_cap removal: prog / キノコード / プログラミング学習チャンネル / g5q8xIQPbbs / 30分で応用まで一気に！【Python入門・応用講座】16.関数｜関数はレシピを記憶させるようなもの（初心者にもわかりやすく説明）
+- money_safety removal: 16_SUESqk8g / 【新NISA完全攻略】月5万円から始める「リアルすぎる」1億円の作り方【山口 貴大(ライオン兄さん)】
+- money_safety removal: O1q6xsWPAYE / 【2025年からでも遅くない】新NISAのやさしい始め方を超初心者向けに解説！おすすめ銘柄や手続きの流れも完全ガイド
+- money_safety removal: EOeNtyNdLVw / 【世界一やさしい】iDeCoの入門知識や知っておくべき情報を解説！NISAとの比較、おすすめ銘柄、受け取り方の出口戦略も完全ガイド
+- money_safety removal: Newn9NY24WE / "投資信託"の総まとめ!! ｢オルカン｣｢S&P500｣｢日経平均｣…初心者が買うべき投信はどれ？定期預金とも比較！【マヂカルラブリーと学ぶ 松井証券 資産運用!学べる予備校 Season1 #3】
+- money_safety removal: KssJh3fhlQM / 【超初心者向け】新NISAはコレやっとけばOK！資産を増やす戦略を徹底解説【おすすめ投資信託】【インデックス投資】
+- money_safety removal: vnIZNoMZk8M / 【新NISA】初心者は’’コレ’’で失敗します！お得な制度に潜む罠とは？
+- money_safety removal: gF2r8lp_DqY / 【最新版】結局これが1番お金が貯まる！5週間やりくり節約主婦の楽しみながら緩い節約生活で100万円貯める習慣まとめ
+- money_safety removal: 3JBvYkIUjZE / 【投資初心者へ】結局インデックス投資が最強である理由を徹底解説！これからの日本は節約→貯金→投資が必須になります、、、。
+- money_safety removal: tAUnHeTWOuc / 【人生を変えた節約術】夫の手取り20万円台で4000万円貯めた方法15選！4人家族の節約生活
+- money_safety removal: Oqc9PzI_RTc / 【iDeco 始め方】40,50代が今からiDeCoやるならコレだけで老後安泰
+- money_safety removal: nLWWowcotaw / 【2026年対応】50代60代の新NISA、この３つの流れで始めれば９割問題ありません！
+- money_safety removal: ztWlPjrCx7E / 【月1万円の積立はヤバい】50代60代の新NISA！積立額は月○万円だと超優秀です！9割の人ははこれで老後安泰【資産運用/投資】
+- money_refill addition: TKMOTT5GoXE / 【積立NISA】後悔・失敗しました。初心者の主婦が5年やったリアルな投資状況・銘柄
+- money_refill addition: 64tlyWtEBsY / 【貯まる家計簿】シンプルな家計簿の書き方
+- money_refill addition: nLWWowcotaw / 【2026年対応】50代60代の新NISA、この３つの流れで始めれば９割問題ありません！
+- money_refill addition: 0e3XPSUzI5Q / NISAの買い方で損している人、実はめっちゃ多いです。NISAの資産運用術お伝えします。
 - provisional score backfill: 9 existing seed videos set to 28/35 with axis scores
 
 ## Adopted
@@ -54,9 +82,7 @@
 | NTFIFwmrjiw | ai | Claude | 33 | mikimiki web スクール | 【初心者OK🔰】アンソロピック「Claude Cowork」使い方基礎講座！活用法まで分かりやすく解説！ |
 | SfCNwzANbUY | ai | Gemini | 33 | Mappy Photo | 【完全版】Googleの最強AIツールGeminiの使い方徹底解説【初心者必見】 |
 | yd-bpNe3Axg | ai | Gemini | 33 | ダイさん・AI活用の専門家 | 【生成AI】超初心者OK!「Gemini」をもっと使いこなすための使い方・基礎をわかりやすく解説！【完全マスター】 |
-| 16_SUESqk8g | money | NISA | 32 | フェルミ漫画大学 | 【新NISA完全攻略】月5万円から始める「リアルすぎる」1億円の作り方【山口 貴大(ライオン兄さん)】 |
 | o6ARRGrW3BA | english | 発音 | 32 | PIVOT 公式チャンネル | 【英語発音完全ガイド】学校では教わらない発音上達法／YouTuberだいじろーが解説／初中級者必見 まずは母音を攻略せよ／盆踊りのリズムを捨てろ／エミネムも歌える【ENGLISH SKILL SET】 |
-| O1q6xsWPAYE | money | NISA | 32 | BANK ACADEMY / バンクアカデミー | 【2025年からでも遅くない】新NISAのやさしい始め方を超初心者向けに解説！おすすめ銘柄や手続きの流れも完全ガイド |
 | 64sjQHaRj9I | money | NISA | 32 | コアラ先生の時事ネタ祭り | 【これ一本でわかる】完全投資初心者が知識ゼロから新NISAを始められる入門動画！2024年版 |
 | VTbepCbuFwc | money | NISA | 32 | コアラ先生の時事ネタ祭り | 【完全図解】投資初心者のための新NISA活用術！知らないとヤバい理由をわかりやすく解説します |
 | J7MqGeEJFoM | money | NISA | 32 | コアラ先生の時事ネタ祭り | 【これ一本でわかる！】投資初心者でもスグに新NISAを始められる超入門動画！2025年版 |
@@ -65,7 +91,6 @@
 | O2Q0-JLpYtc | ai | Gemini | 32 | 楽したい【AI × ITで効率化ch】 | 【初心者必見】Googleの最強AI「「Gemini」の使い方・基礎を徹底解説！ |
 | Ju0w7JxgMc8 | marke | SNS | 32 | 佐藤辰則 / iPad・AI活用教室 | Xエックス（旧ツイッター）アプリの使い方解説。初心者入門者向け。【Twitter / iPhone・iPad】 |
 | Pl-IaM0ftAk | ai | 画像生成 | 32 | ここなのAI大学 | 【完全攻略】Googleの画像生成AI「Nano Banana Pro」の使い方を解説します |
-| EOeNtyNdLVw | money | NISA | 32 | BANK ACADEMY / バンクアカデミー | 【世界一やさしい】iDeCoの入門知識や知っておくべき情報を解説！NISAとの比較、おすすめ銘柄、受け取り方の出口戦略も完全ガイド |
 | 9dUkUyHo8Hw | ai | Copilot | 32 | みやっちのAIエージェントやってみた | 【40分でマスター】完全初心者でも”明日から実務で使える”Microsoft 365 Copilot完全攻略 |
 | 7DkEl0kiD9g | ai | ChatGPT | 32 | mikimiki web スクール | 【2026年最新版】超初心者OK！ChatGPTの使い方・基礎をわかりやすく徹底解説(資料・プロンプト集付き) |
 | yZBvdoTDjBE | english | TOEIC | 32 | Makieigo | 【TOEIC完全ロードマップ】これで伸びなかったら諦めてください。推奨教材と勉強方法を全て解説します |
@@ -80,7 +105,6 @@
 | gM1QW-qvJDY | money | 投資 | 31 | 両学長 リベラルアーツ大学 | 【再放送】【初心者向け】投資信託とETFの違いを分かりやすく解説。高配当株好きはETFがおすすめ！【株式投資編】：（アニメ動画）第100回 |
 | mxXZokjtVyo | money | NISA | 31 | 両学長 リベラルアーツ大学 | はじめての確定拠出年金iDecoや企業型DCについて初心者向けに解説^^【お金の勉強　株式投資編】：（アニメ動画）第492回 |
 | puNuCPlsNH0 | video | DaVinci | 31 | 動画クリエイターへの道 by machosuke | 【ダビンチリゾルブの使い方】超入門10分でマスターはじめてのDaVinci Resolve \| 動画編集初心者向けチュートリアル |
-| Newn9NY24WE | money | 投資 | 31 | 松井証券_MatsuiSecurities | "投資信託"の総まとめ!! ｢オルカン｣｢S&P500｣｢日経平均｣…初心者が買うべき投信はどれ？定期預金とも比較！【マヂカルラブリーと学ぶ 松井証券 資産運用!学べる予備校 Season1 #3】 |
 | MWmi1nmcrBA | ai | Gemini | 31 | こーすけ先生のGoogle塾 | 【生成AI】「Gemini」をもっと使いこなすための基礎知識を伝授！ |
 | 9XK9X_g2hYA | ai | Copilot | 31 | ユースフル \| Copilot情報局 | 【2025年最新版】Microsoft Copilotの最新動向！基本の使い方と注目機能5選をCopilotベストセラー講師が解説 |
 | d1o0lW9p3-Q | ai | 自動化 | 31 | PIVOT 公式チャンネル | 【AIエージェント活用術 vol.1】今さら聞けない！AIエージェント入門編／AIエージェントと従来の生成AIとの違い／全10回シリーズ　ゴールは自分で開発できるようになる！ |
@@ -115,7 +139,6 @@
 | CynusOl-YuQ | ai | Gemini | 30 | AIで時短ペラペラ英語 \| 超進学校教師みなと | まだChatGPT使ってるの？Google Geminiを使って30日で英語が話せる7ステップ勉強法 |
 | blqr_9Ecz9U | money | NISA | 30 | 脱・税理士スガワラくん | 本当にそんなにスゴイのか？新NISAが税制改正でどう変わろうとしているのか解説します！ |
 | 06FUV3w64rE | english | 発音 | 30 | しゃべれる英語 | いちばん最初に覚える英単語300 (🇯🇵日→🇺🇸英) 〜日常英会話の5割をカバー☆初心者向け☆聞き流し英語 |
-| KssJh3fhlQM | money | NISA | 30 | 節約オタクふゆこ | 【超初心者向け】新NISAはコレやっとけばOK！資産を増やす戦略を徹底解説【おすすめ投資信託】【インデックス投資】 |
 | -imMwJqBKm4 | money | NISA | 30 | コアラ先生の時事ネタ祭り | 【アニメで解説】iDeCo(イデコ)を初心者にもわかりやすく！～基礎編～ |
 | JL9M16hYTaY | english | 発音 | 30 | 8分英語 8Minutes English | 【最短最速】１日10分。気づいたら英語話せるようになる勉強法 |
 | 5AmpuQsZh1Q | money | 家計 | 30 | 街角レモンの暮らし手帳 / まちれも | 【家計管理】80万回以上再生された家計簿の書き方の徹底解説 【保存版】 |
@@ -159,7 +182,6 @@
 | PyJU6Ba53XE | biz | Word | 29 | いなわくTV | Word初心者【基礎講座】練習用データ付2024年完全版 |
 | vI6CwiI0KyY | ai | 画像生成 | 29 | パソコン博士TAIKI | 【神回！】貴方の人生を変える無料AI達！全て無料で使えるGoogle AI Studioが凄すぎる！【スマホでもOK！どれもマジ最高！】 |
 | Qe3EmiFWgGM | english | 発音 | 29 | Atsueigo | 【永久保存版】たった30分で発音記号を完全攻略【速習まとめ】 |
-| vnIZNoMZk8M | money | NISA | 29 | 脱・税理士スガワラくん | 【新NISA】初心者は’’コレ’’で失敗します！お得な制度に潜む罠とは？ |
 | FMsSLZkif4E | money | NISA | 29 | BANK ACADEMY / バンクアカデミー | 【超初心者向け】2024年からの新NISA制度のポイントを、投資経験ゼロでも分かるようにまるごと解説！ |
 | JpwV_NNn7aI | kaikei | 簿記 | 29 | 【簿記･FP】独学ちゃんねる  桜田 | ✧第1回✧【簿記3級】入門①（簿記とは？） |
 | PDLLLRb49nM | shikaku | 宅建 | 29 | マジでイケてる宅建講座【ゆーき大学】 | 【宅建 2026 宅建業法 #0】合格者は何点とってる？宅建の入門講義 |
@@ -169,9 +191,7 @@
 | UDLDRi88QP0 | kaikei | 簿記 | 29 | 両学長 リベラルアーツ大学 | 【初心者も必見】簿記3級の次に「簿記2級・1級」を学ぶ5つのメリット【お金の勉強初級編】：（アニメ動画）第358回 |
 | A11m1lWiUrs | shikaku | IT | 29 | 情報処理技術者試験・高校情報教科対策の突破口ドットコム | インターネットの仕組み入門～IPアドレス・DNS・MACアドレス【高校情報１・基本情報技術者・ITパスポート】高校情報Ⅰ教科書完全準拠版 |
 | GP6z9ubBg20 | biz | Word | 29 | ゼロからパソコン | 【ワード】表の作り方。30分で自由に表が作れるようになる♪ |
-| gF2r8lp_DqY | money | 家計 | 29 | きみチャンネル | 【最新版】結局これが1番お金が貯まる！5週間やりくり節約主婦の楽しみながら緩い節約生活で100万円貯める習慣まとめ |
 | heAUeY2fy-s | ai | Copilot | 29 | PIVOT 公式チャンネル | 【Copilot活用術 Vol.2】徹底解説Copilot in Word/Excel/PowerPointのビジネス活用法／ポイントはツールの使い分け＆組み合わせ／すぐに使えるプロンプトの実用例 |
-| 3JBvYkIUjZE | money | 投資 | 29 | がまぐち夫婦の節約チャンネル | 【投資初心者へ】結局インデックス投資が最強である理由を徹底解説！これからの日本は節約→貯金→投資が必須になります、、、。 |
 | m2qZP4x4ils | english | ビジネス英語 | 29 | Atsueigo | 【永久保存版】ビジネスで使う英語表現100選｜テキスト無料配布中 |
 | 9KWoXenAfhc | kaikei | FP | 29 | ほんださん / 東大式FPチャンネル | 【FP2級】ここからFP2級に簡単合格！FPの職業倫理と関連法規から始まるNo.1FP講師のプロ講義（完全A01） |
 | cVnQvW3B8vE | kaikei | FP | 29 | ほんださん / 東大式FPチャンネル | FP3級爆速講義 #9 ３級はこれだけでOK！保険のしくみがよくわかる神講義（保険） |
@@ -218,12 +238,9 @@
 | I0WNU46GH6U | video | DaVinci | 29 | あをき / AOKI | 【2026年】マルチテキストの時代が来ます。使い方・活用例を徹底解説！【DaVinci Resolve】 |
 | Zpw-XFydjUc | prog | Git | 29 | フリーランスPM打田裕馬 | 個人開発のためのGit入門〜最短距離で学ぶソースコード管理の使い方〜 |
 | 5bk8FDQaWy4 | biz | Word | 28 | ゼロからパソコン | 【ワードの文字がズレる】簡単にそろえる方法あります！覚えてソンなし♪ |
-| tAUnHeTWOuc | money | 家計 | 28 | 4人家族ぴーちの節約術 | 【人生を変えた節約術】夫の手取り20万円台で4000万円貯めた方法15選！4人家族の節約生活 |
 | V-Yf9DEZW6Y | money | NISA | 28 | 両学長 リベラルアーツ大学 | 【歴史が変わる】新NISAのココがスゴイ5選【株式投資編】：（アニメ動画）第408回 |
 | j6DZgTj9ma0 | english | 英会話 | 28 | 英語聞き流し \| Sakura English | ゼロから始める〜超初心者向け・英会話207フレーズ 〜シンプル＆ゆっくり発音【177】 |
-| Oqc9PzI_RTc | money | NISA | 28 | あき姉 元銀行員FPが教える40,50代向け資産形成術 | 【iDeco 始め方】40,50代が今からiDeCoやるならコレだけで老後安泰 |
 | fOZB77wGakE | english | ビジネス英語 | 28 | ジュディ【英語】 | 【たった30分】最速で話せる英語が身につく神トレーニング |
-| nLWWowcotaw | money | NISA | 28 | 『資産保全学』50,60代の賢い資産の守り方 | 【2026年対応】50代60代の新NISA、この３つの流れで始めれば９割問題ありません！ |
 | EIKASNxTtNI | english | 発音 | 28 | だいじろー Daijiro | オススメの英語発音の勉強法を語る【一人でいる時にできる】 |
 | iJQEvmeGhJ8 | english | 発音 | 28 | だいじろー Daijiro | 日本語がペラペラなアメリカ人に日本語の発音を教えてもらってみた |
 | pkV0teAuj-g | money | 家計 | 28 | 4人家族ぴーちの節約術 | 【自然に貯まる】お金を貯めるための必須設定5選！節約主婦の貯まる仕組み作り/貯金術 |
@@ -232,7 +249,6 @@
 | r9noktjw13w | kaikei | FP | 28 | ほんださん / 東大式FPチャンネル | FP3級爆速講義 #1 ここから始まるFP3級爆速合格！試験頻出のFPのNG行為とは？（ライフ） |
 | jj7fEmlvsAg | english | 発音 | 28 | ジュディ【英語】 | 【死ぬほど効果あり】英語が口から出てこない？中学英語でネイティブ発音になる7日間プログラム |
 | 6lbzidwiVaY | money | 家計 | 28 | おもちのゆる節約とミニマリスト。 | 【節約ミニマリスト主婦】お金が貯まる暮らし12の習慣︱節約術︱ミニマルな暮らし |
-| ztWlPjrCx7E | money | NISA | 28 | ななこ【シニアとお金】 | 【月1万円の積立はヤバい】50代60代の新NISA！積立額は月○万円だと超優秀です！9割の人ははこれで老後安泰【資産運用/投資】 |
 | 6wmlo3ACKd8 | money | NISA | 28 | ひろゆき三昧【切り抜き,ひろゆき, hiroyuki】 | 【ひろゆき】全世代においてNISAをやった方がいい時代になって来ています、NISAを知らない人が損しないように僕が細かく説明します【NISA 投資 インデックスファンド 株 証券口座 貯金 金融庁】 |
 | v5fscClujBM | kaikei | FP | 28 | なかちの解説チャンネル | 【FP3級 聞き流し動画】～ライフプランニング編～聞くだけで学習できるFP解説動画！ |
 | HuyOO_oxoic | ai | Gemini | 28 | 動画ファン | 【Google Gemini Live】「音声通訳機能」たったワンタップの簡単操作ガイド |
@@ -326,6 +342,10 @@
 | fhJsHbep3TM | shikaku | AI検定 | 28 | いまにゅのAIプログラミング塾 | 最先端でAI活用したいならこのステップで学習してください！AI活用のプロがAI初心者からAIを使いこなすまでの学習法を解説します |
 | hMCThPJ9kaE | prog | Python | 28 | 西住技研 | PythonをWindowsにインストールして実行する方法を1から丁寧に解説 【Python超入門講座1-2】 |
 | 0d0kC_8wx7s | data | BI | 28 | DX塾 – Power BIで始めるデータ活用 | 【Power BI入門】複雑な式は不要！効率爆上げの新常識6選｜Excel派必見 |
+| TKMOTT5GoXE | money | NISA | 30 | りりな家計管理と投資をする主婦 | 【積立NISA】後悔・失敗しました。初心者の主婦が5年やったリアルな投資状況・銘柄 |
+| 64tlyWtEBsY | money | 家計 | 28 | cocoの暮らし | 【貯まる家計簿】シンプルな家計簿の書き方 |
+| nLWWowcotaw | money | NISA | 28 | 『資産保全学』50,60代の賢い資産の守り方 | 【2026年対応】50代60代の新NISA、この３つの流れで始めれば９割問題ありません！ |
+| 0e3XPSUzI5Q | money | NISA | 28 | ホリエモン人生のヒント | NISAの買い方で損している人、実はめっちゃ多いです。NISAの資産運用術お伝えします。 |
 
 ## Skipped
 
@@ -1276,3 +1296,75 @@
 | pe5DP2-C0cw | channel_cap | 28 | prog | Web開発 | キノコード / プログラミング学習チャンネル | 【Python超入門講座】02.Pythonとは？｜Pythonの特徴やできることなどをわかりやすく解説【プログラミング初心者向け】 |
 | jyZ1D9dP4fI | post_ingest_channel_cap | 31 | ai | 画像生成 | mikimiki web スクール | 【最新版】超初心者OK! 最強画像生成AI Midjourneyの始め方・基礎講座(資料付き） |
 | g5q8xIQPbbs | post_ingest_channel_cap | 29 | prog | Python | キノコード / プログラミング学習チャンネル | 30分で応用まで一気に！【Python入門・応用講座】16.関数｜関数はレシピを記憶させるようなもの（初心者にもわかりやすく説明） |
+| 16_SUESqk8g | post_ingest_money_safety | 32 | money | NISA | フェルミ漫画大学 | 【新NISA完全攻略】月5万円から始める「リアルすぎる」1億円の作り方【山口 貴大(ライオン兄さん)】 |
+| O1q6xsWPAYE | post_ingest_money_safety | 32 | money | NISA | BANK ACADEMY / バンクアカデミー | 【2025年からでも遅くない】新NISAのやさしい始め方を超初心者向けに解説！おすすめ銘柄や手続きの流れも完全ガイド |
+| EOeNtyNdLVw | post_ingest_money_safety | 32 | money | NISA | BANK ACADEMY / バンクアカデミー | 【世界一やさしい】iDeCoの入門知識や知っておくべき情報を解説！NISAとの比較、おすすめ銘柄、受け取り方の出口戦略も完全ガイド |
+| Newn9NY24WE | post_ingest_money_safety | 31 | money | 投資 | 松井証券_MatsuiSecurities | "投資信託"の総まとめ!! ｢オルカン｣｢S&P500｣｢日経平均｣…初心者が買うべき投信はどれ？定期預金とも比較！【マヂカルラブリーと学ぶ 松井証券 資産運用!学べる予備校 Season1 #3】 |
+| KssJh3fhlQM | post_ingest_money_safety | 30 | money | NISA | 節約オタクふゆこ | 【超初心者向け】新NISAはコレやっとけばOK！資産を増やす戦略を徹底解説【おすすめ投資信託】【インデックス投資】 |
+| vnIZNoMZk8M | post_ingest_money_safety | 29 | money | NISA | 脱・税理士スガワラくん | 【新NISA】初心者は’’コレ’’で失敗します！お得な制度に潜む罠とは？ |
+| gF2r8lp_DqY | post_ingest_money_safety | 29 | money | 家計 | きみチャンネル | 【最新版】結局これが1番お金が貯まる！5週間やりくり節約主婦の楽しみながら緩い節約生活で100万円貯める習慣まとめ |
+| 3JBvYkIUjZE | post_ingest_money_safety | 29 | money | 投資 | がまぐち夫婦の節約チャンネル | 【投資初心者へ】結局インデックス投資が最強である理由を徹底解説！これからの日本は節約→貯金→投資が必須になります、、、。 |
+| tAUnHeTWOuc | post_ingest_money_safety | 28 | money | 家計 | 4人家族ぴーちの節約術 | 【人生を変えた節約術】夫の手取り20万円台で4000万円貯めた方法15選！4人家族の節約生活 |
+| Oqc9PzI_RTc | post_ingest_money_safety | 28 | money | NISA | あき姉 元銀行員FPが教える40,50代向け資産形成術 | 【iDeco 始め方】40,50代が今からiDeCoやるならコレだけで老後安泰 |
+| nLWWowcotaw | post_ingest_money_safety | 28 | money | NISA | 『資産保全学』50,60代の賢い資産の守り方 | 【2026年対応】50代60代の新NISA、この３つの流れで始めれば９割問題ありません！ |
+| ztWlPjrCx7E | post_ingest_money_safety | 28 | money | NISA | ななこ【シニアとお金】 | 【月1万円の積立はヤバい】50代60代の新NISA！積立額は月○万円だと超優秀です！9割の人ははこれで老後安泰【資産運用/投資】 |
+| 16_SUESqk8g | money_deny_title:1億円 | 32 | money | NISA | フェルミ漫画大学 | 【新NISA完全攻略】月5万円から始める「リアルすぎる」1億円の作り方【山口 貴大(ライオン兄さん)】 |
+| O1q6xsWPAYE | money_deny_title:おすすめ銘柄 | 32 | money | NISA | BANK ACADEMY / バンクアカデミー | 【2025年からでも遅くない】新NISAのやさしい始め方を超初心者向けに解説！おすすめ銘柄や手続きの流れも完全ガイド |
+| EOeNtyNdLVw | money_deny_title:おすすめ銘柄 | 32 | money | NISA | BANK ACADEMY / バンクアカデミー | 【世界一やさしい】iDeCoの入門知識や知っておくべき情報を解説！NISAとの比較、おすすめ銘柄、受け取り方の出口戦略も完全ガイド |
+| Newn9NY24WE | money_deny_title:買うべき | 31 | money | 投資 | 松井証券_MatsuiSecurities | "投資信託"の総まとめ!! ｢オルカン｣｢S&P500｣｢日経平均｣…初心者が買うべき投信はどれ？定期預金とも比較！【マヂカルラブリーと学ぶ 松井証券 資産運用!学べる予備校 Season1 #3】 |
+| td3uNiuPovQ | money_safety_scope | 30 | money | 投資 | 両学長 リベラルアーツ大学 | 【再放送】【改訂版】新しい「ほったらかし投資術」について解説【株式投資編】：（アニメ動画）第292回 |
+| KssJh3fhlQM | money_deny_title:おすすめ投資信託 | 30 | money | NISA | 節約オタクふゆこ | 【超初心者向け】新NISAはコレやっとけばOK！資産を増やす戦略を徹底解説【おすすめ投資信託】【インデックス投資】 |
+| vnIZNoMZk8M | money_deny_title:失敗します | 29 | money | NISA | 脱・税理士スガワラくん | 【新NISA】初心者は’’コレ’’で失敗します！お得な制度に潜む罠とは？ |
+| W4KTv2nPhgo | deny_title:絶対 | 29 | money | 家計 | 両学長 リベラルアーツ大学 | 【再放送】【家計管理の考え方】「絶対に把握すべき3つのこと」を解説します【お金の勉強 初級編】：（アニメ動画）第42回 |
+| gF2r8lp_DqY | money_deny_title:[0-9０-９]+万円.*貯め | 29 | money | 家計 | きみチャンネル | 【最新版】結局これが1番お金が貯まる！5週間やりくり節約主婦の楽しみながら緩い節約生活で100万円貯める習慣まとめ |
+| 3JBvYkIUjZE | money_deny_title:最強 | 29 | money | 投資 | がまぐち夫婦の節約チャンネル | 【投資初心者へ】結局インデックス投資が最強である理由を徹底解説！これからの日本は節約→貯金→投資が必須になります、、、。 |
+| iVdSpq4lle4 | money_deny_title:おすすめ銘柄 | 29 | money | NISA | BANK ACADEMY / バンクアカデミー | 【2026年からでも間に合う】新NISAの始め方を世界一やさしく解説！おすすめ銘柄や手続きの流れも総まとめ |
+| JGW8kh9YkEg | money_deny_title:おすすめ銘柄 | 29 | money | NISA | BANK ACADEMY / バンクアカデミー | 【決定版】50代・60代の新NISAのやさしい始め方！おすすめ銘柄や出口戦略も初心者向けに解説 |
+| tAUnHeTWOuc | money_deny_title:[0-9０-９]+万円.*貯め | 28 | money | 家計 | 4人家族ぴーちの節約術 | 【人生を変えた節約術】夫の手取り20万円台で4000万円貯めた方法15選！4人家族の節約生活 |
+| EL5J5GJDaUk | deny_title:誰でも | 28 | money | 家計 | 両学長 リベラルアーツ大学 | 【再放送】【誰でもできる！】目指せ+3万円！「貯まる家計簿」カスタマイズを紹介【貯める編】：（アニメ動画）第132回 |
+| Oqc9PzI_RTc | money_deny_title:老後安泰 | 28 | money | NISA | あき姉 元銀行員FPが教える40,50代向け資産形成術 | 【iDeco 始め方】40,50代が今からiDeCoやるならコレだけで老後安泰 |
+| ztWlPjrCx7E | money_deny_title:老後安泰 | 28 | money | NISA | ななこ【シニアとお金】 | 【月1万円の積立はヤバい】50代60代の新NISA！積立額は月○万円だと超優秀です！9割の人ははこれで老後安泰【資産運用/投資】 |
+| WxlXTghnG8M | deny_title:億り人 | 28 | money | NISA | PIVOT 公式チャンネル | 【企業型DCの徹底解説：前編】新NISAよりもお得な、企業型DCの仕組み／驚きの税制優遇／30年間で1900万円貯まる／iDeCo、NISAとの違い／アメリカで億り人が多い理由【投資家の思考法】 |
+| r8wcAFTmb7k | below_min_score_or_cutoff | 30 | money | NISA | BANK ACADEMY / バンクアカデミー | 【超初心者向け】つみたてNISAとは？基礎知識やメリットを丁寧に解説！ |
+| heIIAwHYywk | below_min_score_or_cutoff | 29 | money | NISA | BANK ACADEMY / バンクアカデミー | 【超初心者向け】iDeCo(個人型確定拠出年金)は本当におトク？メリットやデメリットなど入門知識を解説！ |
+| C4-F08EDAvw | below_min_score_or_cutoff | 29 | money | 投資 | BANK ACADEMY / バンクアカデミー | 【超初心者向け】投資信託とは？入門知識やメリット、デメリットを丁寧に解説！ |
+| wnUynxpxJS4 | below_min_score_or_cutoff | 28 | money | 投資 | 両学長 リベラルアーツ大学 | 【初心者向け】資産運用って結局どうすれば良いの？に対する具体的回答【超シンプルプラン】【株式投資編】（アニメ動画）：第17回 |
+| aoBmdoOeBYc | below_min_score_or_cutoff | 28 | money | 家計 | 両学長 リベラルアーツ大学 | 【家計管理の考え方】「絶対に把握すべき3つのこと」を解説します【お金の勉強 初級編】：（アニメ動画）第42回 |
+| iGcY6V5zNQ4 | below_min_score_or_cutoff | 28 | money | 投資 | BANK ACADEMY / バンクアカデミー | 【超初心者向け】インデックス投資の始め方！メリットやデメリットもあわせて解説 |
+| fAO7KqQ_dEk | below_min_score_or_cutoff | 27 | money | 家計 | 【SBI証券公式】ビジネスドライブ! | 【家計簿公開】借金300万円から脱却した30代主婦に密着！誰でも簡単にできる節約術と家計管理方法とは？\|密着！お金の達人 投資家たちのマイルールby SBI証券 |
+| dI8RvalbC_s | below_min_score_or_cutoff | 27 | money | 家計 | 節約主婦mari | 【貯金術】元浪費家が貯金できるようになった方法、浪費を抑えるコツ7選 |
+| uUz6mFXhI5A | below_min_score_or_cutoff | 27 | money | NISA | ひろゆけ【ひろゆき切り抜き】 | 2025年の新NISAおすすめ銘柄はコレ！以前に持っていた●●株は売りました…【ひろゆき 切り抜き】 |
+| KGZGhm5kGiw | below_min_score_or_cutoff | 27 | money | NISA | 両学長 リベラルアーツ大学 | 【お得なのはどっち？】NISAとiDeCoの税金の違い＆どちらを選べばよいかを解説【リベ大公式切り抜き】 |
+| jHrat4vwhFI | below_min_score_or_cutoff | 27 | money | NISA | 節約オタクふゆこ | 【新NISA始めた人に警告】新NISA制度でよくある勘違い6選【新NISA/つみたて投資枠/成長投資枠】 |
+| Ack4h5T9eW0 | below_min_score_or_cutoff | 27 | money | 投資 | BANK ACADEMY / バンクアカデミー | 【イラスト解説】投資信託の複利ってどう効いている？つみたてNISAにおける必須の知識！ |
+| 4ezOCPlgNVM | below_min_score_or_cutoff | 27 | money | 投資 | 投資うさぎ「会話で解説」 | 【新NISA】インデックス投資に複利効果はあるのか？ |
+| gxvsRqKPxCE | below_min_score_or_cutoff | 27 | money | 投資 | 両学長 リベラルアーツ大学 | 【再放送】【失敗回避法】インデックス投資の魅力と「失敗させないためのコツ」5選【株式投資編】：（アニメ動画）第239回 |
+| -eq0lde_KSU | below_min_score_or_cutoff | 27 | money | 投資 | 投資入門アニメ | 投資信託の複利はどう効くのか　基準価額と口数どう変わる？ |
+| 65iQ7_17vTs | below_min_score_or_cutoff | 27 | money | NISA | しばとん投資信託 | 【今すぐやめて】新NISAで50代・60代が高確率でやっちゃう５つの大損行為 |
+| NkpElNYzpIE | below_min_score_or_cutoff | 27 | money | 家計 | 両学長 リベラルアーツ大学 | 【お金の授業 29限目】家計管理をマスターしよう&家計改善チェックリスト【改訂版 お金の大学P154～P163】 |
+| j3cB3gr1aeg | below_min_score_or_cutoff | 27 | money | 家計 | komaの家計簿〜節約生活〜 | 【家計管理】徹底解説！キャッシュレスメインのお金の管理方法/節約専業主婦/手取り約30万円５人家族/ |
+| ZySlhNzy5mM | below_min_score_or_cutoff | 27 | money | 投資 | ダイヤモンド公式チャンネル | 『2026年の新NISAで買うべき投資信託は?』基本となるインデックス投信を選ぶポイントと注意点、3年目の新NISAで考えるべきこと、おススメ投資信託3本を紹介! |
+| 3CbHnh1LvcA | below_min_score_or_cutoff | 27 | money | 家計 | ひだくま夫婦の家計管理🧸 | 【初心者でも簡単】袋分け家計管理のやり方を紹介！│家計簿│給料日ルーティン│封筒貯金ファイル |
+| hNXxoo7IS64 | below_min_score_or_cutoff | 27 | money | 家計 | とんと | 【家計管理】来年の貯蓄準備はじめます🙂💪予算を組んでベストな貯蓄目標をたてる方法✏️｜音声あり |
+| xQk-HeUZ9pg | below_min_score_or_cutoff | 27 | money | 家計 | 4人家族ぴーちの節約術 | 【お金が永遠に増える】4500万円貯めた節約主婦の家計管理方法！4人家族の節約術/家計管理術 |
+| qDzIWzSSI20 | below_min_score_or_cutoff | 27 | money | NISA | FPナナコ【働く女性のお金の教養教室】 | はじめてでもやさしくわかる！iDeCoの超入門 |
+| QMkyAS4IKuA | below_min_score_or_cutoff | 26 | money | NISA | 両学長 リベラルアーツ大学 | 第7回 NISAと積立NISAって何？【お金の勉強 株式投資編】 |
+| 3J9Piu8nTCc | below_min_score_or_cutoff | 26 | money | NISA | 両学長 リベラルアーツ大学 | 【再放送】【2022年からほぼ全員対象】iDeCoは老後資金問題の解決策になるのか？よくある質問6つに回答【株式投資編】：（アニメ動画）第134回 |
+| u60vNsYEOZ0 | below_min_score_or_cutoff | 26 | money | 家計 | フェルミ漫画大学 | 【要約】見るだけでお金が貯まる 賢者のノート【水上克朗】 |
+| wp1MychqRIg | below_min_score_or_cutoff | 26 | money | 家計 | 4人家族ぴーちの節約術 | 【家計簿公開】4人家族月22万円で豊かな暮らし♪生活費を下げる方法！節約主婦の節約術 |
+| VLE32fv_eQg | below_min_score_or_cutoff | 26 | money | 家計 | 両学長 リベラルアーツ大学 | 【超キホン】家計管理に役立つ、リベ大流「予算の立て方」を分かりやすく紹介【リベ大公式切り抜き】 |
+| dK6S7_zygFg | below_min_score_or_cutoff | 26 | money | 家計 | 節約主婦mari | 【貯金のコツ】家計管理歴5年の私がおすすめしたい、長く続けるコツ7選 |
+| G9aXqQLGCNc | below_min_score_or_cutoff | 26 | money | NISA | アシスト労務チャンネル | 【iDeCo】しくみ・メリット・デメリットを社労士が解説！！ |
+| 7JFIwdxQq1o | below_min_score_or_cutoff | 25 | money | 投資 | ひろゆきの部屋【ひろゆき, hiroyuki】切り抜き | 【ひろゆき 投資】庶民が投資信託をやるとどれだけ損するか教えます。金持ち以外は絶対にやってはいけません【 切り抜き 積立NISA インデックスファンド 中田敦彦のyoutube大学 hiroyuki】 |
+| khIg-kYpy5I | below_min_score_or_cutoff | 25 | money | NISA | FLYING ACEアカデミー【資産形成チャンネル】 | 【会社員の方必見】『選択性確定拠出年金』と「iDeCo」はいったいどちらがお得⁉年収別シミュレーションで超分かりやすく解説！ |
+| r2aLEVJL7hI | below_min_score_or_cutoff | 25 | money | NISA | 大人の勉強会  【電卓マン】 | 【解説】iDeCoの基本について解説！　メリット？注意点？【大人の勉強会】 |
+| 7ld4-TbG1jA | below_min_score_or_cutoff | 25 | money | 投資 | 中川先生のやさしいビジネス研究 | 初心者の味方。投資信託、インデックスファンドとは？【お金の新常識13】 |
+| hAmZpHZnp5s | below_min_score_or_cutoff | 24 | money | 家計 | 節約主婦mari | 【お金を貯めたい人へ】貯まる人の特徴4選！真似してみよう/節約/家計簿 |
+| vfqXnXkDyPM | below_min_score_or_cutoff | 24 | money | 家計 | あれもこれもん | 【お金を貯める方法】私が成功した貯金方法3選｜貯金が増える仕組み｜真似すれば絶対貯まる！｜貯金をする習慣作り【無理をしない貯金術】 |
+| lZX9TCmhBLI | below_min_score_or_cutoff | 24 | money | 投資 | トウシル [楽天証券] | 【3分でわかる投資信託】ゼロから始める！投資信託（その１：仕組み編） |
+| Po1565UmpSc | below_min_score_or_cutoff | 24 | money | 投資 | ZAi探の解説動画チャンネル | インデックス投資とは何か？わかりやすく解説【株式投資】 |
+| -l8V23HR-OQ | below_min_score_or_cutoff | 24 | money | 家計 | ひだくま夫婦の家計管理🧸 | 【家計管理の基本】項目ごとの予算を立てる方法を紹介！│家計簿 |
+| EHznU-2P2SU | below_min_score_or_cutoff | 21 | money | 投資 | FFG公式チャンネル | 【投資信託】インデックス運用とアクティブ運用の違い　#投資信託 #インデックス #アクティブ |
+| bekqvm_Hfsw | channel_cap | 29 | money | NISA | コアラ先生の時事ネタ祭り | 【アニメで解説】初心者でもわかるiDeCo(イデコ)の始め方～実践編～ |
+| a1VE2ZxsZPE | channel_cap | 28 | money | 投資 | コアラ先生の時事ネタ祭り | 【完全図解】投資信託ってどんな仕組み？ETFとの違いは？新NISA必須知識！ |
+| E-9w7p6hVbs | channel_cap | 28 | money | 投資 | コアラ先生の時事ネタ祭り | 【アニメで解説】株式投資初心者が最初にやるべき「インデックス投資」とは？ |

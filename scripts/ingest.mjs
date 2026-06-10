@@ -198,6 +198,7 @@ async function main() {
   const excludeIds = new Set(config.exclude_ytids || []);
   const weakTitleTerms = config.weak_title_terms || [];
   const denyPatterns = compileDenyPatterns(config.deny_title_patterns || []);
+  const moneyDenyPatterns = compileDenyPatterns(config.money_deny_title_patterns || []);
   const minScore = args["min-score"] === undefined ? null : toNumber(args["min-score"], 28);
   const drafts = unwrapItems(await readJson(inputPath));
   const skipped = [];
@@ -248,9 +249,16 @@ async function main() {
       skipped.push({ ...skippedBase, reason: `title_risk:${riskTerms.join("/")}` });
       continue;
     }
-    if (draft.genre === "money" && !isMoneySafeTitle(draft.title)) {
-      skipped.push({ ...skippedBase, reason: "money_safety_scope" });
-      continue;
+    if (draft.genre === "money") {
+      const moneyDenyPattern = matchesDenyPattern(draft.title, moneyDenyPatterns);
+      if (moneyDenyPattern) {
+        skipped.push({ ...skippedBase, reason: `money_deny_title:${moneyDenyPattern}` });
+        continue;
+      }
+      if (!isMoneySafeTitle(draft.title)) {
+        skipped.push({ ...skippedBase, reason: "money_safety_scope" });
+        continue;
+      }
     }
     const video = toVideo(draft);
     validateVideo(video);
