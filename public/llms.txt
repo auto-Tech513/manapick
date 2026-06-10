@@ -22,19 +22,25 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - スコアには確認済と暫定があり、暫定動画は順次、人の視聴確認で確定します。
 
 ## ガイド記事
-- 生成AIロードマップ記事: https://manapick.app/guide/generative-ai/
-- Pythonロードマップ記事: https://manapick.app/guide/python/
-- Excelデータ分析ロードマップ記事: https://manapick.app/guide/excel-data/
-- 英語ロードマップ記事: https://manapick.app/guide/english/
+- 生成AIロードマップ記事: https://manapick.pages.dev/guide/generative-ai/
+- Pythonロードマップ記事: https://manapick.pages.dev/guide/python/
+- 動画編集ロードマップ記事: https://manapick.pages.dev/guide/video-editing/
+- 英語ロードマップ記事: https://manapick.pages.dev/guide/english/
+- Excelデータ分析ロードマップ記事: https://manapick.pages.dev/guide/excel-data/
+- Webマーケティングロードマップ記事: https://manapick.pages.dev/guide/web-marketing/
+- Office・資料作成ロードマップ記事: https://manapick.pages.dev/guide/office-skills/
+- 資格勉強ロードマップ記事: https://manapick.pages.dev/guide/certification/
+- 会計資格ロードマップ記事: https://manapick.pages.dev/guide/bookkeeping/
+- お金・投資ロードマップ記事: https://manapick.pages.dev/guide/money-basics/
 
 ## 主要URL
-- トップ: https://manapick.app/
-- 採点方法: https://manapick.app/about-score/
-- お問い合わせ: https://manapick.app/contact/
-- 運営者情報: https://manapick.app/operator/
-- 免責事項: https://manapick.app/disclaimer/
-- プライバシーポリシー: https://manapick.app/privacy/
-- サイトマップ: https://manapick.app/sitemap.xml
+- トップ: https://manapick.pages.dev/
+- 採点方法: https://manapick.pages.dev/about-score/
+- お問い合わせ: https://manapick.pages.dev/contact/
+- 運営者情報: https://manapick.pages.dev/operator/
+- 免責事項: https://manapick.pages.dev/disclaimer/
+- プライバシーポリシー: https://manapick.pages.dev/privacy/
+- サイトマップ: https://manapick.pages.dev/sitemap.xml
 
 ## クローラー向け補足
 Manapickの本文、見出し、動画タイトル、レビューはHTMLテキストとして提供しています。検索・絞り込みUIは補助機能であり、主要な動画詳細ページは静的URLで参照できます。

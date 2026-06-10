@@ -21,6 +21,18 @@ type GuidePageProps = {
 const buildDate = new Date();
 const buildDateIso = buildDate.toISOString();
 const guideOgImage = absoluteUrl("/brand/ogp-manapick.png");
+const guideIconSources: Record<string, string> = {
+  ai: "/brand/icon-ai.png",
+  prog: "/brand/icon-prog.png",
+  video: "/brand/icon-video.png",
+  english: "/brand/icon-english.png",
+  data: "/brand/icon-data.png",
+  marke: "/brand/icon-marke.png",
+  biz: "/brand/icon-biz.png",
+  shikaku: "/brand/icon-shikaku.png",
+  kaikei: "/brand/icon-kaikei.png",
+  money: "/brand/icon-money.png"
+};
 
 export const dynamicParams = false;
 
@@ -77,6 +89,11 @@ export default async function GuidePage({ params }: GuidePageProps) {
   const totalMinutes = guide.steps.reduce((sum, step) => {
     return sum + guideStepVideos(step).reduce((stepSum, item) => stepSum + item.video.minutes, 0);
   }, 0);
+  const readingMinutes = guideReadingMinutes(guide);
+  const learnPoints = guideLearnPoints(guide);
+  const stumbleRows = guideStumbleRows(guide);
+  const studyPlans = guideStudyPlans(guide, totalMinutes);
+  const relatedLinks = guideRelatedLinks(guide);
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -162,10 +179,36 @@ export default async function GuidePage({ params }: GuidePageProps) {
           <p>{strongText(guide.intro)}</p>
           <div className="guide-trust-row" aria-label="記事の信頼情報">
             <span>最終更新日: {formatDate(buildDate)}</span>
+            <span>読了目安: 約{readingMinutes}分</span>
             <a href="/about-score/">採点方法を見る</a>
             <span>情報商材誘導・誇大表現の動画は除外</span>
           </div>
         </header>
+
+        <section className="guide-section guide-intro-section" aria-labelledby="guide-overview-title">
+          <h2 id="guide-overview-title">この記事でわかること</h2>
+          <div className="guide-point-box">
+            <ul>
+              {learnPoints.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
+            <p><strong>想定読者：</strong>{guide.audience ?? genreDisplayName(guide.genre) + "を無料動画で基礎から学びたい社会人向けです。"}</p>
+            <p><strong>合計視聴時間：</strong>{totalVideos}本・約{durationLabel(totalMinutes)}。動画カードの時間はvideos.jsonから自動で表示しています。</p>
+          </div>
+          <details className="guide-toc">
+            <summary>目次</summary>
+            <ol>
+              <li><a href="#guide-conclusion-title">結論：この順番で見れば最短です</a></li>
+              <li><a href="#guide-reason-title">なぜこの順番か</a></li>
+              <li><a href="#guide-videos-title">各STEPの厳選動画</a></li>
+              <li><a href="#guide-next-title">つまずきポイントと回避策</a></li>
+              <li><a href="#guide-plan-title">学習プラン例</a></li>
+              <li><a href="#guide-faq-title">FAQ</a></li>
+              <li><a href="#guide-cta-title">関連ロードマップ</a></li>
+            </ol>
+          </details>
+        </section>
 
         <section className="guide-section" aria-labelledby="guide-conclusion-title">
           <h2 id="guide-conclusion-title">結論：この順番で見れば最短です</h2>
@@ -198,7 +241,10 @@ export default async function GuidePage({ params }: GuidePageProps) {
               return (
                 <section key={step.title} className="guide-step-block">
                   <div className="guide-step-heading">
-                    <h3>{step.title}</h3>
+                    <h3>
+                      <GuideGenreIcon genre={guide.genre} />
+                      <span>{step.title}</span>
+                    </h3>
                     <span>{items.length}本・約{stepMinutes}分</span>
                   </div>
                   <div className="guide-video-grid">
@@ -213,7 +259,27 @@ export default async function GuidePage({ params }: GuidePageProps) {
         </section>
 
         <section className="guide-section" aria-labelledby="guide-next-title">
-          <h2 id="guide-next-title">よくあるつまずきと次の一歩</h2>
+          <h2 id="guide-next-title">つまずきポイントと回避策</h2>
+          <div className="guide-table-wrap">
+            <table className="guide-table">
+              <thead>
+                <tr>
+                  <th>つまずき</th>
+                  <th>原因</th>
+                  <th>回避策</th>
+                </tr>
+              </thead>
+              <tbody>
+                {stumbleRows.map((row) => (
+                  <tr key={row.stumble}>
+                    <td>{row.stumble}</td>
+                    <td>{row.cause}</td>
+                    <td>{row.solution}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
           <ul className="guide-advice-list">
             {guide.stumblingBlocks.map((item) => (
               <li key={item.label}>
@@ -222,6 +288,30 @@ export default async function GuidePage({ params }: GuidePageProps) {
               </li>
             ))}
           </ul>
+        </section>
+
+        <section className="guide-section" aria-labelledby="guide-plan-title">
+          <h2 id="guide-plan-title">学習プラン例</h2>
+          <div className="guide-table-wrap">
+            <table className="guide-table">
+              <thead>
+                <tr>
+                  <th>進め方</th>
+                  <th>ペース</th>
+                  <th>具体例</th>
+                </tr>
+              </thead>
+              <tbody>
+                {studyPlans.map((plan) => (
+                  <tr key={plan.label}>
+                    <td>{plan.label}</td>
+                    <td>{plan.pace}</td>
+                    <td>{plan.plan}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section className="guide-section" aria-labelledby="guide-faq-title">
@@ -239,7 +329,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         <section className="guide-section guide-section-muted" aria-labelledby="guide-cta-title">
           <h2 id="guide-cta-title">関連ロードマップ</h2>
           <div className="guide-cta-row">
-            {guide.relatedLinks.map((link) => (
+            {relatedLinks.map((link) => (
               <a key={link.href + link.label} href={link.href}>{link.label}</a>
             ))}
           </div>
@@ -317,6 +407,89 @@ function GuidePrSection({ guide }: { guide: Guide }) {
       </div>
     </section>
   );
+}
+
+function GuideGenreIcon({ genre }: { genre: string }) {
+  const src = guideIconSources[genre];
+  if (!src) return null;
+
+  return (
+    <Image
+      src={src}
+      alt={genreDisplayName(genre) + "のアイコン"}
+      width={28}
+      height={28}
+      className="guide-step-icon"
+    />
+  );
+}
+
+function guideLearnPoints(guide: Guide) {
+  if (guide.learnPoints && guide.learnPoints.length >= 3) return guide.learnPoints.slice(0, 3);
+  return guide.conclusionBullets.slice(0, 3).map((item) => item.text);
+}
+
+function guideStumbleRows(guide: Guide) {
+  if (guide.stumbleTable && guide.stumbleTable.length >= 3) return guide.stumbleTable.slice(0, 3);
+
+  return guide.stumblingBlocks.slice(0, 3).map((item) => ({
+    stumble: item.label,
+    cause: "順番や目的が曖昧なまま進めている",
+    solution: item.text
+  }));
+}
+
+function guideStudyPlans(guide: Guide, totalMinutes: number) {
+  if (guide.studyPlans && guide.studyPlans.length >= 2) return guide.studyPlans;
+
+  return [
+    {
+      label: "平日15分×2週間",
+      pace: "1日15分で小分け視聴",
+      plan: "最初の週でSTEP1〜2を見て、2週目にSTEP3と復習へ進む"
+    },
+    {
+      label: "週末集中",
+      pace: "土日で約" + durationLabel(Math.min(totalMinutes, 240)),
+      plan: "動画を一気に見ず、STEPごとに手を動かす時間を挟む"
+    }
+  ];
+}
+
+function guideRelatedLinks(guide: Guide) {
+  const links = [
+    ...guide.relatedLinks,
+    {
+      label: genreDisplayName(guide.genre) + "の動画一覧",
+      href: "/?genre=" + guide.genre + "#search"
+    },
+    {
+      label: "トップの学習ロードマップへ",
+      href: "/#roadmap"
+    }
+  ];
+  const seen = new Set<string>();
+  return links.filter((link) => {
+    const key = link.href + link.label;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+function guideReadingMinutes(guide: Guide) {
+  const text = [
+    guide.title,
+    guide.description,
+    guide.intro,
+    ...guide.conclusionBullets.map((item) => item.label + item.text),
+    ...guide.reasonParagraphs,
+    ...guide.steps.flatMap((step) => [step.title, ...step.videos.map((item) => item.why)]),
+    ...guide.stumblingBlocks.map((item) => item.label + item.text),
+    ...guide.faq.map((item) => item.question + item.answer)
+  ].join("");
+
+  return Math.max(3, Math.ceil(text.length / 520));
 }
 
 function GuideVideoCard({ video, why }: { video: Video; why: string }) {

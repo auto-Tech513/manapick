@@ -34,6 +34,19 @@ const genreLines = publishedGenres.map((genre) => {
   return `- ${displayGenreName(genre)}${subgenres}`;
 });
 
+const guideLines = [
+  ["生成AIロードマップ記事", "/guide/generative-ai/"],
+  ["Pythonロードマップ記事", "/guide/python/"],
+  ["動画編集ロードマップ記事", "/guide/video-editing/"],
+  ["英語ロードマップ記事", "/guide/english/"],
+  ["Excelデータ分析ロードマップ記事", "/guide/excel-data/"],
+  ["Webマーケティングロードマップ記事", "/guide/web-marketing/"],
+  ["Office・資料作成ロードマップ記事", "/guide/office-skills/"],
+  ["資格勉強ロードマップ記事", "/guide/certification/"],
+  ["会計資格ロードマップ記事", "/guide/bookkeeping/"],
+  ["お金・投資ロードマップ記事", "/guide/money-basics/"]
+].map(([label, route]) => `- ${label}: ${absoluteUrl(siteUrl, route)}`);
+
 const lines = [
   "# Manapick",
   "",
@@ -50,10 +63,7 @@ const lines = [
   "- スコアには確認済と暫定があり、暫定動画は順次、人の視聴確認で確定します。",
   "",
   "## ガイド記事",
-  `- 生成AIロードマップ記事: ${absoluteUrl(siteUrl, "/guide/generative-ai/")}`,
-  `- Pythonロードマップ記事: ${absoluteUrl(siteUrl, "/guide/python/")}`,
-  `- Excelデータ分析ロードマップ記事: ${absoluteUrl(siteUrl, "/guide/excel-data/")}`,
-  `- 英語ロードマップ記事: ${absoluteUrl(siteUrl, "/guide/english/")}`,
+  ...guideLines,
   "",
   "## 主要URL",
   `- トップ: ${absoluteUrl(siteUrl, "/")}`,

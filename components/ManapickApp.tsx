@@ -119,8 +119,14 @@ const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
       { label: "採点方法", href: "/about-score/" },
       { label: "生成AIロードマップ", href: "/guide/generative-ai/" },
       { label: "Pythonロードマップ", href: "/guide/python/" },
+      { label: "動画編集ロードマップ", href: "/guide/video-editing/" },
+      { label: "英語ロードマップ", href: "/guide/english/" },
       { label: "Excelデータ分析ロードマップ", href: "/guide/excel-data/" },
-      { label: "英語ロードマップ", href: "/guide/english/" }
+      { label: "Webマーケロードマップ", href: "/guide/web-marketing/" },
+      { label: "Office・資料ロードマップ", href: "/guide/office-skills/" },
+      { label: "資格ロードマップ", href: "/guide/certification/" },
+      { label: "会計資格ロードマップ", href: "/guide/bookkeeping/" },
+      { label: "お金・投資ロードマップ", href: "/guide/money-basics/" }
     ]
   },
   {
@@ -367,8 +373,14 @@ const genreIconSources: Record<string, string> = {
 const roadmapGuideLinks: Record<string, { href: string }> = {
   ai: { href: "/guide/generative-ai/" },
   prog: { href: "/guide/python/" },
+  video: { href: "/guide/video-editing/" },
   english: { href: "/guide/english/" },
-  data: { href: "/guide/excel-data/" }
+  data: { href: "/guide/excel-data/" },
+  marke: { href: "/guide/web-marketing/" },
+  biz: { href: "/guide/office-skills/" },
+  shikaku: { href: "/guide/certification/" },
+  kaikei: { href: "/guide/bookkeeping/" },
+  money: { href: "/guide/money-basics/" }
 };
 
 export default function ManapickApp() {
