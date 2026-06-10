@@ -1,10 +1,23 @@
 "use client";
 
+import { useEffect } from "react";
 import { useLocalList } from "@/lib/useLocalList";
 
 export default function VideoActions({ ytid }: { ytid: string }) {
   const watchlist = useLocalList("manapick:watchlist:v1");
   const watched = useLocalList("manapick:watched:v1");
+
+  useEffect(() => {
+    try {
+      const key = "manapick:recent:v1";
+      const raw = window.localStorage.getItem(key);
+      const list: string[] = raw ? JSON.parse(raw) : [];
+      const next = [ytid, ...list.filter((item) => item !== ytid)].slice(0, 12);
+      window.localStorage.setItem(key, JSON.stringify(next));
+    } catch {
+      // The action controls should still render when localStorage is unavailable.
+    }
+  }, [ytid]);
 
   if (!watchlist.ready || !watched.ready) return null;
 

@@ -31,10 +31,33 @@ export function useLocalList(key: string) {
     });
   }
 
+  function push(id: string, limit = 12) {
+    setItems((previous) => {
+      const next = [id, ...previous.filter((item) => item !== id)].slice(0, limit);
+      try {
+        window.localStorage.setItem(key, JSON.stringify(next));
+      } catch {
+        // Keep the UI usable even when persistence is unavailable.
+      }
+      return next;
+    });
+  }
+
+  function clear() {
+    setItems([]);
+    try {
+      window.localStorage.removeItem(key);
+    } catch {
+      // Keep the UI usable even when persistence is unavailable.
+    }
+  }
+
   return {
     items,
     ready,
     toggle,
+    push,
+    clear,
     has: (id: string) => items.includes(id)
   };
 }

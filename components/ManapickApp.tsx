@@ -396,6 +396,8 @@ export default function ManapickApp() {
   const menuSwipeRef = useRef<{ x: number; y: number; edge: boolean; ignored: boolean } | null>(null);
   const watchlist = useLocalList("manapick:watchlist:v1");
   const watched = useLocalList("manapick:watched:v1");
+  const recent = useLocalList("manapick:recent:v1");
+  const recentSearches = useLocalList("manapick:searches:v1");
 
   const selectedGenreData =
     selectedGenre === "all" ? null : genres.find((genre) => genre.key === selectedGenre) ?? null;
@@ -506,6 +508,13 @@ export default function ManapickApp() {
 
   const heroCarouselSlides = useMemo(() => buildHeroCarouselSlides(), []);
   const popularFallbackVideos = useMemo(() => rankedVideosByTab("popular", 12), []);
+  const recentVideos = useMemo(() => {
+    const byId = new Map(videos.map((video) => [video.ytid, video]));
+    return recent.items
+      .map((ytid) => byId.get(ytid))
+      .filter((video): video is Video => video !== undefined && publishedGenreKeys.includes(video.genre))
+      .slice(0, 8);
+  }, [recent.items]);
 
   const searchSuggestions = useMemo(() => (searchActive ? filteredVideos.slice(0, 5) : []), [filteredVideos, searchActive]);
   const liveSearchTotal = searchActive ? filteredVideos.length : videos.length;
@@ -725,7 +734,13 @@ export default function ManapickApp() {
     };
   }, [menuOpen]);
 
+  function saveRecentSearch(value = searchDraft || keyword) {
+    const term = value.trim();
+    if (term) recentSearches.push(term, 5);
+  }
+
   function openVideoPage(video: Video) {
+    saveRecentSearch();
     setSuggestionsOpen(false);
     window.location.href = videoDetailHref(video);
   }
@@ -912,7 +927,13 @@ export default function ManapickApp() {
               activeIndex={activeSuggestionIndex}
               open={suggestionsOpen}
               popularVideos={popularFallbackVideos}
+              recentSearches={recentSearches}
               onSelect={openVideoPage}
+              onRecentSearchSelect={(term) => {
+                setSearchDraft(term);
+                setKeyword(term);
+                setSuggestionsOpen(true);
+              }}
               onClose={() => setSuggestionsOpen(false)}
             />
           </div>
@@ -1056,6 +1077,8 @@ export default function ManapickApp() {
           </div>
         </div>
       </section>
+
+      {recent.ready && recentVideos.length > 0 ? <RecentStrip videos={recentVideos} /> : null}
 
       {weeklyPick ? (
         <section className="weekly-pick-section desktop-weekly-pick-section" aria-labelledby="weekly-pick-title">
@@ -1433,6 +1456,18 @@ export default function ManapickApp() {
         </section>
       ) : null}
 
+      <MobileBottomNav
+        watchlistOnly={watchlistOnly}
+        onExplore={showGenrePicker}
+        onRoadmap={() => scrollToElement("roadmap")}
+        onWatchlist={() => {
+          setWatchlistOnly(true);
+          resetPageParam();
+          scrollToResults();
+        }}
+        onMenu={() => setMenuOpen(true)}
+      />
+
       {showBackToTop ? (
         <button
           type="button"
@@ -1495,7 +1530,9 @@ function LiveSearchPanel({
   activeIndex,
   open,
   popularVideos,
+  recentSearches,
   onSelect,
+  onRecentSearchSelect,
   onClose
 }: {
   id: string;
@@ -1505,7 +1542,9 @@ function LiveSearchPanel({
   activeIndex: number;
   open: boolean;
   popularVideos: Video[];
+  recentSearches: LocalListState;
   onSelect: (video: Video) => void;
+  onRecentSearchSelect: (term: string) => void;
   onClose: () => void;
 }) {
   const hasQuery = query.trim().length > 0;
@@ -1513,7 +1552,8 @@ function LiveSearchPanel({
   const panelClassName = [
     "live-search-panel",
     open ? "is-open" : "",
-    hasQuery ? "has-query" : "is-empty-query"
+    hasQuery ? "has-query" : "is-empty-query",
+    !hasQuery && recentSearches.ready && recentSearches.items.length > 0 ? "has-recent-searches" : ""
   ].filter(Boolean).join(" ");
 
   return (
@@ -1551,6 +1591,21 @@ function LiveSearchPanel({
           ))}
         </ol>
       ) : null}
+      {!hasQuery && recentSearches.ready && recentSearches.items.length > 0 ? (
+        <div className="recent-searches" aria-label="最近の検索">
+          <p>最近の検索</p>
+          <div>
+            {recentSearches.items.slice(0, 5).map((term) => (
+              <button key={term} type="button" onMouseDown={(event) => event.preventDefault()} onClick={() => onRecentSearchSelect(term)}>
+                {term}
+              </button>
+            ))}
+          </div>
+          <button type="button" className="recent-searches-clear" onMouseDown={(event) => event.preventDefault()} onClick={() => recentSearches.clear()}>
+            履歴を消す
+          </button>
+        </div>
+      ) : null}
       {hasQuery && total === 0 ? (
         <div className="live-search-empty">
           <p>条件を少し広げるか、人気の動画から始められます。</p>
@@ -1564,6 +1619,72 @@ function LiveSearchPanel({
         </div>
       ) : null}
     </div>
+  );
+}
+
+function RecentStrip({ videos }: { videos: Video[] }) {
+  return (
+    <section className="recent-strip" aria-labelledby="recent-strip-title">
+      <div className="recent-strip-inner">
+        <div className="recent-strip-heading">
+          <p className="section-eyebrow">続きから</p>
+          <h2 id="recent-strip-title">最近見た動画</h2>
+        </div>
+        <div className="recent-strip-track" role="list">
+          {videos.map((video) => (
+            <a key={video.ytid} href={videoDetailHref(video)} className="recent-video-card" role="listitem">
+              <span className="recent-video-thumb">
+                <Image
+                  src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"}
+                  alt={thumbnailAlt(video)}
+                  width={240}
+                  height={135}
+                  sizes="(min-width: 760px) 220px, 58vw"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+              </span>
+              <span className="recent-video-title">{video.title}</span>
+              <span className="recent-video-meta">{genreLabel(video.genre)} / {scoreText(video)} / {video.minutes}分</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function MobileBottomNav({
+  watchlistOnly,
+  onExplore,
+  onRoadmap,
+  onWatchlist,
+  onMenu
+}: {
+  watchlistOnly: boolean;
+  onExplore: () => void;
+  onRoadmap: () => void;
+  onWatchlist: () => void;
+  onMenu: () => void;
+}) {
+  return (
+    <nav className="mobile-bottom-nav" aria-label="クイックナビ">
+      <button type="button" onClick={onExplore}>
+        <span aria-hidden="true">🔎</span>
+        <span>探す</span>
+      </button>
+      <button type="button" onClick={onRoadmap}>
+        <span aria-hidden="true">🗺️</span>
+        <span>ロードマップ</span>
+      </button>
+      <button type="button" aria-pressed={watchlistOnly} onClick={onWatchlist}>
+        <span aria-hidden="true">🔖</span>
+        <span>あとで見る</span>
+      </button>
+      <button type="button" onClick={onMenu}>
+        <span aria-hidden="true">☰</span>
+        <span>メニュー</span>
+      </button>
+    </nav>
   );
 }
 
