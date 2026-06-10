@@ -4708,7 +4708,7 @@ img {
 
   .hero-container {
     gap: 16px;
-    padding-block: 22px 18px;
+    padding-block: 18px 8px;
   }
 
   .hero-copy-column {
@@ -4758,6 +4758,30 @@ img {
     height: 16px;
   }
 
+  .why-section {
+    padding-top: 26px;
+  }
+
+  .recent-strip-inner {
+    padding-block: 10px;
+  }
+
+  .weekly-pick-section .weekly-pick-shell {
+    padding-block: 16px;
+  }
+
+  .roadmap-shell {
+    padding-block: 24px;
+  }
+
+  section[aria-label="動画一覧"] {
+    padding-block: 18px;
+  }
+
+  .video-review-list p {
+    font-size: max(16px, 0.95rem);
+  }
+
   .hero-score-link,
   .hero-proof {
     display: none;
@@ -4784,6 +4808,7 @@ img {
     display: grid;
     gap: 10px;
     min-width: 0;
+    padding-block: 16px;
   }
 
   .mobile-weekly-pick-section .weekly-pick-heading {
@@ -4950,6 +4975,10 @@ img {
     opacity: 1;
     padding: 8px;
     visibility: visible;
+  }
+
+  .mobile-genre-dropdown:not(.is-open) .mobile-genre-menu {
+    transition: none;
   }
 
   .mobile-genre-option {

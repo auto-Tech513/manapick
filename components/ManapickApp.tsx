@@ -795,12 +795,14 @@ export default function ManapickApp() {
   function scrollToElement(elementId: string) {
     window.requestAnimationFrame(() => {
       window.requestAnimationFrame(() => {
-        const target = document.getElementById(elementId);
-        if (!target) return;
-        const stickyOffset = (document.querySelector(".category-tab-nav")?.getBoundingClientRect().height ?? 0) + 16;
-        const top = target.getBoundingClientRect().top + window.scrollY - stickyOffset;
-        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        window.scrollTo({ top: Math.max(0, top), behavior: reducedMotion ? "auto" : "smooth" });
+        window.requestAnimationFrame(() => {
+          const target = document.getElementById(elementId);
+          if (!target) return;
+          const stickyOffset = (document.querySelector(".category-tab-nav")?.getBoundingClientRect().height ?? 0) + 16;
+          const top = target.getBoundingClientRect().top + window.scrollY - stickyOffset;
+          const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          window.scrollTo({ top: Math.max(0, top), behavior: reducedMotion ? "auto" : "smooth" });
+        });
       });
     });
   }
@@ -824,8 +826,8 @@ export default function ManapickApp() {
   }
 
   function handleMobileGenreSelect(nextGenre: string) {
-    handleGenreChange(nextGenre);
     setMobileGenreDropdownOpen(false);
+    handleGenreChange(nextGenre, nextGenre === "all" ? "results" : "topics");
   }
 
   function scrollToTop() {
