@@ -5,6 +5,16 @@ import { absoluteUrl, videoPath, videos } from "@/lib/manapick";
 const homeTitle = "Manapick | 学び直しを、最短ルートに。";
 const homeDescription = "社会人のリスキリングに役立つYouTube学習動画を、独自3行レビューとロードマップでキュレーションするメディア。";
 const homeOgImage = absoluteUrl("/brand/ogp-manapick.png");
+const homeFaq = [
+  {
+    "@type": "Question",
+    name: "YouTubeで直接探すのと何が違いますか？",
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: "YouTubeのおすすめは視聴時間を基準に表示されますが、Manapickは学習に役立つかどうかだけを7軸35点満点で採点し、煽り・誇大系の動画は掲載しません。さらに初級→中級→上級のロードマップで見る順番まで設計しているため、次に見る一本を迷わず決められます。"
+    }
+  }
+];
 
 export const metadata: Metadata = {
   title: homeTitle,
@@ -36,23 +46,31 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const itemList = {
+  const structuredData = {
     "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Manapick 学習動画一覧",
-    itemListElement: videos.map((video, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      url: absoluteUrl(videoPath(video.ytid)),
-      name: video.title
-    }))
+    "@graph": [
+      {
+        "@type": "ItemList",
+        name: "Manapick 学習動画一覧",
+        itemListElement: videos.map((video, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          url: absoluteUrl(videoPath(video.ytid)),
+          name: video.title
+        }))
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: homeFaq
+      }
+    ]
   };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList).replace(/</g, "\\u003c") }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
       <ManapickApp />
     </>

@@ -1080,6 +1080,8 @@ export default function ManapickApp() {
         </div>
       </section>
 
+      <WhyManapickSection />
+
       {recent.ready && recentVideos.length > 0 ? <RecentStrip videos={recentVideos} /> : null}
 
       {weeklyPick ? (
@@ -1621,6 +1623,30 @@ function LiveSearchPanel({
         </div>
       ) : null}
     </div>
+  );
+}
+
+function WhyManapickSection() {
+  return (
+    <section className="why-section" aria-labelledby="why-title">
+      <p className="section-eyebrow">なぜManapick？</p>
+      <h2 id="why-title" className="section-title">YouTubeで直接探すのと、何が違う？</h2>
+      <div className="why-grid">
+        <div className="why-card">
+          <p className="why-pain">おすすめ欄は「視聴時間」を最適化する</p>
+          <p className="why-answer">Manapickは「学べるか」だけを7軸35点で採点。広告収益と無関係に選びます。</p>
+        </div>
+        <div className="why-card">
+          <p className="why-pain">釣りサムネや「誰でも稼げる」系が混ざる</p>
+          <p className="why-answer">煽り・効果保証系の動画は、採点する前に不採用。公式動画だけを掲載します。</p>
+        </div>
+        <div className="why-card">
+          <p className="why-pain">「次に何を見るか」で迷子になる</p>
+          <p className="why-answer">初級→中級→上級のロードマップで順番まで設計。視聴済みチェックで進捗も見えます。</p>
+        </div>
+      </div>
+      <p className="why-tagline">Manapickは、動画を見るサイトではなく「次に見る一本」を最短で決めるためのサイトです。</p>
+    </section>
   );
 }
 
