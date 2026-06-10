@@ -1647,14 +1647,32 @@ function WhyManapickSection() {
       <h2 id="why-title" className="section-title">YouTubeで直接探すのと、何が違う？</h2>
       <div className="why-grid">
         <div className="why-card">
+          <span className="why-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="m5 12 4 4L19 6" />
+              <circle cx="12" cy="12" r="10" />
+            </svg>
+          </span>
           <p className="why-pain">おすすめ欄は「視聴時間」を最適化する</p>
           <p className="why-answer">Manapickは「学べるか」だけを7軸35点で採点。広告収益と無関係に選びます。</p>
         </div>
         <div className="why-card">
+          <span className="why-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6z" />
+              <path d="m9 12 2 2 4-5" />
+            </svg>
+          </span>
           <p className="why-pain">釣りサムネや「誰でも稼げる」系が混ざる</p>
           <p className="why-answer">煽り・効果保証系の動画は、採点する前に不採用。公式動画だけを掲載します。</p>
         </div>
         <div className="why-card">
+          <span className="why-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M5 18c4-9 9 0 14-9" />
+              <path d="M16 7h4v4" />
+            </svg>
+          </span>
           <p className="why-pain">「次に何を見るか」で迷子になる</p>
           <p className="why-answer">初級→中級→上級のロードマップで順番まで設計。視聴済みチェックで進捗も見えます。</p>
         </div>
