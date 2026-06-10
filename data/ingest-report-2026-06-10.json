@@ -6251,69 +6251,6 @@
       "publishedAt": "2025-12-12T10:00:00Z"
     },
     {
-      "genre": "money",
-      "sub": "NISA",
-      "ytid": "6tSC9d1g3qU",
-      "level": "初級",
-      "minutes": 14,
-      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
-      "score": 29,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 3,
-          "note": "実用性は視聴確認が必要"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 5,
-          "note": "公開から約1年半以内で鮮度が高い"
-        },
-        {
-          "axis": "分かりやすさ",
-          "score": 3,
-          "note": "説明の分かりやすさは要確認"
-        },
-        {
-          "axis": "体系性",
-          "score": 3,
-          "note": "単発Tipsの可能性があり要確認"
-        },
-        {
-          "axis": "信頼性",
-          "score": 5,
-          "note": "広く視聴されている候補"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 5,
-          "note": "社会人が見切りやすい長さ"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "【超改正】2026年4月､iDeCoが不要になる人続出！年12万円の節税も【会社員･自営業･公務員/企業型DC確定拠出年金･マッチング/DB確定給付･共済/手数料･出口戦略/いつから･わかりやすく】",
-      "url": "https://www.youtube.com/watch?v=6tSC9d1g3qU",
-      "tags": [
-        "NISA",
-        "iDeCo",
-        "仕組み",
-        "入門",
-        "わかりやすく"
-      ],
-      "review": [
-        "年の制度改正を見据え、iDeCoと企業型DCの仕組みを比較解説しています。",
-        "会社員や自営業など属性ごとに異なる拠出条件や税制メリットを整理しています。",
-        "出口戦略や手数料の構造まで含め、制度の変遷を体系的に網羅した内容です。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 1913110,
-      "publishedAt": "2025-10-05T15:01:41Z"
-    },
-    {
       "genre": "biz",
       "sub": "Word",
       "ytid": "PyJU6Ba53XE",
@@ -16480,68 +16417,6 @@
     {
       "genre": "money",
       "sub": "NISA",
-      "ytid": "nLWWowcotaw",
-      "level": "初級",
-      "minutes": 37,
-      "channel": "『資産保全学』50,60代の賢い資産の守り方",
-      "score": 28,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 3,
-          "note": "実用性は視聴確認が必要"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 5,
-          "note": "公開から約1年半以内で鮮度が高い"
-        },
-        {
-          "axis": "分かりやすさ",
-          "score": 3,
-          "note": "説明の分かりやすさは要確認"
-        },
-        {
-          "axis": "体系性",
-          "score": 3,
-          "note": "単発Tipsの可能性があり要確認"
-        },
-        {
-          "axis": "信頼性",
-          "score": 4,
-          "note": "視聴実績があり候補として有望"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 5,
-          "note": "社会人が見切りやすい長さ"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "【2026年対応】50代60代の新NISA、この３つの流れで始めれば９割問題ありません！",
-      "url": "https://www.youtube.com/watch?v=nLWWowcotaw",
-      "tags": [
-        "NISA",
-        "新NISA",
-        "制度",
-        "わかりやすく"
-      ],
-      "review": [
-        "新NISAの制度改正を踏まえつつ、シニア層が直面しやすい懸念点に焦点を当てています。",
-        "投資の基礎知識から具体的な運用手順までを3つの流れで整理して解説しています。",
-        "年齢層に合わせたリスク管理や資産運用の考え方を具体的に提示する構成です。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 678378,
-      "publishedAt": "2025-12-31T14:58:01Z"
-    },
-    {
-      "genre": "money",
-      "sub": "NISA",
       "ytid": "0e3XPSUzI5Q",
       "level": "初級",
       "minutes": 14,
@@ -26514,6 +26389,133 @@
       "sub": "投資",
       "channel": "コアラ先生の時事ネタ祭り",
       "reason": "channel_cap"
+    },
+    {
+      "genre": "money",
+      "sub": "NISA",
+      "ytid": "6tSC9d1g3qU",
+      "level": "初級",
+      "minutes": 14,
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "score": 29,
+      "axisScores": [
+        {
+          "axis": "実用性",
+          "score": 3,
+          "note": "実用性は視聴確認が必要"
+        },
+        {
+          "axis": "正確性・鮮度",
+          "score": 5,
+          "note": "公開から約1年半以内で鮮度が高い"
+        },
+        {
+          "axis": "分かりやすさ",
+          "score": 3,
+          "note": "説明の分かりやすさは要確認"
+        },
+        {
+          "axis": "体系性",
+          "score": 3,
+          "note": "単発Tipsの可能性があり要確認"
+        },
+        {
+          "axis": "信頼性",
+          "score": 5,
+          "note": "広く視聴されている候補"
+        },
+        {
+          "axis": "視聴体験",
+          "score": 5,
+          "note": "社会人が見切りやすい長さ"
+        },
+        {
+          "axis": "規約・権利",
+          "score": 5,
+          "note": "公式YouTubeリンク/埋め込み前提で扱う"
+        }
+      ],
+      "title": "【超改正】2026年4月､iDeCoが不要になる人続出！年12万円の節税も【会社員･自営業･公務員/企業型DC確定拠出年金･マッチング/DB確定給付･共済/手数料･出口戦略/いつから･わかりやすく】",
+      "url": "https://www.youtube.com/watch?v=6tSC9d1g3qU",
+      "tags": [
+        "NISA",
+        "iDeCo",
+        "仕組み",
+        "入門",
+        "わかりやすく"
+      ],
+      "review": [
+        "年の制度改正を見据え、iDeCoと企業型DCの仕組みを比較解説しています。",
+        "会社員や自営業など属性ごとに異なる拠出条件や税制メリットを整理しています。",
+        "出口戦略や手数料の構造まで含め、制度の変遷を体系的に網羅した内容です。"
+      ],
+      "scoreStatus": "provisional",
+      "viewCount": 1913110,
+      "publishedAt": "2025-10-05T15:01:41Z",
+      "reason": "post_ingest_money_safety"
+    },
+    {
+      "genre": "money",
+      "sub": "NISA",
+      "ytid": "nLWWowcotaw",
+      "level": "初級",
+      "minutes": 37,
+      "channel": "『資産保全学』50,60代の賢い資産の守り方",
+      "score": 28,
+      "axisScores": [
+        {
+          "axis": "実用性",
+          "score": 3,
+          "note": "実用性は視聴確認が必要"
+        },
+        {
+          "axis": "正確性・鮮度",
+          "score": 5,
+          "note": "公開から約1年半以内で鮮度が高い"
+        },
+        {
+          "axis": "分かりやすさ",
+          "score": 3,
+          "note": "説明の分かりやすさは要確認"
+        },
+        {
+          "axis": "体系性",
+          "score": 3,
+          "note": "単発Tipsの可能性があり要確認"
+        },
+        {
+          "axis": "信頼性",
+          "score": 4,
+          "note": "視聴実績があり候補として有望"
+        },
+        {
+          "axis": "視聴体験",
+          "score": 5,
+          "note": "社会人が見切りやすい長さ"
+        },
+        {
+          "axis": "規約・権利",
+          "score": 5,
+          "note": "公式YouTubeリンク/埋め込み前提で扱う"
+        }
+      ],
+      "title": "【2026年対応】50代60代の新NISA、この３つの流れで始めれば９割問題ありません！",
+      "url": "https://www.youtube.com/watch?v=nLWWowcotaw",
+      "tags": [
+        "NISA",
+        "新NISA",
+        "制度",
+        "わかりやすく"
+      ],
+      "review": [
+        "新NISAの制度改正を踏まえつつ、シニア層が直面しやすい懸念点に焦点を当てています。",
+        "投資の基礎知識から具体的な運用手順までを3つの流れで整理して解説しています。",
+        "年齢層に合わせたリスク管理や資産運用の考え方を具体的に提示する構成です。"
+      ],
+      "scoreStatus": "provisional",
+      "viewCount": 678378,
+      "publishedAt": "2025-12-31T14:58:01Z",
+      "reason": "post_ingest_money_safety"
     }
   ],
   "runs": [
@@ -26600,6 +26602,14 @@
       {
         "ytid": "ztWlPjrCx7E",
         "title": "【月1万円の積立はヤバい】50代60代の新NISA！積立額は月○万円だと超優秀です！9割の人ははこれで老後安泰【資産運用/投資】"
+      },
+      {
+        "ytid": "6tSC9d1g3qU",
+        "title": "【超改正】2026年4月､iDeCoが不要になる人続出！年12万円の節税も【会社員･自営業･公務員/企業型DC確定拠出年金･マッチング/DB確定給付･共済/手数料･出口戦略/いつから･わかりやすく】"
+      },
+      {
+        "ytid": "nLWWowcotaw",
+        "title": "【2026年対応】50代60代の新NISA、この３つの流れで始めれば９割問題ありません！"
       }
     ],
     "moneyRefillAdditions": [

@@ -1,14 +1,14 @@
 # Manapick ingest report 2026-06-10
 
-- generatedAt: 2026-06-10T13:09:37.680Z
+- generatedAt: 2026-06-10T13:10:43.397Z
 - input: data/drafts.json (run1: all genres; run2: data/marke/biz/shikaku/prog/english); run3: money refill
 - output: content/videos.json
 - minScore: 28
 - currentBefore: 193
-- additions: 270
-- skipped: 1017
+- additions: 268
+- skipped: 1019
 - quotaEstimate: search.list 90 calls = 9,000 units + videos.list batch calls/channel補完 (approx. 75 units)
-- postProcess: channel-cap removals 2, money-safety removals 12, provisional scores added 9
+- postProcess: channel-cap removals 2, money-safety removals 14, provisional scores added 9
 
 ## Runs
 
@@ -24,7 +24,7 @@
 - english: 26
 - kaikei: 28
 - marke: 20
-- money: 27
+- money: 25
 - prog: 43
 - shikaku: 18
 - video: 28
@@ -33,7 +33,7 @@
 
 - below_min_score_or_cutoff: 929
 - channel_cap: 39
-- post_ingest_money_safety: 12
+- post_ingest_money_safety: 14
 - deny_title:絶対: 10
 - deny_title:誰でも: 8
 - money_deny_title:おすすめ銘柄: 4
@@ -66,6 +66,8 @@
 - money_safety removal: Oqc9PzI_RTc / 【iDeco 始め方】40,50代が今からiDeCoやるならコレだけで老後安泰
 - money_safety removal: nLWWowcotaw / 【2026年対応】50代60代の新NISA、この３つの流れで始めれば９割問題ありません！
 - money_safety removal: ztWlPjrCx7E / 【月1万円の積立はヤバい】50代60代の新NISA！積立額は月○万円だと超優秀です！9割の人ははこれで老後安泰【資産運用/投資】
+- money_safety removal: 6tSC9d1g3qU / 【超改正】2026年4月､iDeCoが不要になる人続出！年12万円の節税も【会社員･自営業･公務員/企業型DC確定拠出年金･マッチング/DB確定給付･共済/手数料･出口戦略/いつから･わかりやすく】
+- money_safety removal: nLWWowcotaw / 【2026年対応】50代60代の新NISA、この３つの流れで始めれば９割問題ありません！
 - money_refill addition: TKMOTT5GoXE / 【積立NISA】後悔・失敗しました。初心者の主婦が5年やったリアルな投資状況・銘柄
 - money_refill addition: 64tlyWtEBsY / 【貯まる家計簿】シンプルな家計簿の書き方
 - money_refill addition: nLWWowcotaw / 【2026年対応】50代60代の新NISA、この３つの流れで始めれば９割問題ありません！
@@ -178,7 +180,6 @@
 | l_CwyLbEo_c | ai | Gemini | 30 | AIコウリツカ | 【2025年最新】Geminiの使い方をゼロから初心者向けに解説！ |
 | _pI8iGXvyRI | ai | Claude | 30 | HIKAGE \| Claude AI副業 | 【最新20分で安心&最強に使い始められる】一番カンタンなClaude始め方・使い方 ・初期設定 ー 非エンジニア向け完全セットアップガイド🔰 |
 | Obpxflp5SFM | ai | ChatGPT | 29 | パソコン博士TAIKI | 【ChatGPTはもう古い】知らないと乗り遅れる。Googleの最新AIが異次元クラス！ChatGPTを超えた「Gemini 3.0 Pro」と「Nano Banana Pro 」が凄すぎる |
-| 6tSC9d1g3qU | money | NISA | 29 | オタク会計士ch【山田真哉】少しだけお金で得する | 【超改正】2026年4月､iDeCoが不要になる人続出！年12万円の節税も【会社員･自営業･公務員/企業型DC確定拠出年金･マッチング/DB確定給付･共済/手数料･出口戦略/いつから･わかりやすく】 |
 | PyJU6Ba53XE | biz | Word | 29 | いなわくTV | Word初心者【基礎講座】練習用データ付2024年完全版 |
 | vI6CwiI0KyY | ai | 画像生成 | 29 | パソコン博士TAIKI | 【神回！】貴方の人生を変える無料AI達！全て無料で使えるGoogle AI Studioが凄すぎる！【スマホでもOK！どれもマジ最高！】 |
 | Qe3EmiFWgGM | english | 発音 | 29 | Atsueigo | 【永久保存版】たった30分で発音記号を完全攻略【速習まとめ】 |
@@ -344,7 +345,6 @@
 | 0d0kC_8wx7s | data | BI | 28 | DX塾 – Power BIで始めるデータ活用 | 【Power BI入門】複雑な式は不要！効率爆上げの新常識6選｜Excel派必見 |
 | TKMOTT5GoXE | money | NISA | 30 | りりな家計管理と投資をする主婦 | 【積立NISA】後悔・失敗しました。初心者の主婦が5年やったリアルな投資状況・銘柄 |
 | 64tlyWtEBsY | money | 家計 | 28 | cocoの暮らし | 【貯まる家計簿】シンプルな家計簿の書き方 |
-| nLWWowcotaw | money | NISA | 28 | 『資産保全学』50,60代の賢い資産の守り方 | 【2026年対応】50代60代の新NISA、この３つの流れで始めれば９割問題ありません！ |
 | 0e3XPSUzI5Q | money | NISA | 28 | ホリエモン人生のヒント | NISAの買い方で損している人、実はめっちゃ多いです。NISAの資産運用術お伝えします。 |
 
 ## Skipped
@@ -1368,3 +1368,5 @@
 | bekqvm_Hfsw | channel_cap | 29 | money | NISA | コアラ先生の時事ネタ祭り | 【アニメで解説】初心者でもわかるiDeCo(イデコ)の始め方～実践編～ |
 | a1VE2ZxsZPE | channel_cap | 28 | money | 投資 | コアラ先生の時事ネタ祭り | 【完全図解】投資信託ってどんな仕組み？ETFとの違いは？新NISA必須知識！ |
 | E-9w7p6hVbs | channel_cap | 28 | money | 投資 | コアラ先生の時事ネタ祭り | 【アニメで解説】株式投資初心者が最初にやるべき「インデックス投資」とは？ |
+| 6tSC9d1g3qU | post_ingest_money_safety | 29 | money | NISA | オタク会計士ch【山田真哉】少しだけお金で得する | 【超改正】2026年4月､iDeCoが不要になる人続出！年12万円の節税も【会社員･自営業･公務員/企業型DC確定拠出年金･マッチング/DB確定給付･共済/手数料･出口戦略/いつから･わかりやすく】 |
+| nLWWowcotaw | post_ingest_money_safety | 28 | money | NISA | 『資産保全学』50,60代の賢い資産の守り方 | 【2026年対応】50代60代の新NISA、この３つの流れで始めれば９割問題ありません！ |

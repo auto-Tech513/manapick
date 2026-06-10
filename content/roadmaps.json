@@ -19,7 +19,8 @@
         "goal": "無料版の応用機能・主要機能を業務に当てはめて使える。",
         "videos": [
           "UIyokWUJHck",
-          "OhO0WcRP6Ow"
+          "3ZJJF_7UNSM",
+          "M_F04xonPOA"
         ]
       },
       {
@@ -27,8 +28,9 @@
         "level": "中〜上級",
         "goal": "AIに作業を任せる自動化と、プロンプト設計の入口を理解して使い分けられる。",
         "videos": [
-          "4NDb-X624gY",
-          "MNBAisqU5ZY"
+          "QvEdfnr4ge4",
+          "9dUkUyHo8Hw",
+          "Pl-IaM0ftAk"
         ]
       }
     ]
@@ -43,7 +45,8 @@
         "goal": "Pythonの環境と基本文法を一周し、学習の全体像をつかむ。",
         "videos": [
           "HCZNs3AyFM8",
-          "iqNBNzlO_-4"
+          "-LY25_7ZFpg",
+          "cyOTQzI2AFU"
         ]
       },
       {
@@ -51,7 +54,9 @@
         "level": "中級",
         "goal": "長尺で反復しながら、基礎を体系的に固める。",
         "videos": [
-          "hv0w4ZCT-uQ"
+          "olqOGLymDbw",
+          "WSYFuq6jbzo",
+          "WHwuNP4kalU"
         ]
       },
       {
@@ -59,7 +64,9 @@
         "level": "上級",
         "goal": "PythonでWebアプリ開発の入口に進み、作れるものを広げる。",
         "videos": [
-          "bzbrpkbjWe8"
+          "bzbrpkbjWe8",
+          "IcTHcOYsrwo",
+          "rAsovLKXCXo"
         ]
       }
     ]
@@ -74,7 +81,8 @@
         "goal": "編集の流れと初期設定を把握し、1本目の編集に着手できる。",
         "videos": [
           "jSNPN5NnB_E",
-          "w2GE8Ix_8Dc"
+          "FuTxs7Oa1wY",
+          "Fb60hQ7S2j4"
         ]
       },
       {
@@ -82,7 +90,9 @@
         "level": "中級",
         "goal": "公式の基本操作を確認し、カット編集を安定して行える。",
         "videos": [
-          "4Up669PRU2M"
+          "C9GymZxUrF4",
+          "iJSRJBUz0Mo",
+          "zxM1wqaNGM8"
         ]
       },
       {
@@ -90,8 +100,9 @@
         "level": "上級",
         "goal": "After Effectsとモーショングラフィックスで表現の幅を広げる。",
         "videos": [
-          "P3uuxoN35V8",
-          "iSQ0BRX0L4M"
+          "WP31TWXtvlU",
+          "XozGuvi2gLQ",
+          "P3uuxoN35V8"
         ]
       }
     ]
@@ -103,7 +114,7 @@
       {
         "label": "STEP1",
         "level": "初級",
-        "goal": "英語学習の全体像と『やる順番』を知り、遠回りを避ける。",
+        "goal": "英語学習の全体像と「やる順番」を知り、遠回りを避ける。",
         "videos": [
           "DBUpkM6X-JM",
           "MYBhnoRnj8E"
@@ -111,10 +122,12 @@
       },
       {
         "label": "STEP2",
-        "level": "初級",
+        "level": "中級",
         "goal": "毎日続けられる学習サイクルを作り、話す練習を始める。",
         "videos": [
-          "3fk1LsjHZnk"
+          "3fk1LsjHZnk",
+          "nEpewJsEgUg",
+          "o6ARRGrW3BA"
         ]
       },
       {
@@ -122,7 +135,9 @@
         "level": "初級〜中級",
         "goal": "TOEICで伸びを数字で測り、学習を軌道に乗せる。",
         "videos": [
-          "aRKYpz19vPE"
+          "aRKYpz19vPE",
+          "yZBvdoTDjBE",
+          "Qe3EmiFWgGM"
         ]
       }
     ]
@@ -137,15 +152,18 @@
         "goal": "Excelでデータ分析の入口を体験し、分析の考え方をつかむ。",
         "videos": [
           "ok8-ekot_dc",
-          "M4UjGiUrGaM"
+          "M4UjGiUrGaM",
+          "PJd_O3Iw7O4"
         ]
       },
       {
         "label": "STEP2",
         "level": "中級",
-        "goal": "長尺講義でExcelデータ分析を体系化し、実務に転用する土台を作る。",
+        "goal": "Excel/BIの基本を体系化し、実務に転用する土台を作る。",
         "videos": [
-          "xz151IIp6us"
+          "pzkyp1nsDTo",
+          "yPjQiNob4Kk",
+          "e3alvLCbBtY"
         ]
       },
       {
@@ -153,7 +171,9 @@
         "level": "上級",
         "goal": "パワークエリでデータ整形を自動化し、毎回の手作業をなくす。",
         "videos": [
-          "_O656uOUmiE"
+          "_O656uOUmiE",
+          "oJdG7srNDKU",
+          "EVajWVs8CIs"
         ]
       }
     ]
@@ -167,7 +187,9 @@
         "level": "初級",
         "goal": "Webマーケティングの全体像を短時間でつかみ、学ぶ順番を決める。",
         "videos": [
-          "kt5GIVHtCPM"
+          "kt5GIVHtCPM",
+          "z9EUo-T5v6Q",
+          "nhrxZ-v-8ro"
         ]
       },
       {
@@ -176,21 +198,34 @@
         "goal": "SEOの基本と具体策を押さえ、AI時代の集客を理解する。",
         "videos": [
           "vn1BTbqlvY4",
-          "SOg2c8WrdT0"
+          "SOg2c8WrdT0",
+          "hWVqaNkmHzE"
+        ]
+      },
+      {
+        "label": "STEP3",
+        "level": "中〜上級",
+        "goal": "SNS運用と計測を組み合わせ、継続的に改善する型を作る。",
+        "videos": [
+          "HCTLLBpY3qQ",
+          "Ju0w7JxgMc8",
+          "Y8pKDHVuc0U"
         ]
       }
     ]
   },
   {
     "genre": "biz",
-    "title": "ビジネススキルロードマップ",
+    "title": "Office・資料作成ロードマップ",
     "steps": [
       {
         "label": "STEP1",
         "level": "初級",
         "goal": "PowerPointの基本操作を押さえ、資料作成の不安を減らす。",
         "videos": [
-          "FNV4uSQkUsM"
+          "HAcJ4ldjdn4",
+          "xLyflLmz5qI",
+          "H6UK3gM2RgE"
         ]
       },
       {
@@ -198,8 +233,19 @@
         "level": "中級",
         "goal": "伝わる資料の型と見やすくするコツを使い、実務資料を磨く。",
         "videos": [
-          "z8R_ZtLplFc",
-          "Qfn49-nP6lY"
+          "GkIDiXMEgUM",
+          "hQRV4XOh4qM",
+          "cfGKFhSE6uA"
+        ]
+      },
+      {
+        "label": "STEP3",
+        "level": "上級",
+        "goal": "AIやCanvaも使い、資料作成の選択肢と表現の幅を広げる。",
+        "videos": [
+          "NR2OJBsF27w",
+          "02GApICU6UE",
+          "X4QcKrHsci0"
         ]
       }
     ]
@@ -213,8 +259,101 @@
         "level": "初級",
         "goal": "宅建学習のスケジュールと独学の進め方を決める。",
         "videos": [
-          "Uro2W4fsAIA",
-          "93pwkoYJjFE"
+          "AETcTrEOu9A",
+          "_rIozAfVG3A",
+          "Uro2W4fsAIA"
+        ]
+      },
+      {
+        "label": "STEP2",
+        "level": "中級",
+        "goal": "ITパスポート・基本情報の全体像を押さえ、学習範囲を整理する。",
+        "videos": [
+          "9H9oS26DWLY",
+          "2_2o2_E9WeM",
+          "A11m1lWiUrs"
+        ]
+      },
+      {
+        "label": "STEP3",
+        "level": "上級",
+        "goal": "過去問・重点分野へ進み、合格に向けた実践演習へ移る。",
+        "videos": [
+          "q_sq-j7emo8",
+          "oDtA78nwQMM",
+          "fhJsHbep3TM"
+        ]
+      }
+    ]
+  },
+  {
+    "genre": "kaikei",
+    "title": "会計・経営系資格ロードマップ",
+    "steps": [
+      {
+        "label": "STEP1",
+        "level": "初級",
+        "goal": "簿記3級の範囲で、仕訳と決算書の基本構造がわかる。",
+        "videos": [
+          "JpwV_NNn7aI",
+          "ZMwlUpXMZLQ",
+          "bpo-eZZxDVc"
+        ]
+      },
+      {
+        "label": "STEP2",
+        "level": "中級",
+        "goal": "簿記2級・FP3級へ進み、ビジネスとお金の知識を体系化する。",
+        "videos": [
+          "UDLDRi88QP0",
+          "n3STyxX_Ixg",
+          "9KWoXenAfhc"
+        ]
+      },
+      {
+        "label": "STEP3",
+        "level": "上級",
+        "goal": "FP2級や上位資格を視野に、実務・キャリアへ応用する。",
+        "videos": [
+          "2s4LHNuVhaU",
+          "5SUv1DVJzdc",
+          "WqI3CPrUeVE"
+        ]
+      }
+    ]
+  },
+  {
+    "genre": "money",
+    "title": "お金・投資ロードマップ",
+    "steps": [
+      {
+        "label": "STEP1",
+        "level": "初級",
+        "goal": "家計管理の型と、新NISA・iDeCoの制度の仕組みがわかる。",
+        "videos": [
+          "5AmpuQsZh1Q",
+          "NtyOvIPipak",
+          "-imMwJqBKm4"
+        ]
+      },
+      {
+        "label": "STEP2",
+        "level": "中級",
+        "goal": "投資信託・インデックス投資の仕組みとリスクを理解する。",
+        "videos": [
+          "gM1QW-qvJDY",
+          "oVfnsBeS1XE",
+          "fSgqgvjHYoI"
+        ]
+      },
+      {
+        "label": "STEP3",
+        "level": "上級",
+        "goal": "自分の方針を立て、長期・積立・分散を続けられる。（個別銘柄の推奨はしません）",
+        "videos": [
+          "KKb1WNtrFmc",
+          "mxXZokjtVyo",
+          "UK27sXFc-3A"
         ]
       }
     ]
