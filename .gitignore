@@ -3,13 +3,11 @@ out
 node_modules
 .DS_Store
 .playwright-cli/
+output/
 *.log
 .env*
 data/candidates.json
 data/drafts.json
 data/*.tmp
 data/*.bak
-content/*.bak
-content/*.bak*
-content/*.bak*
 content/*.bak*

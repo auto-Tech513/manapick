@@ -211,7 +211,7 @@ function levelMeta(level: Video["level"]) {
 }
 
 function topScoredVideo(items: Video[]) {
-  return items.reduce<Video | null>((best, video) => {
+  return items.filter((video) => publishedGenreKeys.includes(video.genre)).reduce<Video | null>((best, video) => {
     if (video.score === null) return best;
     if (best === null || best.score === null || video.score > best.score) return video;
     return best;
@@ -378,8 +378,11 @@ export default function ManapickApp() {
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(DESKTOP_PAGE_SIZE);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileGenreDropdownOpen, setMobileGenreDropdownOpen] = useState(false);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
+  const mobileGenreDropdownRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const menuDrawerRef = useRef<HTMLElement>(null!);
   const filtersMountedRef = useRef(false);
@@ -446,6 +449,17 @@ export default function ManapickApp() {
     return genres.filter((genre) => genre.status === "published");
   }, []);
 
+  const publishedVideos = useMemo(() => {
+    return videos.filter((video) => publishedGenreKeys.includes(video.genre));
+  }, []);
+
+  const genreVideoCounts = useMemo(() => {
+    return publishedVideos.reduce<Record<string, number>>((counts, video) => {
+      counts[video.genre] = (counts[video.genre] ?? 0) + 1;
+      return counts;
+    }, {});
+  }, [publishedVideos]);
+
   const upcomingGenres = useMemo(() => {
     return genres.filter((genre) => genre.status !== "published");
   }, []);
@@ -484,17 +498,22 @@ export default function ManapickApp() {
   const liveSearchTotal = searchActive ? filteredVideos.length : videos.length;
 
   const weeklyPick = useMemo(() => {
-    return videos.reduce<Video | null>((best, video) => {
+    return publishedVideos.reduce<Video | null>((best, video) => {
       if (video.score === null) return best;
       if (best === null || best.score === null || video.score > best.score) return video;
       return best;
     }, null);
-  }, []);
+  }, [publishedVideos]);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const page = Number(params.get("page") || "1");
     if (Number.isFinite(page) && page > 1) setCurrentPage(Math.floor(page));
+    const genre = params.get("genre");
+    if (genre && publishedGenreKeys.includes(genre)) {
+      skipNextFilterResetRef.current = true;
+      setSelectedGenre(genre);
+    }
   }, []);
 
   useEffect(() => {
@@ -527,6 +546,41 @@ export default function ManapickApp() {
   }, [searchDraft]);
 
   useEffect(() => {
+    if (!mobileGenreDropdownOpen) return;
+
+    function handlePointerDown(event: PointerEvent) {
+      if (!mobileGenreDropdownRef.current?.contains(event.target as Node)) {
+        setMobileGenreDropdownOpen(false);
+      }
+    }
+
+    function handleKeydown(event: KeyboardEvent) {
+      if (event.key === "Escape") setMobileGenreDropdownOpen(false);
+    }
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    window.addEventListener("keydown", handleKeydown);
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      window.removeEventListener("keydown", handleKeydown);
+    };
+  }, [mobileGenreDropdownOpen]);
+
+  useEffect(() => {
+    function syncBackToTopVisibility() {
+      setShowBackToTop(window.innerWidth <= 767 && window.scrollY >= 600);
+    }
+
+    syncBackToTopVisibility();
+    window.addEventListener("scroll", syncBackToTopVisibility, { passive: true });
+    window.addEventListener("resize", syncBackToTopVisibility);
+    return () => {
+      window.removeEventListener("scroll", syncBackToTopVisibility);
+      window.removeEventListener("resize", syncBackToTopVisibility);
+    };
+  }, []);
+
+  useEffect(() => {
     setActiveSuggestionIndex(0);
   }, [keyword, selectedLevel, selectedSub, selectedTime]);
 
@@ -542,6 +596,11 @@ export default function ManapickApp() {
     setCurrentPage(1);
     const url = new URL(window.location.href);
     url.searchParams.delete("page");
+    if (selectedGenre === "all") {
+      url.searchParams.delete("genre");
+    } else {
+      url.searchParams.set("genre", selectedGenre);
+    }
     window.history.replaceState(null, "", url);
   }, [keyword, selectedGenre, selectedLevel, selectedSub, selectedTime]);
 
@@ -577,7 +636,7 @@ export default function ManapickApp() {
   }, [menuOpen]);
 
   useEffect(() => {
-    const ignoredSwipeSelectors = ".hero-carousel, .roadmap-timeline, .roadmap-tabs, .category-tab-nav";
+    const ignoredSwipeSelectors = ".hero-carousel, .roadmap-timeline, .roadmap-tabs, .category-tab-nav, .mobile-genre-dropdown";
 
     function touchTargetIsIgnored(target: EventTarget | null) {
       return target instanceof Element && target.closest(ignoredSwipeSelectors) !== null;
@@ -593,9 +652,24 @@ export default function ManapickApp() {
       menuSwipeRef.current = {
         x: touch.clientX,
         y: touch.clientY,
-        edge: touch.clientX >= window.innerWidth - 24,
+        edge: touch.clientX >= window.innerWidth - 48,
         ignored: !menuOpen && touchTargetIsIgnored(event.target)
       };
+    }
+
+    function handleTouchMove(event: TouchEvent) {
+      const start = menuSwipeRef.current;
+      if (!start || start.ignored || menuOpen || !start.edge) return;
+      const touch = event.touches[0];
+      if (!touch) return;
+      const deltaX = touch.clientX - start.x;
+      const deltaY = touch.clientY - start.y;
+      const absX = Math.abs(deltaX);
+      const absY = Math.abs(deltaY);
+      if (deltaX <= -40 && absX >= 40 && absX > absY * 1.2) {
+        setMenuOpen(true);
+        menuSwipeRef.current = null;
+      }
     }
 
     function handleTouchEnd(event: TouchEvent) {
@@ -613,14 +687,22 @@ export default function ManapickApp() {
         if (deltaX >= 50) setMenuOpen(false);
         return;
       }
-      if (start.edge && deltaX <= -50) setMenuOpen(true);
+      if (start.edge && deltaX <= -50 && absX > absY * 1.2) setMenuOpen(true);
+    }
+
+    function handleTouchCancel() {
+      menuSwipeRef.current = null;
     }
 
     window.addEventListener("touchstart", handleTouchStart, { passive: true });
+    window.addEventListener("touchmove", handleTouchMove, { passive: true });
     window.addEventListener("touchend", handleTouchEnd, { passive: true });
+    window.addEventListener("touchcancel", handleTouchCancel, { passive: true });
     return () => {
       window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
       window.removeEventListener("touchend", handleTouchEnd);
+      window.removeEventListener("touchcancel", handleTouchCancel);
     };
   }, [menuOpen]);
 
@@ -704,6 +786,16 @@ export default function ManapickApp() {
     scrollToResults();
   }
 
+  function handleMobileGenreSelect(nextGenre: string) {
+    handleGenreChange(nextGenre);
+    setMobileGenreDropdownOpen(false);
+  }
+
+  function scrollToTop() {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reducedMotion ? "auto" : "smooth" });
+  }
+
   function resetFilters() {
     setSelectedGenre("all");
     setSelectedSub("all");
@@ -758,6 +850,9 @@ export default function ManapickApp() {
       first.focus();
     }
   }
+
+  const selectedGenreLabel = selectedGenreData ? genreName(selectedGenreData.key) : "すべての公開中ジャンル";
+  const selectedGenreCount = selectedGenreData ? genreVideoCounts[selectedGenreData.key] ?? 0 : publishedVideos.length;
 
   return (
     <main>
@@ -971,6 +1066,69 @@ export default function ManapickApp() {
           <div className="genre-selector-layout">
             <div>
               <p className="genre-group-title">公開中</p>
+              <div ref={mobileGenreDropdownRef} className={mobileGenreDropdownOpen ? "mobile-genre-dropdown is-open" : "mobile-genre-dropdown"}>
+                <button
+                  type="button"
+                  className="mobile-genre-trigger"
+                  aria-expanded={mobileGenreDropdownOpen}
+                  aria-controls="mobile-genre-dropdown-panel"
+                  onClick={() => setMobileGenreDropdownOpen((open) => !open)}
+                >
+                  <span className="mobile-genre-trigger-main">
+                    {selectedGenreData ? <GenreIcon genreKey={selectedGenreData.key} className="mobile-genre-trigger-icon" /> : null}
+                    <span>{selectedGenreLabel}</span>
+                  </span>
+                  <span className="mobile-genre-trigger-sub">{selectedGenreCount}本から探す</span>
+                  <span className="mobile-genre-chevron" aria-hidden="true">▾</span>
+                </button>
+                <div id="mobile-genre-dropdown-panel" className="mobile-genre-menu" role="listbox" aria-label="公開中ジャンルを選ぶ">
+                  <button
+                    type="button"
+                    role="option"
+                    aria-selected={selectedGenre === "all"}
+                    className={selectedGenre === "all" ? "mobile-genre-option is-active" : "mobile-genre-option"}
+                    onClick={() => handleMobileGenreSelect("all")}
+                  >
+                    <span className="mobile-genre-option-main">すべて</span>
+                    <span className="mobile-genre-option-count">{publishedVideos.length}本</span>
+                  </button>
+                  {publishedGenres.map((genre) => (
+                    <button
+                      type="button"
+                      key={genre.key}
+                      role="option"
+                      aria-selected={selectedGenre === genre.key}
+                      className={selectedGenre === genre.key ? "mobile-genre-option is-active" : "mobile-genre-option"}
+                      onClick={() => handleMobileGenreSelect(genre.key)}
+                    >
+                      <span className="mobile-genre-option-main">
+                        <GenreIcon genreKey={genre.key} className="mobile-genre-option-icon" />
+                        <span>{genreName(genre.key)}</span>
+                      </span>
+                      <span className="mobile-genre-option-count">{genreVideoCounts[genre.key] ?? 0}本</span>
+                    </button>
+                  ))}
+                  {upcomingGenres.length > 0 ? (
+                    <>
+                      <div className="mobile-genre-menu-divider" aria-hidden="true" />
+                      {upcomingGenres.map((genre) => (
+                        <button
+                          type="button"
+                          key={genre.key}
+                          className="mobile-genre-option is-disabled"
+                          disabled
+                        >
+                          <span className="mobile-genre-option-main">
+                            <GenreIcon genreKey={genre.key} className="mobile-genre-option-icon" />
+                            <span>{genreName(genre.key)}</span>
+                          </span>
+                          <span className="mobile-genre-coming-soon">近日公開</span>
+                        </button>
+                      ))}
+                    </>
+                  ) : null}
+                </div>
+              </div>
               <div className="published-genre-grid" role="group" aria-label="公開中ジャンル">
                 <button
                   type="button"
@@ -978,7 +1136,7 @@ export default function ManapickApp() {
                   className={`genre-card genre-card-all ${selectedGenre === "all" ? "is-active" : ""}`}
                 >
                   <span className="block text-sm font-black">すべての公開中ジャンル</span>
-                  <span className="mt-1 block text-xs opacity-80">{videos.length}本から探す</span>
+                  <span className="mt-1 block text-xs opacity-80">{publishedVideos.length}本から探す</span>
                 </button>
                 {publishedGenres.map((genre) => (
                   <button
@@ -1222,6 +1380,17 @@ export default function ManapickApp() {
             ))}
           </div>
         </section>
+      ) : null}
+
+      {showBackToTop ? (
+        <button
+          type="button"
+          className="mobile-back-to-top is-visible"
+          aria-label="ページの先頭へ戻る"
+          onClick={scrollToTop}
+        >
+          ↑
+        </button>
       ) : null}
 
       <footer className="border-t border-primaryInk bg-ink text-white">
@@ -1965,7 +2134,7 @@ function VideoCard({ video, highlighted = false }: { video: Video; highlighted?:
         {video.editorNote ? <p className="editor-note">編集メモ: {video.editorNote}</p> : null}
         <ol className="grid gap-2 text-sm leading-6 text-ink/76">
           {video.review.map((line, index) => (
-            <li key={line} className="flex gap-2">
+            <li key={`${index}-${line}`} className="flex gap-2">
               <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-pill bg-bgSoft text-xs font-black text-primaryInk">
                 {index + 1}
               </span>
