@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import BrandLogo from "@/components/BrandLogo";
+import VideoActions from "@/components/VideoActions";
+import VideoEmbed from "@/components/VideoEmbed";
 import {
   absoluteUrl,
   displayChannel,
@@ -154,15 +156,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
 
       <article className="video-detail-shell">
         <div className="video-detail-media">
-          <Image
-            src={youtubeThumbnail(video.ytid)}
-            alt={video.title + "のサムネイル"}
-            width={480}
-            height={360}
-            priority
-            sizes="(min-width: 980px) 520px, 100vw"
-            className="video-detail-thumb"
-          />
+          <VideoEmbed ytid={video.ytid} title={video.title} />
         </div>
 
         <div className="video-detail-main">
@@ -182,7 +176,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
           {isConfirmed ? <p className="video-score-note is-confirmed">{scoreConfirmationText}</p> : null}
           <ol className="video-review-list">
             {video.review.map((line, index) => (
-              <li key={line}>
+              <li key={`${index}-${line}`}>
                 <span>{index + 1}</span>
                 <p>{line}</p>
               </li>
@@ -192,6 +186,8 @@ export default async function VideoPage({ params }: VideoPageProps) {
           <a className="video-watch-button" href={video.url} target="_blank" rel="noopener noreferrer">
             YouTubeで視聴
           </a>
+          <p className="video-embed-note">※埋め込み再生できない動画はYouTubeでご覧ください。</p>
+          <VideoActions ytid={video.ytid} />
         </div>
       </article>
 

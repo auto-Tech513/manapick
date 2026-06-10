@@ -7,6 +7,7 @@ import BrandLogo, { BrandMark } from "@/components/BrandLogo";
 import genresData from "@/content/genres.json";
 import roadmapsData from "@/content/roadmaps.json";
 import videosData from "@/content/videos.json";
+import { useLocalList } from "@/lib/useLocalList";
 
 type GenreStatus = "published" | "preparing" | "checking";
 
@@ -95,6 +96,8 @@ type HeroCarouselSlide = {
   rank: number;
   key: string;
 };
+
+type LocalListState = ReturnType<typeof useLocalList>;
 
 const purposeLinks = [
   { number: "01", title: "目的から選ぶ", label: "AIを仕事で使いたい", genre: "ai", icon: "target" },
@@ -380,6 +383,7 @@ export default function ManapickApp() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileGenreDropdownOpen, setMobileGenreDropdownOpen] = useState(false);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const [watchlistOnly, setWatchlistOnly] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const mobileGenreDropdownRef = useRef<HTMLDivElement>(null);
@@ -388,6 +392,8 @@ export default function ManapickApp() {
   const filtersMountedRef = useRef(false);
   const skipNextFilterResetRef = useRef(false);
   const menuSwipeRef = useRef<{ x: number; y: number; edge: boolean; ignored: boolean } | null>(null);
+  const watchlist = useLocalList("manapick:watchlist:v1");
+  const watched = useLocalList("manapick:watched:v1");
 
   const selectedGenreData =
     selectedGenre === "all" ? null : genres.find((genre) => genre.key === selectedGenre) ?? null;
@@ -421,7 +427,7 @@ export default function ManapickApp() {
     return new Set([...exactHits, ...fuzzyHits].map((video) => video.ytid));
   }, [fuse, keyword]);
 
-  const filteredVideos = useMemo(() => {
+  const baseFilteredVideos = useMemo(() => {
     const filtered = videos.filter((video) => {
       const genreOk = searchActive
         ? true
@@ -436,6 +442,11 @@ export default function ManapickApp() {
     });
     return searchActive ? sortBySearchRelevance(filtered, keyword) : filtered;
   }, [keyword, keywordMatchedIds, searchActive, selectedGenre, selectedLevel, selectedSub, selectedTime]);
+
+  const filteredVideos = useMemo(() => {
+    if (!watchlistOnly || !watchlist.ready) return baseFilteredVideos;
+    return baseFilteredVideos.filter((video) => watchlist.has(video.ytid));
+  }, [baseFilteredVideos, watchlist, watchlistOnly]);
 
   const roadmapTabs = useMemo(() => {
     return roadmaps.filter((roadmap) => publishedGenreKeys.includes(roadmap.genre));
@@ -585,6 +596,12 @@ export default function ManapickApp() {
   }, [keyword, selectedLevel, selectedSub, selectedTime]);
 
   useEffect(() => {
+    if (watchlist.ready && watchlist.items.length === 0 && watchlistOnly) {
+      setWatchlistOnly(false);
+    }
+  }, [watchlist.items.length, watchlist.ready, watchlistOnly]);
+
+  useEffect(() => {
     if (!filtersMountedRef.current) {
       filtersMountedRef.current = true;
       return;
@@ -602,7 +619,7 @@ export default function ManapickApp() {
       url.searchParams.set("genre", selectedGenre);
     }
     window.history.replaceState(null, "", url);
-  }, [keyword, selectedGenre, selectedLevel, selectedSub, selectedTime]);
+  }, [keyword, selectedGenre, selectedLevel, selectedSub, selectedTime, watchlistOnly]);
 
   useEffect(() => {
     if (currentPage > totalPages) setCurrentPage(totalPages);
@@ -770,6 +787,7 @@ export default function ManapickApp() {
   }
 
   function handleGenreChange(nextGenre: string, scrollTarget: "results" | "topics" = "results") {
+    setWatchlistOnly(false);
     setSelectedGenre(nextGenre);
     setSelectedSub("all");
     setSelectedLevel("すべて");
@@ -797,6 +815,7 @@ export default function ManapickApp() {
   }
 
   function resetFilters() {
+    setWatchlistOnly(false);
     setSelectedGenre("all");
     setSelectedSub("all");
     setSelectedLevel("すべて");
@@ -811,6 +830,7 @@ export default function ManapickApp() {
   }
 
   function showGenrePicker() {
+    setWatchlistOnly(false);
     setSelectedGenre("all");
     setSelectedSub("all");
     setSelectedLevel("すべて");
@@ -868,6 +888,7 @@ export default function ManapickApp() {
                 ref={searchInputRef}
                 value={searchDraft}
                 onChange={(event) => {
+                  setWatchlistOnly(false);
                   setSearchDraft(event.target.value);
                   setSuggestionsOpen(true);
                 }}
@@ -1228,6 +1249,7 @@ export default function ManapickApp() {
                   <input
                     value={searchDraft}
                     onChange={(event) => {
+                      setWatchlistOnly(false);
                       setSearchDraft(event.target.value);
                       setSuggestionsOpen(true);
                     }}
@@ -1277,6 +1299,15 @@ export default function ManapickApp() {
           />
         ) : null}
         <div id="results-anchor" className="results-anchor" aria-hidden="true" />
+        <WatchlistFilterControl
+          ready={watchlist.ready}
+          count={watchlist.items.length}
+          active={watchlistOnly}
+          onToggle={() => {
+            setCurrentPage(1);
+            setWatchlistOnly((active) => !active);
+          }}
+        />
         {selectedGenreData?.status !== "published" && selectedGenreData && !searchActive ? (
           <div className="rounded-lg border border-line bg-surface p-5 shadow-card">
             <p className="flex items-center gap-2 text-sm font-bold text-leaf">
@@ -1292,8 +1323,10 @@ export default function ManapickApp() {
           </div>
         ) : filteredVideos.length === 0 ? (
           <div className="rounded-lg border border-line bg-surface p-5 shadow-card">
-            <h2 className="text-2xl font-black">該当する動画がありません</h2>
-            <p className="mt-2 leading-7 text-muted">条件を少し広げて探してください。</p>
+            <h2 className="text-2xl font-black">{watchlistOnly ? "あとで見るはまだ空です" : "該当する動画がありません"}</h2>
+            <p className="mt-2 leading-7 text-muted">
+              {watchlistOnly ? "あとで見るに追加した動画がここに並びます。" : "条件を少し広げて探してください。"}
+            </p>
           </div>
         ) : (
           <>
@@ -1304,14 +1337,30 @@ export default function ManapickApp() {
                   <section key={group.genreKey} className="search-result-group">
                     <h2>{genreLabel(group.genreKey)} <span>{group.items.length}件</span></h2>
                     <div className="grid gap-4 min-[560px]:grid-cols-2 min-[880px]:grid-cols-3">
-                      {group.items.map((video) => <VideoCard key={video.ytid} video={video} highlighted={highlightedVideoId === video.ytid} />)}
+                      {group.items.map((video) => (
+                        <VideoCard
+                          key={video.ytid}
+                          video={video}
+                          highlighted={highlightedVideoId === video.ytid}
+                          watchlist={watchlist}
+                          watched={watched}
+                        />
+                      ))}
                     </div>
                   </section>
                 ))}
               </div>
             ) : (
               <div className="grid gap-4 min-[560px]:grid-cols-2 min-[880px]:grid-cols-3">
-                {pageVideos.map((video) => <VideoCard key={video.ytid} video={video} highlighted={highlightedVideoId === video.ytid} />)}
+                {pageVideos.map((video) => (
+                  <VideoCard
+                    key={video.ytid}
+                    video={video}
+                    highlighted={highlightedVideoId === video.ytid}
+                    watchlist={watchlist}
+                    watched={watched}
+                  />
+                ))}
               </div>
             )}
             <PaginationControls currentPage={safeCurrentPage} totalPages={totalPages} onPageChange={updatePage} />
@@ -1362,7 +1411,7 @@ export default function ManapickApp() {
                   📖 文章で読む完全ロードマップ
                 </a>
               ) : null}
-              <RoadmapTimeline roadmap={activeRoadmap} />
+              <RoadmapTimeline roadmap={activeRoadmap} watched={watched} />
             </>
           )}
         </div>
@@ -1886,6 +1935,34 @@ function ResultSummary({ total, start, end, searchActive }: { total: number; sta
   );
 }
 
+function WatchlistFilterControl({
+  ready,
+  count,
+  active,
+  onToggle
+}: {
+  ready: boolean;
+  count: number;
+  active: boolean;
+  onToggle: () => void;
+}) {
+  if (!ready || count === 0) return null;
+
+  return (
+    <div className="watchlist-filter-row">
+      <button
+        type="button"
+        className={active ? "watchlist-filter-chip is-active" : "watchlist-filter-chip"}
+        aria-pressed={active}
+        onClick={onToggle}
+      >
+        <span aria-hidden="true">🔖</span>
+        <span>あとで見る({count})</span>
+      </button>
+    </div>
+  );
+}
+
 function PaginationControls({ currentPage, totalPages, onPageChange }: { currentPage: number; totalPages: number; onPageChange: (page: number) => void }) {
   if (totalPages <= 1) return null;
   const pages = Array.from(new Set([1, currentPage - 1, currentPage, currentPage + 1, totalPages]))
@@ -2085,9 +2162,21 @@ function buildRoadmapSteps(roadmap: Roadmap): DisplayRoadmapStep[] {
   return steps;
 }
 
-function VideoCard({ video, highlighted = false }: { video: Video; highlighted?: boolean }) {
+function VideoCard({
+  video,
+  highlighted = false,
+  watchlist,
+  watched
+}: {
+  video: Video;
+  highlighted?: boolean;
+  watchlist?: LocalListState;
+  watched?: LocalListState;
+}) {
   const channel = displayChannel(video);
   const ageLabel = publishedAgeLabel(video);
+  const watchlistActive = watchlist?.ready ? watchlist.has(video.ytid) : false;
+  const watchedActive = watched?.ready ? watched.has(video.ytid) : false;
 
   return (
     <article
@@ -2115,6 +2204,17 @@ function VideoCard({ video, highlighted = false }: { video: Video; highlighted?:
             </span>
           </div>
         </a>
+        {watchlist?.ready ? (
+          <button
+            type="button"
+            className={watchlistActive ? "video-watchlist-toggle is-active" : "video-watchlist-toggle"}
+            aria-pressed={watchlistActive}
+            aria-label={watchlistActive ? "あとで見るから解除" : "あとで見るに追加"}
+            onClick={() => watchlist.toggle(video.ytid)}
+          >
+            <span aria-hidden="true">🔖</span>
+          </button>
+        ) : null}
         <div className="card-score-wrap">
           <ScoreBadge video={video} compact />
         </div>
@@ -2124,6 +2224,7 @@ function VideoCard({ video, highlighted = false }: { video: Video; highlighted?:
           <LevelBadge level={video.level} />
           <span className="rounded-pill bg-bg px-2.5 py-1 text-xs font-black text-ink">{video.sub}</span>
           {ageLabel ? <span className="published-age">{ageLabel}</span> : null}
+          {watched?.ready && watchedActive ? <span className="watched-status-badge">✓視聴済み</span> : null}
         </div>
         <h3 className="line-clamp-2 text-base font-black leading-6 text-ink">
           <a className="transition hover:text-accent" href={videoDetailHref(video)}>
@@ -2326,8 +2427,13 @@ function roadmapTitle(roadmap: Roadmap) {
   return roadmap.title;
 }
 
-function RoadmapTimeline({ roadmap }: { roadmap: Roadmap }) {
+function RoadmapTimeline({ roadmap, watched }: { roadmap: Roadmap; watched: LocalListState }) {
   const steps = buildRoadmapSteps(roadmap);
+  const watchedSet = new Set(watched.items);
+  const roadmapVideoIds = steps.flatMap((step) => step.videos);
+  const roadmapTotal = roadmapVideoIds.length;
+  const roadmapWatchedCount = watched.ready ? roadmapVideoIds.filter((ytid) => watchedSet.has(ytid)).length : 0;
+  const roadmapProgress = roadmapTotal > 0 ? Math.round((roadmapWatchedCount / roadmapTotal) * 100) : 0;
 
   return (
     <section id="roadmap-panel" className="roadmap-panel" role="tabpanel">
@@ -2335,6 +2441,17 @@ function RoadmapTimeline({ roadmap }: { roadmap: Roadmap }) {
         <h3>{roadmapTitle(roadmap)}</h3>
         <span aria-hidden="true" className="roadmap-star">★</span>
       </div>
+      {watched.ready && roadmapTotal > 0 ? (
+        <div className="roadmap-progress" aria-label={"ロードマップ進捗 視聴済み " + roadmapWatchedCount + "/" + roadmapTotal}>
+          <div className="roadmap-progress-topline">
+            <span>視聴済み {roadmapWatchedCount}/{roadmapTotal}</span>
+            <strong>{roadmapProgress}%</strong>
+          </div>
+          <div className="roadmap-progress-track" aria-hidden="true">
+            <span style={{ width: roadmapProgress + "%" }} />
+          </div>
+        </div>
+      ) : null}
       <ol className="roadmap-timeline">
         {steps.map((step, index) => (
           <li
@@ -2352,6 +2469,11 @@ function RoadmapTimeline({ roadmap }: { roadmap: Roadmap }) {
               <h4>
                 <strong>{step.goal}</strong>
               </h4>
+              {watched.ready && step.videos.length > 0 ? (
+                <p className="roadmap-step-progress">
+                  視聴済み {step.videos.filter((ytid) => watchedSet.has(ytid)).length}/{step.videos.length}
+                </p>
+              ) : null}
               {step.isPlaceholder ? (
                 <p className="roadmap-placeholder-copy">
                   上級動画を選定中です。追加後にここへ公式サムネ付きで表示します。
@@ -2360,7 +2482,7 @@ function RoadmapTimeline({ roadmap }: { roadmap: Roadmap }) {
                 <div className="roadmap-video-grid">
                   {step.videos.map((ytid) => {
                     const video = videos.find((item) => item.ytid === ytid);
-                    return video ? <RoadmapMiniVideo key={ytid} video={video} /> : null;
+                    return video ? <RoadmapMiniVideo key={ytid} video={video} watched={watched.ready && watchedSet.has(ytid)} /> : null;
                   })}
                 </div>
               )}
@@ -2380,7 +2502,7 @@ function RoadmapTimeline({ roadmap }: { roadmap: Roadmap }) {
   );
 }
 
-function RoadmapMiniVideo({ video }: { video: Video }) {
+function RoadmapMiniVideo({ video, watched }: { video: Video; watched: boolean }) {
   return (
     <a className="roadmap-mini-card" href={videoDetailHref(video)}>
       <span className="roadmap-mini-thumb">
@@ -2393,6 +2515,7 @@ function RoadmapMiniVideo({ video }: { video: Video }) {
           loading="lazy"
           className="absolute inset-0 h-full w-full object-cover"
         />
+        {watched ? <span className="roadmap-mini-watched">✓</span> : null}
       </span>
       <span className="roadmap-mini-body">
         <span className="roadmap-mini-title">{video.title}</span>
