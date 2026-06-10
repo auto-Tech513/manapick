@@ -90,9 +90,11 @@ button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 select:focus-visible,
-summary:focus-visible {
-  outline: 3px solid color-mix(in srgb, var(--color-accent) 42%, transparent);
-  outline-offset: 3px;
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 2px solid var(--color-accent) !important;
+  outline-offset: 2px !important;
 }
 
 img {
@@ -4791,7 +4793,12 @@ img {
   .topic-chip,
   .pagination button,
   .popular-tabs button,
-  .genre-summary-heading button {
+  .genre-summary-heading button,
+  .guide-video-card,
+  .guide-cta-row a,
+  .guide-pr-card.is-link,
+  .guide-faq-list details,
+  .guide-faq-list summary::after {
     transition: none !important;
   }
 
@@ -4801,7 +4808,19 @@ img {
   .topic-chip:hover,
   .pagination button:hover:not(:disabled),
   .popular-tabs button:hover,
-  .genre-summary-heading button:hover {
+  .genre-summary-heading button:hover,
+  .guide-video-card:hover,
+  .guide-cta-row a:hover,
+  .guide-pr-card.is-link:hover {
+    transform: none !important;
+  }
+
+  .guide-progress {
+    display: none;
+    animation: none !important;
+  }
+
+  .guide-faq-list details[open] summary::after {
     transform: none !important;
   }
 
