@@ -359,7 +359,9 @@ const genreIconSources: Record<string, string> = {
   data: "/brand/icon-data.png",
   marke: "/brand/icon-marke.png",
   biz: "/brand/icon-biz.png",
-  shikaku: "/brand/icon-shikaku.png"
+  shikaku: "/brand/icon-shikaku.png",
+  kaikei: "/brand/icon-kaikei.png",
+  money: "/brand/icon-money.png"
 };
 
 const roadmapGuideLinks: Record<string, { href: string }> = {
@@ -1669,19 +1671,32 @@ function MobileBottomNav({
   return (
     <nav className="mobile-bottom-nav" aria-label="クイックナビ">
       <button type="button" onClick={onExplore}>
-        <span aria-hidden="true">🔎</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m20 20-3.8-3.8" />
+        </svg>
         <span>探す</span>
       </button>
       <button type="button" onClick={onRoadmap}>
-        <span aria-hidden="true">🗺️</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M5 19c4-9 10 1 14-9" />
+          <path d="M15 9h4v4" />
+          <circle cx="5" cy="19" r="1.4" />
+        </svg>
         <span>ロードマップ</span>
       </button>
       <button type="button" aria-pressed={watchlistOnly} onClick={onWatchlist}>
-        <span aria-hidden="true">🔖</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M7 4h10v16l-5-3.5L7 20z" />
+        </svg>
         <span>あとで見る</span>
       </button>
       <button type="button" onClick={onMenu}>
-        <span aria-hidden="true">☰</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4 7h16" />
+          <path d="M4 12h16" />
+          <path d="M4 17h16" />
+        </svg>
         <span>メニュー</span>
       </button>
     </nav>
