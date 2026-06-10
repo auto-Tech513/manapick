@@ -153,6 +153,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
 
   return (
     <main className="guide-page">
+      <div className="guide-progress" aria-hidden="true" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
@@ -174,6 +175,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
 
       <article className="guide-article">
         <header className="guide-hero">
+          <GuideGenreIcon genre={guide.genre} className="guide-hero-icon" />
           <p className="section-eyebrow">{genreDisplayName(guide.genre)}ロードマップ</p>
           <h1>{guideTitle(guide.title)}</h1>
           <p>{strongText(guide.intro)}</p>
@@ -234,15 +236,15 @@ export default async function GuidePage({ params }: GuidePageProps) {
         <section className="guide-section" aria-labelledby="guide-videos-title">
           <h2 id="guide-videos-title">各STEPの厳選動画</h2>
           <div className="guide-step-list">
-            {guide.steps.map((step) => {
+            {guide.steps.map((step, stepIndex) => {
               const items = guideStepVideos(step);
               const stepMinutes = items.reduce((sum, item) => sum + item.video.minutes, 0);
 
               return (
-                <section key={step.title} className="guide-step-block">
+                <section key={step.title} className={`guide-step-block is-step-${stepIndex + 1}`}>
                   <div className="guide-step-heading">
                     <h3>
-                      <GuideGenreIcon genre={guide.genre} />
+                      <span className="guide-step-number" aria-hidden="true">{stepIndex + 1}</span>
                       <span>{step.title}</span>
                     </h3>
                     <span>{items.length}本・約{stepMinutes}分</span>
@@ -409,7 +411,7 @@ function GuidePrSection({ guide }: { guide: Guide }) {
   );
 }
 
-function GuideGenreIcon({ genre }: { genre: string }) {
+function GuideGenreIcon({ genre, className = "guide-step-icon" }: { genre: string; className?: string }) {
   const src = guideIconSources[genre];
   if (!src) return null;
 
@@ -419,7 +421,7 @@ function GuideGenreIcon({ genre }: { genre: string }) {
       alt={genreDisplayName(genre) + "のアイコン"}
       width={28}
       height={28}
-      className="guide-step-icon"
+      className={className}
     />
   );
 }
@@ -505,7 +507,10 @@ function GuideVideoCard({ video, why }: { video: Video; why: string }) {
           loading="lazy"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <span className="video-duration-badge">{video.minutes}分</span>
+        <span className="guide-video-thumb-pills">
+          <span>{scoreText(video)}</span>
+          <span>{video.minutes}分</span>
+        </span>
       </a>
       <div className="guide-video-body">
         <div className="guide-video-meta">
