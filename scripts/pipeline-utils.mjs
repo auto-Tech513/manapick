@@ -23,23 +23,27 @@ export async function writeJson(filePath, data) {
   await fs.writeFile(filePath, JSON.stringify(data, null, 2) + "\n");
 }
 
-export async function loadEnvFile(filePath = path.join(rootDir, ".env")) {
-  try {
-    const text = await fs.readFile(filePath, "utf8");
-    for (const rawLine of text.split(/\r?\n/)) {
-      const line = rawLine.trim();
-      if (!line || line.startsWith("#")) continue;
-      const index = line.indexOf("=");
-      if (index < 1) continue;
-      const key = line.slice(0, index).trim();
-      let value = line.slice(index + 1).trim();
-      if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
-        value = value.slice(1, -1);
+export async function loadEnvFile(filePath = null) {
+  const paths = filePath ? [filePath] : [path.join(rootDir, ".env"), path.join(rootDir, ".env.local")];
+
+  for (const candidatePath of paths) {
+    try {
+      const text = await fs.readFile(candidatePath, "utf8");
+      for (const rawLine of text.split(/\r?\n/)) {
+        const line = rawLine.trim();
+        if (!line || line.startsWith("#")) continue;
+        const index = line.indexOf("=");
+        if (index < 1) continue;
+        const key = line.slice(0, index).trim();
+        let value = line.slice(index + 1).trim();
+        if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+          value = value.slice(1, -1);
+        }
+        if (!process.env[key]) process.env[key] = value;
       }
-      if (!process.env[key]) process.env[key] = value;
+    } catch (error) {
+      if (error.code !== "ENOENT") throw error;
     }
-  } catch (error) {
-    if (error.code !== "ENOENT") throw error;
   }
 }
 

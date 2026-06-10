@@ -3,7 +3,7 @@
 Manapickは、社会人の学び直し・リスキリングに役立つYouTube学習動画を、独自レビューとManapickスコアで整理するキュレーションサイトです。
 動画は公式YouTubeへのリンクまたは公式埋め込みを前提に紹介し、ダウンロードや再配布は扱いません。
 
-## 公開中の8ジャンル
+## 公開中の10ジャンル
 - 生成AI: ChatGPT / Claude / Gemini / 画像生成 / 自動化 / AI資格
 - プログラミング・IT: Python / Web開発 / アプリ / インフラ
 - 動画編集・クリエイティブ: Premiere Pro / CapCut / After Effects / デザイン
@@ -12,6 +12,8 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - Webマーケ・SNS運用: SEO / 広告 / SNS
 - Office・資料作成: 資料作成 / Excel / プレゼン / 思考法
 - 資格・検定（非会計）: 宅建 / TOEIC / IT / AI検定
+- 会計・経営系資格: 簿記 / FP / 税理士 / 中小企業診断士
+- お金・投資: NISA / 投資 / 家計
 
 ## 採点方法
 - Manapickスコアは7軸×5点=35点満点です。

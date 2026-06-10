@@ -147,8 +147,8 @@
     "key": "kaikei",
     "label": "会計・経営系資格",
     "icon": "🧮",
-    "status": "preparing",
-    "note": "①承認済・非競合確定",
+    "status": "published",
+    "note": "会計・経営系資格は、学習動画の紹介のみを行います。個別の資格講座・業務相談の推奨は行いません。",
     "subgenres": [
       "簿記",
       "FP",
@@ -166,8 +166,8 @@
     "key": "money",
     "label": "お金・投資",
     "icon": "💰",
-    "status": "preparing",
-    "note": "①承認済・非競合確定。個別銘柄推奨は扱わない",
+    "status": "published",
+    "note": "投資判断はご自身でお願いします。当サイトは動画の紹介のみを行い、特定の金融商品・銘柄の推奨は行いません。",
     "subgenres": [
       "NISA",
       "投資",

@@ -94,7 +94,9 @@ export function genreLabel(key: string) {
     data: "データ分析",
     marke: "Webマーケ",
     biz: "Office・資料",
-    shikaku: "資格"
+    shikaku: "資格",
+    kaikei: "会計資格",
+    money: "お金・投資"
   };
   return shortLabels[key] ?? genreDisplayName(key);
 }

@@ -2,7 +2,7 @@
   "defaults": {
     "regionCode": "JP",
     "relevanceLanguage": "ja",
-    "maxResults": 25,
+    "maxResults": 40,
     "minViews": 10000,
     "freshYears": 8,
     "minDurationMin": 4,
@@ -28,6 +28,18 @@
         {
           "sub": "自動化",
           "keyword": "生成AI 自動化 入門 日本語"
+        },
+        {
+          "sub": "Gemini",
+          "keyword": "Gemini 使い方 初心者 日本語"
+        },
+        {
+          "sub": "Copilot",
+          "keyword": "Microsoft Copilot 使い方 仕事 日本語"
+        },
+        {
+          "sub": "画像生成",
+          "keyword": "画像生成AI 入門 使い方 日本語"
         }
       ]
     },
@@ -46,6 +58,18 @@
         {
           "sub": "インフラ",
           "keyword": "IT インフラ 入門 初心者 日本語"
+        },
+        {
+          "sub": "JavaScript",
+          "keyword": "JavaScript 入門 講座 初心者 日本語"
+        },
+        {
+          "sub": "SQL",
+          "keyword": "SQL 入門 初心者 データベース 日本語"
+        },
+        {
+          "sub": "Git",
+          "keyword": "Git GitHub 入門 使い方 日本語"
         }
       ]
     },
@@ -64,6 +88,14 @@
         {
           "sub": "CapCut",
           "keyword": "CapCut 使い方 初心者 日本語"
+        },
+        {
+          "sub": "DaVinci",
+          "keyword": "DaVinci Resolve 使い方 初心者 日本語"
+        },
+        {
+          "sub": "デザイン",
+          "keyword": "サムネイル 作り方 デザイン 初心者"
         }
       ]
     },
@@ -82,6 +114,14 @@
         {
           "sub": "ビジネス英語",
           "keyword": "ビジネス英語 学習法 社会人 日本語"
+        },
+        {
+          "sub": "発音",
+          "keyword": "英語 発音 練習 初心者 日本語"
+        },
+        {
+          "sub": "ビジネス英語",
+          "keyword": "ビジネス英語 メール 会議 初心者"
         }
       ]
     },
@@ -100,6 +140,14 @@
         {
           "sub": "BI",
           "keyword": "BI ツール 入門 データ分析 日本語"
+        },
+        {
+          "sub": "SQL",
+          "keyword": "SQL データ分析 入門 日本語"
+        },
+        {
+          "sub": "統計",
+          "keyword": "統計学 入門 わかりやすく 日本語"
         }
       ]
     },
@@ -118,6 +166,18 @@
         {
           "sub": "SNS",
           "keyword": "SNS運用 入門 初心者 日本語"
+        },
+        {
+          "sub": "SNS",
+          "keyword": "Instagram 運用 初心者 集客"
+        },
+        {
+          "sub": "SNS",
+          "keyword": "X Twitter 運用 企業 初心者"
+        },
+        {
+          "sub": "コンテンツ",
+          "keyword": "コンテンツマーケティング 入門 日本語"
         }
       ]
     },
@@ -136,6 +196,14 @@
         {
           "sub": "プレゼン",
           "keyword": "プレゼン 資料 作り方 初心者 日本語"
+        },
+        {
+          "sub": "Word",
+          "keyword": "Word 使い方 初心者 ビジネス文書"
+        },
+        {
+          "sub": "プレゼン",
+          "keyword": "PowerPoint 資料作成 コツ 日本語"
         }
       ]
     },
@@ -154,6 +222,66 @@
         {
           "sub": "AI検定",
           "keyword": "AI検定 勉強法 初心者 日本語"
+        },
+        {
+          "sub": "IT",
+          "keyword": "ITパスポート 勉強法 初心者"
+        },
+        {
+          "sub": "IT",
+          "keyword": "基本情報技術者 試験 対策 入門"
+        }
+      ]
+    },
+    {
+      "genre": "kaikei",
+      "label": "会計・経営系資格",
+      "queries": [
+        {
+          "sub": "簿記",
+          "keyword": "簿記3級 入門 講座 わかりやすい"
+        },
+        {
+          "sub": "簿記",
+          "keyword": "簿記2級 講座 勉強法"
+        },
+        {
+          "sub": "FP",
+          "keyword": "FP3級 勉強法 入門 わかりやすい"
+        },
+        {
+          "sub": "FP",
+          "keyword": "FP2級 講座 対策"
+        },
+        {
+          "sub": "税理士",
+          "keyword": "税理士試験 簿記論 入門"
+        },
+        {
+          "sub": "中小企業診断士",
+          "keyword": "中小企業診断士 勉強法 入門"
+        }
+      ]
+    },
+    {
+      "genre": "money",
+      "label": "お金・投資",
+      "queries": [
+        {
+          "sub": "NISA",
+          "keyword": "新NISA 制度 わかりやすく 初心者"
+        },
+        {
+          "sub": "NISA",
+          "keyword": "iDeCo 仕組み 入門 わかりやすく"
+        },
+        {
+          "sub": "投資",
+          "keyword": "投資信託 インデックス投資 仕組み 入門"
+        },
+        {
+          "sub": "家計",
+          "keyword": "家計管理 初心者 やり方 節約"
         }
       ]
     }
@@ -169,5 +297,24 @@
     "副業",
     "切り抜き",
     "食いっぱぐれ"
+  ],
+  "deny_title_patterns": [
+    "絶対",
+    "誰でも",
+    "必ず儲",
+    "爆益",
+    "億り人",
+    "不労所得",
+    "裏ワザ",
+    "秒で稼",
+    "稼げる",
+    "月収[0-9０-９]",
+    "副業で稼",
+    "勝率",
+    "サイン配信",
+    "デイトレ",
+    "FX",
+    "仮想通貨.*(手法|トレード)",
+    "個別株.*(推奨|爆上げ)"
   ]
 }

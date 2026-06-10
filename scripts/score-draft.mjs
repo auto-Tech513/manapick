@@ -87,7 +87,9 @@ function genreFocus(genre) {
     data: "Excelやデータを実務に結びつける入口",
     marke: "Web集客の全体像と実践への橋渡し",
     biz: "明日使える資料作成・伝え方の型",
-    shikaku: "学習計画を迷わず組むための地図"
+    shikaku: "学習計画を迷わず組むための地図",
+    kaikei: "会計・経営知識を段階的に固める入口",
+    money: "制度と家計管理を落ち着いて理解する入口"
   };
   return map[genre] || "学び直しの次の一歩";
 }

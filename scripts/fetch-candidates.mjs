@@ -19,7 +19,7 @@ import {
 const YOUTUBE_API_BASE = "https://www.googleapis.com/youtube/v3";
 
 function usage() {
-  console.log(`Usage: node scripts/fetch-candidates.mjs [options]\n\nOptions:\n  --genre ai,data       Comma-separated genre keys to fetch\n  --config path         Default: scripts/pipeline-config.json\n  --out path            Default: data/candidates.json\n  --max-results 25      YouTube search.list maxResults per query\n  --min-views 10000     Minimum view count\n  --fresh-years 8       Exclude videos older than this many years\n  --dry-run             Print planned queries without calling YouTube\n\nRequires YT_API_KEY in env or local .env. .env is ignored by git.`);
+  console.log(`Usage: node scripts/fetch-candidates.mjs [options]\n\nOptions:\n  --genre ai,data       Comma-separated genre keys to fetch\n  --config path         Default: scripts/pipeline-config.json\n  --out path            Default: data/candidates.json\n  --max-results 40      YouTube search.list maxResults per query\n  --min-views 10000     Minimum view count\n  --fresh-years 8       Exclude videos older than this many years\n  --dry-run             Print planned queries without calling YouTube\n\nRequires YT_API_KEY or YOUTUBE_API_KEY in env/local .env/.env.local. Env files are ignored by git.`);
 }
 
 function chunk(array, size) {
@@ -122,8 +122,8 @@ async function main() {
     return;
   }
 
-  const apiKey = process.env.YT_API_KEY;
-  if (!apiKey) throw new Error("YT_API_KEY is required. Set it in your shell or local .env (not committed).");
+  const apiKey = process.env.YT_API_KEY || process.env.YOUTUBE_API_KEY;
+  if (!apiKey) throw new Error("YT_API_KEY or YOUTUBE_API_KEY is required. Set it in your shell/local env file (not committed).");
 
   const knownIds = await existingVideoIds();
   const denyIds = new Set(config.exclude_ytids || []);

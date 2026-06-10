@@ -101,7 +101,7 @@ type LocalListState = ReturnType<typeof useLocalList>;
 
 const purposeLinks = [
   { number: "01", title: "目的から選ぶ", label: "AIを仕事で使いたい", genre: "ai", icon: "target" },
-  { number: "02", title: "ジャンルから選ぶ", label: "8ジャンルから探す", genre: "all", icon: "grid" },
+  { number: "02", title: "ジャンルから選ぶ", label: "10ジャンルから探す", genre: "all", icon: "grid" },
   { number: "03", title: "ロードマップで学ぶ", label: "順番を見て進む", genre: "roadmap", icon: "path" }
 ];
 
@@ -344,7 +344,9 @@ function genreEnglishLabel(key: string) {
     data: "DATA / DX",
     marke: "MARKETING",
     biz: "OFFICE SKILLS",
-    shikaku: "CERTIFICATION"
+    shikaku: "CERTIFICATION",
+    kaikei: "ACCOUNTING",
+    money: "MONEY"
   };
   return labels[key] ?? key.toLocaleUpperCase("en-US");
 }
@@ -1605,7 +1607,7 @@ function SiteMenuDrawer({
         </div>
         <nav className="site-menu-links" aria-label="メニューリンク">
           <button type="button" className="site-menu-link" onClick={onGenreList}>
-            8ジャンル一覧
+            10ジャンル一覧
           </button>
           <div className="site-menu-genre-grid" role="group" aria-label="ジャンル一覧">
             {genres.map((genre) => (
@@ -2039,6 +2041,7 @@ function GenreSummaryPanel({
         </div>
         {selectedSub !== "all" ? <button type="button" onClick={() => onTopicSelect("all")}>絞り込み解除</button> : null}
       </div>
+      {genre.note ? <p className="genre-note">{genre.note}</p> : null}
       <div className="topic-chip-row" role="group" aria-label="サブジャンルトピック">
         {topics.map(([sub, count]) => (
           <button key={sub} type="button" className={selectedSub === sub ? "topic-chip is-active" : "topic-chip"} onClick={() => onTopicSelect(sub)}>
@@ -2378,6 +2381,18 @@ function LineGenreIcon({ genreKey }: { genreKey: string }) {
     );
   }
 
+  if (genreKey === "money") {
+    return (
+      <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M8.5 8l3.5 4 3.5-4" />
+        <path d="M12 12v5" />
+        <path d="M9.5 13.5h5" />
+        <path d="M9.5 16h5" />
+      </svg>
+    );
+  }
+
   return (
     <svg viewBox="0 0 24 24" role="presentation" focusable="false">
       <path d="M12 3v18" />
@@ -2417,7 +2432,9 @@ function genreLabel(key: string) {
     data: "データ分析",
     marke: "Webマーケ",
     biz: "Office・資料",
-    shikaku: "資格"
+    shikaku: "資格",
+    kaikei: "会計資格",
+    money: "お金・投資"
   };
   return shortLabels[key] ?? genreDisplayName(key);
 }

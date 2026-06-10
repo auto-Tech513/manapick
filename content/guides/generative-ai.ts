@@ -139,7 +139,7 @@ const generativeAiGuide = {
       href: "/guide/english/"
     },
     {
-      label: "8ジャンルの地図を見る",
+      label: "10ジャンルの地図を見る",
       href: "/#genre-picker"
     }
   ]
