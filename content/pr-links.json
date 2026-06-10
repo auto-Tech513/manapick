@@ -1,0 +1,45 @@
+{
+  "ai": [
+    {
+      "label": "面倒なことはChatGPTにやらせよう",
+      "url": "https://a.r10.to/hFhXYb",
+      "note": "入門書"
+    },
+    {
+      "label": "ChatGPT&Copilotの教科書 改訂第2版",
+      "url": "https://a.r10.to/hgvVNF",
+      "note": "入門書"
+    }
+  ],
+  "prog": [
+    {
+      "label": "スッキリわかるPython入門 第2版",
+      "url": "https://a.r10.to/h5go8D",
+      "note": "入門書"
+    },
+    {
+      "label": "独学プログラマー",
+      "url": "https://a.r10.to/hFsZCu",
+      "note": "入門書"
+    }
+  ],
+  "data": [
+    {
+      "label": "できるYouTuber式パワークエリ現場の教科書",
+      "url": "https://a.r10.to/hFmbkA",
+      "note": "入門書"
+    },
+    {
+      "label": "Excelパワークエリ データ収集・整形",
+      "url": "https://a.r10.to/hPj8KF",
+      "note": "入門書"
+    }
+  ],
+  "video": [],
+  "english": [],
+  "marke": [],
+  "biz": [],
+  "shikaku": [],
+  "kaikei": [],
+  "money": []
+}

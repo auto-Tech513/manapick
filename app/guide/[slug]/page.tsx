@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import BrandLogo from "@/components/BrandLogo";
+import prLinksData from "@/content/pr-links.json";
 import { findGuide, guidePath, guides, guideStepVideos, type Guide } from "@/lib/guides";
 import {
   absoluteUrl,
@@ -33,6 +34,12 @@ const guideIconSources: Record<string, string> = {
   kaikei: "/brand/icon-kaikei.png",
   money: "/brand/icon-money.png"
 };
+type GuidePrLink = {
+  label: string;
+  url: string;
+  note: string;
+};
+const guidePrLinks = prLinksData as Record<string, GuidePrLink[]>;
 
 export const dynamicParams = false;
 
@@ -344,7 +351,12 @@ export default async function GuidePage({ params }: GuidePageProps) {
 }
 
 function GuidePrSection({ guide }: { guide: Guide }) {
-  if (guide.prItems && guide.prItems.length > 0) {
+  const prItems = guidePrLinks[guide.genre] ?? [];
+  const moneyNote = guide.genre === "money" ? (
+    <p className="guide-pr-note">※書籍の紹介です。特定の金融商品の推奨ではありません。</p>
+  ) : null;
+
+  if (prItems.length > 0) {
     return (
       <section className="guide-section guide-pr-section" aria-labelledby="guide-pr-title">
         <div className="guide-pr-heading">
@@ -355,21 +367,22 @@ function GuidePrSection({ guide }: { guide: Guide }) {
           <span className="guide-pr-badge">PR</span>
         </div>
         <div className="guide-pr-grid">
-          {guide.prItems.map((item) => (
+          {prItems.map((item) => (
             <a
-              key={item.href}
+              key={item.url}
               className="guide-pr-card is-link"
-              href={item.href}
+              href={item.url}
               target="_blank"
               rel="sponsored noopener"
             >
               <span className="guide-pr-card-pr">【PR】楽天ブックス</span>
-              <strong>{item.title}</strong>
+              <strong>{item.label}</strong>
               <span>{item.note}</span>
               <em>楽天ブックスで見る</em>
             </a>
           ))}
         </div>
+        {moneyNote}
       </section>
     );
   }
@@ -407,6 +420,7 @@ function GuidePrSection({ guide }: { guide: Guide }) {
           </div>
         ))}
       </div>
+      {moneyNote}
     </section>
   );
 }

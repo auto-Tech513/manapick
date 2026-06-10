@@ -113,18 +113,6 @@ const generativeAiGuide = {
         "Manapickは毎週更新で、古くなった動画は差し替えます。このページの「最終更新日」をご確認ください。"
     }
   ],
-  prItems: [
-    {
-      title: "面倒なことはChatGPTにやらせよう",
-      href: "https://a.r10.to/hFhXYb",
-      note: "動画ロードマップで触れたChatGPT活用を、日々の作業に落とし込む補助教材です。"
-    },
-    {
-      title: "この一冊で全部わかる ChatGPT & Copilotの教科書［改訂第2版］",
-      href: "https://a.r10.to/hgvVNF",
-      note: "ChatGPTとCopilotの基本を手元で確認しながら、動画学習を補うための一冊です。"
-    }
-  ],
   relatedLinks: [
     {
       label: "Pythonロードマップ",
