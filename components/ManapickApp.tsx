@@ -571,7 +571,12 @@ export default function ManapickApp() {
     return videos.filter((video) => video.genre === selectedGenre);
   }, [selectedGenre]);
 
-  const selectedGenreTopVideo = useMemo(() => topScoredVideo(selectedPublishedVideos), [selectedPublishedVideos]);
+  const selectedGenreTopVideo = useMemo(() => {
+    if (selectedGenre === "all") return null;
+    if (selectedSub === "all") return topScoredVideo(selectedPublishedVideos);
+    const subPool = selectedPublishedVideos.filter((video) => video.sub === selectedSub);
+    return topScoredVideo(subPool) ?? topScoredVideo(selectedPublishedVideos);
+  }, [selectedGenre, selectedSub, selectedPublishedVideos]);
   const selectedGenreTopics = useMemo(() => topicCounts(selectedPublishedVideos), [selectedPublishedVideos]);
 
   const totalPages = Math.max(1, Math.ceil(filteredVideos.length / pageSize));
@@ -886,7 +891,31 @@ export default function ManapickApp() {
     });
   }
 
-  function handleGenreChange(nextGenre: string, scrollTarget: "results" | "topics" = "results") {
+  function scrollToProfessionCard(routeId: string) {
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        const card = document.getElementById("profession-" + routeId);
+        const track = card?.closest<HTMLElement>(".profession-track");
+        if (!card) return;
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const horizontallyScrollable = !!track && track.scrollWidth > track.clientWidth + 4;
+        if (horizontallyScrollable && track) {
+          scrollToElement("profession-routes");
+          const cardRect = card.getBoundingClientRect();
+          const trackRect = track.getBoundingClientRect();
+          const delta = (cardRect.left - trackRect.left) - (track.clientWidth - card.clientWidth) / 2;
+          track.scrollTo({ left: track.scrollLeft + delta, behavior: reducedMotion ? "auto" : "smooth" });
+        } else {
+          scrollToElement("profession-" + routeId);
+        }
+        document.querySelectorAll(".profession-card.is-active").forEach((el) => el.classList.remove("is-active"));
+        card.classList.add("is-active");
+        window.setTimeout(() => card.classList.remove("is-active"), 1600);
+      });
+    });
+  }
+
+  function handleGenreChange(nextGenre: string, scrollTarget: "results" | "topics" | "none" = "results") {
     setWatchlistOnly(false);
     setSelectedGenre(nextGenre);
     setSelectedSub("all");
@@ -896,7 +925,11 @@ export default function ManapickApp() {
     setKeyword("");
     setSuggestionsOpen(false);
     setActiveSuggestionIndex(0);
+    if (nextGenre !== "all" && roadmapTabs.some((roadmap) => roadmap.genre === nextGenre)) {
+      setActiveRoadmapGenre(nextGenre);
+    }
     resetPageParam();
+    if (scrollTarget === "none") return;
     if (scrollTarget === "topics" && nextGenre !== "all") {
       scrollToElement("topic-filter-anchor");
       return;
@@ -925,7 +958,29 @@ export default function ManapickApp() {
 
   function handleProfessionRoute(route: ProfessionRoute) {
     const primary = route.destinations.find((destination) => destination.href === route.href) ?? route.destinations[0];
-    handleProfessionDestination(primary ?? { label: route.primaryLabel, genre: "all", href: route.href });
+    const nextGenre = primary?.genre ?? "all";
+    if (nextGenre !== "all") {
+      const nextSub = availableSubForGenre(nextGenre, primary?.sub, primary?.fallbackSub);
+      setWatchlistOnly(false);
+      setSelectedGenre(nextGenre);
+      setSelectedSub(nextSub);
+      setSelectedLevel("すべて");
+      setSelectedTime("all");
+      setSearchDraft("");
+      setKeyword("");
+      setSuggestionsOpen(false);
+      setActiveSuggestionIndex(0);
+      if (roadmapTabs.some((roadmap) => roadmap.genre === nextGenre)) {
+        setActiveRoadmapGenre(nextGenre);
+      }
+      resetPageParam();
+    }
+    scrollToElement("roadmap");
+  }
+
+  function handleRoadmapGenreSelect(genre: string) {
+    setActiveRoadmapGenre(genre);
+    handleGenreChange(genre, "none");
   }
 
   function handleMobileGenreSelect(nextGenre: string) {
@@ -1101,7 +1156,11 @@ export default function ManapickApp() {
           onClose={() => setMenuOpen(false)}
           onProfessionSelect={(routeId) => {
             setMenuOpen(false);
-            scrollToElement(routeId ? "profession-" + routeId : "profession-routes");
+            if (!routeId) {
+              scrollToElement("profession-routes");
+              return;
+            }
+            scrollToProfessionCard(routeId);
           }}
           onGenreSelect={(genreKey) => {
             setMenuOpen(false);
@@ -1551,7 +1610,7 @@ export default function ManapickApp() {
                     role="tab"
                     aria-selected={activeRoadmap.genre === roadmap.genre}
                     aria-controls="roadmap-panel"
-                    onClick={() => setActiveRoadmapGenre(roadmap.genre)}
+                    onClick={() => handleRoadmapGenreSelect(roadmap.genre)}
                     className={activeRoadmap.genre === roadmap.genre ? "roadmap-tab is-active" : "roadmap-tab"}
                   >
                     {genreLabel(roadmap.genre)}
@@ -2173,12 +2232,28 @@ function CategoryTabNav({
   activeGenre: string;
   onSelect: (genreKey: string) => void;
 }) {
+  const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+
+  useEffect(() => {
+    const activeTab = tabRefs.current[activeGenre];
+    if (!activeTab) return;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    activeTab.scrollIntoView({
+      inline: "center",
+      block: "nearest",
+      behavior: reducedMotion ? "auto" : "smooth"
+    });
+  }, [activeGenre]);
+
   return (
     <nav className="category-tab-nav" aria-label="公開中ジャンル">
       <div className="category-tab-track">
         {genres.map((genre) => (
           <button
             key={genre.key}
+            ref={(node) => {
+              tabRefs.current[genre.key] = node;
+            }}
             type="button"
             className={activeGenre === genre.key ? "category-tab is-active" : "category-tab"}
             onClick={() => onSelect(genre.key)}
