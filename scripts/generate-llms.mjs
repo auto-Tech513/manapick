@@ -6,6 +6,22 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, "..");
 const fallbackSiteUrl = "https://manapick.pages.dev";
 
+async function loadLocalEnv() {
+  try {
+    const raw = await readFile(path.join(repoRoot, ".env.local"), "utf8");
+    for (const line of raw.split(/\r?\n/)) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith("#") || !trimmed.includes("=")) continue;
+      const index = trimmed.indexOf("=");
+      const key = trimmed.slice(0, index).trim();
+      const value = trimmed.slice(index + 1).trim().replace(/^['"]|['"]$/g, "");
+      if (key && process.env[key] === undefined) process.env[key] = value;
+    }
+  } catch {
+    // .env.local is optional; fall back to the public Pages URL.
+  }
+}
+
 function normalizeSiteUrl(value) {
   const raw = value?.trim() || fallbackSiteUrl;
 
@@ -25,13 +41,28 @@ function displayGenreName(genre) {
   return genre.label;
 }
 
+await loadLocalEnv();
+
 const siteUrl = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL);
 const genres = JSON.parse(await readFile(path.join(repoRoot, "content/genres.json"), "utf8"));
-const publishedGenres = genres.filter((genre) => genre.status === "published");
+const videos = JSON.parse(await readFile(path.join(repoRoot, "content/videos.json"), "utf8"));
+const publishedGenreKeys = new Set(genres.filter((genre) => genre.status === "published").map((genre) => genre.key));
+const publishedVideos = videos.filter((video) => publishedGenreKeys.has(video.genre));
+const genreCounts = publishedVideos.reduce((counts, video) => {
+  counts[video.genre] = (counts[video.genre] || 0) + 1;
+  return counts;
+}, {});
+const subtopicsByGenre = publishedVideos.reduce((topics, video) => {
+  topics[video.genre] ||= new Set();
+  topics[video.genre].add(video.sub);
+  return topics;
+}, {});
+const publishedGenres = genres.filter((genre) => publishedGenreKeys.has(genre.key) && genreCounts[genre.key] > 0);
 
 const genreLines = publishedGenres.map((genre) => {
-  const subgenres = genre.subgenres.length > 0 ? `: ${genre.subgenres.join(" / ")}` : "";
-  return `- ${displayGenreName(genre)}${subgenres}`;
+  const subgenres = [...(subtopicsByGenre[genre.key] || [])].sort();
+  const subgenreText = subgenres.length > 0 ? `: ${subgenres.join(" / ")}` : "";
+  return `- ${displayGenreName(genre)}（${genreCounts[genre.key]}本）${subgenreText}`;
 });
 
 const guideLines = [
@@ -53,7 +84,7 @@ const lines = [
   "Manapickは、社会人の学び直し・リスキリングに役立つYouTube学習動画を、独自レビューとManapickスコアで整理するキュレーションサイトです。",
   "動画は公式YouTubeへのリンクまたは公式埋め込みを前提に紹介し、ダウンロードや再配布は扱いません。",
   "",
-  "## 公開中の10ジャンル",
+  `## 公開中の${publishedGenres.length}ジャンル`,
   ...genreLines,
   "",
   "## 採点方法",

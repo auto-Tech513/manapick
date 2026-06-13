@@ -1,0 +1,162 @@
+[
+  {
+    "id": "engineer",
+    "title": "エンジニアになりたい",
+    "skill": "AIを使いながら、PythonとIT基礎を順番に固める。",
+    "relatedText": "生成AI / プログラミング・IT / ITパスポート・基本情報技術者",
+    "primaryLabel": "プログラミングの入口へ",
+    "href": "/?genre=prog#search",
+    "guideHref": "/guide/python/",
+    "icon": "code",
+    "destinations": [
+      {
+        "label": "生成AI",
+        "genre": "ai",
+        "href": "/?genre=ai#search",
+        "guideHref": "/guide/generative-ai/"
+      },
+      {
+        "label": "プログラミング・IT",
+        "genre": "prog",
+        "href": "/?genre=prog#search",
+        "guideHref": "/guide/python/"
+      },
+      {
+        "label": "ITパスポート",
+        "genre": "shikaku",
+        "sub": "ITパスポート",
+        "fallbackSub": "IT",
+        "href": "/?genre=shikaku&sub=ITパスポート#search",
+        "guideHref": "/guide/certification/"
+      },
+      {
+        "label": "基本情報技術者",
+        "genre": "shikaku",
+        "sub": "基本情報技術者",
+        "fallbackSub": "IT",
+        "href": "/?genre=shikaku&sub=基本情報技術者#search",
+        "guideHref": "/guide/certification/"
+      }
+    ]
+  },
+  {
+    "id": "office-accounting",
+    "title": "事務・経理で手に職",
+    "skill": "Office資料、Excel分析、簿記学習を仕事の土台にする。",
+    "relatedText": "Office・資料作成 / 簿記（学習） / データ分析",
+    "primaryLabel": "Office・資料の入口へ",
+    "href": "/?genre=biz#search",
+    "guideHref": "/guide/office-skills/",
+    "icon": "office",
+    "note": "会計・税務の実務支援ではなく、資格学習とスキル学習への導線です。",
+    "destinations": [
+      {
+        "label": "Office・資料",
+        "genre": "biz",
+        "href": "/?genre=biz#search",
+        "guideHref": "/guide/office-skills/"
+      },
+      {
+        "label": "簿記（学習）",
+        "genre": "kaikei",
+        "sub": "簿記",
+        "href": "/?genre=kaikei&sub=簿記#search",
+        "guideHref": "/guide/bookkeeping/"
+      },
+      {
+        "label": "データ分析",
+        "genre": "data",
+        "href": "/?genre=data#search",
+        "guideHref": "/guide/excel-data/"
+      }
+    ]
+  },
+  {
+    "id": "creative-sidework",
+    "title": "動画・デザインで副業",
+    "skill": "動画編集の操作と、届けるためのWebマーケをつなげる。",
+    "relatedText": "動画編集・クリエイティブ / Webマーケ・SNS運用",
+    "primaryLabel": "動画編集の入口へ",
+    "href": "/?genre=video#search",
+    "guideHref": "/guide/video-editing/",
+    "icon": "creative",
+    "destinations": [
+      {
+        "label": "動画編集",
+        "genre": "video",
+        "href": "/?genre=video#search",
+        "guideHref": "/guide/video-editing/"
+      },
+      {
+        "label": "Webマーケ",
+        "genre": "marke",
+        "href": "/?genre=marke#search",
+        "guideHref": "/guide/web-marketing/"
+      }
+    ]
+  },
+  {
+    "id": "english-work",
+    "title": "英語を仕事に",
+    "skill": "英語学習の順番を決め、TOEICも仕事英語も迷わず進める。",
+    "relatedText": "英語 / TOEIC / ビジネス英語",
+    "primaryLabel": "英語の入口へ",
+    "href": "/?genre=english#search",
+    "guideHref": "/guide/english/",
+    "icon": "globe",
+    "destinations": [
+      {
+        "label": "英語",
+        "genre": "english",
+        "href": "/?genre=english#search",
+        "guideHref": "/guide/english/"
+      },
+      {
+        "label": "TOEIC",
+        "genre": "english",
+        "sub": "TOEIC",
+        "href": "/?genre=english&sub=TOEIC#search",
+        "guideHref": "/guide/english/"
+      },
+      {
+        "label": "ビジネス英語",
+        "genre": "english",
+        "sub": "ビジネス英語",
+        "href": "/?genre=english&sub=ビジネス英語#search",
+        "guideHref": "/guide/english/"
+      }
+    ]
+  },
+  {
+    "id": "health-life-license",
+    "title": "医療・くらしの資格",
+    "skill": "登録販売者や医療事務など、生活に近い資格学習の入口を作る。",
+    "relatedText": "登録販売者 / 医療事務 / 資格・検定",
+    "primaryLabel": "資格の入口へ",
+    "href": "/?genre=shikaku#search",
+    "guideHref": "/guide/certification/",
+    "icon": "certificate",
+    "destinations": [
+      {
+        "label": "登録販売者",
+        "genre": "shikaku",
+        "sub": "登録販売者",
+        "href": "/?genre=shikaku&sub=登録販売者#search",
+        "guideHref": "/guide/certification/"
+      },
+      {
+        "label": "医療事務",
+        "genre": "shikaku",
+        "sub": "医療事務",
+        "href": "/?genre=shikaku&sub=医療事務#search",
+        "guideHref": "/guide/certification/"
+      },
+      {
+        "label": "資格・検定",
+        "genre": "shikaku",
+        "href": "/?genre=shikaku#search",
+        "guideHref": "/guide/certification/"
+      }
+    ]
+  }
+]

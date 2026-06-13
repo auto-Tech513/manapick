@@ -14,6 +14,7 @@ import {
   youtubeThumbnail,
   type Video
 } from "@/lib/manapick";
+import { siteStats } from "@/lib/site-stats";
 
 type GuidePageProps = {
   params: Promise<{ slug: string }>;
@@ -474,7 +475,10 @@ function guideStudyPlans(guide: Guide, totalMinutes: number) {
 
 function guideRelatedLinks(guide: Guide) {
   const links = [
-    ...guide.relatedLinks,
+    ...guide.relatedLinks.map((link) => ({
+      ...link,
+      label: link.label === "ジャンルの地図を見る" ? siteStats.publishedGenreCount + "ジャンルの地図を見る" : link.label
+    })),
     {
       label: genreDisplayName(guide.genre) + "の動画一覧",
       href: "/?genre=" + guide.genre + "#search"

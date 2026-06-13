@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --webpack",
-    "build": "next build --webpack",
+    "prebuild": "npm run llms:generate",
+    "build": "next build",
     "start": "next dev --webpack",
     "lint": "eslint .",
     "llms:generate": "node scripts/generate-llms.mjs",

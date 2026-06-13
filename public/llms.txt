@@ -4,16 +4,16 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 動画は公式YouTubeへのリンクまたは公式埋め込みを前提に紹介し、ダウンロードや再配布は扱いません。
 
 ## 公開中の10ジャンル
-- 生成AI: ChatGPT / Claude / Gemini / 画像生成 / 自動化 / AI資格
-- プログラミング・IT: Python / Web開発 / アプリ / インフラ
-- 動画編集・クリエイティブ: Premiere Pro / CapCut / After Effects / デザイン
-- 語学・英語: 英会話 / TOEIC / 発音 / ビジネス英語
-- データ分析・DX: Excel / データサイエンス / BI
-- Webマーケ・SNS運用: SEO / 広告 / SNS
-- Office・資料作成: 資料作成 / Excel / プレゼン / 思考法
-- 資格・検定（非会計）: 宅建 / TOEIC / IT / AI検定
-- 会計・経営系資格: 簿記 / FP / 税理士 / 中小企業診断士
-- お金・投資: NISA / 投資 / 家計
+- 生成AI（112本）: AI資格 / ChatGPT / Claude / Copilot / Gemini / プロンプト / 画像生成 / 自動化
+- プログラミング・IT（53本）: Git / JavaScript / Python / SQL / Web開発 / インフラ
+- 動画編集・クリエイティブ（61本）: After Effects / CapCut / DaVinci / Premiere Pro / デザイン
+- 語学・英語（52本）: TOEIC / ビジネス英語 / 発音 / 英会話
+- データ分析・DX（30本）: BI / Excel / データサイエンス / 統計
+- Webマーケ・SNS運用（31本）: SEO / SNS / Webマーケ
+- Office・資料作成（34本）: Excel / Word / プレゼン / 資料作成
+- 資格・検定（非会計）（35本）: AI検定 / IT / 宅建
+- 会計・経営系資格（28本）: FP / 中小企業診断士 / 税理士 / 簿記
+- お金・投資（25本）: NISA / 家計 / 投資
 
 ## 採点方法
 - Manapickスコアは7軸×5点=35点満点です。
@@ -22,25 +22,25 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - スコアには確認済と暫定があり、暫定動画は順次、人の視聴確認で確定します。
 
 ## ガイド記事
-- 生成AIロードマップ記事: https://manapick.pages.dev/guide/generative-ai/
-- Pythonロードマップ記事: https://manapick.pages.dev/guide/python/
-- 動画編集ロードマップ記事: https://manapick.pages.dev/guide/video-editing/
-- 英語ロードマップ記事: https://manapick.pages.dev/guide/english/
-- Excelデータ分析ロードマップ記事: https://manapick.pages.dev/guide/excel-data/
-- Webマーケティングロードマップ記事: https://manapick.pages.dev/guide/web-marketing/
-- Office・資料作成ロードマップ記事: https://manapick.pages.dev/guide/office-skills/
-- 資格勉強ロードマップ記事: https://manapick.pages.dev/guide/certification/
-- 会計資格ロードマップ記事: https://manapick.pages.dev/guide/bookkeeping/
-- お金・投資ロードマップ記事: https://manapick.pages.dev/guide/money-basics/
+- 生成AIロードマップ記事: https://manapick.app/guide/generative-ai/
+- Pythonロードマップ記事: https://manapick.app/guide/python/
+- 動画編集ロードマップ記事: https://manapick.app/guide/video-editing/
+- 英語ロードマップ記事: https://manapick.app/guide/english/
+- Excelデータ分析ロードマップ記事: https://manapick.app/guide/excel-data/
+- Webマーケティングロードマップ記事: https://manapick.app/guide/web-marketing/
+- Office・資料作成ロードマップ記事: https://manapick.app/guide/office-skills/
+- 資格勉強ロードマップ記事: https://manapick.app/guide/certification/
+- 会計資格ロードマップ記事: https://manapick.app/guide/bookkeeping/
+- お金・投資ロードマップ記事: https://manapick.app/guide/money-basics/
 
 ## 主要URL
-- トップ: https://manapick.pages.dev/
-- 採点方法: https://manapick.pages.dev/about-score/
-- お問い合わせ: https://manapick.pages.dev/contact/
-- 運営者情報: https://manapick.pages.dev/operator/
-- 免責事項: https://manapick.pages.dev/disclaimer/
-- プライバシーポリシー: https://manapick.pages.dev/privacy/
-- サイトマップ: https://manapick.pages.dev/sitemap.xml
+- トップ: https://manapick.app/
+- 採点方法: https://manapick.app/about-score/
+- お問い合わせ: https://manapick.app/contact/
+- 運営者情報: https://manapick.app/operator/
+- 免責事項: https://manapick.app/disclaimer/
+- プライバシーポリシー: https://manapick.app/privacy/
+- サイトマップ: https://manapick.app/sitemap.xml
 
 ## クローラー向け補足
 Manapickの本文、見出し、動画タイトル、レビューはHTMLテキストとして提供しています。検索・絞り込みUIは補助機能であり、主要な動画詳細ページは静的URLで参照できます。

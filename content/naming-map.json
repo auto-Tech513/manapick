@@ -1,0 +1,93 @@
+[
+  {
+    "display": "生成AI",
+    "genre": "ai",
+    "sub": null,
+    "shortScenarioIds": ["generative_ai", "ai_work"],
+    "snsLabel": "生成AI"
+  },
+  {
+    "display": "プログラミング・IT",
+    "genre": "prog",
+    "sub": null,
+    "shortScenarioIds": ["python"],
+    "snsLabel": "プログラミング"
+  },
+  {
+    "display": "動画編集",
+    "genre": "video",
+    "sub": null,
+    "shortScenarioIds": ["doga_henshu"],
+    "snsLabel": "動画編集"
+  },
+  {
+    "display": "語学・英語",
+    "genre": "english",
+    "sub": null,
+    "shortScenarioIds": ["english"],
+    "snsLabel": "英語"
+  },
+  {
+    "display": "データ分析・DX",
+    "genre": "data",
+    "sub": null,
+    "shortScenarioIds": ["excel", "data_bunseki"],
+    "snsLabel": "データ分析"
+  },
+  {
+    "display": "Webマーケ・SNS",
+    "genre": "marke",
+    "sub": null,
+    "shortScenarioIds": ["web_marke"],
+    "snsLabel": "Webマーケ"
+  },
+  {
+    "display": "Office・資料作成",
+    "genre": "biz",
+    "sub": null,
+    "shortScenarioIds": ["office_skill"],
+    "snsLabel": "仕事術"
+  },
+  {
+    "display": "資格・検定（非会計）",
+    "genre": "shikaku",
+    "sub": null,
+    "shortScenarioIds": ["shikaku"],
+    "snsLabel": "資格"
+  },
+  {
+    "display": "会計・経営系資格",
+    "genre": "kaikei",
+    "sub": null,
+    "shortScenarioIds": ["boki"],
+    "snsLabel": "簿記・会計"
+  },
+  {
+    "display": "お金・投資",
+    "genre": "money",
+    "sub": null,
+    "shortScenarioIds": ["money_nisa"],
+    "snsLabel": "お金"
+  },
+  {
+    "display": "ITパスポート",
+    "genre": "shikaku",
+    "sub": "ITパスポート",
+    "shortScenarioIds": ["it_passport"],
+    "snsLabel": "ITパスポート"
+  },
+  {
+    "display": "基本情報技術者",
+    "genre": "shikaku",
+    "sub": "基本情報技術者",
+    "shortScenarioIds": ["kihon_joho"],
+    "snsLabel": "基本情報"
+  },
+  {
+    "display": "登録販売者",
+    "genre": "shikaku",
+    "sub": "登録販売者",
+    "shortScenarioIds": ["tourokuhanbaisha"],
+    "snsLabel": "登録販売者"
+  }
+]

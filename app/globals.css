@@ -2194,6 +2194,191 @@ img {
   text-wrap: balance;
 }
 
+.profession-section {
+  width: min(100% - 32px, 1240px);
+  margin: 0 auto;
+  padding: 26px 0 32px;
+}
+
+.profession-heading {
+  display: grid;
+  max-width: 760px;
+  gap: 6px;
+}
+
+.profession-heading p:last-child {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.96rem;
+  font-weight: 750;
+  line-height: 1.8;
+}
+
+.profession-track {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.profession-card {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: 18px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(246, 248, 251, 0.88)),
+    #fff;
+  box-shadow: var(--shadow-line);
+  padding: 14px;
+  transition: border-color 180ms var(--ease-standard), box-shadow 180ms var(--ease-standard), transform 180ms var(--ease-standard);
+}
+
+.profession-card::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 5px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-leaf), var(--color-spark));
+  content: "";
+}
+
+.profession-card:hover,
+.profession-card:focus-within {
+  border-color: color-mix(in srgb, var(--color-primary) 26%, var(--color-line));
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.profession-main-link {
+  display: grid;
+  gap: 9px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.profession-main-link:hover {
+  text-decoration: none;
+}
+
+.profession-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.profession-number {
+  color: color-mix(in srgb, var(--color-primary) 72%, white);
+  font-size: 0.78rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+}
+
+.profession-icon {
+  display: inline-grid;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 13px;
+  background: color-mix(in srgb, var(--color-primary) 8%, white);
+  color: var(--color-primary-ink);
+}
+
+.profession-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.profession-title {
+  color: var(--color-ink);
+  font-size: clamp(1rem, 1.4vw, 1.18rem);
+  font-weight: 950;
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+.profession-skill {
+  color: var(--color-ink);
+  font-size: 0.88rem;
+  font-weight: 820;
+  line-height: 1.65;
+}
+
+.profession-related,
+.profession-note {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 820;
+  line-height: 1.6;
+}
+
+.profession-note {
+  margin: 0;
+  border-left: 3px solid color-mix(in srgb, var(--color-spark) 72%, white);
+  border-radius: 0 8px 8px 0;
+  background: color-mix(in srgb, var(--color-spark) 8%, white);
+  padding: 7px 9px;
+}
+
+.profession-destination-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.profession-destination-row a,
+.profession-guide-link {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 950;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.profession-destination-row a {
+  border: 1px solid color-mix(in srgb, var(--color-primary) 16%, var(--color-line));
+  background: #fff;
+  color: var(--color-primary-ink);
+  padding: 6px 9px;
+}
+
+.profession-destination-row a:hover,
+.profession-guide-link:hover {
+  border-color: color-mix(in srgb, var(--color-primary) 38%, var(--color-line));
+  text-decoration: none;
+}
+
+.profession-guide-link {
+  width: fit-content;
+  border: 1px solid color-mix(in srgb, var(--color-leaf) 28%, var(--color-line));
+  background: color-mix(in srgb, var(--color-leaf) 9%, white);
+  color: var(--color-primary-ink);
+  padding: 7px 11px;
+}
+
+@media (min-width: 768px) and (max-width: 1180px) {
+  .profession-track {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .profession-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .recent-strip {
   border-block: 1px solid color-mix(in srgb, var(--color-primary) 10%, var(--color-line));
   background: rgba(255, 255, 255, 0.72);
@@ -4794,6 +4979,7 @@ img {
   .pagination button,
   .popular-tabs button,
   .genre-summary-heading button,
+  .profession-card,
   .guide-video-card,
   .guide-cta-row a,
   .guide-pr-card.is-link,
@@ -4809,6 +4995,7 @@ img {
   .pagination button:hover:not(:disabled),
   .popular-tabs button:hover,
   .genre-summary-heading button:hover,
+  .profession-card:hover,
   .guide-video-card:hover,
   .guide-cta-row a:hover,
   .guide-pr-card.is-link:hover {
@@ -5221,6 +5408,61 @@ img {
   .why-tagline {
     margin: 10px 16px 0 0;
     font-size: 0.86rem;
+  }
+
+  .profession-section {
+    width: 100%;
+    padding: 20px 0 24px 16px;
+  }
+
+  .profession-heading {
+    max-width: none;
+    padding-right: 16px;
+  }
+
+  .profession-heading p:last-child {
+    font-size: 0.86rem;
+    line-height: 1.7;
+  }
+
+  .profession-track {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    margin-top: 12px;
+    padding: 4px 16px 10px 2px;
+    scroll-padding-inline: 16px;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .profession-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .profession-card {
+    flex: 0 0 78vw;
+    scroll-snap-align: start;
+    padding: 13px;
+  }
+
+  .profession-card:hover,
+  .profession-card:focus-within {
+    transform: none;
+  }
+
+  .profession-title {
+    font-size: 1rem;
+  }
+
+  .profession-skill {
+    font-size: 0.84rem;
+  }
+
+  .profession-destination-row a,
+  .profession-guide-link {
+    min-height: 36px;
   }
 
   .recent-strip-inner {
@@ -5685,6 +5927,10 @@ img {
   }
 
   .why-grid {
+    scroll-snap-type: none;
+  }
+
+  .profession-track {
     scroll-snap-type: none;
   }
 }

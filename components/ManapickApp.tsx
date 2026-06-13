@@ -5,8 +5,10 @@ import Image from "next/image";
 import { type KeyboardEvent as ReactKeyboardEvent, type RefObject, useEffect, useMemo, useRef, useState } from "react";
 import BrandLogo, { BrandMark } from "@/components/BrandLogo";
 import genresData from "@/content/genres.json";
+import professionRoutesData from "@/content/professions.json";
 import roadmapsData from "@/content/roadmaps.json";
 import videosData from "@/content/videos.json";
+import { siteStats } from "@/lib/site-stats";
 import { useLocalList } from "@/lib/useLocalList";
 
 type GenreStatus = "published" | "preparing" | "checking";
@@ -67,9 +69,32 @@ type Roadmap = {
   steps: RoadmapStep[];
 };
 
+type ProfessionDestination = {
+  label: string;
+  genre: string;
+  sub?: string;
+  fallbackSub?: string;
+  href: string;
+  guideHref?: string;
+};
+
+type ProfessionRoute = {
+  id: string;
+  title: string;
+  skill: string;
+  relatedText: string;
+  primaryLabel: string;
+  href: string;
+  guideHref: string;
+  icon: string;
+  note?: string;
+  destinations: ProfessionDestination[];
+};
+
 const genres = genresData as Genre[];
 const videos = videosData as Video[];
 const roadmaps = roadmapsData as Roadmap[];
+const professionRoutes = professionRoutesData as ProfessionRoute[];
 
 const publishedGenreKeys = genres
   .filter((genre) => genre.status === "published")
@@ -101,7 +126,7 @@ type LocalListState = ReturnType<typeof useLocalList>;
 
 const purposeLinks = [
   { number: "01", title: "目的から選ぶ", label: "AIを仕事で使いたい", genre: "ai", icon: "target" },
-  { number: "02", title: "ジャンルから選ぶ", label: "10ジャンルから探す", genre: "all", icon: "grid" },
+  { number: "02", title: "ジャンルから選ぶ", label: siteStats.publishedGenreCount + "ジャンルから探す", genre: "all", icon: "grid" },
   { number: "03", title: "ロードマップで学ぶ", label: "順番を見て進む", genre: "roadmap", icon: "path" }
 ];
 
@@ -197,6 +222,12 @@ function genreDisplayName(key: string) {
 
 function genreName(key: string) {
   return genreDisplayName(key);
+}
+
+function availableSubForGenre(genreKey: string, sub?: string, fallbackSub?: string) {
+  if (sub && videos.some((video) => video.genre === genreKey && video.sub === sub)) return sub;
+  if (fallbackSub && videos.some((video) => video.genre === genreKey && video.sub === fallbackSub)) return fallbackSub;
+  return "all";
 }
 
 function videoDetailHref(video: Video) {
@@ -475,19 +506,14 @@ export default function ManapickApp() {
   }, [activeRoadmapGenre, roadmapTabs]);
 
   const publishedGenres = useMemo(() => {
-    return genres.filter((genre) => genre.status === "published");
+    return genres.filter((genre) => genre.status === "published" && (siteStats.genreCounts[genre.key] ?? 0) > 0);
   }, []);
 
   const publishedVideos = useMemo(() => {
     return videos.filter((video) => publishedGenreKeys.includes(video.genre));
   }, []);
 
-  const genreVideoCounts = useMemo(() => {
-    return publishedVideos.reduce<Record<string, number>>((counts, video) => {
-      counts[video.genre] = (counts[video.genre] ?? 0) + 1;
-      return counts;
-    }, {});
-  }, [publishedVideos]);
+  const genreVideoCounts = siteStats.genreCounts;
 
   const upcomingGenres = useMemo(() => {
     return genres.filter((genre) => genre.status !== "published");
@@ -504,7 +530,7 @@ export default function ManapickApp() {
     return selectedGenreData ? [selectedGenreData] : [];
   }, [publishedGenres, selectedGenre, selectedGenreData]);
 
-  const confirmedCount = useMemo(() => videos.filter((video) => scoreStatus(video) === "confirmed").length, []);
+  const confirmedCount = siteStats.confirmedVideoCount;
 
   const selectedPublishedVideos = useMemo(() => {
     if (selectedGenre === "all") return [];
@@ -549,6 +575,8 @@ export default function ManapickApp() {
     if (genre && publishedGenreKeys.includes(genre)) {
       skipNextFilterResetRef.current = true;
       setSelectedGenre(genre);
+      const sub = params.get("sub");
+      if (sub) setSelectedSub(availableSubForGenre(genre, sub));
     }
   }, []);
 
@@ -642,6 +670,11 @@ export default function ManapickApp() {
       url.searchParams.delete("genre");
     } else {
       url.searchParams.set("genre", selectedGenre);
+    }
+    if (selectedSub === "all") {
+      url.searchParams.delete("sub");
+    } else {
+      url.searchParams.set("sub", selectedSub);
     }
     window.history.replaceState(null, "", url);
   }, [keyword, selectedGenre, selectedLevel, selectedSub, selectedTime, watchlistOnly]);
@@ -835,6 +868,30 @@ export default function ManapickApp() {
       return;
     }
     scrollToResults();
+  }
+
+  function handleProfessionDestination(destination: ProfessionDestination) {
+    const nextGenre = destination.genre;
+    const nextSub = availableSubForGenre(nextGenre, destination.sub, destination.fallbackSub);
+    setWatchlistOnly(false);
+    setSelectedGenre(nextGenre);
+    setSelectedSub(nextSub);
+    setSelectedLevel("すべて");
+    setSelectedTime("all");
+    setSearchDraft("");
+    setKeyword("");
+    setSuggestionsOpen(false);
+    setActiveSuggestionIndex(0);
+    if (roadmapTabs.some((roadmap) => roadmap.genre === nextGenre)) {
+      setActiveRoadmapGenre(nextGenre);
+    }
+    resetPageParam();
+    scrollToElement(nextGenre === "all" ? "results-anchor" : "topic-filter-anchor");
+  }
+
+  function handleProfessionRoute(route: ProfessionRoute) {
+    const primary = route.destinations.find((destination) => destination.href === route.href) ?? route.destinations[0];
+    handleProfessionDestination(primary ?? { label: route.primaryLabel, genre: "all", href: route.href });
   }
 
   function handleMobileGenreSelect(nextGenre: string) {
@@ -1067,14 +1124,14 @@ export default function ManapickApp() {
               YouTube学習動画を35点満点で採点。見る順に整理し、登録不要・スキマ時間から。
             </p>
 
-            <HeroTrustStats totalVideos={videos.length} confirmedCount={confirmedCount} />
+            <HeroTrustStats totalVideos={siteStats.totalVideos} confirmedCount={confirmedCount} />
             <a className="mobile-hero-primary-cta" href="#mobile-weekly-pick">
               ▶ 迷ったら、まずこの1本
             </a>
             <PurposeNav onSelect={handlePurposeSelect} />
 
             <p className="hero-proof">
-              公開中{publishedGenres.length}ジャンル
+              公開中{siteStats.publishedGenreCount}ジャンル
               {confirmedCount > 0 ? " ／ 確認済" + confirmedCount + "本" : ""}
               {" ／ 順次拡大"}
             </p>
@@ -1095,6 +1152,12 @@ export default function ManapickApp() {
       </section>
 
       <WhyManapickSection />
+
+      <ProfessionRouteSection
+        routes={professionRoutes}
+        onRouteSelect={handleProfessionRoute}
+        onDestinationSelect={handleProfessionDestination}
+      />
 
       {recent.ready && recentVideos.length > 0 ? <RecentStrip videos={recentVideos} /> : null}
 
@@ -1200,7 +1263,7 @@ export default function ManapickApp() {
                   className={`genre-card genre-card-all ${selectedGenre === "all" ? "is-active" : ""}`}
                 >
                   <span className="block text-sm font-black">すべての公開中ジャンル</span>
-                  <span className="mt-1 block text-xs opacity-80">{publishedVideos.length}本から探す</span>
+                  <span className="mt-1 block text-xs opacity-80">{siteStats.publishedVideoCount}本から探す</span>
                 </button>
                 {publishedGenres.map((genre) => (
                   <button
@@ -1218,7 +1281,7 @@ export default function ManapickApp() {
                 ))}
               </div>
               <p className="mobile-genre-status-note">
-                公開中{publishedGenres.length}ジャンル
+                公開中{siteStats.publishedGenreCount}ジャンル
                 {upcomingGenres.length > 0 ? " / 近日公開" + upcomingGenres.length + "ジャンル" : ""}
                 {checkingGenres.length > 0 ? " / 確認中" + checkingGenres.length + "ジャンル" : ""}
                 {" / 順次拡大"}
@@ -1682,6 +1745,129 @@ function WhyManapickSection() {
   );
 }
 
+function ProfessionRouteSection({
+  routes,
+  onRouteSelect,
+  onDestinationSelect
+}: {
+  routes: ProfessionRoute[];
+  onRouteSelect: (route: ProfessionRoute) => void;
+  onDestinationSelect: (destination: ProfessionDestination) => void;
+}) {
+  return (
+    <section id="profession-routes" className="profession-section" aria-labelledby="profession-title">
+      <div className="profession-heading">
+        <p className="section-eyebrow">なりたい職業から選ぶ</p>
+        <h2 id="profession-title" className="section-title">職業ゴールから、見るべき順番を決める</h2>
+        <p>
+          「何を学ぶか」から迷う人のために、職業ゴールごとにジャンル・資格・ロードマップを束ねました。
+        </p>
+      </div>
+      <div className="profession-track" role="list">
+        {routes.map((route, index) => (
+          <article key={route.id} id={"profession-" + route.id} className="profession-card" role="listitem">
+            <a
+              className="profession-main-link"
+              href={route.href}
+              onClick={(event) => {
+                event.preventDefault();
+                onRouteSelect(route);
+              }}
+            >
+              <span className="profession-topline">
+                <span className="profession-number">{String(index + 1).padStart(2, "0")}</span>
+                <ProfessionIcon icon={route.icon} />
+              </span>
+              <span className="profession-title">{route.title}</span>
+              <span className="profession-skill">{route.skill}</span>
+              <span className="profession-related">{route.relatedText}</span>
+            </a>
+            {route.note ? <p className="profession-note">{route.note}</p> : null}
+            <div className="profession-destination-row" aria-label={route.title + "の関連ジャンル"}>
+              {route.destinations.map((destination) => (
+                <a
+                  key={route.id + "-" + destination.label}
+                  href={destination.href}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    onDestinationSelect(destination);
+                  }}
+                >
+                  {destination.label}
+                </a>
+              ))}
+            </div>
+            <a className="profession-guide-link" href={route.guideHref}>
+              文章ロードマップを見る
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function ProfessionIcon({ icon }: { icon: string }) {
+  const commonProps = { viewBox: "0 0 24 24", role: "presentation", focusable: "false" } as const;
+  if (icon === "office") {
+    return (
+      <span className="profession-icon" aria-hidden="true">
+        <svg {...commonProps}>
+          <path d="M5 5h14v14H5z" />
+          <path d="M8 9h8" />
+          <path d="M8 13h5" />
+          <path d="M8 17h7" />
+        </svg>
+      </span>
+    );
+  }
+  if (icon === "creative") {
+    return (
+      <span className="profession-icon" aria-hidden="true">
+        <svg {...commonProps}>
+          <path d="M5 7h14v10H5z" />
+          <path d="m10 10 4 2-4 2z" />
+          <path d="M7 4h3" />
+          <path d="M14 4h3" />
+        </svg>
+      </span>
+    );
+  }
+  if (icon === "globe") {
+    return (
+      <span className="profession-icon" aria-hidden="true">
+        <svg {...commonProps}>
+          <circle cx="12" cy="12" r="8" />
+          <path d="M4 12h16" />
+          <path d="M12 4c2 2.2 3 4.8 3 8s-1 5.8-3 8" />
+          <path d="M12 4c-2 2.2-3 4.8-3 8s1 5.8 3 8" />
+        </svg>
+      </span>
+    );
+  }
+  if (icon === "certificate") {
+    return (
+      <span className="profession-icon" aria-hidden="true">
+        <svg {...commonProps}>
+          <path d="M7 4h10v12H7z" />
+          <path d="M9 8h6" />
+          <path d="M9 11h6" />
+          <path d="M10 16v4l2-1.3L14 20v-4" />
+        </svg>
+      </span>
+    );
+  }
+  return (
+    <span className="profession-icon" aria-hidden="true">
+      <svg {...commonProps}>
+        <path d="M6 18 18 6" />
+        <path d="M8 6h10v10" />
+        <path d="M5 19h14" />
+      </svg>
+    </span>
+  );
+}
+
 function RecentStrip({ videos }: { videos: Video[] }) {
   return (
     <section className="recent-strip" aria-labelledby="recent-strip-title">
@@ -1801,7 +1987,7 @@ function SiteMenuDrawer({
         </div>
         <nav className="site-menu-links" aria-label="メニューリンク">
           <button type="button" className="site-menu-link" onClick={onGenreList}>
-            10ジャンル一覧
+            {genres.length}ジャンル一覧
           </button>
           <div className="site-menu-genre-grid" role="group" aria-label="ジャンル一覧">
             {genres.map((genre) => (

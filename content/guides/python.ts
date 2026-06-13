@@ -121,7 +121,7 @@ const pythonGuide = {
       href: "/guide/english/"
     },
     {
-      label: "10ジャンルの地図を見る",
+      label: "ジャンルの地図を見る",
       href: "/#genre-picker"
     }
   ]

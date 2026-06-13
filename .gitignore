@@ -5,6 +5,7 @@ node_modules
 .playwright-cli/
 output/
 *.log
+tsconfig.tsbuildinfo
 .env*
 data/candidates.json
 data/drafts.json
