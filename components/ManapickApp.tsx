@@ -2413,7 +2413,7 @@ function HeroTrustStats({ totalVideos, confirmedCount }: { totalVideos: number; 
       )
     },
     {
-      label: "毎週更新",
+      label: "随時更新",
       icon: (
         <svg viewBox="0 0 24 24" role="presentation" focusable="false">
           <path d="M4 12a8 8 0 0 1 13-6" />
