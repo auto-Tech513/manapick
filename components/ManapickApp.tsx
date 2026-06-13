@@ -233,6 +233,12 @@ function availableSubForGenre(genreKey: string, sub?: string, fallbackSub?: stri
   return "all";
 }
 
+function destinationHasVideos(destination: ProfessionDestination): boolean {
+  return videos.some(
+    (video) => video.genre === destination.genre && (!destination.sub || video.sub === destination.sub)
+  );
+}
+
 function videoDetailHref(video: Video) {
   return "/video/" + video.ytid + "/";
 }
@@ -1953,7 +1959,7 @@ function ProfessionRouteSection({
             <p className="profession-related">{route.relatedText}</p>
             {route.note ? <p className="profession-note">{route.note}</p> : null}
             <div className="profession-destination-row" aria-label={route.title + "の関連ジャンル"}>
-              {route.destinations.map((destination) => (
+              {route.destinations.filter(destinationHasVideos).map((destination) => (
                 <a
                   key={route.id + "-" + destination.label}
                   href={destination.href}
