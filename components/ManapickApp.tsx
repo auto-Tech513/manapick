@@ -125,7 +125,7 @@ type HeroCarouselSlide = {
 type LocalListState = ReturnType<typeof useLocalList>;
 
 const purposeLinks = [
-  { number: "01", title: "目的から選ぶ", label: "AIを仕事で使いたい", genre: "ai", icon: "target" },
+  { number: "01", title: "なりたい職業から選ぶ", label: "職業ゴールから最短ルート", genre: "profession", icon: "target" },
   { number: "02", title: "ジャンルから選ぶ", label: siteStats.publishedGenreCount + "ジャンルから探す", genre: "all", icon: "grid" },
   { number: "03", title: "ロードマップで学ぶ", label: "順番を見て進む", genre: "roadmap", icon: "path" }
 ];
@@ -141,6 +141,9 @@ const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
   {
     title: "学ぶ",
     links: [
+      { label: "なりたい職業から選ぶ", href: "/#profession-routes" },
+      { label: siteStats.publishedGenreCount + "ジャンル一覧", href: "/#genre-picker" },
+      { label: "ロードマップ", href: "/#roadmap" },
       { label: "採点方法", href: "/about-score/" },
       { label: "生成AIロードマップ", href: "/guide/generative-ai/" },
       { label: "Pythonロードマップ", href: "/guide/python/" },
@@ -256,6 +259,37 @@ function topScoredVideo(items: Video[]) {
     if (best === null || best.score === null || video.score > best.score) return video;
     return best;
   }, null);
+}
+
+function destinationVideos(destination: ProfessionDestination) {
+  const sub = availableSubForGenre(destination.genre, destination.sub, destination.fallbackSub);
+  return videos.filter((video) => video.genre === destination.genre && (sub === "all" || video.sub === sub));
+}
+
+function professionVideos(route: ProfessionRoute) {
+  const seen = new Set<string>();
+  return route.destinations.flatMap((destination) => destinationVideos(destination)).filter((video) => {
+    if (seen.has(video.ytid)) return false;
+    seen.add(video.ytid);
+    return true;
+  });
+}
+
+function primaryProfessionDestination(route: ProfessionRoute) {
+  return route.destinations.find((destination) => destination.href === route.href) ?? route.destinations[0] ?? null;
+}
+
+function professionTopVideo(route: ProfessionRoute) {
+  const primaryDestination = primaryProfessionDestination(route);
+  const primaryVideos = primaryDestination ? destinationVideos(primaryDestination) : [];
+  return topScoredVideo(primaryVideos) ?? topScoredVideo(professionVideos(route));
+}
+
+function professionStepCount(route: ProfessionRoute) {
+  const genresForRoute = new Set(route.destinations.map((destination) => destination.genre));
+  return roadmaps
+    .filter((roadmap) => genresForRoute.has(roadmap.genre))
+    .reduce((total, roadmap) => total + roadmap.steps.length, 0);
 }
 
 function topicCounts(items: Video[]) {
@@ -711,7 +745,7 @@ export default function ManapickApp() {
   }, [menuOpen]);
 
   useEffect(() => {
-    const ignoredSwipeSelectors = ".hero-carousel, .roadmap-timeline, .roadmap-tabs, .category-tab-nav, .mobile-genre-dropdown";
+    const ignoredSwipeSelectors = ".hero-carousel, .roadmap-timeline, .roadmap-tabs, .category-tab-nav, .mobile-genre-dropdown, .profession-track";
 
     function touchTargetIsIgnored(target: EventTarget | null) {
       return target instanceof Element && target.closest(ignoredSwipeSelectors) !== null;
@@ -934,6 +968,10 @@ export default function ManapickApp() {
   }
 
   function handlePurposeSelect(target: string) {
+    if (target === "profession") {
+      scrollToElement("profession-routes");
+      return;
+    }
     if (target === "roadmap") {
       scrollToElement("roadmap");
       return;
@@ -1057,9 +1095,14 @@ export default function ManapickApp() {
       {menuOpen ? (
         <SiteMenuDrawer
           genres={publishedGenres}
+          routes={professionRoutes}
           drawerRef={menuDrawerRef}
           onKeyDown={handleMenuKeyDown}
           onClose={() => setMenuOpen(false)}
+          onProfessionSelect={(routeId) => {
+            setMenuOpen(false);
+            scrollToElement(routeId ? "profession-" + routeId : "profession-routes");
+          }}
           onGenreSelect={(genreKey) => {
             setMenuOpen(false);
             handleGenreChange(genreKey);
@@ -1125,6 +1168,9 @@ export default function ManapickApp() {
             </p>
 
             <HeroTrustStats totalVideos={siteStats.totalVideos} confirmedCount={confirmedCount} />
+            <p className="hero-benefit-line">
+              “次に見る1本”を最短で決める ／ 7軸35点で厳選 ／ 無料・登録不要
+            </p>
             <a className="mobile-hero-primary-cta" href="#mobile-weekly-pick">
               ▶ 迷ったら、まずこの1本
             </a>
@@ -1754,6 +1800,32 @@ function ProfessionRouteSection({
   onRouteSelect: (route: ProfessionRoute) => void;
   onDestinationSelect: (destination: ProfessionDestination) => void;
 }) {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  function updateActiveCard() {
+    const track = trackRef.current;
+    if (!track) return;
+    const cards = Array.from(track.querySelectorAll<HTMLElement>(".profession-card"));
+    if (cards.length === 0) return;
+    const trackLeft = track.getBoundingClientRect().left;
+    const nearest = cards.reduce(
+      (best, card, index) => {
+        const distance = Math.abs(card.getBoundingClientRect().left - trackLeft);
+        return distance < best.distance ? { index, distance } : best;
+      },
+      { index: 0, distance: Number.POSITIVE_INFINITY }
+    );
+    setActiveIndex(nearest.index);
+  }
+
+  function scrollToCard(index: number) {
+    const card = trackRef.current?.querySelectorAll<HTMLElement>(".profession-card")[index];
+    if (!card) return;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    card.scrollIntoView({ block: "nearest", inline: "start", behavior: reducedMotion ? "auto" : "smooth" });
+  }
+
   return (
     <section id="profession-routes" className="profession-section" aria-labelledby="profession-title">
       <div className="profession-heading">
@@ -1763,9 +1835,26 @@ function ProfessionRouteSection({
           「何を学ぶか」から迷う人のために、職業ゴールごとにジャンル・資格・ロードマップを束ねました。
         </p>
       </div>
-      <div className="profession-track" role="list">
-        {routes.map((route, index) => (
-          <article key={route.id} id={"profession-" + route.id} className="profession-card" role="listitem">
+      <div ref={trackRef} className="profession-track" role="list" onScroll={updateActiveCard}>
+        {routes.map((route, index) => {
+          const firstVideo = professionTopVideo(route);
+          const routeVideoCount = professionVideos(route).length;
+          const stepCount = professionStepCount(route);
+          return (
+          <article
+            key={route.id}
+            id={"profession-" + route.id}
+            className="profession-card"
+            role="listitem"
+            onClick={(event) => {
+              if (event.target instanceof Element && event.target.closest("a, button")) return;
+              onRouteSelect(route);
+            }}
+          >
+            <div className="profession-card-band" aria-hidden="true">
+              <span className="profession-number">{String(index + 1).padStart(2, "0")}</span>
+              <ProfessionIcon icon={route.icon} />
+            </div>
             <a
               className="profession-main-link"
               href={route.href}
@@ -1774,14 +1863,35 @@ function ProfessionRouteSection({
                 onRouteSelect(route);
               }}
             >
-              <span className="profession-topline">
-                <span className="profession-number">{String(index + 1).padStart(2, "0")}</span>
-                <ProfessionIcon icon={route.icon} />
-              </span>
               <span className="profession-title">{route.title}</span>
               <span className="profession-skill">{route.skill}</span>
-              <span className="profession-related">{route.relatedText}</span>
             </a>
+            <div className="profession-meta-line">
+              <span>目安：{routeVideoCount}本</span>
+              <span>ロードマップ{stepCount || 3}STEP</span>
+            </div>
+            {firstVideo ? (
+              <a className="profession-feature-video" href={videoDetailHref(firstVideo)} aria-label={firstVideo.title + "の詳細ページを開く"}>
+                <span className="profession-feature-thumb">
+                  <Image
+                    src={"https://i.ytimg.com/vi/" + firstVideo.ytid + "/hqdefault.jpg"}
+                    alt={thumbnailAlt(firstVideo)}
+                    width={480}
+                    height={270}
+                    sizes="(min-width: 1180px) 360px, (min-width: 768px) 44vw, 78vw"
+                    loading="lazy"
+                  />
+                  <span className={scoreStatus(firstVideo) === "confirmed" ? "profession-score-badge is-confirmed" : "profession-score-badge"}>
+                    {scoreText(firstVideo)}
+                  </span>
+                </span>
+                <span className="profession-feature-body">
+                  <span className="profession-feature-label">この職業の最初の1本</span>
+                  <span className="profession-feature-title">{firstVideo.title}</span>
+                </span>
+              </a>
+            ) : null}
+            <p className="profession-related">{route.relatedText}</p>
             {route.note ? <p className="profession-note">{route.note}</p> : null}
             <div className="profession-destination-row" aria-label={route.title + "の関連ジャンル"}>
               {route.destinations.map((destination) => (
@@ -1797,10 +1907,32 @@ function ProfessionRouteSection({
                 </a>
               ))}
             </div>
+            <a
+              className="profession-cta"
+              href={route.href}
+              onClick={(event) => {
+                event.preventDefault();
+                onRouteSelect(route);
+              }}
+            >
+              この道で学ぶ →
+            </a>
             <a className="profession-guide-link" href={route.guideHref}>
               文章ロードマップを見る
             </a>
           </article>
+          );
+        })}
+      </div>
+      <div className="profession-dots" aria-label="職業カードの位置">
+        {routes.map((route, index) => (
+          <button
+            key={"profession-dot-" + route.id}
+            type="button"
+            className={index === activeIndex ? "is-active" : ""}
+            aria-label={route.title + "を表示"}
+            onClick={() => scrollToCard(index)}
+          />
         ))}
       </div>
     </section>
@@ -1949,17 +2081,21 @@ function MobileBottomNav({
 
 function SiteMenuDrawer({
   genres,
+  routes,
   drawerRef,
   onKeyDown,
   onClose,
+  onProfessionSelect,
   onGenreSelect,
   onGenreList,
   onSectionSelect
 }: {
   genres: Genre[];
+  routes: ProfessionRoute[];
   drawerRef: RefObject<HTMLElement>;
   onKeyDown: (event: ReactKeyboardEvent<HTMLElement>) => void;
   onClose: () => void;
+  onProfessionSelect: (routeId?: string) => void;
   onGenreSelect: (genreKey: string) => void;
   onGenreList: () => void;
   onSectionSelect: (sectionId: string) => void;
@@ -1986,6 +2122,17 @@ function SiteMenuDrawer({
           </button>
         </div>
         <nav className="site-menu-links" aria-label="メニューリンク">
+          <button type="button" className="site-menu-link is-primary" onClick={() => onProfessionSelect()}>
+            なりたい職業から選ぶ
+          </button>
+          <div className="site-menu-profession-list" role="group" aria-label="職業別の入口">
+            {routes.map((route) => (
+              <button key={route.id} type="button" onClick={() => onProfessionSelect(route.id)}>
+                <ProfessionIcon icon={route.icon} />
+                <span>{route.title}</span>
+              </button>
+            ))}
+          </div>
           <button type="button" className="site-menu-link" onClick={onGenreList}>
             {genres.length}ジャンル一覧
           </button>

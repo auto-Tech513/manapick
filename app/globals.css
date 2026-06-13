@@ -246,7 +246,8 @@ img {
 }
 
 .site-menu-link,
-.site-menu-genre-grid button {
+.site-menu-genre-grid button,
+.site-menu-profession-list button {
   display: flex;
   width: 100%;
   min-height: 44px;
@@ -265,10 +266,42 @@ img {
 }
 
 .site-menu-link:hover,
-.site-menu-genre-grid button:hover {
+.site-menu-genre-grid button:hover,
+.site-menu-profession-list button:hover {
   border-color: color-mix(in srgb, var(--color-accent) 42%, var(--color-line));
   background: var(--color-bg-soft);
   color: var(--color-primary-ink);
+}
+
+.site-menu-link.is-primary {
+  border-color: color-mix(in srgb, var(--color-primary) 24%, var(--color-line));
+  background:
+    linear-gradient(112deg, rgba(31, 58, 138, 0.09), rgba(15, 169, 139, 0.08)),
+    #fff;
+  color: var(--color-primary-ink);
+}
+
+.site-menu-profession-list {
+  display: grid;
+  gap: 7px;
+  padding: 0 0 8px 8px;
+}
+
+.site-menu-profession-list button {
+  min-height: 42px;
+  padding: 7px 9px;
+  font-size: 0.82rem;
+}
+
+.site-menu-profession-list .profession-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 11px;
+}
+
+.site-menu-profession-list .profession-icon svg {
+  width: 18px;
+  height: 18px;
 }
 
 .site-menu-genre-grid {
@@ -626,6 +659,16 @@ img {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 2.2;
+}
+
+.hero-benefit-line {
+  max-width: 46rem;
+  margin: 10px 0 0;
+  color: var(--color-primary-ink);
+  font-size: 0.9rem;
+  font-weight: 900;
+  line-height: 1.65;
+  text-wrap: balance;
 }
 
 .hero-chip-grid {
@@ -1281,6 +1324,19 @@ img {
 }
 
 @media (min-width: 760px) {
+  .roadmap-heading {
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 360px);
+    align-items: end;
+    gap: 24px;
+  }
+
+  .roadmap-heading-art {
+    width: min(30vw, 360px);
+    justify-self: end;
+  }
+}
+
+@media (min-width: 980px) {
   .hero-container {
     grid-template-columns: minmax(0, 560px) minmax(320px, 520px);
     justify-content: space-between;
@@ -1301,16 +1357,6 @@ img {
     width: min(34vw, 390px);
   }
 
-  .roadmap-heading {
-    grid-template-columns: minmax(0, 1fr) minmax(240px, 360px);
-    align-items: end;
-    gap: 24px;
-  }
-
-  .roadmap-heading-art {
-    width: min(30vw, 360px);
-    justify-self: end;
-  }
 }
 
 @media (min-width: 1180px) {
@@ -2197,7 +2243,7 @@ img {
 .profession-section {
   width: min(100% - 32px, 1240px);
   margin: 0 auto;
-  padding: 26px 0 32px;
+  padding: 28px 0 34px;
 }
 
 .profession-heading {
@@ -2216,32 +2262,31 @@ img {
 
 .profession-track {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 16px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
 }
 
 .profession-card {
   position: relative;
   display: grid;
+  grid-column: span 4;
+  align-content: start;
   gap: 12px;
   overflow: hidden;
   border: 1px solid var(--color-line);
-  border-radius: 18px;
+  border-radius: 20px;
   background:
     linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(246, 248, 251, 0.88)),
     #fff;
   box-shadow: var(--shadow-line);
   padding: 14px;
+  cursor: pointer;
   transition: border-color 180ms var(--ease-standard), box-shadow 180ms var(--ease-standard), transform 180ms var(--ease-standard);
 }
 
-.profession-card::before {
-  position: absolute;
-  inset: 0 0 auto;
-  height: 5px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-leaf), var(--color-spark));
-  content: "";
+.profession-card:nth-child(-n + 2) {
+  grid-column: span 6;
 }
 
 .profession-card:hover,
@@ -2251,9 +2296,23 @@ img {
   transform: translateY(-2px);
 }
 
+.profession-card-band {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: -14px -14px 0;
+  border-bottom: 1px solid rgba(31, 58, 138, 0.08);
+  background:
+    radial-gradient(circle at 16% 0%, rgba(255, 255, 255, 0.76), transparent 8rem),
+    linear-gradient(112deg, rgba(31, 58, 138, 0.12), rgba(15, 169, 139, 0.1) 62%, rgba(245, 158, 11, 0.12));
+  padding: 12px 14px;
+}
+
 .profession-main-link {
   display: grid;
-  gap: 9px;
+  gap: 7px;
   color: inherit;
   text-decoration: none;
 }
@@ -2262,16 +2321,9 @@ img {
   text-decoration: none;
 }
 
-.profession-topline {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
-
 .profession-number {
-  color: color-mix(in srgb, var(--color-primary) 72%, white);
-  font-size: 0.78rem;
+  color: var(--color-primary-ink);
+  font-size: 0.82rem;
   font-weight: 950;
   letter-spacing: 0.08em;
 }
@@ -2282,9 +2334,11 @@ img {
   height: 38px;
   flex: 0 0 auto;
   place-items: center;
-  border-radius: 13px;
-  background: color-mix(in srgb, var(--color-primary) 8%, white);
+  border: 1px solid rgba(31, 58, 138, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.82);
   color: var(--color-primary-ink);
+  box-shadow: var(--shadow-line);
 }
 
 .profession-icon svg {
@@ -2312,6 +2366,104 @@ img {
   line-height: 1.65;
 }
 
+.profession-meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.profession-meta-line span {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-primary) 7%, white);
+  color: var(--color-primary-ink);
+  padding: 5px 9px;
+  font-size: 0.74rem;
+  font-weight: 950;
+  line-height: 1.25;
+}
+
+.profession-feature-video {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 12%, var(--color-line));
+  border-radius: 16px;
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: var(--shadow-line);
+}
+
+.profession-feature-video:hover {
+  border-color: color-mix(in srgb, var(--color-accent) 32%, var(--color-line));
+  text-decoration: none;
+}
+
+.profession-feature-thumb {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--color-bg-soft);
+}
+
+.profession-feature-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 220ms var(--ease-standard);
+}
+
+.profession-feature-video:hover .profession-feature-thumb img {
+  transform: scale(1.035);
+}
+
+.profession-score-badge {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  display: inline-flex;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  background: rgba(31, 58, 138, 0.9);
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: 950;
+  line-height: 1.2;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.22);
+}
+
+.profession-score-badge.is-confirmed {
+  background: rgba(15, 169, 139, 0.94);
+}
+
+.profession-feature-body {
+  display: grid;
+  gap: 4px;
+  padding: 9px 10px 10px;
+}
+
+.profession-feature-label {
+  color: var(--color-muted);
+  font-size: 0.72rem;
+  font-weight: 950;
+  line-height: 1.25;
+}
+
+.profession-feature-title {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--color-ink);
+  font-size: 0.86rem;
+  font-weight: 900;
+  line-height: 1.45;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
 .profession-related,
 .profession-note {
   color: var(--color-muted);
@@ -2335,7 +2487,8 @@ img {
 }
 
 .profession-destination-row a,
-.profession-guide-link {
+.profession-guide-link,
+.profession-cta {
   display: inline-flex;
   min-height: 34px;
   align-items: center;
@@ -2354,9 +2507,24 @@ img {
 }
 
 .profession-destination-row a:hover,
-.profession-guide-link:hover {
+.profession-guide-link:hover,
+.profession-cta:hover {
   border-color: color-mix(in srgb, var(--color-primary) 38%, var(--color-line));
   text-decoration: none;
+}
+
+.profession-cta {
+  justify-content: center;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 80%, #000);
+  background: var(--color-primary);
+  color: #fff;
+  padding: 9px 13px;
+  box-shadow: 0 12px 26px rgba(31, 58, 138, 0.18);
+}
+
+.profession-cta:hover {
+  background: #16306e;
+  color: #fff;
 }
 
 .profession-guide-link {
@@ -2367,15 +2535,18 @@ img {
   padding: 7px 11px;
 }
 
-@media (min-width: 768px) and (max-width: 1180px) {
-  .profession-track {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+.profession-dots {
+  display: none;
 }
 
-@media (min-width: 768px) and (max-width: 900px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .profession-track {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .profession-card,
+  .profession-card:nth-child(-n + 2) {
+    grid-column: auto;
   }
 }
 
@@ -5427,12 +5598,12 @@ img {
 
   .profession-track {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     overflow-x: auto;
     margin-top: 12px;
     padding: 4px 16px 10px 2px;
     scroll-padding-inline: 16px;
-    scroll-snap-type: x proximity;
+    scroll-snap-type: x mandatory;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
   }
@@ -5442,9 +5613,21 @@ img {
   }
 
   .profession-card {
-    flex: 0 0 78vw;
+    flex: 0 0 min(82vw, 326px);
+    grid-column: auto;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     padding: 13px;
+  }
+
+  .profession-card:nth-child(-n + 2) {
+    grid-column: auto;
+  }
+
+  .profession-card-band {
+    min-height: 52px;
+    margin: -13px -13px 0;
+    padding: 10px 13px;
   }
 
   .profession-card:hover,
@@ -5461,8 +5644,39 @@ img {
   }
 
   .profession-destination-row a,
-  .profession-guide-link {
+  .profession-guide-link,
+  .profession-cta {
     min-height: 36px;
+  }
+
+  .profession-meta-line span {
+    font-size: 0.72rem;
+  }
+
+  .profession-feature-title {
+    font-size: 0.82rem;
+  }
+
+  .profession-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin: 4px 16px 0 0;
+  }
+
+  .profession-dots button {
+    width: 8px;
+    height: 8px;
+    border: 0;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--color-primary) 22%, white);
+    padding: 0;
+  }
+
+  .profession-dots button.is-active {
+    width: 22px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
   }
 
   .recent-strip-inner {
