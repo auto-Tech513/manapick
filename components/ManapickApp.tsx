@@ -2203,10 +2203,17 @@ function SiteMenuDrawer({
           </button>
           <div className="site-menu-genre-grid" role="group" aria-label="ジャンル一覧">
             {genres.map((genre) => (
-              <button key={genre.key} type="button" onClick={() => onGenreSelect(genre.key)}>
+              <a
+                key={genre.key}
+                href={`/genre/${genre.key}/`}
+                onClick={(event) => {
+                  event.preventDefault();
+                  onGenreSelect(genre.key);
+                }}
+              >
                 <GenreIcon genreKey={genre.key} className="site-menu-genre-icon" />
                 <span>{genreLabel(genre.key)}</span>
-              </button>
+              </a>
             ))}
           </div>
           <button type="button" className="site-menu-link" onClick={() => onSectionSelect("roadmap")}>
@@ -2238,7 +2245,7 @@ function CategoryTabNav({
   activeGenre: string;
   onSelect: (genreKey: string) => void;
 }) {
-  const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+  const tabRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
 
   useEffect(() => {
     const activeTab = tabRefs.current[activeGenre];
@@ -2255,14 +2262,17 @@ function CategoryTabNav({
     <nav className="category-tab-nav" aria-label="公開中ジャンル">
       <div className="category-tab-track">
         {genres.map((genre) => (
-          <button
+          <a
             key={genre.key}
             ref={(node) => {
               tabRefs.current[genre.key] = node;
             }}
-            type="button"
+            href={`/genre/${genre.key}/`}
             className={activeGenre === genre.key ? "category-tab is-active" : "category-tab"}
-            onClick={() => onSelect(genre.key)}
+            onClick={(event) => {
+              event.preventDefault();
+              onSelect(genre.key);
+            }}
             aria-current={activeGenre === genre.key ? "page" : undefined}
           >
             <GenreIcon genreKey={genre.key} className="category-tab-icon" />
@@ -2270,7 +2280,7 @@ function CategoryTabNav({
               <span>{genreLabel(genre.key)}</span>
               <small>{genreEnglishLabel(genre.key)}</small>
             </span>
-          </button>
+          </a>
         ))}
       </div>
     </nav>

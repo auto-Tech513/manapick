@@ -134,6 +134,18 @@ export default async function GuidePage({ params }: GuidePageProps) {
         }))
       },
       {
+        "@type": "HowTo",
+        name: guide.title,
+        description: guide.intro.replace(/\*\*/g, ""),
+        step: guide.steps.map((step, index) => ({
+          "@type": "HowToStep",
+          position: index + 1,
+          name: step.title,
+          text: step.videos.map((item) => item.why).join(" / "),
+          url: absoluteUrl(guidePath(guide.slug)) + `#step-${index + 1}`
+        }))
+      },
+      {
         "@type": "BreadcrumbList",
         itemListElement: [
           {
@@ -249,7 +261,11 @@ export default async function GuidePage({ params }: GuidePageProps) {
               const stepMinutes = items.reduce((sum, item) => sum + item.video.minutes, 0);
 
               return (
-                <section key={step.title} className={`guide-step-block is-step-${stepIndex + 1}`}>
+                <section
+                  key={step.title}
+                  id={`step-${stepIndex + 1}`}
+                  className={`guide-step-block is-step-${stepIndex + 1}`}
+                >
                   <div className="guide-step-heading">
                     <h3>
                       <span className="guide-step-number" aria-hidden="true">{stepIndex + 1}</span>
@@ -481,7 +497,7 @@ function guideRelatedLinks(guide: Guide) {
     })),
     {
       label: genreDisplayName(guide.genre) + "の動画一覧",
-      href: "/?genre=" + guide.genre + "#search"
+      href: `/genre/${guide.genre}/`
     },
     {
       label: "トップの学習ロードマップへ",
