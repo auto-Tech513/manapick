@@ -545,6 +545,14 @@ export default function ManapickApp() {
     return roadmapTabs.find((roadmap) => roadmap.genre === activeRoadmapGenre) ?? roadmapTabs[0] ?? null;
   }, [activeRoadmapGenre, roadmapTabs]);
 
+  const subRoadmap = useMemo(() => {
+    if (selectedGenre === "all" || selectedSub === "all") return null;
+    if (activeRoadmapGenre !== selectedGenre) return null;
+    return buildSubRoadmap(selectedGenre, selectedSub);
+  }, [activeRoadmapGenre, selectedGenre, selectedSub]);
+
+  const displayRoadmap = subRoadmap ?? activeRoadmap;
+
   const publishedGenres = useMemo(() => {
     return genres.filter((genre) => genre.status === "published" && (siteStats.genreCounts[genre.key] ?? 0) > 0);
   }, []);
@@ -620,6 +628,9 @@ export default function ManapickApp() {
     if (genre && publishedGenreKeys.includes(genre)) {
       skipNextFilterResetRef.current = true;
       setSelectedGenre(genre);
+      if (roadmaps.some((roadmap) => roadmap.genre === genre)) {
+        setActiveRoadmapGenre(genre);
+      }
       const sub = params.get("sub");
       if (sub) setSelectedSub(availableSubForGenre(genre, sub));
     }
@@ -1602,7 +1613,7 @@ export default function ManapickApp() {
               className="roadmap-heading-art"
             />
           </div>
-          {roadmapTabs.length === 0 || activeRoadmap === null ? (
+          {roadmapTabs.length === 0 || displayRoadmap === null || activeRoadmap === null ? (
             <p className="rounded-lg border border-line bg-surface p-5 shadow-card text-muted">
               このジャンルのロードマップは近日公開です。
             </p>
@@ -1628,7 +1639,7 @@ export default function ManapickApp() {
                   📖 文章で読む完全ロードマップ
                 </a>
               ) : null}
-              <RoadmapTimeline roadmap={activeRoadmap} watched={watched} />
+              <RoadmapTimeline roadmap={displayRoadmap} watched={watched} subMode={subRoadmap !== null} />
             </>
           )}
         </div>
@@ -2783,6 +2794,38 @@ function buildRoadmapSteps(roadmap: Roadmap): DisplayRoadmapStep[] {
   return steps;
 }
 
+function buildSubRoadmap(genre: string, sub: string): Roadmap | null {
+  const subVideos = videos
+    .filter((video) => video.genre === genre && video.sub === sub)
+    .sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
+
+  if (subVideos.length === 0) return null;
+
+  const pick = (level: Video["level"]) => subVideos.filter((video) => video.level === level).map((video) => video.ytid);
+  const groupedSteps = [
+    { label: "STEP1", level: "初級", goal: `${sub}の全体像を入門動画でつかむ。`, videos: pick("初級") },
+    { label: "STEP2", level: "中級", goal: `${sub}の頻出・重要分野を理解する。`, videos: pick("中級") },
+    { label: "STEP3", level: "上級", goal: `${sub}の過去問・実践で仕上げる。`, videos: pick("上級") }
+  ].filter((step) => step.videos.length > 0);
+
+  if (groupedSteps.length < 2) {
+    return {
+      genre,
+      title: `${sub}の見る順（おすすめ順）`,
+      steps: [
+        {
+          label: "STEP1",
+          level: "おすすめ順",
+          goal: `${sub}のおすすめ動画を上から順に視聴する。`,
+          videos: subVideos.map((video) => video.ytid)
+        }
+      ]
+    };
+  }
+
+  return { genre, title: `${sub}のロードマップ`, steps: groupedSteps };
+}
+
 function VideoCard({
   video,
   highlighted = false,
@@ -3062,8 +3105,8 @@ function roadmapTitle(roadmap: Roadmap) {
   return roadmap.title;
 }
 
-function RoadmapTimeline({ roadmap, watched }: { roadmap: Roadmap; watched: LocalListState }) {
-  const steps = buildRoadmapSteps(roadmap);
+function RoadmapTimeline({ roadmap, watched, subMode = false }: { roadmap: Roadmap; watched: LocalListState; subMode?: boolean }) {
+  const steps = subMode ? (roadmap.steps as DisplayRoadmapStep[]) : buildRoadmapSteps(roadmap);
   const watchedSet = new Set(watched.items);
   const roadmapVideoIds = steps.flatMap((step) => step.videos);
   const roadmapTotal = roadmapVideoIds.length;
@@ -3073,7 +3116,7 @@ function RoadmapTimeline({ roadmap, watched }: { roadmap: Roadmap; watched: Loca
   return (
     <section id="roadmap-panel" className="roadmap-panel" role="tabpanel">
       <div className="roadmap-title-row">
-        <h3>{roadmapTitle(roadmap)}</h3>
+        <h3>{subMode ? roadmap.title : roadmapTitle(roadmap)}</h3>
         <span aria-hidden="true" className="roadmap-star">★</span>
       </div>
       {watched.ready && roadmapTotal > 0 ? (
