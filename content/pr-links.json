@@ -35,11 +35,108 @@
       "note": "入門書"
     }
   ],
-  "video": [],
-  "english": [],
-  "marke": [],
-  "biz": [],
-  "shikaku": [],
-  "kaikei": [],
-  "money": []
+  "video": [
+    {
+      "label": "Premiere Pro 仕事の教科書 ハイグレード動画編集＆演出テクニック",
+      "url": "https://a.r10.to/h5TQtn",
+      "note": "動画編集（Premiere）",
+      "kind": "book"
+    },
+    {
+      "label": "手を動かして学ぶ DaVinci Resolve 映像編集パーフェクト教本",
+      "url": "https://a.r10.to/hR3o75",
+      "note": "動画編集（DaVinci）",
+      "kind": "book"
+    },
+    {
+      "label": "スマホ1台でバズリ動画つくります!",
+      "url": "https://a.r10.to/hgbTeL",
+      "note": "スマホ動画",
+      "kind": "book"
+    }
+  ],
+  "english": [
+    {
+      "label": "TOEIC L&R 出る単特急 金のフレーズ",
+      "url": "https://a.r10.to/hYROWe",
+      "note": "単語帳",
+      "kind": "book"
+    },
+    {
+      "label": "一億人の英文法",
+      "url": "https://a.r10.to/hkNz0Y",
+      "note": "文法書",
+      "kind": "book"
+    }
+  ],
+  "marke": [
+    {
+      "label": "沈黙のWebマーケティング",
+      "url": "https://a.r10.to/hYy90X",
+      "note": "入門書",
+      "kind": "book"
+    },
+    {
+      "label": "いちばんやさしいWebマーケティングの教本",
+      "url": "https://a.r10.to/hPLHXe",
+      "note": "入門書",
+      "kind": "book"
+    }
+  ],
+  "biz": [
+    {
+      "label": "一生使えるプレゼン上手の資料作成入門",
+      "url": "https://a.r10.to/hgwg4P",
+      "note": "資料作成",
+      "kind": "book"
+    },
+    {
+      "label": "外資系コンサルのスライド作成術",
+      "url": "https://a.r10.to/hP5AQi",
+      "note": "スライド術",
+      "kind": "book"
+    }
+  ],
+  "shikaku": [
+    {
+      "label": "みんなが欲しかった！宅建士の教科書",
+      "url": "https://a.r10.to/hPRFN8",
+      "note": "宅建テキスト",
+      "kind": "book"
+    },
+    {
+      "label": "スッキリわかる宅建士",
+      "url": "https://a.r10.to/hg3pVh",
+      "note": "宅建テキスト",
+      "kind": "book"
+    }
+  ],
+  "kaikei": [
+    {
+      "label": "みんなが欲しかった！簿記の教科書 日商3級",
+      "url": "https://a.r10.to/h5efS0",
+      "note": "簿記3級",
+      "kind": "book"
+    },
+    {
+      "label": "スッキリわかる 日商簿記3級",
+      "url": "https://a.r10.to/h5aEEt",
+      "note": "簿記3級",
+      "kind": "book"
+    }
+  ],
+  "money": [
+    {
+      "label": "本当の自由を手に入れる お金の大学",
+      "url": "https://a.r10.to/h52WsX",
+      "note": "お金の基本",
+      "kind": "book"
+    },
+    {
+      "label": "世界一やさしい 新NISAの始め方",
+      "url": "https://a.r10.to/h5xJkZ",
+      "note": "新NISA入門",
+      "kind": "book"
+    }
+  ]
 }
