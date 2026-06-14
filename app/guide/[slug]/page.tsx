@@ -39,6 +39,7 @@ type GuidePrLink = {
   label: string;
   url: string;
   note: string;
+  kind?: "book" | "course";
 };
 const guidePrLinks = prLinksData as Record<string, GuidePrLink[]>;
 
@@ -370,7 +371,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
 function GuidePrSection({ guide }: { guide: Guide }) {
   const prItems = guidePrLinks[guide.genre] ?? [];
   const moneyNote = guide.genre === "money" ? (
-    <p className="guide-pr-note">※書籍の紹介です。特定の金融商品の推奨ではありません。</p>
+    <p className="guide-pr-note">※教材・講座の紹介です。特定の金融商品の推奨ではありません。</p>
   ) : null;
 
   if (prItems.length > 0) {
@@ -378,26 +379,32 @@ function GuidePrSection({ guide }: { guide: Guide }) {
       <section className="guide-section guide-pr-section" aria-labelledby="guide-pr-title">
         <div className="guide-pr-heading">
           <div>
-            <p className="section-eyebrow">【PR】広告 / 楽天アフィリエイト</p>
-            <h2 id="guide-pr-title">あわせて読みたい教材(PR)</h2>
+            <p className="section-eyebrow">【PR】広告</p>
+            <h2 id="guide-pr-title">あわせて使いたい教材・講座(PR)</h2>
           </div>
           <span className="guide-pr-badge">PR</span>
         </div>
         <div className="guide-pr-grid">
-          {prItems.map((item) => (
-            <a
-              key={item.url}
-              className="guide-pr-card is-link"
-              href={item.url}
-              target="_blank"
-              rel="sponsored noopener"
-            >
-              <span className="guide-pr-card-pr">【PR】楽天ブックス</span>
-              <strong>{item.label}</strong>
-              <span>{item.note}</span>
-              <em>楽天ブックスで見る</em>
-            </a>
-          ))}
+          {prItems.map((item) => {
+            const prKind = item.kind ?? "book";
+
+            return (
+              <a
+                key={item.url}
+                className="guide-pr-card is-link"
+                href={item.url}
+                target="_blank"
+                rel="sponsored noopener"
+              >
+                <span className="guide-pr-card-pr">
+                  {prKind === "course" ? "【PR】スクール・講座" : "【PR】楽天ブックス"}
+                </span>
+                <strong>{item.label}</strong>
+                <span>{item.note}</span>
+                <em>{prKind === "course" ? "公式サイトを見る" : "楽天ブックスで見る"}</em>
+              </a>
+            );
+          })}
         </div>
         {moneyNote}
       </section>
@@ -423,8 +430,8 @@ function GuidePrSection({ guide }: { guide: Guide }) {
     <section className="guide-section guide-pr-section" aria-labelledby="guide-pr-title">
       <div className="guide-pr-heading">
         <div>
-          <p className="section-eyebrow">PR / 広告</p>
-          <h2 id="guide-pr-title">あわせて読みたい教材(PR)</h2>
+          <p className="section-eyebrow">【PR】広告</p>
+          <h2 id="guide-pr-title">あわせて使いたい教材・講座(PR)</h2>
         </div>
         <span className="guide-pr-badge">PR</span>
       </div>
