@@ -21,6 +21,12 @@
       "label": "独学プログラマー",
       "url": "https://a.r10.to/hFsZCu",
       "note": "入門書"
+    },
+    {
+      "label": "SkillHacks（プログラミング講座）",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+AKG0C2+4K3S+5YJRM",
+      "note": "挫折させないプログラミング講座",
+      "kind": "course"
     }
   ],
   "data": [
@@ -53,6 +59,12 @@
       "url": "https://a.r10.to/hgbTeL",
       "note": "スマホ動画",
       "kind": "book"
+    },
+    {
+      "label": "Movie Hacks（動画編集講座）",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+AKG0C2+4K3S+5YRHE",
+      "note": "最短で脱・初心者の動画編集講座",
+      "kind": "course"
     }
   ],
   "english": [
@@ -67,6 +79,12 @@
       "url": "https://a.r10.to/hkNz0Y",
       "note": "文法書",
       "kind": "book"
+    },
+    {
+      "label": "ネイティブキャンプ",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+B7NWXE+35VG+64JTE",
+      "note": "24時間レッスン受け放題（無料体験あり）",
+      "kind": "course"
     }
   ],
   "marke": [
@@ -109,6 +127,12 @@
       "url": "https://a.r10.to/hg3pVh",
       "note": "宅建テキスト",
       "kind": "book"
+    },
+    {
+      "label": "LECオンライン",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+BUVTIQ+1G62+631SY",
+      "note": "資格・通信講座（東京リーガルマインド）",
+      "kind": "course"
     }
   ],
   "kaikei": [
