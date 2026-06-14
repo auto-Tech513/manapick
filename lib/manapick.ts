@@ -67,6 +67,10 @@ export function videoPath(ytid: string) {
   return "/video/" + ytid + "/";
 }
 
+export function subGenrePath(key: string, sub: string) {
+  return "/genre/" + key + "/" + encodeURIComponent(sub) + "/";
+}
+
 export function absoluteUrl(path: string) {
   return new URL(path, SITE_URL).toString();
 }

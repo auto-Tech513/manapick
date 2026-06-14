@@ -13,6 +13,7 @@ import {
   youtubeThumbnail,
   type Video
 } from "@/lib/manapick";
+import { eligibleSubPagePath, eligibleSubPagesForGenre } from "@/lib/sub-pages";
 
 type GenrePageProps = {
   params: Promise<{ key: string }>;
@@ -76,6 +77,7 @@ export default async function GenrePage({ params }: GenrePageProps) {
   const list = genreVideos(key);
   const guideSlug = genreGuideSlug(key);
   const url = absoluteUrl(`/genre/${key}/`);
+  const subPages = eligibleSubPagesForGenre(key);
 
   const collection = {
     "@context": "https://schema.org",
@@ -128,6 +130,19 @@ export default async function GenrePage({ params }: GenrePageProps) {
         <p className="genre-hub-roadmap">
           <Link href={guidePath(guideSlug)}>▶ {label}の完全ロードマップ（初級→上級の見る順）を読む</Link>
         </p>
+      ) : null}
+      {subPages.length > 0 ? (
+        <section className="genre-hub-subpages" aria-labelledby="genre-hub-subpages-title">
+          <h2 id="genre-hub-subpages-title">{label}のトピック別ロードマップ</h2>
+          <div className="genre-hub-subpage-grid">
+            {subPages.map((item) => (
+              <Link key={item.key + item.sub} href={eligibleSubPagePath(item)}>
+                <span>{item.sub}</span>
+                <strong>{item.count}本</strong>
+              </Link>
+            ))}
+          </div>
+        </section>
       ) : null}
 
       <ul className="genre-hub-grid" role="list">

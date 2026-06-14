@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { guidePath, guides } from "@/lib/guides";
 import { absoluteUrl, publishedGenreKeys, videoPath, videos } from "@/lib/manapick";
+import { eligibleSubPagePath, eligibleSubPages } from "@/lib/sub-pages";
 
 export const dynamic = "force-static";
 
@@ -34,6 +35,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.9
+    })),
+    ...eligibleSubPages().map((item) => ({
+      url: absoluteUrl(eligibleSubPagePath(item)),
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.8
     })),
     ...guides.map((guide) => ({
       url: absoluteUrl(guidePath(guide.slug)),
