@@ -13,11 +13,15 @@ import {
   isoDuration,
   relatedVideos,
   scoreConfirmationDate,
-  scoreLabel,
   scoreStatus,
   scoreText,
+  videoAudienceText,
+  videoAxisCommentary,
   videoDescription,
+  videoLearningPoints,
   videoPath,
+  videoPositionText,
+  videoViewingTips,
   videos,
   youtubeEmbedUrl,
   youtubeThumbnail
@@ -85,7 +89,12 @@ export default async function VideoPage({ params }: VideoPageProps) {
   const confirmationDate = scoreConfirmationDate(video);
   const scoreConfirmationText = isConfirmed
     ? "運営者が視聴のうえ確認済みのスコアです" + (confirmationDate ? "(確認日: " + confirmationDate + ")" : "")
-    : "Manapickスコアは公開前の視聴確認で確定します。";
+    : "運営の視聴確認済みは一部。その他は採点基準に沿った自動スコアです。";
+  const positionText = videoPositionText(video);
+  const audienceText = videoAudienceText(video);
+  const learningPoints = videoLearningPoints(video);
+  const axisCommentary = videoAxisCommentary(video);
+  const viewingTips = videoViewingTips(video);
   const videoObject = {
     "@type": "VideoObject",
     name: video.title,
@@ -170,10 +179,13 @@ export default async function VideoPage({ params }: VideoPageProps) {
           </div>
           {channel ? <p className="video-channel">チャンネル: {channel}</p> : null}
           <div className={isConfirmed ? "video-score-card is-confirmed" : "video-score-card"}>
-            <p>{scoreLabel(video)}</p>
-            <span>{isConfirmed ? "運営者が視聴確認済み" : "自動採点・順次確認中"}</span>
+            <p>{isConfirmed ? scoreText(video) + " ✓ 確認済" : "Manapick自動スコア " + scoreText(video)}</p>
+            <span>{isConfirmed ? "運営者が視聴確認済み" : "7軸・35点満点"}</span>
           </div>
-          {isConfirmed ? <p className="video-score-note is-confirmed">{scoreConfirmationText}</p> : null}
+          <p className={isConfirmed ? "video-score-note is-confirmed" : "video-score-note"}>
+            {scoreConfirmationText}
+            {!isConfirmed ? <>（<a href="/about-score/">採点方法</a>）</> : null}
+          </p>
           <ol className="video-review-list">
             {video.review.map((line, index) => (
               <li key={`${index}-${line}`}>
@@ -191,13 +203,51 @@ export default async function VideoPage({ params }: VideoPageProps) {
         </div>
       </article>
 
+      <section className="video-context-section" aria-labelledby="video-context-title">
+        <div className="section-heading-row">
+          <div>
+            <p className="section-eyebrow">視聴前ガイド</p>
+            <h2 id="video-context-title" className="section-title">この動画を選ぶ前に知っておきたいこと</h2>
+          </div>
+        </div>
+        <div className="video-context-grid">
+          <section className="video-context-card">
+            <h3>この動画の位置づけ</h3>
+            <p>{positionText}</p>
+          </section>
+          <section className="video-context-card">
+            <h3>こんな人におすすめ</h3>
+            <p>{audienceText}</p>
+          </section>
+          <section className="video-context-card">
+            <h3>この1本で学べること</h3>
+            <ul>
+              {learningPoints.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
+          </section>
+          <section className="video-context-card">
+            <h3>視聴のポイント／気をつけたい点</h3>
+            {viewingTips.map((tip) => (
+              <p key={tip}>{tip}</p>
+            ))}
+          </section>
+        </div>
+      </section>
+
       <section className="video-axis-section" aria-labelledby="score-detail-title">
         <div className="section-heading-row">
           <div>
             <p className="section-eyebrow">Manapickスコア</p>
-            <h2 id="score-detail-title" className="section-title">7軸の内訳</h2>
+            <h2 id="score-detail-title" className="section-title">7軸の採点コメント</h2>
           </div>
           <a href="/about-score/">採点方法を見る</a>
+        </div>
+        <div className="video-axis-commentary">
+          {axisCommentary.map((line) => (
+            <p key={line}>{line}</p>
+          ))}
         </div>
         {video.axisScores.length > 0 ? (
           <dl className="video-axis-grid">
