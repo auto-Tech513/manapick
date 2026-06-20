@@ -380,6 +380,7 @@ function GuidePrSection({ guide }: { guide: Guide }) {
           <div>
             <p className="section-eyebrow">【PR】広告</p>
             <h2 id="guide-pr-title">あわせて使いたい教材・講座(PR)</h2>
+            <p className="guide-pr-disclosure">本ページにはアフィリエイト広告（PR）を含みます。</p>
           </div>
           <span className="guide-pr-badge">PR</span>
         </div>
@@ -393,7 +394,7 @@ function GuidePrSection({ guide }: { guide: Guide }) {
                 className="guide-pr-card is-link"
                 href={item.url}
                 target="_blank"
-                rel="sponsored noopener"
+                rel="sponsored nofollow noopener"
               >
                 <span className="guide-pr-card-pr">
                   {prKind === "course" ? "【PR】スクール・講座" : "【PR】楽天ブックス"}
@@ -431,6 +432,7 @@ function GuidePrSection({ guide }: { guide: Guide }) {
         <div>
           <p className="section-eyebrow">【PR】広告</p>
           <h2 id="guide-pr-title">あわせて使いたい教材・講座(PR)</h2>
+          <p className="guide-pr-disclosure">本ページにはアフィリエイト広告（PR）を含みます。</p>
         </div>
         <span className="guide-pr-badge">PR</span>
       </div>

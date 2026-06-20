@@ -166,6 +166,7 @@ const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
     title: "サイト情報",
     links: [
       { label: "運営者情報", href: "/operator/" },
+      { label: "広告・アフィリエイトについて", href: "/affiliate/" },
       { label: "プライバシーポリシー", href: "/privacy/" },
       { label: "免責事項", href: "/disclaimer/" }
     ]

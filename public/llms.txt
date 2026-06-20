@@ -38,6 +38,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 採点方法: https://manapick.app/about-score/
 - お問い合わせ: https://manapick.app/contact/
 - 運営者情報: https://manapick.app/operator/
+- 広告・アフィリエイトについて: https://manapick.app/affiliate/
 - 免責事項: https://manapick.app/disclaimer/
 - プライバシーポリシー: https://manapick.app/privacy/
 - サイトマップ: https://manapick.app/sitemap.xml

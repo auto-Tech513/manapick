@@ -9,6 +9,7 @@ const staticRoutes = [
   "/",
   "/about-score/",
   "/operator/",
+  "/affiliate/",
   "/privacy/",
   "/disclaimer/",
   "/contact/"
