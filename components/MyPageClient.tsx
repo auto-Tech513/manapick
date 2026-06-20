@@ -195,7 +195,7 @@ export default function MyPageClient() {
           <MyStat
             label="お休みチケット"
             value={"残り" + (streak.ready ? streak.state.freezes : 1) + "枚"}
-            note="1日休んでも連続を守れます"
+            note="休んでも連続が続きます"
             help="1日見られなくても連続が途切れません。1枚使うと、その日は休んでも連続が続きます。"
           />
           <MyStat label="視聴済み" value={watched.items.length + "本"} note="手動で記録した本数" />

@@ -2970,11 +2970,13 @@ img {
     display: inline-flex;
     flex: 0 0 auto;
     min-height: 34px;
+    align-items: center;
+    justify-content: center;
     gap: 4px;
-    place-items: initial;
     border-radius: 999px;
     padding: 6px 9px;
     background: #fff;
+    line-height: 1;
   }
 
   .retention-ticket-stat {
@@ -2982,7 +2984,11 @@ img {
   }
 
   .retention-stat strong {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-size: 0.78rem;
+    line-height: 1;
     white-space: nowrap;
   }
 
@@ -2997,6 +3003,8 @@ img {
     color: var(--color-primary);
     font-size: 0.78rem;
     font-weight: 950;
+    line-height: 1;
+    white-space: nowrap;
   }
 
   .retention-mobile-my {
@@ -3009,6 +3017,17 @@ img {
 
   .retention-actions {
     display: none;
+  }
+
+  .metric-help-body {
+    position: fixed;
+    right: max(12px, env(safe-area-inset-right));
+    bottom: 16px;
+    left: max(12px, env(safe-area-inset-left));
+    top: auto;
+    width: auto;
+    max-width: none;
+    text-align: left;
   }
 }
 
@@ -4640,6 +4659,11 @@ img {
 
   .my-stat-card strong {
     font-size: 1.18rem;
+  }
+
+  .my-stat-card span {
+    font-size: 0.78rem;
+    white-space: nowrap;
   }
 
   .my-section {
