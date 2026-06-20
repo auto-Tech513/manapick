@@ -190,13 +190,13 @@ export default function MyPageClient() {
             label="連続学習日数"
             value={"🔥 " + (streak.ready ? streak.state.count : 0) + "日連続"}
             note="毎日1本見ると増えます"
-            help="毎日1本見ると増えます。"
+            help="毎日1本見ると増えます。連続学習日数は、動画を見た日が続くほど増えます"
           />
           <MyStat
             label="お休みチケット"
             value={"残り" + (streak.ready ? streak.state.freezes : 1) + "枚"}
             note="休んでも連続が続きます"
-            help="1日見られなくても連続が途切れません。1枚使うと、その日は休んでも連続が続きます。"
+            help="1日見られなくても連続が途切れません。1枚使うと、その日は休んでも連続が続きます"
           />
           <MyStat label="視聴済み" value={watched.items.length + "本"} note="手動で記録した本数" />
           <MyStat label="あとで見る" value={watchlist.items.length + "本"} note="保存中の動画" />

@@ -3018,17 +3018,6 @@ img {
   .retention-actions {
     display: none;
   }
-
-  .metric-help-body {
-    position: fixed;
-    right: max(12px, env(safe-area-inset-right));
-    bottom: 16px;
-    left: max(12px, env(safe-area-inset-left));
-    top: auto;
-    width: auto;
-    max-width: none;
-    text-align: left;
-  }
 }
 
 .recent-video-thumb {
@@ -4655,6 +4644,62 @@ img {
 
   .my-stat-card {
     padding: 11px;
+  }
+
+  .my-stat-card p {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 8px;
+  }
+
+  .my-stat-card .metric-help {
+    display: contents;
+  }
+
+  .my-stat-card .metric-help button {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    margin-left: auto;
+    border-color: color-mix(in srgb, var(--color-primary) 26%, var(--color-line));
+    background: color-mix(in srgb, var(--color-primary) 8%, #fff);
+    box-shadow: none;
+    font-size: 0.78rem;
+  }
+
+  .my-stat-card .metric-help-body {
+    position: static;
+    inset: auto;
+    z-index: auto;
+    display: none;
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: none;
+    margin-top: 2px;
+    border-color: color-mix(in srgb, var(--color-primary) 16%, var(--color-line));
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--color-primary) 7%, #fff);
+    color: var(--color-primary-ink);
+    padding: 9px 10px;
+    font-size: 0.77rem;
+    font-weight: 850;
+    line-height: 1.65;
+    overflow: visible;
+    text-align: left;
+    white-space: normal;
+    box-shadow: none;
+  }
+
+  .my-stat-card .metric-help:hover .metric-help-body,
+  .my-stat-card .metric-help:focus-within .metric-help-body {
+    display: none;
+  }
+
+  .my-stat-card .metric-help.is-open .metric-help-body {
+    display: block;
   }
 
   .my-stat-card strong {
