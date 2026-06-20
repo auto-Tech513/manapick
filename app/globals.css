@@ -2624,7 +2624,7 @@ img {
   display: grid;
   width: min(100% - 32px, 1180px);
   margin-inline: auto;
-  grid-template-columns: minmax(0, 1.35fr) auto minmax(230px, 0.8fr);
+  grid-template-columns: auto auto minmax(220px, max-content);
   gap: 14px;
   align-items: center;
   padding-block: 12px;
@@ -2748,6 +2748,7 @@ img {
   gap: 7px;
   align-items: center;
   justify-content: flex-end;
+  justify-self: end;
 }
 
 .retention-link,
@@ -2815,12 +2816,13 @@ img {
     flex-wrap: wrap;
     gap: 10px 12px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .today-pick-chip {
-    flex: 1 1 310px;
-    max-width: 420px;
+    flex: 0 1 360px;
+    width: min(360px, 100%);
+    max-width: 360px;
   }
 
   .retention-stats {
@@ -2830,7 +2832,7 @@ img {
     gap: 8px 12px;
     align-items: center;
     justify-content: center;
-    min-width: min(100%, 410px);
+    max-width: 100%;
   }
 
   .retention-stat {
@@ -2854,6 +2856,7 @@ img {
     align-content: center;
     justify-content: flex-end;
     margin-left: auto;
+    justify-self: end;
   }
 
   .retention-actions > :not(p) {
