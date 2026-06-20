@@ -195,12 +195,12 @@ function scoreText(video: Video) {
 }
 
 function scoreStatusText(_video: Video) {
-  return "✓ 運営者 視聴確認済";
+  return "運営者が視聴確認済み";
 }
 
 function scoreConfirmationText(video: Video) {
   const date = video.scoreConfirmedAt ? video.scoreConfirmedAt.replace(/-/g, "/") : null;
-  return "運営者が視聴のうえ確認済みのスコアです" + (date ? "(確認日: " + date + ")" : "");
+  return "運営者が実際に視聴し7軸35点で採点したスコアです" + (date ? "（確認日: " + date + "）" : "");
 }
 
 function scoreClasses(video: Video) {
@@ -1713,7 +1713,7 @@ export default function ManapickApp() {
             </p>
             <p className="mt-1 text-sm text-white/68">学び直しを、最短ルートに。</p>
           </div>
-          <nav className="footer-nav flex flex-wrap gap-4 text-sm font-bold text-white/78" aria-label="固定ページ">
+          <nav className="footer-nav flex flex-wrap gap-4 text-sm font-bold text-white/78" aria-label="サイト情報">
             {footerLinkGroups.map((group) => (
               <div key={group.title} className="footer-link-group">
                 <p className="footer-group-title">{group.title}</p>
@@ -2737,7 +2737,7 @@ function FeaturedVideoCard({ video }: { video: Video }) {
 
 function ScoreBadge({ video, compact = false }: { video: Video; compact?: boolean }) {
   const status = scoreStatus(video);
-  const label = scoreText(video) + " ✓ 運営者 視聴確認済";
+  const label = scoreText(video) + " " + scoreStatusText(video);
   const statusLabel = scoreStatusText(video);
 
   return (

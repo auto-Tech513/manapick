@@ -1,4 +1,29 @@
+import type { Metadata } from "next";
 import PolicyPage from "@/components/PolicyPage";
+import { absoluteUrl } from "@/lib/manapick";
+
+const disclaimerTitle = "免責事項 | Manapick";
+const disclaimerDescription = "Manapickの掲載動画、学習情報、投資・資格ジャンルに関する免責事項を説明します。";
+
+export const metadata: Metadata = {
+  title: disclaimerTitle,
+  description: disclaimerDescription,
+  alternates: {
+    canonical: absoluteUrl("/disclaimer/")
+  },
+  openGraph: {
+    title: disclaimerTitle,
+    description: disclaimerDescription,
+    url: absoluteUrl("/disclaimer/"),
+    type: "article"
+  },
+  twitter: {
+    card: "summary",
+    site: "@manapick_app",
+    title: disclaimerTitle,
+    description: disclaimerDescription
+  }
+};
 
 export default function DisclaimerPage() {
   return (

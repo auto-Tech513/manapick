@@ -1,4 +1,29 @@
+import type { Metadata } from "next";
 import PolicyPage from "@/components/PolicyPage";
+import { absoluteUrl } from "@/lib/manapick";
+
+const operatorTitle = "運営者情報 | Manapick";
+const operatorDescription = "Manapickの運営方針、掲載基準、動画レビューの作り方、お問い合わせ先を説明します。";
+
+export const metadata: Metadata = {
+  title: operatorTitle,
+  description: operatorDescription,
+  alternates: {
+    canonical: absoluteUrl("/operator/")
+  },
+  openGraph: {
+    title: operatorTitle,
+    description: operatorDescription,
+    url: absoluteUrl("/operator/"),
+    type: "article"
+  },
+  twitter: {
+    card: "summary",
+    site: "@manapick_app",
+    title: operatorTitle,
+    description: operatorDescription
+  }
+};
 
 export default function OperatorPage() {
   return (

@@ -107,7 +107,7 @@ export default function AboutScorePage() {
 
       <section className="score-explain-grid" aria-label="スコア表示の種類">
         <article>
-          <span className="score-page-badge confirmed">31/35 ✓ 運営者 視聴確認済</span>
+          <span className="score-page-badge confirmed">31/35 運営者が視聴確認済み</span>
           <h2>全件視聴確認済み</h2>
           <p>運営者が動画本編を視聴し、タイトル・内容の一致と品質を確認したうえで公開しています。</p>
         </article>

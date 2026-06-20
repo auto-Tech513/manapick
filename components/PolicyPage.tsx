@@ -26,7 +26,7 @@ export default function PolicyPage({ title, lead, sections, children }: PolicyPa
         </div>
       </header>
       <article className="mx-auto max-w-4xl px-4 py-10">
-        <p className="text-sm font-bold text-leaf">固定ページ</p>
+        <p className="text-sm font-bold text-leaf">Manapick公式情報</p>
         <h1 className="mt-2 text-3xl font-black">{title}</h1>
         <p className="mt-4 max-w-3xl leading-8 text-ink/76">{lead}</p>
         <div className="mt-8 grid gap-6">

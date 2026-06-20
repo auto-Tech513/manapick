@@ -291,7 +291,6 @@ export default async function GuidePage({ params }: GuidePageProps) {
               <thead>
                 <tr>
                   <th>つまずき</th>
-                  <th>原因</th>
                   <th>回避策</th>
                 </tr>
               </thead>
@@ -299,7 +298,6 @@ export default async function GuidePage({ params }: GuidePageProps) {
                 {stumbleRows.map((row) => (
                   <tr key={row.stumble}>
                     <td>{row.stumble}</td>
-                    <td>{row.cause}</td>
                     <td>{row.solution}</td>
                   </tr>
                 ))}
@@ -475,7 +473,7 @@ function guideStumbleRows(guide: Guide) {
 
   return guide.stumblingBlocks.slice(0, 3).map((item) => ({
     stumble: item.label,
-    cause: "順番や目的が曖昧なまま進めている",
+    cause: "",
     solution: item.text
   }));
 }
@@ -561,7 +559,7 @@ function GuideVideoCard({ video, why }: { video: Video; why: string }) {
           <a className={guideScoreClass(video)} href="/about-score/" aria-label={scoreText(video) + "。採点方法を開く"}>
             <span>{scoreText(video)}</span>
             <span className="score-badge-status is-confirmed">
-              ✓ 運営者 視聴確認済
+              運営者が視聴確認済み
             </span>
           </a>
         </div>

@@ -1,4 +1,29 @@
+import type { Metadata } from "next";
 import PolicyPage from "@/components/PolicyPage";
+import { absoluteUrl } from "@/lib/manapick";
+
+const privacyTitle = "プライバシーポリシー | Manapick";
+const privacyDescription = "ManapickのCookie、アクセス解析、広告配信、アフィリエイトに関する個人情報の扱いを説明します。";
+
+export const metadata: Metadata = {
+  title: privacyTitle,
+  description: privacyDescription,
+  alternates: {
+    canonical: absoluteUrl("/privacy/")
+  },
+  openGraph: {
+    title: privacyTitle,
+    description: privacyDescription,
+    url: absoluteUrl("/privacy/"),
+    type: "article"
+  },
+  twitter: {
+    card: "summary",
+    site: "@manapick_app",
+    title: privacyTitle,
+    description: privacyDescription
+  }
+};
 
 export default function PrivacyPage() {
   return (

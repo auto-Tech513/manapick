@@ -126,7 +126,7 @@ export function scoreText(video: Video) {
 }
 
 export function scoreLabel(video: Video) {
-  return scoreText(video) + " ✓ 運営者 視聴確認済";
+  return scoreText(video) + " 運営者が視聴確認済み";
 }
 
 export function scoreConfirmationDate(video: Video) {

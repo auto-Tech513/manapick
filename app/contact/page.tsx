@@ -1,4 +1,29 @@
+import type { Metadata } from "next";
 import PolicyPage from "@/components/PolicyPage";
+import { absoluteUrl } from "@/lib/manapick";
+
+const contactTitle = "お問い合わせ | Manapick";
+const contactDescription = "掲載動画の削除要請、権利に関する連絡、内容修正の依頼を受け付けるManapickのお問い合わせページです。";
+
+export const metadata: Metadata = {
+  title: contactTitle,
+  description: contactDescription,
+  alternates: {
+    canonical: absoluteUrl("/contact/")
+  },
+  openGraph: {
+    title: contactTitle,
+    description: contactDescription,
+    url: absoluteUrl("/contact/"),
+    type: "article"
+  },
+  twitter: {
+    card: "summary",
+    site: "@manapick_app",
+    title: contactTitle,
+    description: contactDescription
+  }
+};
 
 export default function ContactPage() {
   return (

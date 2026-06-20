@@ -2876,6 +2876,44 @@ img {
   }
 }
 
+@media (min-width: 1024px) {
+  .retention-band-inner {
+    flex-wrap: nowrap;
+  }
+
+  .today-pick-chip {
+    flex-basis: clamp(260px, 27vw, 330px);
+    width: clamp(260px, 27vw, 330px);
+    max-width: 330px;
+  }
+
+  .retention-stats {
+    flex: 0 0 auto;
+    gap: 8px 6px;
+  }
+
+  .retention-actions {
+    position: relative;
+    flex-wrap: nowrap;
+    min-width: max-content;
+  }
+
+  .retention-link,
+  .retention-actions .pwa-install-button {
+    padding-inline: 10px;
+  }
+
+  .retention-actions p {
+    position: absolute;
+    top: calc(100% + 3px);
+    right: 0;
+    flex: none;
+    width: max-content;
+    max-width: min(320px, 100vw - 32px);
+    white-space: nowrap;
+  }
+}
+
 .metric-help {
   position: relative;
   display: inline-flex;
