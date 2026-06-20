@@ -34,7 +34,7 @@ export type AxisScore = {
   note: string;
 };
 
-export type ScoreStatus = "confirmed" | "provisional";
+export type ScoreStatus = "confirmed";
 
 export type Video = {
   genre: string;
@@ -58,6 +58,18 @@ export type Video = {
 
 export const genres = genresData as Genre[];
 export const videos = videosData as Video[];
+
+const nonConfirmedVideos = videos.filter((video) => video.scoreStatus !== "confirmed");
+
+if (nonConfirmedVideos.length > 0) {
+  const sampleIds = nonConfirmedVideos.slice(0, 8).map((video) => video.ytid).join(", ");
+  throw new Error(
+    "All Manapick videos must be owner-confirmed before build. " +
+      "nonConfirmed=" +
+      nonConfirmedVideos.length +
+      (sampleIds ? " sample=" + sampleIds : "")
+  );
+}
 
 export const publishedGenreKeys = genres
   .filter((genre) => genre.status === "published")
@@ -105,8 +117,8 @@ export function genreLabel(key: string) {
   return shortLabels[key] ?? genreDisplayName(key);
 }
 
-export function scoreStatus(video: Video): ScoreStatus {
-  return video.scoreStatus === "confirmed" ? "confirmed" : "provisional";
+export function scoreStatus(_video: Video): ScoreStatus {
+  return "confirmed";
 }
 
 export function scoreText(video: Video) {
@@ -114,11 +126,11 @@ export function scoreText(video: Video) {
 }
 
 export function scoreLabel(video: Video) {
-  return scoreStatus(video) === "confirmed" ? scoreText(video) + " ✓ 確認済" : scoreText(video) + " 暫定";
+  return scoreText(video) + " ✓ 運営者 視聴確認済";
 }
 
 export function scoreConfirmationDate(video: Video) {
-  if (scoreStatus(video) !== "confirmed" || !video.scoreConfirmedAt) return null;
+  if (!video.scoreConfirmedAt) return null;
   return video.scoreConfirmedAt.replace(/-/g, "/");
 }
 

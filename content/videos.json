@@ -115,7 +115,8 @@
       "6ステップで無料版の応用機能まで段階的に学べる。",
       "広く押さえたい人向け。休日にまとめ視聴がおすすめ。"
     ],
-    "publishedAt": "2025-01-04T01:00:28Z"
+    "publishedAt": "2025-01-04T01:00:28Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -173,7 +174,8 @@
       "主要機能を実演ベースで紹介、何ができるか想像しやすい。",
       "文章・資料整理の効率化を狙う人の最初の1本に。"
     ],
-    "publishedAt": "2026-05-01T10:01:00Z"
+    "publishedAt": "2026-05-01T10:01:00Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -231,7 +233,8 @@
       "始め方〜活用法を俯瞰でき、必要か判断しやすい。",
       "深掘りは長尺講座へ進むのが効率的。"
     ],
-    "publishedAt": "2026-04-01T09:01:48Z"
+    "publishedAt": "2026-04-01T09:01:48Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -289,7 +292,8 @@
       "20以上の機能から自分に効くものを選びやすい。",
       "気になる機能だけ拾い見する使い方でも価値がある。"
     ],
-    "publishedAt": "2026-03-08T10:02:15Z"
+    "publishedAt": "2026-03-08T10:02:15Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "prog",
@@ -348,7 +352,7 @@
       "全体像を掴みたい人向け。次に長尺の基礎へ進むと定着。"
     ],
     "publishedAt": "2025-11-01T11:00:30Z",
-    "scoreStatus": "provisional"
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "prog",
@@ -407,7 +411,7 @@
       "1本目に観て、総集編で反復するのがおすすめ。"
     ],
     "publishedAt": "2025-12-13T10:01:14Z",
-    "scoreStatus": "provisional"
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "prog",
@@ -466,7 +470,7 @@
       "長尺ぶん分割視聴推奨。手を動かすと効果的。"
     ],
     "publishedAt": "2022-12-10T09:00:18Z",
-    "scoreStatus": "provisional"
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -525,7 +529,7 @@
       "副業編集の入口に。次は機能別の深掘りへ。"
     ],
     "publishedAt": "2025-01-02T09:00:45Z",
-    "scoreStatus": "provisional"
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -584,7 +588,7 @@
       "基礎編として最適。慣れたらカット編集の実践へ。"
     ],
     "publishedAt": "2024-11-01T10:01:06Z",
-    "scoreStatus": "provisional"
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -643,7 +647,7 @@
       "シリーズで続けて学ぶと体系化できる。"
     ],
     "publishedAt": "2023-05-10T02:07:20Z",
-    "scoreStatus": "provisional"
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -702,7 +706,7 @@
       "やり直し英語の地図として最初に観る価値がある。"
     ],
     "publishedAt": "2026-05-06T12:12:31Z",
-    "scoreStatus": "provisional"
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -761,7 +765,7 @@
       "忙しい人ほど効く。継続の仕組みづくりのヒント。"
     ],
     "publishedAt": "2025-11-02T11:00:09Z",
-    "scoreStatus": "provisional"
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -820,7 +824,7 @@
       "保存版。自分のレベルに合う箇所から着手を。"
     ],
     "publishedAt": "2026-01-24T10:00:44Z",
-    "scoreStatus": "provisional"
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "data",
@@ -841,7 +845,8 @@
       "特別なツール不要、普段のExcelで「分析」を体験できる入口。",
       "40分で要点を一周。手を動かしやすい。"
     ],
-    "publishedAt": "2022-05-22T12:05:54Z"
+    "publishedAt": "2022-05-22T12:05:54Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "data",
@@ -862,7 +867,8 @@
       "「文系でも」を掲げ、用語の壁が低い。最新(2025)で実務寄り。",
       "データ活用の考え方から入れる。"
     ],
-    "publishedAt": "2025-10-26T00:00:20Z"
+    "publishedAt": "2025-10-26T00:00:20Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "data",
@@ -883,7 +889,8 @@
       "腰を据えて2時間で体系化。基礎を一周したい人向け。",
       "長尺なので分割視聴推奨。"
     ],
-    "publishedAt": "2022-02-27T03:00:18Z"
+    "publishedAt": "2022-02-27T03:00:18Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "marke",
@@ -927,7 +934,8 @@
       "2026最新でAI時代のSEOに触れる。鮮度が高い。",
       "基本を1本で押さえられる。"
     ],
-    "publishedAt": "2026-01-27T03:01:10Z"
+    "publishedAt": "2026-01-27T03:01:10Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "marke",
@@ -948,7 +956,8 @@
       "基礎から具体策まで、資料付きで実践しやすい。",
       "全体像の後の深掘りに向く。"
     ],
-    "publishedAt": "2024-05-21T11:00:55Z"
+    "publishedAt": "2024-05-21T11:00:55Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -969,7 +978,8 @@
       "PowerPointをまず触るための入口。操作の不安を解消。",
       "土台づくりに。"
     ],
-    "publishedAt": "2020-10-19T11:00:05Z"
+    "publishedAt": "2020-10-19T11:00:05Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -990,7 +1000,8 @@
       "「伝わる資料」の型を8つに凝縮。再現性が高い。",
       "短時間で効く実務テク。"
     ],
-    "publishedAt": "2022-01-30T11:00:34Z"
+    "publishedAt": "2022-01-30T11:00:34Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -1011,7 +1022,8 @@
       "センス不要の7コツ。すぐ実践できる。",
       "基礎を押さえた次の磨き込みに。"
     ],
-    "publishedAt": "2024-07-30T11:30:12Z"
+    "publishedAt": "2024-07-30T11:30:12Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "shikaku",
@@ -1032,7 +1044,8 @@
       "2026年版の学習スケジュール。最初の地図に最適。",
       "保存版として戻れる。"
     ],
-    "publishedAt": "2026-01-05T10:30:31Z"
+    "publishedAt": "2026-01-05T10:30:31Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "shikaku",
@@ -1053,7 +1066,8 @@
       "独学の勉強法と教材選びを解説。遠回りを防ぐ。",
       "学習順序の参考に。"
     ],
-    "publishedAt": "2024-12-15T14:37:33Z"
+    "publishedAt": "2024-12-15T14:37:33Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -1074,7 +1088,8 @@
       "プロンプトの実践テクを体系化。AI活用の質が上がる。",
       "長尺ぶん網羅的。"
     ],
-    "publishedAt": "2025-03-02T11:00:25Z"
+    "publishedAt": "2025-03-02T11:00:25Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "prog",
@@ -1095,7 +1110,8 @@
       "基礎の次「Webアプリを作る」入口。手応えが得られる。",
       "50分で最初の一歩。"
     ],
-    "publishedAt": "2021-09-11T10:45:01Z"
+    "publishedAt": "2021-09-11T10:45:01Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -1116,7 +1132,8 @@
       "Adobe公式でAE入門。信頼性が高い。",
       "Premiereの次、表現力を広げる一歩。"
     ],
-    "publishedAt": "2024-08-26T06:31:50Z"
+    "publishedAt": "2024-08-26T06:31:50Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -1137,7 +1154,8 @@
       "腰を据えてAE/モーショングラフィックスを体系学習。",
       "長尺・分割視聴前提の保存版。"
     ],
-    "publishedAt": "2023-09-30T03:00:20Z"
+    "publishedAt": "2023-09-30T03:00:20Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -1258,7 +1276,8 @@
       "実際の業務における自動化の具体例を交えながら、機能を段階的に学べる内容です。"
     ],
     "viewCount": 245907,
-    "publishedAt": "2026-04-02T09:00:26Z"
+    "publishedAt": "2026-04-02T09:00:26Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -1379,7 +1398,8 @@
       "カット編集やエフェクトの適用など、実用的な編集技術を基礎から積み上げられる内容です。"
     ],
     "viewCount": 68654,
-    "publishedAt": "2025-06-23T12:00:34Z"
+    "publishedAt": "2025-06-23T12:00:34Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -1438,7 +1458,8 @@
       "初心者向けの内容ながら、開発支援ツールを含む高度な機能も網羅されています。"
     ],
     "viewCount": 63465,
-    "publishedAt": "2026-04-27T09:30:02Z"
+    "publishedAt": "2026-04-27T09:30:02Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -1497,7 +1518,8 @@
       "カット編集やエフェクトの適用など、実用的な技術を段階を追って確認できる内容です。"
     ],
     "viewCount": 61816,
-    "publishedAt": "2026-02-12T11:00:00Z"
+    "publishedAt": "2026-02-12T11:00:00Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -1556,7 +1578,8 @@
       "経営判断に資する言語化の重要性やSkills活用法など、実務への応用も提示します。"
     ],
     "viewCount": 1375074,
-    "publishedAt": "2026-03-01T00:00:22Z"
+    "publishedAt": "2026-03-01T00:00:22Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -1616,7 +1639,8 @@
       "語彙や文法の習得順序を論理的に解説しているため、効率的な学習が可能です。"
     ],
     "viewCount": 772400,
-    "publishedAt": "2025-11-28T10:09:49Z"
+    "publishedAt": "2025-11-28T10:09:49Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -1676,7 +1700,8 @@
       "基礎から応用へのステップを意識した構成で、技術の基礎を整理できる内容です。"
     ],
     "viewCount": 713657,
-    "publishedAt": "2025-10-18T10:00:09Z"
+    "publishedAt": "2025-10-18T10:00:09Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -1735,7 +1760,8 @@
       "実用的なツールの比較を通じて、自身の目的に合った選択肢を見出せます。"
     ],
     "viewCount": 475526,
-    "publishedAt": "2025-04-17T11:00:22Z"
+    "publishedAt": "2025-04-17T11:00:22Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -1794,7 +1820,8 @@
       "AIの基礎知識を段階的に積み上げながら、実用的な使い方を学べる構成です。"
     ],
     "viewCount": 338589,
-    "publishedAt": "2025-01-14T05:18:58Z"
+    "publishedAt": "2025-01-14T05:18:58Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -1855,7 +1882,8 @@
       "シーケンスの設定など、編集を開始するために必要な基礎工程を網羅しています。"
     ],
     "viewCount": 248855,
-    "publishedAt": "2023-11-08T11:00:15Z"
+    "publishedAt": "2023-11-08T11:00:15Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -1914,7 +1942,8 @@
       "最新の試験傾向を踏まえた項目別の対策が含まれ、計画的に取り組める内容です。"
     ],
     "viewCount": 156991,
-    "publishedAt": "2024-02-28T11:00:02Z"
+    "publishedAt": "2024-02-28T11:00:02Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -1974,7 +2003,8 @@
       "プロンプト作成の基礎概念から応用までを網羅した実用的な内容です。"
     ],
     "viewCount": 119316,
-    "publishedAt": "2025-07-26T12:14:03Z"
+    "publishedAt": "2025-07-26T12:14:03Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -2033,7 +2063,8 @@
       "ProjectsやMCPといった最新機能の実装例も含まれ、実用的な活用法が学べます。"
     ],
     "viewCount": 108429,
-    "publishedAt": "2025-03-16T00:00:04Z"
+    "publishedAt": "2025-03-16T00:00:04Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -2093,7 +2124,8 @@
       "自動化の仕組みを視覚的に捉えながら、実際の運用イメージを具体的に学べる内容です。"
     ],
     "viewCount": 62640,
-    "publishedAt": "2025-07-20T10:11:01Z"
+    "publishedAt": "2025-07-20T10:11:01Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -2154,7 +2186,8 @@
       "フルテロップ作成に必要な基本操作を網羅しているため、編集作業の基礎を学べます。"
     ],
     "viewCount": 29453,
-    "publishedAt": "2025-06-18T11:00:33Z"
+    "publishedAt": "2025-06-18T11:00:33Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -2214,7 +2247,8 @@
       "3ヶ月という期間を見据え、英会話の基礎体力を養う手順を整理した内容です。"
     ],
     "viewCount": 2257091,
-    "publishedAt": "2025-10-15T10:41:12Z"
+    "publishedAt": "2025-10-15T10:41:12Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -2336,7 +2370,8 @@
       "初心者向けの内容ながら、高度な編集技術へ繋がる基礎を丁寧に積み上げる構成です。"
     ],
     "viewCount": 511630,
-    "publishedAt": "2022-12-29T11:00:21Z"
+    "publishedAt": "2022-12-29T11:00:21Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -2395,7 +2430,8 @@
       "実用的な機能に焦点を当てた内容で、アプリの基本操作を正確に習得できます。"
     ],
     "viewCount": 409909,
-    "publishedAt": "2024-03-19T11:00:43Z"
+    "publishedAt": "2024-03-19T11:00:43Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -2454,7 +2490,8 @@
       "実用的なプロンプトの例を交えながら、日常の業務に役立つ活用法を提示します。"
     ],
     "viewCount": 398875,
-    "publishedAt": "2025-11-19T08:01:11Z"
+    "publishedAt": "2025-11-19T08:01:11Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -2513,7 +2550,8 @@
       "実際の操作手順を具体的に解説しており、ツールの特性を正しく把握できます。"
     ],
     "viewCount": 172233,
-    "publishedAt": "2026-04-05T10:00:32Z"
+    "publishedAt": "2026-04-05T10:00:32Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -2572,7 +2610,8 @@
       "基本的な機能と活用法を順序立てて学べる構成になっており、基礎固めに適しています。"
     ],
     "viewCount": 169242,
-    "publishedAt": "2025-06-05T10:01:06Z"
+    "publishedAt": "2025-06-05T10:01:06Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -2632,7 +2671,8 @@
       "複雑な自動化処理を視覚的に組み立てるための基礎知識を、段階を追って網羅しています。"
     ],
     "viewCount": 149294,
-    "publishedAt": "2025-05-09T09:45:05Z"
+    "publishedAt": "2025-05-09T09:45:05Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -2692,7 +2732,8 @@
       "最新の技術動向を踏まえつつ、プロンプトによる開発手法を丁寧に紐解く内容。"
     ],
     "viewCount": 112715,
-    "publishedAt": "2025-05-27T11:01:19Z"
+    "publishedAt": "2025-05-27T11:01:19Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "data",
@@ -2816,7 +2857,8 @@
       "年度版として最新の操作画面に基づいた内容で構成されており、正確に学べます。"
     ],
     "viewCount": 96357,
-    "publishedAt": "2025-06-07T10:09:52Z"
+    "publishedAt": "2025-06-07T10:09:52Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -2877,7 +2919,8 @@
       "自動字幕や音調整など、動画制作に不可欠な工程を一つずつ丁寧に解説しています。"
     ],
     "viewCount": 92973,
-    "publishedAt": "2024-01-17T11:00:03Z"
+    "publishedAt": "2024-01-17T11:00:03Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -2937,7 +2980,8 @@
       "目標とする資格試験の傾向を踏まえつつ、段階的な学習計画を具体的に示す。"
     ],
     "viewCount": 86240,
-    "publishedAt": "2023-03-07T09:00:10Z"
+    "publishedAt": "2023-03-07T09:00:10Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -2996,7 +3040,8 @@
       "最新の動向を踏まえつつ、次世代の技術習得に向けた具体的なステップを提示する内容です。"
     ],
     "viewCount": 85900,
-    "publishedAt": "2026-01-24T07:31:36Z"
+    "publishedAt": "2026-01-24T07:31:36Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -3055,7 +3100,8 @@
       "基礎から応用へのステップを踏みながら、実用的な操作法を学べる構成です。"
     ],
     "viewCount": 76272,
-    "publishedAt": "2025-12-21T10:38:07Z"
+    "publishedAt": "2025-12-21T10:38:07Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -3114,7 +3160,8 @@
       "デバイス上での入力から回答の確認まで、一連の流れを視覚的に学べます。"
     ],
     "viewCount": 73802,
-    "publishedAt": "2025-01-11T11:00:51Z"
+    "publishedAt": "2025-01-11T11:00:51Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -3175,7 +3222,8 @@
       "Premiere Proの基本操作に慣れたい層に向けた入門的なコンテンツです。"
     ],
     "viewCount": 71991,
-    "publishedAt": "2023-11-20T11:00:16Z"
+    "publishedAt": "2023-11-20T11:00:16Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -3235,7 +3283,8 @@
       "抽象的な概念を整理しながら進むため、基礎知識を固めるのに適した構成です。"
     ],
     "viewCount": 65187,
-    "publishedAt": "2025-06-26T10:00:44Z"
+    "publishedAt": "2025-06-26T10:00:44Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -3297,7 +3346,8 @@
       "単一の機能だけでなく、制作工程を見据えた幅広い技術を順序立てて提示します。"
     ],
     "viewCount": 60074,
-    "publishedAt": "2025-03-31T11:51:04Z"
+    "publishedAt": "2025-03-31T11:51:04Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -3356,7 +3406,8 @@
       "AIツールの特性を理解しながら段階的に習得できる構成になっています。"
     ],
     "viewCount": 32717,
-    "publishedAt": "2026-05-13T11:00:00Z"
+    "publishedAt": "2026-05-13T11:00:00Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -3417,7 +3468,8 @@
       "年時点の最新仕様に基づき、基礎的な制作環境の構築方法を提示します。"
     ],
     "viewCount": 30421,
-    "publishedAt": "2026-01-19T11:00:22Z"
+    "publishedAt": "2026-01-19T11:00:22Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -3476,7 +3528,8 @@
       "業務自動化を見据えた機能構成を、初心者向けの視点で体系的に整理したコンテンツです。"
     ],
     "viewCount": 30232,
-    "publishedAt": "2026-05-06T11:30:00Z"
+    "publishedAt": "2026-05-06T11:30:00Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -3598,7 +3651,8 @@
       "初学者向けの内容ながら、機能の仕様に基づいた正確な操作法を学べます。"
     ],
     "viewCount": 17221,
-    "publishedAt": "2025-06-09T10:03:02Z"
+    "publishedAt": "2025-06-09T10:03:02Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -3658,7 +3712,8 @@
       "配布されるテンプレート資料を活用することで、実用的な構築に繋げられます。"
     ],
     "viewCount": 17063,
-    "publishedAt": "2024-08-13T06:07:43Z"
+    "publishedAt": "2024-08-13T06:07:43Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "shikaku",
@@ -3782,7 +3837,8 @@
       "年時点の最新仕様に基づいた機能解説が含まれるため実用的です。"
     ],
     "viewCount": 11357,
-    "publishedAt": "2025-07-14T09:00:24Z"
+    "publishedAt": "2025-07-14T09:00:24Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -3842,7 +3898,8 @@
       "初級者向けの内容ながら、実用性の高いフレーズを網羅した構成です。"
     ],
     "viewCount": 1648812,
-    "publishedAt": "2025-05-08T10:12:37Z"
+    "publishedAt": "2025-05-08T10:12:37Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -3902,7 +3959,8 @@
       "留学以外の選択肢を具体的に提示しており、学習環境の構築に役立つ内容です。"
     ],
     "viewCount": 570113,
-    "publishedAt": "2025-07-13T03:10:20Z"
+    "publishedAt": "2025-07-13T03:10:20Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -3962,7 +4020,8 @@
       "基礎的な知識から順を追って解説されており、実務への取り入れ方を具体的に学べます。"
     ],
     "viewCount": 554691,
-    "publishedAt": "2024-10-16T10:30:06Z"
+    "publishedAt": "2024-10-16T10:30:06Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "data",
@@ -4023,7 +4082,8 @@
       "関数内の各引数が何を指すのかを具体的に紐解く構成で、正確な入力に繋がります。"
     ],
     "viewCount": 545855,
-    "publishedAt": "2023-06-03T01:00:24Z"
+    "publishedAt": "2023-06-03T01:00:24Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -4084,7 +4144,8 @@
       "資料作成の初期段階における思考の整理や、構造化のプロセスを具体的に学べるコンテンツです。"
     ],
     "viewCount": 357685,
-    "publishedAt": "2025-09-07T10:01:24Z"
+    "publishedAt": "2025-09-07T10:01:24Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -4143,7 +4204,8 @@
       "基本操作と高度なテクニックの両面を網羅しており、習熟度に応じた学習が可能です。"
     ],
     "viewCount": 338101,
-    "publishedAt": "2026-03-08T10:00:01Z"
+    "publishedAt": "2026-03-08T10:00:01Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -4202,7 +4264,8 @@
       "高度な編集技術へつなげるための基礎知識を網羅した内容となっています。"
     ],
     "viewCount": 316956,
-    "publishedAt": "2023-01-07T12:00:25Z"
+    "publishedAt": "2023-01-07T12:00:25Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -4261,7 +4324,8 @@
       "初期設定やプロンプトの書き方の基礎を、一つずつ丁寧に確認できる構成です。"
     ],
     "viewCount": 225688,
-    "publishedAt": "2023-02-14T05:01:22Z"
+    "publishedAt": "2023-02-14T05:01:22Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -4321,7 +4385,8 @@
       "技術的な概念を整理しながら進められるため、導入期の学習に適した内容です。"
     ],
     "viewCount": 224676,
-    "publishedAt": "2025-11-14T10:26:14Z"
+    "publishedAt": "2025-11-14T10:26:14Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -4382,7 +4447,8 @@
       "次世代の動画編集を見据えた最適なソフト選びの判断材料が揃う内容です。"
     ],
     "viewCount": 220908,
-    "publishedAt": "2025-03-04T08:45:01Z"
+    "publishedAt": "2025-03-04T08:45:01Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "shikaku",
@@ -4442,7 +4508,8 @@
       "実務に近い視点を取り入れつつ、試験で問われる要点を厳選して構成した内容です。"
     ],
     "viewCount": 156513,
-    "publishedAt": "2026-03-13T12:31:13Z"
+    "publishedAt": "2026-03-13T12:31:13Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -4501,7 +4568,8 @@
       "抽象的な概念ではなく、日常や業務で活用できる具体的な場面を想定した構成が特徴です。"
     ],
     "viewCount": 145295,
-    "publishedAt": "2026-05-19T10:00:06Z"
+    "publishedAt": "2026-05-19T10:00:06Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -4560,7 +4628,8 @@
       "基本から応用まで一貫した流れで構成されており、多機能なソフトを深く理解できます。"
     ],
     "viewCount": 134578,
-    "publishedAt": "2024-06-04T10:45:03Z"
+    "publishedAt": "2024-06-04T10:45:03Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -4619,7 +4688,8 @@
       "導入初期の段階で押さえるべき基本仕様を整理した内容となっています。"
     ],
     "viewCount": 104930,
-    "publishedAt": "2026-03-28T11:00:28Z"
+    "publishedAt": "2026-03-28T11:00:28Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -4679,7 +4749,8 @@
       "実務での活用を見据えた具体的なワークフローを、専門的な視点で解説する内容です。"
     ],
     "viewCount": 101112,
-    "publishedAt": "2024-04-09T11:48:57Z"
+    "publishedAt": "2024-04-09T11:48:57Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -4738,7 +4809,8 @@
       "カットやエフェクトなど、実用的な機能を体系的に学べる構成となっています。"
     ],
     "viewCount": 96942,
-    "publishedAt": "2023-02-11T11:39:20Z"
+    "publishedAt": "2023-02-11T11:39:20Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -4799,7 +4871,8 @@
       "初心者がまず押さえるべき要素を厳選し、効率的に学習できる講座です。"
     ],
     "viewCount": 89607,
-    "publishedAt": "2023-05-05T09:00:19Z"
+    "publishedAt": "2023-05-05T09:00:19Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -4859,7 +4932,8 @@
       "初級者向けに構成されており、業務効率化に向けた技術要素を順序立てて提示。"
     ],
     "viewCount": 86083,
-    "publishedAt": "2025-01-02T09:00:18Z"
+    "publishedAt": "2025-01-02T09:00:18Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -4919,7 +4993,8 @@
       "基礎から応用への繋がりを整理しており、原理を理解したい層に適した内容です。"
     ],
     "viewCount": 84101,
-    "publishedAt": "2025-02-05T09:01:11Z"
+    "publishedAt": "2025-02-05T09:01:11Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -4980,7 +5055,8 @@
       "動画制作の全体像を把握しながら、ソフトの機能を段階的に習得できます。"
     ],
     "viewCount": 82711,
-    "publishedAt": "2024-05-02T10:07:10Z"
+    "publishedAt": "2024-05-02T10:07:10Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -5041,7 +5117,8 @@
       "10分という短時間で、デザインの意図を論理的に整理する手法を習得できます。"
     ],
     "viewCount": 81747,
-    "publishedAt": "2024-09-07T11:00:20Z"
+    "publishedAt": "2024-09-07T11:00:20Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "shikaku",
@@ -5101,7 +5178,8 @@
       "複雑な規定を体系的に分類しており、基礎から段階的に理解を深める構成です。"
     ],
     "viewCount": 69162,
-    "publishedAt": "2026-04-19T09:33:14Z"
+    "publishedAt": "2026-04-19T09:33:14Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "data",
@@ -5162,7 +5240,8 @@
       "30分という時間で、ツールの全体像を把握できる内容となっています。"
     ],
     "viewCount": 65232,
-    "publishedAt": "2024-03-04T10:00:44Z"
+    "publishedAt": "2024-03-04T10:00:44Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "shikaku",
@@ -5222,7 +5301,8 @@
       "初学者向けに専門用語の基礎から応用までの流れを論理的に組み立てた内容となっています。"
     ],
     "viewCount": 48503,
-    "publishedAt": "2025-02-01T12:37:26Z"
+    "publishedAt": "2025-02-01T12:37:26Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "prog",
@@ -5344,7 +5424,8 @@
       "プロンプト技術と検索技術の融合による解決策を具体的に学べる内容です。"
     ],
     "viewCount": 43601,
-    "publishedAt": "2024-12-16T21:00:28Z"
+    "publishedAt": "2024-12-16T21:00:28Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -5404,7 +5485,8 @@
       "具体的なロードマップを提示することで、個人の学習計画に具体性を与える構成です。"
     ],
     "viewCount": 31624,
-    "publishedAt": "2025-03-14T09:00:04Z"
+    "publishedAt": "2025-03-14T09:00:04Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "marke",
@@ -5464,7 +5546,8 @@
       "X特有の用語や機能について丁寧に紐解くため、初めて利用する方にも適しています。"
     ],
     "viewCount": 28085,
-    "publishedAt": "2025-08-07T11:58:34Z"
+    "publishedAt": "2025-08-07T11:58:34Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -5523,7 +5606,8 @@
       "スマホアプリ特有の操作感に寄り添った構成で、実用的な技術を習得可能です。"
     ],
     "viewCount": 26218,
-    "publishedAt": "2026-02-07T10:01:15Z"
+    "publishedAt": "2026-02-07T10:01:15Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -5585,7 +5669,8 @@
       "初級者が制作過程で直面する表現の選択肢を広げるための基礎知識が網羅されています。"
     ],
     "viewCount": 23051,
-    "publishedAt": "2025-01-27T10:13:53Z"
+    "publishedAt": "2025-01-27T10:13:53Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -5644,7 +5729,8 @@
       "Claude特有の挙動を理解することで、より意図に近い回答を引き出すコツを学べます。"
     ],
     "viewCount": 17878,
-    "publishedAt": "2026-05-16T12:00:28Z"
+    "publishedAt": "2026-05-16T12:00:28Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "shikaku",
@@ -5704,7 +5790,8 @@
       "基礎知識の習得から合格に向けた実戦的なアプローチまで、一連の流れを解説します。"
     ],
     "viewCount": 13728,
-    "publishedAt": "2026-06-01T09:00:02Z"
+    "publishedAt": "2026-06-01T09:00:02Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "shikaku",
@@ -5764,7 +5851,8 @@
       "宅建試験に向けた初歩的な知識から実戦演習への移行タイミングを具体化。"
     ],
     "viewCount": 13367,
-    "publishedAt": "2026-01-05T09:00:35Z"
+    "publishedAt": "2026-01-05T09:00:35Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "prog",
@@ -5824,7 +5912,8 @@
       "Python学習の第一歩として、必要な準備と基本動作を体系的に学べます。"
     ],
     "viewCount": 11684,
-    "publishedAt": "2025-10-25T02:00:45Z"
+    "publishedAt": "2025-10-25T02:00:45Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -5883,7 +5972,8 @@
       "基本操作から高度な演出まで、機能ごとに整理された構成で学べます。"
     ],
     "viewCount": 10819,
-    "publishedAt": "2026-02-20T11:00:00Z"
+    "publishedAt": "2026-02-20T11:00:00Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "shikaku",
@@ -5943,7 +6033,8 @@
       "合格に向けた具体的な進め方や重要なポイントを網羅的にまとめたコンテンツです。"
     ],
     "viewCount": 10040,
-    "publishedAt": "2025-08-16T11:00:05Z"
+    "publishedAt": "2025-08-16T11:00:05Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -6002,7 +6093,8 @@
       "基礎から応用まで段階を踏んだ学習法が体系的に構成されており、自身のレベルに応じた進め方が見えてきます。"
     ],
     "viewCount": 1847464,
-    "publishedAt": "2021-10-30T13:30:40Z"
+    "publishedAt": "2021-10-30T13:30:40Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -6062,7 +6154,8 @@
       "初心者が最初に取り組むべき30の基本フレーズを提示し、基礎体力の構築を促す構成です。"
     ],
     "viewCount": 1832266,
-    "publishedAt": "2025-04-19T00:00:33Z"
+    "publishedAt": "2025-04-19T00:00:33Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -6123,7 +6216,8 @@
       "社会人の基礎知識として必要な要素に焦点を当てた構成が特徴です。"
     ],
     "viewCount": 1198610,
-    "publishedAt": "2021-12-24T09:00:16Z"
+    "publishedAt": "2021-12-24T09:00:16Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "data",
@@ -6184,7 +6278,8 @@
       "Excelを用いたデータ可視化の基礎を、体系的に学べる内容となっています。"
     ],
     "viewCount": 1099422,
-    "publishedAt": "2023-05-16T11:00:04Z"
+    "publishedAt": "2023-05-16T11:00:04Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "marke",
@@ -6244,7 +6339,8 @@
       "Webマーケティングの基礎を捉えるための導入コンテンツとして適した内容です。"
     ],
     "viewCount": 751045,
-    "publishedAt": "2021-07-17T01:15:00Z"
+    "publishedAt": "2021-07-17T01:15:00Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "prog",
@@ -6304,7 +6400,8 @@
       "初心者がプログラミングの全体像を把握するための土台作りに適しています。"
     ],
     "viewCount": 749779,
-    "publishedAt": "2024-07-01T10:00:51Z"
+    "publishedAt": "2024-07-01T10:00:51Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -6363,7 +6460,8 @@
       "単なる単語や文法の紹介に留まらず、高得点を目指すための戦略的な順序が示されています。"
     ],
     "viewCount": 693027,
-    "publishedAt": "2024-03-08T09:18:26Z"
+    "publishedAt": "2024-03-08T09:18:26Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -6423,7 +6521,8 @@
       "初級者向けの内容として、日常から実務まで対応できる構成が特徴です。"
     ],
     "viewCount": 662228,
-    "publishedAt": "2024-09-05T10:00:38Z"
+    "publishedAt": "2024-09-05T10:00:38Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -6483,7 +6582,8 @@
       "全10回にわたるシリーズ構成により、基礎から応用への流れを順序立てて学べます。"
     ],
     "viewCount": 655848,
-    "publishedAt": "2024-07-26T03:00:09Z"
+    "publishedAt": "2024-07-26T03:00:09Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -6544,7 +6644,8 @@
       "Excelの基本操作を整理し、実務への導入を見据えた内容となっています。"
     ],
     "viewCount": 456554,
-    "publishedAt": "2022-01-05T09:00:13Z"
+    "publishedAt": "2022-01-05T09:00:13Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -6604,7 +6705,8 @@
       "初級者が陥りやすい学習の落とし穴を指摘しつつ、基礎から応用への道筋を示します。"
     ],
     "viewCount": 427222,
-    "publishedAt": "2024-04-24T11:00:20Z"
+    "publishedAt": "2024-04-24T11:00:20Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -6665,7 +6767,8 @@
       "入門者向けに設計されており、基礎知識の習得から一歩進むための構成です。"
     ],
     "viewCount": 404912,
-    "publishedAt": "2024-01-22T10:00:40Z"
+    "publishedAt": "2024-01-22T10:00:40Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "prog",
@@ -6725,7 +6828,8 @@
       "一貫性のある解説により、プログラミングの構造を論理的に理解できる内容です。"
     ],
     "viewCount": 382913,
-    "publishedAt": "2023-11-11T10:00:31Z"
+    "publishedAt": "2023-11-11T10:00:31Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "prog",
@@ -6787,7 +6891,8 @@
       "初心者から中級者へのステップアップを見据え、実用的なWebアプリ制作の工程を具体的に網羅したコンテンツです。"
     ],
     "viewCount": 292330,
-    "publishedAt": "2021-08-22T07:05:19Z"
+    "publishedAt": "2021-08-22T07:05:19Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "data",
@@ -6848,7 +6953,8 @@
       "Power BIの基本機能を網羅しており、基礎知識を段階的に積み上げたい層に適しています。"
     ],
     "viewCount": 230401,
-    "publishedAt": "2022-01-01T11:23:46Z"
+    "publishedAt": "2022-01-01T11:23:46Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "shikaku",
@@ -6908,7 +7014,8 @@
       "年度入試を見据えた最新の改正内容や重要事項を網羅した構成です。"
     ],
     "viewCount": 182563,
-    "publishedAt": "2026-03-23T10:33:46Z"
+    "publishedAt": "2026-03-23T10:33:46Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -6969,7 +7076,8 @@
       "PowerPointの機能を一つずつ丁寧に紐解くため、着実に習熟できます。"
     ],
     "viewCount": 171642,
-    "publishedAt": "2022-09-10T08:39:19Z"
+    "publishedAt": "2022-09-10T08:39:19Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -7028,7 +7136,8 @@
       "生成AIの特性を理解しながら、自身のワークフローに組み込む手順が示されています。"
     ],
     "viewCount": 169656,
-    "publishedAt": "2026-04-11T09:00:41Z"
+    "publishedAt": "2026-04-11T09:00:41Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "shikaku",
@@ -7088,7 +7197,8 @@
       "初学者向けに用語の定義を丁寧に紐解きながら進むため、着実に理解を深められます。"
     ],
     "viewCount": 169171,
-    "publishedAt": "2025-11-17T09:00:24Z"
+    "publishedAt": "2025-11-17T09:00:24Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "data",
@@ -7149,7 +7259,8 @@
       "基礎的な構文から順を追って丁寧に構成されており、Pandasの基本機能を体系的に把握できます。"
     ],
     "viewCount": 165246,
-    "publishedAt": "2021-08-09T01:00:04Z"
+    "publishedAt": "2021-08-09T01:00:04Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -7208,7 +7319,8 @@
       "初級者向けに構成されており、具体的な操作例を通じて機能の特性を学べます。"
     ],
     "viewCount": 145695,
-    "publishedAt": "2026-02-15T08:11:23Z"
+    "publishedAt": "2026-02-15T08:11:23Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "data",
@@ -7269,7 +7381,8 @@
       "初学者向けの内容として、ツール固有の機能を整理して提示する構成です。"
     ],
     "viewCount": 127585,
-    "publishedAt": "2021-10-22T10:00:36Z"
+    "publishedAt": "2021-10-22T10:00:36Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -7329,7 +7442,8 @@
       "生成AIをプレゼン準備に組み込む際の具体的な操作感や変化を順序立てて紹介。"
     ],
     "viewCount": 121115,
-    "publishedAt": "2025-12-02T10:00:14Z"
+    "publishedAt": "2025-12-02T10:00:14Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -7390,7 +7504,8 @@
       "実務で活用しやすい操作手順が整理されており、基礎から順序立てて学べます。"
     ],
     "viewCount": 111567,
-    "publishedAt": "2025-09-06T11:00:02Z"
+    "publishedAt": "2025-09-06T11:00:02Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "data",
@@ -7449,7 +7564,8 @@
       "初心者が最初に取り組むべきアルゴリズムや実装手順を体系的に整理しています。"
     ],
     "viewCount": 98522,
-    "publishedAt": "2022-02-26T08:43:56Z"
+    "publishedAt": "2022-02-26T08:43:56Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -7509,7 +7625,8 @@
       "生成AIをプレゼン準備に取り入れる際の具体的な操作手順を順序立てて学べます。"
     ],
     "viewCount": 98280,
-    "publishedAt": "2025-10-29T21:00:52Z"
+    "publishedAt": "2025-10-29T21:00:52Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -7568,7 +7685,8 @@
       "最新のAIツールを実務に取り入れるための具体的な手順が体系的に示されています。"
     ],
     "viewCount": 83827,
-    "publishedAt": "2026-03-07T09:01:18Z"
+    "publishedAt": "2026-03-07T09:01:18Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -7627,7 +7745,8 @@
       "Claudeの特性を活かした複数の手法を紹介しており、実務への応用が検討できます。"
     ],
     "viewCount": 74637,
-    "publishedAt": "2026-03-20T09:00:22Z"
+    "publishedAt": "2026-03-20T09:00:22Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "data",
@@ -7686,7 +7805,8 @@
       "基礎知識の定着と応用への橋渡しを意識した、学習過程を支える構成が特徴です。"
     ],
     "viewCount": 72880,
-    "publishedAt": "2023-12-30T10:00:19Z"
+    "publishedAt": "2023-12-30T10:00:19Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -7746,7 +7866,8 @@
       "専門用語を噛み砕いて説明しており、最新技術の全体像を把握するのに適した構成です。"
     ],
     "viewCount": 52194,
-    "publishedAt": "2025-01-28T11:00:48Z"
+    "publishedAt": "2025-01-28T11:00:48Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -7807,7 +7928,8 @@
       "初心者が最初に着手すべき機能を整理しており、基礎を体系的に学べます。"
     ],
     "viewCount": 46734,
-    "publishedAt": "2026-01-01T03:02:35Z"
+    "publishedAt": "2026-01-01T03:02:35Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "marke",
@@ -7867,7 +7989,8 @@
       "インスタグラムのフォロワー増加に向けた戦略を段階的に学ぶことができるコンテンツです。"
     ],
     "viewCount": 33004,
-    "publishedAt": "2025-06-21T10:01:16Z"
+    "publishedAt": "2025-06-21T10:01:16Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "shikaku",
@@ -7926,7 +8049,8 @@
       "AI分野の基礎知識を網羅しつつ、資格取得への道筋を論理的に導き出します。"
     ],
     "viewCount": 28708,
-    "publishedAt": "2024-01-08T10:00:43Z"
+    "publishedAt": "2024-01-08T10:00:43Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -7985,7 +8109,8 @@
       "操作手順が視覚的に整理されているため、初心者でも迷わず操作を確認できます。"
     ],
     "viewCount": 26784,
-    "publishedAt": "2024-05-11T10:43:05Z"
+    "publishedAt": "2024-05-11T10:43:05Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -8044,7 +8169,8 @@
       "初心者向けに設計されており、アプリの基本操作を段階的に習得できる内容です。"
     ],
     "viewCount": 18216,
-    "publishedAt": "2025-04-19T09:01:14Z"
+    "publishedAt": "2025-04-19T09:01:14Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -8103,7 +8229,8 @@
       "単なるチャット操作に留まらず、自律的にタスクを遂行させるための設計思想を学べる内容です。"
     ],
     "viewCount": 16585,
-    "publishedAt": "2026-02-16T09:00:38Z"
+    "publishedAt": "2026-02-16T09:00:38Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -8164,7 +8291,8 @@
       "資料作成の第一歩として必要な要素が整理されているため、基礎を固めたい方に適したコンテンツです。"
     ],
     "viewCount": 12546,
-    "publishedAt": "2024-04-13T09:00:09Z"
+    "publishedAt": "2024-04-13T09:00:09Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "marke",
@@ -8224,7 +8352,8 @@
       "SEOの基本構造から具体的な対策までを一貫して学べる構成となっています。"
     ],
     "viewCount": 10481,
-    "publishedAt": "2024-12-01T11:00:44Z"
+    "publishedAt": "2024-12-01T11:00:44Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -8285,7 +8414,8 @@
       "初級者向けの内容ながら、論理的な伝達力を高めるための要点を具体的に網羅しています。"
     ],
     "viewCount": 1621057,
-    "publishedAt": "2023-08-23T10:30:07Z"
+    "publishedAt": "2023-08-23T10:30:07Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -8345,7 +8475,8 @@
       "初級者でも実生活に取り入れやすい語彙の構成で、基礎的な会話力を養えます。"
     ],
     "viewCount": 1222242,
-    "publishedAt": "2024-10-11T10:30:18Z"
+    "publishedAt": "2024-10-11T10:30:18Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -8405,7 +8536,8 @@
       "技術的なスキルセットに焦点を当て、体系的なステップで英会話へ導く構成。"
     ],
     "viewCount": 1077201,
-    "publishedAt": "2024-02-28T11:00:19Z"
+    "publishedAt": "2024-02-28T11:00:19Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -8465,7 +8597,8 @@
       "初級者向けの内容でありながら、多言語話者の知見による効率的な解説が特徴です。"
     ],
     "viewCount": 949305,
-    "publishedAt": "2024-12-28T03:47:17Z"
+    "publishedAt": "2024-12-28T03:47:17Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -8526,7 +8659,8 @@
       "基礎的な操作から応用への橋渡しを意識した構成で、実用性を追求しています。"
     ],
     "viewCount": 909066,
-    "publishedAt": "2025-11-07T10:00:23Z"
+    "publishedAt": "2025-11-07T10:00:23Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -8586,7 +8720,8 @@
       "英語初級者が継続しやすいよう、実用的なツールの紹介も含まれる内容。"
     ],
     "viewCount": 795790,
-    "publishedAt": "2025-04-20T03:00:47Z"
+    "publishedAt": "2025-04-20T03:00:47Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -8646,7 +8781,8 @@
       "初級者が自身の現在の立ち位置を確認しながら取り組める構成のコンテンツです。"
     ],
     "viewCount": 753583,
-    "publishedAt": "2025-09-02T10:01:19Z"
+    "publishedAt": "2025-09-02T10:01:19Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -8706,7 +8842,8 @@
       "中小企業の現場でも取り入れやすい実用的なワークフローを体系的に学べる内容です。"
     ],
     "viewCount": 723053,
-    "publishedAt": "2025-06-15T11:15:09Z"
+    "publishedAt": "2025-06-15T11:15:09Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -8766,7 +8903,8 @@
       "初級者が自身の現在地を確認しながら取り組める、実用的な学習ルートを提示します。"
     ],
     "viewCount": 601029,
-    "publishedAt": "2025-04-20T10:01:08Z"
+    "publishedAt": "2025-04-20T10:01:08Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -8825,7 +8963,8 @@
       "初心者が陥りやすい誤解を防ぐための基礎知識を体系的に学べる内容です。"
     ],
     "viewCount": 533171,
-    "publishedAt": "2026-04-06T09:30:07Z"
+    "publishedAt": "2026-04-06T09:30:07Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "shikaku",
@@ -8885,7 +9024,8 @@
       "基礎知識から専門用語までを簡潔にまとめた構成で、短時間での確認に適しています。"
     ],
     "viewCount": 331357,
-    "publishedAt": "2025-08-12T09:01:37Z"
+    "publishedAt": "2025-08-12T09:01:37Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -8946,7 +9086,8 @@
       "画面の動きと解説が同期しており、操作手順を具体的に把握できます。"
     ],
     "viewCount": 310453,
-    "publishedAt": "2023-03-11T01:00:33Z"
+    "publishedAt": "2023-03-11T01:00:33Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "shikaku",
@@ -9006,7 +9147,8 @@
       "年度の試験を見据え、近年の傾向に合わせた実戦的な知識の定着を促す構成です。"
     ],
     "viewCount": 235415,
-    "publishedAt": "2025-06-29T12:15:12Z"
+    "publishedAt": "2025-06-29T12:15:12Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -9065,7 +9207,8 @@
       "2025年の最新動向を踏まえた構成となっており、技術への抵抗感を抑えつつ学べます。"
     ],
     "viewCount": 214651,
-    "publishedAt": "2025-08-23T09:00:48Z"
+    "publishedAt": "2025-08-23T09:00:48Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -9124,7 +9267,8 @@
       "現状のレベルに合わせた具体的な学習項目を提示しており、迷いなく取り組めます。"
     ],
     "viewCount": 212852,
-    "publishedAt": "2025-05-05T09:00:25Z"
+    "publishedAt": "2025-05-05T09:00:25Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -9184,7 +9328,8 @@
       "基礎的な操作から段階を追って進むため、実務への導入プロセスを具体的に把握できます。"
     ],
     "viewCount": 204898,
-    "publishedAt": "2025-05-18T11:00:54Z"
+    "publishedAt": "2025-05-18T11:00:54Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "shikaku",
@@ -9244,7 +9389,8 @@
       "基礎知識から実技へのつなぎ方など、合格に必要な要素を体系的にまとめています。"
     ],
     "viewCount": 199321,
-    "publishedAt": "2024-04-27T13:33:26Z"
+    "publishedAt": "2024-04-27T13:33:26Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -9303,7 +9449,8 @@
       "AIとの対話を通じて、基礎から応用まで段階的に学習を進める構成が特徴です。"
     ],
     "viewCount": 155655,
-    "publishedAt": "2023-12-24T09:00:36Z"
+    "publishedAt": "2023-12-24T09:00:36Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "shikaku",
@@ -9363,7 +9510,8 @@
       "初学者向けに構成された講義内容により、学習の初期段階で土台を固められます。"
     ],
     "viewCount": 137339,
-    "publishedAt": "2023-01-18T09:00:33Z"
+    "publishedAt": "2023-01-18T09:00:33Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -9424,7 +9572,8 @@
       "年版として更新されており、現在の仕様に即した内容で学べます。"
     ],
     "viewCount": 114381,
-    "publishedAt": "2025-01-13T09:00:58Z"
+    "publishedAt": "2025-01-13T09:00:58Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -9486,7 +9635,8 @@
       "初学者向けの構成で、After Effectsの基本機能を段階的に習得できます。"
     ],
     "viewCount": 104765,
-    "publishedAt": "2024-04-25T07:58:50Z"
+    "publishedAt": "2024-04-25T07:58:50Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "shikaku",
@@ -9545,7 +9695,8 @@
       "資格取得に向けた学習計画を立てる際、どの項目を重点的に確認すべきかが明確になります。"
     ],
     "viewCount": 86088,
-    "publishedAt": "2023-10-15T08:14:25Z"
+    "publishedAt": "2023-10-15T08:14:25Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "biz",
@@ -9606,7 +9757,8 @@
       "転職活動を見据えたPCスキルの習得に向けた、基礎的な知識を網羅した内容です。"
     ],
     "viewCount": 75908,
-    "publishedAt": "2023-01-11T08:30:08Z"
+    "publishedAt": "2023-01-11T08:30:08Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "marke",
@@ -9666,7 +9818,8 @@
       "SEOの基本原則を段階的に理解したい初級者向けのコンテンツです。"
     ],
     "viewCount": 75719,
-    "publishedAt": "2022-12-10T10:00:10Z"
+    "publishedAt": "2022-12-10T10:00:10Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "data",
@@ -9727,7 +9880,8 @@
       "10分という構成で、基礎知識を整理しながら視覚化の役割を具体的に示します。"
     ],
     "viewCount": 61364,
-    "publishedAt": "2021-12-07T07:36:37Z"
+    "publishedAt": "2021-12-07T07:36:37Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -9786,7 +9940,8 @@
       "TOEIC特有の傾向を踏まえた項目別の学習配分を体系的に解説する内容です。"
     ],
     "viewCount": 49562,
-    "publishedAt": "2025-12-03T11:00:20Z"
+    "publishedAt": "2025-12-03T11:00:20Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -9847,7 +10002,8 @@
       "新機能の特性を具体的に把握したい初級者が、機能を比較しながら学べる内容です。"
     ],
     "viewCount": 46769,
-    "publishedAt": "2025-09-22T06:00:31Z"
+    "publishedAt": "2025-09-22T06:00:31Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -9907,7 +10063,8 @@
       "技術的な背景を平易な言葉に置き換え、構造を捉えやすく整理した内容です。"
     ],
     "viewCount": 43245,
-    "publishedAt": "2025-01-31T11:01:13Z"
+    "publishedAt": "2025-01-31T11:01:13Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -9967,7 +10124,8 @@
       "ツールの組み合わせによる業務効率化の手順が、体系的に整理されて解説されています。"
     ],
     "viewCount": 41235,
-    "publishedAt": "2025-10-25T11:01:52Z"
+    "publishedAt": "2025-10-25T11:01:52Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "video",
@@ -10028,7 +10186,8 @@
       "実技に即した具体的な操作手順が示されているため、ソフトの機能を段階的に学べます。"
     ],
     "viewCount": 32605,
-    "publishedAt": "2026-01-02T09:00:50Z"
+    "publishedAt": "2026-01-02T09:00:50Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -10088,7 +10247,8 @@
       "実務の最前線を知る視点から、効率的に基礎を固めるための具体的な学習順序を提示しています。"
     ],
     "viewCount": 31548,
-    "publishedAt": "2026-01-16T10:30:39Z"
+    "publishedAt": "2026-01-16T10:30:39Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -10148,7 +10308,8 @@
       "MarkdownやXMLなどの記述規則を理解し、指示の精度を高める助けとなります。"
     ],
     "viewCount": 29639,
-    "publishedAt": "2025-07-18T11:31:15Z"
+    "publishedAt": "2025-07-18T11:31:15Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "english",
@@ -10207,7 +10368,8 @@
       "学習の優先順位を整理しながら、自分の現在のレベルに合わせて最適な一本の動画を選べる内容です。"
     ],
     "viewCount": 29511,
-    "publishedAt": "2026-01-24T09:30:26Z"
+    "publishedAt": "2026-01-24T09:30:26Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "data",
@@ -10268,7 +10430,8 @@
       "基礎知識を補いつつ、実際の業務に即した具体的な処理手順を確認できます。"
     ],
     "viewCount": 27464,
-    "publishedAt": "2025-09-06T10:01:31Z"
+    "publishedAt": "2025-09-06T10:01:31Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "prog",
@@ -10330,7 +10493,8 @@
       "学習の順序やフレームワークの選択肢を網羅的に解説する構成です。"
     ],
     "viewCount": 22577,
-    "publishedAt": "2023-12-17T15:00:46Z"
+    "publishedAt": "2023-12-17T15:00:46Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -10389,7 +10553,8 @@
       "複雑な機能を削ぎ落とし、まず触れるべき要素に焦点を当てた構成です。"
     ],
     "viewCount": 20645,
-    "publishedAt": "2025-03-29T11:00:15Z"
+    "publishedAt": "2025-03-29T11:00:15Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "data",
@@ -10450,7 +10615,8 @@
       "初心者向けの内容ながら、操作手順を具体的に追える構成のコンテンツ。"
     ],
     "viewCount": 19372,
-    "publishedAt": "2026-05-03T10:01:18Z"
+    "publishedAt": "2026-05-03T10:01:18Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "marke",
@@ -10510,7 +10676,8 @@
       "基礎から応用への繋がりを意識した構成で、体系的な知識習得に適したコンテンツです。"
     ],
     "viewCount": 19333,
-    "publishedAt": "2023-04-06T08:23:07Z"
+    "publishedAt": "2023-04-06T08:23:07Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -10569,7 +10736,8 @@
       "抽象的な概念を具体例に置き換えて解説するため、全体像を把握しやすい構成です。"
     ],
     "viewCount": 18318,
-    "publishedAt": "2024-04-17T08:00:12Z"
+    "publishedAt": "2024-04-17T08:00:12Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -10629,7 +10797,8 @@
       "AIを活用してドキュメント作成の工数を削減したい層に向けた、実践的な内容です。"
     ],
     "viewCount": 18168,
-    "publishedAt": "2025-09-17T09:15:01Z"
+    "publishedAt": "2025-09-17T09:15:01Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "data",
@@ -10690,7 +10859,8 @@
       "実務における分析工程の効率化を見据えた、中級者向けの技術的な内容です。"
     ],
     "viewCount": 17652,
-    "publishedAt": "2026-01-29T11:00:26Z"
+    "publishedAt": "2026-01-29T11:00:26Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "data",
@@ -10751,7 +10921,8 @@
       "10分という短時間で全体像を把握でき、次への学習ステップが明確になります。"
     ],
     "viewCount": 16494,
-    "publishedAt": "2025-02-15T11:30:02Z"
+    "publishedAt": "2025-02-15T11:30:02Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "marke",
@@ -10811,7 +10982,8 @@
       "未経験から参入する際のステップを具体化しており、実務への橋渡しを助けます。"
     ],
     "viewCount": 14542,
-    "publishedAt": "2025-05-27T11:00:16Z"
+    "publishedAt": "2025-05-27T11:00:16Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "marke",
@@ -10871,7 +11043,8 @@
       "初心者が次に何を学ぶべきか迷わないよう、必要な要素を論理的に組み立てています。"
     ],
     "viewCount": 13763,
-    "publishedAt": "2024-05-17T11:00:18Z"
+    "publishedAt": "2024-05-17T11:00:18Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "data",
@@ -10930,7 +11103,8 @@
       "初学者向けの内容として、難解な数式よりも意味の理解に重点を置いた解説です。"
     ],
     "viewCount": 10565,
-    "publishedAt": "2022-11-20T21:30:02Z"
+    "publishedAt": "2022-11-20T21:30:02Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -10989,7 +11163,8 @@
       "AI検定に向けた基礎知識を体系的に学べる構成となっています。"
     ],
     "viewCount": 10502,
-    "publishedAt": "2025-01-02T13:49:49Z"
+    "publishedAt": "2025-01-02T13:49:49Z",
+    "scoreStatus": "confirmed"
   },
   {
     "genre": "ai",
@@ -11047,7 +11222,7 @@
       "初心者がまず押さえるべき基礎知識を、一つずつ丁寧に紐解く構成です。",
       "機能の特性を正しく理解し、実用的な活用方法を見極めるための助けとなります。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 246150,
     "publishedAt": "2025-12-18T11:21:32Z"
   },
@@ -11109,7 +11284,7 @@
       "専門用語を抑えた丁寧な解説により、投資の仕組みを体系的に学べます。",
       "年の動向を見据え、初心者が最初の一歩を踏み出すための構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 463426,
     "publishedAt": "2026-01-02T08:00:33Z"
   },
@@ -11170,7 +11345,7 @@
       "Canvaの主要なツールや素材の扱い方を、工程ごとに順序立てて解説します。",
       "デザインの基礎知識を補いつつ、具体的な操作画面を見ながら学習できる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 308318,
     "publishedAt": "2025-06-10T10:19:44Z"
   },
@@ -11230,7 +11405,7 @@
       "新機能の特性を踏まえ、実務への取り入れ方を具体例を交えて提示します。",
       "基礎から応用まで段階を追って構成されており、機能の全体像を把握できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 105794,
     "publishedAt": "2026-03-14T10:15:05Z"
   },
@@ -11290,7 +11465,7 @@
       "具体的な機能解説が含まれており、ツールの特性を体系的に把握できる構成です。",
       "初級者向けの内容ながら、実用的な機能を多角的に捉えた充実したコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 82821,
     "publishedAt": "2026-03-11T11:15:03Z"
   },
@@ -11350,7 +11525,7 @@
       "初学者向けに設計されており、機能の基礎知識を整理しながら段階的に学べる構成です。",
       "具体的な操作手順を丁寧に紐解くことで、ツールの特性を正しく理解する助けとなります。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 82352,
     "publishedAt": "2025-07-12T11:01:39Z"
   },
@@ -11411,7 +11586,7 @@
       "日本語特有の癖を排除するための具体的な技術を、実例を交えて提示。",
       "中級者が陥りやすい誤解を解きながら、リズムや強弱の法則を体系的に伝授。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 1051774,
     "publishedAt": "2023-11-14T11:00:49Z"
   },
@@ -11473,7 +11648,7 @@
       "投資未経験者が直面する口座開設や銘柄選びの疑問に具体的に答えています。",
       "複雑な制度を整理し、自身の資産形成に向けた最初の一歩を支える内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 791931,
     "publishedAt": "2024-01-02T10:00:08Z"
   },
@@ -11535,7 +11710,7 @@
       "複雑な制度内容を要素ごとに分解し、投資の基礎知識を体系的に解説しています。",
       "資産運用の基本概念と具体的な活用方法を、初心者向けに平易な言葉でまとめています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 643326,
     "publishedAt": "2023-07-08T10:00:31Z"
   },
@@ -11597,7 +11772,7 @@
       "口座開設の手順や銘柄選びの考え方など、実務に即した内容が網羅されています。",
       "投資の第一歩を踏み出す際に必要な知識を、一貫した流れで整理して提示する構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 488550,
     "publishedAt": "2025-01-02T08:00:17Z"
   },
@@ -11659,7 +11834,7 @@
       "視覚的な訴求力を意識したダッシュボードの構成方法が具体的に解説されています。",
       "実用的なデザイン要素を取り入れながら、段階を追って制作を進められる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 444374,
     "publishedAt": "2023-08-13T09:00:24Z"
   },
@@ -11721,7 +11896,7 @@
       "猫やアニメといった多様な作風に応じた最適な生成手法を体系的に解説する内容です。",
       "画像生成から動的な映像制作まで、工程ごとに必要なツールを整理して紹介します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 434190,
     "publishedAt": "2025-05-20T11:21:06Z"
   },
@@ -11781,7 +11956,7 @@
       "初心者向けに設計されており、機能の基礎知識を順序立てて解説しています。",
       "具体的な操作手順を丁寧に追うことで、ツールの特性を正しく把握できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 310972,
     "publishedAt": "2026-01-17T07:54:11Z"
   },
@@ -11844,7 +12019,7 @@
       "アカウント作成から投稿方法まで、アプリの仕様に沿った手順が整理されています。",
       "SNSの基礎知識を習得したい層に向けた、実用的な操作ガイドとして構成されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 255605,
     "publishedAt": "2023-08-03T11:00:13Z"
   },
@@ -11906,7 +12081,7 @@
       "高度なプロンプト設計やパラメータ調整など、上級者向けの技術要素を網羅。",
       "画像生成における高度な制御手法を学ぶための実践的なコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 175623,
     "publishedAt": "2025-12-01T09:00:43Z"
   },
@@ -11968,7 +12143,7 @@
       "具体的な業務フローに沿った解説が含まれており、導入初期の検討材料として有用です。",
       "高度な機能までカバーする内容であり、実用的なスキルを習得したい層に適したコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 133641,
     "publishedAt": "2025-11-01T10:00:11Z"
   },
@@ -12028,7 +12203,7 @@
       "プロンプト集や資料などの付録が含まれており、実践的な学習をサポートする構成です。",
       "基礎知識を積み上げながら、具体的なアウトプットへ繋げる手順が丁寧に示されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 131161,
     "publishedAt": "2025-08-15T10:40:32Z"
   },
@@ -12088,7 +12263,7 @@
       "初級者向けに推奨教材を具体的に選定しており、自身の現在地に応じた学習法が選択可能です。",
       "単なる手法の紹介に留まらず、スコアアップに向けた具体的な学習工程を網羅したコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 91742,
     "publishedAt": "2026-04-28T09:31:55Z"
   },
@@ -12148,7 +12323,7 @@
       "ChatGPTとの機能的な違いや特徴を比較し、基礎知識を整理する構成です。",
       "シニア層も理解しやすい平易な語り口で、実用的な活用法を順序立てて解説します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 53421,
     "publishedAt": "2026-04-04T06:30:12Z"
   },
@@ -12209,7 +12384,7 @@
       "基礎から応用へのステップが整理されており、学習の優先順位が明確に示されています。",
       "英会話の基礎を土台に置きつつ、試験対策に必要な要素を段階的に網羅した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 41357,
     "publishedAt": "2025-09-17T08:29:51Z"
   },
@@ -12271,7 +12446,7 @@
       "最新のインターフェースに基づいた解説で、ツールの仕様を正確に把握できます。",
       "画像生成AIの基礎を学びたい層に向けた、実用的な手順をまとめたコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 38676,
     "publishedAt": "2025-02-28T09:52:18Z"
   },
@@ -12331,7 +12506,7 @@
       "初心者がまず押さえるべき機能を整理しており、スムーズに操作に慣れる構成です。",
       "具体的な操作手順が丁寧に解説されているため、基礎知識を積み上げたい層に適したコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 31880,
     "publishedAt": "2026-04-10T09:00:00Z"
   },
@@ -12392,7 +12567,7 @@
       "無料版の機能を前提とした解説により、導入直後の戸惑いを解消します。",
       "最新バージョンに対応した操作手順を網羅しており、基礎を順序立てて習得できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 22866,
     "publishedAt": "2025-10-30T10:45:07Z"
   },
@@ -12452,7 +12627,7 @@
       "プロンプトの設計や関数との組み合わせなど、実務での活用シーンに即した具体例が豊富です。",
       "AIをシート内で直接操作する環境を構築し、業務効率化へ繋げるための工程を網羅的に学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 18137,
     "publishedAt": "2026-05-09T11:01:06Z"
   },
@@ -12514,7 +12689,7 @@
       "単なる機能紹介に留まらず、実務で想定されるワークフローを意識した構成です。",
       "Gitの基本概念を基礎から丁寧に積み上げるため、学習の初期段階に適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 14807,
     "publishedAt": "2025-05-03T02:00:27Z"
   },
@@ -12576,7 +12751,7 @@
       "専門用語を噛み砕きながら解説するため、基礎知識から順に理解を深められます。",
       "毎月の積立金額や具体的な運用方法など、実務に近い疑問点に焦点を当てています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 1163689,
     "publishedAt": "2023-12-20T13:05:34Z"
   },
@@ -12639,7 +12814,7 @@
       "高配当株への関心に合わせ、ETFを選択する際の判断基準が示されています。",
       "アニメーションを用いた視覚的な解説により、初心者が基礎を把握しやすい構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 1048751,
     "publishedAt": "2024-05-16T22:00:23Z"
   },
@@ -12702,7 +12877,7 @@
       "具体的な運用ルールや拠出金の仕組みなど、実務に即した知識を網羅的に解説。",
       "アニメーションを用いた視覚的な構成により、複雑な制度内容を平易に理解できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 414680,
     "publishedAt": "2024-12-25T22:00:30Z"
   },
@@ -12763,7 +12938,7 @@
       "カット編集から基本の工程までを網羅しており、ソフトの全体像を把握するのに適しています。",
       "DaVinci Resolveの操作体系を段階的に解説するため、最初の学習用コンテンツとして有用です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 372389,
     "publishedAt": "2022-10-30T11:45:07Z"
   },
@@ -12823,7 +12998,7 @@
       "プロンプトの構造や具体的な活用術など、実用的な基礎知識が網羅されています。",
       "Geminiの特性を理解し、より意図に近い出力を得るための技術を学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 286265,
     "publishedAt": "2025-03-03T09:00:21Z"
   },
@@ -12885,7 +13060,7 @@
       "Copilotの主要な機能を5つに絞り込み、具体的な活用法を提示します。",
       "年のトレンドを踏まえつつ、初級者がまず押さえるべき点に焦点を当てた内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 282991,
     "publishedAt": "2025-01-19T11:00:10Z"
   },
@@ -12946,7 +13121,7 @@
       "自動化を見据えた基礎知識から、開発への道筋を段階的に解説する構成です。",
       "シリーズの導入として、技術的な概念を整理しながら学べる内容となっています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 236214,
     "publishedAt": "2025-04-27T07:00:37Z"
   },
@@ -13009,7 +13184,7 @@
       "After Effectsを用いた具体的なテクニックを、基礎から段階的に学べる構成です。",
       "ボカロMV特有の演出やエフェクトの作り方について、実務的な知識が得られます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 235214,
     "publishedAt": "2025-07-19T10:01:36Z"
   },
@@ -13070,7 +13245,7 @@
       "複雑な構文を噛み砕いて解説しており、プログラミング初学者向けの設計です。",
       "一連の流れを追うことで、言語の全体像を把握しながら学習を進められます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 229094,
     "publishedAt": "2025-01-31T10:00:06Z"
   },
@@ -13130,7 +13305,7 @@
       "複雑な仕様を平易な言葉で分解しており、初心者が操作感を掴むのに適した構成です。",
       "具体的な活用術を順序立てて解説しているため、実用的な知識を体系的に学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 209614,
     "publishedAt": "2025-12-06T11:01:13Z"
   },
@@ -13191,7 +13366,7 @@
       "初心者がまず触れるべき工程を15分という短時間で効率よく解説する内容です。",
       "複雑な編集工程を整理して提示しており、基礎を体系的に把握できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 190037,
     "publishedAt": "2025-09-08T09:00:47Z"
   },
@@ -13254,7 +13429,7 @@
       "「なんとなく」の投資を避け、仕組みを正しく理解するための構成です。",
       "オルカンの特性や運用のポイントを網羅し、初心者の理解を助けます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 159669,
     "publishedAt": "2025-06-24T11:01:20Z"
   },
@@ -13317,7 +13492,7 @@
       "基本的な操作手順を体系的に網羅しており、映像制作の基礎を段階的に学べる構成となっています。",
       "特定の演出手法に焦点を当てたチュートリアルとして、実技への導入に適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 151392,
     "publishedAt": "2023-02-17T07:56:07Z"
   },
@@ -13378,7 +13553,7 @@
       "基礎知識から応用への流れが段階的に設計され、学習の道筋を提示します。",
       "具体的な操作手順とツールの組み合わせに焦点を当てた内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 144668,
     "publishedAt": "2026-03-11T09:22:57Z"
   },
@@ -13440,7 +13615,7 @@
       "AIツールの基礎知識を整理しながら、具体的な活用シーンに合わせた機能解説が充実しています。",
       "Copilotの特性を多角的に捉えたい初級者が、技術の全体像を把握するのに適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 127312,
     "publishedAt": "2026-03-24T11:01:19Z"
   },
@@ -13502,7 +13677,7 @@
       "Nano-bananaの具体的な操作方法と、応用可能な活用例を10選で紹介。",
       "画像生成AIの仕組みを理解しながら、実用的な機能を順序立てて学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 112610,
     "publishedAt": "2025-09-09T10:15:57Z"
   },
@@ -13562,7 +13737,7 @@
       "Geminiの基本操作から具体的な活用法まで、基礎知識を順序立てて解説します。",
       "専門用語を抑え、高齢者でもスムーズにAIへの第一歩を踏み出せる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 112148,
     "publishedAt": "2025-01-22T11:12:36Z"
   },
@@ -13624,7 +13799,7 @@
       "提供されるプロンプトや資料を活用し、実用的な活用法を学べます。",
       "最新の機能を体系的に整理しており、基礎知識を固めるのに適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 110425,
     "publishedAt": "2026-03-05T10:15:05Z"
   },
@@ -13685,7 +13860,7 @@
       "カット作業やテロップ挿入、音量調整など、実用的な機能を体系的に学べます。",
       "DaVinci Resolveの基本操作を網羅しており、編集の流れを把握するのに適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 107992,
     "publishedAt": "2024-01-14T11:56:07Z"
   },
@@ -13745,7 +13920,7 @@
       "無料で利用可能な機能を整理し、具体的な活用手順を順序立てて提示します。",
       "基礎的な設定から操作方法まで、初学者向けに丁寧に構成された内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 96640,
     "publishedAt": "2025-04-11T09:00:08Z"
   },
@@ -13806,7 +13981,7 @@
       "基本操作から高度な編集技術まで、実用的な機能を体系的に解説する構成です。",
       "年に向けた最新環境での制作フローを具体的に学べる内容となっています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 76325,
     "publishedAt": "2025-12-31T05:00:06Z"
   },
@@ -13866,7 +14041,7 @@
       "最新の機能を体系的に整理しており、配布されるプロンプトも実用的です。",
       "初心者が段階を追って機能を把握できるよう、構成が整ったコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 72517,
     "publishedAt": "2026-01-24T10:34:54Z"
   },
@@ -13928,7 +14103,7 @@
       "複雑な制度内容を整理し、投資初心者がまず向き合うべき基礎知識を体系的にまとめています。",
       "各制度の仕組みと運用方法の違いを対比させることで、自身の目的に合った選択肢を見極められます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 65840,
     "publishedAt": "2023-10-29T06:00:08Z"
   },
@@ -13989,7 +14164,7 @@
       "基礎的な概念から実務で必要となる項目まで幅広く網羅した構成です。",
       "SEOの視点を取り入れながら、データの見方を段階を追って解説しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 63541,
     "publishedAt": "2023-06-29T11:00:33Z"
   },
@@ -14050,7 +14225,7 @@
       "AIによる文書作成支援に焦点を当て、非エンジニア向けの具体的な操作方法を紹介する内容です。",
       "SEOの視点を取り入れつつ、ツールを実務のワークフローに組み込むための基礎的な動きを網羅しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 58847,
     "publishedAt": "2025-04-05T11:39:00Z"
   },
@@ -14110,7 +14285,7 @@
       "最新動向を踏まえた機能解説により、実務への取り入れ方を具体的に提示します。",
       "生成AIの基礎から応用までを体系的に整理し、操作の勘所を丁寧に伝えています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 48865,
     "publishedAt": "2026-06-01T11:00:00Z"
   },
@@ -14171,7 +14346,7 @@
       "合格に必要な戦略を段階的に解説しており、学習計画の立て方に活用できます。",
       "宅建試験特有のポイントを押さえながら、初学者向けの進め方を体系的に解説します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 44500,
     "publishedAt": "2026-04-25T10:00:53Z"
   },
@@ -14232,7 +14407,7 @@
       "複数のAIツールを比較しながら、無駄な工程を省くための具体的なワークフローをステップごとに提示する構成です。",
       "最新のAI技術を実務にどう取り入れるべきか、基礎から応用への流れを順序立てて整理した内容となっています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 40127,
     "publishedAt": "2026-02-22T10:01:00Z"
   },
@@ -14292,7 +14467,7 @@
       "Claude CodeとCoworkの両方の活用法を網羅的に扱う構成が特徴です。",
       "ツールの導入手順を具体的に追うことで、初期設定の迷いを解消する設計です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 32833,
     "publishedAt": "2026-04-13T11:00:56Z"
   },
@@ -14353,7 +14528,7 @@
       "Adobe製品以外の選択肢として検討している層に向けた、実用的なワークフローを提示する内容です。",
       "YouTubeのサムネイルに必要な要素を整理し、デザインの基礎から順序立てて解説しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 16659,
     "publishedAt": "2025-11-16T10:00:06Z"
   },
@@ -14413,7 +14588,7 @@
       "無料版の機能を十分に引き出すための具体的な手順が順序立てて構成されています。",
       "初心者向けに設計されており、基礎知識がない状態からでも内容を追える内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 10371,
     "publishedAt": "2026-01-04T00:01:02Z"
   },
@@ -14474,7 +14649,7 @@
       "素材の配置やレイアウトなど、実務に即した操作手順を順序立てて説明します。",
       "無料ソフトを活用してYouTubeのデザインスキルを習得したい層に適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 10241,
     "publishedAt": "2025-12-05T11:34:50Z"
   },
@@ -14535,7 +14710,7 @@
       "個々の音の出し方や口の動きに焦点を当てた解説で、正確な発音を追求できます。",
       "初級者向けの内容ながら、実用的な発音技術を段階的に習得できる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 3194135,
     "publishedAt": "2023-01-14T10:00:22Z"
   },
@@ -14598,7 +14773,7 @@
       "高配当株への関心に応じた具体的な運用手法の違いに焦点を当てて解説します。",
       "アニメーションを用いた視覚的な構成により、基礎知識を体系的に学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 1639286,
     "publishedAt": "2021-06-13T22:00:15Z"
   },
@@ -14658,7 +14833,7 @@
       "実際のやり取りや音の捉え方を実演で解説しており、具体的な動きが把握できます。",
       "初級者が基礎から取り組めるよう、実用的なアプローチを丁寧に構成した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 1094206,
     "publishedAt": "2021-10-30T09:30:05Z"
   },
@@ -14718,7 +14893,7 @@
       "AIとの対話を通じて、実用的な英会話スキルを習得するための手順を提示します。",
       "単なるツールの紹介にとどまらず、30日間の計画に基づいた学習法を構成しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 792719,
     "publishedAt": "2026-02-24T09:00:14Z"
   },
@@ -14780,7 +14955,7 @@
       "現在の制度と今後の展望を比較しながら、税制改正の影響を多角的に解説します。",
       "投資の基礎知識を補いつつ、制度の変化が個人の資産形成にどう関わるかを提示します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 789963,
     "publishedAt": "2025-09-20T09:00:52Z"
   },
@@ -14841,7 +15016,7 @@
       "日本語と英語の対応関係を明確にし、正しい発音を確認しながら学習できます。",
       "聞き流しにも適した構成となっており、基礎固めのためのコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 476824,
     "publishedAt": "2025-02-21T11:00:02Z"
   },
@@ -14904,7 +15079,7 @@
       "拠出金や非課税枠といったiDeCo特有のルールを基礎から丁寧に紐解きます。",
       "制度の概要と具体的な運用方法について、初心者向けに平易な言葉で構成されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 438115,
     "publishedAt": "2022-12-03T10:00:01Z"
   },
@@ -14965,7 +15140,7 @@
       "短時間の練習で口の動きや音の出し方を意識的に変えるためのコツが具体的に示されています。",
       "英語への苦手意識を和らげながら、正しい発音の基礎を積み上げる構成のコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 373071,
     "publishedAt": "2025-10-07T09:00:24Z"
   },
@@ -15027,7 +15202,7 @@
       "単なる記録に留まらず、支出の傾向を把握するための具体的な書き方を提示します。",
       "家計の現状を可視化する手順が丁寧に構成されており、着実に管理を始められます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 302438,
     "publishedAt": "2021-10-15T10:00:04Z"
   },
@@ -15087,7 +15262,7 @@
       "プロンプトの工夫による出力の変化を提示し、操作の幅を広げる内容です。",
       "AIへの指示の出し方に関する基礎知識を、体系的に整理して解説しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 287459,
     "publishedAt": "2025-11-21T09:01:35Z"
   },
@@ -15149,7 +15324,7 @@
       "コマンドの役割や具体的な操作手順を順序立てて解説する構成です。",
       "基礎概念から実践的な管理手法までを一貫して学べる入門コンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 280594,
     "publishedAt": "2021-07-10T08:00:09Z"
   },
@@ -15211,7 +15386,7 @@
       "実際の操作手順を順序立てて見せることで、Gitの構造を視覚的に理解できます。",
       "分という構成の中で、初学者が必要な要素を重点的に網羅した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 253191,
     "publishedAt": "2021-09-18T23:00:02Z"
   },
@@ -15274,7 +15449,7 @@
       "初心者が陥りやすい典型的なミスを防ぐための注意点を具体的に解説する。",
       "資産運用の第一歩として、リスク管理や基本的な考え方を体系的に学べる内容。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 227022,
     "publishedAt": "2025-05-30T11:00:54Z"
   },
@@ -15336,7 +15511,7 @@
       "コマンド操作の意図を丁寧に紐解きながら、共同開発の流れを体系的に解説します。",
       "個人の練習にとどまらず、組織での運用を見据えた基本操作を順序立てて学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 209343,
     "publishedAt": "2022-10-30T03:06:20Z"
   },
@@ -15399,7 +15574,7 @@
       "制度の全体像を体系的に整理しており、初学者がつまずきやすい箇所を補足。",
       "用語の定義から順序立てて進めるため、講座として落ち着いて学習が進みます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 175018,
     "publishedAt": "2025-09-01T07:00:13Z"
   },
@@ -15461,7 +15636,7 @@
       "非エンジニアの視点に立ち、Gitの概念と実務での活用法を順序立てて解説しています。",
       "開発現場で不可欠なバージョン管理の仕組みを、視覚的に理解できる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 134466,
     "publishedAt": "2025-10-03T10:06:00Z"
   },
@@ -15522,7 +15697,7 @@
       "インフラを含む広範な技術スタックを体系的に捉えるための指針が示されています。",
       "実務で求められるスキルセットを意識した、地に足の着いた学習計画を提示します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 126626,
     "publishedAt": "2024-11-22T10:00:37Z"
   },
@@ -15582,7 +15757,7 @@
       "非エンジニアの視点に立ちつつ、Cowork独自の操作感に焦点を当てて解説します。",
       "実務への取り入れ方を具体的に示すことで、高度な活用法を体系的に学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 125038,
     "publishedAt": "2026-03-21T09:00:10Z"
   },
@@ -15644,7 +15819,7 @@
       "配色やフォントの選び方など、視覚的に整った資料を作るための具体的な手法を提示します。",
       "初心者が陥りやすい情報の詰め込みを防ぎ、意図が伝わりやすい構成への落とし込みを学べる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 114449,
     "publishedAt": "2023-11-18T11:00:39Z"
   },
@@ -15706,7 +15881,7 @@
       "単なるバージョン管理の枠を超え、なぜ非エンジニアにも習熟が必要かを説きます。",
       "基礎的な概念から具体的な操作手順まで、技術的背景を丁寧に解説する内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 107118,
     "publishedAt": "2025-12-02T11:00:25Z"
   },
@@ -15769,7 +15944,7 @@
       "定番の表現から応用的な動きまで、15種類の動きを体系的に解説している。",
       "初級者向けの内容ながら、制作現場で活用できる技術を幅広く網羅した講座。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 105206,
     "publishedAt": "2024-08-13T10:55:27Z"
   },
@@ -15829,7 +16004,7 @@
       "最新機能であるGemini Liveを含む主要な操作手順を網羅的に確認できる構成です。",
       "生成AIへの第一歩として、実際の画面を見ながら操作の流れを把握するのに適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 98973,
     "publishedAt": "2024-11-21T11:00:07Z"
   },
@@ -15891,7 +16066,7 @@
       "実用的なプロンプトの例文を交えながら、業務への取り入れ方を解説します。",
       "生成AIの基礎知識から応用へのステップを順序立てて学べる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 77792,
     "publishedAt": "2025-10-10T08:00:42Z"
   },
@@ -15953,7 +16128,7 @@
       "画像生成を含む最新のAI機能を、初心者にも分かりやすい手順で紹介します。",
       "ツールの設定方法と実用的な活用シーンを網羅した構成が特徴のコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 70558,
     "publishedAt": "2025-12-13T11:00:33Z"
   },
@@ -16013,7 +16188,7 @@
       "環境構築の具体的な操作工程を順を追って解説しており、導入の第一歩を支えます。",
       "ツールの機能的な特徴と実用的な使い方を整理した、基礎知識の習得に適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 68236,
     "publishedAt": "2026-03-25T11:36:22Z"
   },
@@ -16075,7 +16250,7 @@
       "基本設定や投稿手順など、初心者が躓きやすい工程を順序立てて解説。",
       "Instagramの機能を体系的に整理しており、基礎を固めるための資料として有用です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 67861,
     "publishedAt": "2025-09-23T10:00:09Z"
   },
@@ -16138,7 +16313,7 @@
       "技術的な違いを比較しながら、システムが動く仕組みを論理的に紐解きます。",
       "開発着手前に知っておきたい基礎知識を、中級者向けの内容も交えて網羅。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 67822,
     "publishedAt": "2022-03-22T10:00:06Z"
   },
@@ -16201,7 +16376,7 @@
       "実務的な視点を取り入れた解説で、複雑な計算や概念を整理して伝えます。",
       "限られた時間内で特定の分野を深く掘り下げる構成が効率的です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 56361,
     "publishedAt": "2026-04-06T22:32:00Z"
   },
@@ -16264,7 +16439,7 @@
       "解答の解説が音声で流れるため、移動中などの隙間時間にも活用可能です。",
       "級の基礎知識を再確認しながら、2級合格に向けた土台作りを支援します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 54357,
     "publishedAt": "2025-06-20T14:22:27Z"
   },
@@ -16325,7 +16500,7 @@
       "カットやエフェクトなど、編集に必要な基本工程を12分で効率的に学べます。",
       "初心者が最初に触れるべき機能に焦点を当てた、実用的な構成の動画です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 53437,
     "publishedAt": "2025-02-23T23:24:55Z"
   },
@@ -16386,7 +16561,7 @@
       "「わかって合格る」のテキストと連動しており、学習の順序が整理されています。",
       "宅建業の定義や役割など、制度の根幹となる部分を体系的に学べる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 53183,
     "publishedAt": "2026-01-08T09:00:58Z"
   },
@@ -16447,7 +16622,7 @@
       "ダウンロードから初期設定までの工程を網羅しており、環境構築の基礎を学べます。",
       "操作の第一歩として必要な準備事項を正確に把握できる構成のコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 51898,
     "publishedAt": "2024-05-25T11:00:16Z"
   },
@@ -16508,7 +16683,7 @@
       "制作したいものに応じた具体的な進め方と必要な学習時間の目安が整理されています。",
       "基礎から応用への流れを体系的に捉えたい初学者向けの構成となっています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 45769,
     "publishedAt": "2023-06-19T11:00:29Z"
   },
@@ -16569,7 +16744,7 @@
       "クリック率に寄与する配色や構図の法則を、デザインの観点から深掘りします。",
       "高度な技術を求める層に向け、意匠と訴求力の両立を追求する内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 44402,
     "publishedAt": "2024-12-25T09:30:11Z"
   },
@@ -16630,7 +16805,7 @@
       "文書作成に必要な機能に焦点を絞っており、実務への導入に向けた基礎を固められます。",
       "初心者がつまずきやすい操作手順を丁寧に紐解くため、スムーズな習得が期待できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 38711,
     "publishedAt": "2022-06-11T08:00:26Z"
   },
@@ -16691,7 +16866,7 @@
       "最新のトレンドを踏まえた視覚要素の構成方法を論理的に解説しています。",
       "クリックを誘う要素を分析し、制作工程を段階的に見通せる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 38387,
     "publishedAt": "2024-04-30T09:00:39Z"
   },
@@ -16751,7 +16926,7 @@
       "ChatGPTとの比較を通じ、各ツールの特性や得意分野の違いを整理しています。",
       "初級者向けに設計されており、基本操作から応用的な活用法まで体系的に学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 32912,
     "publishedAt": "2025-12-23T09:06:15Z"
   },
@@ -16811,7 +16986,7 @@
       "文字入力から生成される文章の作り方まで、具体的な手順を順を追って紹介。",
       "スマホ操作に不慣れな方でも、画面を見ながら一歩ずつ進められる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 17225,
     "publishedAt": "2025-05-24T06:05:16Z"
   },
@@ -16872,7 +17047,7 @@
       "操作手順を順序立てて説明しており、サムネイル制作の工程を具体的に学べます。",
       "ソフトの機能を活用して、視認性の高い画像を構成する手法を体系的に提示します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 16065,
     "publishedAt": "2025-03-15T02:30:35Z"
   },
@@ -16933,7 +17108,7 @@
       "カットや基本操作を25分で学べる構成で、実用的な基礎を網羅しています。",
       "編集素材が付属しているため、実際の操作手順を追いながら学習できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 15286,
     "publishedAt": "2025-03-09T05:00:18Z"
   },
@@ -16993,7 +17168,7 @@
       "スマートフォンでの具体的な操作手順を順を追って丁寧に解説しています。",
       "最新のAI技術に触れるための基礎知識を、平易な言葉で整理して伝えます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 12629,
     "publishedAt": "2025-04-11T04:00:27Z"
   },
@@ -17053,7 +17228,7 @@
       "分という構成の中で、独自のワークフローを構築する工程を具体的に示します。",
       "初期設定から応用まで、操作の手順を体系的に整理した内容となっています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 12133,
     "publishedAt": "2026-06-02T10:15:23Z"
   },
@@ -17113,7 +17288,7 @@
       "最新の機能を反映しつつ、初期設定から具体的な活用法まで順序立てて解説します。",
       "生成AIへの第一歩として、基礎知識を整理しながら進めたい層に適した構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 10426,
     "publishedAt": "2025-08-09T10:30:35Z"
   },
@@ -17173,7 +17348,7 @@
       "Claudeの基本機能を網羅しつつ、実用的な活用に向けた土台作りを支援します。",
       "複雑な技術論を省き、ツールの特性を理解しながらスムーズに導入できる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 10003,
     "publishedAt": "2026-04-12T08:02:19Z"
   },
@@ -17233,7 +17408,7 @@
       "Google系AIの特徴を解説しており、次世代ツールの違いを体系的に学べます。",
       "ChatGPTとの差異を技術的な視点から整理し、基礎知識を補完する内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 2777144,
     "publishedAt": "2025-12-12T10:00:00Z"
   },
@@ -17294,7 +17469,7 @@
       "実際の操作に必要な練習用データが付属しており、実践的な演習が可能です。",
       "年版の最新仕様に基づいた内容で、正確な機能の把握に役立ちます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 1897260,
     "publishedAt": "2021-08-13T21:43:02Z"
   },
@@ -17356,7 +17531,7 @@
       "スマートフォン環境での利用法にも触れており、場所を選ばず学習できる構成です。",
       "画像生成を含む多様なAIツールの活用法を、初心者向けに整理して提示しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 1753486,
     "publishedAt": "2025-06-06T10:02:09Z"
   },
@@ -17417,7 +17592,7 @@
       "各記号の正確な位置や口の形など、技術的なポイントに焦点を当てています。",
       "上級者向けの内容を含みつつ、体系的に知識を整理したい層に適した動画です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 1341474,
     "publishedAt": "2022-09-17T13:00:20Z"
   },
@@ -17479,7 +17654,7 @@
       "専門用語を抑えた平易な表現で、投資未経験者が仕組みを把握できます。",
       "年からの制度改正に伴う変更点に焦点を当てて解説する内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 946929,
     "publishedAt": "2023-10-07T11:00:10Z"
   },
@@ -17542,7 +17717,7 @@
       "専門用語を噛み砕いて説明するため、知識がない状態からでも内容を把握できます。",
       "入門編として必要な定義を整理しており、体系的に学びたい方に向けた動画です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 808699,
     "publishedAt": "2021-09-17T11:30:04Z"
   },
@@ -17603,7 +17778,7 @@
       "実際の合格者の得点傾向など、受験者が抱く疑問に焦点を当てた内容です。",
       "宅建業法の基礎から着実に理解を深めたい初学者向けのコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 556834,
     "publishedAt": "2023-01-28T09:00:14Z"
   },
@@ -17664,7 +17839,7 @@
       "ネイティブ特有の言い回しに焦点を当てた内容が網羅されています。",
       "発音のポイントも解説されており、より自然な響きを意識した練習が可能です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 555533,
     "publishedAt": "2025-04-27T05:00:26Z"
   },
@@ -17727,7 +17902,7 @@
       "初心者がつまずきやすい勘定科目の分類を整理し、基本概念を紐解きます。",
       "図解を交えながら、簿記3級合格に向けた基礎知識を丁寧に積み上げます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 547645,
     "publishedAt": "2021-09-25T02:00:13Z"
   },
@@ -17790,7 +17965,7 @@
       "個々の項目を単体で学ぶのではなく、一連の会計サイクルとして捉える構成です。",
       "初級者向けに設計されており、実務的な処理の流れを体系的に整理できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 398541,
     "publishedAt": "2021-09-26T08:05:40Z"
   },
@@ -17852,7 +18027,7 @@
       "実務やキャリア形成において上位資格がどのような役割を果たすかを具体的に解説します。",
       "アニメーションを用いた視覚的な構成により、複雑な制度の違いを平易に理解できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 387354,
     "publishedAt": "2023-07-06T22:00:23Z"
   },
@@ -17915,7 +18090,7 @@
       "高校情報Iの学習範囲に基づき、技術用語を正確に整理して構成しています。",
       "ITパスポート等の資格試験に向けた基礎知識の確認にも適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 355262,
     "publishedAt": "2021-10-22T11:00:12Z"
   },
@@ -17976,7 +18151,7 @@
       "図形や枠線の調整など、レイアウトを整えるための機能を具体的に網羅しています。",
       "実務で必要となる基本操作を積み上げることで、基礎を体系的に学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 349211,
     "publishedAt": "2023-09-17T08:10:00Z"
   },
@@ -18038,7 +18213,7 @@
       "単一の操作法だけでなく、複数のツールを組み合わせた実務的な活用法を解説。",
       "具体的なプロンプト例を交えながら、ビジネスシーンでの応用方法を提示します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 281668,
     "publishedAt": "2024-07-27T05:00:21Z"
   },
@@ -18099,7 +18274,7 @@
       "ビジネスシーンに特化した表現を網羅しているため、場面に応じた使い分けが可能です。",
       "配布されるテキストと併用することで、基礎的なビジネス英語の定着を促します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 233340,
     "publishedAt": "2023-11-04T13:00:41Z"
   },
@@ -18161,7 +18336,7 @@
       "試験範囲の最初となる分野を体系的に解説しており、学習の土台作りを支えます。",
       "講師による丁寧な講義構成により、初級者が制度の概要を正確に把握できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 178248,
     "publishedAt": "2025-10-03T03:05:13Z"
   },
@@ -18224,7 +18399,7 @@
       "複雑な約款や条文を整理し、試験で問われる重要ポイントに焦点を当てています。",
       "実務にも通じる保険の基本構造を、初心者向けの平易な言葉で丁寧に紐解きます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 160012,
     "publishedAt": "2025-09-01T07:00:10Z"
   },
@@ -18286,7 +18461,7 @@
       "帰無仮説と対立仮説の違いなど、複雑な用語を平易な言葉で紐解きます。",
       "統計的な推測のプロセスを論理的に追えるため、基礎固めに適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 146938,
     "publishedAt": "2025-01-07T10:00:56Z"
   },
@@ -18349,7 +18524,7 @@
       "技術的な基礎知識から実技問題への対応まで、論理的に整理された解説が特徴です。",
       "合格に向けた重要ポイントを体系的に整理しており、効率的な学習計画の策定に役立ちます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 130680,
     "publishedAt": "2023-01-06T09:00:29Z"
   },
@@ -18410,7 +18585,7 @@
       "単なるフレーズの羅列ではなく、各例文の背景や意図を丁寧に解説しています。",
       "初級者向けの内容ながら、実務でそのまま活用できる表現が体系的に学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 125476,
     "publishedAt": "2021-07-02T23:00:11Z"
   },
@@ -18471,7 +18646,7 @@
       "専門用語を噛み砕いて説明しており、基礎知識の習得に適した構成です。",
       "初心者が全体像を把握するための基礎知識を網羅的に学べる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 93879,
     "publishedAt": "2024-08-27T10:10:00Z"
   },
@@ -18532,7 +18707,7 @@
       "Webデザインへの応用を見据えつつ、構文の役割を一つずつ丁寧に紐解く構成です。",
       "プログラミング学習の第一歩として必要な知識を網羅した、実用的な入門コンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 91146,
     "publishedAt": "2021-08-21T12:15:24Z"
   },
@@ -18594,7 +18769,7 @@
       "実務に即したプロンプト例が提示されており、業務への取り入れ方を具体的に学べます。",
       "中小企業の現場を見据えた生産性向上策など、実践的な活用術が体系的に解説されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 86158,
     "publishedAt": "2025-12-27T11:01:17Z"
   },
@@ -18655,7 +18830,7 @@
       "単なる暗記ではなく、記憶の定着を促すための具体的な手法が体系的に示されています。",
       "問題集を丸ごと活用する独自の学習法など、実戦に即した内容を網羅しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 84226,
     "publishedAt": "2025-09-13T11:11:19Z"
   },
@@ -18718,7 +18893,7 @@
       "専門用語を噛み砕いて解説しており、初心者が最初に取り組む講義として適しています。",
       "一つひとつの要素が繋がる仕組みを丁寧に紐解くため、基礎知識の土台作りを支援します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 82844,
     "publishedAt": "2023-03-18T10:34:42Z"
   },
@@ -18779,7 +18954,7 @@
       "基礎を短時間で見渡し、手を動かす前の準備に向いている。",
       "仕事の合間にも見切りやすい標準的な長さで、忙しい日でも学習のリズムを戻しやすい。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 81620,
     "publishedAt": "2025-09-13T10:00:26Z"
   },
@@ -18841,7 +19016,7 @@
       "なぜ今の時期に特定の施策が機能するのか、その背景にある構造的な要因を解説します。",
       "SNS運用の基礎知識を整理しながら、変化するトレンドへの向き合い方を提示する内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 77113,
     "publishedAt": "2026-01-24T10:00:19Z"
   },
@@ -18902,7 +19077,7 @@
       "クイズアプリの実装を通じて、コンポーネントや状態管理の仕組みを学べます。",
       "JavaScriptの基礎知識を前提としつつ、実戦的なコードの書き方を提示します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 75269,
     "publishedAt": "2025-05-03T10:00:06Z"
   },
@@ -18963,7 +19138,7 @@
       "SQLの基本概念を視覚的に捉えながら、実用的な命令の書き方を段階的に解説します。",
       "プログラミング初学者向けに設計されており、技術的な基礎を整理しながら進められます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 75127,
     "publishedAt": "2021-10-06T09:00:11Z"
   },
@@ -19024,7 +19199,7 @@
       "単なる操作手順に留まらず、精度を高めるための7つの視点を整理した内容です。",
       "プロンプトの構造を理解することで、意図に近い回答を引き出す技術を学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 73146,
     "publishedAt": "2025-07-24T10:01:31Z"
   },
@@ -19086,7 +19261,7 @@
       "日商簿記2級合格に向けた具体的なスケジュールや学習の優先順位を解説。",
       "基礎から応用へのつなぎ方を整理しており、体系的に知識を定着させたい方向けです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 72822,
     "publishedAt": "2025-04-25T10:00:31Z"
   },
@@ -19147,7 +19322,7 @@
       "具体的なワークフローを提示しており、効率的なコンテンツ制作の基礎を学べます。",
       "技術的なステップを順序立てて紹介しているため、自動化の構造を把握できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 66989,
     "publishedAt": "2025-10-12T01:15:38Z"
   },
@@ -19207,7 +19382,7 @@
       "TOEIC対策に特化した具体的な学習法と、日常で使える英会話の基礎を両立させています。",
       "初級者向けの内容ながら、目標スコアに向けた戦略的なステップを体系的に学べるコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 65287,
     "publishedAt": "2026-01-04T11:25:16Z"
   },
@@ -19269,7 +19444,7 @@
       "具体的な操作手順や仕事の効率化に繋がるテクニックが3つ提示される。",
       "中級者向けの内容として、実務への取り入れ方を具体的に解説する構成。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 58382,
     "publishedAt": "2025-08-04T09:03:21Z"
   },
@@ -19331,7 +19506,7 @@
       "簿記3級から2級を見据えた学習計画において、各動画コンテンツの特性の違いを整理しています。",
       "自身の現在のレベルや目標とする資格に合わせて、最適な学習ツールを検討できる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 56536,
     "publishedAt": "2025-07-08T12:01:14Z"
   },
@@ -19392,7 +19567,7 @@
       "多くの受験者が陥りやすい誤解を整理し、正しい優先順位を提示します。",
       "基礎知識から応用までを段階的に進めるための戦略的な学習法が示されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 52022,
     "publishedAt": "2026-02-13T10:01:16Z"
   },
@@ -19453,7 +19628,7 @@
       "英会話への第一歩として必要な要素を、3ヶ月という期間を見据えて構成した内容です。",
       "単なるフレーズ集ではなく、基礎から応用へ繋げるための道筋が具体的に示されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 45965,
     "publishedAt": "2021-11-18T10:35:18Z"
   },
@@ -19515,7 +19690,7 @@
       "試験までの期間に応じたスケジュール管理のポイントが具体的に解説されています。",
       "自身の体験に基づいた効率的な学習順序を整理した内容となっています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 45056,
     "publishedAt": "2025-08-02T10:00:45Z"
   },
@@ -19576,7 +19751,7 @@
       "初学者でも迷わずに取り組めるよう、学習の優先順位が整理されています。",
       "合格に向けたスケジュール管理と基礎知識の習得方法を具体的に解説します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 41624,
     "publishedAt": "2026-04-01T09:00:25Z"
   },
@@ -19637,7 +19812,7 @@
       "基礎知識を具体的なプログラムに落とし込む工程を丁寧に追う構成となっており、実践的な記述方法を学べます。",
       "プログラミング言語の特性を意識しながら、ゲームの仕組みをコードでどう表現するかを順序立てて提示しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 39464,
     "publishedAt": "2023-07-02T11:00:28Z"
   },
@@ -19698,7 +19873,7 @@
       "デザインの基礎概念を解説しながら、実用的なサムネイル作成法を伝授します。",
       "Filmoraの操作に寄り添いつつ、視覚的な訴求力を高める手法を具体的に提示します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 37360,
     "publishedAt": "2024-09-27T10:43:48Z"
   },
@@ -19759,7 +19934,7 @@
       "専門用語を避けつつ、実務で必要な指標の捉え方を論理的に解説しています。",
       "SEO視点での活用法も含まれており、基礎を固めたい層に適した構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 34936,
     "publishedAt": "2024-12-10T09:00:45Z"
   },
@@ -19821,7 +19996,7 @@
       "プログラミング未経験者向けにGitの基本操作を順序立てて解説しています。",
       "GitHubとの連携手順を含めて、開発管理の基礎を体系的に学べる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 34080,
     "publishedAt": "2026-03-21T10:01:06Z"
   },
@@ -19883,7 +20058,7 @@
       "単なるコマンドの紹介に留まらず、最新のツールを組み合わせた実用的な構成です。",
       "初級者が開発環境を整える際に必要な要素を網羅した内容となっています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 33791,
     "publishedAt": "2026-04-05T06:27:16Z"
   },
@@ -19945,7 +20120,7 @@
       "初心者が陥りやすい落とし穴を具体例とともに挙げ、基礎の重要性を説いています。",
       "試験に向けた実戦的なポイントを網羅しており、効率的な学習計画の参考になります。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 29686,
     "publishedAt": "2025-09-08T09:00:49Z"
   },
@@ -20007,7 +20182,7 @@
       "単なる操作手順の紹介に留まらず、GitHubとの連携を含めた実用的な流れを網羅。",
       "基礎知識を整理しながら進むため、開発環境の構築に向けた第一歩に適した構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 29076,
     "publishedAt": "2024-10-15T10:01:58Z"
   },
@@ -20067,7 +20242,7 @@
       "実際の操作画面を見せながら、Geminiがどのようにユーザーの意図を汲み取り動作をサポートするかを順序立てて紹介します。",
       "Pixel端末とGeminiの連携機能を実用的な視点で整理しており、音声操作の可能性を具体的に確認できる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 28529,
     "publishedAt": "2026-01-08T10:00:20Z"
   },
@@ -20128,7 +20303,7 @@
       "英会話の土台を作るためのインプット工程を具体的に整理した内容です。",
       "初級者が自身の現在地を把握しながら進められるよう構成されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 23451,
     "publishedAt": "2023-02-02T11:00:32Z"
   },
@@ -20190,7 +20365,7 @@
       "製造原価の計算など、実務に近い要素を20分で効率的に解説しています。",
       "基礎知識から順を追って進むため、工業簿記の全体像を把握できる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 21675,
     "publishedAt": "2024-05-14T10:30:06Z"
   },
@@ -20251,7 +20426,7 @@
       "設定手順から具体的なデータの見方まで、実務に必要な項目を網羅しています。",
       "検索順位やクリック数の推移を把握するための基礎知識を習得できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 21644,
     "publishedAt": "2024-06-17T09:50:30Z"
   },
@@ -20312,7 +20487,7 @@
       "ネットワークの仕組みと通信プロトコルの動きを紐付けながら学習が進みます。",
       "インフラ技術の基礎固めとして、ツールを用いた実機的な視点が得られる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 21627,
     "publishedAt": "2024-12-13T09:01:02Z"
   },
@@ -20373,7 +20548,7 @@
       "単なる手法の紹介に留まらず、1年間の計画を段階的に提示する構成です。",
       "TOEICのスコアアップを見据えた語彙や文法の積み上げ方を網羅的に学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 20877,
     "publishedAt": "2024-05-24T10:00:43Z"
   },
@@ -20436,7 +20611,7 @@
       "複雑な制度や仕組みを体系的な図解と共に解説し、知識の定着を助けます。",
       "限られた時間内でFP3級の金融分野に必要な基礎知識を重点的に学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 19854,
     "publishedAt": "2026-04-06T23:32:00Z"
   },
@@ -20497,7 +20672,7 @@
       "実際の編集工程に沿った実技の解説に加え、練習用の素材動画が提供される点が実践的です。",
       "カットやテロップなど基礎的な技術を積み上げながら、ソフトへの習熟度を高められる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 19277,
     "publishedAt": "2023-07-17T10:45:02Z"
   },
@@ -20558,7 +20733,7 @@
       "複雑な構文を避け、データベース操作の基礎概念を順序立てて解説しています。",
       "実務で頻用される基本的なクエリ構造を、落ち着いた語り口で丁寧に解説します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 17088,
     "publishedAt": "2022-03-15T11:00:12Z"
   },
@@ -20619,7 +20794,7 @@
       "SQLの基本構文を丁寧に紐解きながら、実務で必要な基礎知識を積み上げます。",
       "操作手順を順序立てて説明しており、初心者が一つずつ理解を深められる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 16650,
     "publishedAt": "2022-03-21T11:00:20Z"
   },
@@ -20680,7 +20855,7 @@
       "初学者に近い視点から、試験範囲の要点を整理する具体的な進め方を提示します。",
       "基礎知識の定着から応用への繋げ方まで、体系的な学習法を網羅した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 15528,
     "publishedAt": "2023-11-11T09:00:40Z"
   },
@@ -20741,7 +20916,7 @@
       "複数のテキスト要素を同時に制御する手法や、実用的な活用例が具体的に示されています。",
       "最新の動向を踏まえつつ、初心者でも基本操作から応用まで順序立てて学べる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 14930,
     "publishedAt": "2025-12-13T08:00:06Z"
   },
@@ -20803,7 +20978,7 @@
       "単なる機能紹介に留まらず、ソースコード管理の基礎から実践的な活用法まで網羅しています。",
       "初学者が必要とするコマンドを整理しており、開発環境の構築に向けた一歩を支える内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 12761,
     "publishedAt": "2023-11-05T10:30:09Z"
   },
@@ -20864,7 +21039,7 @@
       "レイアウト崩れの原因を整理し、実用的な調整手法を具体的に解説している。",
       "操作ミスを防ぐためのポイントを抑え、正確な文書作成に向けた基礎を習得できる。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 4229646,
     "publishedAt": "2023-07-14T10:45:00Z"
   },
@@ -20926,7 +21101,7 @@
       "株式投資における主要なポイントを5つに絞り込み、視覚的に整理して提示しています。",
       "アニメーションを用いることで、複雑な制度の仕組みを直感的に理解できる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 2169015,
     "publishedAt": "2023-12-27T22:00:13Z"
   },
@@ -20987,7 +21162,7 @@
       "日常的な場面で活用できる200以上のフレーズが体系的に紹介されています。",
       "シンプルな表現に絞って構成されているため、英会話の第一歩に適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 827637,
     "publishedAt": "2022-07-18T08:08:39Z"
   },
@@ -21048,7 +21223,7 @@
       "基礎的な語彙から実践的なフレーズへのつなぎ方を論理的に解説しています。",
       "限られた時間内で特定のシチュエーションに対応する練習を積み重ねられます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 763739,
     "publishedAt": "2025-10-03T10:43:25Z"
   },
@@ -21109,7 +21284,7 @@
       "周囲を気にせず一人で進められる環境に合わせた学習法が解説されています。",
       "発音の基礎から着実に定着させるための具体的なアプローチを提示する内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 660121,
     "publishedAt": "2022-01-29T10:00:13Z"
   },
@@ -21170,7 +21345,7 @@
       "聞き手と話し手の双方向のやり取りにより、実践的な発音のコツを学べます。",
       "日本語学習者が陥りやすい発音の癖について、具体的な比較がなされています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 609789,
     "publishedAt": "2026-01-23T11:10:17Z"
   },
@@ -21232,7 +21407,7 @@
       "自動的に貯蓄へ回る仕組みを作るための具体的な手法を、初心者向けに整理。",
       "節約の習慣化に向けた基礎知識と、日々の支出を見直すための視点を提示します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 609240,
     "publishedAt": "2025-01-13T08:00:45Z"
   },
@@ -21293,7 +21468,7 @@
       "一つ一つの工程を丁寧に解説しており、学習の全体像を把握できます。",
       "プログラミングの初歩を固めたい層に向けた、基礎に忠実な構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 586757,
     "publishedAt": "2021-10-26T10:00:10Z"
   },
@@ -21354,7 +21529,7 @@
       "プログラミング初学者を対象とした構成で、基礎の定着を促す設計となっています。",
       "一連の流れで学習を進められるため、技術の全体像を把握するのに適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 531415,
     "publishedAt": "2022-07-03T10:00:19Z"
   },
@@ -21417,7 +21592,7 @@
       "試験で問われやすい金融商品の不適切な販売行為など、実務に即した事例を解説します。",
       "初級者向けの内容ながら、近年の法改正や重要なポイントを重点的に網羅しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 511324,
     "publishedAt": "2025-09-01T07:00:13Z"
   },
@@ -21478,7 +21653,7 @@
       "ネイティブに近い発音を習得するための具体的な練習法が体系的に示されています。",
       "初級者向けの内容ながら、口の動きや音の出し方に焦点を当てた実践的な動画です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 398608,
     "publishedAt": "2026-03-20T11:05:33Z"
   },
@@ -21540,7 +21715,7 @@
       "ミニマリズムの視点を取り入れた12の習慣など、具体的な行動指針が提示。",
       "無駄な支出を削り、持続可能な暮らしを実現するための基礎知識を網羅。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 391850,
     "publishedAt": "2025-09-23T09:00:17Z"
   },
@@ -21602,7 +21777,7 @@
       "投資初心者に向けて、NISA口座の活用法やインデックスファンドの特徴を整理。",
       "複雑な金融用語を避けつつ、資産形成における現状の選択肢を具体的に提示。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 371541,
     "publishedAt": "2025-08-28T09:00:09Z"
   },
@@ -21665,7 +21840,7 @@
       "移動中や隙間時間でも内容を把握できるよう、聞き取りやすさを意識した構成です。",
       "基礎知識から積み上げられるため、学習の初期段階で全体像を整理するのに適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 356624,
     "publishedAt": "2024-02-16T09:31:45Z"
   },
@@ -21725,7 +21900,7 @@
       "ボタン一つで起動する操作手順を丁寧に紐解き、機能の仕組みを整理しています。",
       "最新のAI技術を実用的なコミュニケーションにどう組み込むかを示唆する内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 352672,
     "publishedAt": "2025-12-08T11:00:38Z"
   },
@@ -21787,7 +21962,7 @@
       "数式や理論の背景を丁寧に紐解くため、基礎知識を固めたい層に適した構成です。",
       "試験範囲の広範なトピックを網羅し、実務に役立つ統計学の基礎を順序立てて提示します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 330653,
     "publishedAt": "2021-12-30T12:30:33Z"
   },
@@ -21849,7 +22024,7 @@
       "日間という期間を設定し、目標に向けたアクションプランを具体化しています。",
       "SNS運用の基礎から実践的な立ち回りまでを体系的に学べるコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 269341,
     "publishedAt": "2025-03-01T10:01:03Z"
   },
@@ -21911,7 +22086,7 @@
       "AIが実務のどの工程をサポートするのか、機能を順序立てて解説する構成です。",
       "基礎知識から応用への流れを整理しており、導入検討の際の指針となります。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 267686,
     "publishedAt": "2025-01-07T09:00:19Z"
   },
@@ -21973,7 +22148,7 @@
       "使用する教材や日々の学習量、活用する文房具まで詳細に解説されています。",
       "試験合格に向けた実体験に基づいたスケジュール管理の具体例が示されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 257741,
     "publishedAt": "2022-12-16T11:13:49Z"
   },
@@ -22036,7 +22211,7 @@
       "仕訳の基本原則を体系的に解説しており、実務に近い思考法を学べます。",
       "第1問の具体例を通じて、正確な記帳に向けた基礎体力を養う構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 204617,
     "publishedAt": "2024-03-29T12:13:52Z"
   },
@@ -22098,7 +22273,7 @@
       "データ分析の土台となる理論を、実用的な教養として体系的に解説する構成です。",
       "数式や用語の背景にある意味を丁寧に紐解き、知識を定着させる内容となっています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 176839,
     "publishedAt": "2024-12-28T10:00:02Z"
   },
@@ -22161,7 +22336,7 @@
       "用語の定義や技術要素のつながりを図解で解説するため、構造的な理解が進みます。",
       "基本情報技術者試験の範囲を意識した構成で、周辺知識の整理に役立つ内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 174719,
     "publishedAt": "2022-02-10T09:00:44Z"
   },
@@ -22223,7 +22398,7 @@
       "検定のプロセスを段階を追って解説しており、統計的な判断基準の仕組みを理解できます。",
       "実務や研究で活用されるデータの分析手法について、基礎から体系的に学べる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 163407,
     "publishedAt": "2022-12-25T10:00:14Z"
   },
@@ -22284,7 +22459,7 @@
       "独学で進める際に迷いが生じやすいポイントを整理し、体系的なステップで学べるよう構成されています。",
       "個々の教材の特徴を比較しながら、自身の現在の習熟度に合わせて最適な学習法を選択できる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 156343,
     "publishedAt": "2024-07-06T09:08:35Z"
   },
@@ -22347,7 +22522,7 @@
       "複雑な計算過程を分解して解説しており、初級者が基礎概念を整理するのに適しています。",
       "仕入高や期首商品などの各要素がどのように合算されるかを具体的に示す内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 149042,
     "publishedAt": "2022-05-21T00:15:00Z"
   },
@@ -22408,7 +22583,7 @@
       "ITパスポート試験で頻出する略語に焦点を絞り、基礎知識を整理する構成です。",
       "直前対策として、複雑な概念を簡潔な言葉で整理し、体系的に理解を深められます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 147142,
     "publishedAt": "2025-06-10T09:01:04Z"
   },
@@ -22470,7 +22645,7 @@
       "複雑な工程を省き、初心者がまず取り組むべきステップに焦点を当てた構成です。",
       "プロンプトの入力方法など、実用的な技術要素を順序立てて丁寧に紹介しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 140242,
     "publishedAt": "2023-12-03T11:00:20Z"
   },
@@ -22533,7 +22708,7 @@
       "年度の試験範囲に準拠しており、近年の動向も反映されています。",
       "ITの基礎知識を網羅的に把握したい初学者が、全体像を掴むのに適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 140065,
     "publishedAt": "2025-06-06T09:01:26Z"
   },
@@ -22594,7 +22769,7 @@
       "最新バージョンの機能を網羅し、付随する無料プラグインの活用法も紹介。",
       "初級者向けに設計された構成で、編集ソフトの基礎を順序立てて学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 135665,
     "publishedAt": "2025-08-07T10:35:00Z"
   },
@@ -22656,7 +22831,7 @@
       "コンサルティング業界で求められる構造的な情報の整理術を具体的に提示します。",
       "初級者向けの内容ながら、実務で通用する整ったレイアウトの作り方を学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 131790,
     "publishedAt": "2024-10-05T11:00:20Z"
   },
@@ -22719,7 +22894,7 @@
       "試験への向き合い方や資格取得の意義について多角的な視点で解説します。",
       "実務への繋がりを見据えながら基礎知識を効率的に整理する構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 129956,
     "publishedAt": "2024-05-15T11:06:33Z"
   },
@@ -22779,7 +22954,7 @@
       "単なる操作説明に留まらず、SNSで注目を集めるための具体的な演出手順を網羅しています。",
       "高度な編集技術を体系的に学べるため、表現の幅を広げたい層に適したコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 96252,
     "publishedAt": "2024-01-15T10:36:39Z"
   },
@@ -22840,7 +23015,7 @@
       "開発環境の構築からWebサーバーの実装までを体系的に網羅した構成です。",
       "JavaScriptを用いたバックエンド開発の全体像を把握するのに適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 87665,
     "publishedAt": "2021-12-25T11:00:22Z"
   },
@@ -22902,7 +23077,7 @@
       "複雑な概念を簡潔な図形や配置で表現するための具体的な手法を提示します。",
       "プレゼン資料の構成を見直し、意図を正確に伝えるための技術を学べる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 81040,
     "publishedAt": "2023-11-04T11:00:33Z"
   },
@@ -22963,7 +23138,7 @@
       "Wordの基本機能を体系的に網羅しており、実務への第一歩として役立ちます。",
       "初心者が戸惑いやすい操作手順を丁寧に紐解く、丁寧な解説が特徴のコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 78971,
     "publishedAt": "2023-07-25T00:59:16Z"
   },
@@ -23024,7 +23199,7 @@
       "一操作ごとに解説が入るため、Wordの具体的な操作手順を確認しながら進められます。",
       "実務で求められる社外向け文書の構成や作成手順を具体的に学べる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 74985,
     "publishedAt": "2021-10-22T09:20:27Z"
   },
@@ -23085,7 +23260,7 @@
       "単一テーマでの記事量産など、具体的なコンテンツ制作の戦略が示されています。",
       "オウンドメディア運営者が直面する課題に対し、技術的な視点から解決策を提示します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 73191,
     "publishedAt": "2024-01-24T03:00:14Z"
   },
@@ -23148,7 +23323,7 @@
       "抽象的な概念を視覚的に整理しながら、奥行きを表現するための操作手順を丁寧に順序立てて説明します。",
       "基本的な設定から具体的な配置方法まで、基礎的な機能を体系的に学べる構成のコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 72424,
     "publishedAt": "2021-06-28T03:22:55Z"
   },
@@ -23211,7 +23386,7 @@
       "情報Ⅰの学習内容に準拠しており、試験対策に必要な知識を網羅しています。",
       "技術用語の定義から認証認可の仕組みまで、基礎知識を整理できる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 71055,
     "publishedAt": "2021-10-28T11:00:12Z"
   },
@@ -23272,7 +23447,7 @@
       "JavaScriptの基本機能を実際の要素操作へ繋げる手順が具体的に示されています。",
       "プログラミング初学者が実戦的なコードの書き方を段階的に学べる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 66013,
     "publishedAt": "2021-10-16T04:31:38Z"
   },
@@ -23333,7 +23508,7 @@
       "それぞれの機能が持つ特性や制作工程への影響を整理し、用途に応じた選択肢を提示します。",
       "編集効率を高めるための技術的な差異を把握したい初級者向けの解説コンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 65867,
     "publishedAt": "2023-07-16T11:45:08Z"
   },
@@ -23394,7 +23569,7 @@
       "複雑な設定を省きつつ、実務で頻出するレイアウト調整や書式設定に焦点を当てた構成です。",
       "操作手順を順序立てて丁寧に紐解くため、Wordへの苦手意識を和らげながら習得できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 63627,
     "publishedAt": "2022-05-13T07:42:46Z"
   },
@@ -23455,7 +23630,7 @@
       "エディットページにおける基本的なカットや素材の配置方法を解説しています。",
       "動画編集の基礎概念を体系的に学べる構成となっており、習熟を支援します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 59379,
     "publishedAt": "2023-05-16T11:00:22Z"
   },
@@ -23517,7 +23692,7 @@
       "実用的な活用事例が具体的に紹介されており、日常業務への取り入れ方を整理できます。",
       "初級者向けに設計されているため、AIツールの基礎知識を段階的に積み上げることが可能です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 57599,
     "publishedAt": "2026-04-09T10:00:12Z"
   },
@@ -23580,7 +23755,7 @@
       "専門用語を抑えた平易な表現で、口座開設後の操作手順も具体的に示されています。",
       "資産運用の第一歩として必要な基礎知識を網羅した入門的なコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 55427,
     "publishedAt": "2023-01-14T07:30:11Z"
   },
@@ -23642,7 +23817,7 @@
       "単なるコマンド解説に留まらず、実際の開発フローへの適用を意識しています。",
       "実務に近い流れでGitHubの機能を段階的に習得できる内容となっています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 55241,
     "publishedAt": "2022-10-09T11:00:20Z"
   },
@@ -23703,7 +23878,7 @@
       "推奨される参考書の活用法や、効率的な学習順序を論理的に解説しています。",
       "一ヶ月という期間を見据え、基礎知識から応用まで段階的に進める構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 54916,
     "publishedAt": "2023-08-21T11:58:03Z"
   },
@@ -23763,7 +23938,7 @@
       "t検定や回帰分析といった主要な手法に加え、p値や正規分布などの基本要素も網羅しています。",
       "データサイエンスの初歩として必要な理論を、一つずつ整理しながら学べる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 53785,
     "publishedAt": "2023-05-09T15:42:04Z"
   },
@@ -23826,7 +24001,7 @@
       "アルゴリズムの基礎概念を整理しながら、設問の意図を論理的に紐解いています。",
       "初学者が必要な知識を段階的に積み上げられるよう、構成が整えられています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 51675,
     "publishedAt": "2023-03-18T10:00:17Z"
   },
@@ -23889,7 +24064,7 @@
       "制度の基礎知識から具体的な口座開設の手順までを体系的に整理しています。",
       "投資初心者が自身のライフプランに合わせて検討するための基礎知識を提供します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 49811,
     "publishedAt": "2021-07-22T08:00:07Z"
   },
@@ -23949,7 +24124,7 @@
       "Googleの提供する最新AI機能を、モバイル端末で動かす操作を具体的に示します。",
       "基本的な設定から日常的な活用方法まで、初期段階に必要な要素を網羅した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 49553,
     "publishedAt": "2026-04-07T11:19:10Z"
   },
@@ -24012,7 +24187,7 @@
       "個々の動きの仕組みを論理的に紐解くことで、意図した表現への到達度を高めます。",
       "中級者向けの内容として、技術的な応用範囲を広げるための実践的な構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 49297,
     "publishedAt": "2025-08-08T09:00:40Z"
   },
@@ -24073,7 +24248,7 @@
       "Webデザインの文脈を踏まえつつ、プログラムの基礎となるデータ構造を体系的に学べる内容です。",
       "前編として構成されており、プログラミング学習の第一歩として必要な知識が整理されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 48107,
     "publishedAt": "2021-08-28T10:42:58Z"
   },
@@ -24135,7 +24310,7 @@
       "支出の種類を分類する際の判断基準を提示し、実用的な管理術を伝えます。",
       "初心者が自身のライフスタイルに合わせて項目をカスタマイズできる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 47380,
     "publishedAt": "2025-10-24T10:21:29Z"
   },
@@ -24197,7 +24372,7 @@
       "週単位の工程表として構成されており、次に行うべき手順が明確です。",
       "フォロワー増加に向けた運用の流れを体系的に整理したコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 38647,
     "publishedAt": "2025-12-06T10:00:51Z"
   },
@@ -24259,7 +24434,7 @@
       "基本的な関数やグラフ作成の手順を網羅しており、実務への導入を支援する内容です。",
       "短時間で基礎を整理できる構成のため、初学者向けの学習コンテンツとして適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 37056,
     "publishedAt": "2021-07-18T03:00:11Z"
   },
@@ -24321,7 +24496,7 @@
       "日常の操作や事務作業における具体的な活用シーンを順序立てて紹介します。",
       "AIを実務に取り入れるための第一歩として必要な基礎知識を網羅した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 36915,
     "publishedAt": "2024-05-22T03:00:12Z"
   },
@@ -24382,7 +24557,7 @@
       "ITパスポート試験に向けた、実体験に基づく効率的な学習手順を構成しています。",
       "合格までの過程を可視化した内容で、自身の学習計画に取り入れやすいです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 36871,
     "publishedAt": "2025-07-02T10:00:37Z"
   },
@@ -24443,7 +24618,7 @@
       "JavaScriptを用いた動的な演出により、複雑な処理の仕組みを具体化します。",
       "技術要素を順序立てて整理しており、初学者向けの構成として整っています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 36402,
     "publishedAt": "2025-03-09T13:22:37Z"
   },
@@ -24504,7 +24679,7 @@
       "データベース操作の仕組みを順序立てて説明しており、構造を把握できます。",
       "初学者向けに設計された構成により、用語の意味を正確に理解できる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 32600,
     "publishedAt": "2022-12-13T09:00:15Z"
   },
@@ -24566,7 +24741,7 @@
       "簿記論合格に向けた具体的な学習計画や教材の選び方など、実体験に基づく情報が整理されています。",
       "試験への向き合い方や時間管理など、限られた時間で取り組む受験生に役立つ内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 32165,
     "publishedAt": "2024-08-14T10:30:13Z"
   },
@@ -24627,7 +24802,7 @@
       "実例を交えながらデザインの意図を言語化しており、技術の習得に役立ちます。",
       "Vtuber文化特有の視覚表現を取り入れた、実践的なデザイン講座です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 31721,
     "publishedAt": "2024-08-18T11:00:11Z"
   },
@@ -24689,7 +24864,7 @@
       "初学者がつまずきやすい前提を整えながら見進めやすい。",
       "仕事の合間にも見切りやすい標準的な長さのため、目的を決めて見ると吸収しやすい。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 31199,
     "publishedAt": "2025-12-28T10:15:06Z"
   },
@@ -24750,7 +24925,7 @@
       "具体的なステップに沿って、初心者向けの運用フローを体系的に提示します。",
       "ヶ月後の目標に向けた工程を整理しており、基礎から順序立てて学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 30623,
     "publishedAt": "2025-06-10T10:00:27Z"
   },
@@ -24812,7 +24987,7 @@
       "各アカウントが注目を集めている要因を分析し、成長の背景を論理的に解説します。",
       "SNS運用の現状を把握するための事例集として、多角的な視点から構成されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 20732,
     "publishedAt": "2026-01-31T10:01:22Z"
   },
@@ -24874,7 +25049,7 @@
       "Premiere Proの基本操作と実況特有の演出手法を組み合わせて学べる構成です。",
       "初心者が最初に着手すべき工程を整理しており、制作の流れを把握するのに適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 17129,
     "publishedAt": "2021-12-09T10:11:15Z"
   },
@@ -24936,7 +25111,7 @@
       "日商簿記2級の試験範囲を網羅し、合格に向けた具体的な進め方を提示する内容です。",
       "基礎知識から応用へのつなぎ方を整理しており、初学者向けの構成となっています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 17079,
     "publishedAt": "2026-03-14T10:01:17Z"
   },
@@ -24998,7 +25173,7 @@
       "動画内の解説に沿って進めることで、合格に必要な知識を効率よく吸収できます。",
       "高度な内容を含む範囲を網羅しており、資格取得に向けた基礎固めに適した構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 15821,
     "publishedAt": "2025-10-04T09:08:26Z"
   },
@@ -25060,7 +25235,7 @@
       "限られた時間で試験範囲の要点を整理し、合格に必要な知識を重点的に網羅。",
       "FP2級合格を目指す受験者が、複雑な数値を整理して理解するための構成。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 13459,
     "publishedAt": "2026-04-07T11:02:00Z"
   },
@@ -25122,7 +25297,7 @@
       "学習環境の比較やコスト面でのメリットを整理しており、選択肢を絞りたい層に役立ちます。",
       "基礎から取り組む層に向けて、自身の体験に基づいた実用的な判断材料を提供している内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 12560,
     "publishedAt": "2022-02-27T09:00:30Z"
   },
@@ -25184,7 +25359,7 @@
       "コマンドの役割や履歴管理の仕組みを順序立てて解説する構成が特徴です。",
       "初心者が自身のプロジェクトでGitを導入する際の指針となる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 11763,
     "publishedAt": "2024-09-29T10:00:48Z"
   },
@@ -25245,7 +25420,7 @@
       "ネットワーク構築における信頼性向上のための具体的な設定手順が示されています。",
       "LANケーブルのトラブルに対する実用的な対策を、初級者向けに分かりやすく提示する内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 10390,
     "publishedAt": "2023-07-07T09:00:26Z"
   },
@@ -25307,7 +25482,7 @@
       "リールやストーリーズといった機能別の使い方の違いも具体的に示されています。",
       "SNS運用における基礎的なステップを網羅した、入門向けの構成となっています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 101246,
     "publishedAt": "2025-08-24T10:30:09Z"
   },
@@ -25368,7 +25543,7 @@
       "Pythonの基礎から応用へ繋げるための学習工程が体系的に整理されています。",
       "初心者が次に進むべきステップを明確にするため、ロードマップを丁寧に解説します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 48934,
     "publishedAt": "2023-09-17T05:00:34Z"
   },
@@ -25430,7 +25605,7 @@
       "実際の画面を見ながら進めるため、操作手順を正確に把握できます。",
       "プログラミング学習の初期段階で必要な管理手法を網羅した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 9138,
     "publishedAt": "2025-05-24T02:00:34Z"
   },
@@ -25490,7 +25665,7 @@
       "断片的な知識ではなく、次に進むべきステップを論理的に提示する構成です。",
       "初学者が必要な要素を段階的に把握できるよう設計された実用的なコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 6699,
     "publishedAt": "2025-07-19T10:00:35Z"
   },
@@ -25552,7 +25727,7 @@
       "AIによる構成案の生成から具体的なスライドへの落とし込みまで、実務の流れに沿って紹介されています。",
       "基本的な操作から順序立てて説明されているため、ツールを導入したばかりの層にも適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 207866,
     "publishedAt": "2025-07-21T11:30:32Z"
   },
@@ -25615,7 +25790,7 @@
       "Web開発におけるAI駆動開発の流れを、初心者向けの構成で丁寧に紐解く内容です。",
       "アプリ制作に必要な技術要素を網羅し、ツールの特性を活かした開発手法を提示します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 160105,
     "publishedAt": "2025-02-18T11:01:15Z"
   },
@@ -25678,7 +25853,7 @@
       "Web開発を含む実用的な活用シーンが50個の事例を通じて体系的に解説されます。",
       "単なる基礎知識に留まらず、中級者が次に目指すべき領域を具体的に示唆する内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 130447,
     "publishedAt": "2023-10-07T10:00:07Z"
   },
@@ -25740,7 +25915,7 @@
       "アカウント作成後の運用ルールや戦略的なステップが整理されており、体系的に学べる内容です。",
       "初心者が陥りやすい迷点を解消するため、実務に即した手順が具体的に提示されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 53265,
     "publishedAt": "2025-08-23T10:00:29Z"
   },
@@ -25803,7 +25978,7 @@
       "技術的な用語を噛み砕きながら、制作の流れを順序立てて説明しています。",
       "開発の全体像を把握したい初心者が、学習の指針を得られる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 11599,
     "publishedAt": "2025-08-07T07:55:57Z"
   },
@@ -25865,7 +26040,7 @@
       "単一の操作説明に留まらず、BIツールの基礎知識を網羅的に解説しています。",
       "データ活用への第一歩として、必要な機能を順序立てて学べる構成となっています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 6297,
     "publishedAt": "2025-12-27T11:33:37Z"
   },
@@ -25926,7 +26101,7 @@
       "実体験に基づいた学習ステップを提示し、語彙の広げ方や定着のコツを伝授。",
       "単なる基礎知識の羅列ではなく、実践的な会話へと繋げるための思考法を公開。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 475899,
     "publishedAt": "2026-04-08T10:04:25Z"
   },
@@ -25987,7 +26162,7 @@
       "基礎から応用への流れが視覚的に分かりやすく、学習計画の策定に役立ちます。",
       "英語学習の全体像を把握しながら、着実に進めるための指針が得られる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 79429,
     "publishedAt": "2023-01-08T09:41:21Z"
   },
@@ -26048,7 +26223,7 @@
       "ローカル環境の構築を介さずブラウザ上で完結する工程を具体的に示しています。",
       "Pythonを用いたデータ処理や解析に向けた実用的な設定手順を網羅しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 48341,
     "publishedAt": "2023-07-22T10:00:44Z"
   },
@@ -26109,7 +26284,7 @@
       "年版の機能を反映し、スライド作成における具体的な操作手順を解説。",
       "生成AIとデザインツールの連携による効率的な資料制作プロセスを学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 35601,
     "publishedAt": "2025-11-19T10:26:11Z"
   },
@@ -26170,7 +26345,7 @@
       "基礎概念から実務的な用語の使い分けまで、体系的に整理された内容です。",
       "広範な概念を整理しつつ、初心者が混同しやすい概念を正確に分類しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 22154,
     "publishedAt": "2025-07-13T10:10:00Z"
   },
@@ -26230,7 +26405,7 @@
       "データサイエンスへの第一歩として必要な、正しい学習手順を整理した内容です。",
       "Python習得に向けた具体的な学習法を7つの視点で体系的に解説しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 19105,
     "publishedAt": "2023-08-12T10:00:02Z"
   },
@@ -26291,7 +26466,7 @@
       "基礎知識の不足を補いながら、実務で必要な要素を段階的に学べる構成です。",
       "専門用語を噛み砕いて説明しており、初歩的な概念を正確に捉えたい層に適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 7153,
     "publishedAt": "2026-01-27T09:00:04Z"
   },
@@ -26353,7 +26528,7 @@
       "Gitの基本概念を整理しながら、初回のアップロードに必要な工程を網羅。",
       "最新の環境に合わせた設定方法を提示しており、実務への備えとして有用です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 6217,
     "publishedAt": "2025-05-25T06:00:13Z"
   },
@@ -26414,7 +26589,7 @@
       "基礎概念の解説から具体的なコードへの落とし込みまでを網羅した構成です。",
       "多忙な学習者が効率よく技術要素を把握できるよう、要点を絞った内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 2001845,
     "publishedAt": "2021-06-26T10:00:21Z"
   },
@@ -26476,7 +26651,7 @@
       "基礎から応用まで幅広い機能を網羅しており、習熟度に合わせて活用できます。",
       "単なる一覧の提示にとどまらず、具体的な操作手順と合わせて解説されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 1657203,
     "publishedAt": "2023-07-28T10:00:16Z"
   },
@@ -26537,7 +26712,7 @@
       "上級者向けの内容であり、実務で通用する語彙や表現が厳選されています。",
       "リスニング力の向上を目指す層に向けた、実践的なトレーニング動画です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 1012366,
     "publishedAt": "2024-04-15T09:00:29Z"
   },
@@ -26599,7 +26774,7 @@
       "見落としがちな基礎知識を網羅しており、土台の理解を深める構成になっています。",
       "実務へのつなぎを意識した内容で、Excelの基本を整理したい方に適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 748640,
     "publishedAt": "2021-11-02T09:21:44Z"
   },
@@ -26660,7 +26835,7 @@
       "短時間で要点を整理できるよう、複数の重要項目を網羅した構成です。",
       "上級者向けの内容ながら、基礎的な音の作り方も丁寧に解説しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 252260,
     "publishedAt": "2025-07-19T13:01:44Z"
   },
@@ -26721,7 +26896,7 @@
       "英会話の初歩を固めたい層に向けた、実践的な学習ステップを提示しています。",
       "具体的な発話練習を取り入れた内容で、着実な上達を目指す方に適した動画です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 193645,
     "publishedAt": "2025-04-01T09:00:27Z"
   },
@@ -26782,7 +26957,7 @@
       "自己採点の推移を交えながら、模試をどの段階でどのように活用すべきかを提示します。",
       "使用テキストの選定から試験までの流れを整理しており、学習工程を可視化できる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 138039,
     "publishedAt": "2024-05-15T09:00:11Z"
   },
@@ -26843,7 +27018,7 @@
       "Pythonの基本文法のみならず、応用へのステップも具体的に示されています。",
       "学習の全体像を把握しながら着実にスキルを積み上げたい方に適した構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 30221,
     "publishedAt": "2022-05-02T10:30:06Z"
   },
@@ -26906,7 +27081,7 @@
       "プログラミング未経験の層を意識した構成で、AIアプリ構築の基礎を体系的に学べます。",
       "Web開発の工程を段階的に追うことで、技術的な仕組みを整理しながら理解を深められます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 29334,
     "publishedAt": "2025-12-07T10:00:58Z"
   },
@@ -26967,7 +27142,7 @@
       "複雑な仕組みを整理し、初級者が体系的に学べる構成となっています。",
       "Facebook広告を活用した集客の基礎を学ぶための教材として適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 26237,
     "publishedAt": "2025-12-03T10:10:00Z"
   },
@@ -27028,7 +27203,7 @@
       "プログラミング未経験者が最初に触れるべき基本知識が体系的に整理されています。",
       "用語の定義から順を追って構成されており、学習の全体像を把握するのに適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 9030,
     "publishedAt": "2024-02-18T10:00:02Z"
   },
@@ -27090,7 +27265,7 @@
       "主要な3つの分類を体系的に解説しており、分野の全体像を把握できます。",
       "短時間で構成を把握できるため、学習の導入として適したコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 8195,
     "publishedAt": "2024-05-03T08:00:02Z"
   },
@@ -27150,7 +27325,7 @@
       "最新技術を取り入れるための具体的な順序を整理しており、学習の指針として役立ちます。",
       "専門家による解説を通じて、初心者が自身の習熟度に合わせて内容を消化できる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 7382,
     "publishedAt": "2026-03-18T09:01:04Z"
   },
@@ -27211,7 +27386,7 @@
       "操作手順を一つずつ丁寧に示す構成のため、環境構築の工程を正確に把握できます。",
       "基礎的なコマンド操作を含め、プログラミング学習の第一歩に必要な工程を網羅しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 7374,
     "publishedAt": "2025-03-09T05:06:32Z"
   },
@@ -27273,7 +27448,7 @@
       "複雑な関数を積み重ねるのではなく、標準機能を活用した実用的なアプローチを紹介します。",
       "初級者がまず押さえるべき基本動作と、データ構造を整理するための視点を学べる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 7045,
     "publishedAt": "2025-12-15T10:00:02Z"
   },
@@ -27335,7 +27510,7 @@
       "自身の失敗経験に基づいた具体的な銘柄選定や運用の実態を客観的に解説します。",
       "投資への不安を整理しながら、実際の資産推移と向き合い方を学ぶための素材です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 1474755,
     "publishedAt": "2023-08-25T12:00:19Z"
   },
@@ -27397,7 +27572,7 @@
       "複雑な項目を削ぎ落とした構成により、日々の支出を正確に把握できます。",
       "実用的な記入例を交えながら、家計状況を可視化する手順を丁寧に伝えます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 1540947,
     "publishedAt": "2023-07-31T11:00:06Z"
   },
@@ -27459,7 +27634,7 @@
       "具体的な銘柄選びや資産配分の考え方など、実務に即した知識を整理しています。",
       "基礎知識から応用的な運用術までを体系的に学べるため、初心者の学習に適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 557568,
     "publishedAt": "2025-11-23T05:00:01Z"
   },
@@ -27520,7 +27695,7 @@
       "基本情報技術者試験に向けた具体的な進め方や、記憶の定着に繋げる工夫を紹介。",
       "合格に向けた戦略的なアプローチが整理されており、計画的に取り組みたい層に適す。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 850848,
     "publishedAt": "2024-02-01T11:00:11Z"
   },
@@ -27581,7 +27756,7 @@
       "合格に向けた具体的な学習計画の立て方や、効率的な進め方の手順を提示。",
       "基礎知識から実技までの流れを体系的に捉えたい初学者のための導入コンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 338166,
     "publishedAt": "2024-04-04T10:00:14Z"
   },
@@ -27641,7 +27816,7 @@
       "過去問や一問一答の形式を取り入れた構成で、試験範囲を体系的に整理できます。",
       "通勤中などの隙間時間にも聴き流しながら学習を進められる内容となっています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 179667,
     "publishedAt": "2025-02-03T11:01:00Z"
   },
@@ -27701,7 +27876,7 @@
       "スライドや動画生成といった具体的なアウトプット手法を取り入れた活用法が解説されています。",
       "AIツールを学習支援に組み込むための基礎的な操作手順を体系的に学べるコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 127315,
     "publishedAt": "2026-01-12T09:00:42Z"
   },
@@ -27762,7 +27937,7 @@
       "有効や無効、取消しといった重要語句の定義を体系的に整理した内容です。",
       "期間の計算など実務的なルールも網羅しており、基礎知識の定着に役立ちます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 118651,
     "publishedAt": "2025-02-17T10:00:51Z"
   },
@@ -27823,7 +27998,7 @@
       "複雑な権利関係や法律用語を基礎から丁寧に紐解く構成で理解を助けます。",
       "実務的な視点を含みつつ、初学者向けに重要なポイントを重点的に網羅した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 118261,
     "publishedAt": "2025-06-15T13:53:20Z"
   },
@@ -27883,7 +28058,7 @@
       "プロ講師による一問一答形式の解説で、専門的な法文を整理しながら学習できます。",
       "聞き流しにも対応した構成のため、移動中などの隙間時間にも内容を定着させられます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 103033,
     "publishedAt": "2025-06-14T11:00:06Z"
   },
@@ -27944,7 +28119,7 @@
       "試験で問われやすい重要な論点を網羅しており、基礎知識の定着に役立ちます。",
       "専門的な内容を体系的に整理しているため、宅建試験に向けた学習に適したコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 77291,
     "publishedAt": "2025-05-05T11:56:56Z"
   },
@@ -28005,7 +28180,7 @@
       "複雑な法律用語を噛み砕き、初学者でも理解しやすい構成で解説します。",
       "試験範囲を網羅的にカバーしており、基礎知識を固めるための教材に適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 62647,
     "publishedAt": "2025-07-23T14:21:38Z"
   },
@@ -28066,7 +28241,7 @@
       "複雑な法律知識を体系的に分類しており、基礎から実務的なポイントまで網羅されています。",
       "初学者向けに構成された講座として、試験範囲の重要箇所を重点的に解説する内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 61224,
     "publishedAt": "2025-05-22T15:29:21Z"
   },
@@ -28128,7 +28303,7 @@
       "自身の学習スタイルや目標とする合格時期に合わせて最適な教材を選ぶ基準を提示。",
       "膨大な参考書の中から、初心者が迷わずに必要な情報を整理できる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 59757,
     "publishedAt": "2025-05-22T10:00:33Z"
   },
@@ -28188,7 +28363,7 @@
       "一問一答形式を採用しており、通勤中などの隙間時間でも学習を進められます。",
       "過去問の傾向を踏まえた構成により、試験に向けた基礎知識を体系的に整理できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 56260,
     "publishedAt": "2025-09-30T11:01:41Z"
   },
@@ -28249,7 +28424,7 @@
       "試験で頻出する重要事項説明書や契約書のポイントを網羅的に学習できます。",
       "一問一答形式を採用しており、基礎知識を定着させたい初心者のためのコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 51471,
     "publishedAt": "2025-08-13T11:00:23Z"
   },
@@ -28310,7 +28485,7 @@
       "複雑な法律用語を噛み砕き、初学者でも理解しやすい構成で解説しています。",
       "実務的な視点も交えつつ、試験合格に必要な知識を網羅的に学べる講座です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 45729,
     "publishedAt": "2025-03-29T07:24:30Z"
   },
@@ -28371,7 +28546,7 @@
       "試験範囲の全体像を把握しながら取り組むための具体的な進捗管理法を解説。",
       "基礎から応用へと段階的にステップアップする構成で、学習の優先順位を明確にします。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 33496,
     "publishedAt": "2023-11-22T10:24:57Z"
   },
@@ -28432,7 +28607,7 @@
       "個別の用語解説に留まらず、分野全体の構造を俯瞰して理解できる構成です。",
       "基礎から積み上げるステップを意識した内容で、学習の全体像を把握するのに適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 18594,
     "publishedAt": "2024-07-09T09:18:49Z"
   },
@@ -28493,7 +28668,7 @@
       "行政書士試験の全体像を把握しつつ、効率的な進め方を整理できる内容です。",
       "学習の優先順位や時間配分の考え方など、基礎から体系的に解説されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 18491,
     "publishedAt": "2025-12-05T11:02:01Z"
   },
@@ -28554,7 +28729,7 @@
       "初心者のための基礎固めから経験者向けの効率的な進め方まで、役割別に整理されています。",
       "社労士試験に向けた8ヶ月間の工程を網羅しており、次に進むべきステップが明確です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 17401,
     "publishedAt": "2025-12-31T21:00:37Z"
   },
@@ -28615,7 +28790,7 @@
       "独学で合格を目指す際に必要な教材の選定基準や、試験の難易度が整理されています。",
       "社労士試験の全体像を把握しながら、着実に基礎から積み上げる手順が示されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 13006,
     "publishedAt": "2025-12-06T10:30:28Z"
   },
@@ -28676,7 +28851,7 @@
       "東海・北陸エリアに特化した地域性の高い問題にも対応した構成です。",
       "基礎知識の定着を促す丁寧な解説により、合格に向けた土台作りを支援します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 10368,
     "publishedAt": "2025-09-03T22:15:23Z"
   },
@@ -28738,7 +28913,7 @@
       "仕訳の仕組みや勘定科目の基礎など、初心者がまず押さえるべき要点を網羅しています。",
       "複雑な会計処理を視覚的に解説しており、全体の流れを把握するのに適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 5223,
     "publishedAt": "2025-09-01T09:01:17Z"
   },
@@ -28799,7 +28974,7 @@
       "単なる資格取得に留まらず、実務的な需要や将来の働き方を踏まえた分析が特徴です。",
       "制度や試験内容の基礎知識を整理しながら、現実的な選択肢を提示しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 422219,
     "publishedAt": "2023-07-26T09:18:47Z"
   },
@@ -28861,7 +29036,7 @@
       "数体系の定義から計算方法まで、初学者向けに順序立てて丁寧に構成されています。",
       "試験範囲の基礎知識を固めるための導入コンテンツとして適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 268818,
     "publishedAt": "2022-02-12T09:00:16Z"
   },
@@ -28921,7 +29096,7 @@
       "比較のポイントを視覚的な図を用いて具体的に示す構成が特徴的です。",
       "資格取得に向けた具体的なステップを段階を追って確認できる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 109345,
     "publishedAt": "2025-01-09T10:01:06Z"
   },
@@ -28982,7 +29157,7 @@
       "プロ講師による解説が付随しており、一問一答の形式で基礎を固められます。",
       "通勤時などの聞き流しにも適した構成で、反復学習に取り入れやすい設計です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 91118,
     "publishedAt": "2024-11-21T11:00:49Z"
   },
@@ -29043,7 +29218,7 @@
       "普通借地権における存続期間や再築のルールなど重要項目を具体的に解説。",
       "建物買取請求権などの実務的な論点を、比較構造を用いて体系的に学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 75987,
     "publishedAt": "2025-04-23T10:01:11Z"
   },
@@ -29104,7 +29279,7 @@
       "未成年者や被後見人など、個別の区分ごとに要点を押さえて解説しています。",
       "免許や資格の欠格事由にも関わる重要項目を、体系的に学べるコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 75222,
     "publishedAt": "2025-02-19T10:00:42Z"
   },
@@ -29165,7 +29340,7 @@
       "プロの講師による一問一答形式で、複雑な権利関係の知識を整理できます。",
       "過去問をベースとした構成により、試験に向けた実戦的な演習が可能です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 68669,
     "publishedAt": "2024-09-11T11:00:21Z"
   },
@@ -29227,7 +29402,7 @@
       "基礎知識から体系的に学べる構成で、合格に向けた学習の優先順位を整理します。",
       "初学者向けに必要なポイントを絞り込み、実務に近い視点を取り入れた内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 66049,
     "publishedAt": "2023-10-02T03:16:51Z"
   },
@@ -29288,7 +29463,7 @@
       "地上権や賃借権など複雑な権利関係を図解を用いて視覚的に整理しています。",
       "占有開始時の主観的な状態が権利に与える影響を具体例を交えて説明します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 63661,
     "publishedAt": "2025-03-02T10:00:47Z"
   },
@@ -29348,7 +29523,7 @@
       "初学者がまず押さえるべき基礎知識から、各科目の攻略法まで体系的に整理されています。",
       "試験範囲の広さに戸惑う段階で、どの分野に重点を置くべきか指針を得られる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 58917,
     "publishedAt": "2024-06-19T11:00:11Z"
   },
@@ -29409,7 +29584,7 @@
       "令和6年度版の仕様に準拠した解説により、正確な知識の定着を促します。",
       "ITパスポート試験に向けた基礎から応用への橋渡しを意識した構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 54351,
     "publishedAt": "2024-08-23T01:45:49Z"
   },
@@ -29470,7 +29645,7 @@
       "各科目の重要ポイントを整理しており、学習の優先順位を立てる助けとなります。",
       "初学者向けに基礎から体系的に解説されており、学習計画の策定に役立つ内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 53492,
     "publishedAt": "2024-04-19T10:00:38Z"
   },
@@ -29531,7 +29706,7 @@
       "試験範囲の重要項目を絞り込んで解説しており、効率的な学習計画の立て方に焦点を当てています。",
       "初級者向けに基本概念から丁寧に紐解くため、試験対策の第一歩として活用できる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 45348,
     "publishedAt": "2024-03-20T22:00:07Z"
   },
@@ -29592,7 +29767,7 @@
       "試験範囲の優先順位や時間配分の考え方を具体的に提示する構成が特徴です。",
       "合格に向けた長期的な進捗管理のポイントを網羅した実用的な内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 38557,
     "publishedAt": "2023-09-06T10:00:31Z"
   },
@@ -29652,7 +29827,7 @@
       "単なる知識の羅列ではなく、公共団体の種類や性質の違いを論理的に整理。",
       "実務的な視点を取り入れつつ、複雑な規定を構造的に捉えるための指針となる。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 22094,
     "publishedAt": "2025-01-03T09:00:12Z"
   },
@@ -29714,7 +29889,7 @@
       "より実践的な使い分けを考える材料として活用しやすい。",
       "仕事の合間にも見切りやすい標準的な長さなので、ロードマップ上の前後の動画とも組み合わせやすい。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 21423,
     "publishedAt": "2025-06-27T08:35:19Z"
   },
@@ -29776,7 +29951,7 @@
       "限られた時間内で特定の分野を深く掘り下げる構成により、効率的な学習を支援します。",
       "実務にも通じる税務知識を体系的に整理しており、合格に向けた知識の定着に寄与する内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 19394,
     "publishedAt": "2026-04-06T23:47:00Z"
   },
@@ -29837,7 +30012,7 @@
       "試験直前の追い込みに向けた総集編として、重要な語彙を体系的に網羅。",
       "登録販売者の資格取得を目指す初級者が、知識を定着させるための講座。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 18958,
     "publishedAt": "2025-07-29T22:00:06Z"
   },
@@ -29898,7 +30073,7 @@
       "医薬品に関する重要事項に焦点を当てた内容で、正確な理解を促す構成です。",
       "試験対策として必要な要点を抽出しており、学習の初期段階に適した講座です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 16838,
     "publishedAt": "2025-04-08T22:41:34Z"
   },
@@ -29960,7 +30135,7 @@
       "一時間の動画内で特定の分野に特化した解説を行うため効率的に学習できます。",
       "実務的な視点も交えながら、FP3級合格に必要な要点を体系的に網羅した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 14649,
     "publishedAt": "2026-04-07T10:03:00Z"
   },
@@ -30021,7 +30196,7 @@
       "複雑な権利の相関図を整理し、試験に向けた基礎知識を体系的に解説する。",
       "最新の法改正を踏まえた内容で、初学者向けの基礎固めに適した構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 14030,
     "publishedAt": "2025-08-15T09:15:01Z"
   },
@@ -30081,7 +30256,7 @@
       "最新の法改正に対応した内容で、試験に向けた知識の構造化を助ける構成です。",
       "初級者向けに設計されており、複雑な規定を平易な言葉で順序立てて解説します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 13199,
     "publishedAt": "2025-08-09T00:30:30Z"
   },
@@ -30142,7 +30317,7 @@
       "初めて受験を検討する層に向けた、制度の全体像を把握するための導入コンテンツです。",
       "合格に向けた具体的な対策のポイントが整理されており、学習計画の策定に役立ちます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 12115,
     "publishedAt": "2024-10-04T11:01:15Z"
   },
@@ -30202,7 +30377,7 @@
       "初級者向けに設計されており、複雑な規定を一つずつ丁寧に紐解く構成です。",
       "社労士試験合格に向けた基礎固めに適した、実務的な視点を含む内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 11318,
     "publishedAt": "2025-04-04T11:01:11Z"
   },
@@ -30263,7 +30438,7 @@
       "試験範囲の全体像を把握しながら、効率的な学習順序を組み立てる手助けとなります。",
       "初学者向けの内容として、基礎知識の定着に焦点を当てた構成が特徴です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 10949,
     "publishedAt": "2024-02-23T08:07:16Z"
   },
@@ -30325,7 +30500,7 @@
       "頻出問題と過去問の解説を通じて、基礎知識を体系的に定着させます。",
       "実技分野における要点を絞った構成で、試験範囲を効率よく確認できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 10586,
     "publishedAt": "2025-02-13T00:07:57Z"
   },
@@ -30385,7 +30560,7 @@
       "基礎知識から応用まで段階を追って解説するため、学習の全体像を把握できます。",
       "試験範囲の広さを意識しつつ、法的な要点を整理して学べる内容となっています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 10538,
     "publishedAt": "2026-03-03T07:31:05Z"
   },
@@ -30446,7 +30621,7 @@
       "フォント設定や段落の調整など、実務で頻出する機能を一つずつ丁寧に解説します。",
       "試験合格に必要な知識を整理しながら、操作手順を正確に把握できる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 10001,
     "publishedAt": "2025-08-01T02:46:28Z"
   },
@@ -30508,7 +30683,7 @@
       "全111種類の項目について、それぞれの定義や性質を丁寧に紐解く構成です。",
       "実務的な視点を取り入れながら、複雑な仕訳の基礎となる知識を体系化します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 8594,
     "publishedAt": "2025-08-18T09:01:09Z"
   },
@@ -30569,7 +30744,7 @@
       "独学で取り組む際の優先順位や進め方の流れを、体系的なロードマップとして提示します。",
       "初級者向けの内容として、試験合格に向けた基礎的な戦略を論理的に解説するコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 7861,
     "publishedAt": "2025-12-12T09:01:12Z"
   },
@@ -30630,7 +30805,7 @@
       "合格までの期間を区切って提示しているため、学習の優先順位が明確になります。",
       "提供される無料資料と併せて活用することで、体系的な計画を立てる一助となります。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 7162,
     "publishedAt": "2026-04-17T11:00:34Z"
   },
@@ -30691,7 +30866,7 @@
       "初学者向けに社労士試験の範囲を分解し、半年間の工程を具体化しています。",
       "独学で取り組む際の進め方や、段階的な目標設定のポイントを解説する内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 6003,
     "publishedAt": "2025-10-21T21:00:18Z"
   },
@@ -30752,7 +30927,7 @@
       "宅地建物取引士試験の合格に必要な学習範囲を体系的に整理した構成です。",
       "基礎知識から応用まで、試験までの期間に応じた学習計画を具体化しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 5740,
     "publishedAt": "2026-01-31T10:30:18Z"
   },
@@ -30812,7 +30987,7 @@
       "複雑な法規制の仕組みを噛み砕いて解説しており、学習の初期段階で全体像を把握するのに適した内容です。",
       "初級者向けに設計されているため、用語の定義を一つずつ確認しながら着実に理解を進められる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 5076,
     "publishedAt": "2025-03-09T07:35:03Z"
   },
@@ -30874,7 +31049,7 @@
       "決算書の作成プロセスや第2問の対策など、試験の重要箇所を具体的に解説します。",
       "複雑な会計概念を基礎から整理しており、初学者向けの学習コンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 368726,
     "publishedAt": "2021-11-11T12:36:14Z"
   },
@@ -30936,7 +31111,7 @@
       "支配獲得日における会計処理など、実務に即した論点を段階的に網羅しています。",
       "複雑な計算過程を分解して説明しており、簿記2級合格に向けた学習に適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 233485,
     "publishedAt": "2023-01-14T10:00:15Z"
   },
@@ -30996,7 +31171,7 @@
       "宅建業法の複雑な規定を体系的に解説しており、学習範囲を絞り込みたい層に適した内容です。",
       "独学者が効率的に知識を定着させられるよう、要点を絞った構成で構成されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 123569,
     "publishedAt": "2025-08-05T11:00:49Z"
   },
@@ -31057,7 +31232,7 @@
       "学んだ内容を具体的な作業へ移す前の復習に向いている。",
       "分割視聴でじっくり理解を深めやすい長尺講義として、次の学習テーマへ自然につなげやすい。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 115198,
     "publishedAt": "2025-08-01T10:00:37Z"
   },
@@ -31119,7 +31294,7 @@
       "応用問題特有の複雑な処理を分解し、正確な仕訳を行うための思考法を提示。",
       "上級レベルの高度な会計処理について、理論に基づいた丁寧な解説が行われている。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 108786,
     "publishedAt": "2023-01-20T11:00:16Z"
   },
@@ -31181,7 +31356,7 @@
       "試験範囲を意識した基礎的な機能から順に構成されており、学習の指針となります。",
       "資格取得を見据えた実技演習が含まれており、基礎知識を定着させる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 105818,
     "publishedAt": "2024-08-10T11:37:38Z"
   },
@@ -31243,7 +31418,7 @@
       "FP3級の合格に必要な学科内容を、音声だけで理解できる構成で解説しています。",
       "公表された最新の情報を反映しており、基礎から着実に知識を積み上げられます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 102613,
     "publishedAt": "2024-07-30T12:58:45Z"
   },
@@ -31306,7 +31481,7 @@
       "アルゴリズムやプログラミング問題の解法を論理的に紐解く構成です。",
       "基礎知識を実戦的な問題演習へと繋げるための学習プロセスが示されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 81736,
     "publishedAt": "2023-07-21T09:00:01Z"
   },
@@ -31368,7 +31543,7 @@
       "試験範囲を網羅的に整理しており、合格に必要な知識を体系的に学べます。",
       "動画を視聴するだけで学習が進む構成のため、効率的に内容を把握できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 75031,
     "publishedAt": "2024-06-15T06:00:08Z"
   },
@@ -31429,7 +31604,7 @@
       "合格に向けた優先順位を明確にすることで効率的な学習を支援します。",
       "基礎知識を整理しながら、試験対策の負担を軽減する構成のコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 61597,
     "publishedAt": "2021-07-03T06:26:33Z"
   },
@@ -31491,7 +31666,7 @@
       "仕訳の基本原理を問う15問の設問に対し、一つずつ丁寧に解説を加えています。",
       "模擬試験形式で取り組むことで、実際の試験に近い感覚で学習を進められます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 60532,
     "publishedAt": "2024-11-09T09:00:38Z"
   },
@@ -31552,7 +31727,7 @@
       "出題傾向の変化に即した解説が含まれており、試験範囲を体系的に把握できます。",
       "基礎知識から近年の注目トピックまで、一連の流れで整理された構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 49831,
     "publishedAt": "2025-05-20T10:16:36Z"
   },
@@ -31614,7 +31789,7 @@
       "基礎知識から応用への橋渡しを意識した構成で、個々の問題の正解に至る理屈を整理。",
       "初学者が必要な技術要素を体系的に捉えられるよう、丁寧な言葉選びで解説が行われています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 41818,
     "publishedAt": "2025-01-26T02:26:12Z"
   },
@@ -31676,7 +31851,7 @@
       "統一試験とネット試験の両方に対応しており、実務的な勘所を具体的に解説します。",
       "基礎知識から試験で問われやすいポイントまでを網羅した構成で学習を進められます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 37015,
     "publishedAt": "2025-05-24T10:01:10Z"
   },
@@ -31737,7 +31912,7 @@
       "社労士試験に向けた教材選びの基準を、実体験に基づいた視点で整理しています。",
       "独学で学習を進める際に、どの動画コンテンツが自身のスタイルに合うか検討する材料になります。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 36023,
     "publishedAt": "2025-01-25T11:00:42Z"
   },
@@ -31798,7 +31973,7 @@
       "試験までの期間を逆算し、挫折を防ぐための工程管理を論理的に解説します。",
       "社労士試験特有の膨大な範囲を整理し、着実に進めるための道筋を示す内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 34843,
     "publishedAt": "2025-08-25T09:36:46Z"
   },
@@ -31859,7 +32034,7 @@
       "試験範囲の広さに戸惑う初学者に向け、効率的な進め方の指針を示しています。",
       "社労士試験特有の学習の進め方や、重点を置くべきポイントが整理されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 34008,
     "publishedAt": "2025-09-02T10:55:00Z"
   },
@@ -31921,7 +32096,7 @@
       "実際の試験で問われるような多様な仕訳パターンを100問の実践形式で解説。",
       "一つひとつの取引に対する勘定科目の動きを論理的に整理する構成となっています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 31413,
     "publishedAt": "2024-09-30T09:00:34Z"
   },
@@ -31982,7 +32157,7 @@
       "経営戦略や法務など、初級者がつまずきやすい重要な概念を整理する内容です。",
       "設問ごとにポイントを絞って解説しており、試験に向けた知識の定着を助けます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 30885,
     "publishedAt": "2025-06-26T08:07:52Z"
   },
@@ -32043,7 +32218,7 @@
       "アレルギー用薬の主要な三成分に焦点を当てて解説が進められています。",
       "試験範囲における重要項目を正確に把握するための学習に適した構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 30707,
     "publishedAt": "2023-06-16T22:00:11Z"
   },
@@ -32103,7 +32278,7 @@
       "中級者向けの内容として、複雑な規定を正確に理解するための深掘りがなされています。",
       "最新の法改正を踏まえた内容が含まれており、試験に向けた実戦的な演習に適した構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 30310,
     "publishedAt": "2025-09-25T09:58:23Z"
   },
@@ -32165,7 +32340,7 @@
       "基礎知識から応用的な問題まで、出題範囲を網羅的に整理した構成です。",
       "合格に必要な技術要素を体系的に学習できるため、試験対策に適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 26505,
     "publishedAt": "2025-03-20T10:00:25Z"
   },
@@ -32226,7 +32401,7 @@
       "社労士試験に向けた導入として、法的な枠組みを俯瞰するのに適しています。",
       "複雑な規定を要素ごとに分解し、全体像を捉えながら学習を進められます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 23772,
     "publishedAt": "2025-09-05T08:01:11Z"
   },
@@ -32287,7 +32462,7 @@
       "断片的な理解を整理し、次の演習へ移りやすくしてくれる。",
       "分割視聴でじっくり理解を深めやすい長尺講義なので、ロードマップ上の前後の動画とも組み合わせやすい。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 23706,
     "publishedAt": "2023-11-21T00:24:17Z"
   },
@@ -32349,7 +32524,7 @@
       "初心者が独学でつまずきやすい勘定科目のルールを体系的に整理しています。",
       "基礎的な概念から順序立てて解説するため、効率的な学習計画の構築に役立ちます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 23389,
     "publishedAt": "2022-12-02T03:00:29Z"
   },
@@ -32410,7 +32585,7 @@
       "実務的なマナーや知識の範囲を網羅し、独学での進め方を体系的に解説します。",
       "学生や社会人など、それぞれの環境に合わせた学習計画の立て方が示されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 22792,
     "publishedAt": "2021-06-18T10:00:09Z"
   },
@@ -32471,7 +32646,7 @@
       "試験範囲の広さを考慮しつつ、効率的に知識を定着させるための進め方を提示します。",
       "基礎知識から体系的に学ぶことで、試験当日に迷わず解答を選択する手応えを得られます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 20638,
     "publishedAt": "2025-12-12T09:30:37Z"
   },
@@ -32532,7 +32707,7 @@
       "条文の断片的な知識ではなく、法制度のつながりを意識した解説が特徴です。",
       "社労士試験に向けた基礎固めとして、重要な概念を順序立てて学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 20555,
     "publishedAt": "2025-09-08T08:01:05Z"
   },
@@ -32592,7 +32767,7 @@
       "法的な仕組みや重要ポイントを一つずつ紐解くため、基礎知識の定着に役立ちます。",
       "試験に向けた初期段階で、主要な概念を正確に把握するための導入コンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 18398,
     "publishedAt": "2025-09-06T21:00:46Z"
   },
@@ -32652,7 +32827,7 @@
       "基礎力を高めるための演習として、近年の傾向に沿った重要な論点を網羅的に取り上げています。",
       "初級者向けの内容であり、特定の範囲を集中して学習したい受験生に適したコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 16231,
     "publishedAt": "2024-05-29T10:00:16Z"
   },
@@ -32713,7 +32888,7 @@
       "年齢や学歴といった属性に左右されず、試験内容に集中する戦略が示されています。",
       "登録販売者試験の基礎知識を整理し、効率的に合格圏内へ導く構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 16202,
     "publishedAt": "2025-04-04T09:01:23Z"
   },
@@ -32774,7 +32949,7 @@
       "成分が体に与える作用を具体的に紐解きながら、試験範囲を丁寧に整理します。",
       "初級者向けの内容として、専門用語を噛み砕いて体系的に学べる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 16097,
     "publishedAt": "2025-05-01T07:47:24Z"
   },
@@ -32836,7 +33011,7 @@
       "ネット試験での合格を目指す初心者が、基礎知識を体系的に学べる構成です。",
       "各項目のつながりを視覚的に捉えながら、簿記の全体像を把握できる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 15962,
     "publishedAt": "2023-10-02T05:01:45Z"
   },
@@ -32897,7 +33072,7 @@
       "初級者向けに構成された内容で、第一章の重要ポイントを丁寧に整理しています。",
       "講義と過去問の演習を組み合わせることで、独学での学習を円滑に進める構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 15816,
     "publishedAt": "2023-07-21T23:00:06Z"
   },
@@ -32958,7 +33133,7 @@
       "聞き流しでの学習に対応した構成となっており、移動中などの隙間時間にも内容を定着させやすい設計です。",
       "一問一答形式を採用しているため、基礎知識の確認や試験直前の総仕上げとして活用できるコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 15491,
     "publishedAt": "2025-09-18T09:00:33Z"
   },
@@ -33019,7 +33194,7 @@
       "成分ごとの役割や特徴を整理しており、試験に向けた知識の定着を助けます。",
       "薬機法に関連する基礎知識を体系的に学べるため、初級者の学習に適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 13349,
     "publishedAt": "2025-05-01T12:36:15Z"
   },
@@ -33082,7 +33257,7 @@
       "特定の設問に沿って計算手順を分解しており、論理的な思考過程を学べます。",
       "科目Bの試験に向けた基礎知識の定着と、解法の構造を理解するのに適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 12760,
     "publishedAt": "2024-03-15T09:00:46Z"
   },
@@ -33143,7 +33318,7 @@
       "テキスト代を抑えつつ、半年間で合格水準を目指すための具体的な学習計画を提示。",
       "初学者向けに、基礎知識から応用へのつなぎ方を体系的に整理した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 11834,
     "publishedAt": "2025-10-18T02:15:13Z"
   },
@@ -33204,7 +33379,7 @@
       "ITパスポート試験に向けた基礎知識の定着と、設問意図の理解を助けます。",
       "過去問の解説を通じて、実技や知識の体系的な整理に役立つ内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 11078,
     "publishedAt": "2025-07-03T13:50:25Z"
   },
@@ -33265,7 +33440,7 @@
       "実技試験に向けた具体的な操作手順を順序立てて解説しています。",
       "基礎から段階的に進む構成で、必要な機能を体系的に学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 11034,
     "publishedAt": "2022-10-17T09:47:29Z"
   },
@@ -33327,7 +33502,7 @@
       "総勘定元帳への転記プロセスを丁寧に紐解くことで、複式簿記の基礎構造を体系的に学べる内容です。",
       "簿記3級合格に向けた基礎知識を網羅しており、学習の初期段階で押さえるべき要点を整理して解説しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 10955,
     "publishedAt": "2024-08-19T09:00:50Z"
   },
@@ -33388,7 +33563,7 @@
       "単なる知識の羅列ではなく、実戦で役立つ学習の優先順位や進め方を提示しています。",
       "初学者が必要な情報の取捨選択を行いながら学習を進めるための指針を得られます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 10709,
     "publishedAt": "2025-10-26T11:01:40Z"
   },
@@ -33450,7 +33625,7 @@
       "実際の過去問を題材に解説を行うため、試験当日の設問への対応力が養われます。",
       "実技試験の重要ポイントを網羅的に取り上げ、正確な知識の定着を促す内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 10635,
     "publishedAt": "2024-12-23T08:00:02Z"
   },
@@ -33510,7 +33685,7 @@
       "択一式の過去問をベースに解説が行われており、基礎知識を体系的に確認できる構成です。",
       "通勤中などの隙間時間にも活用できるよう、聞き流しにも適した音声設計がなされています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 10544,
     "publishedAt": "2025-09-12T09:00:05Z"
   },
@@ -33571,7 +33746,7 @@
       "薬の成分や作用機序など、試験で問われる重要項目を専門的な視点で整理します。",
       "初級者向けの内容でありながら、実務に役立つ正確な知識を段階的に学べる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 10393,
     "publishedAt": "2025-05-01T13:06:35Z"
   },
@@ -33632,7 +33807,7 @@
       "ITパスポート試験に向けた基礎知識の整理と、各項目の定義を正確に学べます。",
       "問題番号ごとに区切られた構成により、特定の分野を集中して学習するのに適したコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 10211,
     "publishedAt": "2025-10-02T09:01:38Z"
   },
@@ -33693,7 +33868,7 @@
       "独学で合格を目指すための具体的な工程をロードマップ形式で提示しています。",
       "試験範囲の全体像を把握しながら、計画的に進めるための指針が示されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 9356,
     "publishedAt": "2024-03-08T09:00:45Z"
   },
@@ -33753,7 +33928,7 @@
       "宅建業法の複雑な規定を、初学者でも理解しやすい論理的な構成で解説します。",
       "試験範囲を網羅しつつ、個別の条文が持つ意味を丁寧に紐解く内容となっています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 8489,
     "publishedAt": "2025-01-26T08:45:04Z"
   },
@@ -33813,7 +33988,7 @@
       "年度の試験を見据えた最新の法改正内容を反映した構成です。",
       "複雑な規定を整理して提示しており、初学者でも制度の構造を把握できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 7717,
     "publishedAt": "2025-03-18T09:18:02Z"
   },
@@ -33873,7 +34048,7 @@
       "行政書士試験の基礎固めに必要な論点を、講義形式で丁寧に解説しています。",
       "法的な基本知識を段階的に積み上げたい初級者向けの学習コンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 7574,
     "publishedAt": "2024-07-18T09:08:59Z"
   },
@@ -33935,7 +34110,7 @@
       "問題文と正解の読み上げに特化しているため、移動中などの隙間時間を活用して学習できます。",
       "級合格を目指す方だけでなく、2級の基礎知識を再確認したい層にも役立つ内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 7308,
     "publishedAt": "2025-09-29T12:38:02Z"
   },
@@ -33997,7 +34172,7 @@
       "各設問の正解に至る論理的なプロセスを丁寧に紐解き、理解を深める構成です。",
       "基本情報技術者試験に向けた学習過程において、基礎固めに適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 7098,
     "publishedAt": "2025-08-15T08:00:44Z"
   },
@@ -34059,7 +34234,7 @@
       "一連の流れをWeb形式で分解して見せるため、基礎知識の定着に役立ちます。",
       "試験範囲の重要ポイントを絞り込んで解説しており、学習の優先順位が明確です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 7009,
     "publishedAt": "2025-03-28T03:04:43Z"
   },
@@ -34119,7 +34294,7 @@
       "複雑な法規の要点を整理し、試験で問われやすい箇所に焦点を当てています。",
       "基礎知識の定着を目指す初級者が、正確な知識を積み上げるための構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 5569,
     "publishedAt": "2026-03-13T11:01:20Z"
   },
@@ -34180,7 +34355,7 @@
       "特殊引火物から動植物油まで、各物質の性質の違いを体系的に解説する構成です。",
       "短時間で要点を把握できるため、試験直前の確認や基礎知識の整理に適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 174985,
     "publishedAt": "2025-03-20T09:00:39Z"
   },
@@ -34243,7 +34418,7 @@
       "反り爪や土台の整え方など、実務で直面する具体的な課題に焦点を当てています。",
       "ベースジェルの役割を正しく理解しながら進められるため、基礎の定着に役立ちます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 115853,
     "publishedAt": "2025-06-14T11:05:06Z"
   },
@@ -34303,7 +34478,7 @@
       "AI検定の合格を見据えた知識の積み上げ方を具体的に解説する内容です。",
       "複雑な技術要素を噛み砕き、学習者が次に進むべき道筋を明確に示しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 3728,
     "publishedAt": "2025-05-31T10:00:22Z"
   },
@@ -34364,7 +34539,7 @@
       "法規の重要ポイントを体系的に整理しており、試験直前の確認に適しています。",
       "聞き流しで学習できる構成のため、移動中などの隙間時間にも活用できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 331310,
     "publishedAt": "2022-02-13T23:02:48Z"
   },
@@ -34425,7 +34600,7 @@
       "試験直前の最終確認や内容の再確認に適した、網羅的な構成が特徴です。",
       "基礎知識から応用まで体系的に整理されており、学習の全体像を把握できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 206356,
     "publishedAt": "2021-12-31T22:02:49Z"
   },
@@ -34485,7 +34660,7 @@
       "改正事項の要点を絞って解説しており、最新の法改正への対応に役立ちます。",
       "初級者向けの内容で構成されており、近年の動向を把握するのに適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 146144,
     "publishedAt": "2025-04-04T09:00:00Z"
   },
@@ -34546,7 +34721,7 @@
       "サロン級の仕上がりを目指すための具体的な手順が丁寧に順序立てて示されています。",
       "ジェルネイル特有の扱い方や注意点を網羅しており、基礎を固めるのに適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 134716,
     "publishedAt": "2025-03-31T07:29:29Z"
   },
@@ -34607,7 +34782,7 @@
       "試験範囲の「物理と化学」に焦点を絞り、初学者向けの構成で段階的に知識を積み上げます。",
       "全5回の講座形式で進むため、基礎から試験対策に必要なポイントまで着実に学習を進められます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 95660,
     "publishedAt": "2023-01-29T11:30:10Z"
   },
@@ -34668,7 +34843,7 @@
       "図解や具体例を交えながら、複雑な計算問題の解法を順序立てて提示します。",
       "年度の試験傾向に合わせ、必要な知識を効率的に学習できる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 55133,
     "publishedAt": "2026-01-01T02:58:22Z"
   },
@@ -34728,7 +34903,7 @@
       "複雑な制度や法律の仕組みを、図解や具体例を用いて平易な言葉で解説します。",
       "合格に向けた基礎固めとして、重要ポイントを体系的に学べる構成となっています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 53153,
     "publishedAt": "2024-11-09T10:00:06Z"
   },
@@ -34789,7 +34964,7 @@
       "複雑な法制度の仕組みを平易な言葉で紐解き、重要なポイントに焦点を当てて解説します。",
       "初学者向けに構成されたコンテンツとして、試験に向けた知識の土台作りを支援します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 50425,
     "publishedAt": "2024-11-13T09:30:06Z"
   },
@@ -34850,7 +35025,7 @@
       "法令の細かな規定を一つずつ丁寧に紐解くため、基礎知識の定着に役立ちます。",
       "試験範囲を網羅的にカバーしており、資格取得に向けた学習の指針となります。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 49167,
     "publishedAt": "2025-02-11T11:00:06Z"
   },
@@ -34911,7 +35086,7 @@
       "法令の規定内容を一つずつ丁寧に紐解く構成で、基礎知識の定着を助けます。",
       "専門用語の定義を正確に捉えたい初級者が、制度の全体像を把握するのに適したコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 46449,
     "publishedAt": "2025-02-20T09:00:26Z"
   },
@@ -34972,7 +35147,7 @@
       "試験範囲を網羅するための参考書の選定基準や活用法を具体的に提示。",
       "基礎知識の習得から試験対策への移行まで、段階的な学習工程が整理されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 22812,
     "publishedAt": "2025-12-27T10:00:30Z"
   },
@@ -35033,7 +35208,7 @@
       "各科目の重要ポイントに焦点を当てた解説で、学習計画の立案に役立ちます。",
       "初学者向けに基礎知識から丁寧に紐解くため、学習の第一歩に適した構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 14915,
     "publishedAt": "2025-11-21T09:00:33Z"
   },
@@ -35094,7 +35269,7 @@
       "ネイリスト検定2級の範囲に沿った工程を、音声による解説と共に確認できます。",
       "実技の動きを視覚的に捉えながら、基礎的な技術の習熟度を確認できる構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 14883,
     "publishedAt": "2025-07-04T11:00:08Z"
   },
@@ -35155,7 +35330,7 @@
       "コンピュータの仕組みやネットワークの基本概念など、広範な範囲を網羅しています。",
       "初学者向けに設計されており、試験合格に向けた知識の整理に役立つ構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 14491,
     "publishedAt": "2025-09-21T13:30:40Z"
   },
@@ -35216,7 +35391,7 @@
       "基礎知識から合格に向けた具体的な学習手順までを一通り網羅しています。",
       "試験の全体像を把握しながら、段階的に理解を深められる構成のコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 4983,
     "publishedAt": "2026-04-20T06:00:20Z"
   },
@@ -35277,7 +35452,7 @@
       "最新の試験動向を踏まえつつ、具体的な学習計画の立て方を段階的に提示します。",
       "AI技術の基礎知識から資格取得に向けた進め方までを体系的に整理した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 4260,
     "publishedAt": "2026-01-02T04:00:56Z"
   },
@@ -35338,7 +35513,7 @@
       "正しい塗り方のコツを具体的に提示しており、基礎の定着に役立つ内容です。",
       "プロの視点から実用的なテクニックを紐解くため、練習の指針として活用できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 1803531,
     "publishedAt": "2022-09-10T11:00:11Z"
   },
@@ -35398,7 +35573,7 @@
       "オームの法則や電圧、電流といった基本要素を16の工程で分解。",
       "電験三種の学習に向けた基礎固めに適した構成の教育コンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 513591,
     "publishedAt": "2024-02-09T11:00:32Z"
   },
@@ -35459,7 +35634,7 @@
       "試験範囲を網羅的に整理しており、法令のポイントを体系的に学べます。",
       "複雑な規定を項目ごとに分類して解説するため、知識の整理に役立ちます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 409499,
     "publishedAt": "2025-01-08T12:27:48Z"
   },
@@ -35520,7 +35695,7 @@
       "長時間集中するための環境作りや、活用する筆記用具などの備品も紹介されます。",
       "管理栄養士試験に向けた基礎的な学習計画を立てる際の参考に適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 150795,
     "publishedAt": "2025-04-26T09:00:06Z"
   },
@@ -35581,7 +35756,7 @@
       "管理栄養士国家試験に向けた基礎知識の定着を目的とした実用的なコンテンツ。",
       "聞き流し形式を採用しており、移動中や隙間時間の学習にも活用できる。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 67956,
     "publishedAt": "2024-02-20T08:00:05Z"
   },
@@ -35642,7 +35817,7 @@
       "試験範囲のポイントを絞り込み、初学者向けに平易な言葉で解説しています。",
       "年度の試験を見据え、実務に役立つ知識を基礎から丁寧に積み上げます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 49749,
     "publishedAt": "2025-11-12T08:00:56Z"
   },
@@ -35703,7 +35878,7 @@
       "過去の出題傾向を踏まえた解説に加え、例題を用いた演習も組み込まれています。",
       "基礎知識の整理から合格に向けた重点的な学習ポイントまで網羅した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 45118,
     "publishedAt": "2023-01-15T02:50:06Z"
   },
@@ -35764,7 +35939,7 @@
       "試験範囲の重要事項を網羅的に解説しており、基礎知識の習得に適した構成です。",
       "法規や実務に即した具体的な内容が含まれており、資格取得に向けた学習を支えます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 39911,
     "publishedAt": "2026-01-01T02:57:55Z"
   },
@@ -35825,7 +36000,7 @@
       "物理化学の複雑な概念を平易な言葉で解説し、学習の土台を築きます。",
       "合格に必要な要点を絞り込み、初学者向けに構成された内容が特徴です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 36972,
     "publishedAt": "2025-12-07T08:01:10Z"
   },
@@ -35885,7 +36060,7 @@
       "試験で頻出する重要なポイントに絞って構成されており、学習の優先順位が明確です。",
       "基礎知識を整理しながら進められるため、初学者向けの導入コンテンツとして適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 31837,
     "publishedAt": "2024-11-29T09:00:19Z"
   },
@@ -35946,7 +36121,7 @@
       "乙4の試験内容に即した構成で、専門用語を噛み砕いて解説しています。",
       "図解や丁寧な解説により、初学者でも体系的に理解が進む設計です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 29357,
     "publishedAt": "2025-12-21T01:01:18Z"
   },
@@ -36007,7 +36182,7 @@
       "複雑な計算問題や化学反応の仕組みを、初学者向けの平易な言葉で解説。",
       "乙4試験に向けた基礎固めに必要な知識を、論理的な構成で網羅的に提示。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 21873,
     "publishedAt": "2025-12-14T01:00:03Z"
   },
@@ -36069,7 +36244,7 @@
       "初学者向けに専門用語を噛み砕き、数式の意味を論理的に紐解く構成です。",
       "第一回の講義として、合格に向けた学習の土台を作るための基礎知識を網羅します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 12949,
     "publishedAt": "2024-07-26T08:01:50Z"
   },
@@ -36130,7 +36305,7 @@
       "図解や具体例を交えながら、法律用語の定義から論理的な構造まで丁寧に解説します。",
       "初級者向けに基礎から積み上げる構成のため、体系的に知識を整理したい方に適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 6885,
     "publishedAt": "2024-12-14T07:18:51Z"
   },
@@ -36191,7 +36366,7 @@
       "G検定の基礎知識を固めるための基礎知識として構成されています。",
       "歴史的な流れを追うことで、技術の背景にある文脈を把握できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 5527,
     "publishedAt": "2026-01-03T10:01:25Z"
   },
@@ -36252,7 +36427,7 @@
       "試験概要と合格に向けた戦略を体系的に解説しており、学習計画の立案に役立ちます。",
       "初学者向けの内容として構成されており、試験への第一歩を踏み出すための指針となります。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 5289,
     "publishedAt": "2025-12-26T10:01:45Z"
   },
@@ -36312,7 +36487,7 @@
       "単なる知識の詰め込みではなく、効率的な進め方や優先順位の付け方を解説する内容です。",
       "初学者が必要なポイントを整理して学べるよう、体系的な構成でまとめられています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 4674,
     "publishedAt": "2024-09-16T09:00:21Z"
   },
@@ -36373,7 +36548,7 @@
       "第一章の内容を丁寧に紐解き、試験に向けた知識の土台を作る内容です。",
       "聞き流しにも適した構成で、基礎から着実に理解を深められるコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 4098,
     "publishedAt": "2026-01-17T10:45:03Z"
   },
@@ -36434,7 +36609,7 @@
       "社労士試験の広範な範囲を整理し、効率的な知識の定着に焦点を当てた内容です。",
       "合格体験記に基づき、基本事項を重点的に攻略するための視点が示されています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 4009,
     "publishedAt": "2026-04-11T11:01:29Z"
   },
@@ -36495,7 +36670,7 @@
       "G検定に向けた学習項目を整理しており、技術的な論点を正確に把握できます。",
       "試験範囲に含まれる重要な問題群を網羅し、基礎知識を深める構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 3999,
     "publishedAt": "2026-01-10T10:00:54Z"
   },
@@ -36556,7 +36731,7 @@
       "G検定の試験範囲を意識した構成で、基礎概念を理論的に整理するのに適した内容です。",
       "専門用語の定義を正確に捉えたい初学者に向けた、基礎固めのための学習コンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 3396,
     "publishedAt": "2026-02-28T10:01:20Z"
   },
@@ -36617,7 +36792,7 @@
       "独学で進める際の工程をロードマップとして可視化し、計画的に取り組めます。",
       "合格に向けた学習の流れを体系的に解説しており、初級者が全体像を把握できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 3028,
     "publishedAt": "2025-11-17T10:54:44Z"
   },
@@ -36678,7 +36853,7 @@
       "G検定の試験範囲に即した内容で、数学的な背景を整理しながら丁寧に解説する構成です。",
       "数式の意味を一つずつ確認しながら進めるため、基礎知識を体系的に整理したい層に適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 2801,
     "publishedAt": "2026-03-07T10:00:33Z"
   },
@@ -36739,7 +36914,7 @@
       "複雑な概念を体系的に解説しており、試験範囲を正確に把握する助けとなります。",
       "基礎から応用まで重要なポイントを網羅した、学習の指針となるコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 2595,
     "publishedAt": "2026-03-01T15:00:39Z"
   },
@@ -36800,7 +36975,7 @@
       "試験範囲の優先順位や効率的な学習順序を整理した構成が特徴です。",
       "合格に向けた道のりを可視化しており、学習計画の指針として活用できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 2235,
     "publishedAt": "2025-06-15T02:00:03Z"
   },
@@ -36862,7 +37037,7 @@
       "音楽の実技を含む試験範囲の広さを、実際の学習計画と共に具体的に提示します。",
       "合格に向けた学習の進め方や、専門的な内容への向き合い方を客観的に学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 3017855,
     "publishedAt": "2024-03-15T08:00:05Z"
   },
@@ -36923,7 +37098,7 @@
       "合否の分かれ目となる要点を整理しており、基礎知識を定着させる構成です。",
       "試験範囲の核心部分を抽出して解説しているため、効率的な学習が進みます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 127444,
     "publishedAt": "2022-09-07T14:53:07Z"
   },
@@ -36983,7 +37158,7 @@
       "行政書士試験の初級段階において、複雑な法制度を整理して理解するのに適した構成です。",
       "条文の趣旨に沿って各制度の関係性を紐解くため、基礎知識の定着に役立つコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 65499,
     "publishedAt": "2025-04-11T19:30:12Z"
   },
@@ -37044,7 +37219,7 @@
       "試験範囲の広さを考慮した効率的な進め方や、合格に向けた時間配分のコツを解説。",
       "初学者向けに基礎から体系的に取り組むためのポイントを整理した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 60249,
     "publishedAt": "2024-07-19T10:00:00Z"
   },
@@ -37105,7 +37280,7 @@
       "医療事務の初歩として必要な知識を網羅しており、実務への備えに役立ちます。",
       "専門用語を噛み砕いて説明しているため、学習の初期段階で視聴するのに適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 43817,
     "publishedAt": "2023-04-01T12:13:01Z"
   },
@@ -37165,7 +37340,7 @@
       "複雑な制度の構造を整理し、試験に向けた基礎知識の定着を助けます。",
       "初学者向けに重要なポイントを絞って構成されており、学習の指針となります。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 38967,
     "publishedAt": "2024-12-06T09:00:47Z"
   },
@@ -37226,7 +37401,7 @@
       "試験範囲に即した内容に絞り込み、移動中などの隙間時間での学習に適した構成です。",
       "基礎知識の定着を目指す初級者が、用語の成り立ちを体系的に把握できる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 29735,
     "publishedAt": "2025-12-13T13:47:06Z"
   },
@@ -37287,7 +37462,7 @@
       "合格に必要な重要項目の要点を絞り込み、効率的な学習をサポートする構成です。",
       "移動中などの隙間時間にも取り入れやすいよう、聴取に適した解説内容となっています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 29359,
     "publishedAt": "2025-12-13T12:07:28Z"
   },
@@ -37348,7 +37523,7 @@
       "最新の試験範囲に基づき、合格に必要な知識を体系的に網羅しています。",
       "基礎から応用まで段階を踏んで解説するため、学習の全体像を把握可能です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 28929,
     "publishedAt": "2025-12-19T10:36:02Z"
   },
@@ -37409,7 +37584,7 @@
       "薬理作用や分類など、試験に出題されやすい重要ポイントを正確に整理しています。",
       "基礎知識から段階的に理解を深められるため、学習の初期段階に適した内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 23779,
     "publishedAt": "2025-01-05T12:00:14Z"
   },
@@ -37470,7 +37645,7 @@
       "動向に関する重要なトピックに焦点を当てて解説しているため、効率的な学習が可能です。",
       "特定の試験範囲に即した構成となっており、短期間で要点を把握したい層に適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 22313,
     "publishedAt": "2025-12-14T07:19:58Z"
   },
@@ -37532,7 +37707,7 @@
       "令和7年度の試験に向けた対策として、実体験に基づく勉強法を解説します。",
       "仕事や育児と両立しながら合格を目指す方のための実践的な内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 18041,
     "publishedAt": "2025-08-10T11:00:35Z"
   },
@@ -37593,7 +37768,7 @@
       "ガイドライン等の重要項目に焦点を当て、要点を整理した構成です。",
       "合格に向けた知識の定着を目的とした、効率的な聞き流し学習に適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 17233,
     "publishedAt": "2025-12-15T03:12:40Z"
   },
@@ -37655,7 +37830,7 @@
       "複雑な診療報酬の算定ルールを整理し、実務の基礎知識を体系的に提供。",
       "専門用語を抑えつつ、初心者が制度の全体像を把握するための構成となっている。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 15954,
     "publishedAt": "2024-10-25T08:56:31Z"
   },
@@ -37715,7 +37890,7 @@
       "特に難所の認知症に関する知識を重点的に掘り下げた内容となっています。",
       "専門的な内容を体系的に整理しており、高度な試験対策に適した講座です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 15839,
     "publishedAt": "2025-10-28T09:30:27Z"
   },
@@ -37776,7 +37951,7 @@
       "令和7年度の試験を見据え、複雑な論点を一つずつ丁寧に紐解く構成です。",
       "初級者向けに設計されており、特定の難所を重点的に理解できる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 15111,
     "publishedAt": "2025-08-26T10:16:03Z"
   },
@@ -37837,7 +38012,7 @@
       "予想問題に解答の読み上げが付随しており、移動中などの隙間時間にも活用可能です。",
       "初級者向けの内容として構成されており、基礎知識の定着を助ける内容となっています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 13121,
     "publishedAt": "2025-09-01T00:31:59Z"
   },
@@ -37898,7 +38073,7 @@
       "最新の試験傾向に基づき、重点的に学習すべき項目を具体的に解説する内容です。",
       "基礎知識から体系的に理解を深めたい受験生向けの、実用的な学習指針を提示します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 11720,
     "publishedAt": "2025-09-30T12:00:26Z"
   },
@@ -37959,7 +38134,7 @@
       "重要なポイントを重点的に解説しており、試験対策の基礎を固められます。",
       "試験範囲を意識した構成で、効率よく知識を整理したい際に適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 11539,
     "publishedAt": "2024-02-10T22:30:07Z"
   },
@@ -38021,7 +38196,7 @@
       "試験範囲を網羅するためのノート術など、独学で必要な知識の整理法が示されています。",
       "保育士試験の基礎知識から対策まで、実務に即した内容を体系的に学べるコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 11366,
     "publishedAt": "2025-01-10T11:00:51Z"
   },
@@ -38082,7 +38257,7 @@
       "移動中や隙間時間でも内容を把握できるよう、聞き流しに適した構成が特徴です。",
       "第36回までの過去問を体系的に整理しており、中級者向けの演習として活用できます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 10795,
     "publishedAt": "2025-05-03T22:00:10Z"
   },
@@ -38145,7 +38320,7 @@
       "初心者が学習の優先順位を立てやすいよう、試験範囲を体系的に解説する内容です。",
       "資格取得に向けた具体的な勉強法に焦点を当て、効率的な学習を支援します。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 6066,
     "publishedAt": "2024-04-06T01:04:10Z"
   },
@@ -38207,7 +38382,7 @@
       "合格に必要な知識の優先順位を整理し、効率的な進め方を提示しています。",
       "試験範囲を意識した計画的な学習法を、基礎から丁寧に解説する内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 5680,
     "publishedAt": "2025-10-31T10:51:52Z"
   },
@@ -38268,7 +38443,7 @@
       "第3章に焦点を当て、具体的なアルゴリズムの仕組みを論理的に整理した内容です。",
       "試験範囲を意識した構成のため、特定の技術要素を重点的に学びたい際に適しています。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 5012,
     "publishedAt": "2026-02-01T02:15:04Z"
   },
@@ -38329,7 +38504,7 @@
       "生成AIパスポートの基礎概念から実務への応用までを体系的に解説します。",
       "直前期に視聴することで、試験範囲の全体像を正確に把握できる内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 4375,
     "publishedAt": "2025-09-23T11:00:53Z"
   },
@@ -38390,7 +38565,7 @@
       "専門用語や重要なポイントを絞って解説しており、学習の全体像を把握できます。",
       "初学者向けの内容として、試験に向けた基礎固めに適したコンテンツです。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 4189,
     "publishedAt": "2025-09-06T10:00:35Z"
   },
@@ -38451,7 +38626,7 @@
       "移動中や家事の合間など、隙間時間を活用して聴き進められる構成です。",
       "午前問題の重要なポイントを整理しており、基礎知識の定着に役立ちます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 4160,
     "publishedAt": "2025-01-19T08:18:12Z"
   },
@@ -38511,7 +38686,7 @@
       "複雑な権利関係を基礎から段階的に紐解き、法的な仕組みを正確に捉えられる構成です。",
       "法律用語の定義を丁寧に解説しており、資格試験に向けた知識の定着を助けます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 3794,
     "publishedAt": "2025-09-04T19:00:37Z"
   },
@@ -38572,7 +38747,7 @@
       "第4章に焦点を当てた内容であり、試験範囲の要点を体系的に学習できます。",
       "専門用語を噛み砕いて解説しており、初学者でも構造を捉えやすい内容です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 3326,
     "publishedAt": "2026-03-01T02:00:18Z"
   },
@@ -38633,7 +38808,7 @@
       "実際の操作手順に沿って、変更履歴の管理や比較などの機能を具体的に解説します。",
       "初級者向けの内容ながら、試験で問われるポイントを正確に押さえた構成です。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 3098,
     "publishedAt": "2025-08-01T02:45:30Z"
   },
@@ -38694,7 +38869,7 @@
       "ITパスポート試験の重要な基礎知識を整理し、個別の問題ごとに丁寧に解説します。",
       "中級者向けの内容を含みつつ、近年の動向を押さえた体系的な構成で進められます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 2968,
     "publishedAt": "2025-10-01T05:34:49Z"
   },
@@ -38756,7 +38931,7 @@
       "MOS試験の出題傾向に沿った操作手順を解説しており、効率的な学習が可能です。",
       "合格に向けたポイントを整理しており、初学者向けの基礎知識を体系的に学べます。"
     ],
-    "scoreStatus": "provisional",
+    "scoreStatus": "confirmed",
     "viewCount": 2116,
     "publishedAt": "2025-12-31T08:00:45Z"
   }

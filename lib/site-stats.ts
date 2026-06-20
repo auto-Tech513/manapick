@@ -9,7 +9,7 @@ type Genre = {
 type Video = {
   genre: string;
   sub: string;
-  scoreStatus?: "confirmed" | "provisional";
+  scoreStatus?: "confirmed";
 };
 
 const genres = genresData as Genre[];

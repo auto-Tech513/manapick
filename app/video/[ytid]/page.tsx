@@ -13,7 +13,6 @@ import {
   isoDuration,
   relatedVideos,
   scoreConfirmationDate,
-  scoreStatus,
   scoreText,
   videoAudienceText,
   videoAxisCommentary,
@@ -85,11 +84,9 @@ export default async function VideoPage({ params }: VideoPageProps) {
   const channel = displayChannel(video);
   const related = relatedVideos(video);
   const pageUrl = absoluteUrl(videoPath(video.ytid));
-  const isConfirmed = scoreStatus(video) === "confirmed";
   const confirmationDate = scoreConfirmationDate(video);
-  const scoreConfirmationText = isConfirmed
-    ? "運営者が視聴のうえ確認済みのスコアです" + (confirmationDate ? "(確認日: " + confirmationDate + ")" : "")
-    : "運営の視聴確認済みは一部。その他は採点基準に沿った自動スコアです。";
+  const scoreConfirmationText =
+    "運営者が視聴のうえ確認済みのスコアです" + (confirmationDate ? "(確認日: " + confirmationDate + ")" : "");
   const positionText = videoPositionText(video);
   const audienceText = videoAudienceText(video);
   const learningPoints = videoLearningPoints(video);
@@ -178,13 +175,12 @@ export default async function VideoPage({ params }: VideoPageProps) {
             <span>{video.minutes}分</span>
           </div>
           {channel ? <p className="video-channel">チャンネル: {channel}</p> : null}
-          <div className={isConfirmed ? "video-score-card is-confirmed" : "video-score-card"}>
-            <p>{isConfirmed ? scoreText(video) + " ✓ 確認済" : "Manapick自動スコア " + scoreText(video)}</p>
-            <span>{isConfirmed ? "運営者が視聴確認済み" : "7軸・35点満点"}</span>
+          <div className="video-score-card is-confirmed">
+            <p>{scoreText(video) + " ✓ 運営者 視聴確認済"}</p>
+            <span>運営者が視聴確認済み</span>
           </div>
-          <p className={isConfirmed ? "video-score-note is-confirmed" : "video-score-note"}>
+          <p className="video-score-note is-confirmed">
             {scoreConfirmationText}
-            {!isConfirmed ? <>（<a href="/about-score/">採点方法</a>）</> : null}
           </p>
           <ol className="video-review-list">
             {video.review.map((line, index) => (

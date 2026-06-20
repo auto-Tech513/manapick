@@ -8,7 +8,6 @@ import {
   absoluteUrl,
   genreDisplayName,
   genreLabel,
-  scoreStatus,
   scoreText,
   videoPath,
   youtubeThumbnail,
@@ -559,8 +558,8 @@ function GuideVideoCard({ video, why }: { video: Video; why: string }) {
           <span>{genreLabel(video.genre)}</span>
           <a className={guideScoreClass(video)} href="/about-score/" aria-label={scoreText(video) + "。採点方法を開く"}>
             <span>{scoreText(video)}</span>
-            <span className={`score-badge-status is-${scoreStatus(video)}`}>
-              {scoreStatus(video) === "confirmed" ? "✓ 確認済" : "暫定"}
+            <span className="score-badge-status is-confirmed">
+              ✓ 運営者 視聴確認済
             </span>
           </a>
         </div>
@@ -608,7 +607,6 @@ function GuideLevelBadge({ level }: { level: Video["level"] }) {
 }
 
 function guideScoreClass(video: Video) {
-  if (scoreStatus(video) === "provisional") return "score-badge is-provisional is-compact";
   if (video.score === null) return "score-badge is-empty is-compact";
   if (video.score >= 28) return "score-badge is-confirmed is-high is-compact";
   if (video.score >= 20) return "score-badge is-confirmed is-mid is-compact";

@@ -3,7 +3,7 @@ import BrandLogo, { BrandMark } from "@/components/BrandLogo";
 import { absoluteUrl } from "@/lib/manapick";
 
 const scorePageTitle = "採点方法 | Manapick";
-const scorePageDescription = "Manapickスコアの考え方、確認済と暫定の違い、除外方針を説明します。";
+const scorePageDescription = "Manapickスコアの考え方、全件視聴確認済みの方針、除外方針を説明します。";
 
 export const metadata: Metadata = {
   title: scorePageTitle,
@@ -49,10 +49,10 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "確認済と暫定の違いは何ですか？",
+      name: "掲載動画はすべて視聴確認済みですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "確認済は運営者が動画本編を視聴し、タイトル・内容の一致と品質を確認した状態です。暫定は自動採点やメタデータをもとにした候補で、順次、人の視聴確認で確定します。"
+        text: "はい。掲載している全動画を、運営者が実際に視聴し、タイトル・内容の一致と品質を確認したうえで、7軸35点で採点・確認しています。"
       }
     },
     {
@@ -100,21 +100,21 @@ export default function AboutScorePage() {
         <p className="section-eyebrow">Manapickスコア</p>
         <h1>採点方法</h1>
         <p>
-          Manapickは、学習動画を過度に大きく見せず、選定理由と確認状況を分けて表示します。
-          スコアは7軸×5点の35点満点です。
+          Manapickは、掲載している全動画を、運営者が実際に視聴し、7軸35点で採点・確認しています。
+          学習動画を過度に大きく見せず、選定理由とスコアの根拠を分かりやすく表示します。
         </p>
       </section>
 
       <section className="score-explain-grid" aria-label="スコア表示の種類">
         <article>
-          <span className="score-page-badge confirmed">31/35 ✓ 確認済</span>
-          <h2>確認済</h2>
-          <p>運営者が動画本編を視聴し、タイトル・内容の一致と品質を確認したうえで公開している状態です。</p>
+          <span className="score-page-badge confirmed">31/35 ✓ 運営者 視聴確認済</span>
+          <h2>全件視聴確認済み</h2>
+          <p>運営者が動画本編を視聴し、タイトル・内容の一致と品質を確認したうえで公開しています。</p>
         </article>
         <article>
-          <span className="score-page-badge provisional">31/35 暫定</span>
-          <h2>暫定</h2>
-          <p>自動採点やメタデータをもとにした候補です。順次、人の視聴確認で確定します。</p>
+          <span className="score-page-badge confirmed">7軸×5点</span>
+          <h2>35点満点で採点</h2>
+          <p>実用性、正確性・鮮度、分かりやすさなど、社会人が学び直しに使いやすいかを7軸で見ています。</p>
         </article>
       </section>
 

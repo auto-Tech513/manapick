@@ -31,7 +31,7 @@ type AxisScore = {
   note: string;
 };
 
-type ScoreStatus = "confirmed" | "provisional";
+type ScoreStatus = "confirmed";
 
 type Video = {
   genre: string;
@@ -181,30 +181,24 @@ function statusLabel(status: GenreStatus) {
   return "近日公開";
 }
 
-function scoreStatus(video: Video): ScoreStatus {
-  return video.scoreStatus === "confirmed" ? "confirmed" : "provisional";
+function scoreStatus(_video: Video): ScoreStatus {
+  return "confirmed";
 }
 
 function scoreText(video: Video) {
   return video.score === null ? "スコア準備中" : video.score + "/35";
 }
 
-function scoreStatusText(video: Video) {
-  return scoreStatus(video) === "confirmed" ? "✓ 確認済" : "暫定";
+function scoreStatusText(_video: Video) {
+  return "✓ 運営者 視聴確認済";
 }
 
 function scoreConfirmationText(video: Video) {
-  if (scoreStatus(video) !== "confirmed") {
-    return "Manapickスコアは公開前の視聴確認で確定します。";
-  }
-
   const date = video.scoreConfirmedAt ? video.scoreConfirmedAt.replace(/-/g, "/") : null;
   return "運営者が視聴のうえ確認済みのスコアです" + (date ? "(確認日: " + date + ")" : "");
 }
 
 function scoreClasses(video: Video) {
-  const status = scoreStatus(video);
-  if (status === "provisional") return "score-badge is-provisional";
   if (video.score === null) return "score-badge is-empty";
   if (video.score >= 28) return "score-badge is-confirmed is-high";
   if (video.score >= 23) return "score-badge is-confirmed is-mid";
@@ -1255,7 +1249,7 @@ export default function ManapickApp() {
 
             <p className="hero-proof">
               公開中{siteStats.publishedGenreCount}ジャンル
-              {confirmedCount > 0 ? " ／ 確認済" + confirmedCount + "本" : ""}
+              {confirmedCount > 0 ? " ／ 視聴確認済" + confirmedCount + "本" : ""}
               {" ／ 順次拡大"}
             </p>
           </div>
@@ -1958,7 +1952,7 @@ function ProfessionRouteSection({
                     sizes="(min-width: 1180px) 360px, (min-width: 768px) 44vw, 78vw"
                     loading="lazy"
                   />
-                  <span className={scoreStatus(firstVideo) === "confirmed" ? "profession-score-badge is-confirmed" : "profession-score-badge"}>
+                  <span className="profession-score-badge is-confirmed">
                     {scoreText(firstVideo)}
                   </span>
                 </span>
@@ -2464,7 +2458,7 @@ function HeroTrustStats({ totalVideos, confirmedCount }: { totalVideos: number; 
 
   if (confirmedCount > 0) {
     stats.push({
-      label: "✓ 視聴確認済" + confirmedCount + "本",
+      label: "✓ 視聴確認済 " + confirmedCount + "本",
       icon: (
         <svg viewBox="0 0 24 24" role="presentation" focusable="false">
           <path d="M20 6 9 17l-5-5" />
@@ -2713,7 +2707,7 @@ function FeaturedVideoCard({ video }: { video: Video }) {
 
 function ScoreBadge({ video, compact = false }: { video: Video; compact?: boolean }) {
   const status = scoreStatus(video);
-  const label = status === "confirmed" ? scoreText(video) + " ✓ 確認済" : scoreText(video) + " 暫定";
+  const label = scoreText(video) + " ✓ 運営者 視聴確認済";
   const statusLabel = scoreStatusText(video);
 
   return (
