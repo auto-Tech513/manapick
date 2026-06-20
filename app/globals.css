@@ -2811,24 +2811,49 @@ img {
 
 @media (min-width: 981px) {
   .retention-band-inner {
-    grid-template-columns: minmax(300px, 1.05fr) minmax(292px, 0.78fr) max-content;
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 12px;
     align-items: center;
+    justify-content: space-between;
+  }
+
+  .today-pick-chip {
+    flex: 1 1 310px;
+    max-width: 420px;
   }
 
   .retention-stats {
-    gap: 6px;
+    display: flex;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    align-items: center;
+    justify-content: center;
+    min-width: min(100%, 410px);
+  }
+
+  .retention-stat {
+    flex: 0 0 auto;
+    min-width: max-content;
+    white-space: nowrap;
+  }
+
+  .retention-stats strong,
+  .retention-stats small {
+    white-space: nowrap;
   }
 
   .retention-actions {
-    width: max-content;
-    max-width: none;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
     flex-wrap: wrap;
     gap: 5px 7px;
     align-items: center;
     align-content: center;
     justify-content: flex-end;
-    justify-self: end;
+    margin-left: auto;
   }
 
   .retention-actions > :not(p) {
@@ -4268,6 +4293,10 @@ img {
   gap: 10px;
 }
 
+.my-badge-grid {
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
 .my-badge {
   display: grid;
   gap: 7px;
@@ -4318,9 +4347,13 @@ img {
   gap: 10px;
 }
 
+.my-progress-list {
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+}
+
 .my-progress-row {
   display: grid;
-  grid-template-columns: minmax(150px, 0.8fr) minmax(0, 1fr) 46px;
+  grid-template-columns: minmax(110px, 0.82fr) minmax(0, 1fr) 44px;
   gap: 10px;
   align-items: center;
   border: 1px solid var(--color-line);
@@ -4362,7 +4395,7 @@ img {
 }
 
 .my-guide-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .my-guide-card {
@@ -4461,20 +4494,106 @@ img {
   font-weight: 950;
 }
 
-.my-page-toc,
-.my-accordion-summary,
 .my-scroll-hint {
   display: none;
 }
 
+.my-page-toc {
+  display: flex;
+  width: min(100% - 32px, 1080px);
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px auto 0;
+}
+
+.my-page-toc a {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--color-primary);
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  font-weight: 950;
+  text-decoration: none;
+  box-shadow: var(--shadow-line);
+}
+
+.my-page-toc a:hover,
+.my-page-toc a:focus-visible {
+  border-color: color-mix(in srgb, var(--color-primary) 34%, var(--color-line));
+  background: color-mix(in srgb, var(--color-primary) 7%, white);
+}
+
 .my-section-details {
-  display: contents;
+  display: block;
+  width: min(100% - 32px, 1080px);
+  margin: 14px auto 0;
+  scroll-margin-top: 18px;
+}
+
+.my-section-details + .my-section-details {
+  margin-top: 12px;
+}
+
+.my-accordion-summary {
+  display: flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: #fff;
+  color: var(--color-ink);
+  padding: 10px 14px;
+  cursor: pointer;
+  box-shadow: var(--shadow-line);
+  list-style: none;
+}
+
+.my-accordion-summary::-webkit-details-marker {
+  display: none;
+}
+
+.my-accordion-summary::after {
+  content: "＋";
+  color: var(--color-primary);
+  font-weight: 950;
+}
+
+.my-section-details[open] > .my-accordion-summary::after {
+  content: "−";
+}
+
+.my-accordion-summary span {
+  font-size: 0.94rem;
+  font-weight: 950;
+}
+
+.my-section-details > .my-section,
+.my-section-details > .my-stat-grid {
+  width: 100%;
+  margin-inline: 0;
+}
+
+.my-section-details > .my-section {
+  margin-top: 8px;
 }
 
 .my-stat-card p {
   display: inline-flex;
   align-items: center;
   gap: 5px;
+}
+
+@media (min-width: 641px) {
+  .my-accordion-summary small {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {

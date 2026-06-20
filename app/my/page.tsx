@@ -4,7 +4,7 @@ import { absoluteUrl } from "@/lib/manapick";
 
 export const metadata: Metadata = {
   title: "マイページ | Manapick",
-  description: "この端末に保存したManapickの学習記録、連続学習日数、あとで見る、ロードマップ進捗を確認できます。",
+  description: "お使いのブラウザに保存したManapickの学習記録、連続学習日数、あとで見る、ロードマップ進捗を確認できます。",
   alternates: {
     canonical: absoluteUrl("/my/")
   },

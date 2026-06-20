@@ -138,9 +138,10 @@ export default function MyPageClient() {
   useEffect(() => {
     const media = window.matchMedia("(max-width: 640px)");
     const syncDetails = () => {
+      const defaultOpenIds = new Set(media.matches ? ["my-summary"] : ["my-summary", "my-genre"]);
       const sections = Array.from(document.querySelectorAll<HTMLDetailsElement>(".my-section-details"));
       for (const section of sections) {
-        section.open = !media.matches || section.id === "my-summary";
+        section.open = defaultOpenIds.has(section.id);
       }
     };
     syncDetails();
@@ -148,7 +149,7 @@ export default function MyPageClient() {
     return () => media.removeEventListener("change", syncDetails);
   }, []);
 
-  function openMobileSection(id: string) {
+  function openSection(id: string) {
     const section = document.getElementById(id);
     if (section instanceof HTMLDetailsElement) section.open = true;
   }
@@ -165,7 +166,7 @@ export default function MyPageClient() {
       <section className="my-hero">
         <p className="section-eyebrow">My Manapick</p>
         <h1>この端末の学習記録</h1>
-        <p>登録不要・同期なし。視聴済み、あとで見る、連続学習日数はこの端末のlocalStorageに保存されます。</p>
+        <p>登録不要・ログイン不要。視聴済み・あとで見る・連続学習日数は、お使いのブラウザにだけ保存されます（他の端末とは共有されません）。</p>
         <div className="my-hero-actions">
           {recentVideo ? <a href={videoPath(recentVideo.ytid)}>続きから見る</a> : <a href="/#search">動画を探す</a>}
           <PwaInstallButton />
@@ -173,11 +174,11 @@ export default function MyPageClient() {
       </section>
 
       <nav className="my-page-toc" aria-label="マイページ内メニュー">
-        <a href="#my-summary" onClick={() => openMobileSection("my-summary")}>サマリー</a>
-        <a href="#my-genre" onClick={() => openMobileSection("my-genre")}>ジャンル達成率</a>
-        <a href="#my-guides" onClick={() => openMobileSection("my-guides")}>ガイド進捗</a>
-        <a href="#my-badges" onClick={() => openMobileSection("my-badges")}>バッジ</a>
-        <a href="#my-saved" onClick={() => openMobileSection("my-saved")}>保存・履歴</a>
+        <a href="#my-summary" onClick={() => openSection("my-summary")}>サマリー</a>
+        <a href="#my-genre" onClick={() => openSection("my-genre")}>ジャンル達成率</a>
+        <a href="#my-guides" onClick={() => openSection("my-guides")}>ガイド進捗</a>
+        <a href="#my-badges" onClick={() => openSection("my-badges")}>バッジ</a>
+        <a href="#my-saved" onClick={() => openSection("my-saved")}>保存・履歴</a>
       </nav>
 
       <details id="my-summary" className="my-section-details" open>
@@ -234,7 +235,7 @@ export default function MyPageClient() {
         </section>
       </details>
 
-      <details id="my-guides" className="my-section-details" open>
+      <details id="my-guides" className="my-section-details">
         <summary className="my-accordion-summary">
           <span>ガイド進捗</span>
           <small>ロードマップ別の進み具合</small>
@@ -258,7 +259,7 @@ export default function MyPageClient() {
         </section>
       </details>
 
-      <details id="my-badges" className="my-section-details" open>
+      <details id="my-badges" className="my-section-details">
         <summary className="my-accordion-summary">
           <span>バッジ</span>
           <small>横にスワイプして確認</small>
@@ -283,7 +284,7 @@ export default function MyPageClient() {
         </section>
       </details>
 
-      <details id="my-saved" className="my-section-details" open>
+      <details id="my-saved" className="my-section-details">
         <summary className="my-accordion-summary">
           <span>保存・履歴</span>
           <small>あとで見ると最近の記録</small>

@@ -94,7 +94,7 @@ export default function RetentionBand({
             マイページ
           </a>
           <PwaInstallButton />
-          <p>この端末で記録中</p>
+          <p>ログイン不要・この端末に保存</p>
         </div>
       </div>
     </section>
