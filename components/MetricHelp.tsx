@@ -15,7 +15,7 @@ export default function MetricHelp({ label, children }: { label: string; childre
         aria-controls={id}
         onClick={() => setOpen((current) => !current)}
       >
-        ?
+        <span className="metric-help-icon" aria-hidden="true">?</span>
       </button>
       <span id={id} className="metric-help-body">{children}</span>
     </span>

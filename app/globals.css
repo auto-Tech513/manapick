@@ -2833,6 +2833,11 @@ img {
   list-style: none;
 }
 
+.metric-help-icon {
+  display: block;
+  line-height: 1;
+}
+
 .metric-help-body {
   position: absolute;
   right: 0;
@@ -4646,6 +4651,10 @@ img {
     padding: 11px;
   }
 
+  .my-stat-card.has-help {
+    grid-column: 1 / -1;
+  }
+
   .my-stat-card p {
     display: flex;
     width: 100%;
@@ -4659,15 +4668,31 @@ img {
   }
 
   .my-stat-card .metric-help button {
+    position: relative;
     width: 44px;
     height: 44px;
     min-width: 44px;
     min-height: 44px;
     margin-left: auto;
-    border-color: color-mix(in srgb, var(--color-primary) 26%, var(--color-line));
-    background: color-mix(in srgb, var(--color-primary) 8%, #fff);
+    border: 0;
+    background: transparent;
+    color: inherit;
     box-shadow: none;
-    font-size: 0.78rem;
+    font-size: 0;
+  }
+
+  .my-stat-card .metric-help-icon {
+    display: grid;
+    width: 18px;
+    height: 18px;
+    place-items: center;
+    border: 1px solid color-mix(in srgb, var(--color-muted) 28%, var(--color-line));
+    border-radius: 999px;
+    background: #fff;
+    color: color-mix(in srgb, var(--color-primary) 80%, var(--color-muted));
+    font-size: 0.68rem;
+    font-weight: 950;
+    line-height: 1;
   }
 
   .my-stat-card .metric-help-body {
@@ -4709,6 +4734,10 @@ img {
   .my-stat-card span {
     font-size: 0.78rem;
     white-space: nowrap;
+  }
+
+  .my-stat-card.has-help span:not(.metric-help-body) {
+    font-size: clamp(0.72rem, 3.05vw, 0.78rem);
   }
 
   .my-section {
@@ -7121,7 +7150,7 @@ img {
 
   .hero-container {
     gap: 16px;
-    padding-block: 18px 8px;
+    padding-block: 28px 8px;
   }
 
   .hero-copy-column {

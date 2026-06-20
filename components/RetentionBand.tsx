@@ -56,14 +56,14 @@ export default function RetentionBand({
             <strong>🔥 {ready ? streak.count : 0}日連続</strong>
             <small>
               連続学習日数
-              <MetricHelp label="連続学習日数">毎日1本見ると増えます。連続学習日数は、動画を見た日が続くほど増えます</MetricHelp>
+              <MetricHelp label="連続学習日数">動画を『視聴済み』にした日が続くほど増えます。毎日1本でOK。1日あいても“お休みチケット”が自動で穴埋めします。</MetricHelp>
             </small>
           </span>
           <span className="retention-stat retention-ticket-stat">
             <strong>残り{ready ? streak.freezes : 1}枚</strong>
             <small>
               お休みチケット
-              <MetricHelp label="お休みチケット">1日見られなくても連続が途切れません。1枚使うと、その日は休んでも連続が続きます</MetricHelp>
+              <MetricHelp label="お休みチケット">1日見られなくても連続が途切れない“おまもり”です。もらい方＝最初に1枚、さらに7日連続するごとに1枚（最大3枚）。使い方＝操作は不要。1日あいても翌日また動画を見れば自動で1枚使われ、連続が続きます（2日以上あくとリセット）。</MetricHelp>
             </small>
           </span>
           <span className="retention-stat">

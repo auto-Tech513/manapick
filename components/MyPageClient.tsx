@@ -190,13 +190,13 @@ export default function MyPageClient() {
             label="連続学習日数"
             value={"🔥 " + (streak.ready ? streak.state.count : 0) + "日連続"}
             note="毎日1本見ると増えます"
-            help="毎日1本見ると増えます。連続学習日数は、動画を見た日が続くほど増えます"
+            help="動画を『視聴済み』にした日が続くほど増えます。毎日1本でOK。1日あいても“お休みチケット”が自動で穴埋めします。"
           />
           <MyStat
             label="お休みチケット"
             value={"残り" + (streak.ready ? streak.state.freezes : 1) + "枚"}
-            note="休んでも連続が続きます"
-            help="1日見られなくても連続が途切れません。1枚使うと、その日は休んでも連続が続きます"
+            note="7日連続で1枚もらえる（自動で使われます）"
+            help="1日見られなくても連続が途切れない“おまもり”です。もらい方＝最初に1枚、さらに7日連続するごとに1枚（最大3枚）。使い方＝操作は不要。1日あいても翌日また動画を見れば自動で1枚使われ、連続が続きます（2日以上あくとリセット）。"
           />
           <MyStat label="視聴済み" value={watched.items.length + "本"} note="手動で記録した本数" />
           <MyStat label="あとで見る" value={watchlist.items.length + "本"} note="保存中の動画" />
@@ -331,7 +331,7 @@ export default function MyPageClient() {
 
 function MyStat({ label, value, note, help }: { label: string; value: string; note: string; help?: string }) {
   return (
-    <article className="my-stat-card">
+    <article className={help ? "my-stat-card has-help" : "my-stat-card"}>
       <p>
         {label}
         {help ? <MetricHelp label={label}>{help}</MetricHelp> : null}
