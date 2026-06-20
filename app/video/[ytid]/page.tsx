@@ -17,6 +17,7 @@ import {
   videoAudienceText,
   videoAxisCommentary,
   videoDescription,
+  videoEditorialSummary,
   videoLearningPoints,
   videoPath,
   videoPositionText,
@@ -92,6 +93,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
   const learningPoints = videoLearningPoints(video);
   const axisCommentary = videoAxisCommentary(video);
   const viewingTips = videoViewingTips(video);
+  const editorialSummary = videoEditorialSummary(video, related[0]);
   const videoObject = {
     "@type": "VideoObject",
     name: video.title,
@@ -198,6 +200,21 @@ export default async function VideoPage({ params }: VideoPageProps) {
           <VideoActions ytid={video.ytid} />
         </div>
       </article>
+
+      <section className="video-editorial-section" aria-labelledby="video-editorial-title">
+        <div className="section-heading-row">
+          <div>
+            <p className="section-eyebrow">Manapick独自解説</p>
+            <h2 id="video-editorial-title" className="section-title">この動画をどう使うか</h2>
+          </div>
+        </div>
+        <p className="video-editorial-body">{editorialSummary}</p>
+        {related[0] ? (
+          <a className="video-next-link" href={videoPath(related[0].ytid)}>
+            次に見る1本：{related[0].title}
+          </a>
+        ) : null}
+      </section>
 
       <section className="video-context-section" aria-labelledby="video-context-title">
         <div className="section-heading-row">

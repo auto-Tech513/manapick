@@ -144,6 +144,11 @@ export function videoDescription(video: Video) {
   return (video.review[0] ?? video.title).replace(/\s+/g, " ").slice(0, 150);
 }
 
+function compactText(value: string, maxLength: number) {
+  const normalized = value.replace(/\s+/g, " ").trim();
+  return normalized.length > maxLength ? normalized.slice(0, maxLength - 1) + "…" : normalized;
+}
+
 function stableIndex(value: string, length: number, salt = 0) {
   if (length <= 0) return 0;
   return (Array.from(value).reduce((total, char, index) => {
@@ -322,6 +327,29 @@ export function videoViewingTips(video: Video) {
     : `7軸メモがない動画なので、レビュー本文とタイトルを照らし合わせ、必要に応じて関連動画で補足確認してください。`;
 
   return [durationTip, caution];
+}
+
+export function videoEditorialSummary(video: Video, nextVideo?: Video) {
+  const genreName = genreDisplayName(video.genre);
+  const review = compactText(video.review.find(Boolean) ?? video.title, 52);
+  const topAxis = video.axisScores.length > 0 ? [...video.axisScores].sort((a, b) => b.score - a.score)[0] : null;
+  const lowAxis = video.axisScores.length > 0 ? [...video.axisScores].sort((a, b) => a.score - b.score)[0] : null;
+  const audienceByLevel: Record<Video["level"], string> = {
+    初級: "基礎や全体像を押さえたい人",
+    中級: "実践や応用へ進みたい人",
+    上級: "実務や試験対策で具体的に確認したい人"
+  };
+  const topAxisText = topAxis
+    ? `採点では「${topAxis.axis}」が${topAxis.score}/5で、${compactText(topAxis.note, 28)}点を評価しています。`
+    : "採点メモが薄い動画では、レビュー本文とタイトルの一致を中心に確認しています。";
+  const cautionText = lowAxis
+    ? `一方で「${lowAxis.axis}」は${lowAxis.score}/5。${compactText(lowAxis.note, 28)}という補足を意識すると判断が偏りにくくなります。`
+    : "視聴後は、分かったことと残った疑問を分けてメモすると次の動画を選びやすくなります。";
+  const nextText = nextVideo
+    ? `続けるなら、次は「${compactText(nextVideo.title, 30)}」で別角度から補えます。`
+    : "続けるなら、同じジャンルの関連動画へ進み、今回の理解を別角度から補うと学習が続きます。";
+
+  return `${genreName}の「${video.sub}」を${video.level}で学ぶ人向けに、${video.minutes}分で確認できる1本です。${audienceByLevel[video.level]}に向いています。レビューでは「${review}」と整理しています。${topAxisText}${cautionText}${nextText}`;
 }
 
 export function findVideo(ytid: string) {

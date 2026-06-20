@@ -20,7 +20,20 @@ export default function PrivacyPage() {
         },
         {
           heading: "広告配信について",
-          body: "ManapickではGoogle AdSenseを利用します。Google AdSenseでは、利用者の興味に応じた広告を表示するためCookieを使用します。パーソナライズ広告はGoogleの広告設定ページで無効にできます。また、当サイトはAmazonアソシエイトおよび楽天アフィリエイトのプログラムに参加します。当サイトは適格販売により収入を得る場合があります。広告やアフィリエイトリンクを掲載する場合は、PR表記など読者が広告と分かる表示を行います。"
+          body: (
+            <>
+              当サイトは第三者配信の広告サービス（Google AdSense 等）を利用します。第三者配信事業者（Google
+              を含む）はCookieを使用し、ユーザーの過去のアクセス情報に基づいて広告を配信することがあります。ユーザーは
+              <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">
+                Googleの広告設定
+              </a>
+              で第三者配信のためのCookie使用を無効にできます。また、
+              <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">
+                www.aboutads.info
+              </a>
+              で第三者配信事業者のCookieを無効にすることもできます。あわせて、当サイトはAmazonアソシエイトおよび楽天アフィリエイトのプログラムに参加します。当サイトは適格販売により収入を得る場合があります。広告やアフィリエイトリンクを掲載する場合は、PR表記など読者が広告と分かる表示を行います。
+            </>
+          )
         },
         {
           heading: "アクセス解析について",

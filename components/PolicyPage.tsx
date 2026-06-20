@@ -7,7 +7,7 @@ type PolicyPageProps = {
   lead: string;
   sections: {
     heading: string;
-    body: string;
+    body: ReactNode;
   }[];
   children?: ReactNode;
 };
@@ -33,7 +33,9 @@ export default function PolicyPage({ title, lead, sections, children }: PolicyPa
           {sections.map((section) => (
             <section key={section.heading} className="border-t border-ink/10 pt-5">
               <h2 className="text-xl font-black">{section.heading}</h2>
-              <p className="mt-3 leading-8 text-ink/76">{section.body}</p>
+              <p className="mt-3 leading-8 text-ink/76 [&_a]:font-black [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-4">
+                {section.body}
+              </p>
             </section>
           ))}
         </div>
