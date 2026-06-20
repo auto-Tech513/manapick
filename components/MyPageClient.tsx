@@ -3,6 +3,7 @@
 import { useEffect, useMemo } from "react";
 import Image from "next/image";
 import BrandLogo, { BrandMark } from "@/components/BrandLogo";
+import MetricHelp from "@/components/MetricHelp";
 import PwaInstallButton from "@/components/PwaInstallButton";
 import genresData from "@/content/genres.json";
 import videosData from "@/content/videos.json";
@@ -91,7 +92,7 @@ export default function MyPageClient() {
       {
         id: "three-day",
         label: "3日継続",
-        body: "学習ストリークが3日以上になりました。",
+        body: "連続学習日数が3日以上になりました。",
         earned: streak.state.count >= 3
       },
       {
@@ -134,6 +135,24 @@ export default function MyPageClient() {
     writeStoredBadges(Array.from(stored));
   }, [earnedBadges, streak.ready, watched.ready, watchlist.ready]);
 
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 640px)");
+    const syncDetails = () => {
+      const sections = Array.from(document.querySelectorAll<HTMLDetailsElement>(".my-section-details"));
+      for (const section of sections) {
+        section.open = !media.matches || section.id === "my-summary";
+      }
+    };
+    syncDetails();
+    media.addEventListener("change", syncDetails);
+    return () => media.removeEventListener("change", syncDetails);
+  }, []);
+
+  function openMobileSection(id: string) {
+    const section = document.getElementById(id);
+    if (section instanceof HTMLDetailsElement) section.open = true;
+  }
+
   return (
     <main className="my-page">
       <header className="my-header">
@@ -146,111 +165,161 @@ export default function MyPageClient() {
       <section className="my-hero">
         <p className="section-eyebrow">My Manapick</p>
         <h1>この端末の学習記録</h1>
-        <p>登録不要・同期なし。視聴済み、あとで見る、ストリークはこの端末のlocalStorageに保存されます。</p>
+        <p>登録不要・同期なし。視聴済み、あとで見る、連続学習日数はこの端末のlocalStorageに保存されます。</p>
         <div className="my-hero-actions">
           {recentVideo ? <a href={videoPath(recentVideo.ytid)}>続きから見る</a> : <a href="/#search">動画を探す</a>}
           <PwaInstallButton />
         </div>
       </section>
 
-      <section className="my-stat-grid" aria-label="学習サマリー">
-        <MyStat label="ストリーク" value={(streak.ready ? streak.state.count : 0) + "日"} note={"フリーズ " + (streak.ready ? streak.state.freezes : 1) + "回"} />
-        <MyStat label="視聴済み" value={watched.items.length + "本"} note="手動で記録した本数" />
-        <MyStat label="あとで見る" value={watchlist.items.length + "本"} note="保存中の動画" />
-        <MyStat label="学習日" value={(streak.ready ? streak.state.studyDates.length : 0) + "日"} note="この端末で記録" />
-      </section>
+      <nav className="my-page-toc" aria-label="マイページ内メニュー">
+        <a href="#my-summary" onClick={() => openMobileSection("my-summary")}>サマリー</a>
+        <a href="#my-genre" onClick={() => openMobileSection("my-genre")}>ジャンル達成率</a>
+        <a href="#my-guides" onClick={() => openMobileSection("my-guides")}>ガイド進捗</a>
+        <a href="#my-badges" onClick={() => openMobileSection("my-badges")}>バッジ</a>
+        <a href="#my-saved" onClick={() => openMobileSection("my-saved")}>保存・履歴</a>
+      </nav>
 
-      <section className="my-section" aria-labelledby="my-continue-title">
-        <div className="my-section-heading">
-          <div>
-            <p className="section-eyebrow">続きから</p>
-            <h2 id="my-continue-title">最後に開いた動画</h2>
-          </div>
-        </div>
-        {recentVideo ? <MyVideoRow video={recentVideo} /> : <p className="my-empty">動画ページを開くと、ここから1タップで戻れます。</p>}
-      </section>
+      <details id="my-summary" className="my-section-details" open>
+        <summary className="my-accordion-summary">
+          <span>サマリー</span>
+          <small>今日の続きと学習状況</small>
+        </summary>
+        <section className="my-stat-grid" aria-label="学習サマリー">
+          <MyStat
+            label="連続学習日数"
+            value={"🔥 " + (streak.ready ? streak.state.count : 0) + "日連続"}
+            note="毎日1本見ると増えます"
+            help="毎日1本見ると増えます。"
+          />
+          <MyStat
+            label="お休みチケット"
+            value={"残り" + (streak.ready ? streak.state.freezes : 1) + "枚"}
+            note="1日休んでも連続を守れます"
+            help="1日見られなくても連続が途切れません。1枚使うと、その日は休んでも連続が続きます。"
+          />
+          <MyStat label="視聴済み" value={watched.items.length + "本"} note="手動で記録した本数" />
+          <MyStat label="あとで見る" value={watchlist.items.length + "本"} note="保存中の動画" />
+        </section>
 
-      <section className="my-section" aria-labelledby="my-badges-title">
-        <div className="my-section-heading">
-          <div>
-            <p className="section-eyebrow">バッジ</p>
-            <h2 id="my-badges-title">獲得状況</h2>
+        <section className="my-section" aria-labelledby="my-continue-title">
+          <div className="my-section-heading">
+            <div>
+              <p className="section-eyebrow">続きから</p>
+              <h2 id="my-continue-title">最後に開いた動画</h2>
+            </div>
           </div>
-        </div>
-        <div className="my-badge-grid">
-          {earnedBadges.map((badge) => (
-            <article key={badge.id} className={badge.earned ? "my-badge is-earned" : "my-badge"}>
-              <span aria-hidden="true">{badge.earned ? "✓" : "○"}</span>
-              <h3>{badge.label}</h3>
-              <p>{badge.body}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+          {recentVideo ? <MyVideoRow video={recentVideo} /> : <p className="my-empty">動画ページを開くと、ここから1タップで戻れます。</p>}
+        </section>
+      </details>
 
-      <section className="my-section" aria-labelledby="my-genre-title">
-        <div className="my-section-heading">
-          <div>
-            <p className="section-eyebrow">ジャンル別</p>
-            <h2 id="my-genre-title">達成率</h2>
+      <details id="my-genre" className="my-section-details" open>
+        <summary className="my-accordion-summary">
+          <span>ジャンル達成率</span>
+          <small>横にスワイプして確認</small>
+        </summary>
+        <section className="my-section" aria-labelledby="my-genre-title">
+          <div className="my-section-heading">
+            <div>
+              <p className="section-eyebrow">ジャンル別</p>
+              <h2 id="my-genre-title">達成率</h2>
+            </div>
           </div>
-        </div>
-        <div className="my-progress-list">
-          {genreProgress.map((item) => (
-            <ProgressRow key={item.key} label={item.label} count={item.count} total={item.total} percent={item.percent} />
-          ))}
-        </div>
-      </section>
+          <p className="my-scroll-hint">横にスワイプ →</p>
+          <div className="my-progress-list">
+            {genreProgress.map((item) => (
+              <ProgressRow key={item.key} label={item.label} count={item.count} total={item.total} percent={item.percent} />
+            ))}
+          </div>
+        </section>
+      </details>
 
-      <section className="my-section" aria-labelledby="my-guide-title">
-        <div className="my-section-heading">
-          <div>
-            <p className="section-eyebrow">修了バッジ</p>
-            <h2 id="my-guide-title">ガイド別の進捗</h2>
+      <details id="my-guides" className="my-section-details" open>
+        <summary className="my-accordion-summary">
+          <span>ガイド進捗</span>
+          <small>ロードマップ別の進み具合</small>
+        </summary>
+        <section className="my-section" aria-labelledby="my-guide-title">
+          <div className="my-section-heading">
+            <div>
+              <p className="section-eyebrow">修了バッジ</p>
+              <h2 id="my-guide-title">ガイド別の進捗</h2>
+            </div>
           </div>
-        </div>
-        <div className="my-guide-grid">
-          {guideProgress.map((guide) => (
-            <a key={guide.slug} className={guide.complete ? "my-guide-card is-complete" : "my-guide-card"} href={guide.href}>
-              <span>{guide.complete ? "修了" : "進行中"}</span>
-              <strong>{guide.title}</strong>
-              <small>{guide.count}/{guide.total}本</small>
-            </a>
-          ))}
-        </div>
-      </section>
+          <div className="my-guide-grid">
+            {guideProgress.map((guide) => (
+              <a key={guide.slug} className={guide.complete ? "my-guide-card is-complete" : "my-guide-card"} href={guide.href}>
+                <span>{guide.complete ? "修了" : "進行中"}</span>
+                <strong>{guide.title}</strong>
+                <small>{guide.count}/{guide.total}本</small>
+              </a>
+            ))}
+          </div>
+        </section>
+      </details>
 
-      <section className="my-section" aria-labelledby="my-watchlist-title">
-        <div className="my-section-heading">
-          <div>
-            <p className="section-eyebrow">あとで見る</p>
-            <h2 id="my-watchlist-title">保存した動画</h2>
+      <details id="my-badges" className="my-section-details" open>
+        <summary className="my-accordion-summary">
+          <span>バッジ</span>
+          <small>横にスワイプして確認</small>
+        </summary>
+        <section className="my-section" aria-labelledby="my-badges-title">
+          <div className="my-section-heading">
+            <div>
+              <p className="section-eyebrow">バッジ</p>
+              <h2 id="my-badges-title">獲得状況</h2>
+            </div>
           </div>
-        </div>
-        {watchlistVideos.length > 0 ? (
-          <div className="my-video-list">
-            {watchlistVideos.slice(0, 12).map((video) => <MyVideoRow key={video.ytid} video={video} />)}
+          <p className="my-scroll-hint">横にスワイプ →</p>
+          <div className="my-badge-grid">
+            {earnedBadges.map((badge) => (
+              <article key={badge.id} className={badge.earned ? "my-badge is-earned" : "my-badge"}>
+                <span aria-hidden="true">{badge.earned ? "✓" : "○"}</span>
+                <h3>{badge.label}</h3>
+                <p>{badge.body}</p>
+              </article>
+            ))}
           </div>
-        ) : (
-          <p className="my-empty">動画カードの保存ボタンから、気になる動画をあとで見るに追加できます。</p>
-        )}
-      </section>
+        </section>
+      </details>
 
-      <section className="my-section" aria-labelledby="my-watched-title">
-        <div className="my-section-heading">
-          <div>
-            <p className="section-eyebrow">視聴済み</p>
-            <h2 id="my-watched-title">最近の記録</h2>
+      <details id="my-saved" className="my-section-details" open>
+        <summary className="my-accordion-summary">
+          <span>保存・履歴</span>
+          <small>あとで見ると最近の記録</small>
+        </summary>
+        <section className="my-section" aria-labelledby="my-watchlist-title">
+          <div className="my-section-heading">
+            <div>
+              <p className="section-eyebrow">あとで見る</p>
+              <h2 id="my-watchlist-title">保存した動画</h2>
+            </div>
           </div>
-        </div>
-        {watchedVideos.length > 0 ? (
-          <div className="my-video-list">
-            {watchedVideos.slice(0, 12).map((video) => <MyVideoRow key={video.ytid} video={video} />)}
+          {watchlistVideos.length > 0 ? (
+            <div className="my-video-list">
+              {watchlistVideos.slice(0, 12).map((video) => <MyVideoRow key={video.ytid} video={video} />)}
+            </div>
+          ) : (
+            <p className="my-empty">動画カードの保存ボタンから、気になる動画をあとで見るに追加できます。</p>
+          )}
+        </section>
+
+        <section className="my-section" aria-labelledby="my-watched-title">
+          <div className="my-section-heading">
+            <div>
+              <p className="section-eyebrow">視聴済み</p>
+              <h2 id="my-watched-title">最近の記録</h2>
+            </div>
           </div>
-        ) : (
-          <p className="my-empty">動画ページで「視聴済みにする」を押すと、ここに記録されます。</p>
-        )}
-      </section>
+          {watchedVideos.length > 0 ? (
+            <div className="my-video-list">
+              {watchedVideos.slice(0, 12).map((video) => <MyVideoRow key={video.ytid} video={video} />)}
+            </div>
+          ) : (
+            <p className="my-empty">動画ページで「視聴済みにする」を押すと、ここに記録されます。</p>
+          )}
+        </section>
+      </details>
 
       <footer className="my-footer">
         <p><BrandMark className="h-7 w-7" /> <span>Manapick</span></p>
@@ -260,10 +329,13 @@ export default function MyPageClient() {
   );
 }
 
-function MyStat({ label, value, note }: { label: string; value: string; note: string }) {
+function MyStat({ label, value, note, help }: { label: string; value: string; note: string; help?: string }) {
   return (
     <article className="my-stat-card">
-      <p>{label}</p>
+      <p>
+        {label}
+        {help ? <MetricHelp label={label}>{help}</MetricHelp> : null}
+      </p>
       <strong>{value}</strong>
       <span>{note}</span>
     </article>
@@ -305,4 +377,3 @@ function MyVideoRow({ video }: { video: Video }) {
     </a>
   );
 }
-

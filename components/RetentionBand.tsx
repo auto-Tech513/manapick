@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import MetricHelp from "@/components/MetricHelp";
 import PwaInstallButton from "@/components/PwaInstallButton";
 import { sendGaEvent, type StreakState } from "@/lib/retention";
 import { genreLabel, scoreText, videoPath, youtubeThumbnail, type Video } from "@/lib/manapick";
@@ -43,29 +44,44 @@ export default function RetentionBand({
             />
           </span>
           <span className="today-pick-copy">
-            <span className="retention-eyebrow">今日の1本</span>
+            <span className="retention-eyebrow retention-eyebrow-desktop">今日の1本</span>
+            <span className="retention-eyebrow retention-eyebrow-mobile">今日の学習</span>
             <strong id="today-pick-title">{todayVideo.title}</strong>
             <span>{genreLabel(todayVideo.genre)} / {scoreText(todayVideo)} / {todayVideo.minutes}分</span>
           </span>
         </a>
 
         <div className="retention-stats" aria-label="この端末の学習記録">
-          <span>
-            <strong>{ready ? streak.count : 0}日</strong>
-            <small>ストリーク</small>
+          <span className="retention-stat">
+            <strong>🔥 {ready ? streak.count : 0}日連続</strong>
+            <small>
+              連続学習日数
+              <MetricHelp label="連続学習日数">毎日1本見ると増えます。</MetricHelp>
+            </small>
           </span>
-          <span>
-            <strong>{ready ? streak.freezes : 1}</strong>
-            <small>フリーズ</small>
+          <span className="retention-stat retention-ticket-stat">
+            <strong>残り{ready ? streak.freezes : 1}枚</strong>
+            <small>
+              お休みチケット
+              <MetricHelp label="お休みチケット">1日見られなくても連続が途切れません。</MetricHelp>
+            </small>
           </span>
-          <span>
-            <strong>{watchedCount}</strong>
+          <span className="retention-stat">
+            <strong>視聴{watchedCount}</strong>
             <small>視聴済み</small>
           </span>
-          <span>
-            <strong>{watchlistCount}</strong>
+          <span className="retention-stat">
+            <strong>保存{watchlistCount}</strong>
             <small>あとで見る</small>
           </span>
+          {continueVideo ? (
+            <a className="retention-stat retention-mobile-chip" href={videoPath(continueVideo.ytid)}>
+              続きから
+            </a>
+          ) : null}
+          <a className="retention-stat retention-mobile-chip retention-mobile-my" href="/my/" onClick={() => sendGaEvent("my_open", { source: "top_band_mobile" })}>
+            マイページ
+          </a>
         </div>
 
         <div className="retention-actions">
@@ -84,4 +100,3 @@ export default function RetentionBand({
     </section>
   );
 }
-
