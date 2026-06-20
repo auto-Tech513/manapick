@@ -4,13 +4,16 @@ import Fuse from "fuse.js";
 import Image from "next/image";
 import { type KeyboardEvent as ReactKeyboardEvent, type RefObject, useEffect, useMemo, useRef, useState } from "react";
 import BrandLogo, { BrandMark } from "@/components/BrandLogo";
+import RetentionBand from "@/components/RetentionBand";
 import genresData from "@/content/genres.json";
 import professionRoutesData from "@/content/professions.json";
 import roadmapsData from "@/content/roadmaps.json";
 import videosData from "@/content/videos.json";
+import { RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY, jstDateKey, selectTodayVideo } from "@/lib/retention";
 import { siteStats } from "@/lib/site-stats";
 import { buildSubRoadmap } from "@/lib/sub-roadmap";
 import { useLocalList } from "@/lib/useLocalList";
+import { useStreakState } from "@/lib/useStreakState";
 
 type GenreStatus = "published" | "preparing" | "checking";
 
@@ -145,6 +148,7 @@ const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
       { label: "なりたい職業から選ぶ", href: "/#profession-routes" },
       { label: siteStats.publishedGenreCount + "ジャンル一覧", href: "/#genre-picker" },
       { label: "ロードマップ", href: "/#roadmap" },
+      { label: "マイページ", href: "/my/" },
       { label: "採点方法", href: "/about-score/" },
       { label: "生成AIロードマップ", href: "/guide/generative-ai/" },
       { label: "Pythonロードマップ", href: "/guide/python/" },
@@ -466,6 +470,7 @@ export default function ManapickApp() {
   const [mobileGenreDropdownOpen, setMobileGenreDropdownOpen] = useState(false);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [watchlistOnly, setWatchlistOnly] = useState(false);
+  const [todayKey, setTodayKey] = useState("");
   const [showBackToTop, setShowBackToTop] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const mobileGenreDropdownRef = useRef<HTMLDivElement>(null);
@@ -474,10 +479,11 @@ export default function ManapickApp() {
   const filtersMountedRef = useRef(false);
   const skipNextFilterResetRef = useRef(false);
   const menuSwipeRef = useRef<{ x: number; y: number; edge: boolean; ignored: boolean } | null>(null);
-  const watchlist = useLocalList("manapick:watchlist:v1");
-  const watched = useLocalList("manapick:watched:v1");
-  const recent = useLocalList("manapick:recent:v1");
+  const watchlist = useLocalList(WATCHLIST_KEY);
+  const watched = useLocalList(WATCHED_KEY);
+  const recent = useLocalList(RECENT_KEY);
   const recentSearches = useLocalList("manapick:searches:v1");
+  const streak = useStreakState();
 
   const selectedGenreData =
     selectedGenre === "all" ? null : genres.find((genre) => genre.key === selectedGenre) ?? null;
@@ -604,6 +610,10 @@ export default function ManapickApp() {
       .slice(0, 8);
   }, [recent.items]);
 
+  const todayVideo = useMemo(() => {
+    return todayKey ? selectTodayVideo(publishedVideos, todayKey) : null;
+  }, [publishedVideos, todayKey]);
+
   const searchSuggestions = useMemo(() => (searchActive ? filteredVideos.slice(0, 5) : []), [filteredVideos, searchActive]);
   const liveSearchTotal = searchActive ? filteredVideos.length : videos.length;
 
@@ -629,6 +639,10 @@ export default function ManapickApp() {
       const sub = params.get("sub");
       if (sub) setSelectedSub(availableSubForGenre(genre, sub));
     }
+  }, []);
+
+  useEffect(() => {
+    setTodayKey(jstDateKey());
   }, []);
 
   useEffect(() => {
@@ -1123,6 +1137,9 @@ export default function ManapickApp() {
               <a className="transition hover:text-accent" href="#roadmap">
                 ロードマップ
               </a>
+              <a className="transition hover:text-accent" href="/my/">
+                マイページ
+              </a>
               {SHOW_TOP_PR_SECTION ? (
                 <a className="transition hover:text-accent" href="#pr">
                   PR
@@ -1193,6 +1210,15 @@ export default function ManapickApp() {
         genres={publishedGenres}
         activeGenre={selectedGenre}
         onSelect={jumpToGenre}
+      />
+
+      <RetentionBand
+        todayVideo={todayVideo}
+        continueVideo={recentVideos[0] ?? null}
+        streak={streak.state}
+        ready={streak.ready}
+        watchedCount={watched.ready ? watched.items.length : 0}
+        watchlistCount={watchlist.ready ? watchlist.items.length : 0}
       />
 
       <section id="top" className="hero-section">
@@ -2225,6 +2251,9 @@ function SiteMenuDrawer({
           <button type="button" className="site-menu-link" onClick={() => onSectionSelect("roadmap")}>
             ロードマップ
           </button>
+          <a className="site-menu-link" href="/my/" onClick={onClose}>
+            マイページ
+          </a>
           <a className="site-menu-link" href="/about-score/" onClick={onClose}>
             採点方法
           </a>

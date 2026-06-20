@@ -1,19 +1,21 @@
 "use client";
 
 import { useEffect } from "react";
+import { RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY } from "@/lib/retention";
 import { useLocalList } from "@/lib/useLocalList";
+import { useStreakState } from "@/lib/useStreakState";
 
 export default function VideoActions({ ytid }: { ytid: string }) {
-  const watchlist = useLocalList("manapick:watchlist:v1");
-  const watched = useLocalList("manapick:watched:v1");
+  const watchlist = useLocalList(WATCHLIST_KEY);
+  const watched = useLocalList(WATCHED_KEY);
+  const streak = useStreakState();
 
   useEffect(() => {
     try {
-      const key = "manapick:recent:v1";
-      const raw = window.localStorage.getItem(key);
+      const raw = window.localStorage.getItem(RECENT_KEY);
       const list: string[] = raw ? JSON.parse(raw) : [];
       const next = [ytid, ...list.filter((item) => item !== ytid)].slice(0, 12);
-      window.localStorage.setItem(key, JSON.stringify(next));
+      window.localStorage.setItem(RECENT_KEY, JSON.stringify(next));
     } catch {
       // The action controls should still render when localStorage is unavailable.
     }
@@ -39,7 +41,10 @@ export default function VideoActions({ ytid }: { ytid: string }) {
         type="button"
         className={isWatched ? "video-action-toggle is-active" : "video-action-toggle"}
         aria-pressed={isWatched}
-        onClick={() => watched.toggle(ytid)}
+        onClick={() => {
+          if (!isWatched) streak.record(ytid);
+          watched.toggle(ytid);
+        }}
       >
         <span aria-hidden="true">✓</span>
         <span>{isWatched ? "視聴済み" : "視聴済みにする"}</span>

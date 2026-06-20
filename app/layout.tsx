@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
+import PwaSetup from "@/components/PwaSetup";
 import { absoluteUrl, SITE_URL } from "@/lib/manapick";
 import "./globals.css";
 
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
   description:
     "社会人のリスキリングに役立つYouTube学習動画を、独自3行レビューとロードマップでキュレーションするメディア。",
   metadataBase: new URL(SITE_URL),
-  manifest: "/site.webmanifest",
+  manifest: "/manifest.webmanifest",
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -114,6 +115,7 @@ export default function RootLayout({
             />
           </>
         ) : null}
+        <PwaSetup />
         {children}
       </body>
     </html>

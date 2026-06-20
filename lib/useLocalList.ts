@@ -1,6 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { LOCAL_LIST_EVENT } from "@/lib/retention";
+
+function notifyLocalListChange(key: string, items: string[]) {
+  try {
+    window.dispatchEvent(new CustomEvent(LOCAL_LIST_EVENT, { detail: { key, items } }));
+  } catch {
+    // Custom events are best-effort; persistence still works without them.
+  }
+}
 
 export function useLocalList(key: string) {
   const [items, setItems] = useState<string[]>([]);
@@ -24,6 +33,7 @@ export function useLocalList(key: string) {
       const next = previous.includes(id) ? previous.filter((item) => item !== id) : [...previous, id];
       try {
         window.localStorage.setItem(key, JSON.stringify(next));
+        notifyLocalListChange(key, next);
       } catch {
         // Keep the UI usable even when persistence is unavailable.
       }
@@ -36,6 +46,7 @@ export function useLocalList(key: string) {
       const next = [id, ...previous.filter((item) => item !== id)].slice(0, limit);
       try {
         window.localStorage.setItem(key, JSON.stringify(next));
+        notifyLocalListChange(key, next);
       } catch {
         // Keep the UI usable even when persistence is unavailable.
       }
@@ -47,6 +58,7 @@ export function useLocalList(key: string) {
     setItems([]);
     try {
       window.localStorage.removeItem(key);
+      notifyLocalListChange(key, []);
     } catch {
       // Keep the UI usable even when persistence is unavailable.
     }
