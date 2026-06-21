@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import PwaSetup from "@/components/PwaSetup";
+import { MANAPICK_AI_URL } from "@/lib/brand-links";
 import { absoluteUrl, SITE_URL } from "@/lib/manapick";
 import "./globals.css";
 
@@ -19,7 +20,7 @@ const commonJsonLd = {
       name: "Manapick",
       url: absoluteUrl("/"),
       logo: absoluteUrl("/brand/manapick-logo-master.png"),
-      sameAs: [xAccountUrl]
+      sameAs: [xAccountUrl, MANAPICK_AI_URL]
     },
     {
       "@type": "WebSite",

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import BrandLogo from "@/components/BrandLogo";
 import prLinksData from "@/content/pr-links.json";
+import { MANAPICK_AI_URL } from "@/lib/brand-links";
 import { findGuide, guidePath, guides, guideStepVideos, type Guide } from "@/lib/guides";
 import {
   absoluteUrl,
@@ -359,9 +360,26 @@ export default async function GuidePage({ params }: GuidePageProps) {
           </div>
         </section>
 
+        {guide.slug === "generative-ai" ? <GuideManapickAiCrossLink /> : null}
+
         <GuidePrSection guide={guide} />
       </article>
     </main>
+  );
+}
+
+function GuideManapickAiCrossLink() {
+  return (
+    <section className="guide-section manapick-ai-crosslink is-guide" aria-label="公式AI版 manapick AI">
+      <div>
+        <p className="section-eyebrow">公式AI版</p>
+        <h2>“使えるAI”を選ぶなら manapick AI</h2>
+        <p>学ぶ順番はManapick、AIツールを選ぶときはmanapick AI。料金・無料枠・使い方を7軸で正直採点しています。</p>
+      </div>
+      <a href={MANAPICK_AI_URL} target="_blank" rel="noopener">
+        manapick AIを見る ↗
+      </a>
+    </section>
   );
 }
 

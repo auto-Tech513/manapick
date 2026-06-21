@@ -9,6 +9,7 @@ import genresData from "@/content/genres.json";
 import professionRoutesData from "@/content/professions.json";
 import roadmapsData from "@/content/roadmaps.json";
 import videosData from "@/content/videos.json";
+import { MANAPICK_AI_URL } from "@/lib/brand-links";
 import { RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY, jstDateKey, selectTodayVideo } from "@/lib/retention";
 import { siteStats } from "@/lib/site-stats";
 import { buildSubRoadmap } from "@/lib/sub-roadmap";
@@ -139,6 +140,7 @@ type FooterLink = {
   href: string;
   external?: boolean;
   icon?: "x";
+  description?: string;
 };
 
 const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
@@ -175,6 +177,12 @@ const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
     title: "つながる",
     links: [
       { label: "お問い合わせ", href: "/contact/" },
+      {
+        label: "姉妹サイト：manapick AI",
+        href: MANAPICK_AI_URL,
+        external: true,
+        description: "使えるAIと使い方"
+      },
       { label: "公式X", href: "https://x.com/manapick_app", external: true, icon: "x" }
     ]
   }
@@ -1149,6 +1157,10 @@ export default function ManapickApp() {
               <a className="transition hover:text-accent" href="/contact/">
                 お問い合わせ
               </a>
+              <a className="header-ai-link" href={MANAPICK_AI_URL} target="_blank" rel="noopener">
+                <span>manapick AI ↗</span>
+                <small>公式AI版</small>
+              </a>
             </nav>
             <button
               ref={menuButtonRef}
@@ -1296,6 +1308,8 @@ export default function ManapickApp() {
       </section>
 
       <WhyManapickSection />
+
+      <ManapickAiCrossLink variant="home" />
 
       <ProfessionRouteSection
         routes={professionRoutes}
@@ -1734,6 +1748,7 @@ export default function ManapickApp() {
                         </svg>
                       ) : null}
                       <span>{link.label}</span>
+                      {link.description ? <small>{link.description}</small> : null}
                     </a>
                   ))}
                 </div>
@@ -1885,6 +1900,21 @@ function WhyManapickSection() {
         </div>
       </div>
       <p className="why-tagline">Manapickは、動画を見るサイトではなく「次に見る一本」を最短で決めるためのサイトです。</p>
+    </section>
+  );
+}
+
+function ManapickAiCrossLink({ variant }: { variant: "home" }) {
+  return (
+    <section className={`manapick-ai-crosslink is-${variant}`} aria-label="公式AI版 manapick AI">
+      <div>
+        <p className="section-eyebrow">公式AI版</p>
+        <h2>“使えるAI”を選ぶなら manapick AI</h2>
+        <p>学ぶ順番はManapick、AIツールを選ぶときはmanapick AI。料金・無料枠・使い方を7軸で正直採点しています。</p>
+      </div>
+      <a href={MANAPICK_AI_URL} target="_blank" rel="noopener">
+        manapick AIを見る ↗
+      </a>
     </section>
   );
 }
@@ -2257,6 +2287,10 @@ function SiteMenuDrawer({
           </a>
           <a className="site-menu-link" href="/about-score/" onClick={onClose}>
             採点方法
+          </a>
+          <a className="site-menu-link site-menu-ai-link" href={MANAPICK_AI_URL} target="_blank" rel="noopener" onClick={onClose}>
+            <span>manapick AI ↗</span>
+            <small>公式AI版・AIツールを選ぶ</small>
           </a>
           {SHOW_TOP_PR_SECTION ? (
             <button type="button" className="site-menu-link" onClick={() => onSectionSelect("pr")}>
