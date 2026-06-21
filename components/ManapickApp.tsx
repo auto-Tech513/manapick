@@ -1735,7 +1735,11 @@ export default function ManapickApp() {
                   {group.links.map((link) => (
                     <a
                       key={link.label}
-                      className={link.icon === "x" ? "footer-link footer-x-link" : "footer-link"}
+                      className={[
+                        "footer-link",
+                        link.icon === "x" ? "footer-x-link" : "",
+                        link.description ? "footer-ai-link" : ""
+                      ].filter(Boolean).join(" ")}
                       href={link.href}
                       {...(link.external ? { target: "_blank", rel: "noopener" } : {})}
                     >
@@ -1909,7 +1913,7 @@ function ManapickAiCrossLink({ variant }: { variant: "home" }) {
     <section className={`manapick-ai-crosslink is-${variant}`} aria-label="公式AI版 manapick AI">
       <div>
         <p className="section-eyebrow">公式AI版</p>
-        <h2>“使えるAI”を選ぶなら manapick AI</h2>
+        <h2>“使えるAI”を選ぶなら <span className="ai-brand-word">manapick AI</span></h2>
         <p>学ぶ順番はManapick、AIツールを選ぶときはmanapick AI。料金・無料枠・使い方を7軸で正直採点しています。</p>
       </div>
       <a href={MANAPICK_AI_URL} target="_blank" rel="noopener">
@@ -2253,6 +2257,10 @@ function SiteMenuDrawer({
           <button type="button" className="site-menu-link is-primary" onClick={() => onProfessionSelect()}>
             なりたい職業から選ぶ
           </button>
+          <a className="site-menu-link site-menu-ai-link" href={MANAPICK_AI_URL} target="_blank" rel="noopener" onClick={onClose}>
+            <span>manapick AI ↗</span>
+            <small>公式AI版・AIツールを選ぶ</small>
+          </a>
           <div className="site-menu-profession-list" role="group" aria-label="職業別の入口">
             {routes.map((route) => (
               <button key={route.id} type="button" onClick={() => onProfessionSelect(route.id)}>
@@ -2287,10 +2295,6 @@ function SiteMenuDrawer({
           </a>
           <a className="site-menu-link" href="/about-score/" onClick={onClose}>
             採点方法
-          </a>
-          <a className="site-menu-link site-menu-ai-link" href={MANAPICK_AI_URL} target="_blank" rel="noopener" onClick={onClose}>
-            <span>manapick AI ↗</span>
-            <small>公式AI版・AIツールを選ぶ</small>
           </a>
           {SHOW_TOP_PR_SECTION ? (
             <button type="button" className="site-menu-link" onClick={() => onSectionSelect("pr")}>

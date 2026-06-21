@@ -21,6 +21,11 @@
   --color-primary: #1f3a8a;
   --color-primary-ink: #16306e;
   --color-accent: #0fa98b;
+  --color-ai-red: #f04438;
+  --color-ai-red-dark: #c9231d;
+  --color-ai-red-soft: #fff3f2;
+  --color-ai-red-line: #facbc8;
+  --color-ai-amber: #ffb000;
   --color-spark: #f59e0b;
   --color-coral: #d95b48;
   --color-ink: #161b22;
@@ -124,17 +129,36 @@ img {
 }
 
 .header-ai-link {
+  position: relative;
   display: inline-flex;
   min-height: 34px;
   align-items: center;
   gap: 6px;
-  border: 1px solid color-mix(in srgb, var(--color-primary) 18%, var(--color-line));
+  border: 1px solid var(--color-ai-red-line);
   border-radius: 999px;
-  background: color-mix(in srgb, var(--color-primary) 5%, white);
-  color: var(--color-primary-ink);
+  background:
+    radial-gradient(circle at 16% 10%, rgba(255, 176, 0, 0.18), transparent 1.7rem),
+    linear-gradient(135deg, #fff, var(--color-ai-red-soft));
+  color: var(--color-ai-red-dark);
   padding: 5px 10px;
   text-decoration: none;
+  box-shadow: 0 1px 0 rgba(240, 68, 56, 0.08), 0 8px 18px rgba(240, 68, 56, 0.08);
   transition: background-color 160ms var(--ease-standard), border-color 160ms var(--ease-standard), transform 160ms var(--ease-standard);
+}
+
+.header-ai-link::before {
+  display: inline-grid;
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 6px;
+  background: linear-gradient(135deg, var(--color-ai-red), #ff5d45);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 950;
+  line-height: 1;
+  content: "↗";
 }
 
 .header-ai-link span {
@@ -143,16 +167,18 @@ img {
 }
 
 .header-ai-link small {
-  color: var(--color-muted);
+  color: color-mix(in srgb, var(--color-ai-red-dark) 72%, var(--color-muted));
   font-size: 0.68rem;
   font-weight: 900;
   line-height: 1.1;
 }
 
 .header-ai-link:hover {
-  border-color: color-mix(in srgb, var(--color-primary) 34%, var(--color-line));
-  background: color-mix(in srgb, var(--color-primary) 9%, white);
-  color: var(--color-primary);
+  border-color: color-mix(in srgb, var(--color-ai-red) 54%, var(--color-ai-red-line));
+  background:
+    radial-gradient(circle at 16% 10%, rgba(255, 176, 0, 0.22), transparent 1.7rem),
+    linear-gradient(135deg, #fff, color-mix(in srgb, var(--color-ai-red) 11%, white));
+  color: var(--color-ai-red-dark);
   transform: translateY(-1px);
 }
 
@@ -317,9 +343,14 @@ img {
 }
 
 .site-menu-ai-link {
+  display: grid;
   align-items: flex-start;
-  background: color-mix(in srgb, var(--color-leaf) 8%, white);
-  color: var(--color-primary-ink);
+  gap: 4px;
+  border-color: var(--color-ai-red-line);
+  background:
+    radial-gradient(circle at 94% 10%, rgba(255, 176, 0, 0.16), transparent 4.5rem),
+    linear-gradient(135deg, #fff, var(--color-ai-red-soft));
+  color: var(--color-ai-red-dark);
 }
 
 .site-menu-ai-link span,
@@ -329,9 +360,17 @@ img {
 
 .site-menu-ai-link small {
   margin-top: 2px;
-  color: var(--color-muted);
+  color: color-mix(in srgb, var(--color-ai-red-dark) 68%, var(--color-muted));
   font-size: 0.76rem;
   font-weight: 850;
+}
+
+.site-menu-ai-link:hover {
+  border-color: color-mix(in srgb, var(--color-ai-red) 48%, var(--color-ai-red-line));
+  background:
+    radial-gradient(circle at 94% 10%, rgba(255, 176, 0, 0.19), transparent 4.5rem),
+    linear-gradient(135deg, #fff, color-mix(in srgb, var(--color-ai-red) 11%, white));
+  color: var(--color-ai-red-dark);
 }
 
 .site-menu-profession-list {
@@ -419,6 +458,16 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
+}
+
+.footer-ai-link {
+  display: inline-grid;
+  gap: 1px;
+  color: color-mix(in srgb, var(--color-ai-red) 24%, white);
+}
+
+.footer-ai-link:hover {
+  color: #fff;
 }
 
 @media (max-width: 767px) {
@@ -2304,19 +2353,30 @@ img {
 }
 
 .manapick-ai-crosslink {
+  position: relative;
   display: flex;
+  overflow: hidden;
   width: min(100% - 32px, 1180px);
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   margin: 22px auto 12px;
-  border: 1px solid color-mix(in srgb, var(--color-primary) 16%, var(--color-line));
+  border: 1px solid var(--color-ai-red-line);
   border-radius: 20px;
   background:
-    radial-gradient(circle at 94% 10%, rgba(15, 169, 139, 0.13), transparent 8rem),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.96), color-mix(in srgb, var(--color-bg-soft) 64%, white));
-  box-shadow: var(--shadow-line);
+    radial-gradient(circle at 92% 12%, rgba(240, 68, 56, 0.14), transparent 11rem),
+    radial-gradient(circle at 8% 8%, rgba(255, 176, 0, 0.12), transparent 8rem),
+    linear-gradient(135deg, #fff, var(--color-ai-red-soft));
+  box-shadow: 0 1px 0 rgba(240, 68, 56, 0.08), 0 18px 46px rgba(240, 68, 56, 0.08);
   padding: clamp(16px, 3vw, 22px);
+}
+
+.manapick-ai-crosslink::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: linear-gradient(180deg, var(--color-ai-red), var(--color-ai-amber));
+  content: "";
 }
 
 .manapick-ai-crosslink.is-home {
@@ -2332,6 +2392,24 @@ img {
 .guide-section.manapick-ai-crosslink {
   width: auto;
   margin: 18px 0 0;
+  border-color: var(--color-ai-red-line);
+  background:
+    radial-gradient(circle at 92% 12%, rgba(240, 68, 56, 0.14), transparent 11rem),
+    radial-gradient(circle at 8% 8%, rgba(255, 176, 0, 0.12), transparent 8rem),
+    linear-gradient(135deg, #fff, var(--color-ai-red-soft));
+  box-shadow: 0 1px 0 rgba(240, 68, 56, 0.08), 0 18px 46px rgba(240, 68, 56, 0.08);
+}
+
+.guide-section.manapick-ai-crosslink h2 {
+  padding-left: 0;
+}
+
+.guide-section.manapick-ai-crosslink h2::before {
+  content: none;
+}
+
+.guide-section.manapick-ai-crosslink > a {
+  color: #fff;
 }
 
 .manapick-ai-crosslink h2 {
@@ -2343,10 +2421,20 @@ img {
   text-wrap: balance;
 }
 
+.manapick-ai-crosslink .section-eyebrow {
+  color: var(--color-ai-red-dark);
+  letter-spacing: 0.02em;
+}
+
+.manapick-ai-crosslink .ai-brand-word {
+  color: var(--color-ai-red);
+  white-space: nowrap;
+}
+
 .manapick-ai-crosslink p:not(.section-eyebrow) {
   max-width: 44rem;
   margin: 6px 0 0;
-  color: var(--color-muted);
+  color: color-mix(in srgb, var(--color-ink) 70%, white);
   font-size: 0.92rem;
   font-weight: 800;
   line-height: 1.75;
@@ -2359,20 +2447,20 @@ img {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  background: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-ai-red), var(--color-ai-red-dark));
   color: #fff;
   padding: 9px 14px;
   text-decoration: none;
   font-size: 0.86rem;
   font-weight: 950;
   line-height: 1.2;
-  box-shadow: var(--shadow-button);
+  box-shadow: 0 2px 6px rgba(240, 68, 56, 0.2), 0 12px 26px rgba(240, 68, 56, 0.22);
   transition: background-color 160ms var(--ease-standard), transform 160ms var(--ease-standard), box-shadow 160ms var(--ease-standard);
 }
 
 .manapick-ai-crosslink > a:hover {
-  background: var(--color-primary-ink);
-  box-shadow: var(--shadow-card-hover);
+  background: linear-gradient(135deg, #ff5a4d, var(--color-ai-red-dark));
+  box-shadow: 0 2px 8px rgba(240, 68, 56, 0.24), 0 16px 34px rgba(240, 68, 56, 0.28);
   transform: translateY(-1px);
 }
 

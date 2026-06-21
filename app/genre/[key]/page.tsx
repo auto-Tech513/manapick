@@ -187,7 +187,7 @@ function ManapickAiGenreBand() {
     <section className="manapick-ai-crosslink is-genre" aria-label="公式AI版 manapick AI">
       <div>
         <p className="section-eyebrow">公式AI版</p>
-        <h2>“使えるAI”を選ぶなら manapick AI</h2>
+        <h2>“使えるAI”を選ぶなら <span className="ai-brand-word">manapick AI</span></h2>
         <p>学ぶ順番はManapick、AIツールを選ぶときはmanapick AI。料金・無料枠・使い方を7軸で正直採点しています。</p>
       </div>
       <a href={MANAPICK_AI_URL} target="_blank" rel="noopener">
