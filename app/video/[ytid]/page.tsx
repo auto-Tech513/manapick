@@ -26,6 +26,7 @@ import {
   youtubeEmbedUrl,
   youtubeThumbnail
 } from "@/lib/manapick";
+import { nextWatchVideo } from "@/lib/rankings";
 
 type VideoPageProps = {
   params: Promise<{ ytid: string }>;
@@ -84,6 +85,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
 
   const channel = displayChannel(video);
   const related = relatedVideos(video);
+  const nextPick = nextWatchVideo(video);
   const pageUrl = absoluteUrl(videoPath(video.ytid));
   const confirmationDate = scoreConfirmationDate(video);
   const scoreConfirmationText =
@@ -306,6 +308,36 @@ export default async function VideoPage({ params }: VideoPageProps) {
           ))}
         </div>
       </section>
+
+      {nextPick ? (
+        <section className="video-next-section" aria-labelledby="video-next-title">
+          <div className="section-heading-row">
+            <div>
+              <p className="section-eyebrow">次の一歩</p>
+              <h2 id="video-next-title" className="section-title">次に見る1本</h2>
+            </div>
+            <a href={`/genre/${video.genre}/`}>{genreDisplayName(video.genre)}の一覧へ</a>
+          </div>
+          <a className="video-next-card" href={videoPath(nextPick.video.ytid)}>
+            <span className="video-next-thumb">
+              <Image
+                src={youtubeThumbnail(nextPick.video.ytid)}
+                alt={nextPick.video.title + "のサムネイル"}
+                width={480}
+                height={270}
+                sizes="(min-width: 760px) 220px, 92vw"
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </span>
+            <span className="video-next-card-body">
+              <span>{nextPick.video.sub} / {scoreText(nextPick.video)} / {nextPick.video.minutes}分</span>
+              <strong>{nextPick.video.title}</strong>
+              <span>{nextPick.reason}</span>
+            </span>
+          </a>
+        </section>
+      ) : null}
     </main>
   );
 }

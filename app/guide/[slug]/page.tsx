@@ -103,6 +103,9 @@ export default async function GuidePage({ params }: GuidePageProps) {
   const stumbleRows = guideStumbleRows(guide);
   const studyPlans = guideStudyPlans(guide, totalMinutes);
   const relatedLinks = guideRelatedLinks(guide);
+  const directAnswer = guideDirectAnswer(guide, totalVideos, totalMinutes);
+  const quickFaq = guide.faq.slice(0, 4);
+  const remainingFaq = guide.faq.slice(4);
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -209,6 +212,22 @@ export default async function GuidePage({ params }: GuidePageProps) {
         </header>
 
         <section className="guide-section guide-intro-section" aria-labelledby="guide-overview-title">
+          <div className="guide-answer-box">
+            <p className="section-eyebrow">結論先出し</p>
+            <h2 id="guide-answer-title">まず何をすればいい？</h2>
+            <p>{strongText(directAnswer)}</p>
+          </div>
+          <div className="guide-quick-faq" aria-labelledby="guide-quick-faq-title">
+            <h2 id="guide-quick-faq-title">このページのQ&amp;A</h2>
+            <div className="guide-faq-list">
+              {quickFaq.map((item) => (
+                <details key={item.question}>
+                  <summary>{item.question}</summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
           <h2 id="guide-overview-title">この記事でわかること</h2>
           <div className="guide-point-box">
             <ul>
@@ -223,11 +242,12 @@ export default async function GuidePage({ params }: GuidePageProps) {
             <summary>目次</summary>
             <ol>
               <li><a href="#guide-conclusion-title">結論：この順番で見れば最短です</a></li>
+              <li><a href="#guide-quick-faq-title">このページのQ&amp;A</a></li>
               <li><a href="#guide-reason-title">なぜこの順番か</a></li>
               <li><a href="#guide-videos-title">各STEPの厳選動画</a></li>
               <li><a href="#guide-next-title">つまずきポイントと回避策</a></li>
               <li><a href="#guide-plan-title">学習プラン例</a></li>
-              <li><a href="#guide-faq-title">FAQ</a></li>
+              {remainingFaq.length > 0 ? <li><a href="#guide-faq-title">補足FAQ</a></li> : null}
               <li><a href="#guide-cta-title">関連ロードマップ</a></li>
             </ol>
           </details>
@@ -339,17 +359,19 @@ export default async function GuidePage({ params }: GuidePageProps) {
           </div>
         </section>
 
-        <section className="guide-section" aria-labelledby="guide-faq-title">
-          <h2 id="guide-faq-title">FAQ</h2>
-          <div className="guide-faq-list">
-            {guide.faq.map((item) => (
-              <details key={item.question}>
-                <summary>{item.question}</summary>
-                <p>{item.answer}</p>
-              </details>
-            ))}
-          </div>
-        </section>
+        {remainingFaq.length > 0 ? (
+          <section className="guide-section" aria-labelledby="guide-faq-title">
+            <h2 id="guide-faq-title">補足FAQ</h2>
+            <div className="guide-faq-list">
+              {remainingFaq.map((item) => (
+                <details key={item.question}>
+                  <summary>{item.question}</summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         <section className="guide-section guide-section-muted" aria-labelledby="guide-cta-title">
           <h2 id="guide-cta-title">関連ロードマップ</h2>
@@ -550,6 +572,12 @@ function guideReadingMinutes(guide: Guide) {
   ].join("");
 
   return Math.max(3, Math.ceil(text.length / 520));
+}
+
+function guideDirectAnswer(guide: Guide, totalVideos: number, totalMinutes: number) {
+  const first = guide.conclusionBullets[0]?.text ?? "最初の動画で全体像をつかみ、次のSTEPで実践へ進みます";
+  const second = guide.conclusionBullets[1]?.text ?? "基礎を触ったあと、応用・実務の順に進むと迷いにくくなります";
+  return `結論は、${guide.steps.length}STEPを上から順番に進めることです。まず${first}。その後、${second}。合計${totalVideos}本・約${durationLabel(totalMinutes)}なので、短い時間に分けて進められます。`;
 }
 
 function GuideVideoCard({ video, why }: { video: Video; why: string }) {

@@ -7,6 +7,10 @@ export const dynamic = "force-static";
 
 const staticRoutes = [
   "/",
+  "/ranking/",
+  "/new/",
+  "/faq/",
+  "/glossary/",
   "/about-score/",
   "/operator/",
   "/affiliate/",

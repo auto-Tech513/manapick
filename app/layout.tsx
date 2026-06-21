@@ -20,7 +20,12 @@ const commonJsonLd = {
       name: "Manapick",
       url: absoluteUrl("/"),
       logo: absoluteUrl("/brand/manapick-logo-master.png"),
-      sameAs: [xAccountUrl, MANAPICK_AI_URL]
+      sameAs: [xAccountUrl, MANAPICK_AI_URL],
+      subOrganization: {
+        "@type": "Organization",
+        name: "manapick AI",
+        url: MANAPICK_AI_URL
+      }
     },
     {
       "@type": "WebSite",

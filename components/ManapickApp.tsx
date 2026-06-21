@@ -150,6 +150,10 @@ const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
       { label: "なりたい職業から選ぶ", href: "/#profession-routes" },
       { label: siteStats.publishedGenreCount + "ジャンル一覧", href: "/#genre-picker" },
       { label: "ロードマップ", href: "/#roadmap" },
+      { label: "ランキング", href: "/ranking/" },
+      { label: "新着動画", href: "/new/" },
+      { label: "用語集", href: "/glossary/" },
+      { label: "FAQ", href: "/faq/" },
       { label: "マイページ", href: "/my/" },
       { label: "採点方法", href: "/about-score/" },
       { label: "生成AIロードマップ", href: "/guide/generative-ai/" },
@@ -611,6 +615,7 @@ export default function ManapickApp() {
 
   const heroCarouselSlides = useMemo(() => buildHeroCarouselSlides(), []);
   const popularFallbackVideos = useMemo(() => rankedVideosByTab("popular", 12), []);
+  const recentUpdateVideos = useMemo(() => rankedVideosByTab("new", 6), []);
   const recentVideos = useMemo(() => {
     const byId = new Map(videos.map((video) => [video.ytid, video]));
     return recent.items
@@ -1146,6 +1151,15 @@ export default function ManapickApp() {
               <a className="transition hover:text-accent" href="#roadmap">
                 ロードマップ
               </a>
+              <a className="transition hover:text-accent" href="/ranking/">
+                ランキング
+              </a>
+              <a className="transition hover:text-accent" href="/new/">
+                新着
+              </a>
+              <a className="transition hover:text-accent" href="/glossary/">
+                用語集
+              </a>
               <a className="transition hover:text-accent" href="/my/">
                 マイページ
               </a>
@@ -1310,6 +1324,8 @@ export default function ManapickApp() {
       <WhyManapickSection />
 
       <ManapickAiCrossLink variant="home" />
+
+      <RecentUpdatesSection videos={recentUpdateVideos} />
 
       <ProfessionRouteSection
         routes={professionRoutes}
@@ -1923,6 +1939,43 @@ function ManapickAiCrossLink({ variant }: { variant: "home" }) {
   );
 }
 
+function RecentUpdatesSection({ videos }: { videos: Video[] }) {
+  if (videos.length === 0) return null;
+
+  return (
+    <section className="recent-updates-section" aria-labelledby="recent-updates-title">
+      <div className="recent-updates-head">
+        <div>
+          <p className="section-eyebrow">最近追加・更新</p>
+          <h2 id="recent-updates-title" className="section-title">新しく選びやすくなった動画</h2>
+        </div>
+        <a href="/new/">すべて見る</a>
+      </div>
+      <div className="recent-updates-grid">
+        {videos.map((video) => (
+          <a key={video.ytid} className="recent-update-card" href={videoDetailHref(video)}>
+            <span className="recent-update-thumb">
+              <Image
+                src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"}
+                alt={thumbnailAlt(video)}
+                width={480}
+                height={270}
+                sizes="(min-width: 1180px) 180px, (min-width: 760px) 28vw, 38vw"
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </span>
+            <span className="recent-update-body">
+              <span>{genreLabel(video.genre)} / {scoreText(video)} / {video.minutes}分</span>
+              <strong>{video.title}</strong>
+            </span>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function ProfessionRouteSection({
   routes,
   onRouteSelect,
@@ -2260,6 +2313,18 @@ function SiteMenuDrawer({
           <a className="site-menu-link site-menu-ai-link" href={MANAPICK_AI_URL} target="_blank" rel="noopener" onClick={onClose}>
             <span>manapick AI ↗</span>
             <small>公式AI版・AIツールを選ぶ</small>
+          </a>
+          <a className="site-menu-link" href="/ranking/" onClick={onClose}>
+            ランキング
+          </a>
+          <a className="site-menu-link" href="/new/" onClick={onClose}>
+            最近追加・更新した動画
+          </a>
+          <a className="site-menu-link" href="/glossary/" onClick={onClose}>
+            用語集
+          </a>
+          <a className="site-menu-link" href="/faq/" onClick={onClose}>
+            よくある質問
           </a>
           <div className="site-menu-profession-list" role="group" aria-label="職業別の入口">
             {routes.map((route) => (

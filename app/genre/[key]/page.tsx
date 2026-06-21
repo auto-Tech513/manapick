@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { guidePath, guides } from "@/lib/guides";
-import { MANAPICK_AI_URL } from "@/lib/brand-links";
+import { manapickAiContextForGenre, manapickAiHrefForGenre } from "@/lib/ai-crosslinks";
 import {
   absoluteUrl,
   genreDisplayName,
@@ -132,7 +132,7 @@ export default async function GenrePage({ params }: GenrePageProps) {
           <Link href={guidePath(guideSlug)}>▶ {label}の完全ロードマップ（初級→上級の見る順）を読む</Link>
         </p>
       ) : null}
-      {key === "ai" ? <ManapickAiGenreBand /> : null}
+      <ManapickAiGenreBand genreKey={key} />
       {subPages.length > 0 ? (
         <section className="genre-hub-subpages" aria-labelledby="genre-hub-subpages-title">
           <h2 id="genre-hub-subpages-title">{label}のトピック別ロードマップ</h2>
@@ -182,15 +182,17 @@ export default async function GenrePage({ params }: GenrePageProps) {
   );
 }
 
-function ManapickAiGenreBand() {
+function ManapickAiGenreBand({ genreKey }: { genreKey: string }) {
+  const href = manapickAiHrefForGenre(genreKey);
+  const context = manapickAiContextForGenre(genreKey);
   return (
     <section className="manapick-ai-crosslink is-genre" aria-label="公式AI版 manapick AI">
       <div>
         <p className="section-eyebrow">公式AI版</p>
         <h2>“使えるAI”を選ぶなら <span className="ai-brand-word">manapick AI</span></h2>
-        <p>学ぶ順番はManapick、AIツールを選ぶときはmanapick AI。料金・無料枠・使い方を7軸で正直採点しています。</p>
+        <p>{context}</p>
       </div>
-      <a href={MANAPICK_AI_URL} target="_blank" rel="noopener">
+      <a href={href} target="_blank" rel="noopener">
         manapick AIを見る ↗
       </a>
     </section>
