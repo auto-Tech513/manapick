@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import TrackedPrLink from "@/components/TrackedPrLink";
 import prLinksData from "@/content/pr-links.json";
 import { guidePath, guides } from "@/lib/guides";
 import {
@@ -306,12 +307,14 @@ function SubTopicPrSection({ items, genreName }: { items: GuidePrLink[]; genreNa
           const prKind = item.kind ?? "book";
 
           return (
-            <a
+            <TrackedPrLink
               key={item.url}
               className="guide-pr-card is-link"
               href={item.url}
-              target="_blank"
-              rel="sponsored nofollow noopener"
+              genre={genreName}
+              kind={prKind}
+              label={item.label}
+              placement="sub-topic"
             >
               <span className="guide-pr-card-pr">
                 {prKind === "course" ? "【PR】スクール・講座" : "【PR】楽天ブックス"}
@@ -319,7 +322,7 @@ function SubTopicPrSection({ items, genreName }: { items: GuidePrLink[]; genreNa
               <strong>{item.label}</strong>
               <span>{item.note}</span>
               <em>{prKind === "course" ? "公式サイトを見る" : "楽天ブックスで見る"}</em>
-            </a>
+            </TrackedPrLink>
           );
         })}
       </div>

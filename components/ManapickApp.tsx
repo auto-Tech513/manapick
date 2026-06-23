@@ -10,7 +10,7 @@ import professionRoutesData from "@/content/professions.json";
 import roadmapsData from "@/content/roadmaps.json";
 import videosData from "@/content/videos.json";
 import { MANAPICK_AI_URL } from "@/lib/brand-links";
-import { RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY, jstDateKey, selectTodayVideo } from "@/lib/retention";
+import { RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY, jstDateKey, selectTodayVideo, sendGaEvent } from "@/lib/retention";
 import { siteStats } from "@/lib/site-stats";
 import { buildSubRoadmap } from "@/lib/sub-roadmap";
 import { useLocalList } from "@/lib/useLocalList";
@@ -176,6 +176,17 @@ const searchIntentLinks = [
     href: "/genre/marke/SNS/",
     note: "SNS制作"
   }
+];
+
+const popularSearchKeywords = [
+  "YouTubeサムネイル",
+  "Python 難しい",
+  "エクセル統計",
+  "Copilot 活用",
+  "AIプロンプト",
+  "社労士",
+  "マーケティング",
+  "Canva 初心者"
 ];
 
 type FooterLink = {
@@ -465,6 +476,16 @@ function publishedAgeLabel(video: Video) {
   const months = Math.max(0, Math.floor(monthsSincePublished(video)));
   if (months < 12) return Math.max(1, months) + "ヶ月前公開";
   return Math.max(1, Math.floor(months / 12)) + "年前公開";
+}
+
+function freshnessBadge(video: Video) {
+  if (!video.publishedAt) return null;
+  const date = new Date(video.publishedAt);
+  if (Number.isNaN(date.getTime())) return null;
+  const ageDays = Math.max(0, (Date.now() - date.getTime()) / (1000 * 60 * 60 * 24));
+  if (ageDays <= 180) return { label: "新着", tone: "new" };
+  if (ageDays >= 365 * 3 && (video.score ?? 0) >= 28) return { label: "定番", tone: "evergreen" };
+  return null;
 }
 
 function genreEnglishLabel(key: string) {
@@ -1062,6 +1083,7 @@ export default function ManapickApp() {
   }
 
   function handleRoadmapGenreSelect(genre: string) {
+    sendGaEvent("roadmap_genre_select", { genre });
     setActiveRoadmapGenre(genre);
     handleGenreChange(genre, "none");
   }
@@ -1085,6 +1107,19 @@ export default function ManapickApp() {
     setSearchDraft("");
     setKeyword("");
     setSuggestionsOpen(false);
+  }
+
+  function applySearchKeyword(term: string) {
+    setWatchlistOnly(false);
+    setSelectedGenre("all");
+    setSelectedSub("all");
+    setSelectedLevel("すべて");
+    setSelectedTime("all");
+    setSearchDraft(term);
+    setKeyword(term);
+    setSuggestionsOpen(true);
+    resetPageParam();
+    scrollToResults();
   }
 
   function jumpToGenre(genreKey: string) {
@@ -1214,7 +1249,13 @@ export default function ManapickApp() {
               <a className="transition hover:text-accent" href="/contact/">
                 お問い合わせ
               </a>
-              <a className="header-ai-link" href={MANAPICK_AI_URL} target="_blank" rel="noopener">
+              <a
+                className="header-ai-link"
+                href={MANAPICK_AI_URL}
+                target="_blank"
+                rel="noopener"
+                onClick={() => sendGaEvent("ai_crosslink_click", { placement: "header", target: "manapick_ai" })}
+              >
                 <span>manapick AI ↗</span>
                 <small>公式AI版</small>
               </a>
@@ -1595,6 +1636,8 @@ export default function ManapickApp() {
                 </button>
               </div>
 
+              <PopularKeywordChips onSelect={applySearchKeyword} />
+
               <div className="mt-5 flex flex-col gap-2 text-sm text-muted min-[680px]:flex-row min-[680px]:items-center min-[680px]:justify-between">
                 <p>
                   <span className="font-black text-ink">{filteredVideos.length}</span>件ヒット
@@ -1652,6 +1695,7 @@ export default function ManapickApp() {
             <p className="mt-2 leading-7 text-muted">
               {watchlistOnly ? "あとで見るに追加した動画がここに並びます。" : "条件を少し広げて探してください。"}
             </p>
+            {!watchlistOnly ? <PopularKeywordChips compact onSelect={applySearchKeyword} /> : null}
           </div>
         ) : (
           <>
@@ -1803,6 +1847,11 @@ export default function ManapickApp() {
                       ].filter(Boolean).join(" ")}
                       href={link.href}
                       {...(link.external ? { target: "_blank", rel: "noopener" } : {})}
+                      onClick={() => {
+                        if (link.href === MANAPICK_AI_URL) {
+                          sendGaEvent("ai_crosslink_click", { placement: "footer", target: "manapick_ai" });
+                        }
+                      }}
                     >
                       {link.icon === "x" ? (
                         <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -1927,6 +1976,21 @@ function LiveSearchPanel({
   );
 }
 
+function PopularKeywordChips({ compact = false, onSelect }: { compact?: boolean; onSelect: (term: string) => void }) {
+  return (
+    <div className={compact ? "popular-keyword-chips is-compact" : "popular-keyword-chips"} aria-label="よく検索されるキーワード">
+      <span>{compact ? "近いテーマ" : "人気キーワード"}</span>
+      <div>
+        {popularSearchKeywords.map((term) => (
+          <button key={term} type="button" onClick={() => onSelect(term)}>
+            {term}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function WhyManapickSection() {
   return (
     <section className="why-section" aria-labelledby="why-title">
@@ -1977,7 +2041,12 @@ function ManapickAiCrossLink({ variant }: { variant: "home" }) {
         <h2>“使えるAI”を選ぶなら <span className="ai-brand-word">manapick AI</span></h2>
         <p>学ぶ順番はManapick、AIツールを選ぶときはmanapick AI。料金・無料枠・使い方を7軸で正直採点しています。</p>
       </div>
-      <a href={MANAPICK_AI_URL} target="_blank" rel="noopener">
+      <a
+        href={MANAPICK_AI_URL}
+        target="_blank"
+        rel="noopener"
+        onClick={() => sendGaEvent("ai_crosslink_click", { placement: variant, target: "manapick_ai" })}
+      >
         manapick AIを見る ↗
       </a>
     </section>
@@ -2241,6 +2310,42 @@ function ProfessionIcon({ icon }: { icon: string }) {
       </span>
     );
   }
+  if (icon === "chart") {
+    return (
+      <span className="profession-icon" aria-hidden="true">
+        <svg {...commonProps}>
+          <path d="M5 19V9" />
+          <path d="M12 19V5" />
+          <path d="M19 19v-7" />
+          <path d="M4 19h17" />
+        </svg>
+      </span>
+    );
+  }
+  if (icon === "trend") {
+    return (
+      <span className="profession-icon" aria-hidden="true">
+        <svg {...commonProps}>
+          <path d="m4 16 5-5 4 4 7-8" />
+          <path d="M15 7h5v5" />
+          <path d="M4 20h17" />
+        </svg>
+      </span>
+    );
+  }
+  if (icon === "money") {
+    return (
+      <span className="profession-icon" aria-hidden="true">
+        <svg {...commonProps}>
+          <circle cx="12" cy="12" r="8" />
+          <path d="M8.5 8.5 12 12l3.5-3.5" />
+          <path d="M12 12v5" />
+          <path d="M9 14h6" />
+          <path d="M9 16.5h6" />
+        </svg>
+      </span>
+    );
+  }
   return (
     <span className="profession-icon" aria-hidden="true">
       <svg {...commonProps}>
@@ -2377,7 +2482,16 @@ function SiteMenuDrawer({
           <button type="button" className="site-menu-link is-primary" onClick={() => onProfessionSelect()}>
             なりたい職業から選ぶ
           </button>
-          <a className="site-menu-link site-menu-ai-link" href={MANAPICK_AI_URL} target="_blank" rel="noopener" onClick={onClose}>
+          <a
+            className="site-menu-link site-menu-ai-link"
+            href={MANAPICK_AI_URL}
+            target="_blank"
+            rel="noopener"
+            onClick={() => {
+              sendGaEvent("ai_crosslink_click", { placement: "menu", target: "manapick_ai" });
+              onClose();
+            }}
+          >
             <span>manapick AI ↗</span>
             <small>公式AI版・AIツールを選ぶ</small>
           </a>
@@ -3002,6 +3116,7 @@ function VideoCard({
 }) {
   const channel = displayChannel(video);
   const ageLabel = publishedAgeLabel(video);
+  const freshness = freshnessBadge(video);
   const watchlistActive = watchlist?.ready ? watchlist.has(video.ytid) : false;
   const watchedActive = watched?.ready ? watched.has(video.ytid) : false;
 
@@ -3037,7 +3152,10 @@ function VideoCard({
             className={watchlistActive ? "video-watchlist-toggle is-active" : "video-watchlist-toggle"}
             aria-pressed={watchlistActive}
             aria-label={watchlistActive ? "あとで見るから解除" : "あとで見るに追加"}
-            onClick={() => watchlist.toggle(video.ytid)}
+            onClick={() => {
+              sendGaEvent("video_save_toggle", { video_id: video.ytid, action: watchlistActive ? "remove" : "add", source: "card" });
+              watchlist.toggle(video.ytid);
+            }}
           >
             <span aria-hidden="true">🔖</span>
           </button>
@@ -3050,6 +3168,7 @@ function VideoCard({
         <div className="flex flex-wrap gap-2">
           <LevelBadge level={video.level} />
           <span className="rounded-pill bg-bg px-2.5 py-1 text-xs font-black text-ink">{video.sub}</span>
+          {freshness ? <span className={`freshness-badge is-${freshness.tone}`}>{freshness.label}</span> : null}
           {ageLabel ? <span className="published-age">{ageLabel}</span> : null}
           {watched?.ready && watchedActive ? <span className="watched-status-badge">✓視聴済み</span> : null}
         </div>

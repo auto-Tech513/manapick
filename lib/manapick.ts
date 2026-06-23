@@ -134,6 +134,20 @@ export function scoreConfirmationDate(video: Video) {
   return video.scoreConfirmedAt.replace(/-/g, "/");
 }
 
+export function videoFreshness(video: Video): { label: string; tone: "new" | "evergreen"; note: string } | null {
+  if (!video.publishedAt) return null;
+  const publishedTime = new Date(video.publishedAt).getTime();
+  if (Number.isNaN(publishedTime)) return null;
+  const ageDays = Math.max(0, (Date.now() - publishedTime) / (1000 * 60 * 60 * 24));
+  if (ageDays <= 180) {
+    return { label: "新着", tone: "new", note: "公開から半年以内の動画です。" };
+  }
+  if (ageDays >= 365 * 3 && (video.score ?? 0) >= 28) {
+    return { label: "定番", tone: "evergreen", note: "公開から時間が経っても基礎確認に使いやすい動画です。" };
+  }
+  return null;
+}
+
 export function displayChannel(video: Video) {
   const channel = video.channel?.trim();
   if (!channel || channel.includes("確認")) return null;

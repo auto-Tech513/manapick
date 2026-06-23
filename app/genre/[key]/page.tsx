@@ -9,6 +9,7 @@ import {
   genreDisplayName,
   publishedGenreKeys,
   scoreText,
+  videoFreshness,
   videoPath,
   videos,
   youtubeThumbnail,
@@ -154,6 +155,22 @@ function genreSeoFor(key: string, label: string, count: number): GenreSeo {
   return targets[key] ?? fallback;
 }
 
+function genreEditorialNote(key: string, label: string) {
+  const notes: Record<string, string> = {
+    ai: "生成AIは機能更新が速いため、単なるニュース紹介ではなく、仕事で再現しやすい基本操作・プロンプト設計・主要AIの使い分けを重視しています。無料版で試せる内容を優先し、成果を断定する動画や情報商材誘導が強い動画は掲載しません。",
+    prog: "プログラミングは長尺講座だけで挫折しやすいため、環境構築、文法、手を動かす題材の順に進められる動画を優先しています。コードを写すだけで終わらず、エラー時の確認や小さな成果物につながる説明があるかを見ています。",
+    video: "動画編集はツール操作と企画・見せ方が混ざりやすいため、最初の1本を作る操作、サムネイルやテロップの考え方、発信後の改善を分けて選んでいます。派手な実績訴求より、無料ツールでも再現しやすい手順を重視します。",
+    english: "英語は方法論が多いため、学習順、習慣化、TOEICなどの測定軸を整理できる動画を優先しています。短期で話せると断定する内容ではなく、毎日の練習に落とし込める説明と、目的別に使い分けられる構成を見ています。",
+    data: "データ分析は統計用語だけでなく、表を整える、集計する、読み取る流れが大切です。Excelやパワークエリなど、仕事の表で再現しやすい手順を優先し、専門用語の暗記に偏りすぎない動画を選んでいます。",
+    marke: "Webマーケは施策名だけを追うと迷いやすいため、全体像、SEO、SNS、広告、計測の関係が見える動画を優先しています。成果を保証する表現ではなく、実務で数字を見て改善する考え方まで説明しているかを確認しています。",
+    biz: "Office・資料作成は、操作の速さだけでなく、相手に伝わる成果物にできるかを重視しています。PowerPoint、Excel、Word、Canvaなどを、資料の目的、構成、見た目の整え方とあわせて学べる動画を選んでいます。",
+    shikaku: "資格学習は範囲が広いため、試験制度、学習計画、過去問演習へつながる動画を優先しています。特定教材の購入を強く迫る内容や合格を断定する表現ではなく、独学でも全体像をつかめる説明を重視しています。",
+    kaikei: "会計資格は、仕訳や試験範囲の暗記だけでなく、なぜその処理をするのかが分かる動画を選んでいます。簿記の基礎、財務諸表、試験対策を分け、実務助言ではなく学習の入口として安全に使える内容を優先します。",
+    money: "お金・投資は判断を誤る影響が大きいため、特定商品の推奨ではなく、制度や基礎知識を落ち着いて学べる動画を選んでいます。利益を保証する表現、過度な煽り、情報商材誘導が強い内容は掲載しません。"
+  };
+  return notes[key] ?? `${label}の動画は、無料で学び始めやすく、説明の根拠と見る順が分かるものを優先しています。誇張表現や誘導の強い動画は避け、初級から上級へ進みやすい構成で整理しています。`;
+}
+
 export async function generateMetadata({ params }: GenrePageProps): Promise<Metadata> {
   const { key } = await params;
   if (!publishedGenreKeys.includes(key)) return {};
@@ -274,6 +291,11 @@ export default async function GenrePage({ params }: GenrePageProps) {
         </section>
       ) : null}
       <ManapickAiGenreBand genreKey={key} />
+      <section className="genre-hub-editorial" aria-labelledby="genre-editorial-title">
+        <p className="section-eyebrow">編集部の選び方</p>
+        <h2 id="genre-editorial-title">{label}で注意して見ていること</h2>
+        <p>{genreEditorialNote(key, label)}</p>
+      </section>
       {subPages.length > 0 ? (
         <section className="genre-hub-subpages" aria-labelledby="genre-hub-subpages-title">
           <h2 id="genre-hub-subpages-title">{label}のトピック別ロードマップ</h2>
@@ -303,22 +325,29 @@ export default async function GenrePage({ params }: GenrePageProps) {
       ) : null}
 
       <ul className="genre-hub-grid" role="list">
-        {list.map((video) => (
-          <li key={video.ytid}>
-            <Link href={videoPath(video.ytid)} className="genre-hub-card">
-              <Image
-                src={youtubeThumbnail(video.ytid)}
-                alt={video.title + "のサムネイル"}
-                width={320}
-                height={180}
-                sizes="(min-width: 768px) 320px, 90vw"
-                loading="lazy"
-              />
-              <span className="genre-hub-card-title">{video.title}</span>
-              <span className="genre-hub-card-meta">{scoreText(video)}・{video.minutes}分・{video.sub}</span>
-            </Link>
-          </li>
-        ))}
+        {list.map((video) => {
+          const freshness = videoFreshness(video);
+
+          return (
+            <li key={video.ytid}>
+              <Link href={videoPath(video.ytid)} className="genre-hub-card">
+                <span className="genre-hub-thumb">
+                  <Image
+                    src={youtubeThumbnail(video.ytid)}
+                    alt={video.title + "のサムネイル"}
+                    width={320}
+                    height={180}
+                    sizes="(min-width: 768px) 320px, 90vw"
+                    loading="lazy"
+                  />
+                  {freshness ? <span className={`freshness-badge is-${freshness.tone}`}>{freshness.label}</span> : null}
+                </span>
+                <span className="genre-hub-card-title">{video.title}</span>
+                <span className="genre-hub-card-meta">{scoreText(video)}・{video.minutes}分・{video.sub}</span>
+              </Link>
+            </li>
+          );
+        })}
       </ul>
 
       <p className="genre-hub-back">

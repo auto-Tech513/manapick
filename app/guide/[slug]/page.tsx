@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import BrandLogo from "@/components/BrandLogo";
+import TrackedPrLink from "@/components/TrackedPrLink";
 import prLinksData from "@/content/pr-links.json";
 import { MANAPICK_AI_URL } from "@/lib/brand-links";
 import { findGuide, guidePath, guides, guideStepVideos, type Guide } from "@/lib/guides";
@@ -427,12 +428,14 @@ function GuidePrSection({ guide }: { guide: Guide }) {
             const prKind = item.kind ?? "book";
 
             return (
-              <a
+              <TrackedPrLink
                 key={item.url}
                 className="guide-pr-card is-link"
                 href={item.url}
-                target="_blank"
-                rel="sponsored nofollow noopener"
+                genre={guide.genre}
+                kind={prKind}
+                label={item.label}
+                placement="guide"
               >
                 <span className="guide-pr-card-pr">
                   {prKind === "course" ? "【PR】スクール・講座" : "【PR】楽天ブックス"}
@@ -440,7 +443,7 @@ function GuidePrSection({ guide }: { guide: Guide }) {
                 <strong>{item.label}</strong>
                 <span>{item.note}</span>
                 <em>{prKind === "course" ? "公式サイトを見る" : "楽天ブックスで見る"}</em>
-              </a>
+              </TrackedPrLink>
             );
           })}
         </div>

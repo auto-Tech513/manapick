@@ -158,5 +158,97 @@
         "guideHref": "/guide/certification/"
       }
     ]
+  },
+  {
+    "id": "data-improvement",
+    "title": "データ分析で業務改善",
+    "skill": "Excel集計、パワークエリ、AI活用をつなげて数字を見る力を作る。",
+    "relatedText": "データ分析 / Office・資料作成 / 生成AI",
+    "primaryLabel": "データ分析の入口へ",
+    "href": "/?genre=data#search",
+    "guideHref": "/guide/excel-data/",
+    "icon": "chart",
+    "destinations": [
+      {
+        "label": "データ分析",
+        "genre": "data",
+        "href": "/?genre=data#search",
+        "guideHref": "/guide/excel-data/"
+      },
+      {
+        "label": "Office・資料",
+        "genre": "biz",
+        "href": "/?genre=biz#search",
+        "guideHref": "/guide/office-skills/"
+      },
+      {
+        "label": "生成AI",
+        "genre": "ai",
+        "href": "/?genre=ai#search",
+        "guideHref": "/guide/generative-ai/"
+      }
+    ]
+  },
+  {
+    "id": "marketing-planner",
+    "title": "Webマーケ担当になりたい",
+    "skill": "Webマーケの全体像、SNS運用、動画・デザイン制作を順番に押さえる。",
+    "relatedText": "Webマーケ / 動画編集・クリエイティブ / 生成AI",
+    "primaryLabel": "Webマーケの入口へ",
+    "href": "/?genre=marke#search",
+    "guideHref": "/guide/web-marketing/",
+    "icon": "trend",
+    "destinations": [
+      {
+        "label": "Webマーケ",
+        "genre": "marke",
+        "href": "/?genre=marke#search",
+        "guideHref": "/guide/web-marketing/"
+      },
+      {
+        "label": "動画編集",
+        "genre": "video",
+        "href": "/?genre=video#search",
+        "guideHref": "/guide/video-editing/"
+      },
+      {
+        "label": "生成AI",
+        "genre": "ai",
+        "href": "/?genre=ai#search",
+        "guideHref": "/guide/generative-ai/"
+      }
+    ]
+  },
+  {
+    "id": "money-literacy",
+    "title": "お金の基礎を仕事と生活に",
+    "skill": "家計、投資の基礎、簿記学習を分けて、判断材料を増やす。",
+    "relatedText": "お金・投資 / 簿記（学習） / 資格・検定",
+    "primaryLabel": "お金・投資の入口へ",
+    "href": "/?genre=money#search",
+    "guideHref": "/guide/money-basics/",
+    "icon": "money",
+    "note": "投資助言ではなく、基礎知識と制度理解のための学習導線です。",
+    "destinations": [
+      {
+        "label": "お金・投資",
+        "genre": "money",
+        "href": "/?genre=money#search",
+        "guideHref": "/guide/money-basics/"
+      },
+      {
+        "label": "簿記（学習）",
+        "genre": "kaikei",
+        "sub": "簿記",
+        "href": "/?genre=kaikei&sub=簿記#search",
+        "guideHref": "/guide/bookkeeping/"
+      },
+      {
+        "label": "資格・検定",
+        "genre": "shikaku",
+        "href": "/?genre=shikaku#search",
+        "guideHref": "/guide/certification/"
+      }
+    ]
   }
 ]

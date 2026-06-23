@@ -1,23 +1,8 @@
-import { MANAPICK_AI_URL } from "@/lib/brand-links";
+import { MANAPICK_AI_URL, manapickAiUrlForGenre } from "@/lib/brand-links";
 import { genreDisplayName } from "@/lib/manapick";
 
-const categoryByGenre: Record<string, string> = {
-  ai: "chat",
-  prog: "code",
-  video: "video",
-  english: "translate",
-  data: "search",
-  marke: "chat",
-  biz: "work",
-  shikaku: "search",
-  kaikei: "work",
-  money: "search"
-};
-
 export function manapickAiHrefForGenre(genreKey: string) {
-  const category = categoryByGenre[genreKey];
-  if (!category) return MANAPICK_AI_URL;
-  return `${MANAPICK_AI_URL}/category/${category}/`;
+  return manapickAiUrlForGenre(genreKey);
 }
 
 export function manapickAiContextForGenre(genreKey: string) {

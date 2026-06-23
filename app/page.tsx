@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import ManapickApp from "@/components/ManapickApp";
 import professionRoutesData from "@/content/professions.json";
-import { absoluteUrl, videoPath, videos } from "@/lib/manapick";
+import roadmapsData from "@/content/roadmaps.json";
+import { absoluteUrl, genreDisplayName, isoDuration, videoPath, videos } from "@/lib/manapick";
 import { siteStats } from "@/lib/site-stats";
 
 const homeTitle = "Manapick | 学び直しを、最短ルートに。";
@@ -34,6 +35,67 @@ type ProfessionRoute = {
   }[];
 };
 const professionRoutes = professionRoutesData as readonly ProfessionRoute[];
+type RoadmapStep = {
+  label: string;
+  level: string;
+  goal: string;
+  videos: string[];
+};
+type Roadmap = {
+  genre: string;
+  title: string;
+  steps: RoadmapStep[];
+};
+const roadmaps = roadmapsData as readonly Roadmap[];
+
+function roadmapTotalMinutes(roadmap: Roadmap) {
+  return roadmap.steps.reduce((total, step) => {
+    return total + step.videos.reduce((stepTotal, ytid) => {
+      return stepTotal + (videos.find((video) => video.ytid === ytid)?.minutes ?? 0);
+    }, 0);
+  }, 0);
+}
+
+function roadmapHowToNodes() {
+  return roadmaps.map((roadmap) => {
+    const genreName = genreDisplayName(roadmap.genre);
+    const totalMinutes = roadmapTotalMinutes(roadmap);
+
+    return {
+      "@type": "HowTo",
+      name: `${roadmap.title}｜${genreName}を学ぶ見る順`,
+      description: `${genreName}を初級から順番に進めるためのManapickロードマップです。各ステップで見る動画と到達ゴールを整理しています。`,
+      totalTime: totalMinutes > 0 ? isoDuration(totalMinutes) : undefined,
+      supply: [
+        {
+          "@type": "HowToSupply",
+          name: "YouTube公式動画"
+        }
+      ],
+      tool: [
+        {
+          "@type": "HowToTool",
+          name: "Manapickロードマップ"
+        }
+      ],
+      step: roadmap.steps.map((step, index) => {
+        const stepVideos = step.videos
+          .map((ytid) => videos.find((video) => video.ytid === ytid))
+          .filter((video): video is (typeof videos)[number] => Boolean(video));
+
+        return {
+          "@type": "HowToStep",
+          position: index + 1,
+          name: `${step.label} ${step.level}: ${step.goal}`,
+          text: stepVideos.length > 0
+            ? `${step.goal} 視聴する動画: ${stepVideos.map((video) => video.title).join(" / ")}`
+            : step.goal,
+          url: absoluteUrl(`/#roadmap`)
+        };
+      })
+    };
+  });
+}
 
 export const metadata: Metadata = {
   title: homeTitle,
@@ -103,7 +165,8 @@ export default function Home() {
       {
         "@type": "FAQPage",
         mainEntity: homeFaq
-      }
+      },
+      ...roadmapHowToNodes()
     ]
   };
 

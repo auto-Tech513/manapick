@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import BrandLogo from "@/components/BrandLogo";
-import { absoluteUrl, genreLabel, scoreText, videoPath, youtubeThumbnail, type Video } from "@/lib/manapick";
+import { absoluteUrl, genreLabel, publishedGenreKeys, scoreText, videoPath, videos, youtubeThumbnail, type Video } from "@/lib/manapick";
 import { rankedVideos, type RankingMode } from "@/lib/rankings";
 
 const rankingTitle = "人気の学習動画ランキング | Manapick";
@@ -92,6 +92,7 @@ export default function RankingPage() {
           {rankingSections.map((section) => (
             <a key={section.id} href={"#" + section.id}>{section.title}</a>
           ))}
+          <a href="#genre-ranking">ジャンル別</a>
         </div>
       </section>
       {rankingSections.map((section) => (
@@ -110,6 +111,44 @@ export default function RankingPage() {
           </div>
         </section>
       ))}
+      <section id="genre-ranking" className="knowledge-section ranking-section" aria-labelledby="genre-ranking-title">
+        <div className="ranking-section-head">
+          <div>
+            <p className="section-eyebrow">Genre Ranking</p>
+            <h2 id="genre-ranking-title">ジャンル別の入口</h2>
+          </div>
+          <p>各ジャンルの高スコア動画から、最初に比較しやすい3本を表示しています。</p>
+        </div>
+        <div className="genre-ranking-grid">
+          {publishedGenreKeys.map((key) => {
+            const list = videos
+              .filter((video) => video.genre === key)
+              .sort((a, b) => (b.score ?? -1) - (a.score ?? -1))
+              .slice(0, 3);
+            if (list.length === 0) return null;
+
+            return (
+              <section key={key} className="genre-ranking-card" aria-labelledby={`genre-ranking-${key}`}>
+                <div className="genre-ranking-card-head">
+                  <h3 id={`genre-ranking-${key}`}>{genreLabel(key)}</h3>
+                  <Link href={`/genre/${key}/`}>一覧へ</Link>
+                </div>
+                <ol>
+                  {list.map((video, index) => (
+                    <li key={video.ytid}>
+                      <Link href={videoPath(video.ytid)}>
+                        <span>{index + 1}</span>
+                        <strong>{video.title}</strong>
+                        <small>{scoreText(video)} / {video.minutes}分</small>
+                      </Link>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            );
+          })}
+        </div>
+      </section>
     </main>
   );
 }

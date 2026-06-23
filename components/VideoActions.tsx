@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY } from "@/lib/retention";
+import { RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY, sendGaEvent } from "@/lib/retention";
 import { useLocalList } from "@/lib/useLocalList";
 import { useStreakState } from "@/lib/useStreakState";
 
@@ -32,7 +32,10 @@ export default function VideoActions({ ytid }: { ytid: string }) {
         type="button"
         className={inWatchlist ? "video-action-toggle is-active" : "video-action-toggle"}
         aria-pressed={inWatchlist}
-        onClick={() => watchlist.toggle(ytid)}
+        onClick={() => {
+          sendGaEvent("video_save_toggle", { video_id: ytid, action: inWatchlist ? "remove" : "add", source: "detail" });
+          watchlist.toggle(ytid);
+        }}
       >
         <span aria-hidden="true">🔖</span>
         <span>{inWatchlist ? "あとで見るに追加済み" : "あとで見る"}</span>
@@ -42,6 +45,7 @@ export default function VideoActions({ ytid }: { ytid: string }) {
         className={isWatched ? "video-action-toggle is-active" : "video-action-toggle"}
         aria-pressed={isWatched}
         onClick={() => {
+          sendGaEvent("video_watched_toggle", { video_id: ytid, action: isWatched ? "remove" : "add", source: "detail" });
           if (!isWatched) streak.record(ytid);
           watched.toggle(ytid);
         }}

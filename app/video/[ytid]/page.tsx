@@ -19,6 +19,7 @@ import {
   videoAxisCommentary,
   videoDescription,
   videoEditorialSummary,
+  videoFreshness,
   videoLearningPoints,
   videoPath,
   videoPositionText,
@@ -98,6 +99,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
   const axisCommentary = videoAxisCommentary(video);
   const viewingTips = videoViewingTips(video);
   const editorialSummary = videoEditorialSummary(video, related[0]);
+  const freshness = videoFreshness(video);
   const videoObject = {
     "@type": "VideoObject",
     name: video.title,
@@ -179,6 +181,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
             <span>{genreLabel(video.genre)}</span>
             <span>{video.sub}</span>
             <span>{video.minutes}分</span>
+            {freshness ? <span className={`freshness-badge is-${freshness.tone}`} title={freshness.note}>{freshness.label}</span> : null}
           </div>
           {channel ? <p className="video-channel">チャンネル: {channel}</p> : null}
           <div className="video-score-card is-confirmed">
