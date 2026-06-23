@@ -1,12 +1,12 @@
 const generativeAiGuide = {
   slug: "generative-ai",
   genre: "ai",
-  title: "生成AIを独学する完全ロードマップ【YouTube無料・2026年版】",
+  title: "AIプロンプトのコツとCopilot活用を学ぶ完全ロードマップ【YouTube無料・2026年版】",
   description:
-    "生成AIの独学は「触る → 業務で使う → 任せる」の3ステップ。無料YouTube動画7本で、2026年版の学習順を整理します。",
+    "AIプロンプトのコツ、Copilot活用事例、ChatGPT/Gemini/Claudeの違いを無料動画7本で整理。仕事に使う順番がわかります。",
   publishedAt: "2026-06-07",
   intro:
-    "生成AIの独学は、**「触る → 業務で使う → 任せる」の3ステップ**で進めるのが最短ルートです。",
+    "AIプロンプトのコツやCopilot活用事例を探す前に、まずChatGPT・Gemini・Claudeを触り、次に仕事の文章作成や資料整理へ当てはめる順番がおすすめです。プロンプトは魔法の文章ではなく、目的・前提・出力形式をAIに伝えるための設計です。このページでは、無料動画7本で**「触る → 業務で使う → 任せる」**へ進めるよう整理しています。",
   conclusionBullets: [
     {
       label: "STEP1（初級）",
@@ -76,7 +76,7 @@ const generativeAiGuide = {
   stumblingBlocks: [
     {
       label: "「何に使えばいいか思いつかない」",
-      text: "STEP2の動画を見ながら、自分の昨日の業務を1つAIにやらせてみる（メール下書き・要約・表の整形）。題材は「昨日の自分の仕事」が最強です"
+      text: "STEP2の動画を見ながら、自分の昨日の業務を1つAIにやらせてみる（メール下書き・要約・表の整形）。題材は「昨日の自分の仕事」が実務に結びつきやすいです"
     },
     {
       label: "「答えが的外れになる」",
@@ -92,6 +92,21 @@ const generativeAiGuide = {
     }
   ],
   faq: [
+    {
+      question: "AIプロンプトのコツは何ですか？",
+      answer:
+        "目的、前提条件、出力形式、制約を分けて伝えることです。短い命令だけで済ませず、「誰向けに」「何に使うか」「どんな形で返してほしいか」を入れると、回答のブレを減らせます。"
+    },
+    {
+      question: "Copilot活用事例はどこから学ぶべき？",
+      answer:
+        "Word、Excel、PowerPointなど普段使う業務から見るのがおすすめです。Copilot単体で考えるより、資料作成・表整理・会議メモなど自分の作業に近い事例から試すと続きやすくなります。"
+    },
+    {
+      question: "ChatGPTとCopilotはどう使い分ける？",
+      answer:
+        "ChatGPTは幅広い相談や文章作成、CopilotはMicrosoft 365上の文書・表・スライド作業と相性があります。まず無料で触れる範囲を試し、仕事のデータを扱う場合は社内ルールも確認してください。"
+    },
     {
       question: "スクールに通わず独学で十分？",
       answer:

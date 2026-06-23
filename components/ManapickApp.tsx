@@ -135,6 +135,49 @@ const purposeLinks = [
   { number: "03", title: "ロードマップで学ぶ", label: "順番を見て進む", genre: "roadmap", icon: "path" }
 ];
 
+const searchIntentLinks = [
+  {
+    label: "YouTubeサムネイルの作り方",
+    href: "/genre/video/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3/",
+    note: "動画編集・デザイン"
+  },
+  {
+    label: "Pythonは難しい？",
+    href: "/guide/python/",
+    note: "初心者向けの順番"
+  },
+  {
+    label: "エクセル統計の使い方",
+    href: "/guide/excel-data/",
+    note: "Excelデータ分析"
+  },
+  {
+    label: "AIプロンプトのコツ",
+    href: "/genre/ai/%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88/",
+    note: "生成AIの指示出し"
+  },
+  {
+    label: "Copilot活用事例",
+    href: "/genre/ai/Copilot/",
+    note: "仕事で使うAI"
+  },
+  {
+    label: "社労士試験",
+    href: "/genre/shikaku/%E7%A4%BE%E5%8A%B4%E5%A3%AB/",
+    note: "資格勉強"
+  },
+  {
+    label: "マーケティングYouTubeおすすめ",
+    href: "/guide/web-marketing/",
+    note: "Webマーケ入門"
+  },
+  {
+    label: "Canva初心者",
+    href: "/genre/marke/SNS/",
+    note: "SNS制作"
+  }
+];
+
 type FooterLink = {
   label: string;
   href: string;
@@ -1327,6 +1370,8 @@ export default function ManapickApp() {
 
       <RecentUpdatesSection videos={recentUpdateVideos} />
 
+      <SearchIntentShortcutSection />
+
       <ProfessionRouteSection
         routes={professionRoutes}
         onRouteSelect={handleProfessionRoute}
@@ -1969,6 +2014,28 @@ function RecentUpdatesSection({ videos }: { videos: Video[] }) {
               <span>{genreLabel(video.genre)} / {scoreText(video)} / {video.minutes}分</span>
               <strong>{video.title}</strong>
             </span>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function SearchIntentShortcutSection() {
+  return (
+    <section className="search-intent-section" aria-labelledby="search-intent-title">
+      <div className="search-intent-head">
+        <div>
+          <p className="section-eyebrow">よく検索されるテーマ</p>
+          <h2 id="search-intent-title" className="section-title">今ある悩みから、直接探す</h2>
+        </div>
+        <p>検索で表示が出ているテーマを、対応する動画一覧・ロードマップへつなげました。</p>
+      </div>
+      <div className="search-intent-grid">
+        {searchIntentLinks.map((item) => (
+          <a key={item.href + item.label} href={item.href}>
+            <span>{item.label}</span>
+            <small>{item.note}</small>
           </a>
         ))}
       </div>

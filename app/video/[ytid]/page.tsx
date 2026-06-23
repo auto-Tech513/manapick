@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import BrandLogo from "@/components/BrandLogo";
 import VideoActions from "@/components/VideoActions";
 import VideoEmbed from "@/components/VideoEmbed";
+import { guidePath, guides } from "@/lib/guides";
 import {
   absoluteUrl,
   displayChannel,
@@ -86,6 +87,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
   const channel = displayChannel(video);
   const related = relatedVideos(video);
   const nextPick = nextWatchVideo(video);
+  const guide = guides.find((item) => item.genre === video.genre) ?? null;
   const pageUrl = absoluteUrl(videoPath(video.ytid));
   const confirmationDate = scoreConfirmationDate(video);
   const scoreConfirmationText =
@@ -216,6 +218,11 @@ export default async function VideoPage({ params }: VideoPageProps) {
             次に見る1本：{related[0].title}
           </a>
         ) : null}
+        {guide ? (
+          <a className="video-guide-link" href={guidePath(guide.slug)}>
+            {videoGuideLinkLabel(video.genre)}
+          </a>
+        ) : null}
       </section>
 
       <section className="video-context-section" aria-labelledby="video-context-title">
@@ -340,4 +347,16 @@ export default async function VideoPage({ params }: VideoPageProps) {
       ) : null}
     </main>
   );
+}
+
+function videoGuideLinkLabel(genre: string) {
+  const labels: Record<string, string> = {
+    ai: "AIプロンプト・Copilot活用のロードマップへ",
+    prog: "Pythonは難しい？独学ロードマップへ",
+    video: "YouTubeサムネイルと動画編集ロードマップへ",
+    data: "エクセル統計の使い方ロードマップへ",
+    shikaku: "社労士試験・資格勉強ロードマップへ",
+    marke: "マーケティングYouTubeおすすめロードマップへ"
+  };
+  return labels[genre] ?? "このジャンルのロードマップへ";
 }
