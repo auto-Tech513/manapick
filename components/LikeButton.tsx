@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { sendGaEvent } from "@/lib/retention";
 
 const LIKED_STORAGE_KEY = "manapick:liked:v1";
+const likesApiEnabled = process.env.NEXT_PUBLIC_LIKES_API_ENABLED === "1";
 
 type LikeButtonProps = {
   ytid: string;
@@ -32,6 +33,7 @@ function writeLikedIds(ids: Set<string>) {
 
 function canUseLikeApi() {
   if (typeof window === "undefined") return false;
+  if (!likesApiEnabled) return false;
   return window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1";
 }
 
