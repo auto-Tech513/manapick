@@ -3,6 +3,7 @@ import Script from "next/script";
 import PwaSetup from "@/components/PwaSetup";
 import { MANAPICK_AI_URL } from "@/lib/brand-links";
 import SiteFooter from "@/components/SiteFooter";
+import SiteBottomNav from "@/components/SiteBottomNav";
 import { absoluteUrl, SITE_URL } from "@/lib/manapick";
 import "./globals.css";
 
@@ -80,7 +81,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#1F3A8A"
+  themeColor: "#1F3A8A",
+  viewportFit: "cover"
 };
 
 export default function RootLayout({
@@ -125,6 +127,7 @@ export default function RootLayout({
         <PwaSetup />
         {children}
         <SiteFooter />
+        <SiteBottomNav />
       </body>
     </html>
   );

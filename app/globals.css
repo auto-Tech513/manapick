@@ -2393,6 +2393,12 @@ img {
   margin: 16px 0 22px;
 }
 
+.manapick-ai-crosslink.is-video {
+  width: min(100% - 32px, 1120px);
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
 .guide-section.manapick-ai-crosslink {
   width: auto;
   margin: 18px 0 0;
@@ -3881,6 +3887,72 @@ img {
   color: #fff;
 }
 
+.like-btn {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 18%, var(--color-line));
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--color-primary-ink);
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  font-weight: 950;
+  line-height: 1.2;
+  box-shadow: var(--shadow-line);
+  transition:
+    background-color 160ms var(--ease-standard),
+    border-color 160ms var(--ease-standard),
+    transform 160ms var(--ease-standard);
+  white-space: nowrap;
+}
+
+.like-btn:hover:not(:disabled),
+.like-btn:focus-visible {
+  border-color: color-mix(in srgb, var(--color-accent) 42%, var(--color-line));
+  background: color-mix(in srgb, var(--color-accent) 8%, white);
+  transform: translateY(-1px);
+}
+
+.like-btn.is-liked {
+  border-color: color-mix(in srgb, var(--color-accent) 52%, var(--color-line));
+  background: color-mix(in srgb, var(--color-accent) 10%, white);
+  color: var(--color-primary-ink);
+}
+
+.like-btn:disabled {
+  cursor: default;
+}
+
+.like-btn.is-compact {
+  min-height: 34px;
+  padding: 7px 10px;
+  font-size: 0.76rem;
+}
+
+.like-count {
+  font-variant-numeric: tabular-nums;
+}
+
+.video-card-engagement,
+.video-like-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.video-card-engagement {
+  margin-top: -1px;
+}
+
+.featured-video-card .like-btn,
+.weekly-pick-body .like-btn {
+  justify-self: start;
+}
+
 .card-score-wrap,
 .weekly-score-wrap {
   position: absolute;
@@ -4074,7 +4146,8 @@ img {
 .video-context-section,
 .video-axis-section,
 .video-related-section,
-.video-next-section {
+.video-next-section,
+.manapick-ai-crosslink.is-video {
   width: min(100% - 32px, 1120px);
   margin-inline: auto;
 }
@@ -6796,7 +6869,8 @@ img {
   .video-context-section,
   .video-axis-section,
   .video-related-section,
-  .video-next-section {
+  .video-next-section,
+  .manapick-ai-crosslink.is-video {
     width: min(100% - 24px, 1120px);
   }
 
@@ -9105,8 +9179,10 @@ img {
     box-shadow: 0 -10px 28px rgba(31, 58, 138, 0.1);
   }
 
-  .mobile-bottom-nav button {
+  .mobile-bottom-nav button,
+  .mobile-bottom-nav a {
     display: grid;
+    text-decoration: none;
     min-height: 48px;
     place-items: center;
     gap: 2px;
@@ -9120,7 +9196,8 @@ img {
     line-height: 1.15;
   }
 
-  .mobile-bottom-nav button svg {
+  .mobile-bottom-nav button svg,
+  .mobile-bottom-nav a svg {
     width: 22px;
     height: 22px;
     fill: none;
@@ -9130,12 +9207,18 @@ img {
     stroke-linejoin: round;
   }
 
-  .mobile-bottom-nav button:active {
+  .mobile-bottom-nav button:active,
+  .mobile-bottom-nav a:active {
     background: var(--color-bg-soft);
   }
 
   .mobile-bottom-nav button[aria-pressed="true"] {
     color: var(--color-primary-ink);
+  }
+
+  /* 全ページ共通の下部ナビ(.site-bottom-nav)は、ホームのインタラクティブ版がある時のみ隠す */
+  body:has(nav.mobile-bottom-nav:not(.site-bottom-nav)) nav.site-bottom-nav {
+    display: none !important;
   }
 
   .genre-card:active,

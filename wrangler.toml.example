@@ -1,0 +1,10 @@
+name = "manapick"
+compatibility_date = "2026-06-24"
+pages_build_output_dir = "out"
+
+# Cloudflare Pages の Settings > Functions > KV namespace bindings で
+# binding 名を LIKES にして本番KVを割り当ててください。
+[[kv_namespaces]]
+binding = "LIKES"
+id = "replace-with-production-kv-namespace-id"
+preview_id = "replace-with-preview-kv-namespace-id"

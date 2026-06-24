@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import BrandLogo from "@/components/BrandLogo";
+import LikeButton from "@/components/LikeButton";
 import VideoActions from "@/components/VideoActions";
 import VideoEmbed from "@/components/VideoEmbed";
 import { guidePath, guides } from "@/lib/guides";
+import { manapickAiContextForGenre, manapickAiHrefForGenre } from "@/lib/ai-crosslinks";
 import {
   absoluteUrl,
   displayChannel,
@@ -100,6 +102,8 @@ export default async function VideoPage({ params }: VideoPageProps) {
   const viewingTips = videoViewingTips(video);
   const editorialSummary = videoEditorialSummary(video, related[0]);
   const freshness = videoFreshness(video);
+  const manapickAiHref = manapickAiHrefForGenre(video.genre);
+  const manapickAiContext = manapickAiContextForGenre(video.genre);
   const videoObject = {
     "@type": "VideoObject",
     name: video.title,
@@ -205,6 +209,9 @@ export default async function VideoPage({ params }: VideoPageProps) {
           </a>
           <p className="video-embed-note">※埋め込み再生できない動画はYouTubeでご覧ください。</p>
           <VideoActions ytid={video.ytid} />
+          <div className="video-like-row">
+            <LikeButton ytid={video.ytid} />
+          </div>
         </div>
       </article>
 
@@ -286,6 +293,17 @@ export default async function VideoPage({ params }: VideoPageProps) {
         ) : (
           <p className="video-empty-score">{scoreConfirmationText}</p>
         )}
+      </section>
+
+      <section className="manapick-ai-crosslink is-video" aria-label="公式AI版 manapick AI">
+        <div>
+          <p className="section-eyebrow">公式AI版</p>
+          <h2>“使えるAI”を選ぶなら <span className="ai-brand-word">manapick AI</span></h2>
+          <p>{manapickAiContext}</p>
+        </div>
+        <a href={manapickAiHref} target="_blank" rel="noopener">
+          manapick AIを見る ↗
+        </a>
       </section>
 
       <section className="video-related-section" aria-labelledby="related-title">

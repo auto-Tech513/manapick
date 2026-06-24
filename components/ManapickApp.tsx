@@ -4,6 +4,7 @@ import Fuse from "fuse.js";
 import Image from "next/image";
 import { type KeyboardEvent as ReactKeyboardEvent, type RefObject, useEffect, useMemo, useRef, useState } from "react";
 import BrandLogo, { BrandMark } from "@/components/BrandLogo";
+import LikeButton from "@/components/LikeButton";
 import RetentionBand from "@/components/RetentionBand";
 import genresData from "@/content/genres.json";
 import professionRoutesData from "@/content/professions.json";
@@ -128,6 +129,7 @@ type HeroCarouselSlide = {
 };
 
 type LocalListState = ReturnType<typeof useLocalList>;
+type LikeCounts = Record<string, number>;
 
 const purposeLinks = [
   { number: "01", title: "なりたい職業から選ぶ", label: "職業ゴールから最短ルート", genre: "profession", icon: "target" },
@@ -346,19 +348,31 @@ function popularityScore(video: Video) {
   return Math.log10(viewCount) / Math.pow(monthsSincePublished(video) + 2, 0.6);
 }
 
-function rankedVideosByTab(tab: PopularTab, limit: number) {
+function blendedPopularityScore(video: Video, likeCounts: LikeCounts, maxLikeCount: number) {
+  const likeCount = Math.max(0, likeCounts[video.ytid] ?? 0);
+  const likeBoost = maxLikeCount > 0 ? (likeCount / maxLikeCount) * 0.15 : 0;
+  return popularityScore(video) + likeBoost;
+}
+
+function rankedVideosByTab(tab: PopularTab, limit: number, likeCounts: LikeCounts = {}) {
   const ranked = [...videos].filter((video) => publishedGenreKeys.includes(video.genre));
   if (tab === "new") {
     ranked.sort((a, b) => publishedTime(b) - publishedTime(a) || (b.score || 0) - (a.score || 0));
   } else if (tab === "score") {
     ranked.sort((a, b) => (b.score || 0) - (a.score || 0));
   } else {
-    ranked.sort((a, b) => popularityScore(b) - popularityScore(a) || (b.score || 0) - (a.score || 0));
+    const maxLikeCount = Math.max(1, ...ranked.map((video) => likeCounts[video.ytid] ?? 0));
+    ranked.sort(
+      (a, b) =>
+        blendedPopularityScore(b, likeCounts, maxLikeCount) -
+          blendedPopularityScore(a, likeCounts, maxLikeCount) ||
+        (b.score || 0) - (a.score || 0)
+    );
   }
   return ranked.slice(0, limit);
 }
 
-function buildHeroCarouselSlides(): HeroCarouselSlide[] {
+function buildHeroCarouselSlides(likeCounts: LikeCounts = {}): HeroCarouselSlide[] {
   const modes: { mode: PopularTab; modeLabel: string }[] = [
     { mode: "popular", modeLabel: "総合人気" },
     { mode: "new", modeLabel: "新着" },
@@ -366,7 +380,7 @@ function buildHeroCarouselSlides(): HeroCarouselSlide[] {
   ];
 
   return modes.flatMap(({ mode, modeLabel }) =>
-    rankedVideosByTab(mode, 4).map((video, index) => ({
+    rankedVideosByTab(mode, 4, likeCounts).map((video, index) => ({
       video,
       mode,
       modeLabel,
@@ -494,6 +508,7 @@ export default function ManapickApp() {
   const [watchlistOnly, setWatchlistOnly] = useState(false);
   const [todayKey, setTodayKey] = useState("");
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [popularLikeCounts, setPopularLikeCounts] = useState<LikeCounts>({});
   const searchInputRef = useRef<HTMLInputElement>(null);
   const mobileGenreDropdownRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -622,8 +637,9 @@ export default function ManapickApp() {
   const pageVideos = filteredVideos.slice(pageStartIndex, pageStartIndex + pageSize);
   const groupedPageVideos = useMemo(() => groupVideosByGenre(pageVideos), [pageVideos]);
 
-  const heroCarouselSlides = useMemo(() => buildHeroCarouselSlides(), []);
-  const popularFallbackVideos = useMemo(() => rankedVideosByTab("popular", 12), []);
+  const popularLikeCandidateVideos = useMemo(() => rankedVideosByTab("popular", 60), []);
+  const heroCarouselSlides = useMemo(() => buildHeroCarouselSlides(popularLikeCounts), [popularLikeCounts]);
+  const popularFallbackVideos = useMemo(() => rankedVideosByTab("popular", 12, popularLikeCounts), [popularLikeCounts]);
   const recentUpdateVideos = useMemo(() => rankedVideosByTab("new", 6), []);
   const recentVideos = useMemo(() => {
     const byId = new Map(videos.map((video) => [video.ytid, video]));
@@ -647,6 +663,26 @@ export default function ManapickApp() {
       return best;
     }, null);
   }, [publishedVideos]);
+
+  useEffect(() => {
+    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") return;
+    const ids = popularLikeCandidateVideos.map((video) => video.ytid);
+    if (ids.length === 0) return;
+
+    let cancelled = false;
+    fetch(`/api/like?ids=${ids.join(",")}`)
+      .then((response) => (response.ok ? response.json() : null))
+      .then((data: { counts?: LikeCounts } | null) => {
+        if (!cancelled && data?.counts) setPopularLikeCounts(data.counts);
+      })
+      .catch(() => {
+        // KV未設定や一時的な通信失敗では、従来の総合人気順をそのまま使います。
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [popularLikeCandidateVideos]);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -1341,7 +1377,7 @@ export default function ManapickApp() {
                 <p className="section-eyebrow">今週のイチオシ</p>
                 <h2 id="mobile-weekly-pick-title" className="section-title">最高スコアの一本から始める</h2>
               </div>
-              <WeeklyPickCard video={weeklyPick} />
+              <WeeklyPickCard video={weeklyPick} likeCounts={popularLikeCounts} />
             </section>
           ) : null}
           <div className="hero-visual-column">
@@ -1374,7 +1410,7 @@ export default function ManapickApp() {
                 <p className="section-eyebrow">今週のイチオシ</p>
                 <h2 id="weekly-pick-title" className="section-title">最高スコアの一本から始める</h2>
               </div>
-              <WeeklyPickCard video={weeklyPick} />
+              <WeeklyPickCard video={weeklyPick} likeCounts={popularLikeCounts} />
             </div>
             <AllGenreHighlights onGenreSelect={jumpToGenre} />
           </div>
@@ -1609,6 +1645,7 @@ export default function ManapickApp() {
             topVideo={selectedGenreTopVideo}
             selectedSub={selectedSub}
             onTopicSelect={setSelectedSub}
+            likeCounts={popularLikeCounts}
           />
         ) : null}
         <div id="results-anchor" className="results-anchor" aria-hidden="true" />
@@ -1658,6 +1695,7 @@ export default function ManapickApp() {
                           highlighted={highlightedVideoId === video.ytid}
                           watchlist={watchlist}
                           watched={watched}
+                          likeCounts={popularLikeCounts}
                         />
                       ))}
                     </div>
@@ -1673,6 +1711,7 @@ export default function ManapickApp() {
                     highlighted={highlightedVideoId === video.ytid}
                     watchlist={watchlist}
                     watched={watched}
+                    likeCounts={popularLikeCounts}
                   />
                 ))}
               </div>
@@ -2860,13 +2899,15 @@ function GenreSummaryPanel({
   topics,
   topVideo,
   selectedSub,
-  onTopicSelect
+  onTopicSelect,
+  likeCounts
 }: {
   genre: Genre;
   topics: [string, number][];
   topVideo: Video | null;
   selectedSub: string;
   onTopicSelect: (sub: string) => void;
+  likeCounts: LikeCounts;
 }) {
   return (
     <section id="topic-filter-anchor" className="genre-summary-panel" aria-labelledby="genre-summary-title">
@@ -2886,12 +2927,12 @@ function GenreSummaryPanel({
           </button>
         ))}
       </div>
-      {topVideo ? <FeaturedVideoCard video={topVideo} /> : null}
+      {topVideo ? <FeaturedVideoCard video={topVideo} likeCounts={likeCounts} /> : null}
     </section>
   );
 }
 
-function FeaturedVideoCard({ video }: { video: Video }) {
+function FeaturedVideoCard({ video, likeCounts }: { video: Video; likeCounts: LikeCounts }) {
   return (
     <article className="featured-video-card">
       <div className="featured-video-thumb">
@@ -2911,6 +2952,7 @@ function FeaturedVideoCard({ video }: { video: Video }) {
         <p className="featured-video-eyebrow">まず見るべき1本</p>
         <h3><a href={videoDetailHref(video)}>{video.title}</a></h3>
         <p>{video.review[0]}</p>
+        <LikeButton ytid={video.ytid} initialCount={likeCounts[video.ytid] ?? 0} className="is-compact" />
         <a href={videoDetailHref(video)}>詳細を見る</a>
       </div>
     </article>
@@ -2935,7 +2977,7 @@ function ScoreBadge({ video, compact = false }: { video: Video; compact?: boolea
   );
 }
 
-function WeeklyPickCard({ video }: { video: Video }) {
+function WeeklyPickCard({ video, likeCounts }: { video: Video; likeCounts: LikeCounts }) {
   const reviewLine = video.review[0] ?? "今週まず見てほしい、Manapick最高スコアの一本です。";
 
   return (
@@ -2962,6 +3004,7 @@ function WeeklyPickCard({ video }: { video: Video }) {
           <ScoreBadge video={video} compact />
           <span>{video.minutes}分</span>
         </div>
+        <LikeButton ytid={video.ytid} initialCount={likeCounts[video.ytid] ?? 0} className="is-compact" />
         <a className="weekly-pick-button" href={video.url} target="_blank" rel="noopener noreferrer">
           YouTubeで視聴
         </a>
@@ -3005,12 +3048,14 @@ function VideoCard({
   video,
   highlighted = false,
   watchlist,
-  watched
+  watched,
+  likeCounts
 }: {
   video: Video;
   highlighted?: boolean;
   watchlist?: LocalListState;
   watched?: LocalListState;
+  likeCounts: LikeCounts;
 }) {
   const channel = displayChannel(video);
   const ageLabel = publishedAgeLabel(video);
@@ -3093,6 +3138,9 @@ function VideoCard({
               #{tag}
             </span>
           ))}
+        </div>
+        <div className="video-card-engagement">
+          <LikeButton ytid={video.ytid} initialCount={likeCounts[video.ytid] ?? 0} className="is-compact" />
         </div>
         {video.axisScores.length > 0 ? (
           <details className="rounded-md border border-line bg-bg px-3 py-2 text-sm open:bg-white">
