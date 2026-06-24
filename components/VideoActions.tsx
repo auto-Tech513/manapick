@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import LikeButton from "@/components/LikeButton";
 import { RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY, sendGaEvent } from "@/lib/retention";
 import { useLocalList } from "@/lib/useLocalList";
 import { useStreakState } from "@/lib/useStreakState";
@@ -27,7 +28,7 @@ export default function VideoActions({ ytid }: { ytid: string }) {
   const isWatched = watched.has(ytid);
 
   return (
-    <div className="video-action-row" aria-label="動画の保存状態">
+    <div className="video-action-row" aria-label="動画の操作">
       <button
         type="button"
         className={inWatchlist ? "video-action-toggle is-active" : "video-action-toggle"}
@@ -53,6 +54,7 @@ export default function VideoActions({ ytid }: { ytid: string }) {
         <span aria-hidden="true">✓</span>
         <span>{isWatched ? "視聴済み" : "視聴済みにする"}</span>
       </button>
+      <LikeButton ytid={ytid} className="is-detail-action" />
     </div>
   );
 }

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import BrandLogo from "@/components/BrandLogo";
-import LikeButton from "@/components/LikeButton";
 import VideoActions from "@/components/VideoActions";
 import VideoEmbed from "@/components/VideoEmbed";
 import { guidePath, guides } from "@/lib/guides";
@@ -209,9 +208,6 @@ export default async function VideoPage({ params }: VideoPageProps) {
           </a>
           <p className="video-embed-note">※埋め込み再生できない動画はYouTubeでご覧ください。</p>
           <VideoActions ytid={video.ytid} />
-          <div className="video-like-row">
-            <LikeButton ytid={video.ytid} />
-          </div>
         </div>
       </article>
 

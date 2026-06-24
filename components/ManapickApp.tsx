@@ -2952,7 +2952,7 @@ function FeaturedVideoCard({ video, likeCounts }: { video: Video; likeCounts: Li
         <p className="featured-video-eyebrow">まず見るべき1本</p>
         <h3><a href={videoDetailHref(video)}>{video.title}</a></h3>
         <p>{video.review[0]}</p>
-        <LikeButton ytid={video.ytid} initialCount={likeCounts[video.ytid] ?? 0} className="is-compact" />
+        <LikeButton ytid={video.ytid} initialCount={likeCounts[video.ytid] ?? 0} className="is-card-action" />
         <a href={videoDetailHref(video)}>詳細を見る</a>
       </div>
     </article>
@@ -3004,7 +3004,7 @@ function WeeklyPickCard({ video, likeCounts }: { video: Video; likeCounts: LikeC
           <ScoreBadge video={video} compact />
           <span>{video.minutes}分</span>
         </div>
-        <LikeButton ytid={video.ytid} initialCount={likeCounts[video.ytid] ?? 0} className="is-compact" />
+        <LikeButton ytid={video.ytid} initialCount={likeCounts[video.ytid] ?? 0} className="is-card-action" />
         <a className="weekly-pick-button" href={video.url} target="_blank" rel="noopener noreferrer">
           YouTubeで視聴
         </a>
@@ -3139,9 +3139,6 @@ function VideoCard({
             </span>
           ))}
         </div>
-        <div className="video-card-engagement">
-          <LikeButton ytid={video.ytid} initialCount={likeCounts[video.ytid] ?? 0} className="is-compact" />
-        </div>
         {video.axisScores.length > 0 ? (
           <details className="rounded-md border border-line bg-bg px-3 py-2 text-sm open:bg-white">
             <summary className="cursor-pointer font-black text-primaryInk">詳細スコアを見る</summary>
@@ -3165,6 +3162,9 @@ function VideoCard({
             {scoreConfirmationText(video)}
           </p>
         )}
+        <div className="video-card-engagement">
+          <LikeButton ytid={video.ytid} initialCount={likeCounts[video.ytid] ?? 0} className="is-card-action" />
+        </div>
         <a
           className="mt-auto inline-flex h-11 items-center justify-center rounded-md bg-accent px-4 text-sm font-black text-white shadow-button transition duration-200 ease-[var(--ease-standard)] hover:bg-primary focus-visible:outline-primary motion-reduce:transition-none"
           href={video.url}

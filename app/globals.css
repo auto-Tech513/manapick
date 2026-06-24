@@ -3932,6 +3932,24 @@ img {
   font-size: 0.76rem;
 }
 
+.like-btn.is-card-action,
+.like-btn.is-detail-action {
+  width: 100%;
+  min-height: 44px;
+  border-radius: var(--radius-md);
+  padding: 9px 12px;
+  font-size: 0.84rem;
+}
+
+.like-btn.is-card-action {
+  border-color: color-mix(in srgb, var(--color-accent) 22%, var(--color-line));
+  background: linear-gradient(180deg, #fff, color-mix(in srgb, var(--color-accent) 5%, white));
+}
+
+.like-btn.is-detail-action {
+  box-shadow: var(--shadow-line);
+}
+
 .like-count {
   font-variant-numeric: tabular-nums;
 }
@@ -3945,12 +3963,18 @@ img {
 }
 
 .video-card-engagement {
-  margin-top: -1px;
+  margin-top: 0;
 }
 
 .featured-video-card .like-btn,
 .weekly-pick-body .like-btn {
   justify-self: start;
+}
+
+.featured-video-card .like-btn.is-card-action,
+.weekly-pick-body .like-btn.is-card-action {
+  width: fit-content;
+  min-width: 158px;
 }
 
 .card-score-wrap,
@@ -4450,9 +4474,9 @@ img {
 
 .video-action-row {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(100%, 620px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
-  max-width: 420px;
 }
 
 .video-action-toggle {
@@ -6876,7 +6900,7 @@ img {
 
   .video-action-row {
     grid-template-columns: 1fr;
-    max-width: none;
+    width: 100%;
   }
 
   .video-related-card {
