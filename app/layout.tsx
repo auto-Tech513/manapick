@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import PwaSetup from "@/components/PwaSetup";
 import { MANAPICK_AI_URL } from "@/lib/brand-links";
+import SiteFooter from "@/components/SiteFooter";
 import { absoluteUrl, SITE_URL } from "@/lib/manapick";
 import "./globals.css";
 
@@ -123,6 +124,7 @@ export default function RootLayout({
         ) : null}
         <PwaSetup />
         {children}
+        <SiteFooter />
       </body>
     </html>
   );
