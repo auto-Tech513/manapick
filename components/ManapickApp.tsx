@@ -10,7 +10,7 @@ import genresData from "@/content/genres.json";
 import professionRoutesData from "@/content/professions.json";
 import roadmapsData from "@/content/roadmaps.json";
 import videosData from "@/content/videos.json";
-import { MANAPICK_AI_URL } from "@/lib/brand-links";
+import { MANAPICK_AI_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
 import { RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY, jstDateKey, selectTodayVideo, sendGaEvent } from "@/lib/retention";
 import { siteStats } from "@/lib/site-stats";
 import { buildSubRoadmap } from "@/lib/sub-roadmap";
@@ -1241,6 +1241,17 @@ export default function ManapickApp() {
                 <span>manapick AI ↗</span>
                 <small>公式AI版</small>
               </a>
+              <a
+                className="header-license-link"
+                href={MANAPICK_LICENSE_URL}
+                target="_blank"
+                rel="noopener"
+                onClick={() => sendGaEvent("license_crosslink_click", { placement: "header", target: "manapick_license" })}
+                aria-label="manapick licenseへ。資格・検定を比較"
+              >
+                <span>license ↗</span>
+                <small>資格・検定</small>
+              </a>
             </nav>
             <button
               ref={menuButtonRef}
@@ -2432,6 +2443,19 @@ function SiteMenuDrawer({
           >
             <span>manapick AI ↗</span>
             <small>公式AI版・AIツールを選ぶ</small>
+          </a>
+          <a
+            className="site-menu-link site-menu-license-link"
+            href={MANAPICK_LICENSE_URL}
+            target="_blank"
+            rel="noopener"
+            onClick={() => {
+              sendGaEvent("license_crosslink_click", { placement: "menu", target: "manapick_license" });
+              onClose();
+            }}
+          >
+            <span>manapick license ↗</span>
+            <small>資格・検定を比較</small>
           </a>
           <a className="site-menu-link" href="/ranking/" onClick={onClose}>
             ランキング

@@ -26,6 +26,10 @@
   --color-ai-red-soft: #fff3f2;
   --color-ai-red-line: #facbc8;
   --color-ai-amber: #ffb000;
+  --color-license-green: #15803d;
+  --color-license-green-dark: #166534;
+  --color-license-green-soft: #effdf4;
+  --color-license-green-line: #bbf7d0;
   --color-spark: #f59e0b;
   --color-coral: #d95b48;
   --color-ink: #161b22;
@@ -62,6 +66,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  overflow-x: clip;
   background:
     linear-gradient(180deg, rgba(238, 244, 255, 0.78), rgba(246, 248, 251, 0.94) 42rem),
     var(--color-bg);
@@ -128,7 +133,8 @@ img {
   min-width: 0;
 }
 
-.header-ai-link {
+.header-ai-link,
+.header-license-link {
   position: relative;
   display: inline-flex;
   min-height: 34px;
@@ -146,7 +152,8 @@ img {
   transition: background-color 160ms var(--ease-standard), border-color 160ms var(--ease-standard), transform 160ms var(--ease-standard);
 }
 
-.header-ai-link::before {
+.header-ai-link::before,
+.header-license-link::before {
   display: inline-grid;
   width: 17px;
   height: 17px;
@@ -161,16 +168,35 @@ img {
   content: "↗";
 }
 
-.header-ai-link span {
+.header-license-link {
+  border-color: var(--color-license-green-line);
+  background:
+    radial-gradient(circle at 16% 10%, rgba(21, 128, 61, 0.12), transparent 1.7rem),
+    linear-gradient(135deg, #fff, var(--color-license-green-soft));
+  color: var(--color-license-green-dark);
+  box-shadow: 0 1px 0 rgba(21, 128, 61, 0.08), 0 8px 18px rgba(21, 128, 61, 0.08);
+}
+
+.header-license-link::before {
+  background: linear-gradient(135deg, var(--color-license-green), #22c55e);
+}
+
+.header-ai-link span,
+.header-license-link span {
   font-weight: 950;
   line-height: 1.1;
 }
 
-.header-ai-link small {
+.header-ai-link small,
+.header-license-link small {
   color: color-mix(in srgb, var(--color-ai-red-dark) 72%, var(--color-muted));
   font-size: 0.68rem;
   font-weight: 900;
   line-height: 1.1;
+}
+
+.header-license-link small {
+  color: color-mix(in srgb, var(--color-license-green-dark) 74%, var(--color-muted));
 }
 
 .header-ai-link:hover {
@@ -179,6 +205,15 @@ img {
     radial-gradient(circle at 16% 10%, rgba(255, 176, 0, 0.22), transparent 1.7rem),
     linear-gradient(135deg, #fff, color-mix(in srgb, var(--color-ai-red) 11%, white));
   color: var(--color-ai-red-dark);
+  transform: translateY(-1px);
+}
+
+.header-license-link:hover {
+  border-color: color-mix(in srgb, var(--color-license-green) 54%, var(--color-license-green-line));
+  background:
+    radial-gradient(circle at 16% 10%, rgba(21, 128, 61, 0.16), transparent 1.7rem),
+    linear-gradient(135deg, #fff, color-mix(in srgb, var(--color-license-green) 10%, white));
+  color: var(--color-license-green-dark);
   transform: translateY(-1px);
 }
 
@@ -373,6 +408,37 @@ img {
   color: var(--color-ai-red-dark);
 }
 
+.site-menu-license-link {
+  display: grid;
+  align-items: flex-start;
+  gap: 4px;
+  border-color: var(--color-license-green-line);
+  background:
+    radial-gradient(circle at 94% 10%, rgba(21, 128, 61, 0.12), transparent 4.5rem),
+    linear-gradient(135deg, #fff, var(--color-license-green-soft));
+  color: var(--color-license-green-dark);
+}
+
+.site-menu-license-link span,
+.site-menu-license-link small {
+  display: block;
+}
+
+.site-menu-license-link small {
+  margin-top: 2px;
+  color: color-mix(in srgb, var(--color-license-green-dark) 68%, var(--color-muted));
+  font-size: 0.76rem;
+  font-weight: 850;
+}
+
+.site-menu-license-link:hover {
+  border-color: color-mix(in srgb, var(--color-license-green) 48%, var(--color-license-green-line));
+  background:
+    radial-gradient(circle at 94% 10%, rgba(21, 128, 61, 0.16), transparent 4.5rem),
+    linear-gradient(135deg, #fff, color-mix(in srgb, var(--color-license-green) 10%, white));
+  color: var(--color-license-green-dark);
+}
+
 .site-menu-profession-list {
   display: grid;
   gap: 7px;
@@ -467,6 +533,16 @@ img {
 }
 
 .footer-ai-link:hover {
+  color: #fff;
+}
+
+.footer-license-link {
+  display: inline-grid;
+  gap: 1px;
+  color: color-mix(in srgb, var(--color-license-green-line) 44%, white);
+}
+
+.footer-license-link:hover {
   color: #fff;
 }
 

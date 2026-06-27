@@ -1,5 +1,5 @@
 import { publishedGenreKeys } from "@/lib/manapick";
-import { MANAPICK_AI_URL } from "@/lib/brand-links";
+import { MANAPICK_AI_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
 
 type FooterLink = {
   label: string;
@@ -7,6 +7,7 @@ type FooterLink = {
   external?: boolean;
   icon?: "x";
   description?: string;
+  site?: "ai" | "license";
 };
 
 const genreCount = publishedGenreKeys.length;
@@ -51,7 +52,8 @@ const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
     title: "つながる",
     links: [
       { label: "お問い合わせ", href: "/contact/" },
-      { label: "姉妹サイト：manapick AI", href: MANAPICK_AI_URL, external: true, description: "使えるAIと使い方" },
+      { label: "姉妹サイト：manapick AI", href: MANAPICK_AI_URL, external: true, description: "使えるAIと使い方", site: "ai" },
+      { label: "姉妹サイト：manapick license", href: MANAPICK_LICENSE_URL, external: true, description: "資格・検定を比較", site: "license" },
       { label: "公式X", href: "https://x.com/manapick_app", external: true, icon: "x" }
     ]
   }
@@ -76,7 +78,8 @@ export default function SiteFooter() {
                     className={[
                       "footer-link",
                       link.icon === "x" ? "footer-x-link" : "",
-                      link.description ? "footer-ai-link" : ""
+                      link.site === "ai" ? "footer-ai-link" : "",
+                      link.site === "license" ? "footer-license-link" : ""
                     ].filter(Boolean).join(" ")}
                     href={link.href}
                     {...(link.external ? { target: "_blank", rel: "noopener" } : {})}
