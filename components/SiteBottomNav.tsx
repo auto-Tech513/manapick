@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function SiteBottomNav() {
   return (
     <nav className="mobile-bottom-nav site-bottom-nav" aria-label="クイックナビ">
-      <Link href="/#genre-picker">
+      <Link href="/start/">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <circle cx="11" cy="11" r="7" />
           <path d="m20 20-3.8-3.8" />

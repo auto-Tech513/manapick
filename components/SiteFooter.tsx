@@ -15,6 +15,7 @@ const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
   {
     title: "学ぶ",
     links: [
+      { label: "今日の1本診断", href: "/start/" },
       { label: "なりたい職業から選ぶ", href: "/#profession-routes" },
       { label: genreCount + "ジャンル一覧", href: "/#genre-picker" },
       { label: "ロードマップ", href: "/#roadmap" },
