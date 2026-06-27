@@ -12,3 +12,5 @@ data/drafts.json
 data/*.tmp
 data/*.bak
 content/*.bak*
+
+.wrangler/

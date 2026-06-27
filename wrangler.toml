@@ -1,0 +1,8 @@
+name = "manapick"
+compatibility_date = "2026-06-27"
+pages_build_output_dir = "out"
+
+[[kv_namespaces]]
+binding = "LIKES"
+id = "1518342a21b54f74aceafa24402a042e"
+preview_id = "1518342a21b54f74aceafa24402a042e"

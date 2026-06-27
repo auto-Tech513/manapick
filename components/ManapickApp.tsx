@@ -665,7 +665,7 @@ export default function ManapickApp() {
   }, [publishedVideos]);
 
   useEffect(() => {
-    if (process.env.NEXT_PUBLIC_LIKES_API_ENABLED !== "1") return;
+    if (process.env.NEXT_PUBLIC_LIKES_API_ENABLED === "0") return;
     if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") return;
     const ids = popularLikeCandidateVideos.map((video) => video.ytid);
     if (ids.length === 0) return;

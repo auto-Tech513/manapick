@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { sendGaEvent } from "@/lib/retention";
 
 const LIKED_STORAGE_KEY = "manapick:liked:v1";
-const likesApiEnabled = process.env.NEXT_PUBLIC_LIKES_API_ENABLED === "1";
+const likesApiEnabled = process.env.NEXT_PUBLIC_LIKES_API_ENABLED !== "0";
 
 type LikeButtonProps = {
   ytid: string;
