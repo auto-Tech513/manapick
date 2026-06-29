@@ -1,0 +1,278 @@
+{
+  "defaults": {
+    "regionCode": "JP",
+    "relevanceLanguage": "ja",
+    "maxResults": 40,
+    "minViews": 10000,
+    "freshYears": 8,
+    "minDurationMin": 4,
+    "maxDurationMin": 240
+  },
+  "exclude_ytids": [
+    "IcQwLGDzmVQ",
+    "YNT-KnjbVkU",
+    "hNGAW5Z1vgQ",
+    "rN8D_d21Mdk"
+  ],
+  "weak_title_terms": [
+    "稼ぐ",
+    "副業",
+    "切り抜き",
+    "食いっぱぐれ"
+  ],
+  "deny_title_patterns": [
+    "絶対",
+    "誰でも",
+    "必ず儲",
+    "爆益",
+    "億り人",
+    "不労所得",
+    "裏ワザ",
+    "秒で稼",
+    "稼げる",
+    "月収[0-9０-９]",
+    "副業で稼",
+    "勝率",
+    "サイン配信",
+    "デイトレ",
+    "FX",
+    "仮想通貨.*(手法|トレード)",
+    "個別株.*(推奨|爆上げ)"
+  ],
+  "money_deny_title_patterns": [
+    "1億円",
+    "おすすめ銘柄",
+    "おすすめ投資信託",
+    "買うべき",
+    "最強",
+    "老後安泰",
+    "[0-9０-９]+万円.*貯め",
+    "月○万円",
+    "スゴイ",
+    "失敗します",
+    "不要になる",
+    "9割問題",
+    "爆速",
+    "必須になります",
+    "[9９]割問題",
+    "銘柄"
+  ],
+  "genres": [
+    {
+      "genre": "ai",
+      "label": "生成AI",
+      "queries": [
+        {
+          "sub": "Grok",
+          "keyword": "Grok 使い方 日本語"
+        },
+        {
+          "sub": "DeepSeek",
+          "keyword": "DeepSeek 使い方 日本語"
+        },
+        {
+          "sub": "Qwen",
+          "keyword": "Qwen 使い方 日本語"
+        },
+        {
+          "sub": "Adobe Firefly",
+          "keyword": "Adobe Firefly 使い方 日本語"
+        },
+        {
+          "sub": "DALL·E 3",
+          "keyword": "DALL·E 3 使い方 日本語"
+        },
+        {
+          "sub": "Stable Diffusion",
+          "keyword": "Stable Diffusion 使い方 日本語"
+        },
+        {
+          "sub": "Kling AI",
+          "keyword": "Kling AI 使い方 日本語"
+        },
+        {
+          "sub": "Runway",
+          "keyword": "Runway 使い方 日本語"
+        },
+        {
+          "sub": "Google Veo",
+          "keyword": "Google Veo 使い方 日本語"
+        },
+        {
+          "sub": "Vrew",
+          "keyword": "Vrew 使い方 日本語"
+        },
+        {
+          "sub": "HeyGen",
+          "keyword": "HeyGen 使い方 日本語"
+        },
+        {
+          "sub": "Synthesia",
+          "keyword": "Synthesia 使い方 日本語"
+        },
+        {
+          "sub": "Notta",
+          "keyword": "Notta 使い方 日本語"
+        },
+        {
+          "sub": "ElevenLabs",
+          "keyword": "ElevenLabs 使い方 日本語"
+        },
+        {
+          "sub": "VOICEVOX",
+          "keyword": "VOICEVOX 使い方 日本語"
+        },
+        {
+          "sub": "Manus",
+          "keyword": "Manus 使い方 日本語"
+        },
+        {
+          "sub": "OpenClaw",
+          "keyword": "OpenClaw 使い方 日本語"
+        },
+        {
+          "sub": "Zapier",
+          "keyword": "Zapier 使い方 日本語"
+        },
+        {
+          "sub": "Notion AI",
+          "keyword": "Notion AI 使い方 日本語"
+        },
+        {
+          "sub": "Gamma",
+          "keyword": "Gamma 使い方 日本語"
+        },
+        {
+          "sub": "Windsurf",
+          "keyword": "Windsurf 使い方 日本語"
+        },
+        {
+          "sub": "Lovable",
+          "keyword": "Lovable 使い方 日本語"
+        },
+        {
+          "sub": "v0",
+          "keyword": "v0 使い方 日本語"
+        },
+        {
+          "sub": "OpenAI Codex",
+          "keyword": "OpenAI Codex 使い方 日本語"
+        },
+        {
+          "sub": "Replit Agent",
+          "keyword": "Replit Agent 使い方 日本語"
+        },
+        {
+          "sub": "Bolt.new",
+          "keyword": "Bolt.new 使い方 日本語"
+        },
+        {
+          "sub": "Ollama",
+          "keyword": "Ollama 使い方 日本語"
+        },
+        {
+          "sub": "Gemma",
+          "keyword": "Gemma 使い方 日本語"
+        },
+        {
+          "sub": "Llama",
+          "keyword": "Llama 使い方 日本語"
+        },
+        {
+          "sub": "Elicit",
+          "keyword": "Elicit 使い方 日本語"
+        }
+      ]
+    },
+    {
+      "genre": "shikaku",
+      "label": "資格・検定（非会計）",
+      "queries": [
+        {
+          "sub": "調理師",
+          "keyword": "調理師 勉強法 独学"
+        },
+        {
+          "sub": "第二種衛生管理者",
+          "keyword": "第二種衛生管理者 勉強法 独学"
+        },
+        {
+          "sub": "介護職員初任者研修",
+          "keyword": "介護職員初任者研修 勉強法 独学"
+        },
+        {
+          "sub": "測量士補",
+          "keyword": "測量士補 勉強法 独学"
+        },
+        {
+          "sub": "食生活アドバイザー",
+          "keyword": "食生活アドバイザー 勉強法 独学"
+        },
+        {
+          "sub": "日商PC検定",
+          "keyword": "日商PC検定 勉強法 独学"
+        },
+        {
+          "sub": "国家公務員採用一般職試験",
+          "keyword": "国家公務員採用一般職試験 勉強法 独学"
+        }
+      ]
+    },
+    {
+      "genre": "prog",
+      "label": "プログラミング・IT",
+      "queries": [
+        {
+          "sub": "Microsoft認定 Azure Fundamentals",
+          "keyword": "Microsoft認定 Azure Fundamentals 勉強法 独学"
+        },
+        {
+          "sub": "AWS認定 ソリューションアーキテクト",
+          "keyword": "AWS認定 ソリューションアーキテクト 勉強法 独学"
+        },
+        {
+          "sub": "Python3エンジニア認定基礎試験",
+          "keyword": "Python3エンジニア認定基礎試験 勉強法 独学"
+        },
+        {
+          "sub": "AWS認定 クラウドプラクティショナー",
+          "keyword": "AWS認定 クラウドプラクティショナー 勉強法 独学"
+        },
+        {
+          "sub": "Google Cloud Associate Cloud Engineer",
+          "keyword": "Google Cloud Associate Cloud Engineer 勉強法 独学"
+        }
+      ]
+    },
+    {
+      "genre": "kaikei",
+      "label": "会計・経営系資格",
+      "queries": [
+        {
+          "sub": "ビジネス会計検定試験",
+          "keyword": "ビジネス会計検定試験 勉強法 独学"
+        }
+      ]
+    },
+    {
+      "genre": "english",
+      "label": "語学・英語",
+      "queries": [
+        {
+          "sub": "「ハングル」能力検定",
+          "keyword": "「ハングル」能力検定 勉強法 独学"
+        }
+      ]
+    },
+    {
+      "genre": "video",
+      "label": "動画編集・クリエイティブ",
+      "queries": [
+        {
+          "sub": "Webクリエイター能力認定試験",
+          "keyword": "Webクリエイター能力認定試験 勉強法 独学"
+        }
+      ]
+    }
+  ]
+}
