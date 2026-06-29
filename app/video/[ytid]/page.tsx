@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import BrandLogo from "@/components/BrandLogo";
 import VideoActions from "@/components/VideoActions";
 import VideoEmbed from "@/components/VideoEmbed";
+import sisterItemLinks from "@/content/sister-item-links.json";
 import { guidePath, guides } from "@/lib/guides";
 import { manapickAiContextForGenre, manapickAiHrefForGenre } from "@/lib/ai-crosslinks";
 import {
@@ -33,6 +34,13 @@ import { nextWatchVideo } from "@/lib/rankings";
 
 type VideoPageProps = {
   params: Promise<{ ytid: string }>;
+};
+
+type SisterItemLink = {
+  site: "ai" | "license";
+  slug: string;
+  name: string;
+  url: string;
 };
 
 export const dynamicParams = false;
@@ -103,6 +111,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
   const freshness = videoFreshness(video);
   const manapickAiHref = manapickAiHrefForGenre(video.genre);
   const manapickAiContext = manapickAiContextForGenre(video.genre);
+  const sisterLinks = (sisterItemLinks as Record<string, SisterItemLink[]>)[video.ytid] ?? [];
   const videoObject = {
     "@type": "VideoObject",
     name: video.title,
@@ -210,6 +219,38 @@ export default async function VideoPage({ params }: VideoPageProps) {
           <VideoActions ytid={video.ytid} />
         </div>
       </article>
+
+      {sisterLinks.length > 0 ? (
+        <section className="sister-item-section" aria-labelledby="sister-item-title">
+          <div>
+            <p className="section-eyebrow">もっと詳しく</p>
+            <h2 id="sister-item-title" className="section-title">姉妹サイトで詳細を見る</h2>
+          </div>
+          <div className="sister-item-links">
+            {sisterLinks.map((link) => (
+              <a
+                key={`${link.site}-${link.slug}`}
+                className={`sister-item-link is-${link.site}`}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.site === "ai" ? (
+                  <>
+                    <span aria-hidden="true">🔧</span>
+                    <span>「{link.name}」の料金・無料枠・使い方を manapick AI で見る →</span>
+                  </>
+                ) : (
+                  <>
+                    <span aria-hidden="true">📜</span>
+                    <span>「{link.name}」の難易度・費用・申込を manapick license で見る →</span>
+                  </>
+                )}
+              </a>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section className="video-editorial-section" aria-labelledby="video-editorial-title">
         <div className="section-heading-row">

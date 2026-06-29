@@ -12,5 +12,8 @@ data/drafts.json
 data/*.tmp
 data/*.bak
 content/*.bak*
+scripts/pipeline-config.gap-auto*.json
+scripts/pipeline-config.aigap-batch*.json
+out */
 
 .wrangler/

@@ -1,0 +1,574 @@
+{
+  "7DkEl0kiD9g": [
+    {
+      "site": "ai",
+      "slug": "chatgpt",
+      "name": "ChatGPT",
+      "url": "https://ai.manapick.app/tool/chatgpt/"
+    }
+  ],
+  "umTYQ1LKvVI": [
+    {
+      "site": "ai",
+      "slug": "claude",
+      "name": "Claude",
+      "url": "https://ai.manapick.app/tool/claude/"
+    }
+  ],
+  "fZMQwtRNI70": [
+    {
+      "site": "ai",
+      "slug": "gemini",
+      "name": "Gemini",
+      "url": "https://ai.manapick.app/tool/gemini/"
+    }
+  ],
+  "5yU8KEoowBU": [
+    {
+      "site": "ai",
+      "slug": "grok",
+      "name": "Grok",
+      "url": "https://ai.manapick.app/tool/grok/"
+    }
+  ],
+  "snn2JbAgVc4": [
+    {
+      "site": "ai",
+      "slug": "deepseek",
+      "name": "DeepSeek",
+      "url": "https://ai.manapick.app/tool/deepseek/"
+    }
+  ],
+  "38pRtUOybr8": [
+    {
+      "site": "ai",
+      "slug": "midjourney",
+      "name": "Midjourney",
+      "url": "https://ai.manapick.app/tool/midjourney/"
+    }
+  ],
+  "XCsQNvri5tU": [
+    {
+      "site": "ai",
+      "slug": "adobe-firefly",
+      "name": "Adobe Firefly",
+      "url": "https://ai.manapick.app/tool/adobe-firefly/"
+    }
+  ],
+  "He5ofY2JNvE": [
+    {
+      "site": "ai",
+      "slug": "stable-diffusion",
+      "name": "Stable Diffusion",
+      "url": "https://ai.manapick.app/tool/stable-diffusion/"
+    }
+  ],
+  "LHikWuwD-t8": [
+    {
+      "site": "ai",
+      "slug": "veo",
+      "name": "Google Veo",
+      "url": "https://ai.manapick.app/tool/veo/"
+    }
+  ],
+  "8RJhUyKWP-A": [
+    {
+      "site": "ai",
+      "slug": "vrew",
+      "name": "Vrew",
+      "url": "https://ai.manapick.app/tool/vrew/"
+    }
+  ],
+  "RnkdHXTD8Ds": [
+    {
+      "site": "ai",
+      "slug": "suno",
+      "name": "Suno",
+      "url": "https://ai.manapick.app/tool/suno/"
+    }
+  ],
+  "Q8KF_UtYap8": [
+    {
+      "site": "ai",
+      "slug": "notta",
+      "name": "Notta",
+      "url": "https://ai.manapick.app/tool/notta/"
+    }
+  ],
+  "YyRv_uu8hh0": [
+    {
+      "site": "ai",
+      "slug": "elevenlabs",
+      "name": "ElevenLabs",
+      "url": "https://ai.manapick.app/tool/elevenlabs/"
+    }
+  ],
+  "jPWmr58ltWI": [
+    {
+      "site": "ai",
+      "slug": "voicevox",
+      "name": "VOICEVOX",
+      "url": "https://ai.manapick.app/tool/voicevox/"
+    }
+  ],
+  "Q8mdaTGNa_A": [
+    {
+      "site": "ai",
+      "slug": "perplexity",
+      "name": "Perplexity",
+      "url": "https://ai.manapick.app/tool/perplexity/"
+    }
+  ],
+  "6j4m5D-hJ7k": [
+    {
+      "site": "ai",
+      "slug": "manus",
+      "name": "Manus",
+      "url": "https://ai.manapick.app/tool/manus/"
+    }
+  ],
+  "aJtrwyfJSTo": [
+    {
+      "site": "ai",
+      "slug": "zapier",
+      "name": "Zapier (AI)",
+      "url": "https://ai.manapick.app/tool/zapier/"
+    }
+  ],
+  "mIUDzP0h-jg": [
+    {
+      "site": "ai",
+      "slug": "notion-ai",
+      "name": "Notion AI",
+      "url": "https://ai.manapick.app/tool/notion-ai/"
+    }
+  ],
+  "DFxievESxPc": [
+    {
+      "site": "ai",
+      "slug": "gamma",
+      "name": "Gamma",
+      "url": "https://ai.manapick.app/tool/gamma/"
+    }
+  ],
+  "wzaDTDKZTt8": [
+    {
+      "site": "ai",
+      "slug": "github-copilot",
+      "name": "GitHub Copilot",
+      "url": "https://ai.manapick.app/tool/github-copilot/"
+    }
+  ],
+  "ESGl8Juwytc": [
+    {
+      "site": "ai",
+      "slug": "codex",
+      "name": "OpenAI Codex",
+      "url": "https://ai.manapick.app/tool/codex/"
+    }
+  ],
+  "FwDnhTSNuQA": [
+    {
+      "site": "ai",
+      "slug": "bolt",
+      "name": "Bolt.new",
+      "url": "https://ai.manapick.app/tool/bolt/"
+    }
+  ],
+  "753GrQJfd6I": [
+    {
+      "site": "ai",
+      "slug": "deepl",
+      "name": "DeepL",
+      "url": "https://ai.manapick.app/tool/deepl/"
+    }
+  ],
+  "ujQrgXxVrmE": [
+    {
+      "site": "ai",
+      "slug": "ollama",
+      "name": "Ollama",
+      "url": "https://ai.manapick.app/tool/ollama/"
+    }
+  ],
+  "Ll43s_xTJH8": [
+    {
+      "site": "ai",
+      "slug": "gemma",
+      "name": "Gemma (Google)",
+      "url": "https://ai.manapick.app/tool/gemma/"
+    }
+  ],
+  "9SZhb4_cMCA": [
+    {
+      "site": "ai",
+      "slug": "google-translate",
+      "name": "Google翻訳",
+      "url": "https://ai.manapick.app/tool/google-translate/"
+    }
+  ],
+  "ukPGVIo3yGE": [
+    {
+      "site": "ai",
+      "slug": "siri",
+      "name": "Siri AI",
+      "url": "https://ai.manapick.app/tool/siri/"
+    }
+  ],
+  "9H9oS26DWLY": [
+    {
+      "site": "license",
+      "slug": "it-passport",
+      "name": "ITパスポート試験（iパス）",
+      "url": "https://license.manapick.app/license/it-passport/"
+    },
+    {
+      "site": "license",
+      "slug": "it-strategist",
+      "name": "ITストラテジスト試験（ST）",
+      "url": "https://license.manapick.app/license/it-strategist/"
+    }
+  ],
+  "ER56G8-s7XM": [
+    {
+      "site": "license",
+      "slug": "fe",
+      "name": "基本情報技術者試験（FE）",
+      "url": "https://license.manapick.app/license/fe/"
+    }
+  ],
+  "qq0yVKl8gLY": [
+    {
+      "site": "license",
+      "slug": "g-kentei",
+      "name": "G検定（JDLA ジェネラリスト検定）",
+      "url": "https://license.manapick.app/license/g-kentei/"
+    }
+  ],
+  "reHqDGh4r2Y": [
+    {
+      "site": "license",
+      "slug": "boki-3",
+      "name": "日商簿記検定 3級",
+      "url": "https://license.manapick.app/license/boki-3/"
+    },
+    {
+      "site": "license",
+      "slug": "boki-2",
+      "name": "日商簿記検定 2級",
+      "url": "https://license.manapick.app/license/boki-2/"
+    },
+    {
+      "site": "license",
+      "slug": "boki-1",
+      "name": "日商簿記検定 1級",
+      "url": "https://license.manapick.app/license/boki-1/"
+    }
+  ],
+  "2s4LHNuVhaU": [
+    {
+      "site": "license",
+      "slug": "fp-3",
+      "name": "FP技能検定 3級（ファイナンシャル・プランニング技能士）",
+      "url": "https://license.manapick.app/license/fp-3/"
+    },
+    {
+      "site": "license",
+      "slug": "fp-2",
+      "name": "FP技能検定 2級（ファイナンシャル・プランニング技能士）",
+      "url": "https://license.manapick.app/license/fp-2/"
+    },
+    {
+      "site": "license",
+      "slug": "fp-1",
+      "name": "FP技能検定 1級（ファイナンシャル・プランニング技能士）",
+      "url": "https://license.manapick.app/license/fp-1/"
+    }
+  ],
+  "_rIozAfVG3A": [
+    {
+      "site": "license",
+      "slug": "takken",
+      "name": "宅地建物取引士（宅建士）",
+      "url": "https://license.manapick.app/license/takken/"
+    }
+  ],
+  "hKccSxvAv7I": [
+    {
+      "site": "license",
+      "slug": "gyoseishoshi",
+      "name": "行政書士",
+      "url": "https://license.manapick.app/license/gyoseishoshi/"
+    }
+  ],
+  "11l-10gvfsg": [
+    {
+      "site": "license",
+      "slug": "sharoshi",
+      "name": "社会保険労務士（社労士）",
+      "url": "https://license.manapick.app/license/sharoshi/"
+    }
+  ],
+  "DjC1h5FHc_I": [
+    {
+      "site": "license",
+      "slug": "touroku-hanbai",
+      "name": "登録販売者",
+      "url": "https://license.manapick.app/license/touroku-hanbai/"
+    }
+  ],
+  "-O6abEpLImE": [
+    {
+      "site": "license",
+      "slug": "medical-clerk",
+      "name": "医療事務技能審査試験（メディカルクラーク）",
+      "url": "https://license.manapick.app/license/medical-clerk/"
+    }
+  ],
+  "aRKYpz19vPE": [
+    {
+      "site": "license",
+      "slug": "toeic-lr",
+      "name": "TOEIC Listening & Reading Test",
+      "url": "https://license.manapick.app/license/toeic-lr/"
+    }
+  ],
+  "HTF_rIyvxdc": [
+    {
+      "site": "license",
+      "slug": "mos",
+      "name": "MOS（マイクロソフト オフィス スペシャリスト）",
+      "url": "https://license.manapick.app/license/mos/"
+    }
+  ],
+  "DRG2S2gOtVc": [
+    {
+      "site": "license",
+      "slug": "hisho-2",
+      "name": "秘書検定 2級",
+      "url": "https://license.manapick.app/license/hisho-2/"
+    }
+  ],
+  "_ZhgjtMFaBE": [
+    {
+      "site": "license",
+      "slug": "eisei-kanri-1",
+      "name": "衛生管理者（第一種）",
+      "url": "https://license.manapick.app/license/eisei-kanri-1/"
+    },
+    {
+      "site": "license",
+      "slug": "eisei-kanri-2",
+      "name": "第二種衛生管理者",
+      "url": "https://license.manapick.app/license/eisei-kanri-2/"
+    }
+  ],
+  "DZH_j334SSU": [
+    {
+      "site": "license",
+      "slug": "shikisai-3",
+      "name": "色彩検定 3級",
+      "url": "https://license.manapick.app/license/shikisai-3/"
+    },
+    {
+      "site": "license",
+      "slug": "shikisai-2",
+      "name": "色彩検定 2級",
+      "url": "https://license.manapick.app/license/shikisai-2/"
+    },
+    {
+      "site": "license",
+      "slug": "shikisai-uc",
+      "name": "色彩検定 UC級",
+      "url": "https://license.manapick.app/license/shikisai-uc/"
+    }
+  ],
+  "7ymY_3uLZzM": [
+    {
+      "site": "license",
+      "slug": "webdesign-3",
+      "name": "ウェブデザイン技能検定 3級",
+      "url": "https://license.manapick.app/license/webdesign-3/"
+    }
+  ],
+  "oHD6WdVKJsY": [
+    {
+      "site": "license",
+      "slug": "hoikushi",
+      "name": "保育士",
+      "url": "https://license.manapick.app/license/hoikushi/"
+    }
+  ],
+  "YRnaxaX46pY": [
+    {
+      "site": "license",
+      "slug": "kikenbutsu-otsu4",
+      "name": "危険物取扱者 乙種第4類（乙4）",
+      "url": "https://license.manapick.app/license/kikenbutsu-otsu4/"
+    },
+    {
+      "site": "license",
+      "slug": "kikenbutsu-ko",
+      "name": "危険物取扱者 甲種",
+      "url": "https://license.manapick.app/license/kikenbutsu-ko/"
+    }
+  ],
+  "FGyA5jDuZ0E": [
+    {
+      "site": "license",
+      "slug": "denki-2",
+      "name": "第二種電気工事士",
+      "url": "https://license.manapick.app/license/denki-2/"
+    }
+  ],
+  "Z-R9Nhn1kf0": [
+    {
+      "site": "license",
+      "slug": "sg",
+      "name": "情報セキュリティマネジメント試験（SG）",
+      "url": "https://license.manapick.app/license/sg/"
+    }
+  ],
+  "xoL2Q3zjn3k": [
+    {
+      "site": "license",
+      "slug": "python3-basic",
+      "name": "Python3エンジニア認定基礎試験",
+      "url": "https://license.manapick.app/license/python3-basic/"
+    }
+  ],
+  "Ahpuf2qc5g8": [
+    {
+      "site": "license",
+      "slug": "aws-clf",
+      "name": "AWS認定 クラウドプラクティショナー（CLF）",
+      "url": "https://license.manapick.app/license/aws-clf/"
+    }
+  ],
+  "u3TP7aQRTG8": [
+    {
+      "site": "license",
+      "slug": "kanri-gyomu",
+      "name": "管理業務主任者",
+      "url": "https://license.manapick.app/license/kanri-gyomu/"
+    }
+  ],
+  "hd5hIJ2vt8A": [
+    {
+      "site": "license",
+      "slug": "chintai",
+      "name": "賃貸不動産経営管理士",
+      "url": "https://license.manapick.app/license/chintai/"
+    }
+  ],
+  "FlUXxQlwTVg": [
+    {
+      "site": "license",
+      "slug": "kaigo-fukushi",
+      "name": "介護福祉士",
+      "url": "https://license.manapick.app/license/kaigo-fukushi/"
+    }
+  ],
+  "w2rfGtA9X6M": [
+    {
+      "site": "license",
+      "slug": "biz-law-3",
+      "name": "ビジネス実務法務検定試験 3級",
+      "url": "https://license.manapick.app/license/biz-law-3/"
+    },
+    {
+      "site": "license",
+      "slug": "biz-law-2",
+      "name": "ビジネス実務法務検定試験 2級",
+      "url": "https://license.manapick.app/license/biz-law-2/"
+    }
+  ],
+  "FPGrGERcN6w": [
+    {
+      "site": "license",
+      "slug": "denken-3",
+      "name": "第三種電気主任技術者（電験三種）",
+      "url": "https://license.manapick.app/license/denken-3/"
+    }
+  ],
+  "cEYf1yumgoA": [
+    {
+      "site": "license",
+      "slug": "sokuryo-ho",
+      "name": "測量士補",
+      "url": "https://license.manapick.app/license/sokuryo-ho/"
+    }
+  ],
+  "xg3mAYn83ao": [
+    {
+      "site": "license",
+      "slug": "statistics-2",
+      "name": "統計検定 2級",
+      "url": "https://license.manapick.app/license/statistics-2/"
+    }
+  ],
+  "RAKEGBKP7KA": [
+    {
+      "site": "license",
+      "slug": "hangul-3",
+      "name": "「ハングル」能力検定 3級",
+      "url": "https://license.manapick.app/license/hangul-3/"
+    }
+  ],
+  "nCV-QVhcPqQ": [
+    {
+      "site": "license",
+      "slug": "kanken-2",
+      "name": "日本漢字能力検定（漢検）2級",
+      "url": "https://license.manapick.app/license/kanken-2/"
+    }
+  ],
+  "ktAO46RIePk": [
+    {
+      "site": "license",
+      "slug": "shokuseikatsu-3",
+      "name": "食生活アドバイザー 3級",
+      "url": "https://license.manapick.app/license/shokuseikatsu-3/"
+    }
+  ],
+  "oVNov_xQzL4": [
+    {
+      "site": "license",
+      "slug": "boiler-2",
+      "name": "二級ボイラー技士",
+      "url": "https://license.manapick.app/license/boiler-2/"
+    }
+  ],
+  "WqI3CPrUeVE": [
+    {
+      "site": "license",
+      "slug": "zeirishi",
+      "name": "税理士",
+      "url": "https://license.manapick.app/license/zeirishi/"
+    }
+  ],
+  "bRIIf5EcDkY": [
+    {
+      "site": "license",
+      "slug": "aws-saa",
+      "name": "AWS認定 ソリューションアーキテクト – アソシエイト（SAA）",
+      "url": "https://license.manapick.app/license/aws-saa/"
+    }
+  ],
+  "ii8EdGjKIl8": [
+    {
+      "site": "license",
+      "slug": "kokka-komuin",
+      "name": "国家公務員採用一般職試験（大卒程度）",
+      "url": "https://license.manapick.app/license/kokka-komuin/"
+    }
+  ],
+  "gSeA4wRyNUk": [
+    {
+      "site": "license",
+      "slug": "shindanshi",
+      "name": "中小企業診断士",
+      "url": "https://license.manapick.app/license/shindanshi/"
+    }
+  ]
+}
