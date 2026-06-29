@@ -1,0 +1,766 @@
+{
+  "defaults": {
+    "regionCode": "JP",
+    "relevanceLanguage": "ja",
+    "maxResults": 40,
+    "minViews": 10000,
+    "freshYears": 8,
+    "minDurationMin": 4,
+    "maxDurationMin": 240
+  },
+  "exclude_ytids": [
+    "IcQwLGDzmVQ",
+    "YNT-KnjbVkU",
+    "hNGAW5Z1vgQ",
+    "rN8D_d21Mdk"
+  ],
+  "weak_title_terms": [
+    "稼ぐ",
+    "副業",
+    "切り抜き",
+    "食いっぱぐれ"
+  ],
+  "deny_title_patterns": [
+    "絶対",
+    "誰でも",
+    "必ず儲",
+    "爆益",
+    "億り人",
+    "不労所得",
+    "裏ワザ",
+    "秒で稼",
+    "稼げる",
+    "月収[0-9０-９]",
+    "副業で稼",
+    "勝率",
+    "サイン配信",
+    "デイトレ",
+    "FX",
+    "仮想通貨.*(手法|トレード)",
+    "個別株.*(推奨|爆上げ)"
+  ],
+  "money_deny_title_patterns": [
+    "1億円",
+    "おすすめ銘柄",
+    "おすすめ投資信託",
+    "買うべき",
+    "最強",
+    "老後安泰",
+    "[0-9０-９]+万円.*貯め",
+    "月○万円",
+    "スゴイ",
+    "失敗します",
+    "不要になる",
+    "9割問題",
+    "爆速",
+    "必須になります",
+    "[9９]割問題",
+    "銘柄"
+  ],
+  "genres": [
+    {
+      "genre": "ai",
+      "label": "生成AI",
+      "queries": [
+        {
+          "sub": "Grok",
+          "keyword": "Grok 使い方 日本語"
+        },
+        {
+          "sub": "DeepSeek",
+          "keyword": "DeepSeek 使い方 日本語"
+        },
+        {
+          "sub": "Mistral Le Chat",
+          "keyword": "Mistral Le Chat 使い方 日本語"
+        },
+        {
+          "sub": "Qwen",
+          "keyword": "Qwen 使い方 日本語"
+        },
+        {
+          "sub": "Sakana Chat",
+          "keyword": "Sakana Chat 使い方 日本語"
+        },
+        {
+          "sub": "ELYZA LLM",
+          "keyword": "ELYZA LLM 使い方 日本語"
+        },
+        {
+          "sub": "Swallow",
+          "keyword": "Swallow 使い方 日本語"
+        },
+        {
+          "sub": "tsuzumi",
+          "keyword": "tsuzumi 使い方 日本語"
+        },
+        {
+          "sub": "Jasper",
+          "keyword": "Jasper 使い方 日本語"
+        },
+        {
+          "sub": "Copy.ai",
+          "keyword": "Copy.ai 使い方 日本語"
+        },
+        {
+          "sub": "Catchy",
+          "keyword": "Catchy 使い方 日本語"
+        },
+        {
+          "sub": "Midjourney",
+          "keyword": "Midjourney 使い方 日本語"
+        },
+        {
+          "sub": "Adobe Firefly",
+          "keyword": "Adobe Firefly 使い方 日本語"
+        },
+        {
+          "sub": "Ideogram",
+          "keyword": "Ideogram 使い方 日本語"
+        },
+        {
+          "sub": "Recraft",
+          "keyword": "Recraft 使い方 日本語"
+        },
+        {
+          "sub": "Leonardo AI",
+          "keyword": "Leonardo AI 使い方 日本語"
+        },
+        {
+          "sub": "DALL·E 3",
+          "keyword": "DALL·E 3 使い方 日本語"
+        },
+        {
+          "sub": "Stable Diffusion",
+          "keyword": "Stable Diffusion 使い方 日本語"
+        },
+        {
+          "sub": "NovelAI",
+          "keyword": "NovelAI 使い方 日本語"
+        },
+        {
+          "sub": "Niji Journey",
+          "keyword": "Niji Journey 使い方 日本語"
+        },
+        {
+          "sub": "Kling AI",
+          "keyword": "Kling AI 使い方 日本語"
+        },
+        {
+          "sub": "Runway",
+          "keyword": "Runway 使い方 日本語"
+        },
+        {
+          "sub": "Google Veo",
+          "keyword": "Google Veo 使い方 日本語"
+        },
+        {
+          "sub": "Pika",
+          "keyword": "Pika 使い方 日本語"
+        },
+        {
+          "sub": "Luma Dream Machine",
+          "keyword": "Luma Dream Machine 使い方 日本語"
+        },
+        {
+          "sub": "Palmier",
+          "keyword": "Palmier 使い方 日本語"
+        },
+        {
+          "sub": "Vrew",
+          "keyword": "Vrew 使い方 日本語"
+        },
+        {
+          "sub": "HeyGen",
+          "keyword": "HeyGen 使い方 日本語"
+        },
+        {
+          "sub": "Synthesia",
+          "keyword": "Synthesia 使い方 日本語"
+        },
+        {
+          "sub": "Suno",
+          "keyword": "Suno 使い方 日本語"
+        },
+        {
+          "sub": "Stable Audio",
+          "keyword": "Stable Audio 使い方 日本語"
+        },
+        {
+          "sub": "Notta",
+          "keyword": "Notta 使い方 日本語"
+        },
+        {
+          "sub": "ElevenLabs",
+          "keyword": "ElevenLabs 使い方 日本語"
+        },
+        {
+          "sub": "Fireflies",
+          "keyword": "Fireflies 使い方 日本語"
+        },
+        {
+          "sub": "Otter.ai",
+          "keyword": "Otter.ai 使い方 日本語"
+        },
+        {
+          "sub": "VOICEVOX",
+          "keyword": "VOICEVOX 使い方 日本語"
+        },
+        {
+          "sub": "Perplexity",
+          "keyword": "Perplexity 使い方 日本語"
+        },
+        {
+          "sub": "Felo",
+          "keyword": "Felo 使い方 日本語"
+        },
+        {
+          "sub": "Phind",
+          "keyword": "Phind 使い方 日本語"
+        },
+        {
+          "sub": "Manus",
+          "keyword": "Manus 使い方 日本語"
+        },
+        {
+          "sub": "OpenClaw",
+          "keyword": "OpenClaw 使い方 日本語"
+        },
+        {
+          "sub": "Hermes",
+          "keyword": "Hermes 使い方 日本語"
+        },
+        {
+          "sub": "Gemini Spark",
+          "keyword": "Gemini Spark 使い方 日本語"
+        },
+        {
+          "sub": "Zapier",
+          "keyword": "Zapier 使い方 日本語"
+        },
+        {
+          "sub": "Notion AI",
+          "keyword": "Notion AI 使い方 日本語"
+        },
+        {
+          "sub": "Julius AI",
+          "keyword": "Julius AI 使い方 日本語"
+        },
+        {
+          "sub": "Gamma",
+          "keyword": "Gamma 使い方 日本語"
+        },
+        {
+          "sub": "GitHub Copilot",
+          "keyword": "GitHub Copilot 使い方 日本語"
+        },
+        {
+          "sub": "Windsurf",
+          "keyword": "Windsurf 使い方 日本語"
+        },
+        {
+          "sub": "Lovable",
+          "keyword": "Lovable 使い方 日本語"
+        },
+        {
+          "sub": "v0",
+          "keyword": "v0 使い方 日本語"
+        },
+        {
+          "sub": "OpenAI Codex",
+          "keyword": "OpenAI Codex 使い方 日本語"
+        },
+        {
+          "sub": "Replit Agent",
+          "keyword": "Replit Agent 使い方 日本語"
+        },
+        {
+          "sub": "Bolt.new",
+          "keyword": "Bolt.new 使い方 日本語"
+        },
+        {
+          "sub": "DeepL",
+          "keyword": "DeepL 使い方 日本語"
+        },
+        {
+          "sub": "みらい翻訳",
+          "keyword": "みらい翻訳 使い方 日本語"
+        },
+        {
+          "sub": "Ollama",
+          "keyword": "Ollama 使い方 日本語"
+        },
+        {
+          "sub": "LM Studio",
+          "keyword": "LM Studio 使い方 日本語"
+        },
+        {
+          "sub": "Jan",
+          "keyword": "Jan 使い方 日本語"
+        },
+        {
+          "sub": "AnythingLLM",
+          "keyword": "AnythingLLM 使い方 日本語"
+        },
+        {
+          "sub": "Open WebUI",
+          "keyword": "Open WebUI 使い方 日本語"
+        },
+        {
+          "sub": "Gemma",
+          "keyword": "Gemma 使い方 日本語"
+        },
+        {
+          "sub": "Llama",
+          "keyword": "Llama 使い方 日本語"
+        },
+        {
+          "sub": "Sakana Fugu",
+          "keyword": "Sakana Fugu 使い方 日本語"
+        },
+        {
+          "sub": "PLaMo 3.0 Prime",
+          "keyword": "PLaMo 3.0 Prime 使い方 日本語"
+        },
+        {
+          "sub": "Devin",
+          "keyword": "Devin 使い方 日本語"
+        },
+        {
+          "sub": "Cohere",
+          "keyword": "Cohere 使い方 日本語"
+        },
+        {
+          "sub": "Napkin AI",
+          "keyword": "Napkin AI 使い方 日本語"
+        },
+        {
+          "sub": "Mapify",
+          "keyword": "Mapify 使い方 日本語"
+        },
+        {
+          "sub": "Granola",
+          "keyword": "Granola 使い方 日本語"
+        },
+        {
+          "sub": "Poe",
+          "keyword": "Poe 使い方 日本語"
+        },
+        {
+          "sub": "You.com",
+          "keyword": "You.com 使い方 日本語"
+        },
+        {
+          "sub": "Google翻訳",
+          "keyword": "Google翻訳 使い方 日本語"
+        },
+        {
+          "sub": "みんなの自動翻訳＠TexTra",
+          "keyword": "みんなの自動翻訳＠TexTra 使い方 日本語"
+        },
+        {
+          "sub": "Elicit",
+          "keyword": "Elicit 使い方 日本語"
+        },
+        {
+          "sub": "Consensus",
+          "keyword": "Consensus 使い方 日本語"
+        },
+        {
+          "sub": "Antigravity CLI",
+          "keyword": "Antigravity CLI 使い方 日本語"
+        },
+        {
+          "sub": "SPECS",
+          "keyword": "SPECS 使い方 日本語"
+        },
+        {
+          "sub": "GLM-5.2",
+          "keyword": "GLM-5.2 使い方 日本語"
+        },
+        {
+          "sub": "Siri AI",
+          "keyword": "Siri AI 使い方 日本語"
+        },
+        {
+          "sub": "NVIDIA Nemotron ASR",
+          "keyword": "NVIDIA Nemotron ASR 使い方 日本語"
+        },
+        {
+          "sub": "Supabase",
+          "keyword": "Supabase 使い方 日本語"
+        },
+        {
+          "sub": "Ramp",
+          "keyword": "Ramp 使い方 日本語"
+        },
+        {
+          "sub": "NVIDIA Nemotron Content Safety",
+          "keyword": "NVIDIA Nemotron Content Safety 使い方 日本語"
+        },
+        {
+          "sub": "Sora",
+          "keyword": "Sora 使い方 日本語"
+        },
+        {
+          "sub": "SciSpace",
+          "keyword": "SciSpace 使い方 日本語"
+        },
+        {
+          "sub": "Immersive Translate",
+          "keyword": "Immersive Translate 使い方 日本語"
+        },
+        {
+          "sub": "Yaraku Translate",
+          "keyword": "Yaraku Translate 使い方 日本語"
+        },
+        {
+          "sub": "Papago",
+          "keyword": "Papago 使い方 日本語"
+        },
+        {
+          "sub": "Liner",
+          "keyword": "Liner 使い方 日本語"
+        },
+        {
+          "sub": "cotomi",
+          "keyword": "cotomi 使い方 日本語"
+        },
+        {
+          "sub": "Andi",
+          "keyword": "Andi 使い方 日本語"
+        },
+        {
+          "sub": "Tavily",
+          "keyword": "Tavily 使い方 日本語"
+        },
+        {
+          "sub": "Lara Translate",
+          "keyword": "Lara Translate 使い方 日本語"
+        },
+        {
+          "sub": "Brave Search",
+          "keyword": "Brave Search 使い方 日本語"
+        },
+        {
+          "sub": "Kagi Assistant",
+          "keyword": "Kagi Assistant 使い方 日本語"
+        },
+        {
+          "sub": "T-4OO",
+          "keyword": "T-4OO 使い方 日本語"
+        },
+        {
+          "sub": "Reverso",
+          "keyword": "Reverso 使い方 日本語"
+        },
+        {
+          "sub": "Exa",
+          "keyword": "Exa 使い方 日本語"
+        },
+        {
+          "sub": "KARAKURI LM",
+          "keyword": "KARAKURI LM 使い方 日本語"
+        },
+        {
+          "sub": "Ornith-1.0",
+          "keyword": "Ornith-1.0 使い方 日本語"
+        },
+        {
+          "sub": "iAsk.Ai",
+          "keyword": "iAsk.Ai 使い方 日本語"
+        },
+        {
+          "sub": "Microsoft Translator",
+          "keyword": "Microsoft Translator 使い方 日本語"
+        },
+        {
+          "sub": "Lingvanex Translator",
+          "keyword": "Lingvanex Translator 使い方 日本語"
+        },
+        {
+          "sub": "E資格",
+          "keyword": "E資格 勉強法 独学"
+        }
+      ]
+    },
+    {
+      "genre": "prog",
+      "label": "プログラミング・IT",
+      "queries": [
+        {
+          "sub": "ウェブデザイン技能検定",
+          "keyword": "ウェブデザイン技能検定 勉強法 独学"
+        },
+        {
+          "sub": "情報セキュリティマネジメント試験",
+          "keyword": "情報セキュリティマネジメント試験 勉強法 独学"
+        },
+        {
+          "sub": "Python3エンジニア認定基礎試験",
+          "keyword": "Python3エンジニア認定基礎試験 勉強法 独学"
+        },
+        {
+          "sub": "AWS認定 クラウドプラクティショナー",
+          "keyword": "AWS認定 クラウドプラクティショナー 勉強法 独学"
+        },
+        {
+          "sub": "Microsoft認定 Azure Fundamentals",
+          "keyword": "Microsoft認定 Azure Fundamentals 勉強法 独学"
+        },
+        {
+          "sub": "CCNA",
+          "keyword": "CCNA 勉強法 独学"
+        },
+        {
+          "sub": "LinuC",
+          "keyword": "LinuC 勉強法 独学"
+        },
+        {
+          "sub": "ITストラテジスト試験",
+          "keyword": "ITストラテジスト試験 勉強法 独学"
+        },
+        {
+          "sub": "Google Cloud Associate Cloud Engineer",
+          "keyword": "Google Cloud Associate Cloud Engineer 勉強法 独学"
+        },
+        {
+          "sub": "AWS認定 ソリューションアーキテクト",
+          "keyword": "AWS認定 ソリューションアーキテクト 勉強法 独学"
+        }
+      ]
+    },
+    {
+      "genre": "video",
+      "label": "動画編集・クリエイティブ",
+      "queries": [
+        {
+          "sub": "色彩検定",
+          "keyword": "色彩検定 勉強法 独学"
+        },
+        {
+          "sub": "色彩検定",
+          "keyword": "色彩検定 勉強法 独学"
+        },
+        {
+          "sub": "色彩検定",
+          "keyword": "色彩検定 勉強法 独学"
+        },
+        {
+          "sub": "Webクリエイター能力認定試験",
+          "keyword": "Webクリエイター能力認定試験 勉強法 独学"
+        }
+      ]
+    },
+    {
+      "genre": "english",
+      "label": "語学・英語",
+      "queries": [
+        {
+          "sub": "中国語検定",
+          "keyword": "中国語検定 勉強法 独学"
+        },
+        {
+          "sub": "「ハングル」能力検定",
+          "keyword": "「ハングル」能力検定 勉強法 独学"
+        },
+        {
+          "sub": "TOEFL iBT",
+          "keyword": "TOEFL iBT 勉強法 独学"
+        }
+      ]
+    },
+    {
+      "genre": "data",
+      "label": "データ分析・DX",
+      "queries": [
+        {
+          "sub": "ORACLE MASTER Bronze DBA",
+          "keyword": "ORACLE MASTER Bronze DBA 勉強法 独学"
+        }
+      ]
+    },
+    {
+      "genre": "shikaku",
+      "label": "資格・検定（非会計）",
+      "queries": [
+        {
+          "sub": "介護職員初任者研修",
+          "keyword": "介護職員初任者研修 勉強法 独学"
+        },
+        {
+          "sub": "医療事務技能審査試験",
+          "keyword": "医療事務技能審査試験 勉強法 独学"
+        },
+        {
+          "sub": "衛生管理者",
+          "keyword": "衛生管理者 勉強法 独学"
+        },
+        {
+          "sub": "第二種電気工事士",
+          "keyword": "第二種電気工事士 勉強法 独学"
+        },
+        {
+          "sub": "マンション管理士",
+          "keyword": "マンション管理士 勉強法 独学"
+        },
+        {
+          "sub": "管理業務主任者",
+          "keyword": "管理業務主任者 勉強法 独学"
+        },
+        {
+          "sub": "賃貸不動産経営管理士",
+          "keyword": "賃貸不動産経営管理士 勉強法 独学"
+        },
+        {
+          "sub": "司法書士",
+          "keyword": "司法書士 勉強法 独学"
+        },
+        {
+          "sub": "社会福祉士",
+          "keyword": "社会福祉士 勉強法 独学"
+        },
+        {
+          "sub": "ケアマネジャー",
+          "keyword": "ケアマネジャー 勉強法 独学"
+        },
+        {
+          "sub": "ビジネス実務法務検定試験",
+          "keyword": "ビジネス実務法務検定試験 勉強法 独学"
+        },
+        {
+          "sub": "調理師",
+          "keyword": "調理師 勉強法 独学"
+        },
+        {
+          "sub": "測量士補",
+          "keyword": "測量士補 勉強法 独学"
+        },
+        {
+          "sub": "土地家屋調査士",
+          "keyword": "土地家屋調査士 勉強法 独学"
+        },
+        {
+          "sub": "ビジネス実務法務検定試験",
+          "keyword": "ビジネス実務法務検定試験 勉強法 独学"
+        },
+        {
+          "sub": "精神保健福祉士",
+          "keyword": "精神保健福祉士 勉強法 独学"
+        },
+        {
+          "sub": "日本漢字能力検定",
+          "keyword": "日本漢字能力検定 勉強法 独学"
+        },
+        {
+          "sub": "食生活アドバイザー",
+          "keyword": "食生活アドバイザー 勉強法 独学"
+        },
+        {
+          "sub": "二級ボイラー技士",
+          "keyword": "二級ボイラー技士 勉強法 独学"
+        },
+        {
+          "sub": "第二種衛生管理者",
+          "keyword": "第二種衛生管理者 勉強法 独学"
+        },
+        {
+          "sub": "メンタルヘルス・マネジメント検定",
+          "keyword": "メンタルヘルス・マネジメント検定 勉強法 独学"
+        },
+        {
+          "sub": "個人情報保護士認定試験",
+          "keyword": "個人情報保護士認定試験 勉強法 独学"
+        },
+        {
+          "sub": "日商PC検定",
+          "keyword": "日商PC検定 勉強法 独学"
+        },
+        {
+          "sub": "実用数学技能検定",
+          "keyword": "実用数学技能検定 勉強法 独学"
+        },
+        {
+          "sub": "不動産鑑定士",
+          "keyword": "不動産鑑定士 勉強法 独学"
+        },
+        {
+          "sub": "二級建築士",
+          "keyword": "二級建築士 勉強法 独学"
+        },
+        {
+          "sub": "ビル経営管理士",
+          "keyword": "ビル経営管理士 勉強法 独学"
+        },
+        {
+          "sub": "通関士",
+          "keyword": "通関士 勉強法 独学"
+        },
+        {
+          "sub": "公認心理師",
+          "keyword": "公認心理師 勉強法 独学"
+        },
+        {
+          "sub": "終活カウンセラー",
+          "keyword": "終活カウンセラー 勉強法 独学"
+        },
+        {
+          "sub": "地方公務員採用試験",
+          "keyword": "地方公務員採用試験 勉強法 独学"
+        },
+        {
+          "sub": "国家公務員採用一般職試験",
+          "keyword": "国家公務員採用一般職試験 勉強法 独学"
+        }
+      ]
+    },
+    {
+      "genre": "kaikei",
+      "label": "会計・経営系資格",
+      "queries": [
+        {
+          "sub": "ビジネス会計検定試験",
+          "keyword": "ビジネス会計検定試験 勉強法 独学"
+        },
+        {
+          "sub": "米国公認会計士",
+          "keyword": "米国公認会計士 勉強法 独学"
+        },
+        {
+          "sub": "貸金業務取扱主任者",
+          "keyword": "貸金業務取扱主任者 勉強法 独学"
+        },
+        {
+          "sub": "証券アナリスト",
+          "keyword": "証券アナリスト 勉強法 独学"
+        },
+        {
+          "sub": "相続診断士",
+          "keyword": "相続診断士 勉強法 独学"
+        },
+        {
+          "sub": "FASS検定",
+          "keyword": "FASS検定 勉強法 独学"
+        },
+        {
+          "sub": "公認内部監査人",
+          "keyword": "公認内部監査人 勉強法 独学"
+        }
+      ]
+    },
+    {
+      "genre": "money",
+      "label": "お金・投資",
+      "queries": [
+        {
+          "sub": "証券外務員",
+          "keyword": "証券外務員 勉強法 独学"
+        },
+        {
+          "sub": "証券外務員",
+          "keyword": "証券外務員 勉強法 独学"
+        }
+      ]
+    }
+  ]
+}

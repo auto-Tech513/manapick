@@ -1,0 +1,170 @@
+{
+  "defaults": {
+    "regionCode": "JP",
+    "relevanceLanguage": "ja",
+    "maxResults": 40,
+    "minViews": 10000,
+    "freshYears": 8,
+    "minDurationMin": 4,
+    "maxDurationMin": 240
+  },
+  "exclude_ytids": [
+    "IcQwLGDzmVQ",
+    "YNT-KnjbVkU",
+    "hNGAW5Z1vgQ",
+    "rN8D_d21Mdk"
+  ],
+  "weak_title_terms": [
+    "稼ぐ",
+    "副業",
+    "切り抜き",
+    "食いっぱぐれ"
+  ],
+  "deny_title_patterns": [
+    "絶対",
+    "誰でも",
+    "必ず儲",
+    "爆益",
+    "億り人",
+    "不労所得",
+    "裏ワザ",
+    "秒で稼",
+    "稼げる",
+    "月収[0-9０-９]",
+    "副業で稼",
+    "勝率",
+    "サイン配信",
+    "デイトレ",
+    "FX",
+    "仮想通貨.*(手法|トレード)",
+    "個別株.*(推奨|爆上げ)"
+  ],
+  "money_deny_title_patterns": [
+    "1億円",
+    "おすすめ銘柄",
+    "おすすめ投資信託",
+    "買うべき",
+    "最強",
+    "老後安泰",
+    "[0-9０-９]+万円.*貯め",
+    "月○万円",
+    "スゴイ",
+    "失敗します",
+    "不要になる",
+    "9割問題",
+    "爆速",
+    "必須になります",
+    "[9９]割問題",
+    "銘柄"
+  ],
+  "genres": [
+    {
+      "genre": "ai",
+      "label": "生成AI",
+      "queries": [
+        {
+          "sub": "Midjourney",
+          "keyword": "Midjourney 使い方 日本語"
+        },
+        {
+          "sub": "Suno",
+          "keyword": "Suno 使い方 日本語"
+        },
+        {
+          "sub": "Perplexity",
+          "keyword": "Perplexity 使い方 日本語"
+        },
+        {
+          "sub": "GitHub Copilot",
+          "keyword": "GitHub Copilot 使い方 日本語"
+        },
+        {
+          "sub": "DeepL",
+          "keyword": "DeepL 使い方 日本語"
+        },
+        {
+          "sub": "Google翻訳",
+          "keyword": "Google翻訳 使い方 日本語"
+        },
+        {
+          "sub": "Siri AI",
+          "keyword": "Siri AI 使い方 日本語"
+        },
+        {
+          "sub": "Supabase",
+          "keyword": "Supabase 使い方 日本語"
+        },
+        {
+          "sub": "Microsoft Translator",
+          "keyword": "Microsoft Translator 使い方 日本語"
+        }
+      ]
+    },
+    {
+      "genre": "prog",
+      "label": "prog",
+      "queries": [
+        {
+          "sub": "情報セキュリティマネジメント試験",
+          "keyword": "情報セキュリティマネジメント試験 勉強法 独学"
+        },
+        {
+          "sub": "Microsoft認定 Azure Fundamentals",
+          "keyword": "Microsoft認定 Azure Fundamentals 勉強法 独学"
+        }
+      ]
+    },
+    {
+      "genre": "shikaku",
+      "label": "shikaku",
+      "queries": [
+        {
+          "sub": "ビジネス実務法務検定試験",
+          "keyword": "ビジネス実務法務検定試験 勉強法 独学"
+        },
+        {
+          "sub": "日本漢字能力検定",
+          "keyword": "日本漢字能力検定 勉強法 独学"
+        },
+        {
+          "sub": "衛生管理者",
+          "keyword": "衛生管理者 勉強法 独学"
+        },
+        {
+          "sub": "第二種電気工事士",
+          "keyword": "第二種電気工事士 勉強法 独学"
+        },
+        {
+          "sub": "賃貸不動産経営管理士",
+          "keyword": "賃貸不動産経営管理士 勉強法 独学"
+        },
+        {
+          "sub": "管理業務主任者",
+          "keyword": "管理業務主任者 勉強法 独学"
+        },
+        {
+          "sub": "調理師",
+          "keyword": "調理師 勉強法 独学"
+        },
+        {
+          "sub": "二級ボイラー技士",
+          "keyword": "二級ボイラー技士 勉強法 独学"
+        }
+      ]
+    },
+    {
+      "genre": "video",
+      "label": "video",
+      "queries": [
+        {
+          "sub": "色彩検定",
+          "keyword": "色彩検定 勉強法 独学"
+        },
+        {
+          "sub": "色彩検定",
+          "keyword": "色彩検定 勉強法 独学"
+        }
+      ]
+    }
+  ]
+}
