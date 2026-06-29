@@ -8,7 +8,7 @@ import { absoluteUrl, SITE_URL } from "@/lib/manapick";
 import "./globals.css";
 
 const gaId = process.env.NEXT_PUBLIC_GA_ID?.trim();
-const adsenseId = process.env.NEXT_PUBLIC_ADSENSE_ID?.trim();
+const adsenseId = process.env.NEXT_PUBLIC_ADSENSE_ID?.trim() || "ca-pub-4108900975353940";
 const ogImageUrl = absoluteUrl("/brand/ogp-manapick.png");
 const xAccountUrl = "https://x.com/manapick_app";
 const xAccountHandle = "@manapick_app";
@@ -100,6 +100,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
+        {adsenseId ? <meta name="google-adsense-account" content={adsenseId} /> : null}
         <link rel="preconnect" href="https://i.ytimg.com" />
         {adsenseId ? (
           <script
