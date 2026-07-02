@@ -5895,6 +5895,302 @@ img {
   box-shadow: var(--shadow-line);
 }
 
+.youtube-learning-hero {
+  background:
+    radial-gradient(circle at 88% 14%, rgba(15, 169, 139, 0.16), transparent 11rem),
+    linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 8%, white), color-mix(in srgb, var(--color-leaf) 10%, white));
+}
+
+.youtube-learning-cta-row,
+.youtube-section-head,
+.youtube-intent-grid,
+.youtube-step-grid,
+.youtube-video-grid,
+.youtube-genre-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.youtube-learning-cta-row {
+  margin-top: 18px;
+}
+
+.youtube-learning-cta-row a,
+.youtube-section-head a,
+.youtube-intent-grid a,
+.youtube-step-card,
+.youtube-genre-grid a,
+.youtube-monetize-links a {
+  min-height: 44px;
+  text-decoration: none;
+}
+
+.youtube-learning-cta-row a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 18%, var(--color-line));
+  border-radius: 999px;
+  background: #fff;
+  color: var(--color-primary-ink);
+  padding: 10px 16px;
+  font-size: 0.92rem;
+  font-weight: 950;
+  box-shadow: var(--shadow-line);
+}
+
+.youtube-learning-cta-row a:first-child {
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: var(--shadow-button);
+}
+
+.youtube-answer-section > p {
+  margin-bottom: 16px;
+}
+
+.youtube-intent-grid,
+.youtube-step-grid,
+.youtube-genre-grid,
+.youtube-video-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.youtube-intent-grid a,
+.youtube-step-card,
+.youtube-genre-grid a {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: #fff;
+  padding: 14px;
+  box-shadow: var(--shadow-line);
+}
+
+.youtube-intent-grid a:hover,
+.youtube-intent-grid a:focus-visible,
+.youtube-step-card:hover,
+.youtube-step-card:focus-visible,
+.youtube-genre-grid a:hover,
+.youtube-genre-grid a:focus-visible,
+.youtube-video-card:hover,
+.youtube-video-card:focus-visible,
+.youtube-popular-list a:hover,
+.youtube-popular-list a:focus-visible {
+  border-color: color-mix(in srgb, var(--color-accent) 35%, var(--color-line));
+  box-shadow: var(--shadow-card);
+  text-decoration: none;
+}
+
+.youtube-intent-grid span,
+.youtube-step-card span,
+.youtube-genre-grid span {
+  color: var(--color-leaf);
+  font-size: 0.78rem;
+  font-weight: 950;
+}
+
+.youtube-intent-grid strong,
+.youtube-step-card strong,
+.youtube-genre-grid strong {
+  color: var(--color-ink);
+  font-size: 1rem;
+  font-weight: 950;
+  line-height: 1.45;
+}
+
+.youtube-intent-grid small,
+.youtube-step-card small,
+.youtube-genre-grid small {
+  color: var(--color-muted);
+  font-size: 0.84rem;
+  font-weight: 780;
+  line-height: 1.7;
+}
+
+.youtube-ethics-note {
+  margin-top: 14px;
+  border-left: 4px solid color-mix(in srgb, var(--color-leaf) 45%, var(--color-line));
+  padding-left: 12px;
+}
+
+.youtube-section-head {
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.youtube-section-head a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--color-primary-ink);
+  padding: 8px 14px;
+  font-size: 0.86rem;
+  font-weight: 950;
+  box-shadow: var(--shadow-line);
+}
+
+.youtube-video-card {
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: var(--shadow-line);
+}
+
+.youtube-video-thumb {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--color-bg-soft);
+}
+
+.youtube-video-thumb > span {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: inline-flex;
+  min-width: 32px;
+  min-height: 32px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(31, 58, 138, 0.92);
+  color: #fff;
+  font-size: 0.86rem;
+  font-weight: 950;
+}
+
+.youtube-video-body {
+  display: grid;
+  gap: 7px;
+  padding: 12px;
+}
+
+.youtube-video-body small,
+.youtube-popular-list small {
+  color: var(--color-accent);
+  font-size: 0.76rem;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.youtube-video-body strong {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--color-ink);
+  font-size: 0.94rem;
+  font-weight: 950;
+  line-height: 1.45;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.youtube-popular-list {
+  display: grid;
+  gap: 10px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.youtube-popular-list a {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 6px 12px;
+  align-items: center;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: #fff;
+  padding: 12px;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: var(--shadow-line);
+}
+
+.youtube-popular-list span {
+  grid-row: span 2;
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-primary) 10%, white);
+  color: var(--color-primary-ink);
+  font-weight: 950;
+}
+
+.youtube-popular-list strong {
+  overflow: hidden;
+  color: var(--color-ink);
+  font-weight: 950;
+  line-height: 1.45;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.youtube-monetize-links {
+  width: 100%;
+  margin: 16px 0 0;
+}
+
+@media (min-width: 760px) {
+  .youtube-learning-cta-row,
+  .youtube-section-head {
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .youtube-learning-page .knowledge-header,
+  .youtube-learning-page .knowledge-breadcrumb,
+  .youtube-learning-page .knowledge-hero,
+  .youtube-learning-page .knowledge-section {
+    width: min(100% - 24px, 1120px);
+  }
+
+  .youtube-learning-page .knowledge-hero,
+  .youtube-learning-page .knowledge-section {
+    border-radius: 18px;
+  }
+
+  .youtube-learning-page .knowledge-hero {
+    padding: 20px 16px;
+  }
+
+  .youtube-learning-page .knowledge-section {
+    padding: 16px 14px;
+  }
+
+  .youtube-intent-grid,
+  .youtube-step-grid,
+  .youtube-video-grid,
+  .youtube-genre-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .youtube-popular-list a {
+    align-items: start;
+  }
+
+  .youtube-popular-list strong {
+    display: -webkit-box;
+    white-space: normal;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}
+
 .glossary-grid,
 .ranking-grid,
 .new-video-list {

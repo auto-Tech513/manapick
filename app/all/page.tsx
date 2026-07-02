@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 
 const mainPages: { label: string; href: string }[] = [
   { label: "トップ", href: "/" },
+  { label: "YouTube学習動画おすすめ", href: "/youtube-learning/" },
   { label: "今日の1本診断", href: "/start/" },
   { label: "ランキング", href: "/ranking/" },
   { label: "新着・更新した動画", href: "/new/" },

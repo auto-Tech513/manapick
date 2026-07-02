@@ -139,6 +139,16 @@ const purposeLinks = [
 
 const searchIntentLinks = [
   {
+    label: "YouTube学習動画おすすめ",
+    href: "/youtube-learning/",
+    note: "無料動画の選び方"
+  },
+  {
+    label: "リスキリング 何から始める",
+    href: "/youtube-learning/#youtube-steps-title",
+    note: "最初の1本を決める"
+  },
+  {
     label: "YouTubeサムネイルの作り方",
     href: "/genre/video/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3/",
     note: "動画編集・デザイン"
@@ -2047,7 +2057,7 @@ function SearchIntentShortcutSection() {
           <p className="section-eyebrow">よく検索されるテーマ</p>
           <h2 id="search-intent-title" className="section-title">今ある悩みから、直接探す</h2>
         </div>
-        <p>検索で表示が出ているテーマを、対応する動画一覧・ロードマップへつなげました。</p>
+        <p>よく調べられるテーマを、対応する動画一覧・ロードマップへつなげました。</p>
       </div>
       <div className="search-intent-grid">
         {searchIntentLinks.map((item) => (

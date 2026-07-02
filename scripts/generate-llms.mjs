@@ -128,6 +128,9 @@ function genreIndexLines() {
 }
 
 const queryIntentLines = [
+  ["YouTube学習動画おすすめ", "/youtube-learning/"],
+  ["動画 勉強 無料", "/youtube-learning/"],
+  ["リスキリング 何から始める", "/youtube-learning/#youtube-steps-title"],
   ["YouTubeサムネイルの作り方", "/genre/video/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3/"],
   ["Pythonは難しい", "/guide/python/"],
   ["エクセル統計の使い方", "/guide/excel-data/"],
@@ -183,6 +186,7 @@ const lines = [
   "",
   "## 主要URL",
   `- トップ: ${absoluteUrl(siteUrl, "/")}`,
+  `- YouTube学習動画おすすめ: ${absoluteUrl(siteUrl, "/youtube-learning/")}`,
   `- ランキング: ${absoluteUrl(siteUrl, "/ranking/")}`,
   `- 最近追加・更新した動画: ${absoluteUrl(siteUrl, "/new/")}`,
   `- よくある質問: ${absoluteUrl(siteUrl, "/faq/")}`,

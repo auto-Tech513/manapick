@@ -5,11 +5,11 @@ import roadmapsData from "@/content/roadmaps.json";
 import { absoluteUrl, genreDisplayName, isoDuration, videoPath, videos } from "@/lib/manapick";
 import { siteStats } from "@/lib/site-stats";
 
-const homeTitle = "Manapick | 学び直しを、最短ルートに。";
+const homeTitle = "Manapick | 無料YouTube学習動画を、見る順まで整理";
 const homeDescription =
-  "社会人の学び直しに役立つYouTube学習動画" +
+  "社会人の学び直し・リスキリングに役立つ無料YouTube学習動画" +
   siteStats.totalVideos +
-  "本を、独自3行レビューとロードマップでキュレーションするメディア。";
+  "本を、視聴確認済みレビューとロードマップで整理するメディア。";
 const homeOgImage = absoluteUrl("/brand/ogp-manapick.png");
 const homeFaq = [
   {
@@ -18,6 +18,22 @@ const homeFaq = [
     acceptedAnswer: {
       "@type": "Answer",
       text: "YouTubeのおすすめは視聴時間を基準に表示されますが、Manapickは学習に役立つかどうかだけを7軸35点満点で採点し、煽り・誇大系の動画は掲載しません。さらに初級→中級→上級のロードマップで見る順番まで設計しているため、次に見る一本を迷わず決められます。"
+    }
+  },
+  {
+    "@type": "Question",
+    name: "リスキリングは何から始めるのがおすすめですか？",
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: "まずは目的を1つに絞り、15〜30分で見られる初級動画から始めるのがおすすめです。迷う場合は今日の1本診断、職業別の入口、ジャンル別ロードマップから選べます。"
+    }
+  },
+  {
+    "@type": "Question",
+    name: "無料の学習動画だけで始められますか？",
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: "はい。Manapickで紹介する動画はYouTube公式動画で、会員登録なしで視聴できます。必要になった段階で書籍や講座を補助教材として検討できます。"
     }
   }
 ];

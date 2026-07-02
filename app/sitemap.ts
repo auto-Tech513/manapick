@@ -7,6 +7,7 @@ export const dynamic = "force-static";
 
 const staticRoutes = [
   "/",
+  "/youtube-learning/",
   "/all/",
   "/start/",
   "/ranking/",

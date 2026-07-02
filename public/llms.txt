@@ -4,14 +4,14 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 動画は公式YouTubeへのリンクまたは公式埋め込みを前提に紹介し、ダウンロードや再配布は扱いません。
 
 ## 公開中の10ジャンル
-- 生成AI（112本）: AI資格 / ChatGPT / Claude / Copilot / Gemini / プロンプト / 画像生成 / 自動化
-- プログラミング・IT（53本）: Git / JavaScript / Python / SQL / Web開発 / インフラ
-- 動画編集・クリエイティブ（61本）: After Effects / CapCut / DaVinci / Premiere Pro / デザイン
-- 語学・英語（52本）: TOEIC / ビジネス英語 / 発音 / 英会話
+- 生成AI（136本）: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Copilot / DeepL / DeepSeek / ElevenLabs / Gamma / Gemini / Gemma / GitHub Copilot / Google Veo / Google翻訳 / Grok / Manus / Midjourney / Notion AI / Notta / Ollama / OpenAI Codex / Perplexity / Siri AI / Stable Diffusion / Suno / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
+- プログラミング・IT（56本）: AWS認定 クラウドプラクティショナー / AWS認定 ソリューションアーキテクト / Git / JavaScript / Python / SQL / Web開発 / インフラ / 情報セキュリティマネジメント試験
+- 動画編集・クリエイティブ（62本）: After Effects / CapCut / DaVinci / Premiere Pro / デザイン / 色彩検定
+- 語学・英語（53本）: TOEIC / 「ハングル」能力検定 / ビジネス英語 / 発音 / 英会話
 - データ分析・DX（30本）: BI / Excel / データサイエンス / 統計
 - Webマーケ・SNS運用（31本）: SEO / SNS / Webマーケ
 - Office・資料作成（34本）: Excel / Word / プレゼン / 資料作成
-- 資格・検定（非会計）（204本）: AI検定 / G検定 / IT / ITパスポート / MOS / ネイリスト / 介護福祉士 / 保育士 / 医療事務 / 危険物乙4 / 基本情報技術者 / 宅建 / 生成AIパスポート / 登録販売者 / 社労士 / 秘書検定 / 管理栄養士 / 行政書士 / 電験三種
+- 資格・検定（非会計）（214本）: AI検定 / G検定 / IT / ITパスポート / MOS / ネイリスト / ビジネス実務法務検定試験 / 二級ボイラー技士 / 介護福祉士 / 保育士 / 医療事務 / 危険物乙4 / 国家公務員採用一般職試験 / 基本情報技術者 / 宅建 / 日本漢字能力検定 / 測量士補 / 生成AIパスポート / 登録販売者 / 社労士 / 秘書検定 / 第二種電気工事士 / 管理栄養士 / 管理業務主任者 / 行政書士 / 衛生管理者 / 賃貸不動産経営管理士 / 電験三種 / 食生活アドバイザー
 - 会計・経営系資格（51本）: FP / 中小企業診断士 / 税理士 / 簿記
 - お金・投資（25本）: NISA / 家計 / 投資
 
@@ -34,10 +34,10 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - お金・投資ロードマップ記事: https://manapick.app/guide/money-basics/
 
 ## ジャンル別AEOインデックス
-### 生成AI（112本）
+### 生成AI（136本）
 - ジャンルURL: https://manapick.app/genre/ai/
 - ガイドURL: https://manapick.app/guide/generative-ai/
-- 主なトピック: AI資格 / ChatGPT / Claude / Copilot / Gemini / プロンプト / 画像生成 / 自動化
+- 主なトピック: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Copilot / DeepL / DeepSeek / ElevenLabs / Gamma / Gemini / Gemma / GitHub Copilot / Google Veo / Google翻訳 / Grok / Manus / Midjourney / Notion AI / Notta / Ollama / OpenAI Codex / Perplexity / Siri AI / Stable Diffusion / Suno / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
 - ロードマップ: 生成AIロードマップ
   - STEP1（初級）: アカウントを作り、AIに指示して回答を得られる。ChatGPT/Gemini/Claudeの違いが分かる。｜動画: 【2025年最新版】超初心者OK！ChatGPTの使い方・基礎をわかりやすく解説！(資料付き) / 【完全マスター】AI初心者が学ぶべきGeminiの基本的な使い方を徹底解説するで。 / 【完全版】Claudeの使い方入門・全機能をまるっと解説（Projects / Skills / Cowork / Claude Code）
   - STEP2（中級）: 無料版の応用機能・主要機能を業務に当てはめて使える。｜動画: 【保存版】ChatGPT 2025年最新入門〜6つのステップで基礎〜応用機能までマスター（無料版対応） / 【脱初心者】AIへの指示出しがうまくいくプロンプトの基礎徹底解説するで！ / 【初心者向け】APIとは何か、実際の使い方や注意点が全部分かる動画【AI自動化】
@@ -49,10 +49,10 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【初心者OK🔰】アンソロピック「Claude Cowork」使い方基礎講座！活用法まで分かりやすく解説！（生成AI / Claude / 33/35 / 23分 / publishedAt=2026-03-14T10:15:05Z） https://manapick.app/video/NTFIFwmrjiw/
 5. 【完全版】Googleの最強AIツールGeminiの使い方徹底解説【初心者必見】（生成AI / Gemini / 33/35 / 31分 / publishedAt=2026-03-11T11:15:03Z） https://manapick.app/video/SfCNwzANbUY/
 
-### プログラミング・IT（53本）
+### プログラミング・IT（56本）
 - ジャンルURL: https://manapick.app/genre/prog/
 - ガイドURL: https://manapick.app/guide/python/
-- 主なトピック: Git / JavaScript / Python / SQL / Web開発 / インフラ
+- 主なトピック: AWS認定 クラウドプラクティショナー / AWS認定 ソリューションアーキテクト / Git / JavaScript / Python / SQL / Web開発 / インフラ / 情報セキュリティマネジメント試験
 - ロードマップ: プログラミングロードマップ
   - STEP1（初級）: Pythonの環境と基本文法を一周し、学習の全体像をつかむ。｜動画: 【最新版】Python超入門講座（合併版）｜Pythonの超基本をたった1時間で / 8分で理解するPython基礎講座【Python入門】 / 【初心者でもわかる！】Gitの使い方講座
   - STEP2（中級）: 長尺で反復しながら、基礎を体系的に固める。｜動画: Python学習ロードマップを40分で徹底解説｜作りたいもの別のおすすめ学習方法、学習時間を初心者向けに解説 / 【プログラミング入門】SQLの基本を解説！データベース操作の学ぼう！〜VTuberと学習〜【初心者向け】 / 【Git入門講座 合併版】この動画1本でGitとGitHubの基礎をゼロからマスター！【初心者向け】
@@ -64,10 +64,10 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【初心者プログラマ必見】しっかりマスターできる「GitHubの使い方講座」（プログラミング・IT / Git / 31/35 / 22分 / publishedAt=2025-05-24T02:00:34Z） https://manapick.app/video/ZEc0PFPm7Pk/
 5. 【Git入門講座 合併版】この動画1本でGitとGitHubの基礎をゼロからマスター！【初心者向け】（プログラミング・IT / Git / 30/35 / 59分 / publishedAt=2021-07-10T08:00:09Z） https://manapick.app/video/WHwuNP4kalU/
 
-### 動画編集・クリエイティブ（61本）
+### 動画編集・クリエイティブ（62本）
 - ジャンルURL: https://manapick.app/genre/video/
 - ガイドURL: https://manapick.app/guide/video-editing/
-- 主なトピック: After Effects / CapCut / DaVinci / Premiere Pro / デザイン
+- 主なトピック: After Effects / CapCut / DaVinci / Premiere Pro / デザイン / 色彩検定
 - ロードマップ: 動画編集ロードマップ
   - STEP1（初級）: 編集の流れと初期設定を把握し、1本目の編集に着手できる。｜動画: 【2025年最新】1本で丸わかり！初心者にも優しいYouTube動画編集のやり方【Premiere Pro】 / 【PremierePro入門講座#1】超初心者向けプレミアプロの始め方「新規プロジェクト・シーケンス・素材取り込み方法」 / 【2026年最新版】CapCutの使い方&編集方法を0から完全解説！動画編集初心者でも大丈夫！#CapCut使い方 #キャップカット使い方#capcut操作方法#cupcut無料#
   - STEP2（中級）: 公式の基本操作を確認し、カット編集を安定して行える。｜動画: 【Premiere Pro初心者講座】自動文字起こし機能の使い方徹底解説「フルテロップも簡単！」 / 【保存版】初心者のためのCapCut基本操作方法 | おすすめの編集手順で解説します！これだけ見れば完全攻略 | スマホ動画編集 / 【2025年最新】アフターエフェクト初心者が最初に覚える２０の基本！After Effects基本操作〜応用まで幅広く完全攻略！【永久保存版】
@@ -79,10 +79,10 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【Premiere Pro初心者講座】自動文字起こし機能の使い方徹底解説「フルテロップも簡単！」（動画編集・クリエイティブ / Premiere Pro / 32/35 / 21分 / publishedAt=2025-06-18T11:00:33Z） https://manapick.app/video/C9GymZxUrF4/
 5. 【完全無料】はじめてのDavinci Resolve！無料版を使った動画編集初心者向け編集チュートリアル！超入門20分解説。【2025年最新版ダビンチリゾルブの使い方】（動画編集・クリエイティブ / DaVinci / 32/35 / 28分 / publishedAt=2025-10-30T10:45:07Z） https://manapick.app/video/vjFZXXPA888/
 
-### 語学・英語（52本）
+### 語学・英語（53本）
 - ジャンルURL: https://manapick.app/genre/english/
 - ガイドURL: https://manapick.app/guide/english/
-- 主なトピック: TOEIC / ビジネス英語 / 発音 / 英会話
+- 主なトピック: TOEIC / 「ハングル」能力検定 / ビジネス英語 / 発音 / 英会話
 - ロードマップ: 英語ロードマップ
   - STEP1（初級）: 英語学習の全体像と「やる順番」を知り、遠回りを避ける。｜動画: 【何年かかる？】英語力ゼロからペラペラ英会話を独学で作る勉強法のロードマップ完全解説（40代/50代/初心者/留学なし純ジャパ/かっこいい） / 英語力は“やる順番”でほぼ勝負がつくゾ！話せるようになるロードマップをワシが教えたる！
   - STEP2（中級）: 毎日続けられる学習サイクルを作り、話す練習を始める。｜動画: 初心者でも3ヶ月で英語が話せるようになる勉強方法 / アメリカ英語発音入門  完全ガイド 【超有料級】 / 【英語発音完全ガイド】学校では教わらない発音上達法／YouTuberだいじろーが解説／初中級者必見 まずは母音を攻略せよ／盆踊りのリズムを捨てろ／エミネムも歌える【ENGLISH SKILL SET】
@@ -139,10 +139,10 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【初心者脱却】キレイな資料の作り方！【パワポ】（Office・資料作成 / プレゼン / 30/35 / 23分 / publishedAt=2023-11-18T11:00:39Z） https://manapick.app/video/hQRV4XOh4qM/
 5. 【パワポから乗り換え!?】Canvaプレゼン資料作成の使い方・完全攻略（Office・資料作成 / プレゼン / 30/35 / 27分 / publishedAt=2024-04-09T11:48:57Z） https://manapick.app/video/NR2OJBsF27w/
 
-### 資格・検定（非会計）（204本）
+### 資格・検定（非会計）（214本）
 - ジャンルURL: https://manapick.app/genre/shikaku/
 - ガイドURL: https://manapick.app/guide/certification/
-- 主なトピック: AI検定 / G検定 / IT / ITパスポート / MOS / ネイリスト / 介護福祉士 / 保育士 / 医療事務 / 危険物乙4 / 基本情報技術者 / 宅建 / 生成AIパスポート / 登録販売者 / 社労士 / 秘書検定 / 管理栄養士 / 行政書士 / 電験三種
+- 主なトピック: AI検定 / G検定 / IT / ITパスポート / MOS / ネイリスト / ビジネス実務法務検定試験 / 二級ボイラー技士 / 介護福祉士 / 保育士 / 医療事務 / 危険物乙4 / 国家公務員採用一般職試験 / 基本情報技術者 / 宅建 / 日本漢字能力検定 / 測量士補 / 生成AIパスポート / 登録販売者 / 社労士 / 秘書検定 / 第二種電気工事士 / 管理栄養士 / 管理業務主任者 / 行政書士 / 衛生管理者 / 賃貸不動産経営管理士 / 電験三種 / 食生活アドバイザー
 - ロードマップ: 資格・検定ロードマップ
   - STEP1（初級）: 宅建学習のスケジュールと独学の進め方を決める。｜動画: 【2026年宅建】今年の宅建に受かりたい人は絶対見て！１月から勉強を始めた人向けに合格までのロードマップを徹底解説します / 【宅建受験生必見】一発合格ロードマップ完全版！試験本番までのスケジュールと戦略をこざりえが徹底解説 ！ / 【宅建2026】完全初心者OK！この勉強スケジュールで一発合格【保存版】
   - STEP2（中級）: ITパスポート・基本情報の全体像を押さえ、学習範囲を整理する。｜動画: 【2025年最新・完全保存版】超まとめ　ITパスポート最強勉強法 #ITパスポート, #ITパスポート試験,　#iパス / 【完全版】爆速合格ロードマップ！！ITパスポートに最速で合格するためのステップやコツをまとめて紹介！ / インターネットの仕組み入門～IPアドレス・DNS・MACアドレス【高校情報１・基本情報技術者・ITパスポート】高校情報Ⅰ教科書完全準拠版
@@ -185,6 +185,9 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 5. 初心者必見！来月スタートの新NISA「始め方」「投資枠の違い」「毎月いくら投資する？」気になる疑問を聞いた【Nスタ解説】｜TBS NEWS DIG（お金・投資 / NISA / 31/35 / 11分 / publishedAt=2023-12-20T13:05:34Z） https://manapick.app/video/I4zjE8wUME0/
 
 ## 検索意図別の主要導線
+- YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
+- 動画 勉強 無料: https://manapick.app/youtube-learning/
+- リスキリング 何から始める: https://manapick.app/youtube-learning/#youtube-steps-title
 - YouTubeサムネイルの作り方: https://manapick.app/genre/video/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3/
 - Pythonは難しい: https://manapick.app/guide/python/
 - エクセル統計の使い方: https://manapick.app/guide/excel-data/
@@ -203,6 +206,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 
 ## 主要URL
 - トップ: https://manapick.app/
+- YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
 - ランキング: https://manapick.app/ranking/
 - 最近追加・更新した動画: https://manapick.app/new/
 - よくある質問: https://manapick.app/faq/
