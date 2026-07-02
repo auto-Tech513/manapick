@@ -7216,7 +7216,8 @@ img {
   padding: 13px;
 }
 
-.guide-pr-card.is-link {
+.guide-pr-card.is-link,
+.guide-pr-card.is-affiliate {
   border-style: solid;
   background: #fff;
   color: var(--color-muted);
@@ -7224,7 +7225,8 @@ img {
   transition: transform 160ms var(--ease-standard), border-color 160ms var(--ease-standard), box-shadow 160ms var(--ease-standard);
 }
 
-.guide-pr-card.is-link:hover {
+.guide-pr-card.is-link:hover,
+.guide-pr-card.is-affiliate:hover {
   border-color: color-mix(in srgb, var(--color-primary) 42%, var(--color-line));
   box-shadow: var(--shadow-card);
   transform: translateY(-1px);
@@ -7280,6 +7282,60 @@ img {
   color: #fff;
 }
 
+.guide-pr-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.guide-pr-action {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 950;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 160ms var(--ease-standard), box-shadow 160ms var(--ease-standard), filter 160ms var(--ease-standard);
+}
+
+.guide-section .guide-pr-action,
+.guide-section .guide-pr-action:hover,
+.guide-section .guide-pr-action:focus-visible {
+  color: #fff;
+}
+
+.guide-pr-action:hover {
+  box-shadow: var(--shadow-card);
+  filter: brightness(0.96);
+  transform: translateY(-1px);
+}
+
+.guide-pr-action:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-primary) 34%, transparent);
+  outline-offset: 3px;
+}
+
+.guide-pr-action.is-rakuten {
+  background: #bf0000;
+}
+
+.guide-pr-action.is-amazon {
+  background: #232f3e;
+}
+
+.guide-pr-action.is-course,
+.guide-pr-action.is-official {
+  background: var(--color-primary);
+}
+
 .guide-pr-note {
   margin-top: 12px !important;
   color: color-mix(in srgb, var(--color-ink) 72%, white) !important;
@@ -7303,6 +7359,17 @@ img {
 
   .guide-cta-row {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 430px) {
+  .guide-pr-action-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .guide-pr-action {
+    width: 100%;
   }
 }
 
@@ -8725,6 +8792,8 @@ img {
   .guide-video-card,
   .guide-cta-row a,
   .guide-pr-card.is-link,
+  .guide-pr-card.is-affiliate,
+  .guide-pr-action,
   .guide-faq-list details,
   .guide-faq-list summary::after {
     transition: none !important;
@@ -8741,7 +8810,9 @@ img {
   .genre-hub-card:hover,
   .guide-video-card:hover,
   .guide-cta-row a:hover,
-  .guide-pr-card.is-link:hover {
+  .guide-pr-card.is-link:hover,
+  .guide-pr-card.is-affiliate:hover,
+  .guide-pr-action:hover {
     transform: none !important;
   }
 

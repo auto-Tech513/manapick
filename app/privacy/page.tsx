@@ -56,7 +56,7 @@ export default function PrivacyPage() {
               <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">
                 www.aboutads.info
               </a>
-              で第三者配信事業者のCookieを無効にすることもできます。あわせて、当サイトはAmazonアソシエイトおよび楽天アフィリエイトのプログラムに参加します。当サイトは適格販売により収入を得る場合があります。広告やアフィリエイトリンクを掲載する場合は、PR表記など読者が広告と分かる表示を行います。
+              で第三者配信事業者のCookieを無効にすることもできます。あわせて、当サイトはAmazonアソシエイト、楽天アフィリエイト、A8.net等のアフィリエイトプログラムに参加します。当サイトは適格販売や申込により収入を得る場合があります。広告やアフィリエイトリンクを掲載する場合は、PR表記など読者が広告と分かる表示を行います。
             </>
           )
         },

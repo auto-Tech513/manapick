@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import BrandLogo from "@/components/BrandLogo";
-import TrackedPrLink from "@/components/TrackedPrLink";
+import GuidePrCard from "@/components/GuidePrCard";
 import prLinksData from "@/content/pr-links.json";
 import { MANAPICK_AI_URL } from "@/lib/brand-links";
 import { findGuide, guidePath, guides, guideStepVideos, type Guide } from "@/lib/guides";
@@ -15,6 +16,7 @@ import {
   youtubeThumbnail,
   type Video
 } from "@/lib/manapick";
+import type { GuidePrLink } from "@/lib/pr-links";
 import { siteStats } from "@/lib/site-stats";
 
 type GuidePageProps = {
@@ -35,12 +37,6 @@ const guideIconSources: Record<string, string> = {
   shikaku: "/brand/icon-shikaku.png",
   kaikei: "/brand/icon-kaikei.png",
   money: "/brand/icon-money.png"
-};
-type GuidePrLink = {
-  label: string;
-  url: string;
-  note: string;
-  kind?: "book" | "course";
 };
 const guidePrLinks = prLinksData as Record<string, GuidePrLink[]>;
 
@@ -184,14 +180,14 @@ export default async function GuidePage({ params }: GuidePageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
       <header className="guide-page-header">
-        <a href="/" aria-label="Manapick トップへ">
+        <Link href="/" aria-label="Manapick トップへ">
           <BrandLogo compact />
-        </a>
-        <a className="guide-header-link" href="/about-score/">採点方法</a>
+        </Link>
+        <Link className="guide-header-link" href="/about-score/">採点方法</Link>
       </header>
 
       <nav className="guide-breadcrumb" aria-label="パンくず">
-        <a href="/">ホーム</a>
+        <Link href="/">ホーム</Link>
         <span aria-hidden="true">/</span>
         <span>ガイド</span>
         <span aria-hidden="true">/</span>
@@ -207,7 +203,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           <div className="guide-trust-row" aria-label="記事の信頼情報">
             <span>最終更新日: {formatDate(buildDate)}</span>
             <span>読了目安: 約{readingMinutes}分</span>
-            <a href="/about-score/">採点方法を見る</a>
+            <Link href="/about-score/">採点方法を見る</Link>
             <span>情報商材誘導・誇大表現の動画は除外</span>
           </div>
         </header>
@@ -424,28 +420,9 @@ function GuidePrSection({ guide }: { guide: Guide }) {
           <span className="guide-pr-badge">PR</span>
         </div>
         <div className="guide-pr-grid">
-          {prItems.map((item) => {
-            const prKind = item.kind ?? "book";
-
-            return (
-              <TrackedPrLink
-                key={item.url}
-                className="guide-pr-card is-link"
-                href={item.url}
-                genre={guide.genre}
-                kind={prKind}
-                label={item.label}
-                placement="guide"
-              >
-                <span className="guide-pr-card-pr">
-                  {prKind === "course" ? "【PR】スクール・講座" : "【PR】楽天ブックス"}
-                </span>
-                <strong>{item.label}</strong>
-                <span>{item.note}</span>
-                <em>{prKind === "course" ? "公式サイトを見る" : "楽天ブックスで見る"}</em>
-              </TrackedPrLink>
-            );
-          })}
+          {prItems.map((item) => (
+            <GuidePrCard key={item.url} genre={guide.genre} item={item} placement="guide" />
+          ))}
         </div>
         {moneyNote}
       </section>

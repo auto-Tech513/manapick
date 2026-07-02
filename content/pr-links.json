@@ -1,53 +1,491 @@
 {
   "ai": [
-    { "label": "面倒なことはChatGPTにやらせよう", "url": "https://a.r10.to/hFhXYb", "note": "入門書" },
-    { "label": "ChatGPT&Copilotの教科書 改訂第2版", "url": "https://a.r10.to/hgvVNF", "note": "入門書" }
+    {
+      "label": "面倒なことはChatGPTにやらせよう",
+      "url": "https://a.r10.to/hFhXYb",
+      "note": "入門書",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/hFhXYb",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=%E9%9D%A2%E5%80%92%E3%81%AA%E3%81%93%E3%81%A8%E3%81%AFChatGPT%E3%81%AB%E3%82%84%E3%82%89%E3%81%9B%E3%82%88%E3%81%86&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    },
+    {
+      "label": "ChatGPT&Copilotの教科書 改訂第2版",
+      "url": "https://a.r10.to/hgvVNF",
+      "note": "入門書",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/hgvVNF",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=ChatGPT%26Copilot%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8%20%E6%94%B9%E8%A8%82%E7%AC%AC2%E7%89%88&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    }
   ],
   "prog": [
-    { "label": "スッキリわかるPython入門 第2版", "url": "https://a.r10.to/h5go8D", "note": "入門書" },
-    { "label": "独学プログラマー", "url": "https://a.r10.to/hFsZCu", "note": "入門書" },
-    { "label": "SkillHacks（プログラミング講座）", "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+AKG0C2+4K3S+5YJRM", "note": "挫折させない買い切り型（まず無料相談・サンプル動画）", "kind": "course" },
-    { "label": "Winスクール（無料カウンセリング）", "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+ALMVJM+529E+5YJRM", "note": "資格と仕事に強い個人レッスン制スクール（まず無料相談）", "kind": "course" }
+    {
+      "label": "スッキリわかるPython入門 第2版",
+      "url": "https://a.r10.to/h5go8D",
+      "note": "入門書",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/h5go8D",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%83%E3%82%AD%E3%83%AA%E3%82%8F%E3%81%8B%E3%82%8BPython%E5%85%A5%E9%96%80%20%E7%AC%AC2%E7%89%88&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    },
+    {
+      "label": "独学プログラマー",
+      "url": "https://a.r10.to/hFsZCu",
+      "note": "入門書",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/hFsZCu",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=%E7%8B%AC%E5%AD%A6%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E%E3%83%BC&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    },
+    {
+      "label": "SkillHacks（プログラミング講座）",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+AKG0C2+4K3S+5YJRM",
+      "note": "挫折させない買い切り型（まず無料相談・サンプル動画）",
+      "kind": "course",
+      "store": "course"
+    },
+    {
+      "label": "Winスクール（無料カウンセリング）",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+ALMVJM+529E+5YJRM",
+      "note": "資格と仕事に強い個人レッスン制スクール（まず無料相談）",
+      "kind": "course",
+      "store": "course"
+    }
   ],
   "data": [
-    { "label": "できるYouTuber式パワークエリ現場の教科書", "url": "https://a.r10.to/hFmbkA", "note": "入門書" },
-    { "label": "Excelパワークエリ データ収集・整形", "url": "https://a.r10.to/hPj8KF", "note": "入門書" }
+    {
+      "label": "できるYouTuber式パワークエリ現場の教科書",
+      "url": "https://a.r10.to/hFmbkA",
+      "note": "入門書",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/hFmbkA",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=%E3%81%A7%E3%81%8D%E3%82%8BYouTuber%E5%BC%8F%E3%83%91%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%A8%E3%83%AA%E7%8F%BE%E5%A0%B4%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    },
+    {
+      "label": "Excelパワークエリ データ収集・整形",
+      "url": "https://a.r10.to/hPj8KF",
+      "note": "入門書",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/hPj8KF",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=Excel%E3%83%91%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%A8%E3%83%AA%20%E3%83%87%E3%83%BC%E3%82%BF%E5%8F%8E%E9%9B%86%E3%83%BB%E6%95%B4%E5%BD%A2&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    }
   ],
   "video": [
-    { "label": "Premiere Pro 仕事の教科書 ハイグレード動画編集＆演出テクニック", "url": "https://a.r10.to/h5TQtn", "note": "動画編集（Premiere）", "kind": "book" },
-    { "label": "手を動かして学ぶ DaVinci Resolve 映像編集パーフェクト教本", "url": "https://a.r10.to/hR3o75", "note": "動画編集（DaVinci）", "kind": "book" },
-    { "label": "スマホ1台でバズリ動画つくります!", "url": "https://a.r10.to/hgbTeL", "note": "スマホ動画", "kind": "book" },
-    { "label": "Movie Hacks（動画編集講座）", "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+AKG0C2+4K3S+5YRHE", "note": "最短で脱・初心者の買い切り講座（サンプルあり）", "kind": "course" }
+    {
+      "label": "Premiere Pro 仕事の教科書 ハイグレード動画編集＆演出テクニック",
+      "url": "https://a.r10.to/h5TQtn",
+      "note": "動画編集（Premiere）",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/h5TQtn",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=Premiere%20Pro%20%E4%BB%95%E4%BA%8B%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8%20%E3%83%8F%E3%82%A4%E3%82%B0%E3%83%AC%E3%83%BC%E3%83%89%E5%8B%95%E7%94%BB%E7%B7%A8%E9%9B%86%EF%BC%86%E6%BC%94%E5%87%BA%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    },
+    {
+      "label": "手を動かして学ぶ DaVinci Resolve 映像編集パーフェクト教本",
+      "url": "https://a.r10.to/hR3o75",
+      "note": "動画編集（DaVinci）",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/hR3o75",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=%E6%89%8B%E3%82%92%E5%8B%95%E3%81%8B%E3%81%97%E3%81%A6%E5%AD%A6%E3%81%B6%20DaVinci%20Resolve%20%E6%98%A0%E5%83%8F%E7%B7%A8%E9%9B%86%E3%83%91%E3%83%BC%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88%E6%95%99%E6%9C%AC&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    },
+    {
+      "label": "スマホ1台でバズリ動画つくります!",
+      "url": "https://a.r10.to/hgbTeL",
+      "note": "スマホ動画",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/hgbTeL",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%9E%E3%83%9B1%E5%8F%B0%E3%81%A7%E3%83%90%E3%82%BA%E3%83%AA%E5%8B%95%E7%94%BB%E3%81%A4%E3%81%8F%E3%82%8A%E3%81%BE%E3%81%99!&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    },
+    {
+      "label": "Movie Hacks（動画編集講座）",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+AKG0C2+4K3S+5YRHE",
+      "note": "最短で脱・初心者の買い切り講座（サンプルあり）",
+      "kind": "course",
+      "store": "course"
+    }
   ],
   "english": [
-    { "label": "TOEIC L&R 出る単特急 金のフレーズ", "url": "https://a.r10.to/hYROWe", "note": "単語帳", "kind": "book" },
-    { "label": "一億人の英文法", "url": "https://a.r10.to/hkNz0Y", "note": "文法書", "kind": "book" },
-    { "label": "ネイティブキャンプ", "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+B7NWXE+35VG+64JTE", "note": "24時間レッスン受け放題（無料体験あり）", "kind": "course" },
-    { "label": "QQEnglish（無料体験あり）", "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+B43BAQ+4HHM+60H7M", "note": "講師の質にこだわったオンライン英会話（無料体験）", "kind": "course" },
-    { "label": "クラウティ（家族で使える/無料体験）", "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+9FD3LE+46SW+5YJRM", "note": "1アカウントを家族で共有できるオンライン英会話（無料体験）", "kind": "course" }
+    {
+      "label": "TOEIC L&R 出る単特急 金のフレーズ",
+      "url": "https://a.r10.to/hYROWe",
+      "note": "単語帳",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/hYROWe",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=TOEIC%20L%26R%20%E5%87%BA%E3%82%8B%E5%8D%98%E7%89%B9%E6%80%A5%20%E9%87%91%E3%81%AE%E3%83%95%E3%83%AC%E3%83%BC%E3%82%BA&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    },
+    {
+      "label": "一億人の英文法",
+      "url": "https://a.r10.to/hkNz0Y",
+      "note": "文法書",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/hkNz0Y",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=%E4%B8%80%E5%84%84%E4%BA%BA%E3%81%AE%E8%8B%B1%E6%96%87%E6%B3%95&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    },
+    {
+      "label": "ネイティブキャンプ",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+B7NWXE+35VG+64JTE",
+      "note": "24時間レッスン受け放題（無料体験あり）",
+      "kind": "course",
+      "store": "course"
+    },
+    {
+      "label": "QQEnglish（無料体験あり）",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+B43BAQ+4HHM+60H7M",
+      "note": "講師の質にこだわったオンライン英会話（無料体験）",
+      "kind": "course",
+      "store": "course"
+    },
+    {
+      "label": "クラウティ（家族で使える/無料体験）",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+9FD3LE+46SW+5YJRM",
+      "note": "1アカウントを家族で共有できるオンライン英会話（無料体験）",
+      "kind": "course",
+      "store": "course"
+    }
   ],
   "marke": [
-    { "label": "沈黙のWebマーケティング", "url": "https://a.r10.to/hYy90X", "note": "入門書", "kind": "book" },
-    { "label": "いちばんやさしいWebマーケティングの教本", "url": "https://a.r10.to/hPLHXe", "note": "入門書", "kind": "book" },
-    { "label": "Wannabeアカデミー（無料個別相談）", "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+CEJ4HE+4NJO+614CY", "note": "3ヶ月でWebマーケターを目指す（まず無料相談）", "kind": "course" }
+    {
+      "label": "沈黙のWebマーケティング",
+      "url": "https://a.r10.to/hYy90X",
+      "note": "入門書",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/hYy90X",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=%E6%B2%88%E9%BB%99%E3%81%AEWeb%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    },
+    {
+      "label": "いちばんやさしいWebマーケティングの教本",
+      "url": "https://a.r10.to/hPLHXe",
+      "note": "入門書",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/hPLHXe",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=%E3%81%84%E3%81%A1%E3%81%B0%E3%82%93%E3%82%84%E3%81%95%E3%81%97%E3%81%84Web%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E6%95%99%E6%9C%AC&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    },
+    {
+      "label": "Wannabeアカデミー（無料個別相談）",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+CEJ4HE+4NJO+614CY",
+      "note": "3ヶ月でWebマーケターを目指す（まず無料相談）",
+      "kind": "course",
+      "store": "course"
+    }
   ],
   "biz": [
-    { "label": "一生使えるプレゼン上手の資料作成入門", "url": "https://a.r10.to/hgwg4P", "note": "資料作成", "kind": "book" },
-    { "label": "外資系コンサルのスライド作成術", "url": "https://a.r10.to/hP5AQi", "note": "スライド術", "kind": "book" }
+    {
+      "label": "一生使えるプレゼン上手の資料作成入門",
+      "url": "https://a.r10.to/hgwg4P",
+      "note": "資料作成",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/hgwg4P",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=%E4%B8%80%E7%94%9F%E4%BD%BF%E3%81%88%E3%82%8B%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E4%B8%8A%E6%89%8B%E3%81%AE%E8%B3%87%E6%96%99%E4%BD%9C%E6%88%90%E5%85%A5%E9%96%80&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    },
+    {
+      "label": "外資系コンサルのスライド作成術",
+      "url": "https://a.r10.to/hP5AQi",
+      "note": "スライド術",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/hP5AQi",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=%E5%A4%96%E8%B3%87%E7%B3%BB%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%AB%E3%81%AE%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E4%BD%9C%E6%88%90%E8%A1%93&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    }
   ],
   "shikaku": [
-    { "label": "みんなが欲しかった！宅建士の教科書", "url": "https://a.r10.to/hPRFN8", "note": "宅建テキスト", "kind": "book" },
-    { "label": "スッキリわかる宅建士", "url": "https://a.r10.to/hg3pVh", "note": "宅建テキスト", "kind": "book" },
-    { "label": "LECオンライン", "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+BUVTIQ+1G62+631SY", "note": "資格・通信講座（無料の資料請求・お試し講義あり）", "kind": "course" },
-    { "label": "通信講座 資料請求特集", "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+BQ4COI+22BU+HV7V6", "note": "複数スクールをまとめて無料で資料請求", "kind": "course" }
+    {
+      "label": "みんなが欲しかった！宅建士の教科書",
+      "url": "https://a.r10.to/hPRFN8",
+      "note": "宅建テキスト",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/hPRFN8",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F%EF%BC%81%E5%AE%85%E5%BB%BA%E5%A3%AB%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    },
+    {
+      "label": "スッキリわかる宅建士",
+      "url": "https://a.r10.to/hg3pVh",
+      "note": "宅建テキスト",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/hg3pVh",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%83%E3%82%AD%E3%83%AA%E3%82%8F%E3%81%8B%E3%82%8B%E5%AE%85%E5%BB%BA%E5%A3%AB&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    },
+    {
+      "label": "LECオンライン",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+BUVTIQ+1G62+631SY",
+      "note": "資格・通信講座（無料の資料請求・お試し講義あり）",
+      "kind": "course",
+      "store": "course"
+    },
+    {
+      "label": "通信講座 資料請求特集",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+BQ4COI+22BU+HV7V6",
+      "note": "複数スクールをまとめて無料で資料請求",
+      "kind": "course",
+      "store": "course"
+    }
   ],
   "kaikei": [
-    { "label": "みんなが欲しかった！簿記の教科書 日商3級", "url": "https://a.r10.to/h5efS0", "note": "簿記3級", "kind": "book" },
-    { "label": "スッキリわかる 日商簿記3級", "url": "https://a.r10.to/h5aEEt", "note": "簿記3級", "kind": "book" },
-    { "label": "LECオンライン（簿記・会計・税理士）", "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+BUVTIQ+1G62+631SY", "note": "会計・税務系の通信講座（無料の資料請求・お試し講義あり）", "kind": "course" }
+    {
+      "label": "みんなが欲しかった！簿記の教科書 日商3級",
+      "url": "https://a.r10.to/h5efS0",
+      "note": "簿記3級",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/h5efS0",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F%EF%BC%81%E7%B0%BF%E8%A8%98%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8%20%E6%97%A5%E5%95%863%E7%B4%9A&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    },
+    {
+      "label": "スッキリわかる 日商簿記3級",
+      "url": "https://a.r10.to/h5aEEt",
+      "note": "簿記3級",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/h5aEEt",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%83%E3%82%AD%E3%83%AA%E3%82%8F%E3%81%8B%E3%82%8B%20%E6%97%A5%E5%95%86%E7%B0%BF%E8%A8%983%E7%B4%9A&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    },
+    {
+      "label": "LECオンライン（簿記・会計・税理士）",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+BUVTIQ+1G62+631SY",
+      "note": "会計・税務系の通信講座（無料の資料請求・お試し講義あり）",
+      "kind": "course",
+      "store": "course"
+    }
   ],
   "money": [
-    { "label": "本当の自由を手に入れる お金の大学", "url": "https://a.r10.to/h52WsX", "note": "お金の基本", "kind": "book" },
-    { "label": "世界一やさしい 新NISAの始め方", "url": "https://a.r10.to/h5xJkZ", "note": "新NISA入門", "kind": "book" }
+    {
+      "label": "本当の自由を手に入れる お金の大学",
+      "url": "https://a.r10.to/h52WsX",
+      "note": "お金の基本",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/h52WsX",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=%E6%9C%AC%E5%BD%93%E3%81%AE%E8%87%AA%E7%94%B1%E3%82%92%E6%89%8B%E3%81%AB%E5%85%A5%E3%82%8C%E3%82%8B%20%E3%81%8A%E9%87%91%E3%81%AE%E5%A4%A7%E5%AD%A6&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    },
+    {
+      "label": "世界一やさしい 新NISAの始め方",
+      "url": "https://a.r10.to/h5xJkZ",
+      "note": "新NISA入門",
+      "kind": "book",
+      "store": "rakuten",
+      "links": [
+        {
+          "store": "rakuten",
+          "url": "https://a.r10.to/h5xJkZ",
+          "label": "楽天ブックスで見る"
+        },
+        {
+          "store": "amazon",
+          "url": "https://www.amazon.co.jp/s?k=%E4%B8%96%E7%95%8C%E4%B8%80%E3%82%84%E3%81%95%E3%81%97%E3%81%84%20%E6%96%B0NISA%E3%81%AE%E5%A7%8B%E3%82%81%E6%96%B9&tag=saunastampral-22",
+          "label": "Amazonで見る"
+        }
+      ]
+    }
   ]
 }

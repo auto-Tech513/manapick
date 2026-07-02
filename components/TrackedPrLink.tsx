@@ -10,6 +10,7 @@ type TrackedPrLinkProps = {
   kind: string;
   label: string;
   placement: string;
+  store?: string;
   children: ReactNode;
 };
 
@@ -20,6 +21,7 @@ export default function TrackedPrLink({
   kind,
   label,
   placement,
+  store,
   children
 }: TrackedPrLinkProps) {
   return (
@@ -28,7 +30,7 @@ export default function TrackedPrLink({
       href={href}
       target="_blank"
       rel="sponsored nofollow noopener"
-      onClick={() => sendGaEvent("pr_link_click", { genre, kind, label, placement })}
+      onClick={() => sendGaEvent("pr_link_click", { genre, kind, label, placement, store: store ?? "" })}
     >
       {children}
     </a>

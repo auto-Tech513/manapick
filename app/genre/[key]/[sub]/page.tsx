@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import TrackedPrLink from "@/components/TrackedPrLink";
+import GuidePrCard from "@/components/GuidePrCard";
 import prLinksData from "@/content/pr-links.json";
 import { guidePath, guides } from "@/lib/guides";
 import {
@@ -16,6 +16,7 @@ import {
   type Video
 } from "@/lib/manapick";
 import { buildSubRoadmap } from "@/lib/sub-roadmap";
+import type { GuidePrLink } from "@/lib/pr-links";
 import {
   eligibleSubPagePath,
   eligibleSubPages,
@@ -26,13 +27,6 @@ import {
 
 type SubGenrePageProps = {
   params: Promise<{ key: string; sub: string }>;
-};
-
-type GuidePrLink = {
-  label: string;
-  url: string;
-  note: string;
-  kind?: "book" | "course";
 };
 
 const guidePrLinks = prLinksData as Record<string, GuidePrLink[]>;
@@ -303,28 +297,9 @@ function SubTopicPrSection({ items, genreName }: { items: GuidePrLink[]; genreNa
         <span className="guide-pr-badge">PR</span>
       </div>
       <div className="guide-pr-grid">
-        {items.map((item) => {
-          const prKind = item.kind ?? "book";
-
-          return (
-            <TrackedPrLink
-              key={item.url}
-              className="guide-pr-card is-link"
-              href={item.url}
-              genre={genreName}
-              kind={prKind}
-              label={item.label}
-              placement="sub-topic"
-            >
-              <span className="guide-pr-card-pr">
-                {prKind === "course" ? "【PR】スクール・講座" : "【PR】楽天ブックス"}
-              </span>
-              <strong>{item.label}</strong>
-              <span>{item.note}</span>
-              <em>{prKind === "course" ? "公式サイトを見る" : "楽天ブックスで見る"}</em>
-            </TrackedPrLink>
-          );
-        })}
+        {items.map((item) => (
+          <GuidePrCard key={item.url} genre={genreName} item={item} placement="sub-topic" />
+        ))}
       </div>
     </section>
   );
