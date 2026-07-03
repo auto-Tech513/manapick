@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import BrandLogo from "@/components/BrandLogo";
+import { learningIntentPath, learningIntents } from "@/lib/learning-intents";
 import { absoluteUrl, genreDisplayName, genreLabel, scoreText, videoPath, youtubeThumbnail, type Video } from "@/lib/manapick";
 import { rankedVideos } from "@/lib/rankings";
 import { siteStats } from "@/lib/site-stats";
@@ -240,6 +241,20 @@ export default function YoutubeLearningPage() {
         <p className="youtube-ethics-note">
           連続学習や「あとで見る」は、学習を戻しやすくするための補助機能です。焦らせる通知や成果保証ではなく、上達実感を残すために使います。
         </p>
+      </section>
+
+      <section className="knowledge-section" aria-labelledby="youtube-search-intents-title">
+        <p className="section-eyebrow">検索でよく探されるテーマ</p>
+        <h2 id="youtube-search-intents-title">よく探される悩みから、見る順を決める</h2>
+        <div className="learning-intent-grid">
+          {learningIntents.map((intent) => (
+            <Link key={intent.slug} href={learningIntentPath(intent.slug)} className="learning-intent-card">
+              <span>{intent.query}</span>
+              <strong>{intent.h1}</strong>
+              <small>{intent.audience}</small>
+            </Link>
+          ))}
+        </div>
       </section>
 
       <section className="knowledge-section" aria-labelledby="youtube-top-title">

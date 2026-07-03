@@ -3,6 +3,7 @@ import Link from "next/link";
 import { genreDisplayName, publishedGenreKeys } from "@/lib/manapick";
 import { eligibleSubPagePath, eligibleSubPagesForGenre } from "@/lib/sub-pages";
 import { guides, guidePath } from "@/lib/guides";
+import { learningIntentPath, learningIntents } from "@/lib/learning-intents";
 import { MANAPICK_AI_URL } from "@/lib/brand-links";
 
 export const dynamic = "force-static";
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
 const mainPages: { label: string; href: string }[] = [
   { label: "トップ", href: "/" },
   { label: "YouTube学習動画おすすめ", href: "/youtube-learning/" },
+  { label: "検索で多い学習テーマ", href: "/learn/" },
   { label: "今日の1本診断", href: "/start/" },
   { label: "ランキング", href: "/ranking/" },
   { label: "新着・更新した動画", href: "/new/" },
@@ -66,6 +68,15 @@ export default function AllPagesIndex() {
         {guides.map((guide) => (
           <li key={guide.slug}>
             <Link href={guidePath(guide.slug)}>{guide.title}</Link>
+          </li>
+        ))}
+      </ul>
+
+      <h2>検索で多い学習テーマ</h2>
+      <ul>
+        {learningIntents.map((intent) => (
+          <li key={intent.slug}>
+            <Link href={learningIntentPath(intent.slug)}>{intent.query}：{intent.h1}</Link>
           </li>
         ))}
       </ul>

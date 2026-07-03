@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { guidePath, guides } from "@/lib/guides";
+import { learningIntentPath, learningIntents } from "@/lib/learning-intents";
 import { absoluteUrl, publishedGenreKeys, videoPath, videos } from "@/lib/manapick";
 import { eligibleSubPagePath, eligibleSubPages } from "@/lib/sub-pages";
 
@@ -8,6 +9,7 @@ export const dynamic = "force-static";
 const staticRoutes = [
   "/",
   "/youtube-learning/",
+  "/learn/",
   "/all/",
   "/start/",
   "/ranking/",
@@ -55,6 +57,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.85
+    })),
+    ...learningIntents.map((intent) => ({
+      url: absoluteUrl(learningIntentPath(intent.slug)),
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.82
     }))
   ];
 }

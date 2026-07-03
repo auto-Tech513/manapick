@@ -18,6 +18,7 @@ const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
     links: [
       { label: "今日の1本診断", href: "/start/" },
       { label: "YouTube学習動画おすすめ", href: "/youtube-learning/" },
+      { label: "検索で多い学習テーマ", href: "/learn/" },
       { label: "なりたい職業から選ぶ", href: "/#profession-routes" },
       { label: genreCount + "ジャンル一覧", href: "/#genre-picker" },
       { label: "ロードマップ", href: "/#roadmap" },

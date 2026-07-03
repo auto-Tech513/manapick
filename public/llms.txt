@@ -186,15 +186,24 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 
 ## 検索意図別の主要導線
 - YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
+- 検索で多い学習テーマ一覧: https://manapick.app/learn/
 - 動画 勉強 無料: https://manapick.app/youtube-learning/
 - リスキリング 何から始める: https://manapick.app/youtube-learning/#youtube-steps-title
-- YouTubeサムネイルの作り方: https://manapick.app/genre/video/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3/
-- Pythonは難しい: https://manapick.app/guide/python/
-- エクセル統計の使い方: https://manapick.app/guide/excel-data/
-- Copilot活用事例: https://manapick.app/genre/ai/Copilot/
-- AIプロンプトのコツ: https://manapick.app/genre/ai/%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88/
-- 社労士試験 独学: https://manapick.app/genre/shikaku/%E7%A4%BE%E5%8A%B4%E5%A3%AB/
-- マーケティング YouTube おすすめ: https://manapick.app/guide/web-marketing/
+- エクセル統計 使い方: https://manapick.app/learn/excel-statistics/
+- YouTubeサムネイル動画一覧: https://manapick.app/genre/video/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3/
+- YouTubeサムネイル 作り方: https://manapick.app/learn/youtube-thumbnail/
+- Pythonロードマップ: https://manapick.app/guide/python/
+- Python 難しい: https://manapick.app/learn/python-hard/
+- Excelデータ分析ロードマップ: https://manapick.app/guide/excel-data/
+- Power BI 使い方: https://manapick.app/learn/power-bi/
+- Copilot動画一覧: https://manapick.app/genre/ai/Copilot/
+- Copilot 活用事例: https://manapick.app/learn/copilot-use-cases/
+- AIプロンプト動画一覧: https://manapick.app/genre/ai/%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88/
+- AI プロンプト コツ: https://manapick.app/learn/ai-prompt-tips/
+- 社労士動画一覧: https://manapick.app/genre/shikaku/%E7%A4%BE%E5%8A%B4%E5%A3%AB/
+- 社労士 勉強 スケジュール 1年: https://manapick.app/learn/sharoshi-1year/
+- Webマーケティングロードマップ: https://manapick.app/guide/web-marketing/
+- マーケティング YouTube おすすめ: https://manapick.app/learn/web-marketing-youtube/
 - Canva 初心者: https://manapick.app/genre/marke/SNS/
 
 ## よくある質問
@@ -207,6 +216,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 ## 主要URL
 - トップ: https://manapick.app/
 - YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
+- 検索で多い学習テーマ: https://manapick.app/learn/
 - ランキング: https://manapick.app/ranking/
 - 最近追加・更新した動画: https://manapick.app/new/
 - よくある質問: https://manapick.app/faq/
