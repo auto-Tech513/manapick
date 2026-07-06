@@ -304,6 +304,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           </div>
         </section>
 
+        <AdSlot slot="1438236565" />
         <section className="guide-section" aria-labelledby="guide-next-title">
           <h2 id="guide-next-title">つまずきポイントと回避策</h2>
           <div className="guide-table-wrap">

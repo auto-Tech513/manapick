@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { guidePath, guides } from "@/lib/guides";
+import AdSlot from "@/components/AdSlot";
 import { manapickAiContextForGenre, manapickAiHrefForGenre } from "@/lib/ai-crosslinks";
 import {
   absoluteUrl,
@@ -310,6 +311,7 @@ export default async function GenrePage({ params }: GenrePageProps) {
         </section>
       ) : null}
 
+      <AdSlot slot="1438236565" />
       {seo.faq.length > 0 ? (
         <section className="genre-hub-faq" aria-labelledby="genre-hub-faq-title">
           <h2 id="genre-hub-faq-title">{label}を学ぶ前によくある質問</h2>

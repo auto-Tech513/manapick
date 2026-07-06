@@ -263,6 +263,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
           </div>
         </div>
         <p className="video-editorial-body">{editorialSummary}</p>
+        <AdSlot slot="1438236565" />
         {related[0] ? (
           <a className="video-next-link" href={videoPath(related[0].ytid)}>
             次に見る1本：{related[0].title}
