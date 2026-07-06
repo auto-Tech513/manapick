@@ -222,6 +222,7 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
           </div>
         </section>
 
+        <AdSlot slot="1438236565" />
         <section className="sub-topic-section" aria-labelledby="sub-faq-title">
           <div className="sub-topic-heading">
             <p className="section-eyebrow">FAQ</p>
@@ -254,7 +255,6 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
             {guide ? <Link href={guidePath(guide.slug)}>{genreName}ロードマップを読む</Link> : null}
           </div>
         </section>
-        <AdSlot slot="1438236565" />
       </article>
 
       <script

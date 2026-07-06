@@ -221,6 +221,8 @@ export default async function VideoPage({ params }: VideoPageProps) {
         </div>
       </article>
 
+      <AdSlot slot="1438236565" />
+
       {sisterLinks.length > 0 ? (
         <section className="sister-item-section" aria-labelledby="sister-item-title">
           <div>
@@ -253,7 +255,6 @@ export default async function VideoPage({ params }: VideoPageProps) {
         </section>
       ) : null}
 
-      <AdSlot slot="1438236565" />
       <section className="video-editorial-section" aria-labelledby="video-editorial-title">
         <div className="section-heading-row">
           <div>
