@@ -347,6 +347,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
         </a>
       </section>
 
+      <AdSlot slot="1438236565" />
       <section className="video-related-section" aria-labelledby="related-title">
         <div className="section-heading-row">
           <div>

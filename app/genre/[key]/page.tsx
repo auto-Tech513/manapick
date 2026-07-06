@@ -326,6 +326,7 @@ export default async function GenrePage({ params }: GenrePageProps) {
         </section>
       ) : null}
 
+      <AdSlot slot="1438236565" />
       <ul className="genre-hub-grid" role="list">
         {list.map((video) => {
           const freshness = videoFreshness(video);

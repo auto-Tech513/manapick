@@ -10064,6 +10064,6 @@ img {
 }
 
 /* AdSense 記事内広告枠：未充填/空は即畳んで空白の穴を作らない（UX配慮） */
-.ad-slot { overflow: hidden; border-radius: 12px; margin: 20px 0; }
+.ad-slot { display: block; overflow: hidden; border-radius: 12px; margin: 20px auto; width: min(100% - 32px, 1120px); }
 .ad-slot.is-empty { display: none !important; height: 0 !important; min-height: 0 !important; margin: 0 !important; padding: 0 !important; }
 ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; height: 0 !important; min-height: 0 !important; margin: 0 !important; }

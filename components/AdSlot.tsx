@@ -68,7 +68,7 @@ export default function AdSlot({ slot }: { slot: string }) {
       data-ad-client={CLIENT}
       data-ad-slot={slot}
       data-ad-format="auto"
-      data-full-width-responsive="true"
+      data-full-width-responsive="false"
     />
   );
 }
