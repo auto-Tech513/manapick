@@ -31,6 +31,7 @@ import {
   youtubeThumbnail
 } from "@/lib/manapick";
 import { nextWatchVideo } from "@/lib/rankings";
+import AdSlot from "@/components/AdSlot";
 
 type VideoPageProps = {
   params: Promise<{ ytid: string }>;
@@ -252,6 +253,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
         </section>
       ) : null}
 
+      <AdSlot slot="1438236565" />
       <section className="video-editorial-section" aria-labelledby="video-editorial-title">
         <div className="section-heading-row">
           <div>

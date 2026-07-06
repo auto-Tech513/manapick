@@ -18,6 +18,7 @@ import {
 } from "@/lib/manapick";
 import type { GuidePrLink } from "@/lib/pr-links";
 import { siteStats } from "@/lib/site-stats";
+import AdSlot from "@/components/AdSlot";
 
 type GuidePageProps = {
   params: Promise<{ slug: string }>;
@@ -271,6 +272,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           ))}
         </section>
 
+        <AdSlot slot="1438236565" />
         <section className="guide-section" aria-labelledby="guide-videos-title">
           <h2 id="guide-videos-title">各STEPの厳選動画</h2>
           <div className="guide-step-list">

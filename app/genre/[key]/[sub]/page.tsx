@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import GuidePrCard from "@/components/GuidePrCard";
+import AdSlot from "@/components/AdSlot";
 import prLinksData from "@/content/pr-links.json";
 import { guidePath, guides } from "@/lib/guides";
 import {
@@ -253,6 +254,7 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
             {guide ? <Link href={guidePath(guide.slug)}>{genreName}ロードマップを読む</Link> : null}
           </div>
         </section>
+        <AdSlot slot="1438236565" />
       </article>
 
       <script
