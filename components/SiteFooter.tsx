@@ -28,6 +28,7 @@ const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
       { label: "FAQ", href: "/faq/" },
       { label: "マイページ", href: "/my/" },
       { label: "採点方法", href: "/about-score/" },
+      { label: "manapi商店", href: "/shop/", description: "学習とAI作業の定番6商品" },
       { label: "生成AIロードマップ", href: "/guide/generative-ai/" },
       { label: "Pythonロードマップ", href: "/guide/python/" },
       { label: "動画編集ロードマップ", href: "/guide/video-editing/" },

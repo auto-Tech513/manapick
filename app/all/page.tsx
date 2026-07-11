@@ -27,6 +27,7 @@ const mainPages: { label: string; href: string }[] = [
   { label: "採点方法", href: "/about-score/" },
   { label: "運営者情報", href: "/operator/" },
   { label: "広告・アフィリエイトについて", href: "/affiliate/" },
+  { label: "manapi商店（学習とAI作業の定番6商品）", href: "/shop/" },
   { label: "お問い合わせ", href: "/contact/" },
   { label: "プライバシーポリシー", href: "/privacy/" },
   { label: "免責事項", href: "/disclaimer/" }
