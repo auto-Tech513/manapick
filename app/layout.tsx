@@ -102,13 +102,6 @@ export default function RootLayout({
       <head>
         {adsenseId ? <meta name="google-adsense-account" content={adsenseId} /> : null}
         <link rel="preconnect" href="https://i.ytimg.com" />
-        {adsenseId ? (
-          <script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${encodeURIComponent(adsenseId)}`}
-            crossOrigin="anonymous"
-          />
-        ) : null}
       </head>
       <body>
         <script
@@ -131,6 +124,14 @@ export default function RootLayout({
               }}
             />
           </>
+        ) : null}
+        {adsenseId ? (
+          <Script
+            id="adsense-script"
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${encodeURIComponent(adsenseId)}`}
+            strategy="afterInteractive"
+            crossOrigin="anonymous"
+          />
         ) : null}
         <PwaSetup />
         {children}
