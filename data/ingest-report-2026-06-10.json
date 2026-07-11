@@ -1,199 +1,16 @@
 {
-  "input": "data/drafts-aigap2.json",
+  "input": "data/drafts-gapauto.json",
   "output": "content/videos.json",
   "minScore": null,
-  "currentBefore": 669,
+  "currentBefore": 692,
   "additions": [
     {
       "genre": "ai",
-      "sub": "Google Veo",
-      "ytid": "LHikWuwD-t8",
+      "sub": "Figma(Figma AI)",
+      "ytid": "akd5pyd4TnU",
       "level": "初級",
-      "minutes": 30,
-      "channel": "動画編集の中の人",
-      "score": 32,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 4,
-          "note": "タイトル上は実務・手順に結びつきやすい"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 5,
-          "note": "公開から約1年半以内で鮮度が高い"
-        },
-        {
-          "axis": "分かりやすさ",
-          "score": 5,
-          "note": "初心者向けの説明が期待できる"
-        },
-        {
-          "axis": "体系性",
-          "score": 5,
-          "note": "体系的に学べる可能性が高い"
-        },
-        {
-          "axis": "信頼性",
-          "score": 3,
-          "note": "一定の視聴実績がある"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 5,
-          "note": "社会人が見切りやすい長さ"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "【2026年最新版】Google映像制作AI「Flow」の最新活用法15選を初心者にもわかりやすく完全解説【NanoBananaPro×Veo3.1】",
-      "url": "https://www.youtube.com/watch?v=LHikWuwD-t8",
-      "tags": [
-        "Google Veo",
-        "Google",
-        "Veo",
-        "使い方"
-      ],
-      "review": [
-        "Google Veoを学ぶ理由が見えやすく、仕事で使うAI活用の最初の型として使いやすい。",
-        "基礎を短時間で見渡し、手を動かす前の準備に向いている。",
-        "仕事の合間にも見切りやすい標準的な長さとして、次の学習テーマへ自然につなげやすい。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 75188,
-      "publishedAt": "2026-01-31T09:00:00Z"
-    },
-    {
-      "genre": "ai",
-      "sub": "VOICEVOX",
-      "ytid": "jPWmr58ltWI",
-      "level": "初級",
-      "minutes": 18,
-      "channel": "ゆうぷろ / YuuPro",
-      "score": 31,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 5,
-          "note": "タイトル上は実務・手順に結びつきやすい"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 3,
-          "note": "基礎内容なら利用可能だが要確認"
-        },
-        {
-          "axis": "分かりやすさ",
-          "score": 4,
-          "note": "初心者向けの説明が期待できる"
-        },
-        {
-          "axis": "体系性",
-          "score": 5,
-          "note": "体系的に学べる可能性が高い"
-        },
-        {
-          "axis": "信頼性",
-          "score": 4,
-          "note": "視聴実績があり候補として有望"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 5,
-          "note": "社会人が見切りやすい長さ"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "【2023年最新版】無料音声合成ソフト「VOICEVOX」を完全解説【基礎知識～使い方】",
-      "url": "https://www.youtube.com/watch?v=jPWmr58ltWI",
-      "tags": [
-        "VOICEVOX",
-        "使い方"
-      ],
-      "review": [
-        "VOICEVOXの要点を整理し、次に試すことを決めやすい。",
-        "初学者がつまずきやすい前提を整えながら見進めやすい。",
-        "仕事の合間にも見切りやすい標準的な長さのため、目的を決めて見ると吸収しやすい。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 261407,
-      "publishedAt": "2023-03-03T10:00:24Z"
-    },
-    {
-      "genre": "english",
-      "sub": "「ハングル」能力検定",
-      "ytid": "RAKEGBKP7KA",
-      "level": "初級",
-      "minutes": 10,
-      "channel": "ソア / seoa",
-      "score": 31,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 5,
-          "note": "タイトル上は実務・手順に結びつきやすい"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 4,
-          "note": "近年の内容として扱いやすい"
-        },
-        {
-          "axis": "分かりやすさ",
-          "score": 3,
-          "note": "説明の分かりやすさは要確認"
-        },
-        {
-          "axis": "体系性",
-          "score": 5,
-          "note": "体系的に学べる可能性が高い"
-        },
-        {
-          "axis": "信頼性",
-          "score": 4,
-          "note": "視聴実績があり候補として有望"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 5,
-          "note": "社会人が見切りやすい長さ"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "[韓国語勉強]在韓日本人が教える完全独学で韓国語をマスターした勉強法大公開❕ 효율적인 한국어 공부법 알려드립니다!",
-      "url": "https://www.youtube.com/watch?v=RAKEGBKP7KA",
-      "tags": [
-        "「ハングル」能力検定",
-        "勉強法",
-        "独学"
-      ],
-      "review": [
-        "「ハングル」能力検定の要点を整理し、次に試すことを決めやすい。",
-        "基礎を短時間で見渡し、手を動かす前の準備に向いている。",
-        "短時間で要点を拾いやすい軽めの入口なので、ロードマップ上の前後の動画とも組み合わせやすい。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 244879,
-      "publishedAt": "2024-04-11T10:00:18Z"
-    },
-    {
-      "genre": "ai",
-      "sub": "Stable Diffusion",
-      "ytid": "He5ofY2JNvE",
-      "level": "初級",
-      "minutes": 82,
-      "channel": "とうや【AIイラストLab.】",
+      "minutes": 65,
+      "channel": "BONO-カイクン",
       "score": 31,
       "axisScores": [
         {
@@ -232,36 +49,36 @@
           "note": "公式YouTubeリンク/埋め込み前提で扱う"
         }
       ],
-      "title": "【総集編】これ1本でStable Diffusionがわかる！ PCの選び方～インストール～拡張機能の使い方まで初心向けに2023年を総まとめして徹底解説",
-      "url": "https://www.youtube.com/watch?v=He5ofY2JNvE",
+      "title": "【2025最新】初心者向け! Figmaの基本とAIなど便利な使い方を完全解説 / UIデザイン・Webデザインに最適なデザインツール",
+      "url": "https://www.youtube.com/watch?v=akd5pyd4TnU",
       "tags": [
-        "Stable Diffusion",
-        "Stable",
-        "Diffusion",
+        "Figma(Figma AI)",
+        "Figma(Figma",
+        "AI)",
         "使い方"
       ],
       "review": [
-        "Stable Diffusionを学ぶ理由が見えやすく、仕事で使うAI活用の最初の型として使いやすい。",
-        "初学者がつまずきやすい前提を整えながら見進めやすい。",
+        "Figma(Figma AI)を仕事や実践に結びつける観点をつかみやすい。",
+        "基礎を短時間で見渡し、手を動かす前の準備に向いている。",
         "腰を据えて流れを追える体系的な構成なので、ロードマップ上の前後の動画とも組み合わせやすい。"
       ],
       "scoreStatus": "provisional",
-      "viewCount": 117908,
-      "publishedAt": "2023-12-29T06:07:18Z"
+      "viewCount": 59429,
+      "publishedAt": "2024-11-22T08:38:00Z"
     },
     {
       "genre": "ai",
-      "sub": "OpenAI Codex",
-      "ytid": "ESGl8Juwytc",
+      "sub": "Runway",
+      "ytid": "1q0LOyUHwYA",
       "level": "初級",
-      "minutes": 82,
-      "channel": "KEITO【AI&WEB ch】",
-      "score": 31,
+      "minutes": 40,
+      "channel": "AI たろう",
+      "score": 30,
       "axisScores": [
         {
           "axis": "実用性",
-          "score": 5,
-          "note": "タイトル上は実務・手順に結びつきやすい"
+          "score": 3,
+          "note": "実用性は視聴確認が必要"
         },
         {
           "axis": "正確性・鮮度",
@@ -276,128 +93,6 @@
         {
           "axis": "体系性",
           "score": 5,
-          "note": "体系的に学べる可能性が高い"
-        },
-        {
-          "axis": "信頼性",
-          "score": 2,
-          "note": "最低限の視聴実績。内容確認が必要"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 4,
-          "note": "やや長いが体系学習に向く"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "OpenAI「Codex」完全ガイド【この動画1本ですべて理解できる】スキル作成・便利機能・AI自動化などの使い方を解説【初心者OK】",
-      "url": "https://www.youtube.com/watch?v=ESGl8Juwytc",
-      "tags": [
-        "OpenAI Codex",
-        "OpenAI",
-        "Codex",
-        "使い方"
-      ],
-      "review": [
-        "OpenAI Codexを学ぶ理由が見えやすく、仕事で使うAI活用の最初の型として使いやすい。",
-        "基礎を短時間で見渡し、手を動かす前の準備に向いている。",
-        "腰を据えて流れを追える体系的な構成で、忙しい日でも学習のリズムを戻しやすい。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 39135,
-      "publishedAt": "2026-05-31T10:30:38Z"
-    },
-    {
-      "genre": "ai",
-      "sub": "Vrew",
-      "ytid": "8RJhUyKWP-A",
-      "level": "初級",
-      "minutes": 59,
-      "channel": "Youtubeショート収益化チャンネルおさむ",
-      "score": 31,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 5,
-          "note": "タイトル上は実務・手順に結びつきやすい"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 5,
-          "note": "公開から約1年半以内で鮮度が高い"
-        },
-        {
-          "axis": "分かりやすさ",
-          "score": 5,
-          "note": "初心者向けの説明が期待できる"
-        },
-        {
-          "axis": "体系性",
-          "score": 5,
-          "note": "体系的に学べる可能性が高い"
-        },
-        {
-          "axis": "信頼性",
-          "score": 2,
-          "note": "最低限の視聴実績。内容確認が必要"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 4,
-          "note": "やや長いが体系学習に向く"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "【無料で商用利用可】動画編集ソフトVREWの使い方を初心者向けに完全解説",
-      "url": "https://www.youtube.com/watch?v=8RJhUyKWP-A",
-      "tags": [
-        "Vrew",
-        "使い方"
-      ],
-      "review": [
-        "Vrewの最初の迷いを減らし、学ぶ順番を作りやすい一本。",
-        "最初に全体像をつかみ、次に試すことを決めやすい構成。",
-        "腰を据えて流れを追える体系的な構成で、忙しい日でも学習のリズムを戻しやすい。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 38374,
-      "publishedAt": "2025-06-30T12:00:17Z"
-    },
-    {
-      "genre": "ai",
-      "sub": "Notion AI",
-      "ytid": "mIUDzP0h-jg",
-      "level": "初級",
-      "minutes": 14,
-      "channel": "円谷 | Notion公式アンバサダー",
-      "score": 31,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 5,
-          "note": "タイトル上は実務・手順に結びつきやすい"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 5,
-          "note": "公開から約1年半以内で鮮度が高い"
-        },
-        {
-          "axis": "分かりやすさ",
-          "score": 5,
-          "note": "初心者向けの説明が期待できる"
-        },
-        {
-          "axis": "体系性",
-          "score": 4,
           "note": "体系的に学べる可能性が高い"
         },
         {
@@ -416,31 +111,396 @@
           "note": "公式YouTubeリンク/埋め込み前提で扱う"
         }
       ],
-      "title": "【2026年最新】Notion AI初心者向け解説｜料金、基礎的な使い方、AIエージェントについて解説",
-      "url": "https://www.youtube.com/watch?v=mIUDzP0h-jg",
+      "title": "【2025年版】初心者向けRunway完全ガイド｜イラスト生成・動画生成・うまく作るコツまで！",
+      "url": "https://www.youtube.com/watch?v=1q0LOyUHwYA",
       "tags": [
-        "Notion AI",
-        "Notion",
+        "Runway",
+        "使い方"
+      ],
+      "review": [
+        "Runwayの要点を整理し、次に試すことを決めやすい。",
+        "最初に全体像をつかみ、次に試すことを決めやすい構成。",
+        "仕事の合間にも見切りやすい標準的な長さで、忙しい日でも学習のリズムを戻しやすい。"
+      ],
+      "scoreStatus": "provisional",
+      "viewCount": 38837,
+      "publishedAt": "2025-05-21T09:42:54Z"
+    },
+    {
+      "genre": "ai",
+      "sub": "Cline",
+      "ytid": "AywVuYjkz6Q",
+      "level": "初級",
+      "minutes": 23,
+      "channel": "IT屋のたなべ",
+      "score": 30,
+      "axisScores": [
+        {
+          "axis": "実用性",
+          "score": 5,
+          "note": "タイトル上は実務・手順に結びつきやすい"
+        },
+        {
+          "axis": "正確性・鮮度",
+          "score": 5,
+          "note": "公開から約1年半以内で鮮度が高い"
+        },
+        {
+          "axis": "分かりやすさ",
+          "score": 5,
+          "note": "初心者向けの説明が期待できる"
+        },
+        {
+          "axis": "体系性",
+          "score": 4,
+          "note": "体系的に学べる可能性が高い"
+        },
+        {
+          "axis": "信頼性",
+          "score": 1,
+          "note": "視聴実績が少なく慎重に確認"
+        },
+        {
+          "axis": "視聴体験",
+          "score": 5,
+          "note": "社会人が見切りやすい長さ"
+        },
+        {
+          "axis": "規約・権利",
+          "score": 5,
+          "note": "公式YouTubeリンク/埋め込み前提で扱う"
+        }
+      ],
+      "title": "初心者向けClineの使い方と無料で使う方法を解説！VSCode拡張で生成AIコーディング入門",
+      "url": "https://www.youtube.com/watch?v=AywVuYjkz6Q",
+      "tags": [
+        "Cline",
+        "使い方"
+      ],
+      "review": [
+        "Clineを仕事や実践に結びつける観点をつかみやすい。",
+        "最初に全体像をつかみ、次に試すことを決めやすい構成。",
+        "仕事の合間にも見切りやすい標準的な長さなので、ロードマップ上の前後の動画とも組み合わせやすい。"
+      ],
+      "scoreStatus": "provisional",
+      "viewCount": 9316,
+      "publishedAt": "2025-03-08T09:00:13Z"
+    },
+    {
+      "genre": "ai",
+      "sub": "OpenClaw",
+      "ytid": "1_gmmFLP-w4",
+      "level": "初級",
+      "minutes": 15,
+      "channel": "安野貴博の自由研究",
+      "score": 29,
+      "axisScores": [
+        {
+          "axis": "実用性",
+          "score": 4,
+          "note": "タイトル上は実務・手順に結びつきやすい"
+        },
+        {
+          "axis": "正確性・鮮度",
+          "score": 5,
+          "note": "公開から約1年半以内で鮮度が高い"
+        },
+        {
+          "axis": "分かりやすさ",
+          "score": 4,
+          "note": "初心者向けの説明が期待できる"
+        },
+        {
+          "axis": "体系性",
+          "score": 3,
+          "note": "単発Tipsの可能性があり要確認"
+        },
+        {
+          "axis": "信頼性",
+          "score": 3,
+          "note": "一定の視聴実績がある"
+        },
+        {
+          "axis": "視聴体験",
+          "score": 5,
+          "note": "社会人が見切りやすい長さ"
+        },
+        {
+          "axis": "規約・権利",
+          "score": 5,
+          "note": "公式YouTubeリンク/埋め込み前提で扱う"
+        }
+      ],
+      "title": "【ゆる解説】話題のAIエージェント「OpenClaw」とは？／AIが自律的に行動／開発者がOpenAIに参加／情報流出の危険性も",
+      "url": "https://www.youtube.com/watch?v=1_gmmFLP-w4",
+      "tags": [
+        "OpenClaw",
+        "使い方"
+      ],
+      "review": [
+        "OpenClawの要点を整理し、次に試すことを決めやすい。",
+        "初学者がつまずきやすい前提を整えながら見進めやすい。",
+        "短時間で要点を拾いやすい軽めの入口として、次の学習テーマへ自然につなげやすい。"
+      ],
+      "scoreStatus": "provisional",
+      "viewCount": 170155,
+      "publishedAt": "2026-03-13T11:00:07Z"
+    },
+    {
+      "genre": "ai",
+      "sub": "Hailuo AI",
+      "ytid": "F2gAu3LUdZs",
+      "level": "初級",
+      "minutes": 13,
+      "channel": "AI FREAK - 最新のAIツールをご紹介",
+      "score": 29,
+      "axisScores": [
+        {
+          "axis": "実用性",
+          "score": 5,
+          "note": "タイトル上は実務・手順に結びつきやすい"
+        },
+        {
+          "axis": "正確性・鮮度",
+          "score": 5,
+          "note": "公開から約1年半以内で鮮度が高い"
+        },
+        {
+          "axis": "分かりやすさ",
+          "score": 4,
+          "note": "初心者向けの説明が期待できる"
+        },
+        {
+          "axis": "体系性",
+          "score": 3,
+          "note": "単発Tipsの可能性があり要確認"
+        },
+        {
+          "axis": "信頼性",
+          "score": 2,
+          "note": "最低限の視聴実績。内容確認が必要"
+        },
+        {
+          "axis": "視聴体験",
+          "score": 5,
+          "note": "社会人が見切りやすい長さ"
+        },
+        {
+          "axis": "規約・権利",
+          "score": 5,
+          "note": "公式YouTubeリンク/埋め込み前提で扱う"
+        }
+      ],
+      "title": "【AIアニメ動画の作り方】を徹底解説。話題の『Hailuo』の使い方や、他AIツールとの比較など。",
+      "url": "https://www.youtube.com/watch?v=F2gAu3LUdZs",
+      "tags": [
+        "Hailuo AI",
+        "Hailuo",
         "AI",
         "使い方"
       ],
       "review": [
-        "Notion AIの要点を整理し、次に試すことを決めやすい。",
-        "入口で迷いやすいポイントをほどき、学習の順番を作りやすい。",
-        "短時間で要点を拾いやすい軽めの入口で、忙しい日でも学習のリズムを戻しやすい。"
+        "Hailuo AIの要点を整理し、次に試すことを決めやすい。",
+        "最初に全体像をつかみ、次に試すことを決めやすい構成。",
+        "短時間で要点を拾いやすい軽めの入口のため、目的を決めて見ると吸収しやすい。"
       ],
       "scoreStatus": "provisional",
-      "viewCount": 22007,
-      "publishedAt": "2026-01-30T00:06:48Z"
+      "viewCount": 33549,
+      "publishedAt": "2025-08-21T07:59:49Z"
     },
     {
       "genre": "ai",
-      "sub": "Gamma",
-      "ytid": "DFxievESxPc",
+      "sub": "Google AI Mode",
+      "ytid": "xX6iEgeUie8",
       "level": "初級",
-      "minutes": 40,
+      "minutes": 8,
+      "channel": "ウェブマニア",
+      "score": 29,
+      "axisScores": [
+        {
+          "axis": "実用性",
+          "score": 5,
+          "note": "タイトル上は実務・手順に結びつきやすい"
+        },
+        {
+          "axis": "正確性・鮮度",
+          "score": 5,
+          "note": "公開から約1年半以内で鮮度が高い"
+        },
+        {
+          "axis": "分かりやすさ",
+          "score": 4,
+          "note": "初心者向けの説明が期待できる"
+        },
+        {
+          "axis": "体系性",
+          "score": 3,
+          "note": "単発Tipsの可能性があり要確認"
+        },
+        {
+          "axis": "信頼性",
+          "score": 2,
+          "note": "最低限の視聴実績。内容確認が必要"
+        },
+        {
+          "axis": "視聴体験",
+          "score": 5,
+          "note": "社会人が見切りやすい長さ"
+        },
+        {
+          "axis": "規約・権利",
+          "score": 5,
+          "note": "公式YouTubeリンク/埋め込み前提で扱う"
+        }
+      ],
+      "title": "【超便利】GoogleのAIモードがついに日本上陸！Chat GPTやPerplexityなど他AIと比較してどう？使い方・機能・性能など徹底解説します",
+      "url": "https://www.youtube.com/watch?v=xX6iEgeUie8",
+      "tags": [
+        "Google AI Mode",
+        "Google",
+        "AI",
+        "Mode",
+        "使い方"
+      ],
+      "review": [
+        "Google AI Modeの最初の迷いを減らし、学ぶ順番を作りやすい一本。",
+        "基礎を短時間で見渡し、手を動かす前の準備に向いている。",
+        "短時間で要点を拾いやすい軽めの入口で、忙しい日でも学習のリズムを戻しやすい。"
+      ],
+      "scoreStatus": "provisional",
+      "viewCount": 21437,
+      "publishedAt": "2025-09-21T10:00:06Z"
+    },
+    {
+      "genre": "ai",
+      "sub": "PixVerse",
+      "ytid": "Po8fdb8Z5xI",
+      "level": "初級",
+      "minutes": 15,
+      "channel": "AI大学【AI&ChatGPT最新情報】",
+      "score": 29,
+      "axisScores": [
+        {
+          "axis": "実用性",
+          "score": 5,
+          "note": "タイトル上は実務・手順に結びつきやすい"
+        },
+        {
+          "axis": "正確性・鮮度",
+          "score": 5,
+          "note": "公開から約1年半以内で鮮度が高い"
+        },
+        {
+          "axis": "分かりやすさ",
+          "score": 4,
+          "note": "初心者向けの説明が期待できる"
+        },
+        {
+          "axis": "体系性",
+          "score": 3,
+          "note": "単発Tipsの可能性があり要確認"
+        },
+        {
+          "axis": "信頼性",
+          "score": 2,
+          "note": "最低限の視聴実績。内容確認が必要"
+        },
+        {
+          "axis": "視聴体験",
+          "score": 5,
+          "note": "社会人が見切りやすい長さ"
+        },
+        {
+          "axis": "規約・権利",
+          "score": 5,
+          "note": "公式YouTubeリンク/埋め込み前提で扱う"
+        }
+      ],
+      "title": "無料でも使える多機能・高品質動画生成AIツール「PixVerse(V4)」の概要と使い方を徹底解説！",
+      "url": "https://www.youtube.com/watch?v=Po8fdb8Z5xI",
+      "tags": [
+        "PixVerse",
+        "使い方"
+      ],
+      "review": [
+        "PixVerseを仕事や実践に結びつける観点をつかみやすい。",
+        "初学者がつまずきやすい前提を整えながら見進めやすい。",
+        "短時間で要点を拾いやすい軽めの入口として、次の学習テーマへ自然につなげやすい。"
+      ],
+      "scoreStatus": "provisional",
+      "viewCount": 16885,
+      "publishedAt": "2025-03-07T09:06:49Z"
+    },
+    {
+      "genre": "ai",
+      "sub": "Kling AI",
+      "ytid": "SFLLwpTxD_Q",
+      "level": "初級",
+      "minutes": 16,
+      "channel": "ハム先生のAI教室【AI動画の実務活用】",
+      "score": 29,
+      "axisScores": [
+        {
+          "axis": "実用性",
+          "score": 5,
+          "note": "タイトル上は実務・手順に結びつきやすい"
+        },
+        {
+          "axis": "正確性・鮮度",
+          "score": 5,
+          "note": "公開から約1年半以内で鮮度が高い"
+        },
+        {
+          "axis": "分かりやすさ",
+          "score": 4,
+          "note": "初心者向けの説明が期待できる"
+        },
+        {
+          "axis": "体系性",
+          "score": 3,
+          "note": "単発Tipsの可能性があり要確認"
+        },
+        {
+          "axis": "信頼性",
+          "score": 2,
+          "note": "最低限の視聴実績。内容確認が必要"
+        },
+        {
+          "axis": "視聴体験",
+          "score": 5,
+          "note": "社会人が見切りやすい長さ"
+        },
+        {
+          "axis": "規約・権利",
+          "score": 5,
+          "note": "公式YouTubeリンク/埋め込み前提で扱う"
+        }
+      ],
+      "title": "【過去一の衝撃】KlingAI3.0が動画制作の常識を破壊しました。使い方と新機能10選を徹底解説します。（動画3.0/Omni3.0/画像3.0）",
+      "url": "https://www.youtube.com/watch?v=SFLLwpTxD_Q",
+      "tags": [
+        "Kling AI",
+        "Kling",
+        "AI",
+        "使い方"
+      ],
+      "review": [
+        "Kling AIの要点を整理し、次に試すことを決めやすい。",
+        "入口で迷いやすいポイントをほどき、学習の順番を作りやすい。",
+        "仕事の合間にも見切りやすい標準的な長さのため、目的を決めて見ると吸収しやすい。"
+      ],
+      "scoreStatus": "provisional",
+      "viewCount": 14783,
+      "publishedAt": "2026-02-09T10:15:04Z"
+    },
+    {
+      "genre": "ai",
+      "sub": "HeyGen",
+      "ytid": "_PmudWdVqKQ",
+      "level": "初級",
+      "minutes": 61,
       "channel": "岡本宗一郎 Soichiro Okamoto",
-      "score": 31,
+      "score": 29,
       "axisScores": [
         {
           "axis": "実用性",
@@ -464,128 +524,8 @@
         },
         {
           "axis": "信頼性",
-          "score": 2,
-          "note": "最低限の視聴実績。内容確認が必要"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 5,
-          "note": "社会人が見切りやすい長さ"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "【Gamma使い方完全解説】[初心者向け]プレゼン資料をAI生成できるGammaの特徴を解説 #Gamma #資料生成AI",
-      "url": "https://www.youtube.com/watch?v=DFxievESxPc",
-      "tags": [
-        "Gamma",
-        "使い方"
-      ],
-      "review": [
-        "Gammaを学ぶ理由が見えやすく、仕事で使うAI活用の最初の型として使いやすい。",
-        "基礎を短時間で見渡し、手を動かす前の準備に向いている。",
-        "仕事の合間にも見切りやすい標準的な長さのため、目的を決めて見ると吸収しやすい。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 11393,
-      "publishedAt": "2023-11-08T14:56:04Z"
-    },
-    {
-      "genre": "ai",
-      "sub": "DeepSeek",
-      "ytid": "snn2JbAgVc4",
-      "level": "初級",
-      "minutes": 22,
-      "channel": "PIVOT 公式チャンネル",
-      "score": 30,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 4,
-          "note": "タイトル上は実務・手順に結びつきやすい"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 5,
-          "note": "公開から約1年半以内で鮮度が高い"
-        },
-        {
-          "axis": "分かりやすさ",
-          "score": 4,
-          "note": "初心者向けの説明が期待できる"
-        },
-        {
-          "axis": "体系性",
-          "score": 3,
-          "note": "単発Tipsの可能性があり要確認"
-        },
-        {
-          "axis": "信頼性",
-          "score": 4,
-          "note": "視聴実績があり候補として有望"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 5,
-          "note": "社会人が見切りやすい長さ"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "【DeepSeek速報解説】40歳の超新星／超低コストで開発できた３つの工夫／OpenAIとGoogleの脅威ではない／NVIDIAのピンチか？／オープンソースで公開した狙い／米中対立への影響",
-      "url": "https://www.youtube.com/watch?v=snn2JbAgVc4",
-      "tags": [
-        "DeepSeek",
-        "使い方"
-      ],
-      "review": [
-        "DeepSeekの最初の迷いを減らし、学ぶ順番を作りやすい一本。",
-        "基礎を短時間で見渡し、手を動かす前の準備に向いている。",
-        "仕事の合間にも見切りやすい標準的な長さのため、目的を決めて見ると吸収しやすい。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 328019,
-      "publishedAt": "2025-01-29T03:00:56Z"
-    },
-    {
-      "genre": "shikaku",
-      "sub": "国家公務員採用一般職試験",
-      "ytid": "ii8EdGjKIl8",
-      "level": "初級",
-      "minutes": 61,
-      "channel": "公務員試験【上位1%合格者】の戦略-ライジン",
-      "score": 30,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 5,
-          "note": "タイトル上は実務・手順に結びつきやすい"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 5,
-          "note": "公開から約1年半以内で鮮度が高い"
-        },
-        {
-          "axis": "分かりやすさ",
-          "score": 4,
-          "note": "初心者向けの説明が期待できる"
-        },
-        {
-          "axis": "体系性",
-          "score": 5,
-          "note": "体系的に学べる可能性が高い"
-        },
-        {
-          "axis": "信頼性",
-          "score": 2,
-          "note": "最低限の視聴実績。内容確認が必要"
+          "score": 1,
+          "note": "視聴実績が少なく慎重に確認"
         },
         {
           "axis": "視聴体験",
@@ -598,269 +538,28 @@
           "note": "公式YouTubeリンク/埋め込み前提で扱う"
         }
       ],
-      "title": "【完全版】教養試験の勉強法・参考書を徹底解説【公務員試験】数的処理・文章理解・社会科学・時事・人文科学・自然科学",
-      "url": "https://www.youtube.com/watch?v=ii8EdGjKIl8",
+      "title": "【最新版 HeyGen使い方完全解説】[初心者向け]アバターAI動画作成・編集、プロンプトから動画生成ができる「HeyGen」 #heygen #動画生成AI #AIアバター",
+      "url": "https://www.youtube.com/watch?v=_PmudWdVqKQ",
       "tags": [
-        "国家公務員採用一般職試験",
-        "勉強法",
-        "独学"
-      ],
-      "review": [
-        "国家公務員採用一般職試験の要点を整理し、次に試すことを決めやすい。",
-        "基礎を短時間で見渡し、手を動かす前の準備に向いている。",
-        "腰を据えて流れを追える体系的な構成なので、ロードマップ上の前後の動画とも組み合わせやすい。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 26931,
-      "publishedAt": "2025-08-09T10:01:17Z"
-    },
-    {
-      "genre": "ai",
-      "sub": "Bolt.new",
-      "ytid": "FwDnhTSNuQA",
-      "level": "中級",
-      "minutes": 59,
-      "channel": "プログラミングチュートリアル",
-      "score": 30,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 4,
-          "note": "タイトル上は実務・手順に結びつきやすい"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 5,
-          "note": "公開から約1年半以内で鮮度が高い"
-        },
-        {
-          "axis": "分かりやすさ",
-          "score": 5,
-          "note": "初心者向けの説明が期待できる"
-        },
-        {
-          "axis": "体系性",
-          "score": 5,
-          "note": "体系的に学べる可能性が高い"
-        },
-        {
-          "axis": "信頼性",
-          "score": 2,
-          "note": "最低限の視聴実績。内容確認が必要"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 4,
-          "note": "やや長いが体系学習に向く"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "【完全版】初心者OK！Bolt.newで1からフルスタックWebアプリケーション開発するためのBolt.new完全ガイド入門",
-      "url": "https://www.youtube.com/watch?v=FwDnhTSNuQA",
-      "tags": [
-        "Bolt.new",
+        "HeyGen",
         "使い方"
       ],
       "review": [
-        "Bolt.newを仕事や実践に結びつける観点をつかみやすい。",
-        "断片的な理解を整理し、次の演習へ移りやすくしてくれる。",
+        "HeyGenを学ぶ理由が見えやすく、仕事で使うAI活用の最初の型として使いやすい。",
+        "初学者がつまずきやすい前提を整えながら見進めやすい。",
         "腰を据えて流れを追える体系的な構成のため、目的を決めて見ると吸収しやすい。"
       ],
       "scoreStatus": "provisional",
-      "viewCount": 25624,
-      "publishedAt": "2025-05-03T11:00:34Z"
+      "viewCount": 8843,
+      "publishedAt": "2024-08-25T09:21:58Z"
     },
     {
       "genre": "ai",
-      "sub": "Notta",
-      "ytid": "Q8KF_UtYap8",
+      "sub": "Replit Agent",
+      "ytid": "AZkVzqPPFaE",
       "level": "初級",
-      "minutes": 15,
-      "channel": "池田真子 / 整理収納アドバイザーの暮らし",
-      "score": 30,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 5,
-          "note": "タイトル上は実務・手順に結びつきやすい"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 5,
-          "note": "公開から約1年半以内で鮮度が高い"
-        },
-        {
-          "axis": "分かりやすさ",
-          "score": 5,
-          "note": "初心者向けの説明が期待できる"
-        },
-        {
-          "axis": "体系性",
-          "score": 3,
-          "note": "単発Tipsの可能性があり要確認"
-        },
-        {
-          "axis": "信頼性",
-          "score": 2,
-          "note": "最低限の視聴実績。内容確認が必要"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 5,
-          "note": "社会人が見切りやすい長さ"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "【時短術】効率爆上がり！会話の記録&文字起こしはAIで簡単！初心者も使えるNotta Memoの使い方🔰AI ボイスレコーダー",
-      "url": "https://www.youtube.com/watch?v=Q8KF_UtYap8",
-      "tags": [
-        "Notta",
-        "使い方"
-      ],
-      "review": [
-        "Nottaを学ぶ理由が見えやすく、仕事で使うAI活用の最初の型として使いやすい。",
-        "初学者がつまずきやすい前提を整えながら見進めやすい。",
-        "短時間で要点を拾いやすい軽めの入口として、次の学習テーマへ自然につなげやすい。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 21527,
-      "publishedAt": "2025-07-08T11:07:00Z"
-    },
-    {
-      "genre": "ai",
-      "sub": "Grok",
-      "ytid": "5yU8KEoowBU",
-      "level": "初級",
-      "minutes": 14,
-      "channel": "[動画生成AI]  始め方_How To チャンネル ",
-      "score": 30,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 4,
-          "note": "タイトル上は実務・手順に結びつきやすい"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 5,
-          "note": "公開から約1年半以内で鮮度が高い"
-        },
-        {
-          "axis": "分かりやすさ",
-          "score": 4,
-          "note": "初心者向けの説明が期待できる"
-        },
-        {
-          "axis": "体系性",
-          "score": 5,
-          "note": "体系的に学べる可能性が高い"
-        },
-        {
-          "axis": "信頼性",
-          "score": 2,
-          "note": "最低限の視聴実績。内容確認が必要"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 5,
-          "note": "社会人が見切りやすい長さ"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "【完全無料】イーロン・マスクのAI「Grok」を徹底解説！Web版とアプリ版の違いも紹介",
-      "url": "https://www.youtube.com/watch?v=5yU8KEoowBU",
-      "tags": [
-        "Grok",
-        "使い方"
-      ],
-      "review": [
-        "Grokの要点を整理し、次に試すことを決めやすい。",
-        "入口で迷いやすいポイントをほどき、学習の順番を作りやすい。",
-        "短時間で要点を拾いやすい軽めの入口で、忙しい日でも学習のリズムを戻しやすい。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 17984,
-      "publishedAt": "2025-08-23T08:00:05Z"
-    },
-    {
-      "genre": "ai",
-      "sub": "Gemma",
-      "ytid": "Ll43s_xTJH8",
-      "level": "初級",
-      "minutes": 9,
-      "channel": "AI大学【AI&ChatGPT最新情報】",
-      "score": 30,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 4,
-          "note": "タイトル上は実務・手順に結びつきやすい"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 5,
-          "note": "公開から約1年半以内で鮮度が高い"
-        },
-        {
-          "axis": "分かりやすさ",
-          "score": 4,
-          "note": "初心者向けの説明が期待できる"
-        },
-        {
-          "axis": "体系性",
-          "score": 5,
-          "note": "体系的に学べる可能性が高い"
-        },
-        {
-          "axis": "信頼性",
-          "score": 2,
-          "note": "最低限の視聴実績。内容確認が必要"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 5,
-          "note": "社会人が見切りやすい長さ"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "【Gemma 4完全ガイド】スマホ・パソコンにワンクリックで導入して無料で使える！ Googleの超高性能なオープンAIモデルを徹底解説！",
-      "url": "https://www.youtube.com/watch?v=Ll43s_xTJH8",
-      "tags": [
-        "Gemma",
-        "使い方"
-      ],
-      "review": [
-        "Gemmaを仕事や実践に結びつける観点をつかみやすい。",
-        "最初に全体像をつかみ、次に試すことを決めやすい構成。",
-        "短時間で要点を拾いやすい軽めの入口として、次の学習テーマへ自然につなげやすい。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 16639,
-      "publishedAt": "2026-04-04T09:06:59Z"
-    },
-    {
-      "genre": "ai",
-      "sub": "Adobe Firefly",
-      "ytid": "XCsQNvri5tU",
-      "level": "初級",
-      "minutes": 66,
-      "channel": "KEITO【AI&WEB ch】",
+      "minutes": 31,
+      "channel": "かいちのAI大学 / Saix(サイクス)",
       "score": 29,
       "axisScores": [
         {
@@ -875,436 +574,8 @@
         },
         {
           "axis": "分かりやすさ",
-          "score": 4,
-          "note": "初心者向けの説明が期待できる"
-        },
-        {
-          "axis": "体系性",
-          "score": 5,
-          "note": "体系的に学べる可能性が高い"
-        },
-        {
-          "axis": "信頼性",
-          "score": 3,
-          "note": "一定の視聴実績がある"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 4,
-          "note": "やや長いが体系学習に向く"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "【完全解説】Adobe Fireflyが超有能！安全性No.1画像生成AI【この動画1本で全て理解】",
-      "url": "https://www.youtube.com/watch?v=XCsQNvri5tU",
-      "tags": [
-        "Adobe Firefly",
-        "Adobe",
-        "Firefly",
-        "使い方"
-      ],
-      "review": [
-        "Adobe Fireflyを学ぶ理由が見えやすく、仕事で使うAI活用の最初の型として使いやすい。",
-        "初学者がつまずきやすい前提を整えながら見進めやすい。",
-        "腰を据えて流れを追える体系的な構成として、次の学習テーマへ自然につなげやすい。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 60954,
-      "publishedAt": "2024-05-06T11:00:24Z"
-    },
-    {
-      "genre": "prog",
-      "sub": "AWS認定 ソリューションアーキテクト",
-      "ytid": "bRIIf5EcDkY",
-      "level": "初級",
-      "minutes": 13,
-      "channel": "くろかわこうへい【渋谷で働いてたクラウドエンジニアTV】",
-      "score": 29,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 5,
-          "note": "タイトル上は実務・手順に結びつきやすい"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 4,
-          "note": "近年の内容として扱いやすい"
-        },
-        {
-          "axis": "分かりやすさ",
-          "score": 3,
-          "note": "説明の分かりやすさは要確認"
-        },
-        {
-          "axis": "体系性",
-          "score": 5,
-          "note": "体系的に学べる可能性が高い"
-        },
-        {
-          "axis": "信頼性",
-          "score": 2,
-          "note": "最低限の視聴実績。内容確認が必要"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 5,
-          "note": "社会人が見切りやすい長さ"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "AWSはこの順番で学びなさい！最新版の学習ロードマップを作りました！",
-      "url": "https://www.youtube.com/watch?v=bRIIf5EcDkY",
-      "tags": [
-        "AWS認定 ソリューションアーキテクト",
-        "AWS認定",
-        "ソリューションアーキテクト",
-        "勉強法",
-        "独学"
-      ],
-      "review": [
-        "AWS認定 ソリューションアーキテクトの要点を整理し、次に試すことを決めやすい。",
-        "初学者がつまずきやすい前提を整えながら見進めやすい。",
-        "短時間で要点を拾いやすい軽めの入口なので、ロードマップ上の前後の動画とも組み合わせやすい。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 36562,
-      "publishedAt": "2024-12-08T07:58:25Z"
-    },
-    {
-      "genre": "ai",
-      "sub": "Manus",
-      "ytid": "6j4m5D-hJ7k",
-      "level": "初級",
-      "minutes": 24,
-      "channel": "Rei丨暮らしとNotion。",
-      "score": 29,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 5,
-          "note": "タイトル上は実務・手順に結びつきやすい"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 5,
-          "note": "公開から約1年半以内で鮮度が高い"
-        },
-        {
-          "axis": "分かりやすさ",
-          "score": 4,
-          "note": "初心者向けの説明が期待できる"
-        },
-        {
-          "axis": "体系性",
-          "score": 3,
-          "note": "単発Tipsの可能性があり要確認"
-        },
-        {
-          "axis": "信頼性",
-          "score": 2,
-          "note": "最低限の視聴実績。内容確認が必要"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 5,
-          "note": "社会人が見切りやすい長さ"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "【2026年最新】AIエージェント『Manus』の使い方を徹底解説！ブラウザの自動操作からアプリ開発まで",
-      "url": "https://www.youtube.com/watch?v=6j4m5D-hJ7k",
-      "tags": [
-        "Manus",
-        "使い方"
-      ],
-      "review": [
-        "Manusを仕事や実践に結びつける観点をつかみやすい。",
-        "入口で迷いやすいポイントをほどき、学習の順番を作りやすい。",
-        "仕事の合間にも見切りやすい標準的な長さとして、次の学習テーマへ自然につなげやすい。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 32143,
-      "publishedAt": "2026-01-23T10:02:01Z"
-    },
-    {
-      "genre": "ai",
-      "sub": "ElevenLabs",
-      "ytid": "YyRv_uu8hh0",
-      "level": "初級",
-      "minutes": 35,
-      "channel": "たなか / AI映像監督・講師",
-      "score": 29,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 4,
-          "note": "タイトル上は実務・手順に結びつきやすい"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 5,
-          "note": "公開から約1年半以内で鮮度が高い"
-        },
-        {
-          "axis": "分かりやすさ",
           "score": 5,
           "note": "初心者向けの説明が期待できる"
-        },
-        {
-          "axis": "体系性",
-          "score": 3,
-          "note": "単発Tipsの可能性があり要確認"
-        },
-        {
-          "axis": "信頼性",
-          "score": 2,
-          "note": "最低限の視聴実績。内容確認が必要"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 5,
-          "note": "社会人が見切りやすい長さ"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "【音声生成AIはこれ一択】初心者でも使いこなせる「ElevenLabs」全て解説します。",
-      "url": "https://www.youtube.com/watch?v=YyRv_uu8hh0",
-      "tags": [
-        "ElevenLabs",
-        "使い方"
-      ],
-      "review": [
-        "ElevenLabsの最初の迷いを減らし、学ぶ順番を作りやすい一本。",
-        "初学者がつまずきやすい前提を整えながら見進めやすい。",
-        "仕事の合間にも見切りやすい標準的な長さなので、ロードマップ上の前後の動画とも組み合わせやすい。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 20244,
-      "publishedAt": "2026-04-06T06:46:17Z"
-    },
-    {
-      "genre": "prog",
-      "sub": "AWS認定 クラウドプラクティショナー",
-      "ytid": "Ahpuf2qc5g8",
-      "level": "初級",
-      "minutes": 9,
-      "channel": "新卒社会人のIT自習室",
-      "score": 29,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 3,
-          "note": "実用性は視聴確認が必要"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 5,
-          "note": "公開から約1年半以内で鮮度が高い"
-        },
-        {
-          "axis": "分かりやすさ",
-          "score": 5,
-          "note": "初心者向けの説明が期待できる"
-        },
-        {
-          "axis": "体系性",
-          "score": 4,
-          "note": "体系的に学べる可能性が高い"
-        },
-        {
-          "axis": "信頼性",
-          "score": 2,
-          "note": "最低限の視聴実績。内容確認が必要"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 5,
-          "note": "社会人が見切りやすい長さ"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "【AWS認定クラウドプラクティショナー】初心者歓迎！サービス要点まとめ（前編）",
-      "url": "https://www.youtube.com/watch?v=Ahpuf2qc5g8",
-      "tags": [
-        "AWS認定 クラウドプラクティショナー",
-        "AWS認定",
-        "クラウドプラクティショナー",
-        "勉強法",
-        "独学"
-      ],
-      "review": [
-        "AWS認定 クラウドプラクティショナーを学ぶ理由が見えやすく、手を動かして作れる実感として使いやすい。",
-        "最初に全体像をつかみ、次に試すことを決めやすい構成。",
-        "短時間で要点を拾いやすい軽めの入口として、次の学習テーマへ自然につなげやすい。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 10291,
-      "publishedAt": "2025-02-17T06:00:12Z"
-    },
-    {
-      "genre": "ai",
-      "sub": "Ollama",
-      "ytid": "ujQrgXxVrmE",
-      "level": "初級",
-      "minutes": 16,
-      "channel": "コジコジのオタク文化 情報局",
-      "score": 28,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 4,
-          "note": "タイトル上は実務・手順に結びつきやすい"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 5,
-          "note": "公開から約1年半以内で鮮度が高い"
-        },
-        {
-          "axis": "分かりやすさ",
-          "score": 4,
-          "note": "初心者向けの説明が期待できる"
-        },
-        {
-          "axis": "体系性",
-          "score": 3,
-          "note": "単発Tipsの可能性があり要確認"
-        },
-        {
-          "axis": "信頼性",
-          "score": 2,
-          "note": "最低限の視聴実績。内容確認が必要"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 5,
-          "note": "社会人が見切りやすい長さ"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "【話題】無料でオフラインAIが使える!!ローカルLLMを動かすollamaインストール方法【簡単解説】",
-      "url": "https://www.youtube.com/watch?v=ujQrgXxVrmE",
-      "tags": [
-        "Ollama",
-        "使い方"
-      ],
-      "review": [
-        "Ollamaの最初の迷いを減らし、学ぶ順番を作りやすい一本。",
-        "最初に全体像をつかみ、次に試すことを決めやすい構成。",
-        "仕事の合間にも見切りやすい標準的な長さなので、ロードマップ上の前後の動画とも組み合わせやすい。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 49242,
-      "publishedAt": "2026-02-21T11:45:07Z"
-    },
-    {
-      "genre": "ai",
-      "sub": "Zapier",
-      "ytid": "aJtrwyfJSTo",
-      "level": "初級",
-      "minutes": 32,
-      "channel": "いけともch",
-      "score": 28,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 5,
-          "note": "タイトル上は実務・手順に結びつきやすい"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 3,
-          "note": "基礎内容なら利用可能だが要確認"
-        },
-        {
-          "axis": "分かりやすさ",
-          "score": 5,
-          "note": "初心者向けの説明が期待できる"
-        },
-        {
-          "axis": "体系性",
-          "score": 3,
-          "note": "単発Tipsの可能性があり要確認"
-        },
-        {
-          "axis": "信頼性",
-          "score": 2,
-          "note": "最低限の視聴実績。内容確認が必要"
-        },
-        {
-          "axis": "視聴体験",
-          "score": 5,
-          "note": "社会人が見切りやすい長さ"
-        },
-        {
-          "axis": "規約・権利",
-          "score": 5,
-          "note": "公式YouTubeリンク/埋め込み前提で扱う"
-        }
-      ],
-      "title": "タスク自動化ツールZapierの使い方～初心者でも「タスク自動化」を簡単に実現！",
-      "url": "https://www.youtube.com/watch?v=aJtrwyfJSTo",
-      "tags": [
-        "Zapier",
-        "使い方"
-      ],
-      "review": [
-        "Zapierを仕事や実践に結びつける観点をつかみやすい。",
-        "最初に全体像をつかみ、次に試すことを決めやすい構成。",
-        "仕事の合間にも見切りやすい標準的な長さとして、次の学習テーマへ自然につなげやすい。"
-      ],
-      "scoreStatus": "provisional",
-      "viewCount": 11956,
-      "publishedAt": "2022-08-07T11:00:01Z"
-    },
-    {
-      "genre": "shikaku",
-      "sub": "測量士補",
-      "ytid": "cEYf1yumgoA",
-      "level": "上級",
-      "minutes": 10,
-      "channel": "日本一やさしい「測量士補」試験対策講座",
-      "score": 27,
-      "axisScores": [
-        {
-          "axis": "実用性",
-          "score": 3,
-          "note": "実用性は視聴確認が必要"
-        },
-        {
-          "axis": "正確性・鮮度",
-          "score": 5,
-          "note": "公開から約1年半以内で鮮度が高い"
-        },
-        {
-          "axis": "分かりやすさ",
-          "score": 3,
-          "note": "説明の分かりやすさは要確認"
         },
         {
           "axis": "体系性",
@@ -1327,30 +598,31 @@
           "note": "公式YouTubeリンク/埋め込み前提で扱う"
         }
       ],
-      "title": "【測量士補試験】問１測量法をマスターしよう・前編【～出題率過去１０年１００％～　過去問完全攻略！】",
-      "url": "https://www.youtube.com/watch?v=cEYf1yumgoA",
+      "title": "【AI完全自動化】Replit Agentを使ったプログラミング方法を徹底解説【初心者OK】",
+      "url": "https://www.youtube.com/watch?v=AZkVzqPPFaE",
       "tags": [
-        "測量士補",
-        "勉強法",
-        "独学"
+        "Replit Agent",
+        "Replit",
+        "Agent",
+        "使い方"
       ],
       "review": [
-        "測量士補を学ぶ理由が見えやすく、学習計画を迷わず組むための地図として使いやすい。",
-        "応用に進む前の確認として、見る観点を整えやすい。",
-        "短時間で要点を拾いやすい軽めの入口のため、目的を決めて見ると吸収しやすい。"
+        "Replit Agentの最初の迷いを減らし、学ぶ順番を作りやすい一本。",
+        "初学者がつまずきやすい前提を整えながら見進めやすい。",
+        "仕事の合間にも見切りやすい標準的な長さなので、ロードマップ上の前後の動画とも組み合わせやすい。"
       ],
       "scoreStatus": "provisional",
-      "viewCount": 8914,
-      "publishedAt": "2025-11-04T04:31:58Z"
+      "viewCount": 8837,
+      "publishedAt": "2024-11-23T09:00:12Z"
     },
     {
-      "genre": "shikaku",
-      "sub": "食生活アドバイザー",
-      "ytid": "ktAO46RIePk",
+      "genre": "ai",
+      "sub": "Supabase",
+      "ytid": "iF8fWlQpOfE",
       "level": "初級",
-      "minutes": 6,
-      "channel": "食生活アドバイザー解説・資格検定メモ",
-      "score": 24,
+      "minutes": 4,
+      "channel": "100秒テック",
+      "score": 27,
       "axisScores": [
         {
           "axis": "実用性",
@@ -1359,23 +631,23 @@
         },
         {
           "axis": "正確性・鮮度",
-          "score": 3,
-          "note": "基礎内容なら利用可能だが要確認"
+          "score": 5,
+          "note": "公開から約1年半以内で鮮度が高い"
         },
         {
           "axis": "分かりやすさ",
-          "score": 4,
+          "score": 5,
           "note": "初心者向けの説明が期待できる"
         },
         {
           "axis": "体系性",
-          "score": 3,
-          "note": "単発Tipsの可能性があり要確認"
+          "score": 4,
+          "note": "体系的に学べる可能性が高い"
         },
         {
           "axis": "信頼性",
-          "score": 2,
-          "note": "最低限の視聴実績。内容確認が必要"
+          "score": 1,
+          "note": "視聴実績が少なく慎重に確認"
         },
         {
           "axis": "視聴体験",
@@ -1388,31 +660,30 @@
           "note": "公式YouTubeリンク/埋め込み前提で扱う"
         }
       ],
-      "title": "食生活アドバイザー3級解説「ウェルネス上手になろう」第1問",
-      "url": "https://www.youtube.com/watch?v=ktAO46RIePk",
+      "title": "【超入門】Supabaseについてアニメーションで解説してみた",
+      "url": "https://www.youtube.com/watch?v=iF8fWlQpOfE",
       "tags": [
-        "食生活アドバイザー",
-        "勉強法",
-        "独学"
+        "Supabase",
+        "使い方"
       ],
       "review": [
-        "食生活アドバイザーを仕事や実践に結びつける観点をつかみやすい。",
+        "Supabaseを仕事や実践に結びつける観点をつかみやすい。",
         "入口で迷いやすいポイントをほどき、学習の順番を作りやすい。",
-        "短時間で要点を拾いやすい軽めの入口として、次の学習テーマへ自然につなげやすい。"
+        "短時間で要点を拾いやすい軽めの入口なので、ロードマップ上の前後の動画とも組み合わせやすい。"
       ],
       "scoreStatus": "provisional",
-      "viewCount": 19270,
-      "publishedAt": "2023-06-10T08:18:10Z"
+      "viewCount": 8438,
+      "publishedAt": "2025-05-25T01:44:21Z"
     }
   ],
   "skipped": [
     {
-      "ytid": "bpU_0L9ARkw",
-      "title": "【公認会計士試験完全版】会計士試験最短攻略！実践した勉強法を解説！【河野玄斗/資格/勉強】",
+      "ytid": "DkClEbyXyq4",
+      "title": "【神回！】『Claude Code』完全入門マニュアル！【初心者でも絶対に理解できる！ 】",
       "score": 32,
-      "genre": "kaikei",
-      "sub": "ビジネス会計検定試験",
-      "channel": "河野玄斗の勉強部屋【切り抜き】",
+      "genre": "ai",
+      "sub": "Cline",
+      "channel": "パソコン博士TAIKI",
       "reason": "not_accepted"
     },
     {
@@ -1431,15 +702,6 @@
       "genre": "ai",
       "sub": "Qwen",
       "channel": "たてはま / CGBeginner",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "uWg7ILnmGC8",
-      "title": "【Codex完全ガイド】画像生成も音声入力もできる万能AIアプリの使い方を解説",
-      "score": 31,
-      "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "AIでサボろうチャンネル",
       "reason": "not_accepted"
     },
     {
@@ -1470,21 +732,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "GBjWtaZ4MY4",
-      "title": "【ガチ実践】ChatGPTより優秀なCodexで初心者でも約3000円のAI社員を作り出して完全自動化できる方法教えるで！",
+      "ytid": "32GTMtYRgvI",
+      "title": "超初心者向けComfyUI入門！インストール後に覚えたい基本まとめ【2026年版】操作方法からエラー対応までこれ一本！",
       "score": 31,
       "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "【さき】のAIでええやん。",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "EMhYorxAjso",
-      "title": "無料でも使える動画生成AI「Veo 3.1」の完全ガイド!  ～Veo 3.1の使い方から作れる動画まで徹底解説、Google公式のAI映像制作ツール「Flow」の新機能も～",
-      "score": 31,
-      "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "AI大学【AI&ChatGPT最新情報】",
+      "sub": "FLUX",
+      "channel": "AIで創作効率化とマネタイズby嗚呼蛙",
       "reason": "not_accepted"
     },
     {
@@ -1492,7 +745,7 @@
       "title": "【2026年5月最新版】動画生成AIの最適解が判明しました！初心者からプロまで使える最強ツール構成を完全解説",
       "score": 31,
       "genre": "ai",
-      "sub": "Kling AI",
+      "sub": "Meta AI",
       "channel": "動画編集の中の人",
       "reason": "not_accepted"
     },
@@ -1506,48 +759,21 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "cJmaPCS-VmU",
-      "title": "【超入門】AI初心者も見ればわかるCodex超基礎の使い方と神活用4選を紹介するで！",
+      "ytid": "OxAwAe6W1wI",
+      "title": "【完全ガイド】Google AI Studioの使い方を徹底解説｜画像生成・音声・動画・アプリ作成まで一気に紹介！",
       "score": 31,
       "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "【さき】のAIでええやん。",
+      "sub": "Google AI Mode",
+      "channel": "映像制作会社のKIZUNA JAPAN株式会社",
       "reason": "not_accepted"
     },
     {
-      "ytid": "YMZ6YZelTO0",
-      "title": "【超便利‼️】ChatGPT「Codex」使い方基礎講座！活用法まで分かりやすく解説！",
+      "ytid": "xR0vU67yMng",
+      "title": "【Flux終了?】最強AI「Z Image Turbo」がヤバい…VRAM8GBで高速生成＆文字描写も完璧！導入から使い方まで完全解説【ComfyUI】",
       "score": 31,
       "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "mikimiki web スクール",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "cTDTETumGxc",
-      "title": "【保存版】Webデザイン独学勉強法を徹底解説",
-      "score": 31,
-      "genre": "video",
-      "sub": "Webクリエイター能力認定試験",
-      "channel": "LIG CH",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "r2vXf07eEXQ",
-      "title": "【ChatGPT感覚で使える】Codex(コーデックス)のデスクトップアプリ完全ガイド｜使い方・導入方法・活用事例をやさしく解説！",
-      "score": 31,
-      "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "AI大学【AI&ChatGPT最新情報】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "pkcsoUSMXOw",
-      "title": "【無料AIナレーション作成ツール】VOICEVOXの使い方を完全解説！商用利用できる神ツールです。",
-      "score": 31,
-      "genre": "ai",
-      "sub": "VOICEVOX",
-      "channel": "Youtubeショート収益化チャンネルおさむ",
+      "sub": "FLUX",
+      "channel": "AI is in wonderland",
       "reason": "not_accepted"
     },
     {
@@ -1560,6 +786,15 @@
       "reason": "not_accepted"
     },
     {
+      "ytid": "u1bFLLsyv6M",
+      "title": "【超入門】Google AI Studio完全ガイド🔰チャット機能の全てをこの1本でマスター！",
+      "score": 31,
+      "genre": "ai",
+      "sub": "Google AI Mode",
+      "channel": "あやや の ITスキルアップ塾",
+      "reason": "not_accepted"
+    },
+    {
       "ytid": "zDV9yXyYvlo",
       "title": "【2026年最新版】AIアバターの作り方とジャンル別活用術7選を完全解説します【DomoAI vs Heygen vs KlingAI】",
       "score": 31,
@@ -1569,30 +804,21 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "WVEX0x-UPnc",
-      "title": "【30代40代】これ取ってる人は勝ち組です！起業初心者におすすめの資格を徹底解説！",
+      "ytid": "dHu1jCTRf8U",
+      "title": "【まとめ】ネット民によるChatGPTの使い方が天才すぎて…めちゃくちゃ勉強になるぞw【8選】",
       "score": 30,
-      "genre": "kaikei",
-      "sub": "ビジネス会計検定試験",
-      "channel": "まっちゃん社長 -熱血ビジネス学-",
+      "genre": "ai",
+      "sub": "ChatPDF",
+      "channel": "わちょんのゆっくりIT",
       "reason": "not_accepted"
     },
     {
-      "ytid": "EvB5np7BlJo",
-      "title": "【無料で使える！】Veo3徹底解説！Google最新動画AI｜使い方・Flow・プロンプト例｜メリット・デメリット",
+      "ytid": "_OiMAiaG1js",
+      "title": "【2025年最新版】Claude Code完全入門｜Rewind・Planモード・Git・ultrathink・Agent Skill...よく使う重要機能を紹介してみた",
       "score": 30,
       "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "いっしゅ / AIクリエイター",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "YzQN3Oi1APc",
-      "title": "【無料】Googleの動画生成AI「Veo 2」がAI Studioで公開！使い方と作例、メリット・デメリットを徹底解説",
-      "score": 30,
-      "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "いっしゅ / AIクリエイター",
+      "sub": "Cline",
+      "channel": "にゃんたのAIチャンネル",
       "reason": "not_accepted"
     },
     {
@@ -1600,35 +826,8 @@
       "title": "gpt-ossをLM Studioで動かしてみよう！【ローカルPCで動くAI】〜初心者向け〜 Python SDKで動かす方法も解説！",
       "score": 30,
       "genre": "ai",
-      "sub": "Llama",
+      "sub": "GPT4All",
       "channel": "Pythonプログラミング VTuber サプー",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "IA6dRHyiGyM",
-      "title": "【無料】Google最新動画生成Veo3徹底解説｜使い方とプロンプト例を紹介",
-      "score": 30,
-      "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "RKJ VIDEO 【イケている動画を作りたいなら】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "W7jS-dZuIJY",
-      "title": "【超入門】一番強いAI！初心者でもスグに使えるCodexの基礎をやさしく解説するで",
-      "score": 30,
-      "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "AI仙人 【AI歴10年・ガチADHD男】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "YfbHUlOjKJA",
-      "title": "初心者でも分かるCodexの使い方解説！Codexの始め方や実際にCodexでのアプリ開発を実演します",
-      "score": 30,
-      "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "いまにゅのAIプログラミング塾",
       "reason": "not_accepted"
     },
     {
@@ -1641,57 +840,30 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "32GTMtYRgvI",
-      "title": "超初心者向けComfyUI入門！インストール後に覚えたい基本まとめ【2026年版】操作方法からエラー対応までこれ一本！",
+      "ytid": "0jBJKjNasEU",
+      "title": "【無料】AIでアプリが作れるGoogle Opalの使い方を基礎から徹底解説するで！",
       "score": 30,
       "genre": "ai",
-      "sub": "Qwen",
-      "channel": "AIで創作効率化とマネタイズby嗚呼蛙",
+      "sub": "Google AI Mode",
+      "channel": "【さき】のAIでええやん。",
       "reason": "not_accepted"
     },
     {
-      "ytid": "fBbPiJrIAmY",
-      "title": "【無料で使える1番良いAIはコレ🌟】最新のChatGPTエージェントを超えるAIエージェントが無料で使える🆓manusの使い方超初心者向け徹底解説🔰【マナス】【マヌス】【ChatGPT Agent】",
+      "ytid": "42DANJ1u5xs",
+      "title": "【2026年最新版】Figma完全初心者のための入門講座｜画面の見方・基本操作（前編）",
       "score": 30,
       "genre": "ai",
-      "sub": "Manus",
-      "channel": "あべむつき【ラッキーマイン】",
+      "sub": "Figma(Figma AI)",
+      "channel": "てつ | Figma AIで学ぶWebデザインと制作効率化",
       "reason": "not_accepted"
     },
     {
-      "ytid": "1q0LOyUHwYA",
-      "title": "【2025年版】初心者向けRunway完全ガイド｜イラスト生成・動画生成・うまく作るコツまで！",
+      "ytid": "ESDUupzFnmw",
+      "title": "【Figma入門】バナーの作り方、全部見せます！｜Webデザイナーのリアル制作フローを公開",
       "score": 30,
       "genre": "ai",
-      "sub": "Runway",
-      "channel": "AI たろう",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "1G-efr1uUM0",
-      "title": "【保存版】サクッとAIでアプリを作る『バイブコーディング』の教科書。素人でも誰でも高度なAIアプリが作れる。おすすめのAIツールと実際の作り方の実演付き。",
-      "score": 30,
-      "genre": "ai",
-      "sub": "Lovable",
-      "channel": "チャエン【AI研究所】〜仕事で使える最新のAI情報を発信〜 Byデジライズ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "H5TGzM_PCW4",
-      "title": "【1時間で速習】Codex完全入門！IDE版・CLI版の使い方と違いを徹底解説｜ChatGPTユーザー必見",
-      "score": 30,
-      "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "Vibe Coding Studio【AI 駆動開発実践】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "4rpNZ1qbZco",
-      "title": "【2026年最新版】公式アンバサダーが本気で作ったNotion入門｜この1本で全てわかる",
-      "score": 30,
-      "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "管理の山田 | Notion認定コンサルタント",
+      "sub": "Figma(Figma AI)",
+      "channel": "あやか⌇海外移住Webデザイナー",
       "reason": "not_accepted"
     },
     {
@@ -1704,57 +876,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "XPGi8v89IbM",
-      "title": "【無料で使える！】Veo3の始め方と使い方完全ガイド｜Flow経由で画像→動画＋音声まで自動生成！",
-      "score": 30,
-      "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "[動画生成AI]  始め方_How To チャンネル ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "blUeLIwAMBo",
-      "title": "【初心者向け】Gammaの使い方解説！【AI自動プレゼンスライド作成ツールアプリ / ガンマAI】",
-      "score": 30,
-      "genre": "ai",
-      "sub": "Gamma",
-      "channel": "佐藤辰則 / iPad・AI活用教室",
-      "reason": "not_accepted"
-    },
-    {
       "ytid": "TFf4fyZ3X7g",
       "title": "次元が違いすぎた…AI動画の最前線「Kling3.0」超天才活用15選を完全解説します",
       "score": 30,
       "genre": "ai",
       "sub": "Kling AI",
       "channel": "動画編集の中の人",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "hXS1hZPjUkg",
-      "title": "【初心者向け】NotionAIの超便利な使い方20選（最新機能、料金プラン、ChatGPTとの違いも解説）",
-      "score": 30,
-      "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "りんのすけ　Notion最速仕事術",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "eAYckIaGJUE",
-      "title": "【2025年度最新】最も簡単な動画編集ソフト「Vrew」の使い方これ1本！初心者におすすめ＋20%オフクーポンも配布中！",
-      "score": 30,
-      "genre": "ai",
-      "sub": "Vrew",
-      "channel": "ひとみマンのOBS学校",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "mTmWgrVauzg",
-      "title": "【完全保存版】2026年最強AIの結論が出ました【Codex完全解説】",
-      "score": 30,
-      "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "ここなのAI大学",
       "reason": "not_accepted"
     },
     {
@@ -1776,129 +903,57 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "4oNv3OW_Q9s",
-      "title": "【初心者向け】Notion AIとは？5つの機能の使い方と料金、活用事例を解説【2026年最新】",
+      "ytid": "Tyt97hP7z1U",
+      "title": "初心者こそ押さえておきたい: バイブコーディングのセキュリティ入門の入口",
       "score": 30,
       "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "円谷 | Notion公式アンバサダー",
+      "sub": "Supabase",
+      "channel": "ムーザルちゃんねる",
       "reason": "not_accepted"
     },
     {
-      "ytid": "3CM00Er23is",
-      "title": "【2026年最新】Open AIの開発支援ツール「Codex」とは？特徴や料金、使い方まで完全解説！",
+      "ytid": "h7rjqfZSK_0",
+      "title": "【2025最新】初心者向け講座 Figmaの基本を説明 | 「WEBデザインツール」",
       "score": 30,
       "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "アプリ開発研究所【株式会社Walkers】",
+      "sub": "Figma(Figma AI)",
+      "channel": "てつ | Figma AIで学ぶWebデザインと制作効率化",
       "reason": "not_accepted"
     },
     {
-      "ytid": "97u_MTR3IAQ",
-      "title": "【凄いアプリ！】今話題のNotionが便利すぎる！Taiki流使い方をご紹介します！",
+      "ytid": "JLfthf1z5g8",
+      "title": "【iPhone・android】海外旅行には必須の翻訳アプリ！もう外国語分からなくても心配ありません",
       "score": 29,
       "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "パソコン博士TAIKI",
+      "sub": "Microsoft Translator",
+      "channel": "スマオタ",
       "reason": "not_accepted"
     },
     {
-      "ytid": "pHTKrBcLBb0",
-      "title": "【初心者向け】ゆっくりとボイスロイドとVOICEVOX（ボイスボックス）は何が違うの？～音声合成ソフトの特徴や性質の違いを解説",
+      "ytid": "Q04Uwvv2208",
+      "title": "イギリス人同士なのに発音が通じない英国議会が面白い【解説】",
       "score": 29,
       "genre": "ai",
-      "sub": "VOICEVOX",
-      "channel": "ゆうぷろ / YuuPro",
+      "sub": "Semantic Scholar",
+      "channel": "だいじろー Daijiro",
       "reason": "not_accepted"
     },
     {
-      "ytid": "bxObrvHgfpY",
-      "title": "【韓国語勉強法】8年勉強した今だから伝えられること‼️",
-      "score": 29,
-      "genre": "english",
-      "sub": "「ハングル」能力検定",
-      "channel": "神楽ぴょん",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "Qk3GX6U-a0E",
-      "title": "Notionとは何か？何がすごいのか？Notionの特徴と基本機能を1時間で徹底解説",
+      "ytid": "H1e6QjHlFGc",
+      "title": "【2026最新】Nano Banana Pro × Hailuo AIで爆速制作【AIエージェントを活用したAI生成MVの作り方】",
       "score": 29,
       "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "円谷 | Notion公式アンバサダー",
+      "sub": "Hailuo AI",
+      "channel": "かみかぜ",
       "reason": "not_accepted"
     },
     {
-      "ytid": "KniNw5t-h-Y",
-      "title": "たった90分で初心者でもstable diffusionをマスター!!使い方＆マネタイズの方法もOK!【超有料級】【最高の画像生成系AI】",
+      "ytid": "A6Dx8xXUcaA",
+      "title": "AIエージェント・MCPサーバも解説！VSCodeでAIを使ってみよう！プログラミングをAIで効率化 〜初心者向け〜",
       "score": 29,
       "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "AI×ビジネスラボ　Yama",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "1_gmmFLP-w4",
-      "title": "【ゆる解説】話題のAIエージェント「OpenClaw」とは？／AIが自律的に行動／開発者がOpenAIに参加／情報流出の危険性も",
-      "score": 29,
-      "genre": "ai",
-      "sub": "OpenClaw",
-      "channel": "安野貴博の自由研究",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "QEPjooQWRyw",
-      "title": "【これ最強！】遂に資料生成AI「Gamma」が驚愕レベルになったので使い方・活用法を徹底解説！",
-      "score": 29,
-      "genre": "ai",
-      "sub": "Gamma",
-      "channel": "mikimiki web スクール",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "e0ijB-KKt7M",
-      "title": "【完全保存版】Notionで叶える最強のタスク管理術を紹介します！",
-      "score": 29,
-      "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "Rei丨暮らしとNotion。",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "nUqT2XATueM",
-      "title": "【初心者必見】VOICEVOX 0.10.4 の基本的な使い方を10分で解説 ～ダウンロードから声の出力まで",
-      "score": 29,
-      "genre": "ai",
-      "sub": "VOICEVOX",
-      "channel": "ゆうぷろ / YuuPro",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "R0NrfBIYj9o",
-      "title": "【無料でo1級!?】最新推論・戦略AIモデル「DeepSeek-R1」が神レベル！徹底解説します",
-      "score": 29,
-      "genre": "ai",
-      "sub": "DeepSeek",
-      "channel": "mikimiki web スクール",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "v5lpFzSwKbc",
-      "title": "【Python 猛特訓】100本ノックで基礎力を向上させよう！プログラミング初心者向けの厳選100問を出題！",
-      "score": 29,
-      "genre": "prog",
-      "sub": "Python3エンジニア認定基礎試験",
+      "sub": "Cline",
       "channel": "Pythonプログラミング VTuber サプー",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "znzIxjwdIMY",
-      "title": "【2025年最新】vrewとChatGPTで初心者でもショート動画爆速作成",
-      "score": 29,
-      "genre": "ai",
-      "sub": "Vrew",
-      "channel": "毒舌ヒヨコのAI×ショート動画",
       "reason": "not_accepted"
     },
     {
@@ -1911,83 +966,20 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "6u-euXGNl-o",
-      "title": "【AIを社員に】Claude Code Agent Teamsで1人起業する方法を解説します【Claude Opus 4.6】",
-      "score": 29,
-      "genre": "ai",
-      "sub": "OpenClaw",
-      "channel": "プログラミングチュートリアル",
-      "reason": "not_accepted"
-    },
-    {
       "ytid": "EQLy3iM6Mfc",
       "title": "【混戦】次世代AIエディタ「Cursor」と現王者「VSCode」の戦いを解説【通信ブロック？】",
       "score": 29,
       "genre": "ai",
-      "sub": "Windsurf",
+      "sub": "Cline",
       "channel": "安野貴博の自由研究",
       "reason": "not_accepted"
     },
     {
-      "ytid": "mLXa1vY04Hg",
-      "title": "【初心者必見！】AIイラストのプロンプトの仕組みと構文をわかりやすく解説（Stable Diffusion）",
+      "ytid": "Fd_UK0zhhAQ",
+      "title": "話題のAIエージェント！Clineについて解説してみた",
       "score": 29,
       "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "とうや【AIイラストLab.】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "crK5tUj5UH0",
-      "title": "最新のAIナレーション✨Gemini Speech Generationの使い方",
-      "score": 29,
-      "genre": "ai",
-      "sub": "VOICEVOX",
-      "channel": "ダルトワ★TV(初心者向けAI解説)",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "vi0NPv7d5Lc",
-      "title": "【初心者向け🔰】Stable Diffusionの使い方・Web UI環境をGoogle Colabで構築する方法",
-      "score": 29,
-      "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "KEITO【AI&WEB ch】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "7jrOqwBAWKY",
-      "title": "【レベル別】DeepSeekの利用は危険なのか？【解説】",
-      "score": 29,
-      "genre": "ai",
-      "sub": "DeepSeek",
-      "channel": "安野貴博の自由研究",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "lTZDUgxF1YI",
-      "title": "【韓国語勉強法】ゼロからペラペラまでの最短ルートを教えます！",
-      "score": 29,
-      "genre": "english",
-      "sub": "「ハングル」能力検定",
-      "channel": "トリリンガルのトミ【韓国語講座】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "s4iTzsCDunc",
-      "title": "Google映像制作AI『Flow』がヤバすぎた！無料でVeo3.1とNanobananaProを使い倒す方法解説",
-      "score": 29,
-      "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "AIデリバリー",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "mKOLbleaHJU",
-      "title": "OpenAIのCodexアプリが進化！各種設定や最新機能(GPT image2, Chronicle)などを解説してみた",
-      "score": 29,
-      "genre": "ai",
-      "sub": "OpenAI Codex",
+      "sub": "Cline",
       "channel": "にゃんたのAIチャンネル",
       "reason": "not_accepted"
     },
@@ -1996,17 +988,17 @@
       "title": "ComfyUI導入に挫折したあなたへ！超初心者向けComfyUI導入方法【2026】",
       "score": 29,
       "genre": "ai",
-      "sub": "Qwen",
+      "sub": "FLUX",
       "channel": "AIで創作効率化とマネタイズby嗚呼蛙",
       "reason": "not_accepted"
     },
     {
-      "ytid": "OSCtpQfIjpM",
-      "title": "【初心者必見！】AIイラストのプロンプトの書き方をわかりやすく解説（Stable Diffusion）",
+      "ytid": "LkOiuVMpj_E",
+      "title": "【最強動画生成AI‼️】OpenAIから「Sora2.0」爆誕！遂に日本語生成もできるように！徹底解説します",
       "score": 29,
       "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "とうや【AIイラストLab.】",
+      "sub": "Meta AI",
+      "channel": "mikimiki web スクール",
       "reason": "not_accepted"
     },
     {
@@ -2019,21 +1011,30 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "GJzcpg7s5Ek",
-      "title": "【完全版】教養試験の勉強法・参考書を完全解説！！【公務員試験】",
+      "ytid": "AoGmv8ljC0Y",
+      "title": "【SQL入門】PostgreSQLでデータベース操作を学ぼう！〜 初心者向け 〜",
       "score": 29,
-      "genre": "shikaku",
-      "sub": "国家公務員採用一般職試験",
-      "channel": "公務員試験【上位1%合格者】の戦略-ライジン",
+      "genre": "ai",
+      "sub": "Supabase",
+      "channel": "Pythonプログラミング VTuber サプー",
       "reason": "not_accepted"
     },
     {
-      "ytid": "aR_bfHZ96QE",
-      "title": "【2024年度最新】最も簡単な動画編集ソフト「VREW」の使い方これ1本！文字起こし・画像挿入・BGM・AIサムネイル生成などまとめて解説します！",
+      "ytid": "JVoF6NT2vqo",
+      "title": "知識ゼロでもハリウッド級動画を生成する動画生成AIツール体験入門【Hailuo AI】",
       "score": 29,
       "genre": "ai",
-      "sub": "Vrew",
-      "channel": "ひとみマンのOBS学校",
+      "sub": "Hailuo AI",
+      "channel": "AIアイデアファクトリー【AIツール解説ch】",
+      "reason": "not_accepted"
+    },
+    {
+      "ytid": "k2GlrSXJMM4",
+      "title": "【超簡単】”たった1つ”のプロンプトで作るAI PR動画。日本語AI音声の作り方も解説（Hailuo2.3/MiniMax Audio Speech 2.8の使い方）",
+      "score": 29,
+      "genre": "ai",
+      "sub": "Hailuo AI",
+      "channel": "ハム先生のAI教室【AI動画の実務活用】",
       "reason": "not_accepted"
     },
     {
@@ -2046,174 +1047,57 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "8Jqm1_R33Z4",
-      "title": "【革命】AIエージェント「Manus」の使い方を徹底解説！【誰でもアプリが作れる】",
-      "score": 29,
-      "genre": "ai",
-      "sub": "Manus",
-      "channel": "ここなのAI大学",
-      "reason": "deny_title:誰でも"
-    },
-    {
-      "ytid": "DvARWPB4xJ4",
-      "title": "【AWS認定クラウドプラクティショナー】初心者歓迎！クラウド関連語句まとめ",
-      "score": 29,
-      "genre": "prog",
-      "sub": "AWS認定 ソリューションアーキテクト",
-      "channel": "新卒社会人のIT自習室",
-      "reason": "not_accepted"
-    },
-    {
       "ytid": "m0L0ZDEJvoo",
       "title": "【徹底解説】最強全部乗せAI「Google AI Studio」で出来ることを初心者にも分かりやすく解説するぞ！",
       "score": 29,
       "genre": "ai",
-      "sub": "Google Veo",
+      "sub": "Google AI Mode",
       "channel": "きゃぷすろっく",
       "reason": "not_accepted"
     },
     {
-      "ytid": "Ekqm6GYmHhY",
-      "title": "AIで誰でもアプリ開発可能なやり方を完全解説【Bolt.newでVibe Coding】",
+      "ytid": "f2QupJ2XFbc",
+      "title": "Claude時代に\"非エンジニアが知るべき\"最強データ基盤Supabase完全入門～登録から実践まで完全解説",
       "score": 29,
       "genre": "ai",
-      "sub": "Lovable",
-      "channel": "taishiyade@元シリコンバレーCTO個人開発者",
+      "sub": "Supabase",
+      "channel": "いけともch",
       "reason": "not_accepted"
     },
     {
-      "ytid": "R4FoMk1PVnA",
-      "title": "Codexの使い方｜何ができる？実際に触って解説します【デスクトップアプリ】",
+      "ytid": "Etwhq5zl6yg",
+      "title": "【超初心者向け】Figmaの始め方をゼロから解説！これ1本で使えるようになります",
       "score": 29,
       "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "イージーテック",
+      "sub": "Figma(Figma AI)",
+      "channel": "ゼロイチWEBデザイン:未経験からWEBデザイナーへ",
       "reason": "not_accepted"
     },
     {
-      "ytid": "A9nIIX89Gno",
-      "title": "【初学者向け】2025年版Notion AIの使い方解説 / Chat GPTとの違い / Notion Mail でのAI活用",
+      "ytid": "K054UMTtANE",
+      "title": "無料でなんでも作れるGoogle AI Studioの使い方や活用法を教えます！AI活用のプロがGoogle AI Studioを徹底解説！",
       "score": 29,
       "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "円谷 | Notion公式アンバサダー",
+      "sub": "Google AI Mode",
+      "channel": "いまにゅのAIプログラミング塾",
       "reason": "not_accepted"
     },
     {
-      "ytid": "qYe4WcBlUI4",
-      "title": "【ChatGPTより良い？】イーロンが作ったXで使えるAI「Grok 3」の使い方と活用事例5選を徹底解説。《世界で一番賢いAIとは本当か？月額6,000円を課金すべきか？実際使って徹底検証。》",
+      "ytid": "903DkiaVOYs",
+      "title": "【最強の組み合わせ】Nano Banana Proを使って”全自動”でAI画像・AI動画を作る方法。（Hailuo AIの使い方を徹底解説）",
       "score": 29,
       "genre": "ai",
-      "sub": "Grok",
-      "channel": "チャエン【AI研究所】〜仕事で使える最新のAI情報を発信〜 Byデジライズ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "DC9GSG27n0o",
-      "title": "【今日から始める】ボイロ・ボイボ動画の作り方【AviUtl導入講座】",
-      "score": 29,
-      "genre": "ai",
-      "sub": "VOICEVOX",
-      "channel": "まほ。",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "XOLq-K9lD4A",
-      "title": "【ゆっくり解説】Googleの新AI「Gemma 4 12B」とは？オフラインで動くノートPC向け軽量モデルを初心者向けに解説",
-      "score": 29,
-      "genre": "ai",
-      "sub": "Gemma",
-      "channel": "サルでもわかるAIにゅーす速報【ゆっくり解説】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "kLLBwFEAF1c",
-      "title": "中国AIが世界を震撼させた4つの真実【Deepseek超解説】裏技と意外な使い方",
-      "score": 29,
-      "genre": "ai",
-      "sub": "DeepSeek",
-      "channel": "ヤンチャンCH/楊小溪",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "abFH7DQq9uA",
-      "title": "【2026年度最新】動画編集初心者でも簡単「VREW」の使い方はこれ1本！文字起こし・テロップ・画像挿入・BGM・AIサムネイル生成など全てまるっと解説！#vrew使い方 #vrew#ブリュー 使い方",
-      "score": 29,
-      "genre": "ai",
-      "sub": "Vrew",
-      "channel": "勇者アルファ【TikTok収益化チャンネル】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "DrX5tOVx3ns",
-      "title": "【衝撃】Notionの新機能『カスタムエージェント』で業務を自動化！使い方を徹底的に解説します！",
-      "score": 29,
-      "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "Rei丨暮らしとNotion。",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "hy3Y_OHwqoQ",
-      "title": "【感動】3分で映画が作れる「Flow×Veo3」使い方や注意点について徹底解説！",
-      "score": 29,
-      "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "こーすけ先生のGoogle塾",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "Agy0SqgcGjI",
-      "title": "［最新版］国家一般職の試験を徹底解説！仕事内容・試験内容・難易度・倍率まとめ",
-      "score": 29,
-      "genre": "shikaku",
-      "sub": "国家公務員採用一般職試験",
-      "channel": "公務員のライト【公式】公務員予備校チャンネル登録者数No.1",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "SFLLwpTxD_Q",
-      "title": "【過去一の衝撃】KlingAI3.0が動画制作の常識を破壊しました。使い方と新機能10選を徹底解説します。（動画3.0/Omni3.0/画像3.0）",
-      "score": 29,
-      "genre": "ai",
-      "sub": "Kling AI",
+      "sub": "Hailuo AI",
       "channel": "ハム先生のAI教室【AI動画の実務活用】",
       "reason": "not_accepted"
     },
     {
-      "ytid": "8L02BagQUU4",
-      "title": "【入門】AWSとは？初めて学ぶ方に向けて超わかりやく解説！",
-      "score": 29,
-      "genre": "prog",
-      "sub": "AWS認定 ソリューションアーキテクト",
-      "channel": "AWS資格 対策講座",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "gqme97xSD0U",
-      "title": "【永久保存版】NotionAIの使い方完全ガイド（ChatGPT・Geminiなど他AIとの違いも解説）",
+      "ytid": "siCfI3MIhCw",
+      "title": "Figmaユーザー必見！Figma Makeの使い方と活用例まとめ",
       "score": 29,
       "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "りんのすけ　Notion最速仕事術",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "G4EIn8ZQtro",
-      "title": "🔰超初心者でも使えるAIエージェント🔰チャットGPT Codexの使い方超初心者向け徹底解説‼️【ChatGPT】",
-      "score": 29,
-      "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "あべむつき【ラッキーマイン】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "RqHiYunz1_k",
-      "title": "【Runway新機能】リファレンス機能の使い方を徹底解説！",
-      "score": 29,
-      "genre": "ai",
-      "sub": "Runway",
-      "channel": "[動画生成AI]  始め方_How To チャンネル ",
+      "sub": "Figma(Figma AI)",
+      "channel": "もち | デザイン教える人",
       "reason": "not_accepted"
     },
     {
@@ -2226,39 +1110,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "kyADa0xbIhI",
-      "title": "Adobe Firefly徹底解説｜画像も動画もAIで生成！料金プラン＆機能まとめ",
+      "ytid": "RqHiYunz1_k",
+      "title": "【Runway新機能】リファレンス機能の使い方を徹底解説！",
       "score": 29,
       "genre": "ai",
-      "sub": "Adobe Firefly",
+      "sub": "Runway",
       "channel": "[動画生成AI]  始め方_How To チャンネル ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "Pa2ICW-z1fQ",
-      "title": "Stable Diffusion WebUIの基本的な使い方を解説するよ【超入門編】",
-      "score": 29,
-      "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "のぶちゅーぶ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "jzXZb9kMYqM",
-      "title": "イレブンラボ（Elevenlabs）の使い方解説！「AI声優」を使いこなせ！",
-      "score": 29,
-      "genre": "ai",
-      "sub": "ElevenLabs",
-      "channel": "イケハヤ大学2.0",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "nS5gJi0j1sc",
-      "title": "【初心者向け】日本語対応したNotion Mailの使い方を解説｜スニペット / AIラベル / ビュー切り替え",
-      "score": 29,
-      "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "円谷 | Notion公式アンバサダー",
       "reason": "not_accepted"
     },
     {
@@ -2271,165 +1128,39 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "AZkVzqPPFaE",
-      "title": "【AI完全自動化】Replit Agentを使ったプログラミング方法を徹底解説【初心者OK】",
+      "ytid": "b7qM0NsgYtY",
+      "title": "【神ツール】GitHub Copilot 使い方入門！VSCodeで始めるAIコーディング革命【2026年最新版】",
       "score": 29,
       "genre": "ai",
-      "sub": "Replit Agent",
-      "channel": "かいちのAI大学 / Saix(サイクス)",
+      "sub": "Cline",
+      "channel": "中村祐太のFindUアカデミー【AI&WEB開発】",
       "reason": "not_accepted"
     },
     {
-      "ytid": "_PmudWdVqKQ",
-      "title": "【最新版 HeyGen使い方完全解説】[初心者向け]アバターAI動画作成・編集、プロンプトから動画生成ができる「HeyGen」 #heygen #動画生成AI #AIアバター",
-      "score": 29,
-      "genre": "ai",
-      "sub": "HeyGen",
-      "channel": "岡本宗一郎 Soichiro Okamoto",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "ksjU4M31PdE",
-      "title": "Adobe Firefly 動画生成AIの感想と使い方講座",
-      "score": 29,
-      "genre": "ai",
-      "sub": "Adobe Firefly",
-      "channel": "Action Planetあくしょんプラネット",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "gAwuyVyDhxE",
-      "title": "【DeepSeekショック】中国AIの脅威の技術革新に世界が震撼…AI大国アメリカはどう迎え撃つのか？",
+      "ytid": "Zhnv_aWIMLI",
+      "title": "なんでも回転させる最新AIが凄すぎる！動画生成AI「PixVerse」",
       "score": 28,
       "genre": "ai",
-      "sub": "DeepSeek",
-      "channel": "中田敦彦のYouTube大学 - NAKATA UNIVERSITY",
+      "sub": "PixVerse",
+      "channel": "365日の学び　～たいぞうのITカフェ～",
       "reason": "not_accepted"
     },
     {
-      "ytid": "k4HxwEJewIM",
-      "title": "翻訳の性能が1番高いチャットAIはどれなのか？1位は意外すぎるアレ！",
+      "ytid": "0aBk0R3SlYQ",
+      "title": "【解禁】Google翻訳の超進化で同時通訳に対応！もう英語学習不要",
       "score": 28,
       "genre": "ai",
-      "sub": "Llama",
-      "channel": "Kevin's English Room / 掛山ケビ志郎",
+      "sub": "Microsoft Translator",
+      "channel": "スマホの知恵袋",
       "reason": "not_accepted"
     },
     {
-      "ytid": "eI50iOE5XMo",
-      "title": "中国AI【DeepSeek】の謎に迫る! \"なぜ世界が慌てるのか？\"一日で92兆円が飛んだ理由は？中国の狙いとは？",
+      "ytid": "J4NhtqReyl8",
+      "title": "無料の神ツール「Google AI Studio」徹底解説【この動画1本で理解できる】Gemini 2.5 Proの活用方法やBuild Apps機能など",
       "score": 28,
       "genre": "ai",
-      "sub": "DeepSeek",
-      "channel": "パソコン博士TAIKI",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "hEBZY7_4YMs",
-      "title": "AI界に衝撃を与えた中国の生成AI「ディープシーク」、質問の回答が検閲を感じてしまうww",
-      "score": 28,
-      "genre": "ai",
-      "sub": "DeepSeek",
-      "channel": "佐倉あましん",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "8QIJMGW_-LM",
-      "title": "日本一わかりやすいStableDiffusion WebUI AUTOMATIC1111(ローカル版)のインストール方法と基本的な使い方",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "テルルとロビン【てるろび】旧やすらぼ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "_KREQmqwy2k",
-      "title": "【大学生の夢1位】｢公務員｣になるにはどうすれば良いのか？徹底解説！【就職】",
-      "score": 28,
-      "genre": "shikaku",
-      "sub": "国家公務員採用一般職試験",
-      "channel": "レジスタンス",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "hic7HWL1Hnc",
-      "title": "【最新AI】かまいたちがGrok3で画像生成してみたら凄い画像が連発！",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Grok",
-      "channel": "かまいたちチャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "V61uT165m_o",
-      "title": "【無料】リアルすぎてドン引き…！日本人のAI音声ツール8選を徹底比較してみました！",
-      "score": 28,
-      "genre": "ai",
-      "sub": "VOICEVOX",
-      "channel": "えーあいどりーむ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "mpsjdWyuXWo",
-      "title": "【9割の社長が熱望】万能AIエージェントに仕事を丸投げする方法|n8n",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Manus",
-      "channel": "スマート仕事術研究所【スマ研】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "qbNLFTlAEjU",
-      "title": "【2026最新】無料AIで検閲なし美少女召喚✨世界一簡単な導入ガイド🛠️【Stable Diffusion】",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "煩悩生成ずんだもん【AIツール解説】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "N1tXVR9lplM",
-      "title": "日本一わかりやすいLoRA学習！sd-scripts導入から学習実行まで解説！東北ずん子LoRAを作ってみよう！【Stable Diffusion】",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "テルルとロビン【てるろび】旧やすらぼ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "CXEF7yw23IA",
-      "title": "【3秒で図解生成】無料で使える図解・資料生成AI「Napkin AI」が驚愕レベルなので徹底解説！",
-      "score": 28,
-      "genre": "ai",
-      "sub": "DALL·E 3",
-      "channel": "mikimiki web スクール",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "5uGt_t4t1iU",
-      "title": "Control-Netの導入と基本的な使い方解説！自由自在にポージングしたり塗りだけAIでやってみよう！【Stable Diffusion】",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "テルルとロビン【てるろび】旧やすらぼ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "s1Gjgg0MqBs",
-      "title": "PLAUD NOTE　【 初期設定と使い方！機能紹介 】AIボイスレコーダー 、アプリで文字起こしや自動要約☆　通話も録音可能！会議やパワハラ対策に！",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Notta",
-      "channel": "深掘りTV ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "HjiitKtrGMs",
-      "title": "商用利用無料・キャラクターなしの音声合成ソフト『VOICEVOX Nemo』をどこよりも詳しく解説",
-      "score": 28,
-      "genre": "ai",
-      "sub": "VOICEVOX",
-      "channel": "ゆうぷろ / YuuPro",
+      "sub": "Google AI Mode",
+      "channel": "KEITO【AI&WEB ch】",
       "reason": "not_accepted"
     },
     {
@@ -2437,26 +1168,17 @@
       "title": "【2025年版】🔰ComfyUI の はじめ方 をどこよりも分かりやすく解説！#ComfyUI #illustrious #wan21#Stablediffusion",
       "score": 28,
       "genre": "ai",
-      "sub": "Stable Diffusion",
+      "sub": "FLUX",
       "channel": "ざすこ (道草_雑草子)",
       "reason": "not_accepted"
     },
     {
-      "ytid": "yI9i_H1neoI",
-      "title": "【最新】ガチで1番カンタンにできるStable Diffusion環境の導入方法【StabilityMatrixの使い方】",
+      "ytid": "8FcHpCeHJ4w",
+      "title": "ChatGPTよりも何が良いのか？Perplexity AIを徹底解説してみた",
       "score": 28,
       "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "Marika Hirata",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "0RlIy5f4P-g",
-      "title": "【プレゼン資料もAI】凄い資料作成AI「Gamma」の使い方！",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Gamma",
-      "channel": "いけともch",
+      "sub": "ChatPDF",
+      "channel": "にゃんたのAIチャンネル",
       "reason": "not_accepted"
     },
     {
@@ -2469,24 +1191,6 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "AmIXB-DYCBE",
-      "title": "【やってみよう！】LoRAの使い方&簡単な作り方（kohya's GUI）",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "InIchiGaSan 【AI x 3DCG x Movie Lab】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "amVbrnqh69A",
-      "title": "【遂にキタ！】素人でも自然言語でアプリ生成AI「bolt.new」が驚愕レベルなので徹底解説",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Bolt.new",
-      "channel": "mikimiki web スクール",
-      "reason": "not_accepted"
-    },
-    {
       "ytid": "B3dbo9MGFGg",
       "title": "【AIと会話】分身アバター生成AI「HeyGen」が超進化！驚愕レベルなので徹底解説",
       "score": 28,
@@ -2496,21 +1200,21 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "5dWuJdRZdbc",
-      "title": "【Google Veo3 × Flow】映画を2分で作れるAIを徹底解説",
+      "ytid": "Cqn8xrHwTGk",
+      "title": "本当は教えたくない『AIアニメのアクションシーンの作り方』を大公開！使用したツール【Hailuo AI】",
       "score": 28,
       "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "あずきちゃんねる",
+      "sub": "Hailuo AI",
+      "channel": "とうや【AIイラストLab.】",
       "reason": "not_accepted"
     },
     {
-      "ytid": "Z-V0gw2OHRE",
-      "title": "OpenAI最新！GPT5-CodexがClaudeCode並みに良さそうなので解説してみた",
+      "ytid": "TW21cCPs1T0",
+      "title": "【Hailuo AI完全ガイド】映画レベルの動画を作れるAI「Hailuo 2.3」＆日本語CM動画を自動で作れるAIエージェント「Hailuo Agent」！",
       "score": 28,
       "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "にゃんたのAIチャンネル",
+      "sub": "Hailuo AI",
+      "channel": "AI大学【AI&ChatGPT最新情報】",
       "reason": "not_accepted"
     },
     {
@@ -2523,48 +1227,21 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "l6bUroqVrIg",
-      "title": "【2週間で合格】Python3エンジニア認定基礎試験の勉強方法【難易度&勉強時間も解説】",
-      "score": 28,
-      "genre": "prog",
-      "sub": "Python3エンジニア認定基礎試験",
-      "channel": "Python・データサイエンス入門チャンネル -はやたす-",
-      "reason": "not_accepted"
-    },
-    {
       "ytid": "IDE0mfO9nzc",
       "title": "【ジャンルも全て解説】非エンジニアがAIコーディング始めるならどれ？オススメツールを教えます",
       "score": 28,
       "genre": "ai",
-      "sub": "Lovable",
+      "sub": "Cline",
       "channel": "AIでサボろうチャンネル",
       "reason": "not_accepted"
     },
     {
-      "ytid": "kclgH4OdAZw",
-      "title": "【無料拡大】Google Vidsが神進化！便利すぎる8つの神機能を解説",
+      "ytid": "45SgZSb3PUI",
+      "title": "全て無料で使える神ツールGoogle AI Studioがすごすぎる！初心者でも使いやすい神機能やGemini 2.5 Proの活用例など全て紹介します！【無料AI】",
       "score": 28,
       "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "あやや の ITスキルアップ塾",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "ZaEFNrJvrDc",
-      "title": "【初心者向け】Notion AI 使い方徹底解説【ChatGPT との違い】",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "円谷 | Notion公式アンバサダー",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "4wLEVVijDw4",
-      "title": "何があるの？OpenAI Codex, Claude Code, Gemini CLIの機能などについて解説してみた",
-      "score": 28,
-      "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "にゃんたのAIチャンネル",
+      "sub": "Google AI Mode",
+      "channel": "ひかりのAI大学",
       "reason": "not_accepted"
     },
     {
@@ -2577,57 +1254,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "yX-V0QAFUgg",
-      "title": "【無料】凄すぎる！音声AIツールで日本語が上手い、厳選した３つのサービスを実演解説！",
+      "ytid": "bmcj6RZ4kQ8",
+      "title": "【Hailuo AIでSeedance 2.0】がついに使える！できること・制限・実演解説",
       "score": 28,
       "genre": "ai",
-      "sub": "ElevenLabs",
-      "channel": "KEITO【AI&WEB ch】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "w8TRpmOEpMk",
-      "title": "OpenAI CodexのPC操作の便利な使い方！GPT-5.5で進化（Computer use）",
-      "score": 28,
-      "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "KEITO【AI&WEB ch】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "TkDBamH2Beo",
-      "title": "【超初心者向け】スマホ版のNotionの使い方と、オススメの設定をご紹介！",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "Rei丨暮らしとNotion。",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "6tIuUY_8P7o",
-      "title": "【誰でも使えるAdobe Firefly】テキストから画像生成の使い方【徹底解説】",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Adobe Firefly",
-      "channel": "Mappy Photo",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "Sf-dNdlAMBo",
-      "title": "【無料】OpenAIがCodex始め方ガイド公開！日本語で全部解説しつつ注意点まで話します",
-      "score": 28,
-      "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "あなたのAI顧問【黒山結音のリアルなAI実装チャンネル】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "YlqFZsDdiwI",
-      "title": "【韓国語勉強法🇰🇷】働きながら1年半でTOPIK6級合格した方法📝🔥【留学なし❌】",
-      "score": 28,
-      "genre": "english",
-      "sub": "「ハングル」能力検定",
-      "channel": "だるチンゴッド",
+      "sub": "Hailuo AI",
+      "channel": "オトアソブ生成AI",
       "reason": "not_accepted"
     },
     {
@@ -2640,12 +1272,21 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "a5YXXA1ptuY",
-      "title": "一線を超えた！GrokコンパニオンのAIアバターがセンス抜群【設定と使い方】",
+      "ytid": "FvPd9rUK2Yw",
+      "title": "【Figma実践】AIで作ったWebデザイン、プロが全部作り直してみた｜初心者でも真似するだけで1時間で完成",
       "score": 28,
       "genre": "ai",
-      "sub": "Grok",
-      "channel": "KEITO【AI&WEB ch】",
+      "sub": "Figma(Figma AI)",
+      "channel": "あやか⌇海外移住Webデザイナー",
+      "reason": "not_accepted"
+    },
+    {
+      "ytid": "SmyFUZYTgRk",
+      "title": "26兆円のウクライナ軍事支援が決定。トランプ大統領はロシアに対する戦略爆撃を容認。燃料危機に陥ったクリミア半島への補給作戦は大炎上。戦争の最新ニュース解説",
+      "score": 28,
+      "genre": "ai",
+      "sub": "Elicit",
+      "channel": "神河が征く / わかるニュース解説 KKNewsNetwork",
       "reason": "not_accepted"
     },
     {
@@ -2658,75 +1299,21 @@
       "reason": "not_accepted"
     },
     {
+      "ytid": "8-1zi7W6dP8",
+      "title": "【ComfyUI】雑プロンプトの詳細化、画像・動画のプロンプト化ができて作業効率爆上げのQwen3.5導入方法解説！",
+      "score": 28,
+      "genre": "ai",
+      "sub": "FLUX",
+      "channel": "AIで創作効率化とマネタイズby嗚呼蛙",
+      "reason": "not_accepted"
+    },
+    {
       "ytid": "8QJYemi6GVs",
       "title": "【保存版】もう外注は不要!? AIでLPを爆速で作る方法。Manus、Bolt、Claude、v0、Create果たしてどのツールがベストか。課金して徹底検証‼️ 結論はこのツール一択。",
       "score": 28,
       "genre": "ai",
       "sub": "v0",
       "channel": "チャエン【AI研究所】〜仕事で使える最新のAI情報を発信〜 Byデジライズ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "XYcIVJudRzk",
-      "title": "【緊急速報】OpenAI発のAIエージェント『Codex』のアプデがヤバすぎるので全て解説します【ChatGPT】",
-      "score": 28,
-      "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "ClaudeCodeチャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "8-1zi7W6dP8",
-      "title": "【ComfyUI】雑プロンプトの詳細化、画像・動画のプロンプト化ができて作業効率爆上げのQwen3.5導入方法解説！",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Qwen",
-      "channel": "AIで創作効率化とマネタイズby嗚呼蛙",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "0cYPwxg8le8",
-      "title": "【性能ランキング世界1位】xAIの動画生成AI「Grok Imagine」徹底解説！ Sora/Veo級の映像を無料で作る方法！",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Grok",
-      "channel": "AI大学【AI&ChatGPT最新情報】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "ABK1rsdqR8c",
-      "title": "【ゆる解説】Grokでファクトチェック、SNSのデマはAIに暴ける？",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Grok",
-      "channel": "安野貴博の自由研究",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "_I4Ky6C7ti8",
-      "title": "【誰でも使える?!】Adobe Fireflyに動画生成AI機能が登場！使い方と生成クレジットの消費は？",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Adobe Firefly",
-      "channel": "Mappy Photo",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "HsJFWFIdQfc",
-      "title": "ローカルAI環境構築方法 DeepSeek R1 × Ollama × OpenWebUI【ゆっくり解説】",
-      "score": 28,
-      "genre": "ai",
-      "sub": "DeepSeek",
-      "channel": "よろずごと ゆっくり解説ch",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "Ml--mKDUYSo",
-      "title": "【Gemma4】PCがあればGemini級のAIが無料で動く？知らないと損するGemma4を徹底解説",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Gemma",
-      "channel": "サルでもわかるAIにゅーす速報【ゆっくり解説】",
       "reason": "not_accepted"
     },
     {
@@ -2739,48 +1326,21 @@
       "reason": "not_accepted"
     },
     {
+      "ytid": "It9AZz8jr6k",
+      "title": "【結局どれ使えば良い？】2026年最新AIアニメ動画生成ツールを徹底比較解説します【Vidu Q3・Hailuo・DomoAI・Kling3.0】",
+      "score": 28,
+      "genre": "ai",
+      "sub": "Hailuo AI",
+      "channel": "動画編集の中の人",
+      "reason": "not_accepted"
+    },
+    {
       "ytid": "j5ndk5cTG5s",
       "title": "誰でも簡単にAI動画を作れるKlingAIの使い方",
       "score": 28,
       "genre": "ai",
       "sub": "Kling AI",
       "channel": "JPN GIRL",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "M4ib9w8TZkI",
-      "title": "【初心者向け】Grokアプリ版のはじめかた&使い方解説！【グロック使い方 / Grok3】",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Grok",
-      "channel": "佐藤辰則 / iPad・AI活用教室",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "KJPmqpCwmZk",
-      "title": "【無料】GoogleのオープンAIモデル「Gemma 4」が凄すぎるので徹底解説します",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Gemma",
-      "channel": "こーすけ先生のGoogle塾",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "hLCj1IVobsM",
-      "title": "ミュージックビデオはAIで作る！GrokとDomoAIを使ったMVの作り方",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Grok",
-      "channel": "ダルトワ★TV(初心者向けAI解説)",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "rS3sOWZVuIU",
-      "title": "【Kling3.0の使い方】リアル系・アニメ系・3D系でAI動画生成して比較してみた.",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Kling AI",
-      "channel": "AI FREAK - 最新のAIツールをご紹介",
       "reason": "not_accepted"
     },
     {
@@ -2793,48 +1353,21 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "hJbSgncsaQ4",
-      "title": "【完全無料】Veo 3.1でAI動画作成！Googleアカウントだけで使える「Flow」とは？",
+      "ytid": "rS3sOWZVuIU",
+      "title": "【Kling3.0の使い方】リアル系・アニメ系・3D系でAI動画生成して比較してみた.",
       "score": 28,
       "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "動画ファン",
+      "sub": "Kling AI",
+      "channel": "AI FREAK - 最新のAIツールをご紹介",
       "reason": "not_accepted"
     },
     {
-      "ytid": "nFLZL7jfGCE",
-      "title": "xAIのAIチャット「Grok」の全機能徹底解説！ ～Grok 4、コンパニオン機能(Ani)、DeepSearch、音声会話機能など～",
+      "ytid": "663b3qdIp-o",
+      "title": "【知らないと損】Google AI Studioの使い方！無料でGeminiの全パワーを解放する最強の方法",
       "score": 28,
       "genre": "ai",
-      "sub": "Grok",
-      "channel": "AI大学【AI&ChatGPT最新情報】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "rgIktjLeLc4",
-      "title": "スマホで使える文字起こしアプリNottaの使い方解説！【議事録文字起こし / 議事録アプリ】",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Notta",
-      "channel": "佐藤辰則 / iPad・AI活用教室",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "IbChUYG6bOE",
-      "title": "【みんな知らない】Notion AIで仕事を自動化する「AIシステム」の作り方",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "前田翼 | AIで100人力を目指す",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "jMzF4e9kAkI",
-      "title": "無料で使えるGoogleのAIプラットフォーム「Google AI Studio」の概要と使い方！ ～Gemini 2.5 Proを使ったりVeo 2で動画を作れる～",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "AI大学【AI&ChatGPT最新情報】",
+      "sub": "Google AI Mode",
+      "channel": "AIの中の人",
       "reason": "not_accepted"
     },
     {
@@ -2842,44 +1375,26 @@
       "title": "無料で機密保持も完璧。オフラインで動くGoogle最新AI『Gemma 4』をビジネスで使う最強のメリット＆カンタンな導入方法を解説！",
       "score": 28,
       "genre": "ai",
-      "sub": "Gemma",
+      "sub": "OpenClaw",
       "channel": "じゅりん│AIビジネス活用塾",
       "reason": "not_accepted"
     },
     {
-      "ytid": "O5Lvit-YmJo",
-      "title": "【初心者向け】ローカル環境で画像生成AIを動かす！Stable Diffusion Web UI セットアップガイド",
+      "ytid": "ZTcebK6Xuic",
+      "title": "Claude Codeの使い方【Figmaとコードを連携するセットアップ】",
       "score": 28,
       "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "ITとAIのルーティンラボ",
+      "sub": "Figma(Figma AI)",
+      "channel": "HIROCODE.ヒロコード",
       "reason": "not_accepted"
     },
     {
-      "ytid": "Jj139TyRaVo",
-      "title": "【これ破壊的】Gemma 4は最強オープンモデルだったので解説！音声や画像にも対応！",
+      "ytid": "H2EqMYoud28",
+      "title": "AIエージェントの基本的な理解・特徴・リスクなどを優しく解説【Cline（クライン）を使ってみた】",
       "score": 28,
       "genre": "ai",
-      "sub": "Gemma",
-      "channel": "まさおAIじっくり解説ch",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "LI8JzcKkF6c",
-      "title": "OpenAI新エージェント「Codex」を非エンジニアが使ってみた（ざっくり解説）",
-      "score": 28,
-      "genre": "ai",
-      "sub": "OpenAI Codex",
+      "sub": "Cline",
       "channel": "KEITO【AI&WEB ch】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "jw5xq_FMYfI",
-      "title": "【速報】Codexデスクトップアプリ登場！並列開発＆自動化がかなり良さそうなので解説します",
-      "score": 28,
-      "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "まさおAIじっくり解説ch",
       "reason": "not_accepted"
     },
     {
@@ -2892,30 +1407,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "cWq1Q6-TnrI",
-      "title": "無料で今一番使える話題のAIツール『Manus』の神機能・使い方・具体的な活用法を紹介します！【AIエージェント】",
+      "ytid": "8JcoxIsMeuw",
+      "title": "【ComfyUI】最新Qwen3 TTS！ローカルで動く高品質音声生成AIの使い方【ボイスクローン/感情表現】",
       "score": 28,
       "genre": "ai",
-      "sub": "Manus",
-      "channel": "ダイさん・AI活用の専門家",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "Gwo16JseEEg",
-      "title": "【ChatGPTユーザー必見】世界一わかりやすいCodexアプリの始め方完全ガイド",
-      "score": 28,
-      "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "Fujinの部屋",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "jSIwIhEdtSM",
-      "title": "【知らないと損】Notionの新AIがやばい…。仕事が爆速になる使い方教えます！",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "amity_sensei",
+      "sub": "Qwen",
+      "channel": "AI is in wonderland",
       "reason": "not_accepted"
     },
     {
@@ -2928,48 +1425,21 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "3DoCjimSZTU",
-      "title": "【AI資料作成の本命】Gamma2.0の使い方を徹底解説～スタジオジブリ風スライド、美しいレイアウト、PowerPointやGoogleスライド化、SNS画像やウェブサイトまで作れちゃう！",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Gamma",
-      "channel": "いけともch",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "Xg24P411ub0",
-      "title": "【画像生成AI】Adobe Fireflyの生成塗りつぶしと生成拡張の使い方【徹底解説】",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Adobe Firefly",
-      "channel": "Mappy Photo",
-      "reason": "not_accepted"
-    },
-    {
       "ytid": "PxiE8Vkk0gU",
       "title": "【2025年秋最新】これ1つでGeminiもVeoもNano Bananaも無料で使える！ Googleの万能AIスタジオ「Google AI Studio」完全ガイド！",
       "score": 28,
       "genre": "ai",
-      "sub": "Google Veo",
+      "sub": "Google AI Mode",
       "channel": "AI大学【AI&ChatGPT最新情報】",
       "reason": "not_accepted"
     },
     {
-      "ytid": "vS_IMDDio2I",
-      "title": "公務員試験の論文をゼロから完全攻略するロードマップ",
-      "score": 28,
-      "genre": "shikaku",
-      "sub": "国家公務員採用一般職試験",
-      "channel": "元県庁職員の山辺陽一│Fラン→5箇所に内定",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "NAZOfwvx5kA",
-      "title": "【2026年最新】最も簡単な動画編集ソフト「Vrew」の使い方これ1本！基本操作からAIテキスト生成までマスターしよう！",
+      "ytid": "wG9Xp1k7sc0",
+      "title": "AIで簡単動画作成！無料のHailuo AIの使い方【徹底解説】",
       "score": 28,
       "genre": "ai",
-      "sub": "Vrew",
-      "channel": "ひとみマンのOBS学校",
+      "sub": "Hailuo AI",
+      "channel": "AIマスターラボ",
       "reason": "not_accepted"
     },
     {
@@ -2982,57 +1452,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "_mRlcnUNE0g",
-      "title": "【最高】Notionの新しい \"議事録のAI\" が便利すぎるので解説します…！",
+      "ytid": "LBjcli9xSfE",
+      "title": "【Claude Code】AIと会話するだけでWebデザインが作れる！Figmaに取り込む方法も解説",
       "score": 28,
       "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "Rei丨暮らしとNotion。",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "5XxNIXgv-BM",
-      "title": "【超強力アプデ】Googleの動画生成AI「Veo 3.1」が4K＆縦長動画対応で表現力も爆上がり！実例つき解説！",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "AI大学【AI&ChatGPT最新情報】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "POrydYw_8hA",
-      "title": "Stable Diffusion Web UIの使い方について分かりやすく解説",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "レベルマ【生成AI情報発信】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "2QBXML3YU44",
-      "title": "超高品質な動画を作れる「Veo 3」を無料で使えるようになったGoogleのAI映像制作ツール「Flow」の概要と使い方！",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "AI大学【AI&ChatGPT最新情報】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "zcl5QukWAkg",
-      "title": "無料で使えるGoogleの画像生成編集AIツール「Whisk」の概要と使い方 ～Veo 3を使って無料で動画を作れる～",
-      "score": 28,
-      "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "AI大学【AI&ChatGPT最新情報】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "aW7HKndRhyI",
-      "title": "日本語がめちゃくちゃ流暢な音声AI「ElevenLabs」完全ガイド",
-      "score": 28,
-      "genre": "ai",
-      "sub": "ElevenLabs",
-      "channel": "HIROCODE.ヒロコード",
+      "sub": "Figma(Figma AI)",
+      "channel": "あやか⌇海外移住Webデザイナー",
       "reason": "not_accepted"
     },
     {
@@ -3045,21 +1470,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "Bh8FjGK7N_w",
-      "title": "【今日から使える】Notion AIの活用方法と、最速で使いこなすための方法を解説します！",
+      "ytid": "DHSMawXCkpY",
+      "title": "【2026年4月最新】ローカルLLM三強比較！Gemma 4・Qwen3.6・GLM-5.1をX・Reddit評判と性能データで徹底解説",
       "score": 28,
       "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "Rei丨暮らしとNotion。",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "vwCORphy730",
-      "title": "【無料OK】感情が動く日本語AI音声が凄すぎた…｜ElevenLabs徹底解説",
-      "score": 28,
-      "genre": "ai",
-      "sub": "ElevenLabs",
-      "channel": "[動画生成AI]  始め方_How To チャンネル ",
+      "sub": "Qwen",
+      "channel": "フレブルと学ぶ「AI」のあれこれ",
       "reason": "not_accepted"
     },
     {
@@ -3068,6 +1484,15 @@
       "score": 28,
       "genre": "ai",
       "sub": "Runway",
+      "channel": "[動画生成AI]  始め方_How To チャンネル ",
+      "reason": "not_accepted"
+    },
+    {
+      "ytid": "SW9vj0OwEaY",
+      "title": "PixVerseの使い方徹底解説｜画像1枚でここまで動く!? 話題のAI動画生成ツールを検証！",
+      "score": 28,
+      "genre": "ai",
+      "sub": "PixVerse",
       "channel": "[動画生成AI]  始め方_How To チャンネル ",
       "reason": "not_accepted"
     },
@@ -3081,75 +1506,21 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "QVl7njtsFZM",
-      "title": "【初心者向け】Pythonの独学完全ロードマップ【3ステップで解説】",
-      "score": 30,
-      "genre": "prog",
-      "sub": "Python3エンジニア認定基礎試験",
-      "channel": "Python・データサイエンス入門チャンネル -はやたす-",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "zL0prvb7AJc",
-      "title": "【Photoshop講座】フォトショップ勉強法！独学できる？",
-      "score": 28,
-      "genre": "video",
-      "sub": "Webクリエイター能力認定試験",
-      "channel": "Mappy Photo",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "MuU7Fk19zTI",
-      "title": "引き出したリアクションの頭文字で50音表を埋めろ！",
+      "ytid": "2hIq8-yUaCw",
+      "title": "【禁断の検証】1番使える翻訳アプリはどれなのか！1つだけ次元が違う...",
       "score": 27,
       "genre": "ai",
-      "sub": "Elicit",
-      "channel": "東海オンエア",
+      "sub": "Microsoft Translator",
+      "channel": "Kevin's English Room / 掛山ケビ志郎",
       "reason": "not_accepted"
     },
     {
-      "ytid": "mena7MwrN1I",
-      "title": "【神】無料で使える！高品質な音声合成ソフト3つを紹介するぜ！！！！",
+      "ytid": "eJHofUOWpG0",
+      "title": "【超便利】Google翻訳アプリの使い方！写真や声で翻訳・会話も訳せる！",
       "score": 27,
       "genre": "ai",
-      "sub": "VOICEVOX",
-      "channel": "ぷらぐら",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "93EBxppPYZg",
-      "title": "高校生で超難関簿記1級に続々合格、税理士試験も　財務・会計のエリート育成する商業高校",
-      "score": 27,
-      "genre": "shikaku",
-      "sub": "日商PC検定",
-      "channel": "tys NEWS DIG Powered by JNN",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "-OVLIG56uDg",
-      "title": "【実体験】私が３ヶ月で韓国語がペラペラになった方法！",
-      "score": 27,
-      "genre": "english",
-      "sub": "「ハングル」能力検定",
-      "channel": "アンニョン韓国語教室",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "TVoT6wPyRS0",
-      "title": "【知って得する】文字起こし最強の無料AIツール3つを比較検証！5分で動画と音声をテキスト化！",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Notta",
-      "channel": "KEITO【AI&WEB ch】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "he5_UUdXiG8",
-      "title": "【39回試験対応】耳で覚える『社会の理解』①｜福祉に係る法律や制度まとめ【介護福祉士試験対策】",
-      "score": 27,
-      "genre": "shikaku",
-      "sub": "介護職員初任者研修",
-      "channel": "キートン@介護福祉士試験対策",
+      "sub": "Microsoft Translator",
+      "channel": "スマキン【Smakin】",
       "reason": "not_accepted"
     },
     {
@@ -3171,129 +1542,21 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "KuR-lcoqrQY",
-      "title": "【超初心者向け】AWSとは？現役エンジニアが鬼わかりやすく徹底解説",
-      "score": 27,
-      "genre": "prog",
-      "sub": "AWS認定 クラウドプラクティショナー",
-      "channel": "TechAcademy [テックアカデミー]",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "yQV4o5u5lFc",
-      "title": "中国「DeepSeek」開発の低コスト生成AIが米に衝撃…AI開発の“ゲームチェンジャー”になるか その実力は？【Bizスクエア】",
+      "ytid": "89LaVIniQnM",
+      "title": "【Hailuo AI】エージェント搭載の動画生成AIが革命的すぎた…テキストだけでプロ級動画を自動作成",
       "score": 27,
       "genre": "ai",
-      "sub": "DeepSeek",
-      "channel": "TBS NEWS DIG Powered by JNN",
+      "sub": "Hailuo AI",
+      "channel": "KEITO【AI&WEB ch】",
       "reason": "not_accepted"
     },
     {
-      "ytid": "ubCU8hn5dZk",
-      "title": "【無料】日本語で話すだけ。AIエージェントでYouTube動画を自動で作る方法【Antigravity×Remotion】",
+      "ytid": "mwrd7epkrfE",
+      "title": "【昆虫食】急に出てきた食糧問題コオロギ陰謀論を考察【ゆっくり解説】",
       "score": 27,
       "genre": "ai",
-      "sub": "Manus",
-      "channel": "えーあいどりーむ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "nESKGJiFRdg",
-      "title": "【公務員試験】非高学歴が独学４ヶ月で地方上級試験に上位合格した完全攻略法",
-      "score": 27,
-      "genre": "shikaku",
-      "sub": "国家公務員採用一般職試験",
-      "channel": "Taiga | 社会人のリアル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "AgNGmnZUcaY",
-      "title": "【初心者向け🔰】Stable Diffusionの使い方・Google Colabでの導入方法について",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "AI FREAK - 最新のAIツールをご紹介",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "qDWSMoIARMY",
-      "title": "韓国語完全独学勉強方法！〜1年半の独学でTOPIK6級合格まで〜",
-      "score": 27,
-      "genre": "english",
-      "sub": "「ハングル」能力検定",
-      "channel": "모모채널 momochannel",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "qdenHTcLStc",
-      "title": "未経験者がAIでアプリ開発してみた！ChatGPTで本当に作れるのか検証",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Replit Agent",
-      "channel": "エンジニア転職チャンネル【RUNTEQ公式】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "Vkf1ZKrASyQ",
-      "title": "【grok】生成AIでのファクトチェックがXで流行？間違いも？信じるのはダメ？｜アベプラ",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Grok",
-      "channel": "ABEMA Prime #アベプラ【公式】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "RG1VZLf5Vio",
-      "title": "中国製の人工知能\"DeepSeek\"をRaspberry Pi 5で動かす!  ChatGPTより高性能?",
-      "score": 27,
-      "genre": "ai",
-      "sub": "DeepSeek",
-      "channel": "イチケン / ICHIKEN",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "F4mApkR4-PM",
-      "title": "【Grok】Xで女性の写真の服が勝手に脱がされて炎上、祭りになっている件について【生成AI】",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Grok",
-      "channel": "高須幹弥（高須クリニック）",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "W_ORlMmRJlE",
-      "title": "【実演あり】VOICEVOXでよい声を作る方法＆コツなどを10分で解説 ～イントネーションやテンポの調整など",
-      "score": 27,
-      "genre": "ai",
-      "sub": "VOICEVOX",
-      "channel": "ゆうぷろ / YuuPro",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "5o2Yv5TS1hY",
-      "title": "【真実】実は調理師免許持っていませんでした。だから取りました！この本さえあれば大丈夫！１冊の本だけで調理師資格を取得した３０代後半のおじさんが語ります。【マンガでわかる調理師試験】【調理師技術技能】",
-      "score": 27,
-      "genre": "shikaku",
-      "sub": "調理師",
-      "channel": "COCOCOROチャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "AX1jgfCOaNw",
-      "title": "【無料】流暢に日本語を喋るAI音声生成「ElevenLabs」が声優としてAI アニメや実況に使えるぞ！！",
-      "score": 27,
-      "genre": "ai",
-      "sub": "ElevenLabs",
-      "channel": "AI様の下僕",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "JsaHSxkRzMo",
-      "title": "Xの新機能Grokコンパニオンモードの落とし穴がヤバすぎた...【 都市伝説ニュース 】",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Grok",
-      "channel": "秘密結社コヤミナティ",
+      "sub": "Semantic Scholar",
+      "channel": "おしえて!オカルト先生",
       "reason": "not_accepted"
     },
     {
@@ -3306,39 +1569,21 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "GJ3aGQxO1Fk",
-      "title": "Google動画生成が無料ユーザーに開放！Veo3.1が無料で使えるGoogle Vids【Google アプデ】Google Veo3 無料【動画生成 無料】動画生成 AI 無料",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "橋本佳代 生成AI 自動化チャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "EgxXpgvhgr4",
-      "title": "【無料生成440本/月の裏ワザ】Veo3を半永久的にタダで使い倒す方法",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "[動画生成AI]  始め方_How To チャンネル ",
-      "reason": "not_accepted"
-    },
-    {
       "ytid": "3RFQZsgZ3nA",
       "title": "AIを使って爆速でアプリ開発を行うためのコーディングワークフロー【バイブコーディング/AI駆動開発】",
       "score": 27,
       "genre": "ai",
-      "sub": "Lovable",
+      "sub": "v0",
       "channel": "プログラミングチュートリアル",
       "reason": "not_accepted"
     },
     {
-      "ytid": "-ZxeLROmyDI",
-      "title": "【無料】リアルすぎる日本人のAI音声ツール10選を徹底比較してみた！",
+      "ytid": "R_SUj-b08e0",
+      "title": "AI丸投げでMV作ってみた！一括生成が最強すぎるHailuo AIのエージェント機能を紹介",
       "score": 27,
       "genre": "ai",
-      "sub": "ElevenLabs",
-      "channel": "RKJ VIDEO 【イケている動画を作りたいなら】",
+      "sub": "Hailuo AI",
+      "channel": "あずきちゃんねる",
       "reason": "not_accepted"
     },
     {
@@ -3351,57 +1596,39 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "axYcpEqoxHE",
-      "title": "iPhoneボイスメモアプリで文字起こし方法解説！【iPad / 文字起こしアプリ / 議事録アプリ / ボイスメモ文字起こしiPhone】",
+      "ytid": "45LQWAzC6kE",
+      "title": "【プロンプト全公開】この動画AI、ハリウッド級！Hailuo 2.3 徹底解説",
       "score": 27,
       "genre": "ai",
-      "sub": "Notta",
-      "channel": "佐藤辰則 / iPad・AI活用教室",
+      "sub": "Hailuo AI",
+      "channel": "チビクロTV 公式チャンネル",
       "reason": "not_accepted"
     },
     {
-      "ytid": "KsgNwrzIYE4",
-      "title": "ChatGPTを使っている人にぜひ使ってほしいAI『Manus』をご紹介します。",
+      "ytid": "fz8Ro9rY3Dg",
+      "title": "【実写系最強動画生成AI】映画級のリアルな動画を無料で作れる動画生成AIモデル「Hailuo 2.3」登場！",
       "score": 27,
       "genre": "ai",
-      "sub": "Manus",
-      "channel": "マメ",
+      "sub": "Hailuo AI",
+      "channel": "AI大学【AI&ChatGPT最新情報】",
       "reason": "not_accepted"
     },
     {
-      "ytid": "lqWUoRust0s",
-      "title": "なにコレ超便利！AI自動文字起こしアプリ『Notta』：録音/Web会議/ファイルから・iPhone/iPad/Macなど全部で使えるぞ",
+      "ytid": "rd_cMBN2Oek",
+      "title": "【無料】Flux.1 Kontextの一貫性が凄い！誰でも簡単に最強の画像生成AIが使えます。",
       "score": 27,
       "genre": "ai",
-      "sub": "Notta",
-      "channel": "Appleが大好きなんだよ",
+      "sub": "FLUX",
+      "channel": "AI様の下僕",
       "reason": "not_accepted"
     },
     {
-      "ytid": "c_eLqVe2h3U",
-      "title": "Googleの最新小型オープンLLMの日本語性能が異常に高い【Gemma 4】",
+      "ytid": "RvlPuvsMg98",
+      "title": "【無料】「Gemini Code Assist」がヤバすぎる！コーディング革命を体感せよ！",
       "score": 27,
       "genre": "ai",
-      "sub": "Gemma",
-      "channel": "だるまと赤べこ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "7Sx8e_85K8E",
-      "title": "ぼったくりの心配無用！！激安配車アプリBoltの使い方徹底解説！",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Bolt.new",
-      "channel": "TJ Channel Thailand",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "bWNHFuH43gE",
-      "title": "【vrewの使い方】vrewで文字起こししてPremiere Proに読み込むまで【動画編集/Premiere Pro/効率化】",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Vrew",
-      "channel": "やまとのニッチな動画編集チャンネル",
+      "sub": "Cline",
+      "channel": "こーすけ先生のGoogle塾",
       "reason": "not_accepted"
     },
     {
@@ -3414,48 +1641,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "UHERqVEGHEM",
-      "title": "【Stable-Diffusion】🔰めちゃ分かる！AnimateDiff解説＜基本編＞※修正版※ #stablediffusion #Animatediff  #prompttravel",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "ざすこ (道草_雑草子)",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "XBQ8Ez_a9cc",
-      "title": "【Stable Diffusion】Loraを最速で作成する方法を0から解説",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "JIJI【AI研究】",
-      "reason": "not_accepted"
-    },
-    {
       "ytid": "DeB3ElAak7I",
       "title": "Dalle3で同じキャラクターを作成する方法！違うポーズや表情の作成方法を解説します！",
       "score": 27,
       "genre": "ai",
       "sub": "DALL·E 3",
       "channel": "AI たろう",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "rVHiliYvuMk",
-      "title": "市役所職員になるには？公務員試験の内容や手順をゼロから解説",
-      "score": 27,
-      "genre": "shikaku",
-      "sub": "国家公務員採用一般職試験",
-      "channel": "ハチサン公務員",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "UjIa7_0oe8U",
-      "title": "【インスタ運用を自動化！？】ChatGPT超え！？無料で使えるAIエージェントManusとInstagramを連携してAI副業でお金を稼ぐ方法を超初心者向け徹底解説🔰【マナス】",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Manus",
-      "channel": "あべむつき【ラッキーマイン】",
       "reason": "not_accepted"
     },
     {
@@ -3477,30 +1668,30 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "Vob8GVNanBc",
-      "title": "【公務員試験】9分でわかる！社会人が公務員試験に合格するコツ4選【スタディング】",
+      "ytid": "UuZ3g5REF9U",
+      "title": "【無料】Google AI Studio Build超進化！自分専用ツールが誰でも作れる時代に【企業利用の設定方法も解説】",
       "score": 27,
-      "genre": "shikaku",
-      "sub": "国家公務員採用一般職試験",
-      "channel": "スタディング公務員チャンネル",
+      "genre": "ai",
+      "sub": "Google AI Mode",
+      "channel": "いけともch",
       "reason": "not_accepted"
     },
     {
-      "ytid": "ZKY1kU7Gp6Y",
-      "title": "【AWS資格】1ヶ月で合格する勉強法【エンジニア必見】",
+      "ytid": "br40IR3x4Q8",
+      "title": "【最新】AI × FigmaでLPデザインを作る方法｜初心者でも45分で効率よくプロ級に",
       "score": 27,
-      "genre": "prog",
-      "sub": "AWS認定 ソリューションアーキテクト",
-      "channel": "エンジニアファースト",
+      "genre": "ai",
+      "sub": "Figma(Figma AI)",
+      "channel": "あやか⌇海外移住Webデザイナー",
       "reason": "not_accepted"
     },
     {
-      "ytid": "ArXUvN9uNME",
-      "title": "【Python3エンジニア基礎認定試験】勉強方法＆勉強時間から会場選びまで超必勝法！",
+      "ytid": "Opzf_aiyixg",
+      "title": "Hailuo入門｜はじめてのAI動画生成を分かりやすく解説",
       "score": 27,
-      "genre": "prog",
-      "sub": "Python3エンジニア認定基礎試験",
-      "channel": "Smart Work Hacks",
+      "genre": "ai",
+      "sub": "Hailuo AI",
+      "channel": "FANTAN GLITCHBOX",
       "reason": "not_accepted"
     },
     {
@@ -3513,21 +1704,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "VKrQgd7Dfdo",
-      "title": "【有料級】OpenAIのCodexを全力徹底解説！この一本で全てが分かります",
+      "ytid": "cUWOFEv_y2w",
+      "title": "FLUX.1の使い方を紹介！【Stable Diffusionを超える高画質画像生成AIモデル】ローカルPCで実行する方法を紹介します",
       "score": 27,
       "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "まさおAIじっくり解説ch",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "1Q4u3-7cBqc",
-      "title": "【Pythonの資格】Python3エンジニア認定基礎試験 1章 食欲をそそってみようか",
-      "score": 27,
-      "genre": "prog",
-      "sub": "Python3エンジニア認定基礎試験",
-      "channel": "Pythonアカデミア",
+      "sub": "FLUX",
+      "channel": "のぶちゅーぶ",
       "reason": "not_accepted"
     },
     {
@@ -3540,78 +1722,6 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "DntZIedP-hc",
-      "title": "Python 3 エンジニア認定基礎試験 模擬試験の勉強法と問題解説【11/26キャリアセミナー２of2】",
-      "score": 27,
-      "genre": "prog",
-      "sub": "Python3エンジニア認定基礎試験",
-      "channel": "エンジニアキャリアアップ&採用情報【プライム・ストラテジー】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "vSh4byOJ6JQ",
-      "title": "調理師試験合格講座　26　栄養学　1　#調理師#調理師免許#栄養学",
-      "score": 27,
-      "genre": "shikaku",
-      "sub": "調理師",
-      "channel": "ここひろ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "CDQpPPsDeIw",
-      "title": "【2週間で合格！】AWS SAA（ソリューションアーキテクトアソシエイト）の勉強法！【社内SE直伝】 #AWS #IT #クラウド #資格 #試験 #勉強 #エンジニア #転職 #就職",
-      "score": 27,
-      "genre": "prog",
-      "sub": "AWS認定 ソリューションアーキテクト",
-      "channel": "【資格100個合格廃人】脱線おじさんの独学記",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "3WyXyoXwun4",
-      "title": "Zapierの概要と使い方【超入門 | 業務自動化ノーコードツール】",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Zapier",
-      "channel": "ますみ / 生成AIアカデミー",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "TA1Ir5Piamw",
-      "title": "Grokの使い方解説！【X（旧ツイッター）/ Grok3使い方 / グロック3 / 無料】",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Grok",
-      "channel": "佐藤辰則 / iPad・AI活用教室",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "tXrGpdy9SWw",
-      "title": "NotionにAI機能追加！レスポンス超早くて神仕様【使い方解説】",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "KEITO【AI&WEB ch】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "zte5nq6njyE",
-      "title": "GPT-4o超えのオープンモデル「llama 3.1」を解説＆ローカルで使ってみた",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Llama",
-      "channel": "だるまと赤べこ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "beWGywmi6Q4",
-      "title": "【徹底解説】Gamma AIでスライドとWEBサイトを爆速で作る方法：無料でできる",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Gamma",
-      "channel": "40歳からのAI活用塾",
-      "reason": "not_accepted"
-    },
-    {
       "ytid": "s2u8ii2LbzY",
       "title": "【ガチ結論】Kling AI、もうこれで良くないか？｜今できること総まとめ",
       "score": 27,
@@ -3621,102 +1731,21 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "w8OwYohSrWE",
-      "title": "調理師試験合格講座　70回目　食文化概論　7　独学合格をサポートします　#調理師　#調理師免許　#調理師免許の勉強　#食文化概論　#郷土料理",
-      "score": 27,
-      "genre": "shikaku",
-      "sub": "調理師",
-      "channel": "ここひろ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "EFUMYu8Lmn8",
-      "title": "【公務員試験】やってはいけない勉強法TOP3",
-      "score": 27,
-      "genre": "shikaku",
-      "sub": "国家公務員採用一般職試験",
-      "channel": "公務員試験【上位1%合格者】の戦略-ライジン",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "nVpyfR7kxX0",
-      "title": "Grokで英会話する方法解説！【Grok使い方 / グロック英会話 /  英会話アプリ / Grok3】",
+      "ytid": "LB7fjozejFo",
+      "title": "【超高速！】動画生成AI「pixverse」の使い方／クオリティーの高い動画が簡単に作れる！",
       "score": 27,
       "genre": "ai",
-      "sub": "Grok",
-      "channel": "佐藤辰則 / iPad・AI活用教室",
+      "sub": "PixVerse",
+      "channel": "さんしろうのAI起業塾",
       "reason": "not_accepted"
     },
     {
-      "ytid": "PjKVqj7hN-w",
-      "title": "【python3エンジニア認定基礎試験】フリーランスが今すぐ取るべき資格とは？#python3 #python #フリーランスエンジニア",
-      "score": 27,
-      "genre": "prog",
-      "sub": "Python3エンジニア認定基礎試験",
-      "channel": "エンジニアファースト",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "WiL5yVimTCk",
-      "title": "【AIで稼ぎたいなら使うべき❗️】AI副業と1番相性が良い無料AI⁉️v0[ブイゼロ]の使い方とお金を稼ぐ方法を超初心者向け徹底解説❗️【AI使い方】",
+      "ytid": "_8EgwsbAbLc",
+      "title": "【複雑な設定不要！】PixVerseの機能・使い方を徹底解説！",
       "score": 27,
       "genre": "ai",
-      "sub": "v0",
-      "channel": "あべむつき【ラッキーマイン】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "F4mVwBMQhIs",
-      "title": "【これで合格できた！】AWS SAA ソリューションアーキテクトアソシエイトの勉強法",
-      "score": 27,
-      "genre": "prog",
-      "sub": "AWS認定 ソリューションアーキテクト",
-      "channel": "【資格100個合格廃人】脱線おじさんの独学記",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "3L1JCHBCwPI",
-      "title": "GPTとZapierの連携方法をわかりやすく解説！",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Zapier",
-      "channel": "にゃんたのAIチャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "DHSMawXCkpY",
-      "title": "【2026年4月最新】ローカルLLM三強比較！Gemma 4・Qwen3.6・GLM-5.1をX・Reddit評判と性能データで徹底解説",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Qwen",
-      "channel": "フレブルと学ぶ「AI」のあれこれ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "aQx3804fhQg",
-      "title": "【AWS クラウドプラクティショナー】どんな資格？取得メリット、合格の近道、頻出概念を解説！",
-      "score": 27,
-      "genre": "prog",
-      "sub": "AWS認定 ソリューションアーキテクト",
-      "channel": "100日後に合格するずんだもん【IT・クラウド資格解説】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "ZDMYP91TxWw",
-      "title": "【知らなきゃ損】ZapierのMCPサーバーが公開されたので試した結果、マジで良かったので導入解説します！これは今後より活用されそうです",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Zapier",
-      "channel": "まさおAIじっくり解説ch",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "tvC_OHujAYc",
-      "title": "最強のバイブコーディングツール「Replit」入門！自分専用AIツールを爆速開発する方法",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Replit Agent",
-      "channel": "いけともch",
+      "sub": "PixVerse",
+      "channel": "InIchiGaSan 【AI x 3DCG x Movie Lab】",
       "reason": "not_accepted"
     },
     {
@@ -3729,111 +1758,39 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "X12H385mDI4",
-      "title": "【クーポン有】価格重視派ならコレ！コスパ最強AIボイスレコーダー「Notta Memo」徹底解説レビュー！アプリ・Web版連携で仕事効率爆上げ！",
+      "ytid": "tvC_OHujAYc",
+      "title": "最強のバイブコーディングツール「Replit」入門！自分専用AIツールを爆速開発する方法",
       "score": 27,
       "genre": "ai",
-      "sub": "Notta",
-      "channel": "ニノ /  MONOTIVE",
+      "sub": "Replit Agent",
+      "channel": "いけともch",
       "reason": "not_accepted"
     },
     {
-      "ytid": "JvaJwwrHG00",
-      "title": "【無料で始める創作革命】AIで画像・動画・音声ぜんぶ生成！ アドビのオールインワンAI「Firefly」徹底解説！",
+      "ytid": "4KZ_8AO9JcY",
+      "title": "【ローカルの星】Qwen 3.5の軽量モデル登場！Agent性能が爆上がりでこれは期待できるので解説します",
       "score": 27,
       "genre": "ai",
-      "sub": "Adobe Firefly",
-      "channel": "AI大学【AI&ChatGPT最新情報】",
+      "sub": "Qwen",
+      "channel": "まさおAIじっくり解説ch",
       "reason": "not_accepted"
     },
     {
-      "ytid": "kicUnXaDeyE",
-      "title": "【2025年版】Notionの料金プランを解説 | Notion AIの料金とオススメプランも合わせてお伝えします",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "円谷 | Notion公式アンバサダー",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "CLnCsfODKt4",
-      "title": "【無料で使える】声優ボイスを量産できる音声AIプラットフォームの⁠「ElevenLabs」のテキスト読み上げモデル「Eleven v3」の概要・使い方・活用事例",
-      "score": 27,
-      "genre": "ai",
-      "sub": "ElevenLabs",
-      "channel": "AI大学【AI&ChatGPT最新情報】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "qdqLyf9r_Co",
-      "title": "遂に登場！LLaMA 2の特徴と使い方について解説",
-      "score": 27,
-      "genre": "ai",
-      "sub": "Llama",
-      "channel": "にゃんたのAIチャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "b6zE9knuXIQ",
-      "title": "【比較】ボイボずんだもん(無料) VS ボイスピずんだもん(有料) VS セイレンボイスずんだもん(有料ボイチェン)",
+      "ytid": "_BjuaIX17DY",
+      "title": "この物体は何？はんだ作業に不可欠なフラックスについてご紹介します！",
       "score": 26,
       "genre": "ai",
-      "sub": "VOICEVOX",
-      "channel": "ずんだあかり",
+      "sub": "FLUX",
+      "channel": "倹約DIY",
       "reason": "not_accepted"
     },
     {
-      "ytid": "L_I43cz79xA",
-      "title": "【韓国語勉強】独学で韓国語が話せるようになった勉強方法📖✏️ 독학으로 한국어를 할 수 있게 된 공부법!",
-      "score": 26,
-      "genre": "english",
-      "sub": "「ハングル」能力検定",
-      "channel": "水瀬さくら / Sakura Mizuse",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "gIWAOjoTXCk",
-      "title": "【簿記３級】知識ゼロから２週間（45時間）で満点合格した話",
-      "score": 26,
-      "genre": "shikaku",
-      "sub": "日商PC検定",
-      "channel": "謎バラ【人生切り抜き系YouTuber】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "54CwO_fBVbY",
-      "title": "【河野玄斗】資格試験にも使える！周回の速度をあげろ！膨大な量の科目を周回するコツ【勉強/資格】",
-      "score": 26,
-      "genre": "shikaku",
-      "sub": "第二種衛生管理者",
-      "channel": "河野玄斗の勉強部屋【切り抜き】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "SbDkl32z2Ok",
-      "title": "【WEBデザイン】未経験、独学で1週間本気で勉強したらどこまでいけるのか？【Udemyユーデミー】",
-      "score": 26,
-      "genre": "video",
-      "sub": "Webクリエイター能力認定試験",
-      "channel": "さも / samo log.",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "scrpDXab9c0",
-      "title": "まるっとわかる！衛生管理者合格学習法",
-      "score": 26,
-      "genre": "shikaku",
-      "sub": "第二種衛生管理者",
-      "channel": "これだけ!安全衛生Ch【ウェルネット】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "aqm-eqShPcE",
-      "title": "【Stable-Diffusion】🔰導入後はまずはこの３つを入れよう！ #stablediffusion #prompt_all_in_one #vae  #easynegative",
+      "ytid": "rYdhJn8aixM",
+      "title": "【本気でおすすめ】無料スマホ生成AIアプリ３選！",
       "score": 26,
       "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "ざすこ (道草_雑草子)",
+      "sub": "PixVerse",
+      "channel": "KEITO【AI&WEB ch】",
       "reason": "not_accepted"
     },
     {
@@ -3846,24 +1803,6 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "5KorZPTu9LA",
-      "title": "AWS資格全冠取得エンジニアの勉強ルーティン【習慣化のコツ】",
-      "score": 26,
-      "genre": "prog",
-      "sub": "AWS認定 ソリューションアーキテクト",
-      "channel": "いまさらハック",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "ZIAYY9Rn4kA",
-      "title": "【調理師試験対策】過去問や問題集でよく見る単語をまとめてみました！！",
-      "score": 26,
-      "genre": "shikaku",
-      "sub": "調理師",
-      "channel": "大好きな事を探して　～ひろチャンネル～",
-      "reason": "not_accepted"
-    },
-    {
       "ytid": "d280eDl8A30",
       "title": "《初心者向け》シンセシアの使い方 - synthesia ※概要欄にも詳細あり【MIDI動画解説#1】日本語版・セットアップ方法",
       "score": 26,
@@ -3873,30 +1812,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "vns1VsfYBTM",
-      "title": "ランキング常連のあの文字起こしアプリ「Notta」をご紹介します。",
+      "ytid": "qO6eK1cmpo8",
+      "title": "【1日密着】いま急成長中の外資IT企業で働くエンジニアのリアルな1日(DevRel) | Supabaseエンジニア",
       "score": 26,
       "genre": "ai",
-      "sub": "Notta",
-      "channel": "マメ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "NLT6fkbV5p8",
-      "title": "\"独学韓国語勉強法\"完全独学でも９割取る！ハングル検定勉強法📖|テキスト・ノート紹介|한국어 공부",
-      "score": 26,
-      "genre": "english",
-      "sub": "「ハングル」能力検定",
-      "channel": "mei",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "zG2M1hNQQ9Q",
-      "title": "【新機能】Manus Skillsとは？複数スキルを組み合わせて仕事を自動化",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Manus",
-      "channel": "Manus 公式 (マナス)",
+      "sub": "Supabase",
+      "channel": "TECH WORLD",
       "reason": "not_accepted"
     },
     {
@@ -3909,102 +1830,39 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "e9TH-hqvb1g",
-      "title": "【話題】毎日使うManusで作業時間が80％削減できた理由",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Manus",
-      "channel": "カズチャンネル/Kazu Channel",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "GoO7ze_xHps",
-      "title": "【2025年最新版】無料で使えるGoogle動画生成AI Veo3でプロ級の映像を2分で作る方法！【Veo3】",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "みかみ【東大退学させられた男】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "WSZzaxy5RSU",
-      "title": "【革命】Google AI Studio × Vrew で \"文字起こし\" が爆速になってしまった件について【動画編集/効率化】",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Vrew",
-      "channel": "やまとのニッチな動画編集チャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "8poYdEqGiAs",
-      "title": "【日商PC検定データ活用3級】Aパターン｜文書作成3級の解き方解説その①｜文書を構成する、表の編集、解き方のコツ",
-      "score": 26,
-      "genre": "shikaku",
-      "sub": "日商PC検定",
-      "channel": "現役パソコンインストラクターのオンラインパソコン教室",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "9GHcy64Avbg",
-      "title": "【始動】99%が知らない「ローカルLLM」の世界。Google最新Gemma 3を無料で構築する方法【ローカルLLM構築計画#1】#Ollama",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Ollama",
-      "channel": "reckの知識の森",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "uw61XYJG1gQ",
-      "title": "【超使える‼️】「ChatGPT/Gemini2.5 Pro DeepResearch」と「Gamma」を使って資料作成を超効率化する方法",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Gamma",
-      "channel": "mikimiki web スクール",
-      "reason": "not_accepted"
-    },
-    {
       "ytid": "GTENtW-3BrY",
       "title": "【これから必須の選択肢】無料安全OllamaローカルAIで自動化する方法",
       "score": 26,
       "genre": "ai",
-      "sub": "Qwen",
+      "sub": "OpenClaw",
       "channel": "クウキデザイン |  Kuuki Design",
       "reason": "not_accepted"
     },
     {
-      "ytid": "YNAgD7F8cIg",
-      "title": "【Notion活用術】業務効率化と生産性を最大化するタスク管理術",
+      "ytid": "Ai1MbeKJZVs",
+      "title": "映画レベルのAI動画を作れる時代がついに！？「Hailuo AI」の進化が凄すぎた",
       "score": 26,
       "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "西崎康平 ブラックな社長",
+      "sub": "Hailuo AI",
+      "channel": "NOMAN AI",
       "reason": "not_accepted"
     },
     {
-      "ytid": "2wHAAk_XQOU",
-      "title": "GeminiでもChatGPTでもない。今一番使っているメインのAI「Manus」が最近凄すぎる件",
+      "ytid": "Y6Ymzo-qS4M",
+      "title": "【初心者向け】無料で使えるAI「Gemini」の基本操作🔰",
       "score": 26,
       "genre": "ai",
-      "sub": "Manus",
-      "channel": "ワタナベカズマサ",
+      "sub": "Google AI Mode",
+      "channel": "HelloTips【スマホ超入門講座】",
       "reason": "not_accepted"
     },
     {
-      "ytid": "sxCGG6W4PEg",
-      "title": "【無料で使える】AIエージェント『Manus』の進化が凄い！資料・動画・Webサイトなどをハイクオリティに生成できる",
+      "ytid": "rZhjakEZfSw",
+      "title": "【Suno v5登場】ハズレなしの日本語ボーカル曲を作れる！ ～最速レビュー＆ChatGPTと組み合わせてヒット曲を作る～",
       "score": 26,
       "genre": "ai",
-      "sub": "Manus",
-      "channel": "KEITO【AI&WEB ch】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "OkLU-ZOAOMo",
-      "title": "話題の自律型AIエージェント「Manus」が凄い！実際に使って理解した活用法10選",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Manus",
-      "channel": "KEITO【AI&WEB ch】",
+      "sub": "PixVerse",
+      "channel": "AI大学【AI&ChatGPT最新情報】",
       "reason": "not_accepted"
     },
     {
@@ -4017,129 +1875,57 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "UekmdN6UQTc",
-      "title": "【神連携】Google開発の無料AI「NotebookLM×Manus」でWebサイト制作が一瞬でできるAI活用法を紹介します!【WEB制作】",
+      "ytid": "BQLRduuiGR4",
+      "title": "Claude Code × Figmaで「AI感を消す」Webサイト・UIを作る方法【Figma MCP/バイブコーディング】",
       "score": 26,
       "genre": "ai",
-      "sub": "Manus",
-      "channel": "としのフリーランス養成所【WEB制作】",
+      "sub": "Figma(Figma AI)",
+      "channel": "プログラミングチュートリアル",
       "reason": "not_accepted"
     },
     {
-      "ytid": "JumiB0JkNHw",
-      "title": "美少女キャラ簡単作成 stable diffusion WEB-UI導入方法【ゆっくり解説】【VOICEROID解説】",
+      "ytid": "3Frlt0CFgxY",
+      "title": "【Hailuo AI】動画生成AIとオリジナル音声でYouTube収益化！",
       "score": 26,
       "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "ゆっくり日常の疑問解決美少女",
+      "sub": "Hailuo AI",
+      "channel": "AI副業チャンネル AIクリエーターMARIA",
       "reason": "not_accepted"
     },
     {
-      "ytid": "bvloguxEwwE",
-      "title": "著者が教える！NotionAIよく使う9個の事例",
+      "ytid": "i2g3JmUwJB8",
+      "title": "デザイン制作の「常識がぶっ壊れた」件。FigmaとAIで変わるデザイナーの本当の仕事",
       "score": 26,
       "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "#usutaku_channel",
+      "sub": "Figma(Figma AI)",
+      "channel": "BONO-カイクン",
       "reason": "not_accepted"
     },
     {
-      "ytid": "xqeMYCRyzhY",
-      "title": "【ずんだもん】RTX5060Tiを買ったので、Stable Diffusionをインストールしたのだ！この動画はインストール手順の備忘録なのだ。〔25/06/01〕",
+      "ytid": "rYScsZPTcZ4",
+      "title": "【ほぼ無料】Hailuo AI × MiniMax Audioが神進化！映像も音声もAIで完成！",
       "score": 26,
       "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "📸カメラが好きなずんだもん",
+      "sub": "Hailuo AI",
+      "channel": "StableDiffusion等 チュートリアル & 自作アニメ",
       "reason": "not_accepted"
     },
     {
-      "ytid": "MUGlPr0ENWE",
-      "title": "【測量士補試験・土地家屋調査士試験】1年でダブル合格する秘訣を徹底解説！｜アガルートアカデミー",
+      "ytid": "CZlZgRo0bZ4",
+      "title": "【Supabase入門】Todoアプリを作りながらSupabaseをNext.jsとTypescriptで学んでみよう",
       "score": 26,
-      "genre": "shikaku",
-      "sub": "測量士補",
-      "channel": "【土地家屋調査士試験】アガルートの最短ルートTV",
+      "genre": "ai",
+      "sub": "Supabase",
+      "channel": "プログラミングチュートリアル",
       "reason": "not_accepted"
     },
     {
-      "ytid": "ahsCfJiJiVc",
-      "title": "無制限に動画生成できる「DomoAI」が万能ツールだった！【リップシンクやAIアバターも便利】",
+      "ytid": "O5R4EZjkduw",
+      "title": "【検索が終わる】Google AIモードが登場！今、知っておきたいLLMOやAI検索のこと",
       "score": 26,
       "genre": "ai",
-      "sub": "HeyGen",
+      "sub": "Google AI Mode",
       "channel": "KEITO【AI&WEB ch】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "yvJkufDaU_8",
-      "title": "CodexがClaude Codeより優れているところ / Codexは速い!安い!使いやすい! / 画像生成が最高すぎる / ローカルLLMの話が多め",
-      "score": 26,
-      "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "ウェブ職TV@AIセキュリティ専門",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "xdlypUAIuhI",
-      "title": "Veo 3.1×Flowで企業CMを45分で作る全手順｜Google 動画生成AIが2026年神アプデ！無料でもOK",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "KOTARO AI & VIDEO AI動画 × ビジネス研究所",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "mY5KE8Zsce0",
-      "title": "Openclaw+Ollamaが正解、ってことでもう良いかもしれない",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Ollama",
-      "channel": "クウキデザイン |  Kuuki Design",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "7LuDAzEn_AU",
-      "title": "僕たちが本当に待っていた「NotionのAI」は、これです。",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "マメ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "zV3zj_vKF1k",
-      "title": "【Manusメンバー登場】最強AIエージェントManusの活用事例8選",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Manus",
-      "channel": "#usutaku_channel",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "GoKunIx0oPc",
-      "title": "【画像生成AI】Adobe Firefly ベータ版の使い方",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Adobe Firefly",
-      "channel": "Mappy Photo",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "Y48A0z8vzhg",
-      "title": "【ガチ検証】楽天ROOMを7日間「Manus」で自動化した収益を公開します。",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Manus",
-      "channel": "AI収益化ラボ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "Uisstid7F0c",
-      "title": "【無料なのに超自然…！】日本人AI音声読み上げソフトおすすめ度ランキングTOP9",
-      "score": 26,
-      "genre": "ai",
-      "sub": "VOICEVOX",
-      "channel": "Youtubeショート収益化チャンネルおさむ",
       "reason": "not_accepted"
     },
     {
@@ -4152,6 +1938,15 @@
       "reason": "not_accepted"
     },
     {
+      "ytid": "cl6bNHu14cw",
+      "title": "GoogleのローカルLLM「Gemma 4」を使ってみた",
+      "score": 26,
+      "genre": "ai",
+      "sub": "OpenClaw",
+      "channel": "入江慎吾 / アプリ開発FIRE",
+      "reason": "not_accepted"
+    },
+    {
       "ytid": "EOo2OEcZrYc",
       "title": "新たなローカルLLMが世界最高性能を一年ぶりに更新【Qwen 3.5】",
       "score": 26,
@@ -4161,12 +1956,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "cl6bNHu14cw",
-      "title": "GoogleのローカルLLM「Gemma 4」を使ってみた",
+      "ytid": "TH0RmbYHB88",
+      "title": "人気AI「突然の終了」とクリエイターの魔女狩り…。Runway・Sunoの神アプデとOpenAIの極秘デバイスも判明！【AIニュース】",
       "score": 26,
       "genre": "ai",
-      "sub": "Qwen",
-      "channel": "入江慎吾 / アプリ開発FIRE",
+      "sub": "Runway",
+      "channel": "あずきちゃんねる",
       "reason": "not_accepted"
     },
     {
@@ -4176,33 +1971,6 @@
       "genre": "ai",
       "sub": "OpenClaw",
       "channel": "ウェブ職TV@AIセキュリティ専門",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "2hHJ4Y5Ms6Q",
-      "title": "【実験した】AI自動文字起こし『Notta』(ノッタ)の実力を試すためテスト文章を作って実際に使ってみた！",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Notta",
-      "channel": "ためになるAppleの話",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "TZFL6b7PDxs",
-      "title": "【2025年版】AWSクラウドプラクティショナー必修用語150選 part1",
-      "score": 26,
-      "genre": "prog",
-      "sub": "AWS認定 クラウドプラクティショナー",
-      "channel": "耳で学ぶクラウドネットワーク",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "l_ZdM6mf07g",
-      "title": "【AI❌英会話】最新AI「Grok 3」の会話機能がすごすぎた…ChatGPT超えの実力！？",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Grok",
-      "channel": "エリーのAI英語ラボ",
       "reason": "not_accepted"
     },
     {
@@ -4224,57 +1992,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "py6-ywwG7MU",
-      "title": "Codexで非エンジニアでもアプリ作れた",
-      "score": 26,
-      "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "本気AI(MAJI AI)",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "-Y87qISTUz8",
-      "title": "17年前の斎藤元彦が衝撃。佐渡市職員時代、ベテラン市議に叱責されヘラヘラ笑う31歳の姿【菅野完氏 政治解説切り抜き】",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Elicit",
-      "channel": "菅野完 政治解説ハイライト【切り抜き】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "tAwrGBVjmhQ",
-      "title": "【無料から使える】動画フルテロップがたった1分！爆速のAI動画編集ソフト Vrewが神すぎる。",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Vrew",
-      "channel": "高澤 けーすけ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "4CZsFpfM5ps",
-      "title": "【検証】禁断のAI『Grok』iOSアプリ登場...ChatGPTには絶対に出せない衝撃の返答！",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Grok",
-      "channel": "生成AIビジネス・ラボ",
-      "reason": "not_accepted"
-    },
-    {
       "ytid": "bO9GCpmoJkc",
       "title": "【AIアバター/リップシンク検証】AIアバターはどれがおすすめ？「DomoAI・HeyGen・Kling」その他6つのツールの無料枠・料金・性能を徹底比較しました。",
       "score": 26,
       "genre": "ai",
       "sub": "HeyGen",
       "channel": "AI動画の裏側 | 内山",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "9FKLUDgYuMI",
-      "title": "休日２時間ずつの勉強で衛生管理者第一種受験してみた結果‥！！【総集編】【休日２時間資格チャレンジ】",
-      "score": 26,
-      "genre": "shikaku",
-      "sub": "第二種衛生管理者",
-      "channel": "資格100個取ろうぜ!【100とろ】",
       "reason": "not_accepted"
     },
     {
@@ -4287,42 +2010,6 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "K1WMvlIVOTA",
-      "title": "【Veo3.1登場！】無料でも使えるGoogleの高性能動画生成AIモデル！ ～声や効果音の付いた1分以上の高画質動画を作れる～",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "AI大学【AI&ChatGPT最新情報】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "y95COIGReo4",
-      "title": "【2026最新】Adobe Fireflyの始め方【画像・動画生成AI】",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Adobe Firefly",
-      "channel": "Mappy Photo",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "pMM3mJvLjOs",
-      "title": "【Stable Diffusion】画像から画像を作成するimg2imgの使い方について解説",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "レベルマ【生成AI情報発信】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "3tXQ4KqkG1Y",
-      "title": "【新生活セール】LINEも録音できるぞ。話題のNottaのAIボイスレコーダー、実際に使ってみました。",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Notta",
-      "channel": "マメ",
-      "reason": "not_accepted"
-    },
-    {
       "ytid": "nMxKwOAQbEA",
       "title": "【質問回答】AI動画はこの1つでいい？ 無料で思い通りに作るには？最強ツールと裏技の最前線を全公開します",
       "score": 26,
@@ -4332,12 +2019,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "aQBibeQQk9U",
-      "title": "【公務員試験】これ勉強するな！社会人・大学生が2026年試験を楽に合格する方法【スタディング】",
+      "ytid": "R0cj88Ct1Vo",
+      "title": "声を複製(クローン)して日本語を喋らせることのできる無料のAIツール3選！ ～Minimax Audio、Cartesia、Zyphra～",
       "score": 26,
-      "genre": "shikaku",
-      "sub": "国家公務員採用一般職試験",
-      "channel": "スタディング公務員チャンネル",
+      "genre": "ai",
+      "sub": "PixVerse",
+      "channel": "AI大学【AI&ChatGPT最新情報】",
       "reason": "not_accepted"
     },
     {
@@ -4350,33 +2037,6 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "j7Mot4sZpEQ",
-      "title": "ついに日本語解禁！Google Vidsで動画・音楽・ナレーションを全自動で作る方法【Veo 3.1 / Lyria 3】",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "あやや の ITスキルアップ塾",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "e_L6jTSem2o",
-      "title": "【驚愕】万能AI「Manus」が凄すぎる！検索・調査・漫画・ゲーム・動画まで自動生成！",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Manus",
-      "channel": "みずおじさん / 誰でも分かるスマホ講座",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "VWz_IKj20xs",
-      "title": "新卒1年目🌸1ヶ月でﾋﾞｼﾞﾈｽ会計検定3級に合格する勉強法",
-      "score": 26,
-      "genre": "kaikei",
-      "sub": "ビジネス会計検定試験",
-      "channel": "会社員Mのささやき",
-      "reason": "not_accepted"
-    },
-    {
       "ytid": "Ci54m9Yz2c4",
       "title": "【Kling 3.0 x ナノバナナ x Suno】一人で映画制作可能 !!!",
       "score": 26,
@@ -4386,12 +2046,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "RG4YRua-lXI",
-      "title": "AWSのチート勉強法は○○です。ブラックSES時代から振り返り、誰でも自然に強くなれる本質的な方法を語ります。",
+      "ytid": "HuZX_yoIwOE",
+      "title": "【徹底比較】動画生成AI Pollo, Sora2, Kling, Hailuo, PixVerse, Seedanceはどれが最強？性能を比較した結果、目的別のおすすめはコレ！",
       "score": 26,
-      "genre": "prog",
-      "sub": "AWS認定 ソリューションアーキテクト",
-      "channel": "くろかわこうへい【渋谷で働いてたクラウドエンジニアTV】",
+      "genre": "ai",
+      "sub": "Hailuo AI",
+      "channel": "とうや【AIイラストLab.】",
       "reason": "not_accepted"
     },
     {
@@ -4404,66 +2064,48 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "LNf8WEoDRx4",
-      "title": "【神アプデ】Notion AI 超進化！実際に使えるアップデート内容を3つ紹介します",
+      "ytid": "qjLK8OyIWeU",
+      "title": "【衝撃】請求書画像→ChatGPTでインポートしてExcelに取り込んだらすごい精度だった！社会人はこのAI活用で生産性が爆上がりする！",
       "score": 26,
       "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "円谷 | Notion公式アンバサダー",
+      "sub": "ChatPDF",
+      "channel": "ひかりのAI大学",
       "reason": "not_accepted"
     },
     {
-      "ytid": "RUgNMlY7GV8",
-      "title": "【無料でも使える】音声生成AI「ElevenLabs」で感情あふれる日本語ボイスを作る方法6選",
+      "ytid": "cxfJIcZg3Z4",
+      "title": "【超簡単】Claude Code × Figmaで「AI感なし」のWebサイト・UIを一瞬で制作する方法【WEB制作・コーディング】",
       "score": 26,
       "genre": "ai",
-      "sub": "ElevenLabs",
-      "channel": "タナベ@フラグメンツ【動画・音声生成AI解説】",
+      "sub": "Figma(Figma AI)",
+      "channel": "としのフリーランス養成所【WEB制作】",
       "reason": "not_accepted"
     },
     {
-      "ytid": "ZdTIRBOhhoI",
-      "title": "AIボイスって本当に自然になるの？日本語が滑らかなAi音声合成ソフト|Gemini Speech Generation",
+      "ytid": "xBMBniGwg8w",
+      "title": "【文字起こし】無料で音声をリアルタイムに翻訳して文字起こしする方法【 Windows11 / 無料 / PC /  mp3 / mp4 / 動画】",
       "score": 26,
       "genre": "ai",
-      "sub": "ElevenLabs",
-      "channel": "【動画編集 初心者向けチャンネル】-Filmoraフィモーラでもっと楽しく編集しよう-",
+      "sub": "Microsoft Translator",
+      "channel": "ねこぴーのIT活用",
       "reason": "not_accepted"
     },
     {
-      "ytid": "XcaS5pJCfGU",
-      "title": "【AWSクラウドプラクティショナー】2ステップで勉強をして必ず合格！｜実体験を基に徹底解説",
+      "ytid": "mcJww_qurKQ",
+      "title": "Clineで爆速プログラミング。自動コーディングがヤバい。",
       "score": 26,
-      "genre": "prog",
-      "sub": "AWS認定 クラウドプラクティショナー",
-      "channel": "アユト / Ayuto",
+      "genre": "ai",
+      "sub": "Cline",
+      "channel": "入江慎吾 / アプリ開発FIRE",
       "reason": "not_accepted"
     },
     {
-      "ytid": "AUCwX1ULM_M",
-      "title": "LM StudioでローカルAIがもっと身近に！セットアップ方法と使用感は？",
+      "ytid": "hFfkkN94fwI",
+      "title": "【超簡単】SupabaseのMCPをCursorから使ってみた【絶対やった方がいい】",
       "score": 26,
       "genre": "ai",
-      "sub": "Ollama",
-      "channel": " Tech千一夜 | ソフトウェアの作り方チャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "Zpv3CyLGehM",
-      "title": "DeepSeekをローカル上で安全に使う方法：Ollama（オラマ）を使用。日本語ファインチューニング版も試してみよう",
-      "score": 26,
-      "genre": "ai",
-      "sub": "DeepSeek",
-      "channel": "Junko・AIラボ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "G1MDYlbY-Ak",
-      "title": "無料のローカル生成AIをOllamaで始める方法",
-      "score": 26,
-      "genre": "ai",
-      "sub": "Ollama",
-      "channel": "クロノITチャンネル",
+      "sub": "Supabase",
+      "channel": "taishiyade@元シリコンバレーCTO個人開発者",
       "reason": "not_accepted"
     },
     {
@@ -4476,174 +2118,39 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "wqW0D-lGU-w",
-      "title": "【衛生管理者】たった1ヶ月で独学一発合格できる勉強法大公開❗️(合格率、参考書など)",
-      "score": 26,
-      "genre": "shikaku",
-      "sub": "第二種衛生管理者",
-      "channel": "とある31歳独身会社員の資格勉強チャレンジ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "vsibWh0p1ag",
-      "title": "【Python3エンジニア認定基礎試験】年収上げるなら今すぐ取れ！#python  #エンジニア資格 #python3",
-      "score": 26,
-      "genre": "prog",
-      "sub": "Python3エンジニア認定基礎試験",
-      "channel": "エンジニアファースト",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "xIgu1IDzHhU",
-      "title": "申込から合格まで！実務者研修取得までの全ステップと現場での活かし方",
-      "score": 26,
-      "genre": "shikaku",
-      "sub": "介護職員初任者研修",
-      "channel": "株式会社Nature Heals",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "qQ4IjOSwxpQ",
-      "title": "【簿記とセットで！】ビジネス会計検定3級の勉強法&合格体験記",
-      "score": 26,
-      "genre": "kaikei",
-      "sub": "ビジネス会計検定試験",
-      "channel": "【資格100個合格廃人】脱線おじさんの独学記",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "YoeQRFx4OLs",
-      "title": "1日の 講習 で取れる 資格 を10個紹介【国家資格】【就職に有利】【資格マニア】【特別教育】【修了試験】【簡単】【食品衛生責任者】【特別管理産業廃棄物管理責任者】【粉じん】【丸のこ】【刈払機】",
-      "score": 25,
-      "genre": "shikaku",
-      "sub": "介護職員初任者研修",
-      "channel": "資格マニアY.M",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "MiZeftFDIaY",
-      "title": "【喋らせAI】イラスト・写真・アバターをしゃべらせる動画生成ＡＩ５選！特長を徹底比較！生成サンプルも大量披露！ディープフェイク動画の備えも！",
+      "ytid": "nwC4Ky0QL-k",
+      "title": "無名AI企業が作った超小型日本語LLMの性能が高すぎる【LFM 2.5-JP】",
       "score": 25,
       "genre": "ai",
-      "sub": "HeyGen",
-      "channel": "365日の学び　～たいぞうのITカフェ～",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "Olv_wkJTtDo",
-      "title": "【調理師試験】１００問シリーズ：その１～寝落ちのお供に♪★",
-      "score": 25,
-      "genre": "shikaku",
-      "sub": "調理師",
-      "channel": "ほいくんの保育士チャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "BaPwMfVSvQc",
-      "title": "【最新機能AIコネクター】Notion AIがさらに進化／あらゆる業務アプリと連携／面倒な検索を一気に解決／作業時間を30％以上短縮／熱狂的なユーザーコミュニティ",
-      "score": 25,
-      "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "PIVOT 公式チャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "dOwUJ471luo",
-      "title": "【超簡単】スマホで合成音声＆動画も作れる『WEB版 VOICEVOX』を解説",
-      "score": 25,
-      "genre": "ai",
-      "sub": "VOICEVOX",
-      "channel": "ゆうぷろ / YuuPro",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "TXT7tcJq1lw",
-      "title": "Google最強のLLMがオープンソース化でChatGPT終了かも",
-      "score": 25,
-      "genre": "ai",
-      "sub": "Gemma",
+      "sub": "GPT4All",
       "channel": "だるまと赤べこ",
       "reason": "not_accepted"
     },
     {
-      "ytid": "SG1z6SOzHyw",
-      "title": "調理師試験に２週間で合格した勉強方法。【調理師免許】まだ間に合う！",
-      "score": 25,
-      "genre": "shikaku",
-      "sub": "調理師",
-      "channel": "赤髪ライダー",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "5eFGTFH3AQ0",
-      "title": "【必須資格!?】AWSクラウドプラクティショナーに合格する方法",
-      "score": 25,
-      "genre": "prog",
-      "sub": "AWS認定 ソリューションアーキテクト",
-      "channel": "やるかやられるかチャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "WSuqXjo2bIM",
-      "title": "【介護福祉士国家資格】絶対合格！今から間に合う！偏差値40台でも受かった介福の勉強方法について🔥🔥【エールの交換ありww】",
-      "score": 25,
-      "genre": "shikaku",
-      "sub": "介護職員初任者研修",
-      "channel": "はたつん介護士",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "H_2zKP6TIic",
-      "title": "【調理師試験】１００問シリーズ：その２～朝活のお供に♪★",
-      "score": 25,
-      "genre": "shikaku",
-      "sub": "調理師",
-      "channel": "ほいくんの保育士チャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "MSE963AxlAw",
-      "title": "【誰でも無料で使える画像生成AI】Adobe Fireflyの始め方",
+      "ytid": "gxEQBrpzdZY",
+      "title": "海外旅行で使えるのはどれ？人気翻訳アプリ5種を徹底比較！",
       "score": 25,
       "genre": "ai",
-      "sub": "Adobe Firefly",
-      "channel": "Mappy Photo",
+      "sub": "Microsoft Translator",
+      "channel": "カシムラ公式チャンネル",
       "reason": "not_accepted"
     },
     {
-      "ytid": "5S43RL9U3v4",
-      "title": "【忙しい社会人向け】第一種衛生管理者試験攻略法",
-      "score": 25,
-      "genre": "shikaku",
-      "sub": "第二種衛生管理者",
-      "channel": "まことのセカンドキャリア",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "-UYzqmcM9Hc",
-      "title": "【徹底比較】最強AI文字起こしレコーダー「Notta Memo」がすごい！PLAUD NOTEとの違いは？実機・録音・プランをじっくり比較レビュー",
+      "ytid": "rxaUH7OmljA",
+      "title": "【Flux.1のはじめ方】🔰ローカル環境4070Ti SUPERで動作検証！ #stablediffusion #nvidia  #rtx #Flux",
       "score": 25,
       "genre": "ai",
-      "sub": "Notta",
-      "channel": "MATTU SQUARE",
+      "sub": "FLUX",
+      "channel": "ざすこ (道草_雑草子)",
       "reason": "not_accepted"
     },
     {
-      "ytid": "-JEIhhh7T6U",
-      "title": "Python実践試験の合否状況・学習方法・試験に受かるためのコツ（人気セミナー動画）",
-      "score": 25,
-      "genre": "prog",
-      "sub": "Python3エンジニア認定基礎試験",
-      "channel": "Python試験・データ分析試験公式YouTubeチャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "j5Do790HLlk",
-      "title": "(新バージョンUP済み)VOICEVOX v0.19.1 全キャラ30人87種の読み上げサンプルボイス一覧",
+      "ytid": "tIWb06aCg_4",
+      "title": "【Windows 11】動画などの音声をリアルタイムで翻訳する手順",
       "score": 25,
       "genre": "ai",
-      "sub": "VOICEVOX",
-      "channel": "知らずに損した大人知識",
+      "sub": "Microsoft Translator",
+      "channel": "パソ研(pasoken)",
       "reason": "not_accepted"
     },
     {
@@ -4653,6 +2160,15 @@
       "genre": "ai",
       "sub": "DALL·E 3",
       "channel": "mikimiki web スクール",
+      "reason": "not_accepted"
+    },
+    {
+      "ytid": "5JKDySm7BMQ",
+      "title": "Figmaの基本（Figma Basics 日本語版）をさわってみよう-2024年新UIバージョン",
+      "score": 25,
+      "genre": "ai",
+      "sub": "Figma(Figma AI)",
+      "channel": "まつえりデザインTips",
       "reason": "not_accepted"
     },
     {
@@ -4674,12 +2190,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "OnHXQY75i7o",
-      "title": "【2023年最新】高年収確実なIT資格ランキングTOP10 #GCP #PMP #エンジニア",
+      "ytid": "I_H3aM0Eq3Y",
+      "title": "ChatGPT×DALL-E3で一発でクオリティの高い画像を作ってしまうCoTプロンプト【Chain of Thought】",
       "score": 25,
-      "genre": "prog",
-      "sub": "Google Cloud Associate Cloud Engineer",
-      "channel": "エンジニアファースト",
+      "genre": "ai",
+      "sub": "DALL·E 3",
+      "channel": "ウェブ職TV@AIセキュリティ専門",
       "reason": "not_accepted"
     },
     {
@@ -4692,39 +2208,21 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "G6ipBSzaoBU",
-      "title": "【CLF-C02：AWSクラウドプラクティショナー】2024年度版 ２週間で合格する勉強法 ～合格への３ステップ～",
-      "score": 25,
-      "genre": "prog",
-      "sub": "AWS認定 クラウドプラクティショナー",
-      "channel": "AWS資格 対策講座",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "NmbINcpYXQg",
-      "title": "【Vrew】一瞬でYouTube動画やショート動画が作れるAI　字幕生成だけじゃない！　無料プランで動画作成！",
+      "ytid": "QSI-iCYq_3k",
+      "title": "【Figmaで完結】単価30万円を叶えたHP制作〜公開までの全手順をすべて見せます👩‍💻【Webデザイン】",
       "score": 25,
       "genre": "ai",
-      "sub": "Vrew",
-      "channel": "yuco",
+      "sub": "Figma(Figma AI)",
+      "channel": "かの | 営業なしで集客するデザイン",
       "reason": "not_accepted"
     },
     {
-      "ytid": "SusQFiJUE7I",
-      "title": "【日商簿記１級合格】　独学に使える参考書７選",
-      "score": 25,
-      "genre": "shikaku",
-      "sub": "日商PC検定",
-      "channel": "柴山YouTube会計大学",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "beYGx9j6Y9Y",
-      "title": "VoiceBoxの導入解説！導入からYMM4連携まで！+α【VoiceBox実況】【入門】",
+      "ytid": "nVQU42pZne8",
+      "title": "【世界一分かりやすい】AIを活用した爆速LPコーディング術【Figma for VS Code】",
       "score": 25,
       "genre": "ai",
-      "sub": "VOICEVOX",
-      "channel": "ふぇお:feo",
+      "sub": "Figma(Figma AI)",
+      "channel": "Web制作チャンネル | デイトラ",
       "reason": "not_accepted"
     },
     {
@@ -4746,21 +2244,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "cvedxEn4pKE",
-      "title": "ハングル検定１級合格！韓国語勉強法",
-      "score": 25,
-      "genre": "english",
-      "sub": "「ハングル」能力検定",
-      "channel": "アンニョンりさチャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "Dqa2qPjGOa0",
-      "title": "東京に日本最大級の中国人街があった…池袋ガチ中華街に潜入 | 激安麻辣湯",
+      "ytid": "63HNxpE9JYY",
+      "title": "CLINEと言う最強AIエージェント！！vscode、cursorで使える拡張機能！！！compute useの機能も兼ね備えて向かうところ敵なし！！！！【#aiagents 】",
       "score": 25,
       "genre": "ai",
-      "sub": "Llama",
-      "channel": "ちーのグルメ旅",
+      "sub": "Cline",
+      "channel": "しとちゃの遊び場",
       "reason": "not_accepted"
     },
     {
@@ -4768,44 +2257,8 @@
       "title": "無料で使える2024年夏の最新画像生成AIツール5選！ ～Kolors、Google Imagen 3、FLUX.1、OpenAI DALL-E 3、Leonardo Ai～",
       "score": 25,
       "genre": "ai",
-      "sub": "DALL·E 3",
+      "sub": "FLUX",
       "channel": "AI大学【AI&ChatGPT最新情報】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "mIXxGVUwO4U",
-      "title": "【Python3エンジニア認定基礎試験対策】Python用語暗記　1時間耐久　CV:さとうささら(CeVIO)",
-      "score": 25,
-      "genre": "prog",
-      "sub": "Python3エンジニア認定基礎試験",
-      "channel": "リッスンテック",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "dYuI00HQr9Y",
-      "title": "【2025年最新】話題の動画生成AI特集！Runway・Veo 3・Kling ✨️6つの注目サービスを総まとめ！",
-      "score": 25,
-      "genre": "ai",
-      "sub": "Runway",
-      "channel": "Wondershare Filmora 動画編集",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "kmr4LD1pLyw",
-      "title": "調理師免許に受かる問題集と勉強法！諦めないで調理師試験！",
-      "score": 25,
-      "genre": "shikaku",
-      "sub": "調理師",
-      "channel": "赤髪ライダー",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "rviCUjDEJAs",
-      "title": "【StableDiffusion】便利すぎるおすすめ拡張機能Extensions【5選】",
-      "score": 25,
-      "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "これすご-AIクリエイティブ-",
       "reason": "not_accepted"
     },
     {
@@ -4818,33 +2271,6 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "tVckoWitBys",
-      "title": "【2026年最新❗】チャットだけで動画編集が終わるAIがヤバすぎる❗韓国まで行ってVrewの中の人に使い方を全部聞いてきた❗【AI副業】【ブリュー】",
-      "score": 25,
-      "genre": "ai",
-      "sub": "Vrew",
-      "channel": "あべむつき【ラッキーマイン】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "daakpe2CNCQ",
-      "title": "【Vrew便利すぎ！】テロップを自動で入れる動画編集時短ツール｜Premiere Proの取り込みとテロップデザインを一気に変更する方法も解説！",
-      "score": 25,
-      "genre": "ai",
-      "sub": "Vrew",
-      "channel": "Premiereで動画作るタカフミ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "fVSXBbH4x0A",
-      "title": "【Notta】AI文字起こしツールNottaの機能と活用法｜議事録作成を効率化",
-      "score": 25,
-      "genre": "ai",
-      "sub": "Notta",
-      "channel": "ヨハク┃ノーコードとAIで、仕事に余白を",
-      "reason": "not_accepted"
-    },
-    {
       "ytid": "Jqd8px34WcE",
       "title": "【v0】生成AI × ReactでUIを一瞬で開発！JavaScriptエンジニアは必見",
       "score": 25,
@@ -4854,30 +2280,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "pUpi2o4oUg4",
-      "title": "【衝撃の事実】Pythonを習得したいなら勉強するな",
-      "score": 25,
-      "genre": "prog",
-      "sub": "Python3エンジニア認定基礎試験",
-      "channel": "Python・データサイエンス入門チャンネル -はやたす-",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "TwcDO4Vd-7A",
-      "title": "【VOICEVOX Song】小学生でもできる！？VOICEVOXの歌わせ方 【VOICEVOXソングモード編】",
+      "ytid": "tf-LQ16tEiw",
+      "title": "【ELYZA】ChatGPTクラス!ローカルで使える最強性能の日本語LLMを使ってみた【Python】",
       "score": 25,
       "genre": "ai",
-      "sub": "VOICEVOX",
-      "channel": "ねこずきさんの自由帳【仮】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "peVE0bl84jo",
-      "title": "【無料で試そう】Googleの最新AI「Veo3.1」が凄すぎる！映像・声・BGMオールイン＆マルチショット対応！",
-      "score": 25,
-      "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "AIで創作効率化とマネタイズby嗚呼蛙",
+      "sub": "GPT4All",
+      "channel": "snuow Ch",
       "reason": "not_accepted"
     },
     {
@@ -4887,15 +2295,6 @@
       "genre": "ai",
       "sub": "HeyGen",
       "channel": "RKJ VIDEO 【イケている動画を作りたいなら】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "7sz865KqQu4",
-      "title": "【測量士補】数学の知識0からの効率的な勉強方法！",
-      "score": 25,
-      "genre": "shikaku",
-      "sub": "測量士補",
-      "channel": "資格に挑戦 えーちゃんねる",
       "reason": "not_accepted"
     },
     {
@@ -4917,39 +2316,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "LgcAJpj5k7A",
-      "title": "仕事ができる人は皆やってる。Notion×AIを組み合わせた「爆速タスク管理」の正解",
+      "ytid": "Q2-6ec2nwMM",
+      "title": "【無料最強構成】GeminiCLIがVSCode連携でガチ便利に！？実際に使ってみた",
       "score": 25,
       "genre": "ai",
-      "sub": "Notion AI",
-      "channel": "【ワヤな会社の人々】 ”無理ゲー”を乗り越える日常。",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "MVJV5bhOwII",
-      "title": "【第40回】Veo 3.1をFlowで徹底レビュー！“1分映像”が作れる!? 🎬✨",
-      "score": 25,
-      "genre": "ai",
-      "sub": "Google Veo",
-      "channel": "今さら聞けへんAIチャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "6SfBfXePN7Q",
-      "title": "【Python試験】リベンジへの道。模試解説動画 （第1回・問題1-10)",
-      "score": 25,
-      "genre": "prog",
-      "sub": "Python3エンジニア認定基礎試験",
-      "channel": "NODERA-SAN TV",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "9Xgt2kk51Vo",
-      "title": "新機能！統一したキャラクターが作れるRunwayのReferencesで映画制作もできるかも！",
-      "score": 25,
-      "genre": "ai",
-      "sub": "Runway",
-      "channel": "Norihiko / AI Creative Director",
+      "sub": "Cline",
+      "channel": "まさおAIじっくり解説ch",
       "reason": "not_accepted"
     },
     {
@@ -4962,30 +2334,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "4cIQNXUdWJ0",
-      "title": "異次元のAI文字起こしアプリ「Notta」が秀逸！リアルタイム文字起こし、要約、翻訳まで、全部入りの神アプリ！",
+      "ytid": "_h2BOTvPFC4",
+      "title": "【最新】進化した動画生成AI「Pixverse V4.5」が凄い！スムーズモーションでアクションシーンも再現できます。",
       "score": 25,
       "genre": "ai",
-      "sub": "Notta",
-      "channel": "MATTU SQUARE",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "bPx1MTkoXAY",
-      "title": "Gemma 3シリーズがリリース！Gemma 3 27B LLMモデルを試してみた🔥",
-      "score": 25,
-      "genre": "ai",
-      "sub": "Gemma",
-      "channel": "テックナビ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "vv20y_NHPB8",
-      "title": "Stable Diffusion WebUI Forge Neoをインストールする",
-      "score": 25,
-      "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "Signal Flag \"Z\"",
+      "sub": "PixVerse",
+      "channel": "AI様の下僕",
       "reason": "not_accepted"
     },
     {
@@ -4998,147 +2352,57 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "LYxqFbyIOEU",
-      "title": "Ollamaの使い方①　Ollama（オラマ）とは何か？→ローカル上でLLMを便利に実行できるツールです。Ollamaがなぜすごいか分かりやすく解説します♪",
+      "ytid": "kiEmeBA-Liw",
+      "title": "【2025年夏最新】無料でも使える人気の最新動画生成AIツール5選！ ～Veo3、Seedance 1.0、Kling AI、無料のSora、PixVerse～",
       "score": 25,
       "genre": "ai",
-      "sub": "Ollama",
-      "channel": "Junko・AIラボ",
+      "sub": "PixVerse",
+      "channel": "AI大学【AI&ChatGPT最新情報】",
       "reason": "not_accepted"
     },
     {
-      "ytid": "ZqXzhV4wNwg",
-      "title": "【悪用厳禁】LoRA学習を使うとどんなキャラでも思い通りに作れます。【Stable Diffusion】",
+      "ytid": "-5EUs8hv848",
+      "title": "Qwen-Image-Edit-Rapid-AIO導入ガイド！VAE,Clip統合モデルでディスク容量も節約！日本語プロンプトで簡単編集！4ステップ生成で快適動作！",
+      "score": 25,
+      "genre": "ai",
+      "sub": "Qwen",
+      "channel": "AIおじさんの学びメモ",
+      "reason": "not_accepted"
+    },
+    {
+      "ytid": "VjAP0sUEqEA",
+      "title": "新Bardなど、Googleが新発表した１０個のAIツールが革命的だった...！",
       "score": 24,
       "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "ウェブ職TV@AIセキュリティ専門",
+      "sub": "GPT4All",
+      "channel": "AI部",
       "reason": "not_accepted"
     },
     {
-      "ytid": "JOiscJzffwY",
-      "title": "【職業訓練校】業界未経験のアラサーがWEBデザイナー科に4ヶ月間通ってみて",
-      "score": 24,
-      "genre": "video",
-      "sub": "Webクリエイター能力認定試験",
-      "channel": "るみこ 職業訓練校卒業してWebディレクター",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "MtxfnyaPdls",
-      "title": "【勉強なし】料理15年もしてたら調理師免許取れる説（検証）",
-      "score": 24,
-      "genre": "shikaku",
-      "sub": "調理師",
-      "channel": "８ちゃんねる",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "01ndZrO7CDs",
-      "title": "インフラ未経験からAWSを学ぶ！私が実践した勉強方法を紹介  #DevelopersIO | クラスメソッド",
-      "score": 24,
-      "genre": "prog",
-      "sub": "AWS認定 ソリューションアーキテクト",
-      "channel": "クラメソチャンネル | AWSや生成AIなど技術やってみた",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "48D84fsekGM",
-      "title": "【究極】ChatGPTとZapier(ザピアー)で何でも自動化できるすごい時代に突入！",
+      "ytid": "8b6iqmo_2Os",
+      "title": "Next.js14で掲示板Webアプリケーションを作ってみよう【Supabase/react-hook-form/zod/shadcnを利用】",
       "score": 24,
       "genre": "ai",
-      "sub": "Zapier",
-      "channel": "ウェブ職TV@AIセキュリティ専門",
+      "sub": "Supabase",
+      "channel": "プログラミングチュートリアル",
       "reason": "not_accepted"
     },
     {
-      "ytid": "S9aDtwiFIy8",
-      "title": "【やめとこう】介護福祉士試験に落ちる人の勉強法4選",
-      "score": 24,
-      "genre": "shikaku",
-      "sub": "介護職員初任者研修",
-      "channel": "ケアきょう【介護職のためのチャンネル】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "JS-QCVo7tAE",
-      "title": "【勉強方法】衛生管理者、確実に合格する勉強方法",
-      "score": 24,
-      "genre": "shikaku",
-      "sub": "第二種衛生管理者",
-      "channel": "はち🐝",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "_K_34pDshQU",
-      "title": "［国家一般職］合格までの最短ルートを徹底解説",
-      "score": 24,
-      "genre": "shikaku",
-      "sub": "国家公務員採用一般職試験",
-      "channel": "公務員のライト【公式】公務員予備校チャンネル登録者数No.1",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "b1V-R4pXbTw",
-      "title": "【介護職】資格多すぎ！？介護の仕事に役立つ資格は？",
-      "score": 24,
-      "genre": "shikaku",
-      "sub": "介護職員初任者研修",
-      "channel": "ケアきょう【介護職のためのチャンネル】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "7kh9a7haaVQ",
-      "title": "【AWS SAA】1ヶ月で合格する勉強法 ～SAAを徹底攻略～（ソリューションアーキテクト アソシエイト）",
-      "score": 24,
-      "genre": "prog",
-      "sub": "AWS認定 ソリューションアーキテクト",
-      "channel": "AWS資格 対策講座",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "oszZEMGRbdQ",
-      "title": "【AWS認定資格】ゼロから丁寧に説明します！",
-      "score": 24,
-      "genre": "prog",
-      "sub": "AWS認定 ソリューションアーキテクト",
-      "channel": "やるかやられるかチャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "7-IZv9o15t8",
-      "title": "【GCP】Google Cloud Platform認定 Associate Cloud Engineer解説動画【Google Cloud】",
-      "score": 24,
-      "genre": "prog",
-      "sub": "Google Cloud Associate Cloud Engineer",
-      "channel": "Maruchin tech ch",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "-4GClc6sVds",
-      "title": "AIを使いこなして超時短でデザインする方法【Adobe Fireflyがスゴい】",
+      "ytid": "PDFgDGFkrhI",
+      "title": "【ついにAIが画像認識可能に！】最先端のMiniGPT-4が凄すぎる！",
       "score": 24,
       "genre": "ai",
-      "sub": "Adobe Firefly",
-      "channel": "amity_sensei",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "kVZropKITX4",
-      "title": "【超実用的AI】今日から使えるAI Notion AIの超具体的活用術をご紹介",
-      "score": 24,
-      "genre": "ai",
-      "sub": "Notion AI",
+      "sub": "GPT4All",
       "channel": "mikimiki web スクール",
       "reason": "not_accepted"
     },
     {
-      "ytid": "R7bo3KDMz-8",
-      "title": "【介護職員初任者研修とは？】仕事内容と資格の取得方法、就職先を解説！｜みんジョブ",
+      "ytid": "_Y1O1zGlVjk",
+      "title": "Hailuo AI – 世界トップクラスのAI動画生成×nano banana proが別次元すぎた・・・",
       "score": 24,
-      "genre": "shikaku",
-      "sub": "介護職員初任者研修",
-      "channel": "みんジョブ",
+      "genre": "ai",
+      "sub": "Hailuo AI",
+      "channel": "Masayume",
       "reason": "not_accepted"
     },
     {
@@ -5151,24 +2415,6 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "phWnD3sW4wg",
-      "title": "AWS認定資格とは？種類や難易度を解説",
-      "score": 24,
-      "genre": "prog",
-      "sub": "AWS認定 ソリューションアーキテクト",
-      "channel": "SAMURAI ENGINEER [侍エンジニア]",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "6dz2bM0SC2s",
-      "title": "【Bolt】安すぎる配車アプリ！実際に乗って検証した結果…",
-      "score": 24,
-      "genre": "ai",
-      "sub": "Bolt.new",
-      "channel": "JaPhai〜ジャパイ〜(タイの情報を詳しく紹介)",
-      "reason": "not_accepted"
-    },
-    {
       "ytid": "zfDRyXsSFJk",
       "title": "【検証】ローカルLLMでコーディングはどこまでできる？（Qwen 3.6/Gemma 4）",
       "score": 24,
@@ -5178,57 +2424,39 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "7JV1sCq8Z9k",
-      "title": "タスク自動化もAI時代！ ビジネスマンでも使えるタスク自動化ツールZapierがChatGPT対応でさらに強力に！",
+      "ytid": "IYuz6BoegC0",
+      "title": "【無料で使える】PDFデータを読み込み、ChatGPTを使って内容を整理要約してくれる「Chat with any PDF」の使い方",
       "score": 24,
       "genre": "ai",
-      "sub": "Zapier",
-      "channel": "いけともch",
+      "sub": "ChatPDF",
+      "channel": "Akiyama Yuta(AI活用術)",
       "reason": "not_accepted"
     },
     {
-      "ytid": "X2oCpKmjwto",
-      "title": "休日2時間の勉強で第一種衛生管理者試験に合格した勉強法‥！",
-      "score": 24,
-      "genre": "shikaku",
-      "sub": "第二種衛生管理者",
-      "channel": "資格100個取ろうぜ!【100とろ】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "V4NBzm47lQw",
-      "title": "【資格】ビジネス会計検定試験３級２級の勉強方法ガイド（財務諸表が読めるようになる資格）〔ZAIMの教室〕",
-      "score": 24,
-      "genre": "kaikei",
-      "sub": "ビジネス会計検定試験",
-      "channel": "ZAIMの教室 財務諸表専門の学校",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "D4MjdLDEIpc",
-      "title": "GPTとLlama indexで超簡単に外部データと連携させる方法を紹介",
+      "ytid": "YbTE8RXlZYE",
+      "title": "安全、無料、簡単にローカルで使えるchatGPT。GPT4ALL-Jの使い方",
       "score": 24,
       "genre": "ai",
-      "sub": "Llama",
-      "channel": "にゃんたのAIチャンネル",
+      "sub": "GPT4All",
+      "channel": "AI部",
       "reason": "not_accepted"
     },
     {
-      "ytid": "8sd5s7XCsdU",
-      "title": "【食生活アドバイザーいきなり2級3級どっち？】勉強の仕方・勉強時間と試験レポ！自宅オンラインで受験不可",
+      "ytid": "RgtVCcawkJ8",
+      "title": "【ChatPDF】PDFの内容をAIが答えてくれる神ツール！！文書は読み込み不要な時代へ！",
       "score": 24,
-      "genre": "shikaku",
-      "sub": "食生活アドバイザー",
-      "channel": "食生活アドバイザー解説・資格検定メモ",
+      "genre": "ai",
+      "sub": "ChatPDF",
+      "channel": "365日の学び　～たいぞうのITカフェ～",
       "reason": "not_accepted"
     },
     {
-      "ytid": "0oXvib7Vc3c",
-      "title": "【測量士試験】測量士試験、知識0から半年で1発合格のノウハウ教えます！　#2  合格するための勉強法　測量士  　国家資格",
+      "ytid": "ixpn2_9oCrM",
+      "title": "【新機能】ChatGPTのコードインタープリタ、活用例10選",
       "score": 24,
-      "genre": "shikaku",
-      "sub": "測量士補",
-      "channel": "FREE STYLE",
+      "genre": "ai",
+      "sub": "GPT4All",
+      "channel": "AI部",
       "reason": "not_accepted"
     },
     {
@@ -5241,48 +2469,21 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "Q5nCd0BWDMk",
-      "title": "社会人がハングル検定3級に合格した勉強方法",
-      "score": 24,
-      "genre": "english",
-      "sub": "「ハングル」能力検定",
-      "channel": "さざい韓国語",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "TwLmXcMspxo",
-      "title": "【中国発AI・ディープシーク】“低コスト高性能”で世界に衝撃も…「天安門事件」は回答せず",
+      "ytid": "4iQL1oi6F18",
+      "title": "【どっちがいい？】Firebase vs Supabase",
       "score": 24,
       "genre": "ai",
-      "sub": "DeepSeek",
-      "channel": "日テレNEWS",
+      "sub": "Supabase",
+      "channel": "マフィア先生のエンジニア塾",
       "reason": "not_accepted"
     },
     {
-      "ytid": "RIKG-PUJkZc",
-      "title": "【耳コピ動画】似ている3つのMIDI再生ソフトの機能や違いを一挙紹介 ～機能や価格など～",
+      "ytid": "dzt_XuQGeQw",
+      "title": "たった数十秒の音声で声がコピーされてしまう😱  しかも無料のOSSモデルだと？AIでボイスクローン音声を作る方法｜Google ColabでQwen3-TTSを使ってひろゆきボイスを生成する方法",
       "score": 24,
       "genre": "ai",
-      "sub": "Synthesia",
-      "channel": "Ray【ピアノ楽譜】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "g-6GWcDz9Dg",
-      "title": "測量士補テキスト紹介",
-      "score": 24,
-      "genre": "shikaku",
-      "sub": "測量士補",
-      "channel": "測量士・補合格",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "yviEgs8w1sg",
-      "title": "社会人が3ヶ月でハングル検定合格する方法 | テキスト紹介",
-      "score": 24,
-      "genre": "english",
-      "sub": "「ハングル」能力検定",
-      "channel": "さざい韓国語",
+      "sub": "Qwen",
+      "channel": "creativaier",
       "reason": "not_accepted"
     },
     {
@@ -5290,17 +2491,8 @@
       "title": "Llamaを超えた！ローカル環境で動く商用利用可能な言語モデル3選！",
       "score": 24,
       "genre": "ai",
-      "sub": "Llama",
+      "sub": "GPT4All",
       "channel": "にゃんたのAIチャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "srZLjhEW5oA",
-      "title": "【無料】誰でもツールやアプリが開発できるAI「Windsurf ai」が凄すぎる！もうプログラミングで挫折しない。",
-      "score": 24,
-      "genre": "ai",
-      "sub": "Windsurf",
-      "channel": "AI様の下僕",
       "reason": "not_accepted"
     },
     {
@@ -5313,138 +2505,21 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "xlhEP5aQvOc",
-      "title": "5分でわかる！Google Cloud ｜GCPの認定資格について5分で解説！",
-      "score": 24,
-      "genre": "prog",
-      "sub": "Google Cloud Associate Cloud Engineer",
-      "channel": "クラウドエース株式会社 Cloud Ace, Inc.",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "vFzZoahbd30",
-      "title": "最新のAI技術を使って自分の声をネイティブ発音にできるサービス「ElevenLabs」がヤバすぎ！英語学習はもちろん、映像編集やDTMにも使えすぎる。",
-      "score": 24,
-      "genre": "ai",
-      "sub": "ElevenLabs",
-      "channel": "RyoTracks / リョートラックス",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "EPqISBXzvDc",
-      "title": "公務員試験の【教養試験】を何も知らない人がまず見るべき動画",
-      "score": 23,
-      "genre": "shikaku",
-      "sub": "国家公務員採用一般職試験",
-      "channel": "ハチサン公務員",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "drVjskEgyws",
-      "title": "【測量士補！超スピード総まとめ！#01】測量に関する法規",
-      "score": 23,
-      "genre": "shikaku",
-      "sub": "測量士補",
-      "channel": "中山祐介の「合格」チャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "31XUJZnp04U",
-      "title": "【測量士補試験】独学で合格する方法を紹介",
-      "score": 23,
-      "genre": "shikaku",
-      "sub": "測量士補",
-      "channel": "土地家屋調査士合格ブログ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "8Q_Ur2PVLRw",
-      "title": "非エンジニアが合格したAWS資格取得勉強方法公開 #資格取得​​​ #プログラミング #aws",
-      "score": 23,
-      "genre": "prog",
-      "sub": "AWS認定 ソリューションアーキテクト",
-      "channel": "びよまるチャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "1bYPhfjuj0Q",
-      "title": "【食生活アドバイザーの資格】試験の難易度・勉強方法・試験情報を解説！これから食育の資格を目指す人におすすめ。",
-      "score": 23,
-      "genre": "shikaku",
-      "sub": "食生活アドバイザー",
-      "channel": "Manap",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "kvIwS5VAEnI",
-      "title": "【Adobe Firefly】生成 AI と著作権？5分で分かる Adobe Firefly の安全な商用利用のための設計 | アドビ公式",
+      "ytid": "heQ2NqktTrs",
+      "title": "変な論文",
       "score": 23,
       "genre": "ai",
-      "sub": "Adobe Firefly",
-      "channel": "Adobe Creative Cloud Japan",
+      "sub": "Semantic Scholar",
+      "channel": "ことラボ",
       "reason": "not_accepted"
     },
     {
-      "ytid": "4K03reuKLGY",
-      "title": "【測量士補試験】やさしい測量士補の数学 中山祐介講師｜アガルートアカデミー",
-      "score": 23,
-      "genre": "shikaku",
-      "sub": "測量士補",
-      "channel": "アガルートアカデミー [AGAROOT ACADEMY]",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "DonCGtehdhA",
-      "title": "最強時短！Premiere Pro × VOICEVOX × Vrewで5倍速編集する方法！",
+      "ytid": "DWHR0jJrAp4",
+      "title": "全てがここに！Next.jsとSupabaseで構築する認証システム #nextjs13 #supabase #authentication",
       "score": 23,
       "genre": "ai",
-      "sub": "VOICEVOX",
-      "channel": "【ゆめ】独学で月収20万円に突破した動画編集ch",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "2Zn4ynXymZ4",
-      "title": "【調理師免許】料理人に必要な資格を５つ厳選！京都調理師専門学校が解説",
-      "score": 23,
-      "genre": "shikaku",
-      "sub": "調理師",
-      "channel": "京都調理師専門学校",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "ahdSvdkCO8M",
-      "title": "『簿記学習者のためのビジネス会計検定試験(Ｒ)３級テキスト＆厳選過去問』 ～ワンポイント講義 ”財務分析”は怖くない！～",
-      "score": 23,
-      "genre": "kaikei",
-      "sub": "ビジネス会計検定試験",
-      "channel": "ネットスクール  公式チャンネル.",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "_KcPdnYRd00",
-      "title": "【公務員】国家一般職の学習方法【職種別ガイダンス】",
-      "score": 23,
-      "genre": "shikaku",
-      "sub": "国家公務員採用一般職試験",
-      "channel": "LEC公務員",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "kXpa9M97HjI",
-      "title": "【資格】Python3認定試験を取得するメリット3つ・デメリット3つ",
-      "score": 23,
-      "genre": "prog",
-      "sub": "Python3エンジニア認定基礎試験",
-      "channel": "Python・データサイエンス入門チャンネル -はやたす-",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "TTdwr0C6j88",
-      "title": "介護福祉士国家試験 勉強の仕方に困っている人必見!!",
-      "score": 23,
-      "genre": "shikaku",
-      "sub": "介護職員初任者研修",
-      "channel": "三幸福祉カレッジちゃんねる 東海・北陸エリア",
+      "sub": "Supabase",
+      "channel": "フルスタックチャンネル",
       "reason": "not_accepted"
     },
     {
@@ -5452,26 +2527,17 @@
       "title": "【最新AI】Microsoft&OpenAIに遅れをとったGoogleが開発する新しいAI検索エンジン「Magi」",
       "score": 23,
       "genre": "ai",
-      "sub": "Elicit",
+      "sub": "GPT4All",
       "channel": "ウェブ職TV@AIセキュリティ専門",
       "reason": "not_accepted"
     },
     {
-      "ytid": "FZiX2aqmhT8",
-      "title": "喉がぶっ壊れたときに使える神アプリ「ElevenLabs」音声生成AI",
+      "ytid": "_nYpjIl_T3I",
+      "title": "月間600万ユーザーがハマる理由。 10秒で分かるPixVerseの魅力",
       "score": 23,
       "genre": "ai",
-      "sub": "ElevenLabs",
-      "channel": "明日香ちゃんねる",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "aUFTJKg3rzU",
-      "title": "YouTubeに自動で字幕を入れる！スマホアプリVrewの使い方を解説します/157",
-      "score": 23,
-      "genre": "ai",
-      "sub": "Vrew",
-      "channel": "かとうさやかの スマホで始めるYouTubeチャンネル",
+      "sub": "PixVerse",
+      "channel": "RKJ VIDEO 【イケている動画を作りたいなら】",
       "reason": "not_accepted"
     },
     {
@@ -5484,30 +2550,12 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "5OuV9wQ_VH0",
-      "title": "Notta Memoご利用ガイド｜ 最新のAIボイスレコーダー・カード型デザインで持ち運び自由",
+      "ytid": "_BeATbHW2wQ",
+      "title": "意外と簡単！GPTを使ってPDFとQ&Aできるアプリを作ってみた",
       "score": 23,
       "genre": "ai",
-      "sub": "Notta",
-      "channel": "「Notta公式」AI自動文字起こしサービス",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "gSNaBg6OHkc",
-      "title": "辞めよう効率的じゃない勉強法 最短で介護福祉士試験に合格しよう!",
-      "score": 23,
-      "genre": "shikaku",
-      "sub": "介護職員初任者研修",
-      "channel": "ケアきょう【介護職のためのチャンネル】",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "ZObJxEoKj9Q",
-      "title": "ビジュアルスクリプティングツールBolt実践！ | Unite Now 2020 日本語解説 - Unityステーション",
-      "score": 23,
-      "genre": "ai",
-      "sub": "Bolt.new",
-      "channel": "Unity Japan",
+      "sub": "ChatPDF",
+      "channel": "にゃんたのAIチャンネル",
       "reason": "not_accepted"
     },
     {
@@ -5520,184 +2568,49 @@
       "reason": "not_accepted"
     },
     {
-      "ytid": "xtmpY9dw4zE",
-      "title": "あなたも調理師試験の勉強をしてみない？【ゆっくり調理師試験】",
-      "score": 23,
-      "genre": "shikaku",
-      "sub": "調理師",
-      "channel": "ゆっくり調理師試験勉強をする",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "ELVAXUVFZaM",
-      "title": "AWS認定クラウドプラクティショナー（CLF-C01）対策トレーニング Cloud Practitioner",
-      "score": 22,
-      "genre": "prog",
-      "sub": "AWS認定 クラウドプラクティショナー",
-      "channel": "Maruchin tech ch",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "KHbRyYF6x_8",
-      "title": "調理師免許をとろう!",
-      "score": 22,
-      "genre": "shikaku",
-      "sub": "調理師",
-      "channel": "ここひろ",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "9TS91dKYOw0",
-      "title": "韓国語の検定試験（ハン検、TOPIK）についてお話しします！",
-      "score": 22,
-      "genre": "english",
-      "sub": "「ハングル」能力検定",
-      "channel": "アンニョンりさチャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "wmbrJC-z2TU",
-      "title": "ビジュアルスクリプティングシステムBoltを使ってみよう！ 1回目 - Unityステーション",
+      "ytid": "mLVlpG42ZYs",
+      "title": "【2023年最新】副業に使える最強AIツール12選",
       "score": 22,
       "genre": "ai",
-      "sub": "Bolt.new",
-      "channel": "Unity Japan",
+      "sub": "ChatPDF",
+      "channel": "ゼロ起業・副業チャンネル【中卒社長】",
       "reason": "not_accepted"
     },
     {
-      "ytid": "zR2TdomwY2Y",
-      "title": "【6分で分かる】Stable Diffusionの仕組み・特徴！",
+      "ytid": "ATOgc1nbcNQ",
+      "title": "word【 翻訳】機能。様々な言語に翻訳することができます！",
       "score": 22,
       "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "スタビジ【誰でもAIデータサイエンス】byウマたん",
+      "sub": "Microsoft Translator",
+      "channel": "パソコン上達!Nagomiチャンネル",
       "reason": "not_accepted"
     },
     {
-      "ytid": "UZEK0NLDpi4",
-      "title": "【AWS資格-第一弾-】AWS全資格保有者が語る「未経験エンジニアが25時間でAWS クラウドプラクティショナーに合格する方法！」",
-      "score": 22,
-      "genre": "prog",
-      "sub": "AWS認定 ソリューションアーキテクト",
-      "channel": "mani",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "os_iztqzAvc",
-      "title": "無料音声合成ソフト『VOICEVOX』に新ブランド『VOICEVOX Nemo（ボイスボックス ネモ）』が誕生",
+      "ytid": "Va6IbNTZrSs",
+      "title": "【PDFをAIで❗️】このツールめちゃ役に立ちそうです！【論文要約など】",
       "score": 22,
       "genre": "ai",
-      "sub": "VOICEVOX",
-      "channel": "ゆうぷろ / YuuPro",
+      "sub": "ChatPDF",
+      "channel": "KEITO【AI&WEB ch】",
       "reason": "not_accepted"
     },
     {
-      "ytid": "1XD77d4XwOA",
-      "title": "Boltで簡単な2Dゲームを作る",
+      "ytid": "kpFMvE8VhsI",
+      "title": "自分のPCにVALL-E Xをインストールして声優の声を真似する",
       "score": 22,
       "genre": "ai",
-      "sub": "Bolt.new",
-      "channel": "Unity Japan",
+      "sub": "GPT4All",
+      "channel": "Minokamo Citizens",
       "reason": "not_accepted"
     },
     {
-      "ytid": "WawLunZ2qDo",
-      "title": "測量士補の試験を受験してきました！【資格100個取る男】",
-      "score": 22,
-      "genre": "shikaku",
-      "sub": "測量士補",
-      "channel": "ヤマスン 挑戦日記",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "T45YqM8JNFM",
-      "title": "令和二年測量士補みんな頑張れ！！命懸け二週間合格学習法と測量士補のオススメポイント紹介！【宅建塾ふどたく番外編】",
-      "score": 22,
-      "genre": "shikaku",
-      "sub": "測量士補",
-      "channel": "《宅建塾ふどたく》− クロサワ教室 −",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "Z6V4GFu5eMk",
-      "title": "【損益計算書/初級編】仕訳問題10問！ビジネス会計検定試験®３級（簿記学習者にもおすすめ）",
-      "score": 22,
-      "genre": "kaikei",
-      "sub": "ビジネス会計検定試験",
-      "channel": "ZAIMの教室 財務諸表専門の学校",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "HObAa_MtURU",
-      "title": "【Adobe Firefly】AIにレイアウトを指示して画像生成する方法",
-      "score": 22,
-      "genre": "ai",
-      "sub": "Adobe Firefly",
-      "channel": "HIROCODE.ヒロコード",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "e2uPCXQ2KPw",
-      "title": "Stable Diffusionの手の修復方法のまとめ",
-      "score": 22,
-      "genre": "ai",
-      "sub": "Stable Diffusion",
-      "channel": "トレンディーダディー",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "LxddmoxG23I",
-      "title": "ハングル検定１級！韓国語勉強ノート公開します！",
+      "ytid": "X5NgONu2je4",
+      "title": "リアルタイム翻訳ツール / Real Time Translator Microsoft Teams Store App（ショート－短時間編）",
       "score": 21,
-      "genre": "english",
-      "sub": "「ハングル」能力検定",
-      "channel": "アンニョンりさチャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "KHssvIsHVUQ",
-      "title": "食生活アドバイザーの資格に挑戦した結果が送られてきました…",
-      "score": 21,
-      "genre": "shikaku",
-      "sub": "食生活アドバイザー",
-      "channel": "きたりえチャンネル",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "S7cwmum_ChY",
-      "title": "えぇ、調理師免許って簡単に取れるの？",
-      "score": 21,
-      "genre": "shikaku",
-      "sub": "調理師",
-      "channel": "大仏のホームビデオ　Daibutsu chan",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "chU_SLmG9dA",
-      "title": "ハングル能力検定試験５級 発音規則",
-      "score": 21,
-      "genre": "english",
-      "sub": "「ハングル」能力検定",
-      "channel": "金先生の韓国語スクール",
-      "reason": "not_accepted"
-    },
-    {
-      "ytid": "9Tyg5HN27qw",
-      "title": "【初心者OK🔰】ChatGPT「Codex」使い方入門完全ガイド‼️Tips/活用法まで分かりやすく解説！",
-      "score": 32,
       "genre": "ai",
-      "sub": "OpenAI Codex",
-      "channel": "mikimiki web スクール",
-      "reason": "channel_cap"
-    },
-    {
-      "ytid": "xuMG7wImdZg",
-      "title": "【全自動】難しいプロンプトは不要！全部勝手にやってくれるAIエージェントManusの基礎的な使い方を徹底解説するで【初心者】",
-      "score": 31,
-      "genre": "ai",
-      "sub": "Manus",
-      "channel": "【さき】のAIでええやん。",
-      "reason": "channel_cap"
+      "sub": "Microsoft Translator",
+      "channel": "フェアユース株式会社",
+      "reason": "not_accepted"
     }
   ]
 }

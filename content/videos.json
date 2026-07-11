@@ -41756,5 +41756,687 @@
     "scoreStatus": "confirmed",
     "viewCount": 19270,
     "publishedAt": "2023-06-10T08:18:10Z"
+  },
+  {
+    "genre": "ai",
+    "sub": "Figma(Figma AI)",
+    "ytid": "akd5pyd4TnU",
+    "level": "初級",
+    "minutes": 65,
+    "channel": "BONO-カイクン",
+    "score": 31,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 5,
+        "note": "タイトル上は実務・手順に結びつきやすい"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 4,
+        "note": "近年の内容として扱いやすい"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 5,
+        "note": "初心者向けの説明が期待できる"
+      },
+      {
+        "axis": "体系性",
+        "score": 5,
+        "note": "体系的に学べる可能性が高い"
+      },
+      {
+        "axis": "信頼性",
+        "score": 3,
+        "note": "一定の視聴実績がある"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 4,
+        "note": "やや長いが体系学習に向く"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公式YouTubeリンク/埋め込み前提で扱う"
+      }
+    ],
+    "title": "【2025最新】初心者向け! Figmaの基本とAIなど便利な使い方を完全解説 / UIデザイン・Webデザインに最適なデザインツール",
+    "url": "https://www.youtube.com/watch?v=akd5pyd4TnU",
+    "tags": [
+      "Figma(Figma AI)",
+      "Figma(Figma",
+      "AI)",
+      "使い方"
+    ],
+    "review": [
+      "Figma(Figma AI)を仕事や実践に結びつける観点をつかみやすい。",
+      "基礎を短時間で見渡し、手を動かす前の準備に向いている。",
+      "腰を据えて流れを追える体系的な構成なので、ロードマップ上の前後の動画とも組み合わせやすい。"
+    ],
+    "scoreStatus": "confirmed",
+    "viewCount": 59429,
+    "publishedAt": "2024-11-22T08:38:00Z",
+    "scoreConfirmedAt": "2026-07-12"
+  },
+  {
+    "genre": "ai",
+    "sub": "Runway",
+    "ytid": "1q0LOyUHwYA",
+    "level": "初級",
+    "minutes": 40,
+    "channel": "AI たろう",
+    "score": 30,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 3,
+        "note": "実用性は視聴確認が必要"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "公開から約1年半以内で鮮度が高い"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 5,
+        "note": "初心者向けの説明が期待できる"
+      },
+      {
+        "axis": "体系性",
+        "score": 5,
+        "note": "体系的に学べる可能性が高い"
+      },
+      {
+        "axis": "信頼性",
+        "score": 2,
+        "note": "最低限の視聴実績。内容確認が必要"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 5,
+        "note": "社会人が見切りやすい長さ"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公式YouTubeリンク/埋め込み前提で扱う"
+      }
+    ],
+    "title": "【2025年版】初心者向けRunway完全ガイド｜イラスト生成・動画生成・うまく作るコツまで！",
+    "url": "https://www.youtube.com/watch?v=1q0LOyUHwYA",
+    "tags": [
+      "Runway",
+      "使い方"
+    ],
+    "review": [
+      "Runwayの要点を整理し、次に試すことを決めやすい。",
+      "最初に全体像をつかみ、次に試すことを決めやすい構成。",
+      "仕事の合間にも見切りやすい標準的な長さで、忙しい日でも学習のリズムを戻しやすい。"
+    ],
+    "scoreStatus": "confirmed",
+    "viewCount": 38837,
+    "publishedAt": "2025-05-21T09:42:54Z",
+    "scoreConfirmedAt": "2026-07-12"
+  },
+  {
+    "genre": "ai",
+    "sub": "Cline",
+    "ytid": "AywVuYjkz6Q",
+    "level": "初級",
+    "minutes": 23,
+    "channel": "IT屋のたなべ",
+    "score": 30,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 5,
+        "note": "タイトル上は実務・手順に結びつきやすい"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "公開から約1年半以内で鮮度が高い"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 5,
+        "note": "初心者向けの説明が期待できる"
+      },
+      {
+        "axis": "体系性",
+        "score": 4,
+        "note": "体系的に学べる可能性が高い"
+      },
+      {
+        "axis": "信頼性",
+        "score": 1,
+        "note": "視聴実績が少なく慎重に確認"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 5,
+        "note": "社会人が見切りやすい長さ"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公式YouTubeリンク/埋め込み前提で扱う"
+      }
+    ],
+    "title": "初心者向けClineの使い方と無料で使う方法を解説！VSCode拡張で生成AIコーディング入門",
+    "url": "https://www.youtube.com/watch?v=AywVuYjkz6Q",
+    "tags": [
+      "Cline",
+      "使い方"
+    ],
+    "review": [
+      "Clineを仕事や実践に結びつける観点をつかみやすい。",
+      "最初に全体像をつかみ、次に試すことを決めやすい構成。",
+      "仕事の合間にも見切りやすい標準的な長さなので、ロードマップ上の前後の動画とも組み合わせやすい。"
+    ],
+    "scoreStatus": "confirmed",
+    "viewCount": 9316,
+    "publishedAt": "2025-03-08T09:00:13Z",
+    "scoreConfirmedAt": "2026-07-12"
+  },
+  {
+    "genre": "ai",
+    "sub": "OpenClaw",
+    "ytid": "1_gmmFLP-w4",
+    "level": "初級",
+    "minutes": 15,
+    "channel": "安野貴博の自由研究",
+    "score": 29,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 4,
+        "note": "タイトル上は実務・手順に結びつきやすい"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "公開から約1年半以内で鮮度が高い"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 4,
+        "note": "初心者向けの説明が期待できる"
+      },
+      {
+        "axis": "体系性",
+        "score": 3,
+        "note": "単発Tipsの可能性があり要確認"
+      },
+      {
+        "axis": "信頼性",
+        "score": 3,
+        "note": "一定の視聴実績がある"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 5,
+        "note": "社会人が見切りやすい長さ"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公式YouTubeリンク/埋め込み前提で扱う"
+      }
+    ],
+    "title": "【ゆる解説】話題のAIエージェント「OpenClaw」とは？／AIが自律的に行動／開発者がOpenAIに参加／情報流出の危険性も",
+    "url": "https://www.youtube.com/watch?v=1_gmmFLP-w4",
+    "tags": [
+      "OpenClaw",
+      "使い方"
+    ],
+    "review": [
+      "OpenClawの要点を整理し、次に試すことを決めやすい。",
+      "初学者がつまずきやすい前提を整えながら見進めやすい。",
+      "短時間で要点を拾いやすい軽めの入口として、次の学習テーマへ自然につなげやすい。"
+    ],
+    "scoreStatus": "confirmed",
+    "viewCount": 170155,
+    "publishedAt": "2026-03-13T11:00:07Z",
+    "scoreConfirmedAt": "2026-07-12"
+  },
+  {
+    "genre": "ai",
+    "sub": "Hailuo AI",
+    "ytid": "F2gAu3LUdZs",
+    "level": "初級",
+    "minutes": 13,
+    "channel": "AI FREAK - 最新のAIツールをご紹介",
+    "score": 29,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 5,
+        "note": "タイトル上は実務・手順に結びつきやすい"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "公開から約1年半以内で鮮度が高い"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 4,
+        "note": "初心者向けの説明が期待できる"
+      },
+      {
+        "axis": "体系性",
+        "score": 3,
+        "note": "単発Tipsの可能性があり要確認"
+      },
+      {
+        "axis": "信頼性",
+        "score": 2,
+        "note": "最低限の視聴実績。内容確認が必要"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 5,
+        "note": "社会人が見切りやすい長さ"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公式YouTubeリンク/埋め込み前提で扱う"
+      }
+    ],
+    "title": "【AIアニメ動画の作り方】を徹底解説。話題の『Hailuo』の使い方や、他AIツールとの比較など。",
+    "url": "https://www.youtube.com/watch?v=F2gAu3LUdZs",
+    "tags": [
+      "Hailuo AI",
+      "Hailuo",
+      "AI",
+      "使い方"
+    ],
+    "review": [
+      "Hailuo AIの要点を整理し、次に試すことを決めやすい。",
+      "最初に全体像をつかみ、次に試すことを決めやすい構成。",
+      "短時間で要点を拾いやすい軽めの入口のため、目的を決めて見ると吸収しやすい。"
+    ],
+    "scoreStatus": "confirmed",
+    "viewCount": 33549,
+    "publishedAt": "2025-08-21T07:59:49Z",
+    "scoreConfirmedAt": "2026-07-12"
+  },
+  {
+    "genre": "ai",
+    "sub": "Google AI Mode",
+    "ytid": "xX6iEgeUie8",
+    "level": "初級",
+    "minutes": 8,
+    "channel": "ウェブマニア",
+    "score": 29,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 5,
+        "note": "タイトル上は実務・手順に結びつきやすい"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "公開から約1年半以内で鮮度が高い"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 4,
+        "note": "初心者向けの説明が期待できる"
+      },
+      {
+        "axis": "体系性",
+        "score": 3,
+        "note": "単発Tipsの可能性があり要確認"
+      },
+      {
+        "axis": "信頼性",
+        "score": 2,
+        "note": "最低限の視聴実績。内容確認が必要"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 5,
+        "note": "社会人が見切りやすい長さ"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公式YouTubeリンク/埋め込み前提で扱う"
+      }
+    ],
+    "title": "【超便利】GoogleのAIモードがついに日本上陸！Chat GPTやPerplexityなど他AIと比較してどう？使い方・機能・性能など徹底解説します",
+    "url": "https://www.youtube.com/watch?v=xX6iEgeUie8",
+    "tags": [
+      "Google AI Mode",
+      "Google",
+      "AI",
+      "Mode",
+      "使い方"
+    ],
+    "review": [
+      "Google AI Modeの最初の迷いを減らし、学ぶ順番を作りやすい一本。",
+      "基礎を短時間で見渡し、手を動かす前の準備に向いている。",
+      "短時間で要点を拾いやすい軽めの入口で、忙しい日でも学習のリズムを戻しやすい。"
+    ],
+    "scoreStatus": "confirmed",
+    "viewCount": 21437,
+    "publishedAt": "2025-09-21T10:00:06Z",
+    "scoreConfirmedAt": "2026-07-12"
+  },
+  {
+    "genre": "ai",
+    "sub": "PixVerse",
+    "ytid": "Po8fdb8Z5xI",
+    "level": "初級",
+    "minutes": 15,
+    "channel": "AI大学【AI&ChatGPT最新情報】",
+    "score": 29,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 5,
+        "note": "タイトル上は実務・手順に結びつきやすい"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "公開から約1年半以内で鮮度が高い"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 4,
+        "note": "初心者向けの説明が期待できる"
+      },
+      {
+        "axis": "体系性",
+        "score": 3,
+        "note": "単発Tipsの可能性があり要確認"
+      },
+      {
+        "axis": "信頼性",
+        "score": 2,
+        "note": "最低限の視聴実績。内容確認が必要"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 5,
+        "note": "社会人が見切りやすい長さ"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公式YouTubeリンク/埋め込み前提で扱う"
+      }
+    ],
+    "title": "無料でも使える多機能・高品質動画生成AIツール「PixVerse(V4)」の概要と使い方を徹底解説！",
+    "url": "https://www.youtube.com/watch?v=Po8fdb8Z5xI",
+    "tags": [
+      "PixVerse",
+      "使い方"
+    ],
+    "review": [
+      "PixVerseを仕事や実践に結びつける観点をつかみやすい。",
+      "初学者がつまずきやすい前提を整えながら見進めやすい。",
+      "短時間で要点を拾いやすい軽めの入口として、次の学習テーマへ自然につなげやすい。"
+    ],
+    "scoreStatus": "confirmed",
+    "viewCount": 16885,
+    "publishedAt": "2025-03-07T09:06:49Z",
+    "scoreConfirmedAt": "2026-07-12"
+  },
+  {
+    "genre": "ai",
+    "sub": "Kling AI",
+    "ytid": "SFLLwpTxD_Q",
+    "level": "初級",
+    "minutes": 16,
+    "channel": "ハム先生のAI教室【AI動画の実務活用】",
+    "score": 29,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 5,
+        "note": "タイトル上は実務・手順に結びつきやすい"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "公開から約1年半以内で鮮度が高い"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 4,
+        "note": "初心者向けの説明が期待できる"
+      },
+      {
+        "axis": "体系性",
+        "score": 3,
+        "note": "単発Tipsの可能性があり要確認"
+      },
+      {
+        "axis": "信頼性",
+        "score": 2,
+        "note": "最低限の視聴実績。内容確認が必要"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 5,
+        "note": "社会人が見切りやすい長さ"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公式YouTubeリンク/埋め込み前提で扱う"
+      }
+    ],
+    "title": "【過去一の衝撃】KlingAI3.0が動画制作の常識を破壊しました。使い方と新機能10選を徹底解説します。（動画3.0/Omni3.0/画像3.0）",
+    "url": "https://www.youtube.com/watch?v=SFLLwpTxD_Q",
+    "tags": [
+      "Kling AI",
+      "Kling",
+      "AI",
+      "使い方"
+    ],
+    "review": [
+      "Kling AIの要点を整理し、次に試すことを決めやすい。",
+      "入口で迷いやすいポイントをほどき、学習の順番を作りやすい。",
+      "仕事の合間にも見切りやすい標準的な長さのため、目的を決めて見ると吸収しやすい。"
+    ],
+    "scoreStatus": "confirmed",
+    "viewCount": 14783,
+    "publishedAt": "2026-02-09T10:15:04Z",
+    "scoreConfirmedAt": "2026-07-12"
+  },
+  {
+    "genre": "ai",
+    "sub": "HeyGen",
+    "ytid": "_PmudWdVqKQ",
+    "level": "初級",
+    "minutes": 61,
+    "channel": "岡本宗一郎 Soichiro Okamoto",
+    "score": 29,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 5,
+        "note": "タイトル上は実務・手順に結びつきやすい"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 4,
+        "note": "近年の内容として扱いやすい"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 5,
+        "note": "初心者向けの説明が期待できる"
+      },
+      {
+        "axis": "体系性",
+        "score": 5,
+        "note": "体系的に学べる可能性が高い"
+      },
+      {
+        "axis": "信頼性",
+        "score": 1,
+        "note": "視聴実績が少なく慎重に確認"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 4,
+        "note": "やや長いが体系学習に向く"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公式YouTubeリンク/埋め込み前提で扱う"
+      }
+    ],
+    "title": "【最新版 HeyGen使い方完全解説】[初心者向け]アバターAI動画作成・編集、プロンプトから動画生成ができる「HeyGen」 #heygen #動画生成AI #AIアバター",
+    "url": "https://www.youtube.com/watch?v=_PmudWdVqKQ",
+    "tags": [
+      "HeyGen",
+      "使い方"
+    ],
+    "review": [
+      "HeyGenを学ぶ理由が見えやすく、仕事で使うAI活用の最初の型として使いやすい。",
+      "初学者がつまずきやすい前提を整えながら見進めやすい。",
+      "腰を据えて流れを追える体系的な構成のため、目的を決めて見ると吸収しやすい。"
+    ],
+    "scoreStatus": "confirmed",
+    "viewCount": 8843,
+    "publishedAt": "2024-08-25T09:21:58Z",
+    "scoreConfirmedAt": "2026-07-12"
+  },
+  {
+    "genre": "ai",
+    "sub": "Replit Agent",
+    "ytid": "AZkVzqPPFaE",
+    "level": "初級",
+    "minutes": 31,
+    "channel": "かいちのAI大学 / Saix(サイクス)",
+    "score": 29,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 4,
+        "note": "タイトル上は実務・手順に結びつきやすい"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 4,
+        "note": "近年の内容として扱いやすい"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 5,
+        "note": "初心者向けの説明が期待できる"
+      },
+      {
+        "axis": "体系性",
+        "score": 5,
+        "note": "体系的に学べる可能性が高い"
+      },
+      {
+        "axis": "信頼性",
+        "score": 1,
+        "note": "視聴実績が少なく慎重に確認"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 5,
+        "note": "社会人が見切りやすい長さ"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公式YouTubeリンク/埋め込み前提で扱う"
+      }
+    ],
+    "title": "【AI完全自動化】Replit Agentを使ったプログラミング方法を徹底解説【初心者OK】",
+    "url": "https://www.youtube.com/watch?v=AZkVzqPPFaE",
+    "tags": [
+      "Replit Agent",
+      "Replit",
+      "Agent",
+      "使い方"
+    ],
+    "review": [
+      "Replit Agentの最初の迷いを減らし、学ぶ順番を作りやすい一本。",
+      "初学者がつまずきやすい前提を整えながら見進めやすい。",
+      "仕事の合間にも見切りやすい標準的な長さなので、ロードマップ上の前後の動画とも組み合わせやすい。"
+    ],
+    "scoreStatus": "confirmed",
+    "viewCount": 8837,
+    "publishedAt": "2024-11-23T09:00:12Z",
+    "scoreConfirmedAt": "2026-07-12"
+  },
+  {
+    "genre": "ai",
+    "sub": "Supabase",
+    "ytid": "iF8fWlQpOfE",
+    "level": "初級",
+    "minutes": 4,
+    "channel": "100秒テック",
+    "score": 27,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 4,
+        "note": "タイトル上は実務・手順に結びつきやすい"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "公開から約1年半以内で鮮度が高い"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 5,
+        "note": "初心者向けの説明が期待できる"
+      },
+      {
+        "axis": "体系性",
+        "score": 4,
+        "note": "体系的に学べる可能性が高い"
+      },
+      {
+        "axis": "信頼性",
+        "score": 1,
+        "note": "視聴実績が少なく慎重に確認"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 3,
+        "note": "目的を絞れば使いやすい"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公式YouTubeリンク/埋め込み前提で扱う"
+      }
+    ],
+    "title": "【超入門】Supabaseについてアニメーションで解説してみた",
+    "url": "https://www.youtube.com/watch?v=iF8fWlQpOfE",
+    "tags": [
+      "Supabase",
+      "使い方"
+    ],
+    "review": [
+      "Supabaseを仕事や実践に結びつける観点をつかみやすい。",
+      "入口で迷いやすいポイントをほどき、学習の順番を作りやすい。",
+      "短時間で要点を拾いやすい軽めの入口なので、ロードマップ上の前後の動画とも組み合わせやすい。"
+    ],
+    "scoreStatus": "confirmed",
+    "viewCount": 8438,
+    "publishedAt": "2025-05-25T01:44:21Z",
+    "scoreConfirmedAt": "2026-07-12"
   }
 ]
