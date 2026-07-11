@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev --webpack",
-    "prebuild": "npm run llms:generate",
+    "prebuild": "npm run content:audit && npm run llms:generate",
     "build": "next build",
     "start": "next dev --webpack",
     "lint": "eslint .",
+    "content:audit": "node scripts/audit-content.mjs",
     "llms:generate": "node scripts/generate-llms.mjs",
     "brand:assets": "node scripts/generate-brand-assets.mjs",
     "pipeline:fetch": "node scripts/fetch-candidates.mjs",

@@ -239,6 +239,58 @@ export const learningIntents: readonly LearningIntent[] = [
       { question: "ChatGPTとCopilotは何が違いますか？", answer: "CopilotはMicrosoft 365上の文書・表・スライド作業と相性があります。ChatGPTは幅広い相談や文章生成に使いやすいです。" },
       { question: "会社で使うときの注意点は？", answer: "社内データや機密情報を扱う場合は、所属先の利用ルールと契約条件を確認してください。" }
     ]
+  },
+  {
+    slug: "money-study-free",
+    query: "資産運用 勉強 サイト 無料",
+    title: "資産運用を無料で勉強する順番｜NISA・投資信託の学習動画 | Manapick",
+    description: "資産運用を無料で勉強したい人向けに、家計、NISA、投資信託、長期・積立・分散を学ぶYouTube動画を順番に整理します。",
+    h1: "資産運用を無料で勉強するなら、家計と制度から始める",
+    lead: "商品や銘柄を探す前に、生活防衛資金、NISA・iDeCoの制度、投資信託の仕組みとリスクを順番に学ぶ入口です。",
+    answer: "最初に家計と生活防衛資金を整理し、次にNISA・iDeCoの制度、投資信託、長期・積立・分散の考え方へ進みます。Manapickは特定商品の購入を勧めず、無料動画で基礎知識を学ぶ順番だけを整理します。",
+    audience: "資産運用を初めて勉強する社会人、NISAや投資信託の仕組みを無料で学びたい人",
+    filters: { genres: ["money"], subtopics: ["家計", "NISA", "投資"], keywords: ["資産運用", "家計", "NISA", "iDeCo", "投資信託", "積立", "分散"] },
+    steps: [
+      { title: "家計と生活防衛資金を整理する", body: "投資に回せる金額を先に決め、生活費と混ぜない土台を作ります。", href: subGenrePath("money", "家計") },
+      { title: "NISA・iDeCoの制度を知る", body: "税制上の仕組みと資金を引き出せる時期の違いを確認します。", href: subGenrePath("money", "NISA") },
+      { title: "投資信託とリスクを学ぶ", body: "長期・積立・分散の意味を理解し、元本割れの可能性も含めて判断材料を増やします。", href: guidePath("money-basics") }
+    ],
+    links: [
+      { label: "お金・投資ロードマップ", href: guidePath("money-basics"), note: "家計から投資の基礎まで見る順を確認" },
+      { label: "NISA動画一覧", href: subGenrePath("money", "NISA"), note: "制度と始め方の学習動画を比較" },
+      { label: "お金・投資ジャンル", href: "/genre/money/", note: "家計・NISA・投資の全動画を見る" }
+    ],
+    faq: [
+      { question: "資産運用は無料動画だけで勉強できますか？", answer: "基礎用語や制度の入口は無料動画で学べます。実際に金融商品を選ぶ際は、手数料やリスクを各金融機関の公式情報で確認してください。" },
+      { question: "NISAは最初に始めるべきですか？", answer: "必ずとは言えません。生活防衛資金、投資期間、リスク許容度を確認し、制度を理解してから判断してください。" },
+      { question: "おすすめ銘柄を教えてもらえますか？", answer: "Manapickでは特定の銘柄や商品の推奨を行いません。仕組みとリスクを学ぶ動画を選ぶための情報を提供します。" }
+    ]
+  },
+  {
+    slug: "secretary-test-schedule",
+    query: "秘書検定 2級 日程",
+    title: "秘書検定2級の日程確認と勉強法｜公式情報と無料動画 | Manapick",
+    description: "秘書検定2級の日程を公式サイトで確認する導線と、試験範囲・勉強法を学ぶ無料YouTube動画を整理します。",
+    h1: "秘書検定2級の日程を公式で確認し、勉強の順番を決める",
+    lead: "試験日は実施方式や受験年度で変わるため、最新日程は実務技能検定協会の公式ページで確認し、動画は試験範囲と学習計画の理解に使います。",
+    answer: "秘書検定2級は、まず公式の試験日程・受験要項で申込期間と実施方式を確認します。そのうえで、必要とされる資質、職務知識、一般知識、マナー・接遇、技能の全体像を見て、問題演習へ進む順番が安全です。",
+    audience: "秘書検定2級の受験日と申込時期を調べている人、初めて学習計画を立てる人",
+    filters: { genres: ["shikaku"], subtopics: ["秘書検定"], keywords: ["秘書検定", "2級", "日程", "勉強法", "マナー", "接遇"] },
+    steps: [
+      { title: "公式の日程と受験要項を確認する", body: "受験年度、実施方式、申込期間を公式ページで確認します。", href: "https://jitsumu-ginou-kentei.jp/HS/schedule" },
+      { title: "試験範囲の全体像を見る", body: "理論領域と実技領域の構成をつかみ、苦手分野を分けます。", href: "/?genre=shikaku&sub=" + encodeURIComponent("秘書検定") + "#search" },
+      { title: "問題演習と復習へ進む", body: "動画で理解した後は、公式問題集や過去問で出題形式に慣れます。", href: guidePath("certification") }
+    ],
+    links: [
+      { label: "秘書検定 公式試験日程", href: "https://jitsumu-ginou-kentei.jp/HS/schedule", note: "最新の実施日・申込期間を公式情報で確認" },
+      { label: "秘書検定の動画一覧", href: "/?genre=shikaku&sub=" + encodeURIComponent("秘書検定") + "#search", note: "試験範囲と勉強法の動画を比較" },
+      { label: "資格学習ロードマップ", href: guidePath("certification"), note: "動画と問題演習を組み合わせる順番" }
+    ],
+    faq: [
+      { question: "秘書検定2級の最新日程はどこで確認できますか？", answer: "実務技能検定協会の秘書検定「試験日程」ページで、受験年度と実施方式を確認してください。日程は変更される可能性があるため、Manapickでは固定日を転載しません。" },
+      { question: "2級はCBTで受験できますか？", answer: "実施方式は公式の試験日程・受験要項で案内されています。希望地域と受験時期に合う方式を公式ページで確認してください。" },
+      { question: "動画だけで合格できますか？", answer: "動画は全体像の理解に向きますが、合格を保証するものではありません。問題集や過去問で出題形式に慣れ、間違えた範囲を動画で復習する使い方が現実的です。" }
+    ]
   }
 ] as const;
 

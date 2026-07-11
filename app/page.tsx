@@ -3,6 +3,7 @@ import ManapickApp from "@/components/ManapickApp";
 import professionRoutesData from "@/content/professions.json";
 import roadmapsData from "@/content/roadmaps.json";
 import { absoluteUrl, genreDisplayName, isoDuration, videoPath, videos } from "@/lib/manapick";
+import { rankedVideos } from "@/lib/rankings";
 import { siteStats } from "@/lib/site-stats";
 
 const homeTitle = "Manapick | 無料YouTube学習動画を、見る順まで整理";
@@ -11,6 +12,11 @@ const homeDescription =
   siteStats.totalVideos +
   "本を、視聴確認済みレビューとロードマップで整理するメディア。";
 const homeOgImage = absoluteUrl("/brand/ogp-manapick.png");
+const homeCarouselVideos = [
+  ...rankedVideos("popular", 4),
+  ...rankedVideos("new", 4),
+  ...rankedVideos("score", 4)
+];
 const homeFaq = [
   {
     "@type": "Question",
@@ -148,9 +154,9 @@ export default function Home() {
     "@graph": [
       {
         "@type": "ItemList",
-        name: "Manapick 学習動画一覧",
-        numberOfItems: siteStats.totalVideos,
-        itemListElement: videos.map((video, index) => ({
+        name: "Manapick 注目の12本",
+        numberOfItems: homeCarouselVideos.length,
+        itemListElement: homeCarouselVideos.map((video, index) => ({
           "@type": "ListItem",
           position: index + 1,
           url: absoluteUrl(videoPath(video.ytid)),
@@ -182,7 +188,7 @@ export default function Home() {
         "@type": "FAQPage",
         mainEntity: homeFaq
       },
-      ...roadmapHowToNodes()
+      ...roadmapHowToNodes().slice(0, 1)
     ]
   };
 
@@ -193,6 +199,25 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
       <ManapickApp />
+      <section className="home-faq-section" aria-labelledby="home-faq-title">
+        <div className="home-faq-heading">
+          <p className="section-eyebrow">初めての方へ</p>
+          <h2 id="home-faq-title" className="section-title">Manapickのよくある質問</h2>
+          <p>無料動画の選び方と、学び始める順番を短くまとめました。</p>
+        </div>
+        <div className="guide-faq-list">
+          {homeFaq.map((item) => (
+            <details key={item.name}>
+              <summary>{item.name}</summary>
+              <p>{item.acceptedAnswer.text}</p>
+            </details>
+          ))}
+        </div>
+        <div className="home-faq-links">
+          <a href="/faq/">FAQをすべて見る</a>
+          <a href="/start/">3つの質問で今日の1本を選ぶ</a>
+        </div>
+      </section>
     </>
   );
 }

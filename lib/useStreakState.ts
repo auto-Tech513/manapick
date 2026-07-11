@@ -19,8 +19,10 @@ export function useStreakState() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    setState(readStreak());
-    setReady(true);
+    const storageTimer = window.setTimeout(() => {
+      setState(readStreak());
+      setReady(true);
+    }, 0);
 
     function sync() {
       setState(readStreak());
@@ -33,6 +35,7 @@ export function useStreakState() {
     window.addEventListener(RETENTION_EVENT, sync);
     window.addEventListener("storage", handleStorage);
     return () => {
+      window.clearTimeout(storageTimer);
       window.removeEventListener(RETENTION_EVENT, sync);
       window.removeEventListener("storage", handleStorage);
     };
@@ -62,4 +65,3 @@ export function useStreakState() {
 
   return { state, ready, record };
 }
-

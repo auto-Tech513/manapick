@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import BrandLogo from "@/components/BrandLogo";
 import VideoActions from "@/components/VideoActions";
@@ -167,16 +168,16 @@ export default async function VideoPage({ params }: VideoPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
       <header className="video-page-header">
-        <a href="/" aria-label="Manapick トップへ">
+        <Link href="/" aria-label="Manapick トップへ">
           <BrandLogo compact />
-        </a>
-        <a className="video-header-link" href="/about-score/">採点方法</a>
+        </Link>
+        <Link className="video-header-link" href="/about-score/">採点方法</Link>
       </header>
 
       <nav className="video-breadcrumb" aria-label="パンくず">
-        <a href="/">ホーム</a>
+        <Link href="/">ホーム</Link>
         <span aria-hidden="true">/</span>
-        <a href="/#search">{genreDisplayName(video.genre)}</a>
+        <Link href="/#search">{genreDisplayName(video.genre)}</Link>
         <span aria-hidden="true">/</span>
         <span>{video.title}</span>
       </nav>
@@ -265,14 +266,14 @@ export default async function VideoPage({ params }: VideoPageProps) {
         <p className="video-editorial-body">{editorialSummary}</p>
         <AdSlot slot="1438236565" />
         {related[0] ? (
-          <a className="video-next-link" href={videoPath(related[0].ytid)}>
+          <Link className="video-next-link" href={videoPath(related[0].ytid)}>
             次に見る1本：{related[0].title}
-          </a>
+          </Link>
         ) : null}
         {guide ? (
-          <a className="video-guide-link" href={guidePath(guide.slug)}>
+          <Link className="video-guide-link" href={guidePath(guide.slug)}>
             {videoGuideLinkLabel(video.genre)}
-          </a>
+          </Link>
         ) : null}
       </section>
 
@@ -315,7 +316,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
             <p className="section-eyebrow">Manapickスコア</p>
             <h2 id="score-detail-title" className="section-title">7軸の採点コメント</h2>
           </div>
-          <a href="/about-score/">採点方法を見る</a>
+          <Link href="/about-score/">採点方法を見る</Link>
         </div>
         <div className="video-axis-commentary">
           {axisCommentary.map((line) => (
@@ -354,11 +355,11 @@ export default async function VideoPage({ params }: VideoPageProps) {
             <p className="section-eyebrow">関連動画</p>
             <h2 id="related-title" className="section-title">次に見る6本</h2>
           </div>
-          <a href="/#search">一覧へ戻る</a>
+          <Link href="/#search">一覧へ戻る</Link>
         </div>
         <div className="video-related-grid">
           {related.map((item) => (
-            <a key={item.ytid} className="video-related-card" href={videoPath(item.ytid)}>
+            <Link key={item.ytid} className="video-related-card" href={videoPath(item.ytid)}>
               <span className="video-related-thumb">
                 <Image
                   src={youtubeThumbnail(item.ytid)}
@@ -374,7 +375,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
                 <span className="video-related-meta">{item.sub} / {scoreText(item)} / {item.minutes}分</span>
                 <span className="video-related-title">{item.title}</span>
               </span>
-            </a>
+            </Link>
           ))}
         </div>
       </section>
@@ -386,9 +387,9 @@ export default async function VideoPage({ params }: VideoPageProps) {
               <p className="section-eyebrow">次の一歩</p>
               <h2 id="video-next-title" className="section-title">次に見る1本</h2>
             </div>
-            <a href={`/genre/${video.genre}/`}>{genreDisplayName(video.genre)}の一覧へ</a>
+            <Link href={`/genre/${video.genre}/`}>{genreDisplayName(video.genre)}の一覧へ</Link>
           </div>
-          <a className="video-next-card" href={videoPath(nextPick.video.ytid)}>
+          <Link className="video-next-card" href={videoPath(nextPick.video.ytid)}>
             <span className="video-next-thumb">
               <Image
                 src={youtubeThumbnail(nextPick.video.ytid)}
@@ -405,7 +406,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
               <strong>{nextPick.video.title}</strong>
               <span>{nextPick.reason}</span>
             </span>
-          </a>
+          </Link>
         </section>
       ) : null}
     </main>

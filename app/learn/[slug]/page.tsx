@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import AdSlot from "@/components/AdSlot";
 import BrandLogo from "@/components/BrandLogo";
 import {
   absoluteUrl,
@@ -124,6 +125,8 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
           ))}
         </ol>
       </section>
+
+      <AdSlot slot="1438236565" />
 
       <section className="knowledge-section" aria-labelledby="intent-videos-title">
         <div className="youtube-section-head">

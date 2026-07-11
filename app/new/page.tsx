@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import AdSlot from "@/components/AdSlot";
 import BrandLogo from "@/components/BrandLogo";
 import { absoluteUrl, genreLabel, scoreText, videoPath, youtubeThumbnail, type Video } from "@/lib/manapick";
 import { recentVideos } from "@/lib/rankings";
@@ -92,6 +93,7 @@ export default function NewPage() {
           ))}
         </div>
       </section>
+      <AdSlot slot="1438236565" />
     </main>
   );
 }

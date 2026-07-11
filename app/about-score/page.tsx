@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BrandLogo, { BrandMark } from "@/components/BrandLogo";
 import { absoluteUrl } from "@/lib/manapick";
 
@@ -91,9 +92,9 @@ export default function AboutScorePage() {
       />
       <main className="score-page">
         <header className="score-page-header">
-          <a href="/" aria-label="Manapick トップへ">
+          <Link href="/" aria-label="Manapick トップへ">
             <BrandLogo compact />
-          </a>
+          </Link>
         </header>
 
       <section className="score-hero">
@@ -169,9 +170,9 @@ export default function AboutScorePage() {
             <BrandMark className="h-7 w-7" />
             <span>Manapick</span>
           </p>
-          <a href="/">トップへ戻る</a>
-          <a href="/guide/generative-ai/">ガイド記事を読む</a>
-          <a href="/contact/">お問い合わせ</a>
+          <Link href="/">トップへ戻る</Link>
+          <Link href="/guide/generative-ai/">ガイド記事を読む</Link>
+          <Link href="/contact/">お問い合わせ</Link>
         </footer>
       </main>
     </>

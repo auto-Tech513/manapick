@@ -16,16 +16,27 @@ export function useLocalList(key: string) {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    try {
-      const raw = window.localStorage.getItem(key);
-      if (raw) {
-        const parsed = JSON.parse(raw);
-        if (Array.isArray(parsed)) setItems(parsed.filter((item) => typeof item === "string"));
+    let cancelled = false;
+    const storageTimer = window.setTimeout(() => {
+      let storedItems: string[] = [];
+      try {
+        const raw = window.localStorage.getItem(key);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (Array.isArray(parsed)) storedItems = parsed.filter((item) => typeof item === "string");
+        }
+      } catch {
+        // localStorage can be unavailable in private or restricted browsing modes.
       }
-    } catch {
-      // localStorage can be unavailable in private or restricted browsing modes.
-    }
-    setReady(true);
+      if (!cancelled) {
+        setItems(storedItems);
+        setReady(true);
+      }
+    }, 0);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(storageTimer);
+    };
   }, [key]);
 
   function toggle(id: string) {

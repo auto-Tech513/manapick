@@ -4,6 +4,7 @@ import Fuse from "fuse.js";
 import Image from "next/image";
 import { type KeyboardEvent as ReactKeyboardEvent, type RefObject, useEffect, useMemo, useRef, useState } from "react";
 import BrandLogo, { BrandMark } from "@/components/BrandLogo";
+import AdSlot from "@/components/AdSlot";
 import LikeButton from "@/components/LikeButton";
 import RetentionBand from "@/components/RetentionBand";
 import genresData from "@/content/genres.json";
@@ -150,43 +151,53 @@ const searchIntentLinks = [
   },
   {
     label: "YouTubeサムネイルの作り方",
-    href: "/genre/video/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3/",
+    href: "/learn/youtube-thumbnail/",
     note: "動画編集・デザイン"
   },
   {
     label: "Pythonは難しい？",
-    href: "/guide/python/",
+    href: "/learn/python-hard/",
     note: "初心者向けの順番"
   },
   {
     label: "エクセル統計の使い方",
-    href: "/guide/excel-data/",
+    href: "/learn/excel-statistics/",
     note: "Excelデータ分析"
   },
   {
     label: "AIプロンプトのコツ",
-    href: "/genre/ai/%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88/",
+    href: "/learn/ai-prompt-tips/",
     note: "生成AIの指示出し"
   },
   {
     label: "Copilot活用事例",
-    href: "/genre/ai/Copilot/",
+    href: "/learn/copilot-use-cases/",
     note: "仕事で使うAI"
   },
   {
-    label: "社労士試験",
-    href: "/genre/shikaku/%E7%A4%BE%E5%8A%B4%E5%A3%AB/",
-    note: "資格勉強"
+    label: "社労士の1年学習計画",
+    href: "/learn/sharoshi-1year/",
+    note: "資格勉強の順番"
   },
   {
     label: "マーケティングYouTubeおすすめ",
-    href: "/guide/web-marketing/",
+    href: "/learn/web-marketing-youtube/",
     note: "Webマーケ入門"
   },
   {
     label: "Canva初心者",
     href: "/genre/marke/SNS/",
     note: "SNS制作"
+  },
+  {
+    label: "資産運用を無料で勉強",
+    href: "/learn/money-study-free/",
+    note: "家計・NISA・投資"
+  },
+  {
+    label: "秘書検定2級の日程",
+    href: "/learn/secretary-test-schedule/",
+    note: "公式日程と勉強法"
   }
 ];
 
@@ -198,7 +209,9 @@ const popularSearchKeywords = [
   "AIプロンプト",
   "社労士",
   "マーケティング",
-  "Canva 初心者"
+  "Canva 初心者",
+  "資産運用",
+  "秘書検定 2級"
 ];
 
 // footer markup moved to components/SiteFooter.tsx (rendered globally in app/layout.tsx)
@@ -696,23 +709,27 @@ export default function ManapickApp() {
   }, [popularLikeCandidateVideos]);
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const page = Number(params.get("page") || "1");
-    if (Number.isFinite(page) && page > 1) setCurrentPage(Math.floor(page));
-    const genre = params.get("genre");
-    if (genre && publishedGenreKeys.includes(genre)) {
-      skipNextFilterResetRef.current = true;
-      setSelectedGenre(genre);
-      if (roadmaps.some((roadmap) => roadmap.genre === genre)) {
-        setActiveRoadmapGenre(genre);
+    const timeout = window.setTimeout(() => {
+      const params = new URLSearchParams(window.location.search);
+      const page = Number(params.get("page") || "1");
+      if (Number.isFinite(page) && page > 1) setCurrentPage(Math.floor(page));
+      const genre = params.get("genre");
+      if (genre && publishedGenreKeys.includes(genre)) {
+        skipNextFilterResetRef.current = true;
+        setSelectedGenre(genre);
+        if (roadmaps.some((roadmap) => roadmap.genre === genre)) {
+          setActiveRoadmapGenre(genre);
+        }
+        const sub = params.get("sub");
+        if (sub) setSelectedSub(availableSubForGenre(genre, sub));
       }
-      const sub = params.get("sub");
-      if (sub) setSelectedSub(availableSubForGenre(genre, sub));
-    }
+    }, 0);
+    return () => window.clearTimeout(timeout);
   }, []);
 
   useEffect(() => {
-    setTodayKey(jstDateKey());
+    const timeout = window.setTimeout(() => setTodayKey(jstDateKey()), 0);
+    return () => window.clearTimeout(timeout);
   }, []);
 
   useEffect(() => {
@@ -780,13 +797,14 @@ export default function ManapickApp() {
   }, []);
 
   useEffect(() => {
-    setActiveSuggestionIndex(0);
+    const timeout = window.setTimeout(() => setActiveSuggestionIndex(0), 0);
+    return () => window.clearTimeout(timeout);
   }, [keyword, selectedLevel, selectedSub, selectedTime]);
 
   useEffect(() => {
-    if (watchlist.ready && watchlist.items.length === 0 && watchlistOnly) {
-      setWatchlistOnly(false);
-    }
+    if (!watchlist.ready || watchlist.items.length > 0 || !watchlistOnly) return;
+    const timeout = window.setTimeout(() => setWatchlistOnly(false), 0);
+    return () => window.clearTimeout(timeout);
   }, [watchlist.items.length, watchlist.ready, watchlistOnly]);
 
   useEffect(() => {
@@ -815,13 +833,16 @@ export default function ManapickApp() {
   }, [keyword, selectedGenre, selectedLevel, selectedSub, selectedTime, watchlistOnly]);
 
   useEffect(() => {
-    if (currentPage > totalPages) setCurrentPage(totalPages);
+    if (currentPage <= totalPages) return;
+    const timeout = window.setTimeout(() => setCurrentPage(totalPages), 0);
+    return () => window.clearTimeout(timeout);
   }, [currentPage, totalPages]);
 
   useEffect(() => {
     if (!menuOpen) return;
     const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     const previousOverflow = document.body.style.overflow;
+    const menuButton = menuButtonRef.current;
 
     function handleKeydown(event: KeyboardEvent) {
       if (event.key === "Escape") setMenuOpen(false);
@@ -837,8 +858,8 @@ export default function ManapickApp() {
     return () => {
       document.body.style.overflow = previousOverflow;
       document.removeEventListener("keydown", handleKeydown);
-      if (menuButtonRef.current) {
-        menuButtonRef.current?.focus();
+      if (menuButton) {
+        menuButton.focus();
       } else if (previousFocus && document.contains(previousFocus)) {
         previousFocus.focus();
       }
@@ -1171,7 +1192,7 @@ export default function ManapickApp() {
     <main>
       <header className="site-header border-b border-line bg-surface/92 backdrop-blur">
         <div className="site-header-inner mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 min-[720px]:flex-row min-[720px]:items-center min-[720px]:justify-between min-[720px]:px-6">
-          <a href="#top" className="min-w-0" aria-label="Manapick トップ">
+          <a href="#top" className="min-w-0 shrink-0" aria-label="Manapick トップ">
             <BrandLogo compact />
           </a>
           <div className="top-search-wrap">
@@ -1190,6 +1211,8 @@ export default function ManapickApp() {
                 placeholder="動画を検索"
                 className="top-search-input"
                 autoComplete="off"
+                role="combobox"
+                aria-autocomplete="list"
                 aria-controls="search-suggestions"
                 aria-expanded={suggestionsOpen}
               />
@@ -1224,10 +1247,10 @@ export default function ManapickApp() {
               <a className="transition hover:text-accent" href="/ranking/">
                 ランキング
               </a>
-              <a className="transition hover:text-accent" href="/new/">
+              <a className="site-nav-optional transition hover:text-accent" href="/new/">
                 新着
               </a>
-              <a className="transition hover:text-accent" href="/glossary/">
+              <a className="site-nav-optional transition hover:text-accent" href="/glossary/">
                 用語集
               </a>
               <a className="transition hover:text-accent" href="/my/">
@@ -1238,7 +1261,7 @@ export default function ManapickApp() {
                   PR
                 </a>
               ) : null}
-              <a className="transition hover:text-accent" href="/contact/">
+              <a className="site-nav-optional transition hover:text-accent" href="/contact/">
                 お問い合わせ
               </a>
               <a
@@ -1413,6 +1436,8 @@ export default function ManapickApp() {
       <ManapickAiCrossLink variant="home" />
 
       <RecentUpdatesSection videos={recentUpdateVideos} />
+
+      <AdSlot slot="1438236565" />
 
       <SearchIntentShortcutSection />
 

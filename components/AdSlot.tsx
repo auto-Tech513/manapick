@@ -41,7 +41,9 @@ export default function AdSlot({ slot }: { slot: string }) {
       const w = window as AdsWindow;
       (w.adsbygoogle = w.adsbygoogle || []).push({});
     } catch {
-      setState("empty");
+      window.setTimeout(() => {
+        if (!disposed) setState("empty");
+      }, 0);
     }
 
     const t1 = window.setTimeout(inspect, 1200);
@@ -68,7 +70,7 @@ export default function AdSlot({ slot }: { slot: string }) {
       data-ad-client={CLIENT}
       data-ad-slot={slot}
       data-ad-format="auto"
-      data-full-width-responsive="false"
+      data-full-width-responsive="true"
     />
   );
 }

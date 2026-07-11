@@ -586,6 +586,57 @@ img {
   }
 }
 
+@media (min-width: 720px) and (max-width: 1365px) {
+  .site-header-inner {
+    gap: 12px;
+  }
+
+  .top-search-wrap {
+    width: 220px;
+    flex: 0 1 220px;
+  }
+
+  .site-nav {
+    gap: 8px;
+  }
+
+  .site-nav-optional {
+    display: none;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1099px) {
+  .site-nav > a:not(.header-ai-link):not(.header-license-link) {
+    display: none;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 899px) {
+  .header-license-link {
+    display: none;
+  }
+}
+
+@media (max-width: 719px) {
+  .site-nav > a:not(.header-ai-link):not(.header-license-link) {
+    display: none;
+  }
+
+  .header-ai-link,
+  .header-license-link,
+  .hero-carousel-tabs button,
+  .hero-carousel-arrow,
+  .manapick-ai-crosslink > a,
+  .recent-updates-head a {
+    min-height: 44px;
+  }
+
+  .hero-carousel-arrow {
+    width: 44px;
+    height: 44px;
+  }
+}
+
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -10066,4 +10117,66 @@ img {
 /* AdSense 記事内広告枠：未充填/空は即畳んで空白の穴を作らない（UX配慮） */
 .ad-slot { display: block; overflow: hidden; border-radius: 12px; margin: 20px auto; width: min(100% - 32px, 1120px); }
 .ad-slot.is-empty { display: none !important; height: 0 !important; min-height: 0 !important; margin: 0 !important; padding: 0 !important; }
+
+.home-faq-section {
+  width: min(calc(100% - 32px), 1120px);
+  margin: 48px auto;
+  padding: 32px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow-card);
+}
+
+.home-faq-heading {
+  margin-bottom: 20px;
+}
+
+.home-faq-heading > p:last-child {
+  margin-top: 8px;
+  color: var(--color-muted);
+  line-height: 1.8;
+}
+
+.home-faq-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.home-faq-links a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border: 1px solid rgba(31, 58, 138, 0.2);
+  border-radius: 8px;
+  color: var(--color-primary);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.home-faq-links a:hover {
+  border-color: var(--color-primary);
+  background: rgba(31, 58, 138, 0.05);
+}
+
+.home-faq-links a:focus-visible {
+  outline: 3px solid rgba(15, 169, 139, 0.35);
+  outline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+  .home-faq-section {
+    margin-block: 28px;
+    padding: 20px 16px;
+  }
+
+  .home-faq-links {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
 ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; height: 0 !important; min-height: 0 !important; margin: 0 !important; }

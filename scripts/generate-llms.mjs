@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, "..");
-const fallbackSiteUrl = "https://manapick.pages.dev";
+const fallbackSiteUrl = "https://manapick.app";
 
 async function loadLocalEnv() {
   try {
@@ -18,7 +18,7 @@ async function loadLocalEnv() {
       if (key && process.env[key] === undefined) process.env[key] = value;
     }
   } catch {
-    // .env.local is optional; fall back to the public Pages URL.
+    // .env.local is optional; fall back to the public custom domain.
   }
 }
 
@@ -131,13 +131,16 @@ const queryIntentLines = [
   ["YouTube学習動画おすすめ", "/youtube-learning/"],
   ["動画 勉強 無料", "/youtube-learning/"],
   ["リスキリング 何から始める", "/youtube-learning/#youtube-steps-title"],
-  ["YouTubeサムネイルの作り方", "/genre/video/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3/"],
-  ["Pythonは難しい", "/guide/python/"],
-  ["エクセル統計の使い方", "/guide/excel-data/"],
-  ["Copilot活用事例", "/genre/ai/Copilot/"],
-  ["AIプロンプトのコツ", "/genre/ai/%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88/"],
-  ["社労士試験 独学", "/genre/shikaku/%E7%A4%BE%E5%8A%B4%E5%A3%AB/"],
-  ["マーケティング YouTube おすすめ", "/guide/web-marketing/"],
+  ["YouTubeサムネイルの作り方", "/learn/youtube-thumbnail/"],
+  ["Pythonは難しい", "/learn/python-hard/"],
+  ["エクセル統計の使い方", "/learn/excel-statistics/"],
+  ["Copilot活用事例", "/learn/copilot-use-cases/"],
+  ["AIプロンプトのコツ", "/learn/ai-prompt-tips/"],
+  ["社労士 勉強 スケジュール 1年", "/learn/sharoshi-1year/"],
+  ["マーケティング YouTube おすすめ", "/learn/web-marketing-youtube/"],
+  ["Power BIの使い方", "/learn/power-bi/"],
+  ["資産運用を無料で勉強", "/learn/money-study-free/"],
+  ["秘書検定2級の日程と勉強法", "/learn/secretary-test-schedule/"],
   ["Canva 初心者", "/genre/marke/SNS/"]
 ].map(([label, route]) => `- ${label}: ${absoluteUrl(siteUrl, route)}`);
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import AdSlot from "@/components/AdSlot";
 import BrandLogo from "@/components/BrandLogo";
 import { learningIntentPath, learningIntents } from "@/lib/learning-intents";
 import { absoluteUrl, genreDisplayName, genreLabel, scoreText, videoPath, youtubeThumbnail, type Video } from "@/lib/manapick";
@@ -256,6 +257,8 @@ export default function YoutubeLearningPage() {
           ))}
         </div>
       </section>
+
+      <AdSlot slot="1438236565" />
 
       <section className="knowledge-section" aria-labelledby="youtube-top-title">
         <div className="youtube-section-head">

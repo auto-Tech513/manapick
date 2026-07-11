@@ -43,15 +43,17 @@ export default function LikeButton({ ytid, initialCount = 0, className = "" }: L
   const [pending, setPending] = useState(false);
 
   useEffect(() => {
-    setCount(initialCount);
-  }, [initialCount]);
-
-  useEffect(() => {
-    const likedIds = readLikedIds();
-    setLiked(likedIds.has(ytid));
-    if (!canUseLikeApi()) return;
-
     let cancelled = false;
+    const storageTimer = window.setTimeout(() => {
+      if (!cancelled) setLiked(readLikedIds().has(ytid));
+    }, 0);
+    if (!canUseLikeApi()) {
+      return () => {
+        cancelled = true;
+        window.clearTimeout(storageTimer);
+      };
+    }
+
     fetch(`/api/like?ids=${encodeURIComponent(ytid)}`)
       .then((response) => (response.ok ? response.json() : null))
       .then((data: { counts?: Record<string, number> } | null) => {
@@ -67,6 +69,7 @@ export default function LikeButton({ ytid, initialCount = 0, className = "" }: L
 
     return () => {
       cancelled = true;
+      window.clearTimeout(storageTimer);
     };
   }, [ytid]);
 

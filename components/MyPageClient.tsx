@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import BrandLogo, { BrandMark } from "@/components/BrandLogo";
 import MetricHelp from "@/components/MetricHelp";
 import PwaInstallButton from "@/components/PwaInstallButton";
@@ -157,10 +158,10 @@ export default function MyPageClient() {
   return (
     <main className="my-page">
       <header className="my-header">
-        <a href="/" aria-label="Manapick トップへ">
+        <Link href="/" aria-label="Manapick トップへ">
           <BrandLogo compact />
-        </a>
-        <a href="/" className="my-header-link">トップへ</a>
+        </Link>
+        <Link href="/" className="my-header-link">トップへ</Link>
       </header>
 
       <section className="my-hero">
@@ -168,7 +169,7 @@ export default function MyPageClient() {
         <h1>この端末の学習記録</h1>
         <p>登録不要・ログイン不要。視聴済み・あとで見る・連続学習日数は、お使いのブラウザにだけ保存されます（他の端末とは共有されません）。</p>
         <div className="my-hero-actions">
-          {recentVideo ? <a href={videoPath(recentVideo.ytid)}>続きから見る</a> : <a href="/#search">動画を探す</a>}
+          {recentVideo ? <Link href={videoPath(recentVideo.ytid)}>続きから見る</Link> : <Link href="/#search">動画を探す</Link>}
           <PwaInstallButton />
         </div>
       </section>
@@ -249,11 +250,11 @@ export default function MyPageClient() {
           </div>
           <div className="my-guide-grid">
             {guideProgress.map((guide) => (
-              <a key={guide.slug} className={guide.complete ? "my-guide-card is-complete" : "my-guide-card"} href={guide.href}>
+              <Link key={guide.slug} className={guide.complete ? "my-guide-card is-complete" : "my-guide-card"} href={guide.href}>
                 <span>{guide.complete ? "修了" : "進行中"}</span>
                 <strong>{guide.title}</strong>
                 <small>{guide.count}/{guide.total}本</small>
-              </a>
+              </Link>
             ))}
           </div>
         </section>
@@ -324,7 +325,7 @@ export default function MyPageClient() {
 
       <footer className="my-footer">
         <p><BrandMark className="h-7 w-7" /> <span>Manapick</span></p>
-        <a href="/">トップへ戻る</a>
+        <Link href="/">トップへ戻る</Link>
       </footer>
     </main>
   );
@@ -360,7 +361,7 @@ function ProgressRow({ label, count, total, percent }: { label: string; count: n
 
 function MyVideoRow({ video }: { video: Video }) {
   return (
-    <a className="my-video-row" href={videoPath(video.ytid)}>
+    <Link className="my-video-row" href={videoPath(video.ytid)}>
       <span className="my-video-thumb">
         <Image
           src={youtubeThumbnail(video.ytid)}
@@ -375,6 +376,6 @@ function MyVideoRow({ video }: { video: Video }) {
         <strong>{video.title}</strong>
         <span>{genreLabel(video.genre)} / {video.sub} / {scoreText(video)} / {video.minutes}分</span>
       </span>
-    </a>
+    </Link>
   );
 }

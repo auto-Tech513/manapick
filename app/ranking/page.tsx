@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import AdSlot from "@/components/AdSlot";
 import BrandLogo from "@/components/BrandLogo";
 import { absoluteUrl, genreLabel, publishedGenreKeys, scoreText, videoPath, videos, youtubeThumbnail, type Video } from "@/lib/manapick";
 import { rankedVideos, type RankingMode } from "@/lib/rankings";
@@ -111,6 +112,7 @@ export default function RankingPage() {
           </div>
         </section>
       ))}
+      <AdSlot slot="1438236565" />
       <section id="genre-ranking" className="knowledge-section ranking-section" aria-labelledby="genre-ranking-title">
         <div className="ranking-section-head">
           <div>

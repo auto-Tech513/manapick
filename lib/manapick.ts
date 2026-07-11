@@ -1,7 +1,9 @@
 import genresData from "@/content/genres.json";
 import videosData from "@/content/videos.json";
 
-const FALLBACK_SITE_URL = "https://manapick.pages.dev";
+// The custom domain is the public canonical. Cloudflare build environments may
+// omit NEXT_PUBLIC_SITE_URL, so the fallback must never point at the Pages host.
+const FALLBACK_SITE_URL = "https://manapick.app";
 
 function normalizeSiteUrl(value: string | undefined) {
   const raw = value?.trim() || FALLBACK_SITE_URL;
