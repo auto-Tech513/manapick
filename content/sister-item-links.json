@@ -63,6 +63,22 @@
       "url": "https://ai.manapick.app/tool/stable-diffusion/"
     }
   ],
+  "SFLLwpTxD_Q": [
+    {
+      "site": "ai",
+      "slug": "kling",
+      "name": "Kling AI",
+      "url": "https://ai.manapick.app/tool/kling/"
+    }
+  ],
+  "1q0LOyUHwYA": [
+    {
+      "site": "ai",
+      "slug": "runway",
+      "name": "Runway",
+      "url": "https://ai.manapick.app/tool/runway/"
+    }
+  ],
   "LHikWuwD-t8": [
     {
       "site": "ai",
@@ -77,6 +93,14 @@
       "slug": "vrew",
       "name": "Vrew",
       "url": "https://ai.manapick.app/tool/vrew/"
+    }
+  ],
+  "_PmudWdVqKQ": [
+    {
+      "site": "ai",
+      "slug": "heygen",
+      "name": "HeyGen",
+      "url": "https://ai.manapick.app/tool/heygen/"
     }
   ],
   "RnkdHXTD8Ds": [
@@ -127,6 +151,14 @@
       "url": "https://ai.manapick.app/tool/manus/"
     }
   ],
+  "1_gmmFLP-w4": [
+    {
+      "site": "ai",
+      "slug": "openclaw",
+      "name": "OpenClaw",
+      "url": "https://ai.manapick.app/tool/openclaw/"
+    }
+  ],
   "aJtrwyfJSTo": [
     {
       "site": "ai",
@@ -165,6 +197,14 @@
       "slug": "codex",
       "name": "OpenAI Codex",
       "url": "https://ai.manapick.app/tool/codex/"
+    }
+  ],
+  "AZkVzqPPFaE": [
+    {
+      "site": "ai",
+      "slug": "replit",
+      "name": "Replit Agent",
+      "url": "https://ai.manapick.app/tool/replit/"
     }
   ],
   "FwDnhTSNuQA": [
@@ -213,6 +253,54 @@
       "slug": "siri",
       "name": "Siri AI",
       "url": "https://ai.manapick.app/tool/siri/"
+    }
+  ],
+  "iF8fWlQpOfE": [
+    {
+      "site": "ai",
+      "slug": "supabase",
+      "name": "Supabase",
+      "url": "https://ai.manapick.app/tool/supabase/"
+    }
+  ],
+  "F2gAu3LUdZs": [
+    {
+      "site": "ai",
+      "slug": "hailuo",
+      "name": "Hailuo AI（MiniMax）",
+      "url": "https://ai.manapick.app/tool/hailuo/"
+    }
+  ],
+  "akd5pyd4TnU": [
+    {
+      "site": "ai",
+      "slug": "figma",
+      "name": "Figma(Figma AI)",
+      "url": "https://ai.manapick.app/tool/figma/"
+    }
+  ],
+  "Po8fdb8Z5xI": [
+    {
+      "site": "ai",
+      "slug": "pixverse",
+      "name": "PixVerse",
+      "url": "https://ai.manapick.app/tool/pixverse/"
+    }
+  ],
+  "AywVuYjkz6Q": [
+    {
+      "site": "ai",
+      "slug": "cline",
+      "name": "Cline",
+      "url": "https://ai.manapick.app/tool/cline/"
+    }
+  ],
+  "xX6iEgeUie8": [
+    {
+      "site": "ai",
+      "slug": "google-ai-mode",
+      "name": "Google AI Mode",
+      "url": "https://ai.manapick.app/tool/google-ai-mode/"
     }
   ],
   "9H9oS26DWLY": [
