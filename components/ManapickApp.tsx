@@ -851,7 +851,7 @@ export default function ManapickApp() {
     document.body.style.overflow = "hidden";
     document.addEventListener("keydown", handleKeydown);
     window.setTimeout(() => {
-      const firstFocusable = menuDrawerRef.current?.querySelector<HTMLElement>("button, a");
+      const firstFocusable = menuDrawerRef.current?.querySelector<HTMLElement>("button, a, summary");
       firstFocusable?.focus();
     }, 0);
 
@@ -1171,8 +1171,8 @@ export default function ManapickApp() {
 
   function handleMenuKeyDown(event: ReactKeyboardEvent<HTMLElement>) {
     if (event.key !== "Tab") return;
-    const focusable = Array.from(menuDrawerRef.current?.querySelectorAll<HTMLElement>("button, a") ?? [])
-      .filter((item) => !item.hasAttribute("disabled"));
+    const focusable = Array.from(menuDrawerRef.current?.querySelectorAll<HTMLElement>("button, a, summary") ?? [])
+      .filter((item) => !item.hasAttribute("disabled") && item.getClientRects().length > 0);
     if (focusable.length === 0) return;
     const first = focusable[0];
     const last = focusable[focusable.length - 1];
@@ -2454,18 +2454,98 @@ function SiteMenuDrawer({
         onKeyDown={onKeyDown}
       >
         <div className="site-menu-head">
-          <div>
-            <p className="section-eyebrow">Manapick</p>
-            <h2 id="site-menu-title">メニュー</h2>
+          <div className="site-menu-brand">
+            <span className="site-menu-brand-mark" aria-hidden="true">✓</span>
+            <div>
+              <h2 id="site-menu-title">Manapick</h2>
+              <p>学び直しを、最短ルートに。</p>
+            </div>
           </div>
           <button type="button" className="site-menu-close" onClick={onClose} aria-label="メニューを閉じる">
             ×
           </button>
         </div>
         <nav className="site-menu-links" aria-label="メニューリンク">
-          <button type="button" className="site-menu-link is-primary" onClick={() => onProfessionSelect()}>
-            なりたい職業から選ぶ
-          </button>
+          <p className="site-menu-section-label">まず選ぶ</p>
+          <div className="site-menu-primary-grid">
+            <a className="site-menu-action-card is-primary" href="/start/" onClick={onClose}>
+              <span aria-hidden="true">◎</span>
+              <strong>今日の1本診断</strong>
+              <small>3つの質問から選ぶ</small>
+            </a>
+            <button type="button" className="site-menu-action-card" onClick={() => onProfessionSelect()}>
+              <span aria-hidden="true">↗</span>
+              <strong>職業から選ぶ</strong>
+              <small>なりたい姿から逆引き</small>
+            </button>
+            <button type="button" className="site-menu-action-card" onClick={onGenreList}>
+              <span aria-hidden="true">▦</span>
+              <strong>{genres.length}ジャンル</strong>
+              <small>学びたい分野から探す</small>
+            </button>
+            <button type="button" className="site-menu-action-card" onClick={() => onSectionSelect("roadmap")}>
+              <span aria-hidden="true">⌁</span>
+              <strong>ロードマップ</strong>
+              <small>見る順番で進める</small>
+            </button>
+          </div>
+
+          <p className="site-menu-section-label">探す・続ける</p>
+          <div className="site-menu-compact-grid">
+            <a href="/youtube-learning/" onClick={onClose}>おすすめ動画</a>
+            <a href="/ranking/" onClick={onClose}>ランキング</a>
+            <a href="/new/" onClick={onClose}>新着動画</a>
+            <a href="/my/" onClick={onClose}>マイページ</a>
+            <a href="/glossary/" onClick={onClose}>用語集</a>
+            <a href="/faq/" onClick={onClose}>よくある質問</a>
+            <a href="/shop/" onClick={onClose}>manapi商店</a>
+            <a href="/contact/" onClick={onClose}>お問い合わせ</a>
+          </div>
+
+          <details className="site-menu-expandable">
+            <summary>なりたい職業から選ぶ <span aria-hidden="true">⌄</span></summary>
+            <div className="site-menu-profession-list" role="group" aria-label="職業別の入口">
+              {routes.map((route) => (
+                <button key={route.id} type="button" onClick={() => onProfessionSelect(route.id)}>
+                  <ProfessionIcon icon={route.icon} />
+                  <span>{route.title}</span>
+                </button>
+              ))}
+            </div>
+          </details>
+
+          <details className="site-menu-expandable">
+            <summary>{genres.length}ジャンル一覧 <span aria-hidden="true">⌄</span></summary>
+            <div className="site-menu-genre-grid" role="group" aria-label="ジャンル一覧">
+              {genres.map((genre) => (
+                <a
+                  key={genre.key}
+                  href={`/genre/${genre.key}/`}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    onGenreSelect(genre.key);
+                  }}
+                >
+                  <GenreIcon genreKey={genre.key} className="site-menu-genre-icon" />
+                  <span>{genreLabel(genre.key)}</span>
+                </a>
+              ))}
+            </div>
+          </details>
+
+          <details className="site-menu-expandable is-support">
+            <summary>サイト情報・サポート <span aria-hidden="true">⌄</span></summary>
+            <div className="site-menu-support-links">
+              <a href="/about-score/" onClick={onClose}>採点方法</a>
+              <a href="/all/" onClick={onClose}>サイトマップ</a>
+              <a href="/operator/" onClick={onClose}>運営者情報</a>
+              <a href="/affiliate/" onClick={onClose}>広告・アフィリエイト</a>
+              <a href="/privacy/" onClick={onClose}>プライバシー</a>
+              <a href="/contact/" onClick={onClose}>お問い合わせ</a>
+            </div>
+          </details>
+
+          <p className="site-menu-section-label">姉妹サイト</p>
           <a
             className="site-menu-link site-menu-ai-link"
             href={MANAPICK_AI_URL}
@@ -2491,61 +2571,6 @@ function SiteMenuDrawer({
           >
             <span>manapick license ↗</span>
             <small>資格・検定を比較</small>
-          </a>
-          <a className="site-menu-link" href="/ranking/" onClick={onClose}>
-            ランキング
-          </a>
-          <a className="site-menu-link" href="/new/" onClick={onClose}>
-            最近追加・更新した動画
-          </a>
-          <a className="site-menu-link" href="/glossary/" onClick={onClose}>
-            用語集
-          </a>
-          <a className="site-menu-link" href="/faq/" onClick={onClose}>
-            よくある質問
-          </a>
-          <div className="site-menu-profession-list" role="group" aria-label="職業別の入口">
-            {routes.map((route) => (
-              <button key={route.id} type="button" onClick={() => onProfessionSelect(route.id)}>
-                <ProfessionIcon icon={route.icon} />
-                <span>{route.title}</span>
-              </button>
-            ))}
-          </div>
-          <button type="button" className="site-menu-link" onClick={onGenreList}>
-            {genres.length}ジャンル一覧
-          </button>
-          <div className="site-menu-genre-grid" role="group" aria-label="ジャンル一覧">
-            {genres.map((genre) => (
-              <a
-                key={genre.key}
-                href={`/genre/${genre.key}/`}
-                onClick={(event) => {
-                  event.preventDefault();
-                  onGenreSelect(genre.key);
-                }}
-              >
-                <GenreIcon genreKey={genre.key} className="site-menu-genre-icon" />
-                <span>{genreLabel(genre.key)}</span>
-              </a>
-            ))}
-          </div>
-          <button type="button" className="site-menu-link" onClick={() => onSectionSelect("roadmap")}>
-            ロードマップ
-          </button>
-          <a className="site-menu-link" href="/my/" onClick={onClose}>
-            マイページ
-          </a>
-          <a className="site-menu-link" href="/about-score/" onClick={onClose}>
-            採点方法
-          </a>
-          {SHOW_TOP_PR_SECTION ? (
-            <button type="button" className="site-menu-link" onClick={() => onSectionSelect("pr")}>
-              PR
-            </button>
-          ) : null}
-          <a className="site-menu-link" href="/contact/" onClick={onClose}>
-            お問い合わせ
           </a>
         </nav>
       </aside>

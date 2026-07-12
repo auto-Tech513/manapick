@@ -7,7 +7,7 @@ import SiteBottomNav from "@/components/SiteBottomNav";
 import { absoluteUrl, SITE_URL } from "@/lib/manapick";
 import "./globals.css";
 
-const gaId = process.env.NEXT_PUBLIC_GA_ID?.trim();
+const gaId = process.env.NEXT_PUBLIC_GA_ID?.trim() || "G-13BNL4Q41Z";
 const adsenseId = process.env.NEXT_PUBLIC_ADSENSE_ID?.trim() || "ca-pub-4108900975353940";
 const ogImageUrl = absoluteUrl("/brand/ogp-manapick.png");
 const xAccountUrl = "https://x.com/manapick_app";

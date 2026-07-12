@@ -5,104 +5,134 @@ type FooterLink = {
   label: string;
   href: string;
   external?: boolean;
-  icon?: "x";
-  description?: string;
-  site?: "ai" | "license";
 };
 
 const genreCount = publishedGenreKeys.length;
 
 const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
   {
-    title: "学ぶ",
+    title: "探す・学ぶ",
     links: [
       { label: "今日の1本診断", href: "/start/" },
       { label: "YouTube学習動画おすすめ", href: "/youtube-learning/" },
       { label: "検索で多い学習テーマ", href: "/learn/" },
       { label: "なりたい職業から選ぶ", href: "/#profession-routes" },
-      { label: genreCount + "ジャンル一覧", href: "/#genre-picker" },
-      { label: "ロードマップ", href: "/#roadmap" },
+      { label: `${genreCount}ジャンル一覧`, href: "/#genre-picker" },
       { label: "ランキング", href: "/ranking/" },
       { label: "新着動画", href: "/new/" },
-      { label: "用語集", href: "/glossary/" },
-      { label: "FAQ", href: "/faq/" },
       { label: "マイページ", href: "/my/" },
-      { label: "採点方法", href: "/about-score/" },
-      { label: "manapi商店", href: "/shop/", description: "学習とAI作業の定番6商品" },
-      { label: "生成AIロードマップ", href: "/guide/generative-ai/" },
-      { label: "Pythonロードマップ", href: "/guide/python/" },
-      { label: "動画編集ロードマップ", href: "/guide/video-editing/" },
-      { label: "英語ロードマップ", href: "/guide/english/" },
-      { label: "Excelデータ分析ロードマップ", href: "/guide/excel-data/" },
-      { label: "Webマーケロードマップ", href: "/guide/web-marketing/" },
-      { label: "Office・資料ロードマップ", href: "/guide/office-skills/" },
-      { label: "資格ロードマップ", href: "/guide/certification/" },
-      { label: "会計資格ロードマップ", href: "/guide/bookkeeping/" },
-      { label: "お金・投資ロードマップ", href: "/guide/money-basics/" }
+      { label: "manapi商店", href: "/shop/" }
+    ]
+  },
+  {
+    title: "ロードマップ",
+    links: [
+      { label: "生成AI", href: "/guide/generative-ai/" },
+      { label: "Python", href: "/guide/python/" },
+      { label: "動画編集", href: "/guide/video-editing/" },
+      { label: "英語", href: "/guide/english/" },
+      { label: "Excelデータ分析", href: "/guide/excel-data/" },
+      { label: "Webマーケ", href: "/guide/web-marketing/" },
+      { label: "Office・資料", href: "/guide/office-skills/" },
+      { label: "資格", href: "/guide/certification/" },
+      { label: "会計資格", href: "/guide/bookkeeping/" },
+      { label: "お金・投資", href: "/guide/money-basics/" }
     ]
   },
   {
     title: "サイト情報",
     links: [
-      { label: "サイトマップ（全ページ）", href: "/all/" },
+      { label: "採点方法", href: "/about-score/" },
+      { label: "よくある質問", href: "/faq/" },
+      { label: "用語集", href: "/glossary/" },
+      { label: "サイトマップ", href: "/all/" },
       { label: "運営者情報", href: "/operator/" },
-      { label: "広告・アフィリエイトについて", href: "/affiliate/" },
+      { label: "広告・アフィリエイト", href: "/affiliate/" },
       { label: "プライバシーポリシー", href: "/privacy/" },
-      { label: "免責事項", href: "/disclaimer/" }
+      { label: "免責事項", href: "/disclaimer/" },
+      { label: "お問い合わせ", href: "/contact/" },
+      { label: "公式X", href: "https://x.com/manapick_app", external: true }
     ]
+  }
+];
+
+const networkLinks = [
+  {
+    label: "Manapick",
+    description: "動画で学ぶ",
+    href: "/",
+    className: "is-current"
   },
   {
-    title: "つながる",
-    links: [
-      { label: "お問い合わせ", href: "/contact/" },
-      { label: "姉妹サイト：manapick AI", href: MANAPICK_AI_URL, external: true, description: "使えるAIと使い方", site: "ai" },
-      { label: "姉妹サイト：manapick license", href: MANAPICK_LICENSE_URL, external: true, description: "資格・検定を比較", site: "license" },
-      { label: "公式X", href: "https://x.com/manapick_app", external: true, icon: "x" }
-    ]
+    label: "manapick AI",
+    description: "AIを選ぶ",
+    href: MANAPICK_AI_URL,
+    className: "is-ai",
+    external: true
+  },
+  {
+    label: "manapick license",
+    description: "資格を選ぶ",
+    href: MANAPICK_LICENSE_URL,
+    className: "is-license",
+    external: true
   }
 ];
 
 export default function SiteFooter() {
   return (
-    <footer className="border-t border-primaryInk bg-ink text-white">
-      <div className="mx-auto flex max-w-7xl flex-col gap-5 px-4 py-7 min-[760px]:flex-row min-[760px]:items-center min-[760px]:justify-between min-[760px]:px-6">
-        <div>
-          <p className="text-xl font-black">Manapick</p>
-          <p className="mt-1 text-sm text-white/68">学び直しを、最短ルートに。</p>
+    <footer className="site-footer-main">
+      <div className="site-footer-inner">
+        <div className="site-footer-brand">
+          <div className="site-footer-brand-mark" aria-hidden="true">✓</div>
+          <div>
+            <p>Manapick</p>
+            <span>学び直しを、最短ルートに。</span>
+          </div>
+          <small>
+            無料のYouTube学習動画を運営者が視聴し、7軸35点で採点。次に見る一本と学ぶ順番を整理しています。
+          </small>
         </div>
-        <nav className="footer-nav flex flex-wrap gap-4 text-sm font-bold text-white/78" aria-label="サイト情報">
+
+        <nav className="site-footer-sections" aria-label="フッターナビゲーション">
           {footerLinkGroups.map((group) => (
-            <div key={group.title} className="footer-link-group">
-              <p className="footer-group-title">{group.title}</p>
-              <div className="footer-group-links">
+            <section key={group.title} className="site-footer-section">
+              <h2>{group.title}</h2>
+              <div className="site-footer-links">
                 {group.links.map((link) => (
                   <a
                     key={link.label}
-                    className={[
-                      "footer-link",
-                      link.icon === "x" ? "footer-x-link" : "",
-                      link.site === "ai" ? "footer-ai-link" : "",
-                      link.site === "license" ? "footer-license-link" : ""
-                    ].filter(Boolean).join(" ")}
                     href={link.href}
-                    {...(link.external ? { target: "_blank", rel: "noopener" } : {})}
+                    {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   >
-                    {link.icon === "x" ? (
-                      <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                        <path
-                          fill="currentColor"
-                          d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.81-5.96 6.81H1.69l7.73-8.84L1.25 2.25h6.82l4.71 6.23 5.46-6.23Zm-1.16 17.77h1.84L7.08 3.88H5.11l11.97 16.14Z"
-                        />
-                      </svg>
-                    ) : null}
-                    <span>{link.label}</span>
-                    {link.description ? <small>{link.description}</small> : null}
+                    {link.label}
+                    {link.external ? <span aria-hidden="true">↗</span> : null}
                   </a>
                 ))}
               </div>
-            </div>
+            </section>
           ))}
         </nav>
+      </div>
+
+      <div className="site-footer-lower">
+        <nav className="site-footer-network" aria-label="Manapick姉妹サイト">
+          {networkLinks.map((link) => (
+            <a
+              key={link.label}
+              className={link.className}
+              href={link.href}
+              aria-current={link.className === "is-current" ? "page" : undefined}
+              {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            >
+              <strong>{link.label}</strong>
+              <small>{link.description}</small>
+              {link.external ? <span aria-hidden="true">↗</span> : null}
+            </a>
+          ))}
+        </nav>
+        <p>一部のリンクには広告・アフィリエイトを含む場合があります。</p>
+        <p>© Manapick</p>
       </div>
     </footer>
   );
