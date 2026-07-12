@@ -4,7 +4,7 @@ import { genreDisplayName, publishedGenreKeys } from "@/lib/manapick";
 import { eligibleSubPagePath, eligibleSubPagesForGenre } from "@/lib/sub-pages";
 import { guides, guidePath } from "@/lib/guides";
 import { learningIntentPath, learningIntents } from "@/lib/learning-intents";
-import { MANAPICK_AI_URL } from "@/lib/brand-links";
+import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
 
 export const dynamic = "force-static";
 
@@ -96,6 +96,16 @@ export default function AllPagesIndex() {
         <li>
           <a href={MANAPICK_AI_URL} target="_blank" rel="noopener">
             manapick AI（使えるAIと使い方を料金・無料枠つきで比較）
+          </a>
+        </li>
+        <li>
+          <a href={MANAPICK_LICENSE_URL} target="_blank" rel="noopener">
+            manapick license（資格・検定の要件、費用、申込方法を比較）
+          </a>
+        </li>
+        <li>
+          <a href={MANAPICK_CAREER_URL} target="_blank" rel="noopener">
+            manapick career（仕事内容、必要スキル、学ぶ順番を公式情報から確認）
           </a>
         </li>
       </ul>

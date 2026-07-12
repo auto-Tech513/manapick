@@ -8,6 +8,16 @@
     "href": "/?genre=prog#search",
     "guideHref": "/guide/python/",
     "icon": "code",
+    "careerLinks": [
+      {
+        "label": "ソフトウェアエンジニア",
+        "href": "https://career.manapick.app/career/software-engineer/"
+      },
+      {
+        "label": "AI・DX推進担当",
+        "href": "https://career.manapick.app/career/ai-dx-lead/"
+      }
+    ],
     "destinations": [
       {
         "label": "生成AI",
@@ -49,6 +59,16 @@
     "guideHref": "/guide/office-skills/",
     "icon": "office",
     "note": "会計・税務の実務支援ではなく、資格学習とスキル学習への導線です。",
+    "careerLinks": [
+      {
+        "label": "一般事務・営業事務",
+        "href": "https://career.manapick.app/career/office-administration/"
+      },
+      {
+        "label": "経理",
+        "href": "https://career.manapick.app/career/accounting/"
+      }
+    ],
     "destinations": [
       {
         "label": "Office・資料",
@@ -80,6 +100,16 @@
     "href": "/?genre=video#search",
     "guideHref": "/guide/video-editing/",
     "icon": "creative",
+    "careerLinks": [
+      {
+        "label": "動画編集者",
+        "href": "https://career.manapick.app/career/video-editor/"
+      },
+      {
+        "label": "Webデザイナー",
+        "href": "https://career.manapick.app/career/web-designer/"
+      }
+    ],
     "destinations": [
       {
         "label": "動画編集",
@@ -104,6 +134,12 @@
     "href": "/?genre=english#search",
     "guideHref": "/guide/english/",
     "icon": "globe",
+    "careerLinks": [
+      {
+        "label": "英語を使う営業・サポート",
+        "href": "https://career.manapick.app/career/english-sales-support/"
+      }
+    ],
     "destinations": [
       {
         "label": "英語",
@@ -136,6 +172,16 @@
     "href": "/?genre=shikaku#search",
     "guideHref": "/guide/certification/",
     "icon": "certificate",
+    "careerLinks": [
+      {
+        "label": "登録販売者",
+        "href": "https://career.manapick.app/career/registered-salesperson/"
+      },
+      {
+        "label": "介護福祉士",
+        "href": "https://career.manapick.app/career/certified-care-worker/"
+      }
+    ],
     "destinations": [
       {
         "label": "登録販売者",
@@ -168,6 +214,12 @@
     "href": "/?genre=data#search",
     "guideHref": "/guide/excel-data/",
     "icon": "chart",
+    "careerLinks": [
+      {
+        "label": "データアナリスト",
+        "href": "https://career.manapick.app/career/data-analyst/"
+      }
+    ],
     "destinations": [
       {
         "label": "データ分析",
@@ -198,6 +250,16 @@
     "href": "/?genre=marke#search",
     "guideHref": "/guide/web-marketing/",
     "icon": "trend",
+    "careerLinks": [
+      {
+        "label": "Webマーケター",
+        "href": "https://career.manapick.app/career/web-marketer/"
+      },
+      {
+        "label": "SNS運用担当",
+        "href": "https://career.manapick.app/career/social-media-manager/"
+      }
+    ],
     "destinations": [
       {
         "label": "Webマーケ",
@@ -229,6 +291,12 @@
     "guideHref": "/guide/money-basics/",
     "icon": "money",
     "note": "投資助言ではなく、基礎知識と制度理解のための学習導線です。",
+    "careerLinks": [
+      {
+        "label": "経理",
+        "href": "https://career.manapick.app/career/accounting/"
+      }
+    ],
     "destinations": [
       {
         "label": "お金・投資",

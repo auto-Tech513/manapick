@@ -11,7 +11,7 @@ import genresData from "@/content/genres.json";
 import professionRoutesData from "@/content/professions.json";
 import roadmapsData from "@/content/roadmaps.json";
 import videosData from "@/content/videos.json";
-import { MANAPICK_AI_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
+import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
 import { RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY, jstDateKey, selectTodayVideo, sendGaEvent } from "@/lib/retention";
 import { siteStats } from "@/lib/site-stats";
 import { buildSubRoadmap } from "@/lib/sub-roadmap";
@@ -95,6 +95,10 @@ type ProfessionRoute = {
   guideHref: string;
   icon: string;
   note?: string;
+  careerLinks: {
+    label: string;
+    href: string;
+  }[];
   destinations: ProfessionDestination[];
 };
 
@@ -1285,6 +1289,17 @@ export default function ManapickApp() {
                 <span>license ↗</span>
                 <small>資格・検定</small>
               </a>
+              <a
+                className="header-career-link"
+                href={MANAPICK_CAREER_URL}
+                target="_blank"
+                rel="noopener"
+                onClick={() => sendGaEvent("career_crosslink_click", { placement: "header", target: "manapick_career" })}
+                aria-label="manapick careerへ。仕事内容と学ぶ順番を確認"
+              >
+                <span>career ↗</span>
+                <small>仕事を知る</small>
+              </a>
             </nav>
             <button
               ref={menuButtonRef}
@@ -2140,6 +2155,31 @@ function ProfessionRouteSection({
           「何を学ぶか」から迷う人のために、職業ゴールごとにジャンル・資格・ロードマップを束ねました。
         </p>
       </div>
+      <aside className="career-bridge" aria-label="公式職業情報サイト manapick career">
+        <div className="career-bridge-copy">
+          <p>manapick career</p>
+          <h3>仕事の中身を知ってから、学ぶ順番を決める</h3>
+          <span>仕事内容・必要スキル・注意点を公式情報から確認できます。職業の順位付けや適性の断定はしません。</span>
+        </div>
+        <div className="career-bridge-actions">
+          <a
+            href={`${MANAPICK_CAREER_URL}/route/`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => sendGaEvent("career_crosslink_click", { placement: "profession_bridge", target: "career_route" })}
+          >
+            3問で入口案内 <span aria-hidden="true">↗</span>
+          </a>
+          <a
+            href={`${MANAPICK_CAREER_URL}/all/`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => sendGaEvent("career_crosslink_click", { placement: "profession_bridge", target: "career_all" })}
+          >
+            公開中の職業を見る <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </aside>
       <div ref={trackRef} className="profession-track" role="list" onScroll={updateActiveCard}>
         {routes.map((route, index) => {
           const firstVideo = professionTopVideo(route);
@@ -2209,6 +2249,24 @@ function ProfessionRouteSection({
                   }}
                 >
                   {destination.label}
+                </a>
+              ))}
+            </div>
+            <div className="profession-career-links" aria-label={route.title + "に関連する職業情報"}>
+              <span>仕事を知る</span>
+              {route.careerLinks.map((careerLink) => (
+                <a
+                  key={careerLink.href}
+                  href={careerLink.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => sendGaEvent("career_crosslink_click", {
+                    placement: "profession_card",
+                    route_id: route.id,
+                    target: careerLink.href
+                  })}
+                >
+                  {careerLink.label} <span aria-hidden="true">↗</span>
                 </a>
               ))}
             </div>
@@ -2571,6 +2629,19 @@ function SiteMenuDrawer({
           >
             <span>manapick license ↗</span>
             <small>資格・検定を比較</small>
+          </a>
+          <a
+            className="site-menu-link site-menu-career-link"
+            href={MANAPICK_CAREER_URL}
+            target="_blank"
+            rel="noopener"
+            onClick={() => {
+              sendGaEvent("career_crosslink_click", { placement: "menu", target: "manapick_career" });
+              onClose();
+            }}
+          >
+            <span>manapick career ↗</span>
+            <small>仕事内容と学ぶ順番を確認</small>
           </a>
         </nav>
       </aside>

@@ -1,5 +1,5 @@
 import { publishedGenreKeys } from "@/lib/manapick";
-import { MANAPICK_AI_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
+import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
 
 type FooterLink = {
   label: string;
@@ -75,6 +75,13 @@ const networkLinks = [
     description: "資格を選ぶ",
     href: MANAPICK_LICENSE_URL,
     className: "is-license",
+    external: true
+  },
+  {
+    label: "manapick career",
+    description: "仕事を知る",
+    href: MANAPICK_CAREER_URL,
+    className: "is-career",
     external: true
   }
 ];

@@ -1,5 +1,6 @@
 export const MANAPICK_AI_URL = "https://ai.manapick.app";
 export const MANAPICK_LICENSE_URL = "https://license.manapick.app";
+export const MANAPICK_CAREER_URL = "https://career.manapick.app";
 
 export const MANAPICK_AI_CATEGORY_BY_GENRE: Record<string, string> = {
   ai: "chat",

@@ -50,6 +50,10 @@ type ProfessionRoute = {
   relatedText: string;
   href: string;
   guideHref: string;
+  careerLinks: readonly {
+    label: string;
+    href: string;
+  }[];
   destinations: readonly {
     label: string;
     href: string;
@@ -176,6 +180,7 @@ export default function Home() {
             name: route.title,
             description: route.skill + " 関連: " + route.relatedText,
             url: absoluteUrl(route.href),
+            sameAs: route.careerLinks.map((careerLink) => careerLink.href),
             subjectOf: route.destinations.map((destination) => ({
               "@type": "CreativeWork",
               name: destination.label,
