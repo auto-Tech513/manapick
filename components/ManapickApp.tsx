@@ -737,6 +737,15 @@ export default function ManapickApp() {
   }, []);
 
   useEffect(() => {
+    const hash = decodeURIComponent(window.location.hash.slice(1));
+    if (!hash) return;
+    const timeout = window.setTimeout(() => {
+      document.getElementById(hash)?.scrollIntoView({ block: "start", behavior: "auto" });
+    }, 700);
+    return () => window.clearTimeout(timeout);
+  }, []);
+
+  useEffect(() => {
     const media = window.matchMedia("(max-width: 767px)");
     const syncPageSize = () => setPageSize(media.matches ? MOBILE_PAGE_SIZE : DESKTOP_PAGE_SIZE);
     syncPageSize();
