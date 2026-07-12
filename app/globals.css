@@ -149,13 +149,9 @@ img {
   max-width: 100%;
 }
 
-/* Manual ad slots are intentional; Auto ads must never split global navigation. */
-body > ins.adsbygoogle:not(.ad-slot),
-body > .google-auto-placed,
-main > ins.adsbygoogle:not(.ad-slot),
-main > .google-auto-placed,
-.site-header ins.adsbygoogle:not(.ad-slot),
-.site-header .google-auto-placed {
+/* Manual .ad-slot units are intentional; Auto ads must not split navigation, heroes, or cards. */
+ins.adsbygoogle:not(.ad-slot),
+.google-auto-placed {
   display: none !important;
 }
 
