@@ -27,6 +27,7 @@ const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
   {
     title: "ロードマップ",
     links: [
+      { label: "ロードマップ一覧", href: "/guide/" },
       { label: "生成AI", href: "/guide/generative-ai/" },
       { label: "Python", href: "/guide/python/" },
       { label: "動画編集", href: "/guide/video-editing/" },

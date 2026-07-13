@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import BrandLogo from "@/components/BrandLogo";
+import NetworkContextBand from "@/components/NetworkContextBand";
 import VideoActions from "@/components/VideoActions";
 import VideoEmbed from "@/components/VideoEmbed";
 import sisterItemLinks from "@/content/sister-item-links.json";
 import { guidePath, guides } from "@/lib/guides";
-import { manapickAiContextForGenre, manapickAiHrefForGenre } from "@/lib/ai-crosslinks";
 import {
   absoluteUrl,
   displayChannel,
@@ -111,9 +111,8 @@ export default async function VideoPage({ params }: VideoPageProps) {
   const viewingTips = videoViewingTips(video);
   const editorialSummary = videoEditorialSummary(video, related[0]);
   const freshness = videoFreshness(video);
-  const manapickAiHref = manapickAiHrefForGenre(video.genre);
-  const manapickAiContext = manapickAiContextForGenre(video.genre);
   const sisterLinks = (sisterItemLinks as Record<string, SisterItemLink[]>)[video.ytid] ?? [];
+  const linkedSisterSites = sisterLinks.map((link) => link.site);
   const videoObject = {
     "@type": "VideoObject",
     name: video.title,
@@ -148,7 +147,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
             "@type": "ListItem",
             position: 2,
             name: genreDisplayName(video.genre),
-            item: absoluteUrl("/#search")
+            item: absoluteUrl(`/genre/${video.genre}/`)
           },
           {
             "@type": "ListItem",
@@ -177,7 +176,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
       <nav className="video-breadcrumb" aria-label="パンくず">
         <Link href="/">ホーム</Link>
         <span aria-hidden="true">/</span>
-        <Link href="/#search">{genreDisplayName(video.genre)}</Link>
+        <Link href={`/genre/${video.genre}/`}>{genreDisplayName(video.genre)}</Link>
         <span aria-hidden="true">/</span>
         <span>{video.title}</span>
       </nav>
@@ -337,16 +336,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
         )}
       </section>
 
-      <section className="manapick-ai-crosslink is-video" aria-label="公式AI版 manapick AI">
-        <div>
-          <p className="section-eyebrow">公式AI版</p>
-          <h2>“使えるAI”を選ぶなら <span className="ai-brand-word">manapick AI</span></h2>
-          <p>{manapickAiContext}</p>
-        </div>
-        <a href={manapickAiHref} target="_blank" rel="noopener">
-          manapick AIを見る ↗
-        </a>
-      </section>
+      <NetworkContextBand genreKey={video.genre} exclude={linkedSisterSites} />
 
       <AdSlot slot="1438236565" />
       <section className="video-related-section" aria-labelledby="related-title">

@@ -10,6 +10,7 @@ const staticRoutes = [
   "/",
   "/youtube-learning/",
   "/learn/",
+  "/guide/",
   "/all/",
   "/start/",
   "/ranking/",

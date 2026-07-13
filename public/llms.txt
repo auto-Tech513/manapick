@@ -4,7 +4,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 動画は公式YouTubeへのリンクまたは公式埋め込みを前提に紹介し、ダウンロードや再配布は扱いません。
 
 ## 公開中の10ジャンル
-- 生成AI（136本）: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Copilot / DeepL / DeepSeek / ElevenLabs / Gamma / Gemini / Gemma / GitHub Copilot / Google Veo / Google翻訳 / Grok / Manus / Midjourney / Notion AI / Notta / Ollama / OpenAI Codex / Perplexity / Siri AI / Stable Diffusion / Suno / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
+- 生成AI（147本）: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Cline / Copilot / DeepL / DeepSeek / ElevenLabs / Figma(Figma AI) / Gamma / Gemini / Gemma / GitHub Copilot / Google AI Mode / Google Veo / Google翻訳 / Grok / Hailuo AI / HeyGen / Kling AI / Manus / Midjourney / Notion AI / Notta / Ollama / OpenAI Codex / OpenClaw / Perplexity / PixVerse / Replit Agent / Runway / Siri AI / Stable Diffusion / Suno / Supabase / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
 - プログラミング・IT（56本）: AWS認定 クラウドプラクティショナー / AWS認定 ソリューションアーキテクト / Git / JavaScript / Python / SQL / Web開発 / インフラ / 情報セキュリティマネジメント試験
 - 動画編集・クリエイティブ（62本）: After Effects / CapCut / DaVinci / Premiere Pro / デザイン / 色彩検定
 - 語学・英語（53本）: TOEIC / 「ハングル」能力検定 / ビジネス英語 / 発音 / 英会話
@@ -22,6 +22,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 掲載している全動画を運営者が視聴確認し、7軸35点で採点しています。
 
 ## ガイド記事
+- 学習ロードマップ一覧: https://manapick.app/guide/
 - 生成AIロードマップ記事: https://manapick.app/guide/generative-ai/
 - Pythonロードマップ記事: https://manapick.app/guide/python/
 - 動画編集ロードマップ記事: https://manapick.app/guide/video-editing/
@@ -34,10 +35,10 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - お金・投資ロードマップ記事: https://manapick.app/guide/money-basics/
 
 ## ジャンル別AEOインデックス
-### 生成AI（136本）
+### 生成AI（147本）
 - ジャンルURL: https://manapick.app/genre/ai/
 - ガイドURL: https://manapick.app/guide/generative-ai/
-- 主なトピック: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Copilot / DeepL / DeepSeek / ElevenLabs / Gamma / Gemini / Gemma / GitHub Copilot / Google Veo / Google翻訳 / Grok / Manus / Midjourney / Notion AI / Notta / Ollama / OpenAI Codex / Perplexity / Siri AI / Stable Diffusion / Suno / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
+- 主なトピック: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Cline / Copilot / DeepL / DeepSeek / ElevenLabs / Figma(Figma AI) / Gamma / Gemini / Gemma / GitHub Copilot / Google AI Mode / Google Veo / Google翻訳 / Grok / Hailuo AI / HeyGen / Kling AI / Manus / Midjourney / Notion AI / Notta / Ollama / OpenAI Codex / OpenClaw / Perplexity / PixVerse / Replit Agent / Runway / Siri AI / Stable Diffusion / Suno / Supabase / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
 - ロードマップ: 生成AIロードマップ
   - STEP1（初級）: アカウントを作り、AIに指示して回答を得られる。ChatGPT/Gemini/Claudeの違いが分かる。｜動画: 【2025年最新版】超初心者OK！ChatGPTの使い方・基礎をわかりやすく解説！(資料付き) / 【完全マスター】AI初心者が学ぶべきGeminiの基本的な使い方を徹底解説するで。 / 【完全版】Claudeの使い方入門・全機能をまるっと解説（Projects / Skills / Cowork / Claude Code）
   - STEP2（中級）: 無料版の応用機能・主要機能を業務に当てはめて使える。｜動画: 【保存版】ChatGPT 2025年最新入門〜6つのステップで基礎〜応用機能までマスター（無料版対応） / 【脱初心者】AIへの指示出しがうまくいくプロンプトの基礎徹底解説するで！ / 【初心者向け】APIとは何か、実際の使い方や注意点が全部分かる動画【AI自動化】
@@ -186,24 +187,18 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 
 ## 検索意図別の主要導線
 - YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
-- 検索で多い学習テーマ一覧: https://manapick.app/learn/
 - 動画 勉強 無料: https://manapick.app/youtube-learning/
 - リスキリング 何から始める: https://manapick.app/youtube-learning/#youtube-steps-title
-- エクセル統計 使い方: https://manapick.app/learn/excel-statistics/
-- YouTubeサムネイル動画一覧: https://manapick.app/genre/video/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3/
-- YouTubeサムネイル 作り方: https://manapick.app/learn/youtube-thumbnail/
-- Pythonロードマップ: https://manapick.app/guide/python/
-- Python 難しい: https://manapick.app/learn/python-hard/
-- Excelデータ分析ロードマップ: https://manapick.app/guide/excel-data/
-- Power BI 使い方: https://manapick.app/learn/power-bi/
-- Copilot動画一覧: https://manapick.app/genre/ai/Copilot/
-- Copilot 活用事例: https://manapick.app/learn/copilot-use-cases/
-- AIプロンプト動画一覧: https://manapick.app/genre/ai/%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88/
-- AI プロンプト コツ: https://manapick.app/learn/ai-prompt-tips/
-- 社労士動画一覧: https://manapick.app/genre/shikaku/%E7%A4%BE%E5%8A%B4%E5%A3%AB/
+- YouTubeサムネイルの作り方: https://manapick.app/learn/youtube-thumbnail/
+- Pythonは難しい: https://manapick.app/learn/python-hard/
+- エクセル統計の使い方: https://manapick.app/learn/excel-statistics/
+- Copilot活用事例: https://manapick.app/learn/copilot-use-cases/
+- AIプロンプトのコツ: https://manapick.app/learn/ai-prompt-tips/
 - 社労士 勉強 スケジュール 1年: https://manapick.app/learn/sharoshi-1year/
-- Webマーケティングロードマップ: https://manapick.app/guide/web-marketing/
 - マーケティング YouTube おすすめ: https://manapick.app/learn/web-marketing-youtube/
+- Power BIの使い方: https://manapick.app/learn/power-bi/
+- 資産運用を無料で勉強: https://manapick.app/learn/money-study-free/
+- 秘書検定2級の日程と勉強法: https://manapick.app/learn/secretary-test-schedule/
 - Canva 初心者: https://manapick.app/genre/marke/SNS/
 
 ## よくある質問
@@ -211,13 +206,14 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - Q. Manapickスコアとは？ A. 実用性、正確性・鮮度、分かりやすさ、体系性、信頼性、視聴体験、規約・権利の7軸×5点で採点した35点満点の評価です。
 - Q. どの順番で見ればいいですか？ A. 各ジャンルのロードマップにSTEP1〜STEP3の見る順をまとめています。迷う場合はトップの今日の1本やジャンル別の入口から始められます。
 - Q. AIツール自体を比較したい場合は？ A. 公式AI版のmanapick AIで、料金・無料枠・使い方を7軸で確認できます。
-- Q. なりたい仕事の内容や必要スキルを調べたい場合は？ A. manapick careerで、仕事内容・必要スキル・注意点・学ぶ順番を公式情報から確認できます。職業の順位付けや適性の断定は行いません。
+- Q. 関連する資格の要件や費用を比較したい場合は？ A. manapick licenseで、受験要件・費用・申込方法を公式情報から確認できます。
+- Q. 学んだ先の仕事内容を調べたい場合は？ A. manapick careerで、仕事内容・必要スキル・注意点・学ぶ順番を公式情報から確認できます。
 - Q. 広告やアフィリエイトで順位は変わりますか？ A. 紹介料で掲載順位を操作せず、Manapick独自基準と視聴確認を優先します。
 
 ## 主要URL
 - トップ: https://manapick.app/
 - YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
-- 検索で多い学習テーマ: https://manapick.app/learn/
+- 学習ロードマップ一覧: https://manapick.app/guide/
 - ランキング: https://manapick.app/ranking/
 - 最近追加・更新した動画: https://manapick.app/new/
 - よくある質問: https://manapick.app/faq/
@@ -228,6 +224,8 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 免責事項: https://manapick.app/disclaimer/
 - プライバシーポリシー: https://manapick.app/privacy/
 - サイトマップ: https://manapick.app/sitemap.xml
+- 姉妹サイト（AIツール比較）: https://ai.manapick.app/
+- 姉妹サイト（資格・検定比較）: https://license.manapick.app/
 - 姉妹サイト（職業情報）: https://career.manapick.app/
 
 ## クローラー向け補足

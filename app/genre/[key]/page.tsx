@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { guidePath, guides } from "@/lib/guides";
 import AdSlot from "@/components/AdSlot";
-import { manapickAiContextForGenre, manapickAiHrefForGenre } from "@/lib/ai-crosslinks";
+import NetworkContextBand from "@/components/NetworkContextBand";
 import {
   absoluteUrl,
   genreDisplayName,
@@ -291,7 +291,7 @@ export default async function GenrePage({ params }: GenrePageProps) {
           ))}
         </section>
       ) : null}
-      <ManapickAiGenreBand genreKey={key} />
+      <NetworkContextBand genreKey={key} />
       <section className="genre-hub-editorial" aria-labelledby="genre-editorial-title">
         <p className="section-eyebrow">編集部の選び方</p>
         <h2 id="genre-editorial-title">{label}で注意して見ていること</h2>
@@ -372,22 +372,5 @@ export default async function GenrePage({ params }: GenrePageProps) {
         />
       ) : null}
     </main>
-  );
-}
-
-function ManapickAiGenreBand({ genreKey }: { genreKey: string }) {
-  const href = manapickAiHrefForGenre(genreKey);
-  const context = manapickAiContextForGenre(genreKey);
-  return (
-    <section className="manapick-ai-crosslink is-genre" aria-label="公式AI版 manapick AI">
-      <div>
-        <p className="section-eyebrow">公式AI版</p>
-        <h2>“使えるAI”を選ぶなら <span className="ai-brand-word">manapick AI</span></h2>
-        <p>{context}</p>
-      </div>
-      <a href={href} target="_blank" rel="noopener">
-        manapick AIを見る ↗
-      </a>
-    </section>
   );
 }

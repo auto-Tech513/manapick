@@ -4,8 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import BrandLogo from "@/components/BrandLogo";
 import GuidePrCard from "@/components/GuidePrCard";
+import NetworkContextBand from "@/components/NetworkContextBand";
 import prLinksData from "@/content/pr-links.json";
-import { MANAPICK_AI_URL } from "@/lib/brand-links";
 import { findGuide, guidePath, guides, guideStepVideos, type Guide } from "@/lib/guides";
 import {
   absoluteUrl,
@@ -159,8 +159,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
           {
             "@type": "ListItem",
             position: 2,
-            name: "ガイド",
-            item: pageUrl
+            name: "学習ロードマップ",
+            item: absoluteUrl("/guide/")
           },
           {
             "@type": "ListItem",
@@ -190,7 +190,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
       <nav className="guide-breadcrumb" aria-label="パンくず">
         <Link href="/">ホーム</Link>
         <span aria-hidden="true">/</span>
-        <span>ガイド</span>
+        <Link href="/guide/">学習ロードマップ</Link>
         <span aria-hidden="true">/</span>
         <span>{guide.title}</span>
       </nav>
@@ -382,26 +382,11 @@ export default async function GuidePage({ params }: GuidePageProps) {
           </div>
         </section>
 
-        {guide.slug === "generative-ai" ? <GuideManapickAiCrossLink /> : null}
+        <NetworkContextBand genreKey={guide.genre} />
 
         <GuidePrSection guide={guide} />
       </article>
     </main>
-  );
-}
-
-function GuideManapickAiCrossLink() {
-  return (
-    <section className="guide-section manapick-ai-crosslink is-guide" aria-label="公式AI版 manapick AI">
-      <div>
-        <p className="section-eyebrow">公式AI版</p>
-        <h2>“使えるAI”を選ぶなら <span className="ai-brand-word">manapick AI</span></h2>
-        <p>学ぶ順番はManapick、AIツールを選ぶときはmanapick AI。料金・無料枠・使い方を7軸で正直採点しています。</p>
-      </div>
-      <a href={MANAPICK_AI_URL} target="_blank" rel="noopener">
-        manapick AIを見る ↗
-      </a>
-    </section>
   );
 }
 

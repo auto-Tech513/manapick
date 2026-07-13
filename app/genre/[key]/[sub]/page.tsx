@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import GuidePrCard from "@/components/GuidePrCard";
 import AdSlot from "@/components/AdSlot";
+import NetworkContextBand from "@/components/NetworkContextBand";
 import prLinksData from "@/content/pr-links.json";
 import { guidePath, guides } from "@/lib/guides";
 import {
@@ -181,6 +182,8 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
             <span>登録不要・全部無料</span>
           </div>
         </header>
+
+        <NetworkContextBand genreKey={key} />
 
         <section className="sub-topic-section" aria-labelledby="sub-roadmap-title">
           <div className="sub-topic-heading">
