@@ -213,6 +213,8 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 ## 主要URL
 - トップ: https://manapick.app/
 - YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
+- 7日学習プラン: https://manapick.app/study-plan/
+- Manapick Network（学ぶ・AI・資格・仕事）: https://manapick.app/network/
 - 学習ロードマップ一覧: https://manapick.app/guide/
 - ランキング: https://manapick.app/ranking/
 - 最近追加・更新した動画: https://manapick.app/new/

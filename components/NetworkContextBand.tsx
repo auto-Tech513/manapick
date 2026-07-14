@@ -63,6 +63,9 @@ export default function NetworkContextBand({ genreKey, exclude = [] }: NetworkCo
           </a>
         ))}
       </div>
+      <a className="network-context-overview" href="/network/">
+        4サイトの役割と使い分けを見る <span aria-hidden="true">→</span>
+      </a>
     </section>
   );
 }

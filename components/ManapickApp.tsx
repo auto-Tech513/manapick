@@ -1465,6 +1465,8 @@ export default function ManapickApp() {
 
       <SearchIntentShortcutSection />
 
+      <StudyPlanPromoSection />
+
       <ProfessionRouteSection
         routes={professionRoutes}
         onRouteSelect={handleProfessionRoute}
@@ -2120,6 +2122,21 @@ function SearchIntentShortcutSection() {
   );
 }
 
+function StudyPlanPromoSection() {
+  return (
+    <section className="study-plan-promo" aria-labelledby="study-plan-promo-title">
+      <div>
+        <p className="section-eyebrow">見る順を、予定に変える</p>
+        <h2 id="study-plan-promo-title" className="section-title">今週の7日学習プランを作る</h2>
+        <p>ジャンル・1日の時間・週の学習日数を選ぶだけ。休む日も含め、視聴確認済み動画を無理のない順番に並べます。</p>
+      </div>
+      <a href="/study-plan/">
+        7日プランを作る <span aria-hidden="true">→</span>
+      </a>
+    </section>
+  );
+}
+
 function ProfessionRouteSection({
   routes,
   onRouteSelect,
@@ -2560,11 +2577,13 @@ function SiteMenuDrawer({
           <p className="site-menu-section-label">探す・続ける</p>
           <div className="site-menu-compact-grid">
             <a href="/youtube-learning/" onClick={onClose}>おすすめ動画</a>
+            <a href="/study-plan/" onClick={onClose}>7日学習プラン</a>
             <a href="/ranking/" onClick={onClose}>ランキング</a>
             <a href="/new/" onClick={onClose}>新着動画</a>
             <a href="/my/" onClick={onClose}>マイページ</a>
             <a href="/glossary/" onClick={onClose}>用語集</a>
             <a href="/faq/" onClick={onClose}>よくある質問</a>
+            <a href="/network/" onClick={onClose}>4サイト案内</a>
             <a href="/shop/" onClick={onClose}>manapi商店</a>
             <a href="/contact/" onClick={onClose}>お問い合わせ</a>
           </div>

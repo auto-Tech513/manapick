@@ -14,6 +14,7 @@ const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
     title: "探す・学ぶ",
     links: [
       { label: "今日の1本診断", href: "/start/" },
+      { label: "7日学習プラン", href: "/study-plan/" },
       { label: "YouTube学習動画おすすめ", href: "/youtube-learning/" },
       { label: "検索で多い学習テーマ", href: "/learn/" },
       { label: "なりたい職業から選ぶ", href: "/#profession-routes" },
@@ -46,6 +47,7 @@ const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
       { label: "採点方法", href: "/about-score/" },
       { label: "よくある質問", href: "/faq/" },
       { label: "用語集", href: "/glossary/" },
+      { label: "Manapick Network", href: "/network/" },
       { label: "サイトマップ", href: "/all/" },
       { label: "運営者情報", href: "/operator/" },
       { label: "広告・アフィリエイト", href: "/affiliate/" },

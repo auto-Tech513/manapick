@@ -13,6 +13,8 @@ const staticRoutes = [
   "/guide/",
   "/all/",
   "/start/",
+  "/study-plan/",
+  "/network/",
   "/ranking/",
   "/new/",
   "/faq/",

@@ -21,6 +21,8 @@ const mainPages: { label: string; href: string }[] = [
   { label: "検索で多い学習テーマ", href: "/learn/" },
   { label: "学習ロードマップ一覧", href: "/guide/" },
   { label: "今日の1本診断", href: "/start/" },
+  { label: "7日学習プラン", href: "/study-plan/" },
+  { label: "Manapick Network（学ぶ・AI・資格・仕事）", href: "/network/" },
   { label: "ランキング", href: "/ranking/" },
   { label: "新着・更新した動画", href: "/new/" },
   { label: "用語集", href: "/glossary/" },
