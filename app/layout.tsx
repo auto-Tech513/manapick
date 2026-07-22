@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
+import AdSenseScript from "@/components/AdSenseScript";
 import PwaSetup from "@/components/PwaSetup";
 import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
 import SiteFooter from "@/components/SiteFooter";
@@ -107,6 +108,7 @@ export default function RootLayout({
       <head>
         {adsenseId ? <meta name="google-adsense-account" content={adsenseId} /> : null}
         <link rel="preconnect" href="https://i.ytimg.com" />
+        <link rel="alternate" type="application/rss+xml" title="Manapick 学びニュース" href="/news-feed.xml" />
       </head>
       <body>
         <script
@@ -130,14 +132,7 @@ export default function RootLayout({
             />
           </>
         ) : null}
-        {adsenseId ? (
-          <Script
-            id="adsense-script"
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${encodeURIComponent(adsenseId)}`}
-            strategy="afterInteractive"
-            crossOrigin="anonymous"
-          />
-        ) : null}
+        {adsenseId ? <AdSenseScript client={adsenseId} /> : null}
         <PwaSetup />
         {children}
         <SiteFooter />

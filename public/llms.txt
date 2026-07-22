@@ -34,6 +34,15 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 会計資格ロードマップ記事: https://manapick.app/guide/bookkeeping/
 - お金・投資ロードマップ記事: https://manapick.app/guide/money-basics/
 
+## 学びニュース
+- 一覧: https://manapick.app/news/
+- Google Workspaceや生成AIなど、社会人の学びと仕事に関係する公式一次情報を確認し、変更点と実務への影響を整理します。
+- 2026-07-22 Google Meetの記録がDriveで会議ごとに整理へ、学習会の議事録を探しやすく: https://manapick.app/news/2026-07-22-google-meet-drive-resources/ | 出典 Google Workspace Updates
+- 2026-07-21 Google Meetホームに会議資料のハブ、予定と過去のメモ・録画を一画面で確認: https://manapick.app/news/2026-07-21-google-meet-resource-hub/ | 出典 Google Workspace Updates
+- 2026-07-21 Google Classroomのホームが役割別に刷新、教師・学習者・管理者で入口を整理: https://manapick.app/news/2026-07-21-google-classroom-role-home/ | 出典 Google Workspace Updates
+- 2026-07-20 Googleスプレッドシートが複合グラフ作成とExcelからの取り込みを改善: https://manapick.app/news/2026-07-20-google-sheets-combo-charts/ | 出典 Google Workspace Updates
+- 2026-07-16 ChatGPTデスクトップ版がChatとCodexの入口を整理、学習履歴を探す導線も更新: https://manapick.app/news/2026-07-16-chatgpt-desktop-workspaces/ | 出典 OpenAI Help Center
+
 ## ジャンル別AEOインデックス
 ### 生成AI（147本）
 - ジャンルURL: https://manapick.app/genre/ai/
@@ -219,6 +228,8 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 学習ロードマップ一覧: https://manapick.app/guide/
 - ランキング: https://manapick.app/ranking/
 - 最近追加・更新した動画: https://manapick.app/new/
+- 学びニュース: https://manapick.app/news/
+- 学びニュースRSS: https://manapick.app/news-feed.xml
 - よくある質問: https://manapick.app/faq/
 - 用語集: https://manapick.app/glossary/
 - 採点方法: https://manapick.app/about-score/

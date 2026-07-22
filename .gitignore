@@ -9,6 +9,7 @@ tsconfig.tsbuildinfo
 .env*
 data/candidates.json
 data/drafts.json
+data/news-watch-candidates.json
 data/*.tmp
 data/*.bak
 content/*.bak*

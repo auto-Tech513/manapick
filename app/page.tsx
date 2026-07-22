@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ManapickApp from "@/components/ManapickApp";
+import LatestNewsBand from "@/components/LatestNewsBand";
 import professionRoutesData from "@/content/professions.json";
 import roadmapsData from "@/content/roadmaps.json";
 import { absoluteUrl, genreDisplayName, isoDuration, videoPath, videos } from "@/lib/manapick";
@@ -204,6 +205,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
       <ManapickApp />
+      <LatestNewsBand />
       <section className="home-faq-section" aria-labelledby="home-faq-title">
         <div className="home-faq-heading">
           <p className="section-eyebrow">初めての方へ</p>

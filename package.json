@@ -4,13 +4,20 @@
   "private": true,
   "scripts": {
     "dev": "next dev --webpack",
-    "prebuild": "npm run content:audit && npm run llms:generate",
+    "prebuild": "npm run content:audit && npm run news:quality && npm run news:og && npm run news:feed && npm run llms:generate",
     "build": "next build",
     "start": "next dev --webpack",
     "lint": "eslint .",
     "content:audit": "node scripts/audit-content.mjs",
     "llms:generate": "node scripts/generate-llms.mjs",
     "brand:assets": "node scripts/generate-brand-assets.mjs",
+    "news:quality": "node scripts/news-quality.mjs",
+    "news:og": "node scripts/generate-news-og.mjs",
+    "news:feed": "node scripts/generate-news-feed.mjs",
+    "news:watch": "node scripts/news-watch.mjs",
+    "news:publish": "node scripts/news-auto-publish.mjs",
+    "news:test": "node --test scripts/news-auto-publish.test.mjs",
+    "site:links": "node scripts/check-static-links.mjs",
     "pipeline:fetch": "node scripts/fetch-candidates.mjs",
     "pipeline:score": "node scripts/score-draft.mjs",
     "pipeline:ingest": "node scripts/ingest.mjs"
@@ -31,6 +38,7 @@
     "eslint": "^9.39.4",
     "eslint-config-next": "^16.2.6",
     "postcss": "^8.5.15",
+    "sharp": "^0.34.5",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.2"
   }

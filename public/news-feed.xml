@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Manapick 学びニュース</title>
+    <link>https://manapick.app/news/</link>
+    <description>公式発表を、学びと仕事に使える形へ整理します。</description>
+    <language>ja</language>
+    <lastBuildDate>Wed, 22 Jul 2026 23:51:31 GMT</lastBuildDate>
+    <item>
+      <title>Google Meetの記録がDriveで会議ごとに整理へ、学習会の議事録を探しやすく</title>
+      <link>https://manapick.app/news/2026-07-22-google-meet-drive-resources/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-07-22-google-meet-drive-resources/</guid>
+      <description>Google Meetの録画・文字起こし・会議メモを、Google Driveの専用フォルダと会議別サブフォルダで整理する変更を確認。既存フォルダ名を前提にした運用の注意点もまとめます。</description>
+      <category>仕事・整理</category>
+      <pubDate>Tue, 21 Jul 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Classroomのホームが役割別に刷新、教師・学習者・管理者で入口を整理</title>
+      <link>https://manapick.app/news/2026-07-21-google-classroom-role-home/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-07-21-google-classroom-role-home/</guid>
+      <description>Google Classroomが教師・学習者・管理者それぞれに合わせたホーム画面へ更新。表示される情報、開始時期、学習者が最初に確認したい場所を公式発表から整理します。</description>
+      <category>学び方</category>
+      <pubDate>Mon, 20 Jul 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Meetホームに会議資料のハブ、予定と過去のメモ・録画を一画面で確認</title>
+      <link>https://manapick.app/news/2026-07-21-google-meet-resource-hub/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-07-21-google-meet-resource-hub/</guid>
+      <description>Google Meetの新しいホーム画面で、今後の会議の添付資料と過去のメモ・録画・文字起こしを確認できるようになります。研修や勉強会での使い分けを整理します。</description>
+      <category>仕事・整理</category>
+      <pubDate>Mon, 20 Jul 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Googleスプレッドシートが複合グラフ作成とExcelからの取り込みを改善</title>
+      <link>https://manapick.app/news/2026-07-20-google-sheets-combo-charts/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-07-20-google-sheets-combo-charts/</guid>
+      <description>Googleスプレッドシートで列と折れ線を組み合わせた複合グラフを作成でき、Excelからの取り込み時も複合形式と第2軸を維持しやすくなります。学ぶ順番と確認点を整理します。</description>
+      <category>Excel・データ</category>
+      <pubDate>Sun, 19 Jul 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>ChatGPTデスクトップ版がChatとCodexの入口を整理、学習履歴を探す導線も更新</title>
+      <link>https://manapick.app/news/2026-07-16-chatgpt-desktop-workspaces/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-07-16-chatgpt-desktop-workspaces/</guid>
+      <description>OpenAIがChatGPTデスクトップ版の画面構成を更新。ChatGPTとCodexの切り替え、ChatとWorkの区分、履歴やプロジェクトへの入口を公式リリースノートから確認します。</description>
+      <category>生成AI</category>
+      <pubDate>Wed, 15 Jul 2026 15:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

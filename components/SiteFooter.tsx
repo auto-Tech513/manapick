@@ -21,6 +21,7 @@ const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
       { label: `${genreCount}ジャンル一覧`, href: "/#genre-picker" },
       { label: "ランキング", href: "/ranking/" },
       { label: "新着動画", href: "/new/" },
+      { label: "学びニュース", href: "/news/" },
       { label: "マイページ", href: "/my/" },
       { label: "manapi商店", href: "/shop/" }
     ]

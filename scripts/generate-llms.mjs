@@ -47,6 +47,7 @@ const siteUrl = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL);
 const genres = JSON.parse(await readFile(path.join(repoRoot, "content/genres.json"), "utf8"));
 const videos = JSON.parse(await readFile(path.join(repoRoot, "content/videos.json"), "utf8"));
 const roadmaps = JSON.parse(await readFile(path.join(repoRoot, "content/roadmaps.json"), "utf8"));
+const news = JSON.parse(await readFile(path.join(repoRoot, "content/news.json"), "utf8"));
 const publishedGenreKeys = new Set(genres.filter((genre) => genre.status === "published").map((genre) => genre.key));
 const publishedVideos = videos.filter((video) => publishedGenreKeys.has(video.genre));
 const genreCounts = publishedVideos.reduce((counts, video) => {
@@ -158,6 +159,12 @@ const guideLines = [
   ["お金・投資ロードマップ記事", "/guide/money-basics/"]
 ].map(([label, route]) => `- ${label}: ${absoluteUrl(siteUrl, route)}`);
 
+const newsLines = news
+  .slice()
+  .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || b.id.localeCompare(a.id))
+  .slice(0, 10)
+  .map((item) => `- ${item.publishedAt} ${item.headline}: ${absoluteUrl(siteUrl, `/news/${item.id}/`)} | 出典 ${item.sourceName}`);
+
 const lines = [
   "# Manapick",
   "",
@@ -176,6 +183,11 @@ const lines = [
   "## ガイド記事",
   `- 学習ロードマップ一覧: ${absoluteUrl(siteUrl, "/guide/")}`,
   ...guideLines,
+  "",
+  "## 学びニュース",
+  `- 一覧: ${absoluteUrl(siteUrl, "/news/")}`,
+  "- Google Workspaceや生成AIなど、社会人の学びと仕事に関係する公式一次情報を確認し、変更点と実務への影響を整理します。",
+  ...newsLines,
   "",
   "## ジャンル別AEOインデックス",
   ...genreIndexLines(),
@@ -199,6 +211,8 @@ const lines = [
   `- 学習ロードマップ一覧: ${absoluteUrl(siteUrl, "/guide/")}`,
   `- ランキング: ${absoluteUrl(siteUrl, "/ranking/")}`,
   `- 最近追加・更新した動画: ${absoluteUrl(siteUrl, "/new/")}`,
+  `- 学びニュース: ${absoluteUrl(siteUrl, "/news/")}`,
+  `- 学びニュースRSS: ${absoluteUrl(siteUrl, "/news-feed.xml")}`,
   `- よくある質問: ${absoluteUrl(siteUrl, "/faq/")}`,
   `- 用語集: ${absoluteUrl(siteUrl, "/glossary/")}`,
   `- 採点方法: ${absoluteUrl(siteUrl, "/about-score/")}`,

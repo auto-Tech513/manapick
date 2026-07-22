@@ -1,0 +1,58 @@
+name: Daily verified learning news
+
+on:
+  schedule:
+    - cron: "23 21 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: daily-learning-news
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+  models: read
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install Japanese fonts
+        run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk
+      - run: npm ci
+      - name: Check official sources
+        run: npm run news:watch
+      - name: Publish at most one verified update
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run news:publish
+      - name: Verify content, metadata, and static export
+        run: npm run news:test && npm run lint && npm run build && npm run site:links
+      - name: Commit generated article and assets
+        run: |
+          if git diff --quiet; then
+            echo "No qualifying official update today."
+            exit 0
+          fi
+          git config user.name "manapick-news-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add content/news.json public/og/news public/news-feed.xml public/llms.txt
+          git commit -m "content: publish verified daily learning news"
+          git push
+      - name: Open an issue when the daily quality gate fails
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: >-
+          gh issue create
+          --title "Daily learning news quality gate failed"
+          --body "The scheduled news workflow failed. No unverified article was published. Review the Actions run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"

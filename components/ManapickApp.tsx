@@ -1270,6 +1270,9 @@ export default function ManapickApp() {
               <a className="site-nav-optional transition hover:text-accent" href="/new/">
                 新着
               </a>
+              <Link className="site-nav-optional transition hover:text-accent" href="/news/">
+                ニュース
+              </Link>
               <a className="site-nav-optional transition hover:text-accent" href="/glossary/">
                 用語集
               </a>
@@ -2590,6 +2593,7 @@ function SiteMenuDrawer({
             <a href="/study-plan/" onClick={onClose}>7日学習プラン</a>
             <a href="/ranking/" onClick={onClose}>ランキング</a>
             <a href="/new/" onClick={onClose}>新着動画</a>
+            <Link href="/news/" onClick={onClose}>学びニュース</Link>
             <a href="/my/" onClick={onClose}>マイページ</a>
             <a href="/glossary/" onClick={onClose}>用語集</a>
             <a href="/faq/" onClick={onClose}>よくある質問</a>

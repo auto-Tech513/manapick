@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { guidePath, guides } from "@/lib/guides";
 import { learningIntentPath, learningIntents } from "@/lib/learning-intents";
 import { absoluteUrl, publishedGenreKeys, videoPath, videos } from "@/lib/manapick";
+import { newsItems, newsPath } from "@/lib/news";
 import { eligibleSubPagePath, eligibleSubPages } from "@/lib/sub-pages";
 
 export const dynamic = "force-static";
@@ -17,6 +18,7 @@ const staticRoutes = [
   "/network/",
   "/ranking/",
   "/new/",
+  "/news/",
   "/faq/",
   "/glossary/",
   "/about-score/",
@@ -67,6 +69,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.82
+    })),
+    ...newsItems.map((item) => ({
+      url: absoluteUrl(newsPath(item.id)),
+      lastModified: new Date(item.lastChecked),
+      changeFrequency: "monthly" as const,
+      priority: 0.78
     }))
   ];
 }

@@ -1,0 +1,25 @@
+{
+  "lookbackDays": 5,
+  "sources": [
+    {
+      "id": "google-workspace-updates",
+      "name": "Google Workspace Updates",
+      "mode": "atom",
+      "url": "https://workspaceupdates.googleblog.com/feeds/posts/default?alt=atom",
+      "allowedHost": "workspaceupdates.googleblog.com",
+      "autoPublish": true,
+      "excludeTitlePatterns": [
+        "^Google Workspace Weekly Recap"
+      ]
+    },
+    {
+      "id": "openai-news",
+      "name": "OpenAI News",
+      "mode": "rss",
+      "url": "https://openai.com/news/rss.xml",
+      "allowedHost": "openai.com",
+      "autoPublish": false,
+      "minSourceText": 80
+    }
+  ]
+}
