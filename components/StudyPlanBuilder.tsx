@@ -76,17 +76,24 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
   const [saved, setSaved] = useState(false);
 
   useEffect(() => {
+    let restoreTimer: number | undefined;
     try {
       const raw = window.localStorage.getItem(STORAGE_KEY);
       if (!raw) return;
       const value = JSON.parse(raw) as Partial<SavedPlan>;
-      if (typeof value.genre === "string" && genres.some((item) => item.key === value.genre)) setGenre(value.genre);
-      if ([15, 30, 60].includes(Number(value.dailyMinutes))) setDailyMinutes(Number(value.dailyMinutes));
-      if ([3, 5, 7].includes(Number(value.frequency))) setFrequency(Number(value.frequency));
-      setSaved(true);
+      restoreTimer = window.setTimeout(() => {
+        if (typeof value.genre === "string" && genres.some((item) => item.key === value.genre)) setGenre(value.genre);
+        if ([15, 30, 60].includes(Number(value.dailyMinutes))) setDailyMinutes(Number(value.dailyMinutes));
+        if ([3, 5, 7].includes(Number(value.frequency))) setFrequency(Number(value.frequency));
+        setSaved(true);
+      }, 0);
     } catch {
       // A malformed local value should never block the planner.
     }
+
+    return () => {
+      if (restoreTimer !== undefined) window.clearTimeout(restoreTimer);
+    };
   }, [genres]);
 
   const selectedGenre = genres.find((item) => item.key === genre) ?? genres[0];

@@ -5,7 +5,7 @@ import { absoluteUrl } from "@/lib/manapick";
 import { learningIntentPath, learningIntents } from "@/lib/learning-intents";
 
 const pageTitle = "検索で多い学習テーマ別入口｜無料YouTube動画の見る順 | Manapick";
-const pageDescription = "検索でよく探される学習テーマを、無料YouTube動画の見る順に整理。Excel統計、Python、Power BI、AIプロンプト、Copilotなどの入口です。";
+const pageDescription = "検索でよく探される学習テーマを、無料YouTube動画の見る順に整理。Excel統計、Python、Power BI、FP3級過去問、社労士、AIプロンプトなどの入口です。";
 const pageUrl = absoluteUrl("/learn/");
 
 export const metadata: Metadata = {
@@ -81,8 +81,8 @@ export default function LearnIndexPage() {
         <p className="section-eyebrow">検索から来た人へ</p>
         <h1>検索で多い学習テーマを、見る順で選ぶ。</h1>
         <p>
-          検索でよく探されるテーマを、無料YouTube動画・ロードマップ・FAQにまとめました。
-          まず1ページで全体像をつかみ、必要なら動画一覧へ進めます。
+          検索で実際に見つけられているテーマを、無料YouTube動画・ロードマップ・公式情報・FAQにまとめました。
+          まず1ページで答えと見る順をつかみ、必要な動画だけを比較できます。
         </p>
       </section>
       <section className="knowledge-section" aria-labelledby="learn-index-title">

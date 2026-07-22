@@ -2,6 +2,7 @@
 
 import Fuse from "fuse.js";
 import Image from "next/image";
+import Link from "next/link";
 import { type KeyboardEvent as ReactKeyboardEvent, type RefObject, useEffect, useMemo, useRef, useState } from "react";
 import BrandLogo, { BrandMark } from "@/components/BrandLogo";
 import AdSlot from "@/components/AdSlot";
@@ -149,14 +150,14 @@ const searchIntentLinks = [
     note: "無料動画の選び方"
   },
   {
-    label: "リスキリング 何から始める",
-    href: "/youtube-learning/#youtube-steps-title",
-    note: "最初の1本を決める"
+    label: "エクセル統計の使い方",
+    href: "/learn/excel-statistics/",
+    note: "Excelデータ分析"
   },
   {
-    label: "YouTubeサムネイルの作り方",
-    href: "/learn/youtube-thumbnail/",
-    note: "動画編集・デザイン"
+    label: "マーケティングYouTubeおすすめ",
+    href: "/learn/web-marketing-youtube/",
+    note: "Webマーケ入門"
   },
   {
     label: "Pythonは難しい？",
@@ -164,9 +165,24 @@ const searchIntentLinks = [
     note: "初心者向けの順番"
   },
   {
-    label: "エクセル統計の使い方",
-    href: "/learn/excel-statistics/",
-    note: "Excelデータ分析"
+    label: "資産運用を無料で勉強",
+    href: "/learn/money-study-free/",
+    note: "家計・NISA・投資"
+  },
+  {
+    label: "FP3級の過去問",
+    href: "/learn/fp3-past-questions/",
+    note: "公式問題と解説動画"
+  },
+  {
+    label: "社労士YouTubeおすすめ",
+    href: "/learn/sharoshi-1year/",
+    note: "1年の学習順も確認"
+  },
+  {
+    label: "Power BIの使い方",
+    href: "/learn/power-bi/",
+    note: "Excelの次の一歩"
   },
   {
     label: "AIプロンプトのコツ",
@@ -179,24 +195,14 @@ const searchIntentLinks = [
     note: "仕事で使うAI"
   },
   {
-    label: "社労士の1年学習計画",
-    href: "/learn/sharoshi-1year/",
-    note: "資格勉強の順番"
+    label: "YouTubeサムネイルの作り方",
+    href: "/learn/youtube-thumbnail/",
+    note: "動画編集・デザイン"
   },
   {
-    label: "マーケティングYouTubeおすすめ",
-    href: "/learn/web-marketing-youtube/",
-    note: "Webマーケ入門"
-  },
-  {
-    label: "Canva初心者",
-    href: "/genre/marke/SNS/",
-    note: "SNS制作"
-  },
-  {
-    label: "資産運用を無料で勉強",
-    href: "/learn/money-study-free/",
-    note: "家計・NISA・投資"
+    label: "リスキリング 何から始める",
+    href: "/youtube-learning/#youtube-steps-title",
+    note: "最初の1本を決める"
   },
   {
     label: "秘書検定2級の日程",
@@ -206,15 +212,16 @@ const searchIntentLinks = [
 ];
 
 const popularSearchKeywords = [
-  "YouTubeサムネイル",
-  "Python 難しい",
   "エクセル統計",
-  "Copilot 活用",
-  "AIプロンプト",
-  "社労士",
   "マーケティング",
-  "Canva 初心者",
+  "Python 難しい",
   "資産運用",
+  "FP3級 過去問",
+  "社労士",
+  "Power BI",
+  "YouTubeサムネイル",
+  "AIプロンプト",
+  "Copilot 活用",
   "秘書検定 2級"
 ];
 
@@ -2108,9 +2115,12 @@ function SearchIntentShortcutSection() {
           <p className="section-eyebrow">よく検索されるテーマ</p>
           <h2 id="search-intent-title" className="section-title">今ある悩みから、直接探す</h2>
         </div>
-        <p>よく調べられるテーマを、対応する動画一覧・ロードマップへつなげました。</p>
+        <div className="search-intent-head-actions">
+          <p>検索で実際に見つけられているテーマを、対応する動画一覧・ロードマップへつなげました。</p>
+          <Link href="/learn/">学習テーマをすべて見る <span aria-hidden="true">→</span></Link>
+        </div>
       </div>
-      <div className="search-intent-grid">
+      <div className="search-intent-grid" aria-label="検索で多い学習テーマ">
         {searchIntentLinks.map((item) => (
           <a key={item.href + item.label} href={item.href}>
             <span>{item.label}</span>

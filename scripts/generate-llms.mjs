@@ -136,10 +136,11 @@ const queryIntentLines = [
   ["エクセル統計の使い方", "/learn/excel-statistics/"],
   ["Copilot活用事例", "/learn/copilot-use-cases/"],
   ["AIプロンプトのコツ", "/learn/ai-prompt-tips/"],
-  ["社労士 勉強 スケジュール 1年", "/learn/sharoshi-1year/"],
+  ["社労士 YouTube おすすめ・1年学習計画", "/learn/sharoshi-1year/"],
   ["マーケティング YouTube おすすめ", "/learn/web-marketing-youtube/"],
   ["Power BIの使い方", "/learn/power-bi/"],
   ["資産運用を無料で勉強", "/learn/money-study-free/"],
+  ["FP3級 過去問", "/learn/fp3-past-questions/"],
   ["秘書検定2級の日程と勉強法", "/learn/secretary-test-schedule/"],
   ["Canva 初心者", "/genre/marke/SNS/"]
 ].map(([label, route]) => `- ${label}: ${absoluteUrl(siteUrl, route)}`);

@@ -113,16 +113,23 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
         <p className="section-eyebrow">見る順</p>
         <h2 id="intent-steps-title">迷わない3ステップ</h2>
         <ol className="learning-step-list">
-          {intent.steps.map((step, index) => (
-            <li key={step.title}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <div>
-                <strong>{step.title}</strong>
-                <p>{step.body}</p>
-                <Link href={step.href}>関連ページへ進む</Link>
-              </div>
-            </li>
-          ))}
+          {intent.steps.map((step, index) => {
+            const isExternal = step.href.startsWith("http");
+            return (
+              <li key={step.title}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <div>
+                  <strong>{step.title}</strong>
+                  <p>{step.body}</p>
+                  {isExternal ? (
+                    <a href={step.href} target="_blank" rel="noopener noreferrer">公式サイトで確認する</a>
+                  ) : (
+                    <Link href={step.href}>関連ページへ進む</Link>
+                  )}
+                </div>
+              </li>
+            );
+          })}
         </ol>
       </section>
 
@@ -191,12 +198,25 @@ function buildStructuredData(intent: LearningIntent, pageUrl: string, selectedVi
     "@graph": [
       {
         "@type": "Article",
-        headline: intent.title,
+        headline: intent.h1,
         description: intent.description,
         inLanguage: "ja",
         mainEntityOfPage: pageUrl,
         author: { "@id": absoluteUrl("/#organization") },
         publisher: { "@id": absoluteUrl("/#organization") }
+      },
+      {
+        "@type": "HowTo",
+        name: intent.h1,
+        description: intent.answer,
+        inLanguage: "ja",
+        step: intent.steps.map((step, index) => ({
+          "@type": "HowToStep",
+          position: index + 1,
+          name: step.title,
+          text: step.body,
+          url: step.href.startsWith("http") ? step.href : absoluteUrl(step.href)
+        }))
       },
       {
         "@type": "FAQPage",

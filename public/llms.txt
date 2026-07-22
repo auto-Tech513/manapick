@@ -194,10 +194,11 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - エクセル統計の使い方: https://manapick.app/learn/excel-statistics/
 - Copilot活用事例: https://manapick.app/learn/copilot-use-cases/
 - AIプロンプトのコツ: https://manapick.app/learn/ai-prompt-tips/
-- 社労士 勉強 スケジュール 1年: https://manapick.app/learn/sharoshi-1year/
+- 社労士 YouTube おすすめ・1年学習計画: https://manapick.app/learn/sharoshi-1year/
 - マーケティング YouTube おすすめ: https://manapick.app/learn/web-marketing-youtube/
 - Power BIの使い方: https://manapick.app/learn/power-bi/
 - 資産運用を無料で勉強: https://manapick.app/learn/money-study-free/
+- FP3級 過去問: https://manapick.app/learn/fp3-past-questions/
 - 秘書検定2級の日程と勉強法: https://manapick.app/learn/secretary-test-schedule/
 - Canva 初心者: https://manapick.app/genre/marke/SNS/
 

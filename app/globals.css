@@ -3942,13 +3942,35 @@ ins.adsbygoogle:not(.ad-slot),
   margin-bottom: 14px;
 }
 
-.search-intent-head p:last-child {
+.search-intent-head-actions {
+  display: grid;
+  justify-items: end;
+  gap: 6px;
+  max-width: 30rem;
+}
+
+.search-intent-head-actions p {
   max-width: 28rem;
   margin: 0;
   color: var(--color-muted);
   font-size: 0.86rem;
   font-weight: 850;
   line-height: 1.65;
+  text-align: right;
+}
+
+.search-intent-head-actions > a {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 950;
+  text-decoration: none;
+}
+
+.search-intent-head-actions > a:hover,
+.search-intent-head-actions > a:focus-visible {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .search-intent-grid {
@@ -4031,8 +4053,29 @@ ins.adsbygoogle:not(.ad-slot),
     gap: 8px;
   }
 
+  .search-intent-head-actions {
+    justify-items: start;
+    max-width: none;
+  }
+
+  .search-intent-head-actions p {
+    text-align: left;
+  }
+
   .search-intent-grid {
-    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, minmax(58px, auto));
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(220px, 78vw);
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scrollbar-width: thin;
+    padding: 1px 1px 6px;
+  }
+
+  .search-intent-grid a {
+    scroll-snap-align: start;
   }
 
   .recent-updates-grid {
@@ -7556,6 +7599,11 @@ ins.adsbygoogle:not(.ad-slot),
     radial-gradient(circle at 84% 14%, rgba(15, 169, 139, 0.16), transparent 12rem),
     radial-gradient(circle at 12% 86%, rgba(245, 158, 11, 0.12), transparent 10rem),
     linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 7%, white), color-mix(in srgb, var(--color-leaf) 9%, white));
+}
+
+.learning-intent-hero h1 {
+  line-break: strict;
+  word-break: auto-phrase;
 }
 
 .learning-intent-meta {
