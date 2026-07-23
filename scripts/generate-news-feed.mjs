@@ -27,6 +27,13 @@ const entries = items
     ].join("\n");
   }).join("\n");
 
+const latestPublishedAt = items
+  .map((item) => item.publishedAt)
+  .sort((a, b) => b.localeCompare(a))[0];
+const lastBuildDate = latestPublishedAt
+  ? new Date(`${latestPublishedAt}T00:00:00+09:00`).toUTCString()
+  : new Date(0).toUTCString();
+
 const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
@@ -34,7 +41,7 @@ const rss = `<?xml version="1.0" encoding="UTF-8"?>
     <link>${siteUrl}/news/</link>
     <description>公式発表を、学びと仕事に使える形へ整理します。</description>
     <language>ja</language>
-    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+    <lastBuildDate>${lastBuildDate}</lastBuildDate>
 ${entries}
   </channel>
 </rss>
