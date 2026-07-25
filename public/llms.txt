@@ -39,6 +39,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - Google Workspaceや生成AIなど、社会人の学びと仕事に関係する公式一次情報を確認し、変更点と実務への影響を整理します。
 - 2026-07-23 Googleカレンダーで会議ゲストリストにリーダーのスケジューリング担当者情報が表示される新機能: https://manapick.app/news/2026-07-23-view-supporting-calendar-delegates-in-meeting-guest-li-8bfff6e561/ | 出典 Google Workspace Updates
 - 2026-07-22 Google Meetの記録がDriveで会議ごとに整理へ、学習会の議事録を探しやすく: https://manapick.app/news/2026-07-22-google-meet-drive-resources/ | 出典 Google Workspace Updates
+- 2026-07-22 Gemini AlphaがGemini Betaに名称変更、機能や設定に影響なし: https://manapick.app/news/2026-07-22-gemini-alpha-is-now-gemini-beta-11cac82b51/ | 出典 Google Workspace Updates
 - 2026-07-21 Google Meetホームに会議資料のハブ、予定と過去のメモ・録画を一画面で確認: https://manapick.app/news/2026-07-21-google-meet-resource-hub/ | 出典 Google Workspace Updates
 - 2026-07-21 Google Classroomのホームが役割別に刷新、教師・学習者・管理者で入口を整理: https://manapick.app/news/2026-07-21-google-classroom-role-home/ | 出典 Google Workspace Updates
 - 2026-07-20 Googleスプレッドシートが複合グラフ作成とExcelからの取り込みを改善: https://manapick.app/news/2026-07-20-google-sheets-combo-charts/ | 出典 Google Workspace Updates

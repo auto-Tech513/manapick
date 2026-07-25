@@ -142,6 +142,79 @@
     ]
   },
   {
+    "id": "2026-07-22-gemini-alpha-is-now-gemini-beta-11cac82b51",
+    "headline": "Gemini AlphaがGemini Betaに名称変更、機能や設定に影響なし",
+    "description": "Gemini Alphaプログラムの名称が「Gemini Beta」に変更されました。これはブランド名の更新であり、機能や設定、データプライバシー、価格体系には影響ありません。管理者や利用者の操作や契約内容も従来通り維持されます。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "whyCare": "名称変更はブランドの認知や管理画面の表記に関わるため、業務でGemini Betaを利用する際の混乱を防ぐためにも最新情報の把握が重要です。管理者は新しいラベルへの移行を確認し、ユーザーやチームへの案内に役立てることができます。学び直しや業務効率化の観点から、今後発表されるGemini Betaの新機能にも注目しましょう。",
+    "facts": [
+      "Gemini Alphaの名称がGemini Betaに変更された。",
+      "今回の変更はブランド名のみで、機能や設定、データプライバシー、価格体系には影響しない。",
+      "管理者向けのコントロールや顧客のオプトイン設定は従来通り維持される。",
+      "契約条件や利用規約も変更なく、再署名は不要。",
+      "Gemini Betaの新機能はGoogle Developer ProgramフォーラムやGemini Betaヘルプセンターで発表される。"
+    ],
+    "sections": [
+      {
+        "heading": "名称変更の概要と背景",
+        "paragraphs": [
+          "Gemini Alphaプログラムは「Gemini Beta」に名称変更されました。新しい名称は、ローンチ段階における機能の規模や品質をより正確に反映する目的で採用されています。",
+          "今回の変更はブランド名の更新のみであり、サービスの根本的な内容や提供方法には影響しません。"
+        ]
+      },
+      {
+        "heading": "ユーザー・管理者への影響",
+        "paragraphs": [
+          "管理者向けの既存コントロールや顧客のオプトイン設定はそのまま維持されます。管理画面やヘルプセンターの記事で「Gemini Beta」ラベルが順次表示されるようになります。",
+          "エンドユーザー向けの設定変更はありません。利用者は従来通りサービスを利用できます。契約条件や利用規約も変更なく、再署名の必要はありません。"
+        ]
+      },
+      {
+        "heading": "新機能の発表と情報入手方法",
+        "paragraphs": [
+          "Gemini Betaの新機能はGoogle Developer ProgramフォーラムやGemini Betaヘルプセンターで随時発表されます。WorkspaceのアクティブユーザーはGDPコンテンツへのアクセス登録が必要です。",
+          "登録方法については公式ドキュメントで案内されています。最新情報を得るためには、これらの公式チャネルを定期的に確認することが推奨されます。"
+        ]
+      },
+      {
+        "heading": "ロールアウトと利用可能なプラン",
+        "paragraphs": [
+          "Gemini Betaラベルへの切り替えは、管理コンソールやヘルプ記事で数週間かけて順次行われます。Rapid ReleaseおよびScheduled Releaseドメインでは、2026年7月22日から最大15日間かけて機能が表示されます。",
+          "利用可能なプランは、Business Starter、Standard、Plus、Enterprise Starter、Standard、Plus、教育向けGoogle AI Pro for Educationアドオンです。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部からの活用提案",
+        "paragraphs": [
+          "名称変更に伴い、管理者は新しいラベルの表示状況を確認し、チームやユーザーへの案内を適切に行うことが重要です。公式ヘルプセンターやフォーラムを活用し、最新機能や情報を把握しましょう。",
+          "今後Gemini Betaで発表される新機能は、業務効率化やAI活用の学び直しに役立つ可能性があります。公式チャネルを定期的にチェックし、必要な情報を早めに取得することをおすすめします。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AIの活用ガイド",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "AI活用の学習計画",
+        "href": "/study-plan/",
+        "kind": "guide"
+      },
+      {
+        "label": "Manapick AIツール",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-07-22",
+    "lastChecked": "2026-07-25",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/07/gemini-alpha-is-now-gemini-beta.html"
+  },
+  {
     "id": "2026-07-21-google-meet-resource-hub",
     "headline": "Google Meetホームに会議資料のハブ、予定と過去のメモ・録画を一画面で確認",
     "description": "Google Meetの新しいホーム画面で、今後の会議の添付資料と過去のメモ・録画・文字起こしを確認できるようになります。研修や勉強会での使い分けを整理します。",
