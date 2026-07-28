@@ -17,6 +17,11 @@ import {
   type Video
 } from "@/lib/manapick";
 import { eligibleSubPagePath, eligibleSubPagesForGenre } from "@/lib/sub-pages";
+import GuidePrCard from "@/components/GuidePrCard";
+import prLinksData from "@/content/pr-links.json";
+import type { GuidePrLink } from "@/lib/pr-links";
+
+const guidePrLinks = prLinksData as Record<string, GuidePrLink[]>;
 
 type GenrePageProps = {
   params: Promise<{ key: string }>;
@@ -219,6 +224,7 @@ export default async function GenrePage({ params }: GenrePageProps) {
   const url = absoluteUrl(`/genre/${key}/`);
   const subPages = eligibleSubPagesForGenre(key);
   const seo = genreSeoFor(key, label, list.length);
+  const prCourseItems = (guidePrLinks[key] ?? []).filter((item) => item.kind === "course");
 
   const collection = {
     "@context": "https://schema.org",
@@ -324,6 +330,24 @@ export default async function GenrePage({ params }: GenrePageProps) {
                 <summary>{item.question}</summary>
                 <p>{item.answer}</p>
               </details>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      {prCourseItems.length > 0 ? (
+        <section className="genre-hub-pr guide-pr-section" aria-labelledby="genre-hub-pr-title">
+          <div className="guide-pr-heading">
+            <div>
+              <p className="section-eyebrow">【PR】広告</p>
+              <h2 id="genre-hub-pr-title">{label}を本格的に学べる講座・スクール（PR）</h2>
+              <p className="guide-pr-disclosure">本ページにはアフィリエイト広告（PR）を含みます。</p>
+            </div>
+            <span className="guide-pr-badge">PR</span>
+          </div>
+          <div className="guide-pr-grid">
+            {prCourseItems.map((item) => (
+              <GuidePrCard key={item.url} genre={key} item={item} placement="genre-hub" />
             ))}
           </div>
         </section>
