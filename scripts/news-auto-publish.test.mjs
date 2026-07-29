@@ -7,7 +7,10 @@ import { unsupportedNumericTokens } from "./news-auto-publish.mjs";
 
 test("current news corpus passes the strict quality gate", async () => {
   const items = JSON.parse(await readFile(new URL("../content/news.json", import.meta.url), "utf8"));
-  assert.deepEqual(validateNewsItems(items, { today: "2026-07-23" }), []);
+  // 実在コーパスの判定日は「JSTの今日」を使う。固定日を書くと、その日より後に
+  // 自動公開された記事が全て "future publication date" で落ちてCIが止まる（2026-07-27/28に発生）。
+  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo" }).format(new Date());
+  assert.deepEqual(validateNewsItems(items, { today }), []);
 });
 
 test("short articles are rejected", () => {

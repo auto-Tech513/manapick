@@ -34,7 +34,11 @@ export function articleBodyText(item) {
   ].join("").replace(/\s/g, "");
 }
 
-export function validateNewsItems(items, { today = new Date().toISOString().slice(0, 10) } = {}) {
+// 既定の判定日はJST。toISOString()は常にUTCを返すため、CI(UTC)がJST 06:23に走ると
+// UTCではまだ前日となり、JST当日付の記事が "future publication date" で誤判定される。
+const jstToday = () => new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo" }).format(new Date());
+
+export function validateNewsItems(items, { today = jstToday() } = {}) {
   const errors = [];
   const ids = new Set();
   const headlines = new Set();
