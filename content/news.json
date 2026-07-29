@@ -1,5 +1,78 @@
 [
   {
+    "id": "2026-07-29-create-and-import-scatter-charts-with-multiple-x-serie-348b704d47",
+    "headline": "Google Sheetsが複数の独立したx系列を持つ散布図の作成・編集に対応、Excelとの互換性も向上",
+    "description": "Google Sheetsで複数の独立したx系列を持つ散布図を作成・編集できるようになりました。これにより、各データ系列ごとに異なるx軸を設定でき、Microsoft Excelとのインポート・エクスポート時の互換性も改善されています。個人アカウントやGoogle Workspace利用者が利用可能です。",
+    "category": "data",
+    "categoryLabel": "Excel・データ",
+    "whyCare": "この新機能は、複数のデータ系列を異なるx軸で比較したい場合や、Excelとのファイル互換性を重視する業務に役立ちます。データ分析やレポート作成時に、より柔軟なグラフ表現が可能となり、他のツールとの連携もスムーズになります。学び直しや仕事の効率化を目指す方は、Google Sheetsの最新機能を活用することで、データ可視化の幅を広げることができます。",
+    "facts": [
+      "Google Sheetsで複数の独立したx系列を持つ散布図の作成・編集が可能になった。",
+      "各データ系列ごとに固有のx軸を設定できるようになった。",
+      "Excelファイルから複数x系列の散布図をインポートする際、従来はx軸が1つに統一されていたが、今回のアップデートで正確に再現される。",
+      "Google Workspace利用者と個人Googleアカウントのユーザーが利用できる。",
+      "管理者による制御はなく、エンドユーザーが直接利用できる。"
+    ],
+    "sections": [
+      {
+        "heading": "複数x系列散布図の新機能概要",
+        "paragraphs": [
+          "Google Sheetsは、複数の独立したx系列を持つ散布図の作成・編集に対応しました。これまで、1つのグラフ内の全データ系列が同じx軸を共有していましたが、今回のアップデートにより、各系列ごとに異なるx軸を設定できるようになりました。",
+          "この機能により、異なる時間軸や数値軸を持つデータを一つのグラフで比較することが可能となり、より柔軟なデータ可視化が実現します。"
+        ]
+      },
+      {
+        "heading": "Excelとの互換性向上",
+        "paragraphs": [
+          "今回のアップデートは、Microsoft Excelとのインポート・エクスポート互換性も大きく改善しています。従来は、Excelファイルから複数x系列の散布図をGoogle Sheetsにインポートすると、追加のx軸が失われて1つのx軸に統一されていました。",
+          "新機能により、Excelで作成した複数x系列の散布図がGoogle Sheets上でも正確に再現され、両プラットフォーム間でのデータ移行がスムーズになります。"
+        ]
+      },
+      {
+        "heading": "利用方法と管理者設定",
+        "paragraphs": [
+          "この機能はGoogle Workspace利用者と個人Googleアカウントのユーザーが利用できます。管理者による制御はなく、エンドユーザーが直接機能を利用できます。",
+          "詳細な操作方法やグラフの追加・編集については、Google Docs Editors Helpの「チャートやグラフの追加・編集」ページで確認できます。"
+        ]
+      },
+      {
+        "heading": "ロールアウトと利用可能範囲",
+        "paragraphs": [
+          "新機能はRapid Releaseドメインでは2026年7月29日から、Scheduled Releaseドメインでは2026年8月14日から段階的に展開されます。最大15日間で全ユーザーに機能が表示される予定です。",
+          "Google Workspaceの全ユーザーと個人Googleアカウント利用者が対象となっており、幅広いユーザーが新しい散布図機能を活用できます。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部からの活用提案",
+        "paragraphs": [
+          "複数x系列の散布図は、異なるデータ系列を個別の軸で比較したい場合や、複雑なデータ分析を行う際に有効です。例えば、異なる時間帯や条件で取得したデータを一つのグラフで視覚化することで、傾向や相関をより明確に把握できます。",
+          "Excelとの互換性向上により、業務で両ツールを併用している方も、データ移行時のグラフ再現性を気にせず作業できるようになります。Google Sheetsの最新機能を活用し、データ分析やレポート作成の効率化を目指しましょう。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Excelデータ分析ガイド",
+        "href": "/guide/excel-data/",
+        "kind": "guide"
+      },
+      {
+        "label": "Google Sheetsで学ぶデータ分析",
+        "href": "/learn/excel-statistics/",
+        "kind": "intent"
+      },
+      {
+        "label": "AIでデータ可視化を効率化",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-07-29",
+    "lastChecked": "2026-07-29",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/07/create-and-import-scatter-charts-with-multiple-x-series-in-Google-Sheets.html"
+  },
+  {
     "id": "2026-07-28-generate-and-edit-visuals-with-gemini-in-google-docs-350b7a144a",
     "headline": "Google DocsでGeminiを使い画像や図表を生成・編集する新機能がウェブ版で提供開始",
     "description": "Google DocsにGeminiを活用した画像や図表の生成・編集機能が追加されました。文書の内容に合わせたビジュアルを直接作成・編集でき、外部ツールを使わずに作業が完結します。自然言語で既存の画像のスタイルや比率も調整可能です。ウェブ版のみ対応しています。",
