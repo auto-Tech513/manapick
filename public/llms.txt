@@ -37,6 +37,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 ## 学びニュース
 - 一覧: https://manapick.app/news/
 - Google Workspaceや生成AIなど、社会人の学びと仕事に関係する公式一次情報を確認し、変更点と実務への影響を整理します。
+- 2026-07-28 Google DocsでGeminiを使い画像や図表を生成・編集する新機能がウェブ版で提供開始: https://manapick.app/news/2026-07-28-generate-and-edit-visuals-with-gemini-in-google-docs-350b7a144a/ | 出典 Google Workspace Updates
 - 2026-07-23 Googleカレンダーで会議ゲストリストにリーダーのスケジューリング担当者情報が表示される新機能: https://manapick.app/news/2026-07-23-view-supporting-calendar-delegates-in-meeting-guest-li-8bfff6e561/ | 出典 Google Workspace Updates
 - 2026-07-22 Google Meetの記録がDriveで会議ごとに整理へ、学習会の議事録を探しやすく: https://manapick.app/news/2026-07-22-google-meet-drive-resources/ | 出典 Google Workspace Updates
 - 2026-07-22 Gemini AlphaがGemini Betaに名称変更、機能や設定に影響なし: https://manapick.app/news/2026-07-22-gemini-alpha-is-now-gemini-beta-11cac82b51/ | 出典 Google Workspace Updates

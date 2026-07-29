@@ -1,5 +1,78 @@
 [
   {
+    "id": "2026-07-28-generate-and-edit-visuals-with-gemini-in-google-docs-350b7a144a",
+    "headline": "Google DocsでGeminiを使い画像や図表を生成・編集する新機能がウェブ版で提供開始",
+    "description": "Google DocsにGeminiを活用した画像や図表の生成・編集機能が追加されました。文書の内容に合わせたビジュアルを直接作成・編集でき、外部ツールを使わずに作業が完結します。自然言語で既存の画像のスタイルや比率も調整可能です。ウェブ版のみ対応しています。",
+    "category": "ai|data|work",
+    "categoryLabel": "生成AI|Excel・データ|仕事・整理",
+    "whyCare": "Geminiによる画像や図表の生成・編集機能は、資料作成や業務報告、学習教材の作成など幅広い場面で活用できます。文書の内容に即したビジュアルを簡単に追加できるため、情報の伝達力や説得力を高めることが可能です。自然言語で編集できるため、デザインやレイアウトの調整も効率化され、学び直しや業務効率化を目指す方にとって有用な機能です。",
+    "facts": [
+      "Google DocsでGeminiを使い、画像・図表・インフォグラフィックを文書内で直接生成・編集できるようになった。",
+      "文書の内容に合わせて関連するビジュアルを生成でき、外部ツールを使う必要がない。",
+      "自然言語プロンプトで既存の画像の比率やスタイルを調整できる。",
+      "複数のビジュアルを一括で追加・編集することも可能。",
+      "この機能はウェブ版Google Docsのみで利用できる。"
+    ],
+    "sections": [
+      {
+        "heading": "Geminiによる画像・図表生成機能の概要",
+        "paragraphs": [
+          "Google Docsに新たに追加されたGeminiの機能では、文書の内容に即した画像や図表、インフォグラフィックを直接生成・編集できます。これまで外部ツールや画像編集ソフトを使っていた作業が、Docs内で完結するようになりました。",
+          "生成されるビジュアルは文書のコンテキストを活用しているため、内容に沿った適切な図やインフォグラフィックを簡単に作成できます。例えば「提案書の概要を図で上部に追加して」といった指示も可能です。"
+        ]
+      },
+      {
+        "heading": "自然言語による編集と複数ビジュアルの操作",
+        "paragraphs": [
+          "Geminiでは既存の画像や図表の編集も自然言語で行えます。「アスペクト比を16:9に変更」「文書全体の雰囲気に合わせてスタイルを調整」といった指示が可能です。",
+          "さらに、複数のビジュアルを一括で追加したり、複数の画像のスタイルをまとめて編集することもできます。これにより、文書全体の統一感や効率的な作業が実現します。"
+        ]
+      },
+      {
+        "heading": "利用方法とアクセス",
+        "paragraphs": [
+          "Geminiによる画像生成・編集機能は、Google Docsの下部バーやGeminiサイドパネルからアクセスできます。操作は直感的で、文書作成の流れを妨げずにビジュアルを追加・編集できます。",
+          "この機能は現在ウェブ版Google Docsのみで利用可能です。スマート機能が有効になっている必要があり、詳細はGoogle Docsのヘルプセンターで確認できます。"
+        ]
+      },
+      {
+        "heading": "対象プランと管理者・ユーザーの設定",
+        "paragraphs": [
+          "この機能はBusiness Standard/Plus、Enterprise Standard/Plus、Education Plus、Google AI Pro/Ultra、Google AI Pro for Education、Teaching and Learningなどのプランで利用できます。",
+          "管理者はGemini for Workspace in Driveが有効になっていればデフォルトで利用可能です。エンドユーザーはWorkspaceスマート機能を有効にする必要があります。詳細な設定方法や管理についてはGoogle Workspace Admin Helpを参照してください。"
+        ]
+      },
+      {
+        "heading": "活用のヒントと注意点",
+        "paragraphs": [
+          "Geminiの画像生成・編集機能は、提案書や報告書、学習教材などのビジュアル強化に役立ちます。自然言語で操作できるため、デザインやレイアウトの調整も簡単です。",
+          "なお、現時点ではウェブ版のみ対応しているため、他のプラットフォームでは利用できません。機能の詳細や利用条件は公式ヘルプで確認してください。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AIの活用ガイド",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "AIで学び直し",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      },
+      {
+        "label": "仕事・キャリアのAI活用",
+        "href": "https://career.manapick.app/",
+        "kind": "career"
+      }
+    ],
+    "publishedAt": "2026-07-28",
+    "lastChecked": "2026-07-29",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/07/generate-and-edit-visuals-with-gemini-in-Google-Docs.html"
+  },
+  {
     "id": "2026-07-23-view-supporting-calendar-delegates-in-meeting-guest-li-8bfff6e561",
     "headline": "Googleカレンダーで会議ゲストリストにリーダーのスケジューリング担当者情報が表示される新機能",
     "description": "Googleカレンダーのウェブ版で、会議ゲストリストにリーダーのスケジューリングを支援するカレンダー代理人の情報が新しいアイコンで表示されるようになりました。アイコンにカーソルを合わせると担当者の詳細が確認でき、直接チャットを開始することも可能です。これにより、イベント調整やコミュニケーションがより効率的になります。",
