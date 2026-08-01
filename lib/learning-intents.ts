@@ -10,6 +10,12 @@ export type LearningIntent = {
   lead: string;
   answer: string;
   audience: string;
+  lastReviewed?: string;
+  officialSources?: readonly {
+    label: string;
+    href: string;
+    note: string;
+  }[];
   filters: {
     genres: string[];
     subtopics?: string[];
@@ -41,6 +47,14 @@ export const learningIntents: readonly LearningIntent[] = [
     lead: "平均やグラフだけで止まらず、Excelで表を整え、傾向を読み、必要ならPower BIやパワークエリへ進むための入口です。",
     answer: "まずはExcelで集計とグラフの感覚をつかみ、次にPower BIやパワークエリで繰り返し作業を減らす順番が安全です。統計用語の暗記から入るより、手元の表を1つ選んで動画を見ながら操作するほうが続きます。",
     audience: "Excelでデータ分析を始めたい社会人、統計が苦手だが業務の数字を読めるようになりたい人",
+    lastReviewed: "2026-08-01",
+    officialSources: [
+      {
+        label: "Microsoft サポート: ピボットテーブルでデータを分析する",
+        href: "https://support.microsoft.com/ja-JP/Excel/get-started/create-a-pivottable-to-analyze-worksheet-data",
+        note: "Excelで集計・分析を始める公式手順"
+      }
+    ],
     filters: { genres: ["data"], subtopics: ["Excel", "BI", "統計"], keywords: ["Excel", "エクセル", "統計", "データ分析", "Power BI", "パワークエリ"] },
     steps: [
       { title: "Excelで表とグラフを触る", body: "まず手元の表で並べ替え、集計、グラフ化を試します。統計用語は後からで十分です。", href: guidePath("excel-data") },
@@ -56,6 +70,74 @@ export const learningIntents: readonly LearningIntent[] = [
       { question: "エクセル統計は何から始めればいい？", answer: "平均、割合、並べ替え、グラフ、ピボットの順に、実際の表を触りながら進めるのがおすすめです。" },
       { question: "統計の数式が苦手でも大丈夫？", answer: "大丈夫です。最初は数式より、表を整えて傾向を見ることを優先すると理解しやすくなります。" },
       { question: "Power BIはいつ学ぶべき？", answer: "Excelで同じ集計やグラフを何度も作っているなら、Power BIで自動化・見える化を学ぶタイミングです。" }
+    ]
+  },
+  {
+    slug: "chatgpt-getting-started",
+    query: "ChatGPT 始め方",
+    title: "ChatGPTの始め方｜無料版を初めて使う手順とおすすめ動画 | Manapick",
+    description: "ChatGPTの始め方を初心者向けに整理。公式ページを開く、最初の質問を送る、履歴や注意点を確認する順に、無料の解説動画と一次情報を案内します。",
+    h1: "ChatGPTの始め方を、初めての人向けに3ステップで整理",
+    lead: "公式ページを開いて最初の質問を送るところから、無料版で確認したい機能、入力時の注意点までを順番に確認します。",
+    answer: "まず公式のChatGPTを開き、身近な質問を1つ具体的に入力します。対応地域ではログイン前に試せる場合がありますが、会話履歴の保存や設定を使うならアカウントでの利用が必要です。機能や利用上限は変わるため、最新条件はOpenAI公式情報で確認します。",
+    audience: "ChatGPTを初めて使う人、無料版で何ができるかを確認してから学びたい人",
+    lastReviewed: "2026-08-01",
+    officialSources: [
+      {
+        label: "OpenAI Help Center: What is ChatGPT?",
+        href: "https://help.openai.com/en/articles/12677804",
+        note: "開始方法、主な用途、データとプライバシーの公式FAQ"
+      },
+      {
+        label: "ChatGPT 公式ページ",
+        href: "https://chatgpt.com/",
+        note: "実際にChatGPTを開いて試す"
+      }
+    ],
+    filters: {
+      genres: ["ai"],
+      subtopics: ["ChatGPT"],
+      keywords: ["ChatGPT", "始め方", "使い方", "初心者", "無料", "入門"]
+    },
+    steps: [
+      {
+        title: "公式ページを開いて、質問を1つ送る",
+        body: "『来週の学習計画を3日分作って』のように、目的と条件を短く書いて試します。",
+        href: "https://chatgpt.com/"
+      },
+      {
+        title: "初心者向け動画で基本操作を確認する",
+        body: "画面の見方、質問の続け方、無料版で使える機能を動画で確認します。",
+        href: subGenrePath("ai", "ChatGPT")
+      },
+      {
+        title: "ChatGPT・Gemini・Claudeの違いを知る",
+        body: "1つに決めつけず、文章、検索連携、長文整理など目的ごとに比較します。",
+        href: guidePath("generative-ai")
+      }
+    ],
+    links: [
+      { label: "ChatGPT動画一覧", href: subGenrePath("ai", "ChatGPT"), note: "入門・活用・注意点の動画を比較" },
+      { label: "生成AIロードマップ", href: guidePath("generative-ai"), note: "ChatGPT・Gemini・Claudeを学ぶ順番" },
+      { label: "使えるAIを選ぶ", href: "https://ai.manapick.app/", note: "料金・無料枠・使い方を姉妹サイトで確認" }
+    ],
+    faq: [
+      {
+        question: "ChatGPTはアカウントなしでも始められますか？",
+        answer: "対応地域ではログイン前に試せる場合があります。会話履歴の保存や設定を使う場合は、アカウントでの利用が必要です。"
+      },
+      {
+        question: "ChatGPTは無料で使えますか？",
+        answer: "無料版があります。利用できる機能や回数の上限は変わるため、利用時点の公式画面とOpenAI Help Centerで確認してください。"
+      },
+      {
+        question: "最初に何を入力すればいい？",
+        answer: "目的、前提、希望する形式を短く伝えます。たとえば『初心者向けに、15分でできるExcel練習を3つ、箇条書きで』のように具体化します。"
+      },
+      {
+        question: "入力してはいけない情報はありますか？",
+        answer: "個人情報、社外秘、未公開の顧客情報など、第三者に見られて困る情報は入力しないでください。所属先の利用ルールも確認します。"
+      }
     ]
   },
   {
@@ -93,6 +175,14 @@ export const learningIntents: readonly LearningIntent[] = [
     lead: "Pythonが難しい原因は、文法そのものより環境構築、エラー、作りたいものの不明確さに分かれることが多いです。",
     answer: "Pythonは最初から全部理解しようとすると難しくなります。短い入門で動かす、文法を一周する、作りたい小さな題材へ進む、という順番に分けると続けやすくなります。",
     audience: "Pythonを始めたが環境構築やエラーで止まった人、何を作ればいいか分からない人",
+    lastReviewed: "2026-08-01",
+    officialSources: [
+      {
+        label: "Python 公式チュートリアル",
+        href: "https://docs.python.org/ja/3/tutorial/",
+        note: "Pythonの基本構文と標準機能を確認する一次情報"
+      }
+    ],
     filters: { genres: ["prog"], subtopics: ["Python", "Web開発"], keywords: ["Python", "入門", "Flask", "できること", "ロードマップ"] },
     steps: [
       { title: "まず8〜20分で動かす", body: "長尺の前に、短い動画でPythonが動く感覚を作ります。", href: subGenrePath("prog", "Python") },
@@ -119,6 +209,14 @@ export const learningIntents: readonly LearningIntent[] = [
     lead: "おすすめ動画をただ並べるのではなく、全体像、SNS運用、SEO、計測の順に分けて、仕事で使いやすい流れにします。",
     answer: "マーケティングは最初に全体像を見て、次にSNSやSEOなど使う場面を絞ると学びやすくなります。再生数だけで選ぶより、目的に近い動画を順番に見るほうが定着します。",
     audience: "Webマーケティングを無料動画で始めたい人、SNSやSEOを仕事に使いたい人",
+    lastReviewed: "2026-08-01",
+    officialSources: [
+      {
+        label: "Google アナリティクスの基本操作",
+        href: "https://support.google.com/analytics/answer/9367631?hl=ja-JP",
+        note: "GA4の画面と主要機能を確認するGoogle公式ヘルプ"
+      }
+    ],
     filters: { genres: ["marke"], subtopics: ["Webマーケ", "SEO", "SNS"], keywords: ["マーケ", "SEO", "SNS", "GA4", "Instagram", "X"] },
     steps: [
       { title: "マーケティングの全体像を見る", body: "商品、顧客、届け方の関係を先に押さえます。", href: guidePath("web-marketing") },
@@ -251,6 +349,14 @@ export const learningIntents: readonly LearningIntent[] = [
     lead: "商品や銘柄を探す前に、生活防衛資金、NISA・iDeCoの制度、投資信託の仕組みとリスクを順番に学ぶ入口です。",
     answer: "最初に家計と生活防衛資金を整理し、次にNISA・iDeCoの制度、投資信託、長期・積立・分散の考え方へ進みます。Manapickは特定商品の購入を勧めず、無料動画で基礎知識を学ぶ順番だけを整理します。",
     audience: "資産運用を初めて勉強する社会人、NISAや投資信託の仕組みを無料で学びたい人",
+    lastReviewed: "2026-08-01",
+    officialSources: [
+      {
+        label: "金融庁: NISA特設ウェブサイト",
+        href: "https://www.fsa.go.jp/policy/nisa2/",
+        note: "NISAの制度・最新情報を確認する公的な一次情報"
+      }
+    ],
     filters: { genres: ["money"], subtopics: ["家計", "NISA", "投資"], keywords: ["資産運用", "家計", "NISA", "iDeCo", "投資信託", "積立", "分散"] },
     steps: [
       { title: "家計と生活防衛資金を整理する", body: "投資に回せる金額を先に決め、生活費と混ぜない土台を作ります。", href: subGenrePath("money", "家計") },
@@ -277,6 +383,14 @@ export const learningIntents: readonly LearningIntent[] = [
     lead: "公式の試験問題・模範解答で出題形式を確認し、解けなかった分野だけを動画で理解し直すための入口です。",
     answer: "最初に日本FP協会の公式試験問題・模範解答で出題形式を確認し、次に解説動画で理由を理解します。最後に時間を置いて同じ分野を解き直すと、動画を見ただけで終わらず知識を定着させやすくなります。受検方式や出題範囲は変更されることがあるため、申込前に公式要項も確認してください。",
     audience: "FP3級の過去問を無料で勉強したい人、解答だけでは理解しにくい分野を動画で復習したい人",
+    lastReviewed: "2026-08-01",
+    officialSources: [
+      {
+        label: "日本FP協会: FP技能検定",
+        href: "https://www.jafp.or.jp/exam/",
+        note: "試験概要、日程、公開問題を確認する公式情報"
+      }
+    ],
     filters: { genres: ["kaikei"], subtopics: ["FP"], keywords: ["FP3級", "3級", "過去問", "学科", "実技", "ライフ", "金融", "保険"] },
     steps: [
       { title: "公式問題で出題形式を確認する", body: "日本FP協会の試験問題・模範解答を開き、まず現在の出題形式と自分の正答状況を確認します。", href: "https://www.jafp.or.jp/exam/mohan/" },

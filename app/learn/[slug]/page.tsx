@@ -93,8 +93,9 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
         <p>{intent.lead}</p>
         <div className="learning-intent-meta" aria-label="ページの対象">
           <span>無料YouTube動画</span>
-          <span>視聴確認済みから選定</span>
+          <span>視聴確認済み {selectedVideos.length}本を厳選</span>
           <span>スマホで15分から</span>
+          {intent.lastReviewed ? <span>情報確認 {formatReviewedDate(intent.lastReviewed)}</span> : null}
         </div>
         <div className="youtube-learning-cta-row">
           <Link href="#intent-videos-title">おすすめ動画を見る</Link>
@@ -108,6 +109,30 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
         <p>{intent.answer}</p>
         <p className="learning-audience"><strong>対象：</strong>{intent.audience}</p>
       </section>
+
+      {intent.officialSources?.length ? (
+        <section className="knowledge-section learning-source-section" aria-labelledby="intent-sources-title">
+          <div className="learning-source-heading">
+            <div>
+              <p className="section-eyebrow">一次情報と選定基準</p>
+              <h2 id="intent-sources-title">確認した公式情報</h2>
+            </div>
+            <p>
+              制度・仕様は公式情報を優先し、動画は運営者が実際に視聴して7軸35点で確認しています。
+              <Link href="/about-score/">採点方法</Link>と<Link href="/operator/">運営者情報</Link>も公開しています。
+            </p>
+          </div>
+          <div className="learning-source-list">
+            {intent.officialSources.map((source) => (
+              <a key={source.href} href={source.href} target="_blank" rel="noopener noreferrer">
+                <strong>{source.label}</strong>
+                <small>{source.note}</small>
+                <span aria-hidden="true">公式サイト ↗</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section className="knowledge-section" aria-labelledby="intent-steps-title">
         <p className="section-eyebrow">見る順</p>
@@ -203,7 +228,12 @@ function buildStructuredData(intent: LearningIntent, pageUrl: string, selectedVi
         inLanguage: "ja",
         mainEntityOfPage: pageUrl,
         author: { "@id": absoluteUrl("/#organization") },
-        publisher: { "@id": absoluteUrl("/#organization") }
+        publisher: { "@id": absoluteUrl("/#organization") },
+        about: intent.query,
+        ...(intent.lastReviewed ? { dateModified: intent.lastReviewed } : {}),
+        ...(intent.officialSources?.length
+          ? { citation: intent.officialSources.map((source) => source.href) }
+          : {})
       },
       {
         "@type": "HowTo",
@@ -252,6 +282,11 @@ function buildStructuredData(intent: LearningIntent, pageUrl: string, selectedVi
   };
 }
 
+function formatReviewedDate(value: string) {
+  const [year, month, day] = value.split("-");
+  return year && month && day ? `${year}/${month}/${day}` : value;
+}
+
 function IntentVideoCard({ video, rank }: { video: Video; rank: number }) {
   return (
     <Link className="learning-intent-video-card" href={videoPath(video.ytid)}>
@@ -262,7 +297,7 @@ function IntentVideoCard({ video, rank }: { video: Video; rank: number }) {
           width={480}
           height={270}
           sizes="(min-width: 920px) 320px, (min-width: 560px) 46vw, 92vw"
-          loading={rank <= 2 ? "eager" : "lazy"}
+          loading="lazy"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <span>{rank}</span>

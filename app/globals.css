@@ -790,6 +790,7 @@
   --color-primary: #1f3a8a;
   --color-primary-ink: #16306e;
   --color-accent: #0fa98b;
+  --color-accent-ink: #087463;
   --color-ai-red: #f04438;
   --color-ai-red-dark: #c9231d;
   --color-ai-red-soft: #fff3f2;
@@ -7528,7 +7529,7 @@ ins.adsbygoogle:not(.ad-slot),
 
 .youtube-video-body small,
 .youtube-popular-list small {
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
   font-size: 0.76rem;
   font-weight: 900;
   line-height: 1.45;
@@ -7690,6 +7691,76 @@ ins.adsbygoogle:not(.ad-slot),
   padding-left: 12px;
 }
 
+.learning-source-section {
+  background: color-mix(in srgb, var(--color-leaf) 4%, white);
+}
+
+.learning-source-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(280px, 1.3fr);
+  gap: 24px;
+  align-items: end;
+}
+
+.learning-source-heading > p {
+  margin: 0;
+  max-width: none;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  font-weight: 760;
+  line-height: 1.75;
+}
+
+.learning-source-heading > p a {
+  margin-inline: 0.2em;
+}
+
+.learning-source-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.learning-source-list a {
+  display: grid;
+  gap: 5px;
+  min-height: 44px;
+  border: 1px solid color-mix(in srgb, var(--color-leaf) 24%, var(--color-line));
+  border-radius: var(--radius-md);
+  background: #fff;
+  padding: 14px;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: var(--shadow-line);
+}
+
+.learning-source-list a:hover,
+.learning-source-list a:focus-visible {
+  border-color: var(--color-leaf);
+  box-shadow: var(--shadow-card);
+  text-decoration: none;
+}
+
+.learning-source-list strong {
+  color: var(--color-ink);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.learning-source-list small {
+  color: var(--color-muted);
+  font-size: 0.82rem;
+  font-weight: 720;
+  line-height: 1.65;
+}
+
+.learning-source-list span {
+  color: var(--color-primary-ink);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
 .learning-step-list {
   display: grid;
   gap: 10px;
@@ -7832,6 +7903,15 @@ ins.adsbygoogle:not(.ad-slot),
     flex: 1 1 auto;
     justify-content: center;
     text-align: center;
+  }
+
+  .learning-source-heading {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .learning-source-list {
+    grid-template-columns: 1fr;
   }
 
   .learning-step-list li {

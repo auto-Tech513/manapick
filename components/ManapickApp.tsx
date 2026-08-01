@@ -150,6 +150,11 @@ const searchIntentLinks = [
     note: "無料動画の選び方"
   },
   {
+    label: "ChatGPTの始め方",
+    href: "/learn/chatgpt-getting-started/",
+    note: "登録前に使い方を確認"
+  },
+  {
     label: "エクセル統計の使い方",
     href: "/learn/excel-statistics/",
     note: "Excelデータ分析"
@@ -368,27 +373,27 @@ function groupVideosByGenre(items: Video[]) {
   return groups;
 }
 
-function monthsSincePublished(video: Video) {
+function monthsSincePublished(video: Video, referenceTime: number) {
   if (!video.publishedAt) return 36;
   const date = new Date(video.publishedAt);
   if (Number.isNaN(date.getTime())) return 36;
-  const diff = Date.now() - date.getTime();
+  const diff = referenceTime - date.getTime();
   return Math.max(0, diff / (1000 * 60 * 60 * 24 * 30.4375));
 }
 
-function popularityScore(video: Video) {
+function popularityScore(video: Video, referenceTime: number) {
   const viewCount = Math.max(0, Number(video.viewCount || 0));
   if (viewCount <= 0) return 0;
-  return Math.log10(viewCount) / Math.pow(monthsSincePublished(video) + 2, 0.6);
+  return Math.log10(viewCount) / Math.pow(monthsSincePublished(video, referenceTime) + 2, 0.6);
 }
 
-function blendedPopularityScore(video: Video, likeCounts: LikeCounts, maxLikeCount: number) {
+function blendedPopularityScore(video: Video, likeCounts: LikeCounts, maxLikeCount: number, referenceTime: number) {
   const likeCount = Math.max(0, likeCounts[video.ytid] ?? 0);
   const likeBoost = maxLikeCount > 0 ? (likeCount / maxLikeCount) * 0.15 : 0;
-  return popularityScore(video) + likeBoost;
+  return popularityScore(video, referenceTime) + likeBoost;
 }
 
-function rankedVideosByTab(tab: PopularTab, limit: number, likeCounts: LikeCounts = {}) {
+function rankedVideosByTab(tab: PopularTab, limit: number, referenceTime: number, likeCounts: LikeCounts = {}) {
   const ranked = [...videos].filter((video) => publishedGenreKeys.includes(video.genre));
   if (tab === "new") {
     ranked.sort((a, b) => publishedTime(b) - publishedTime(a) || (b.score || 0) - (a.score || 0));
@@ -398,15 +403,15 @@ function rankedVideosByTab(tab: PopularTab, limit: number, likeCounts: LikeCount
     const maxLikeCount = Math.max(1, ...ranked.map((video) => likeCounts[video.ytid] ?? 0));
     ranked.sort(
       (a, b) =>
-        blendedPopularityScore(b, likeCounts, maxLikeCount) -
-          blendedPopularityScore(a, likeCounts, maxLikeCount) ||
+        blendedPopularityScore(b, likeCounts, maxLikeCount, referenceTime) -
+          blendedPopularityScore(a, likeCounts, maxLikeCount, referenceTime) ||
         (b.score || 0) - (a.score || 0)
     );
   }
   return ranked.slice(0, limit);
 }
 
-function buildHeroCarouselSlides(likeCounts: LikeCounts = {}): HeroCarouselSlide[] {
+function buildHeroCarouselSlides(referenceTime: number, likeCounts: LikeCounts = {}): HeroCarouselSlide[] {
   const modes: { mode: PopularTab; modeLabel: string }[] = [
     { mode: "popular", modeLabel: "総合人気" },
     { mode: "new", modeLabel: "新着" },
@@ -414,7 +419,7 @@ function buildHeroCarouselSlides(likeCounts: LikeCounts = {}): HeroCarouselSlide
   ];
 
   return modes.flatMap(({ mode, modeLabel }) =>
-    rankedVideosByTab(mode, 4, likeCounts).map((video, index) => ({
+    rankedVideosByTab(mode, 4, referenceTime, likeCounts).map((video, index) => ({
       video,
       mode,
       modeLabel,
@@ -462,20 +467,20 @@ function sortBySearchRelevance(items: Video[], query: string) {
   });
 }
 
-function publishedAgeLabel(video: Video) {
+function publishedAgeLabel(video: Video, referenceTime: number) {
   if (!video.publishedAt) return null;
   const date = new Date(video.publishedAt);
   if (Number.isNaN(date.getTime())) return null;
-  const months = Math.max(0, Math.floor(monthsSincePublished(video)));
+  const months = Math.max(0, Math.floor(monthsSincePublished(video, referenceTime)));
   if (months < 12) return Math.max(1, months) + "ヶ月前公開";
   return Math.max(1, Math.floor(months / 12)) + "年前公開";
 }
 
-function freshnessBadge(video: Video) {
+function freshnessBadge(video: Video, referenceTime: number) {
   if (!video.publishedAt) return null;
   const date = new Date(video.publishedAt);
   if (Number.isNaN(date.getTime())) return null;
-  const ageDays = Math.max(0, (Date.now() - date.getTime()) / (1000 * 60 * 60 * 24));
+  const ageDays = Math.max(0, (referenceTime - date.getTime()) / (1000 * 60 * 60 * 24));
   if (ageDays <= 180) return { label: "新着", tone: "new" };
   if (ageDays >= 365 * 3 && (video.score ?? 0) >= 28) return { label: "定番", tone: "evergreen" };
   return null;
@@ -523,7 +528,7 @@ const roadmapGuideLinks: Record<string, { href: string }> = {
   money: { href: "/guide/money-basics/" }
 };
 
-export default function ManapickApp() {
+export default function ManapickApp({ referenceTime }: { referenceTime: number }) {
   const [selectedGenre, setSelectedGenre] = useState("all");
   const [selectedSub, setSelectedSub] = useState("all");
   const [selectedLevel, setSelectedLevel] = useState<(typeof levels)[number]>("すべて");
@@ -671,10 +676,16 @@ export default function ManapickApp() {
   const pageVideos = filteredVideos.slice(pageStartIndex, pageStartIndex + pageSize);
   const groupedPageVideos = useMemo(() => groupVideosByGenre(pageVideos), [pageVideos]);
 
-  const popularLikeCandidateVideos = useMemo(() => rankedVideosByTab("popular", 60), []);
-  const heroCarouselSlides = useMemo(() => buildHeroCarouselSlides(popularLikeCounts), [popularLikeCounts]);
-  const popularFallbackVideos = useMemo(() => rankedVideosByTab("popular", 12, popularLikeCounts), [popularLikeCounts]);
-  const recentUpdateVideos = useMemo(() => rankedVideosByTab("new", 6), []);
+  const popularLikeCandidateVideos = useMemo(() => rankedVideosByTab("popular", 60, referenceTime), [referenceTime]);
+  const heroCarouselSlides = useMemo(
+    () => buildHeroCarouselSlides(referenceTime, popularLikeCounts),
+    [popularLikeCounts, referenceTime]
+  );
+  const popularFallbackVideos = useMemo(
+    () => rankedVideosByTab("popular", 12, referenceTime, popularLikeCounts),
+    [popularLikeCounts, referenceTime]
+  );
+  const recentUpdateVideos = useMemo(() => rankedVideosByTab("new", 6, referenceTime), [referenceTime]);
   const recentVideos = useMemo(() => {
     const byId = new Map(videos.map((video) => [video.ytid, video]));
     return recent.items
@@ -1779,6 +1790,7 @@ export default function ManapickApp() {
                           watchlist={watchlist}
                           watched={watched}
                           likeCounts={popularLikeCounts}
+                          referenceTime={referenceTime}
                         />
                       ))}
                     </div>
@@ -1795,6 +1807,7 @@ export default function ManapickApp() {
                     watchlist={watchlist}
                     watched={watched}
                     likeCounts={popularLikeCounts}
+                    referenceTime={referenceTime}
                   />
                 ))}
               </div>
@@ -3247,17 +3260,19 @@ function VideoCard({
   highlighted = false,
   watchlist,
   watched,
-  likeCounts
+  likeCounts,
+  referenceTime
 }: {
   video: Video;
   highlighted?: boolean;
   watchlist?: LocalListState;
   watched?: LocalListState;
   likeCounts: LikeCounts;
+  referenceTime: number;
 }) {
   const channel = displayChannel(video);
-  const ageLabel = publishedAgeLabel(video);
-  const freshness = freshnessBadge(video);
+  const ageLabel = publishedAgeLabel(video, referenceTime);
+  const freshness = freshnessBadge(video, referenceTime);
   const watchlistActive = watchlist?.ready ? watchlist.has(video.ytid) : false;
   const watchedActive = watched?.ready ? watched.has(video.ytid) : false;
 

@@ -203,6 +203,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 動画 勉強 無料: https://manapick.app/youtube-learning/
 - リスキリング 何から始める: https://manapick.app/youtube-learning/#youtube-steps-title
 - YouTubeサムネイルの作り方: https://manapick.app/learn/youtube-thumbnail/
+- ChatGPTの始め方: https://manapick.app/learn/chatgpt-getting-started/
 - Pythonは難しい: https://manapick.app/learn/python-hard/
 - エクセル統計の使い方: https://manapick.app/learn/excel-statistics/
 - Copilot活用事例: https://manapick.app/learn/copilot-use-cases/

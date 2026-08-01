@@ -204,7 +204,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
-      <ManapickApp />
+      <ManapickApp referenceTime={Date.now()} />
       <LatestNewsBand />
       <section className="home-faq-section" aria-labelledby="home-faq-title">
         <div className="home-faq-heading">
