@@ -42,10 +42,10 @@ export default function NetworkContextBand({ genreKey, exclude = [] }: NetworkCo
   if (links.length === 0) return null;
 
   return (
-    <section className="network-context-band" aria-labelledby={`network-context-${genreKey}`}>
+    <section id={`network-context-${genreKey}`} className="network-context-band" aria-labelledby={`network-context-title-${genreKey}`}>
       <div className="network-context-heading">
         <p className="section-eyebrow">MANAPICK NETWORK</p>
-        <h2 id={`network-context-${genreKey}`}>学んだ先まで、同じ基準で迷わない</h2>
+        <h2 id={`network-context-title-${genreKey}`}>学んだ先まで、同じ基準で迷わない</h2>
         <p>動画で学ぶManapickから、AI・資格・仕事の詳しい比較へつながります。</p>
       </div>
       <div className="network-context-links">

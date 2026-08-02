@@ -3913,6 +3913,138 @@ ins.adsbygoogle:not(.ad-slot),
   transform: translateY(-1px);
 }
 
+.learning-loop-section {
+  width: min(100% - 32px, 1180px);
+  margin: 18px auto;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 14%, var(--color-line));
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(255, 215, 0, 0.12), transparent 13rem),
+    linear-gradient(135deg, #fff, color-mix(in srgb, var(--color-bg-soft) 62%, white));
+  padding: clamp(16px, 3vw, 22px);
+  box-shadow: var(--shadow-line);
+}
+
+.learning-loop-heading {
+  display: grid;
+  gap: 4px;
+}
+
+.learning-loop-heading p,
+.learning-loop-heading h2 {
+  margin: 0;
+}
+
+.learning-loop-heading > p:last-child {
+  color: var(--color-muted);
+  font-size: 0.88rem;
+  font-weight: 760;
+  line-height: 1.7;
+}
+
+.learning-loop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.learning-loop-card {
+  --loop-color: var(--color-primary);
+  --loop-soft: color-mix(in srgb, var(--color-primary) 7%, white);
+  display: grid;
+  min-width: 0;
+  min-height: 132px;
+  align-content: start;
+  gap: 4px;
+  border: 1px solid color-mix(in srgb, var(--loop-color) 24%, var(--color-line));
+  border-radius: var(--radius-md);
+  background: linear-gradient(145deg, #fff, var(--loop-soft));
+  color: inherit;
+  padding: 13px;
+  text-decoration: none;
+  transition: border-color 180ms var(--ease-standard), box-shadow 180ms var(--ease-standard), transform 180ms var(--ease-standard);
+}
+
+.learning-loop-card.is-ai {
+  --loop-color: var(--color-ai-red);
+  --loop-soft: var(--color-ai-red-soft);
+}
+
+.learning-loop-card.is-license {
+  --loop-color: var(--color-license-green-dark);
+  --loop-soft: var(--color-license-green-soft);
+}
+
+.learning-loop-card.is-career {
+  --loop-color: #8a6d00;
+  --loop-soft: var(--color-career-gold-soft);
+}
+
+.learning-loop-number {
+  color: color-mix(in srgb, var(--loop-color) 38%, white);
+  font-size: 1.55rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.learning-loop-eyebrow {
+  margin-top: 4px;
+  color: var(--loop-color);
+  font-size: 0.7rem;
+  font-weight: 950;
+}
+
+.learning-loop-card strong {
+  color: var(--color-ink);
+  font-size: 0.96rem;
+  font-weight: 950;
+  line-height: 1.35;
+}
+
+.learning-loop-card small {
+  color: var(--color-muted);
+  font-size: 0.72rem;
+  font-weight: 740;
+  line-height: 1.55;
+}
+
+.learning-loop-card:hover,
+.learning-loop-card:focus-visible {
+  border-color: color-mix(in srgb, var(--loop-color) 48%, var(--color-line));
+  box-shadow: var(--shadow-card);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.learning-loop-overview {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  margin-top: 10px;
+  color: var(--color-primary-ink);
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .learning-loop-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .learning-loop-card {
+    min-height: 122px;
+    padding: 11px;
+  }
+}
+
+@media (max-width: 359px) {
+  .learning-loop-section {
+    width: min(100% - 24px, 1180px);
+  }
+}
+
 .recent-updates-section {
   width: min(100% - 32px, 1180px);
   margin: 0 auto 20px;
@@ -6247,6 +6379,63 @@ ins.adsbygoogle:not(.ad-slot),
   box-shadow: var(--shadow-line);
   font-weight: 950;
   line-height: 1.55;
+}
+
+.video-learning-loop {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 2px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.video-learning-loop li {
+  display: grid;
+  min-width: 0;
+  min-height: 112px;
+  align-content: start;
+  gap: 3px;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 14%, var(--color-line));
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.88);
+  padding: 11px;
+}
+
+.video-learning-loop li > span {
+  color: color-mix(in srgb, var(--color-primary) 34%, white);
+  font-size: 1.15rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.video-learning-loop strong {
+  color: var(--color-primary-ink);
+  font-size: 0.86rem;
+  font-weight: 950;
+}
+
+.video-learning-loop small {
+  color: var(--color-muted);
+  font-size: 0.71rem;
+  font-weight: 740;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.video-learning-loop a {
+  color: var(--color-primary-ink);
+  font-weight: 900;
+}
+
+@media (max-width: 759px) {
+  .video-learning-loop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .video-learning-loop li {
+    min-height: 106px;
+  }
 }
 
 .video-context-grid {

@@ -1478,7 +1478,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
 
       <WhyManapickSection />
 
-      <ManapickAiCrossLink variant="home" />
+      <LearningLoopSection />
 
       <RecentUpdatesSection videos={recentUpdateVideos} />
 
@@ -2066,21 +2066,72 @@ function WhyManapickSection() {
   );
 }
 
-function ManapickAiCrossLink({ variant }: { variant: "home" }) {
+function LearningLoopSection() {
+  const steps = [
+    {
+      number: "01",
+      site: "video",
+      eyebrow: "一本を選ぶ",
+      title: "Manapick",
+      description: `${siteStats.totalVideos}本の視聴確認済み動画から、目的と時間に合う一本を決める`,
+      href: "/start/",
+      external: false
+    },
+    {
+      number: "02",
+      site: "ai",
+      eyebrow: "道具を選ぶ",
+      title: "manapick AI",
+      description: "動画で知ったAIの料金・無料枠・使い方を比較する",
+      href: MANAPICK_AI_URL,
+      external: true
+    },
+    {
+      number: "03",
+      site: "license",
+      eyebrow: "学びを証明する",
+      title: "manapick license",
+      description: "関連資格の要件・費用・申込方法を公式情報で確認する",
+      href: MANAPICK_LICENSE_URL,
+      external: true
+    },
+    {
+      number: "04",
+      site: "career",
+      eyebrow: "仕事につなぐ",
+      title: "manapick career",
+      description: "学んだ内容を生かせる仕事と、次に必要なスキルを知る",
+      href: MANAPICK_CAREER_URL,
+      external: true
+    }
+  ] as const;
+
   return (
-    <section className={`manapick-ai-crosslink is-${variant}`} aria-label="公式AI版 manapick AI">
-      <div>
-        <p className="section-eyebrow">公式AI版</p>
-        <h2>“使えるAI”を選ぶなら <span className="ai-brand-word">manapick AI</span></h2>
-        <p>学ぶ順番はManapick、AIツールを選ぶときはmanapick AI。料金・無料枠・使い方を7軸で正直採点しています。</p>
+    <section className="learning-loop-section" aria-labelledby="learning-loop-title">
+      <div className="learning-loop-heading">
+        <p className="section-eyebrow">MANAPICK NETWORK</p>
+        <h2 id="learning-loop-title" className="section-title">動画を起点に、学びを次の行動へ</h2>
+        <p>一本を選んで終わりにせず、道具・資格・仕事まで、必要な情報だけを順番に確認できます。</p>
       </div>
-      <a
-        href={MANAPICK_AI_URL}
-        target="_blank"
-        rel="noopener"
-        onClick={() => sendGaEvent("ai_crosslink_click", { placement: variant, target: "manapick_ai" })}
-      >
-        manapick AIを見る ↗
+      <div className="learning-loop-grid">
+        {steps.map((step) => (
+          <a
+            key={step.site}
+            className={`learning-loop-card is-${step.site}`}
+            href={step.href}
+            target={step.external ? "_blank" : undefined}
+            rel={step.external ? "noopener noreferrer" : undefined}
+            onClick={() => sendGaEvent("learning_loop_click", { placement: "home", target: step.site })}
+          >
+            <span className="learning-loop-number">{step.number}</span>
+            <span className="learning-loop-eyebrow">{step.eyebrow}</span>
+            <strong>{step.title}{step.external ? <span aria-hidden="true"> ↗</span> : null}</strong>
+            <small>{step.description}</small>
+          </a>
+        ))}
+      </div>
+      <a className="learning-loop-overview" href="/network/">
+        4サイトの役割と使い分けを見る <span aria-hidden="true">→</span>
       </a>
     </section>
   );

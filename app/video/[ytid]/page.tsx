@@ -102,8 +102,10 @@ export default async function VideoPage({ params }: VideoPageProps) {
   const guide = guides.find((item) => item.genre === video.genre) ?? null;
   const pageUrl = absoluteUrl(videoPath(video.ytid));
   const confirmationDate = scoreConfirmationDate(video);
-  const scoreConfirmationText =
-    "運営者が実際に視聴し7軸35点で採点したスコアです" + (confirmationDate ? "（確認日: " + confirmationDate + "）" : "");
+  const hasStoredAxisBreakdown = video.axisScores.length === 7;
+  const scoreConfirmationText = hasStoredAxisBreakdown
+    ? "運営者が実際に視聴し7軸35点で採点したスコアです" + (confirmationDate ? "（確認日: " + confirmationDate + "）" : "")
+    : "運営者が実際に視聴して確認済みの総合スコアです。軸別内訳は準備中です" + (confirmationDate ? "（確認日: " + confirmationDate + "）" : "");
   const positionText = videoPositionText(video);
   const audienceText = videoAudienceText(video);
   const learningPoints = videoLearningPoints(video);
@@ -274,6 +276,28 @@ export default async function VideoPage({ params }: VideoPageProps) {
             {videoGuideLinkLabel(video.genre)}
           </Link>
         ) : null}
+        <ol className="video-learning-loop" aria-label="動画を学びにつなげる4ステップ">
+          <li>
+            <span>01</span>
+            <strong>見る</strong>
+            <small>{video.minutes}分で「{video.sub}」の要点を確認</small>
+          </li>
+          <li>
+            <span>02</span>
+            <strong>残す</strong>
+            <small>視聴済み・あとで見るで、この端末に記録</small>
+          </li>
+          <li>
+            <span>03</span>
+            <strong>試す</strong>
+            <small>{learningPoints[0]}</small>
+          </li>
+          <li>
+            <span>04</span>
+            <strong>広げる</strong>
+            <small><a href={`#network-context-${video.genre}`}>AI・資格・仕事の詳しい情報へ</a></small>
+          </li>
+        </ol>
       </section>
 
       <section className="video-context-section" aria-labelledby="video-context-title">
