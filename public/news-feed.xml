@@ -5,7 +5,15 @@
     <link>https://manapick.app/news/</link>
     <description>公式発表を、学びと仕事に使える形へ整理します。</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 28 Jul 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Google FormsのGeminiがプロンプトとDrive資料からクイズを作成できるように</title>
+      <link>https://manapick.app/news/2026-07-30-use-gemini-in-google-forms-to-quickly-create-a-new-quiz-fae9c28f88/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-07-30-use-gemini-in-google-forms-to-quickly-create-a-new-quiz-fae9c28f88/</guid>
+      <description>Google Formsの「Help me create」がクイズ生成に対応しました。作りたい内容をプロンプトで伝え、Docs・Slides・PDFなどのDrive資料を参照すると、正解設定を含むクイズ案を作成できます。生成後はプレビューし、挿入前後に内容を調整できます。</description>
+      <category>生成AI</category>
+      <pubDate>Wed, 29 Jul 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>Google Sheetsが複数の独立したx系列を持つ散布図の作成・編集に対応、Excelとの互換性も向上</title>
       <link>https://manapick.app/news/2026-07-29-create-and-import-scatter-charts-with-multiple-x-serie-348b704d47/</link>
