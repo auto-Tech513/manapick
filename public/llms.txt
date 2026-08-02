@@ -38,6 +38,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 一覧: https://manapick.app/news/
 - Google Workspaceや生成AIなど、社会人の学びと仕事に関係する公式一次情報を確認し、変更点と実務への影響を整理します。
 - 2026-07-30 Google FormsのGeminiがプロンプトとDrive資料からクイズを作成できるように: https://manapick.app/news/2026-07-30-use-gemini-in-google-forms-to-quickly-create-a-new-quiz-fae9c28f88/ | 出典 Google Workspace Updates
+- 2026-07-30 Gmail、BCCで受信したスレッドへの「全員に返信」前に警告を表示: https://manapick.app/news/2026-07-30-gmail-reply-all-bcc-warning/ | 出典 Google Workspace Updates
 - 2026-07-29 Google Sheetsが複数の独立したx系列を持つ散布図の作成・編集に対応、Excelとの互換性も向上: https://manapick.app/news/2026-07-29-create-and-import-scatter-charts-with-multiple-x-serie-348b704d47/ | 出典 Google Workspace Updates
 - 2026-07-28 Google DocsでGeminiを使い画像や図表を生成・編集する新機能がウェブ版で提供開始: https://manapick.app/news/2026-07-28-generate-and-edit-visuals-with-gemini-in-google-docs-350b7a144a/ | 出典 Google Workspace Updates
 - 2026-07-23 Googleカレンダーで会議ゲストリストにリーダーのスケジューリング担当者情報が表示される新機能: https://manapick.app/news/2026-07-23-view-supporting-calendar-delegates-in-meeting-guest-li-8bfff6e561/ | 出典 Google Workspace Updates
@@ -46,7 +47,6 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 2026-07-21 Google Meetホームに会議資料のハブ、予定と過去のメモ・録画を一画面で確認: https://manapick.app/news/2026-07-21-google-meet-resource-hub/ | 出典 Google Workspace Updates
 - 2026-07-21 Google Classroomのホームが役割別に刷新、教師・学習者・管理者で入口を整理: https://manapick.app/news/2026-07-21-google-classroom-role-home/ | 出典 Google Workspace Updates
 - 2026-07-20 Googleスプレッドシートが複合グラフ作成とExcelからの取り込みを改善: https://manapick.app/news/2026-07-20-google-sheets-combo-charts/ | 出典 Google Workspace Updates
-- 2026-07-16 ChatGPTデスクトップ版がChatとCodexの入口を整理、学習履歴を探す導線も更新: https://manapick.app/news/2026-07-16-chatgpt-desktop-workspaces/ | 出典 OpenAI Help Center
 
 ## ジャンル別AEOインデックス
 ### 生成AI（147本）
