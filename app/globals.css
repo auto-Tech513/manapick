@@ -21,6 +21,7 @@
 .network-page-hero,
 .network-stage-section,
 .network-route-section,
+.network-career-section,
 .network-policy-section,
 .network-faq {
   width: min(1120px, calc(100% - 32px));
@@ -92,6 +93,7 @@
 .study-plan-faq,
 .network-stage-section,
 .network-route-section,
+.network-career-section,
 .network-policy-section,
 .network-faq {
   border: 1px solid #dfe5ef;
@@ -106,6 +108,7 @@
 .study-plan-faq,
 .network-stage-section,
 .network-route-section,
+.network-career-section,
 .network-faq {
   padding: clamp(20px, 4vw, 36px);
 }
@@ -501,6 +504,7 @@
 
 .network-stage-section,
 .network-route-section,
+.network-career-section,
 .network-policy-section {
   margin-top: 24px;
 }
@@ -627,6 +631,79 @@
 .network-route-list nav a.is-license { color: #11622f; border-color: rgba(21, 128, 61, 0.28); }
 .network-route-list nav a.is-career { color: #665300; border-color: rgba(201, 162, 0, 0.35); }
 
+.network-career-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.network-career-grid article {
+  display: flex;
+  min-width: 0;
+  min-height: 166px;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(201, 162, 0, 0.28);
+  border-radius: 11px;
+  background: linear-gradient(145deg, #fff, #fffbea);
+}
+
+.network-career-grid article > a {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding: 16px;
+  color: #17233f;
+  text-decoration: none;
+}
+
+.network-career-grid small {
+  color: #726000;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.network-career-grid strong {
+  font-size: 1rem;
+  line-height: 1.45;
+  text-wrap: balance;
+}
+
+.network-career-grid article > a > span {
+  margin-top: 6px;
+  color: #665300;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.network-career-grid article > a:hover,
+.network-career-grid article > a:focus-visible {
+  background: rgba(255, 225, 70, 0.12);
+}
+
+.network-career-grid article > a:focus-visible,
+.network-career-grid article > a + a:focus-visible {
+  outline: 3px solid rgba(15, 169, 139, 0.38);
+  outline-offset: -3px;
+}
+
+.network-career-grid article > a + a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 16px;
+  border-top: 1px solid rgba(201, 162, 0, 0.22);
+  color: #1f3a8a;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
 .network-policy-section {
   display: flex;
   align-items: center;
@@ -676,6 +753,7 @@
   .study-plan-option-grid.is-genres { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .study-plan-network-grid,
   .network-stage-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .network-career-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .network-stage-card { min-height: 230px; }
   .network-route-list article { grid-template-columns: 1fr; }
 }
@@ -689,6 +767,7 @@
   .network-page-hero,
   .network-stage-section,
   .network-route-section,
+  .network-career-section,
   .network-policy-section,
   .network-faq { width: min(100% - 24px, 1120px); }
   .study-plan-hero,
@@ -703,6 +782,7 @@
   .study-plan-faq,
   .network-stage-section,
   .network-route-section,
+  .network-career-section,
   .network-faq { padding: 18px 14px; border-radius: 12px; }
   .study-plan-control-row { grid-template-columns: 1fr; gap: 0; }
   .study-plan-option-grid.is-genres { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -727,6 +807,8 @@
   .network-stage-action { margin-top: 16px; }
   .network-route-list article { padding: 12px; }
   .network-route-list nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .network-career-grid { grid-template-columns: 1fr; }
+  .network-career-grid article { min-height: 144px; }
   .network-policy-section { align-items: stretch; flex-direction: column; padding: 20px 16px; }
   .network-policy-section > div:last-child { min-width: 0; }
 }

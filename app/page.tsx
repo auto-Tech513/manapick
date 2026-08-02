@@ -7,6 +7,7 @@ import { absoluteUrl, genreDisplayName, isoDuration, videoPath, videos } from "@
 import { rankedVideos } from "@/lib/rankings";
 import { siteStats } from "@/lib/site-stats";
 
+const buildReferenceTime = Date.now();
 const homeTitle = "Manapick | 無料YouTube学習動画を、見る順まで整理";
 const homeDescription =
   "社会人の学び直し・リスキリングに役立つ無料YouTube学習動画" +
@@ -204,7 +205,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
-      <ManapickApp referenceTime={Date.now()} />
+      <ManapickApp referenceTime={buildReferenceTime} />
       <LatestNewsBand />
       <section className="home-faq-section" aria-labelledby="home-faq-title">
         <div className="home-faq-heading">

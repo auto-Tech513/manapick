@@ -32,6 +32,8 @@ jobs:
       - name: Check official sources
         run: npm run news:watch
       - name: Publish at most one verified update
+        id: publish
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run news:publish
@@ -48,11 +50,31 @@ jobs:
           git add content/news.json public/og/news public/news-feed.xml public/llms.txt
           git commit -m "content: publish verified daily learning news"
           git push
-      - name: Open an issue when the daily quality gate fails
+      - name: Report an unavailable article generator once
+        if: steps.publish.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          title="Daily learning news generator needs attention"
+          existing="$(gh issue list --state open --search \"$title in:title\" --json number --jq '.[0].number // empty')"
+          if [ -n "$existing" ]; then
+            echo "Issue #$existing is already open; no duplicate issue created."
+          else
+            gh issue create \
+              --title "$title" \
+              --body "Official-source monitoring succeeded, but article generation was unavailable. No unverified article was published. Review: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          fi
+      - name: Open an issue when a verification gate fails
         if: failure()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: >-
-          gh issue create
-          --title "Daily learning news quality gate failed"
-          --body "The scheduled news workflow failed. No unverified article was published. Review the Actions run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+        run: |
+          title="Daily learning news quality gate failed"
+          existing="$(gh issue list --state open --search \"$title in:title\" --json number --jq '.[0].number // empty')"
+          if [ -n "$existing" ]; then
+            echo "Issue #$existing is already open; no duplicate issue created."
+          else
+            gh issue create \
+              --title "$title" \
+              --body "The scheduled verification gate failed. No unverified article was published. Review: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          fi

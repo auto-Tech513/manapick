@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import AdSlot from "@/components/AdSlot";
 import BrandLogo from "@/components/BrandLogo";
+import NetworkContextBand from "@/components/NetworkContextBand";
 import {
   absoluteUrl,
   scoreText,
@@ -200,6 +201,8 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
           })}
         </div>
       </section>
+
+      <NetworkContextBand genreKey={intent.filters.genres[0]} />
 
       <section className="knowledge-section" aria-labelledby="intent-faq-title">
         <p className="section-eyebrow">FAQ</p>

@@ -11,6 +11,7 @@ import {
 } from "@/lib/brand-links";
 import { absoluteUrl, genreDisplayName, publishedGenreKeys } from "@/lib/manapick";
 import { genreVideoCount } from "@/lib/site-stats";
+import professions from "@/content/professions.json";
 
 const pageTitle = "Manapick Network｜学ぶ・AI・資格・仕事を1本の導線に";
 const pageDescription = "Manapick、manapick AI、manapick license、manapick careerの役割と使い分けを整理。学ぶ分野を保ったまま、AI・資格・仕事へ進めます。";
@@ -78,6 +79,16 @@ const faq = [
   }
 ] as const;
 
+const careerEntrances = Array.from(new Map(
+  professions.flatMap((profession) =>
+    profession.careerLinks.map((career) => [career.href, {
+      ...career,
+      profession: profession.title,
+      guideHref: profession.guideHref
+    }] as const)
+  )
+).values());
+
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
@@ -118,6 +129,17 @@ export default function NetworkPage() {
           position: index + 1,
           name: stage.title,
           url: stage.external ? stage.href : absoluteUrl(stage.href)
+        }))
+      },
+      {
+        "@type": "ItemList",
+        name: "仕事から選ぶManapickの学習入口",
+        numberOfItems: careerEntrances.length,
+        itemListElement: careerEntrances.map((career, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: career.label,
+          url: career.href
         }))
       },
       {
@@ -204,6 +226,26 @@ export default function NetworkPage() {
                 <a className="is-license" href={manapickLicenseUrlForGenre(genre)} target="_blank" rel="noopener noreferrer">資格を選ぶ</a>
                 <a className="is-career" href={manapickCareerUrlForGenre(genre)} target="_blank" rel="noopener noreferrer">仕事を知る</a>
               </nav>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="network-career-section" aria-labelledby="network-career-title">
+        <div className="network-section-heading">
+          <p className="section-eyebrow">仕事から逆引き</p>
+          <h2 id="network-career-title">仕事内容を知って、学ぶ理由を決める</h2>
+          <p>関心のある仕事を先に確認し、必要なスキルはManapickの動画とロードマップで試せます。</p>
+        </div>
+        <div className="network-career-grid">
+          {careerEntrances.map((career) => (
+            <article key={career.href}>
+              <a href={career.href} target="_blank" rel="noopener noreferrer">
+                <small>{career.profession}</small>
+                <strong>{career.label}</strong>
+                <span>仕事内容・必要スキルを見る <span aria-hidden="true">↗</span></span>
+              </a>
+              <Link href={career.guideHref}>関連する学習ロードマップ <span aria-hidden="true">→</span></Link>
             </article>
           ))}
         </div>

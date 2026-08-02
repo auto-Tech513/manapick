@@ -1,5 +1,72 @@
 [
   {
+    "id": "2026-07-30-use-gemini-in-google-forms-to-quickly-create-a-new-quiz-fae9c28f88",
+    "headline": "Google FormsのGeminiがプロンプトとDrive資料からクイズを作成できるように",
+    "description": "Google Formsの「Help me create」がクイズ生成に対応しました。作りたい内容をプロンプトで伝え、Docs・Slides・PDFなどのDrive資料を参照すると、正解設定を含むクイズ案を作成できます。生成後はプレビューし、挿入前後に内容を調整できます。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "whyCare": "社内研修や学習内容の確認にクイズを使う場合、設問のたたき台を作る工程をGoogle Forms内で始められます。ただし、生成された設問や正解が教材の意図と一致するかは、利用者が原資料と照らして確認する必要があります。Manapickでは、作成速度だけでなく、確認を含めた使い方を重視します。",
+    "facts": [
+      "Google Formsの「Help me create」がクイズの生成に対応した。",
+      "作成したいクイズを具体的なプロンプトで説明できる。",
+      "Google Docs、Google Slides、PDFなどのGoogle Driveファイルをクイズの参照元にできる。",
+      "Geminiは参照ファイルの内容を取り込み、各設問の正解を含むクイズ設定を生成する。",
+      "生成したクイズはプレビューでき、フォームへ挿入した後も内容を調整できる。"
+    ],
+    "sections": [
+      {
+        "heading": "Google Forms内でクイズ案を作る機能",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Formsの「Help me create」がクイズ生成に対応しました。利用者は、どのようなクイズを作りたいかを具体的なプロンプトで説明できます。別の作成画面へ移動せず、Formsの作業の流れの中で設問案を準備できる点が今回の変更です。",
+          "生成されるのは、質問文だけではありません。公式案内では、各質問の正解を含む適切なクイズ設定も取り込まれると説明されています。選択式、チェックボックス、グリッド形式など、異なる質問形式を扱えることも示されています。"
+        ]
+      },
+      {
+        "heading": "Docs・Slides・PDFを参照元にできる",
+        "paragraphs": [
+          "プロンプトだけでなく、Google DriveにあるDocs、Slides、PDFを任意で参照できます。研修資料や授業資料をもとに確認問題を作りたい場面では、参照元を明示してクイズ案を作る入口になります。資料を参照させるかどうかは利用者が選べます。",
+          "参照ファイルを使った場合でも、生成結果をそのまま確定する必要はありません。公式ページには、生成後にクイズをプレビューし、挿入後も必要に応じて内容を調整できると記載されています。原資料との一致、設問の分かりやすさ、正解の妥当性を確認してから利用する流れが重要です。"
+        ]
+      },
+      {
+        "heading": "利用前に確認したい設定と対象プラン",
+        "paragraphs": [
+          "WorkspaceアプリのサイドパネルでGeminiを使うには、スマート機能とパーソナライズが有効になっている必要があります。組織で利用する場合は、管理者側の設定によって使える状態が異なるため、機能が見つからないときは管理者設定と公式ヘルプを確認します。",
+          "公式発表では、Business StandardとPlus、Enterprise StandardとPlus、Education Plus、Google AI ProとUltraなどが対象として案内されています。契約内容や提供状況は変わる可能性があるため、実際に使う時点の管理画面とGoogle公式ヘルプで確認してください。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "学習用途では、最初から完成版を求めるより、教材の要点を確認する設問のたたき台として使う方法が現実的です。まず参照資料を限定し、生成された質問と正解を資料の該当箇所に照らして確認します。そのうえで、難しすぎる表現や複数の解釈が生じる設問を手直しします。",
+          "社内研修で使う場合は、受講者の評価を自動化する道具として急いで導入するのではなく、理解度を振り返る補助として小さく試すのが安全です。個人情報や社外秘を含む資料を参照させる場合は、所属先のAI利用ルールとGoogle Workspaceの管理設定を先に確認してください。",
+          "クイズを作る操作だけでなく、元資料の整理や質問の設計も学びたい場合は、Manapickの生成AIロードマップとOffice・資料作成の動画を組み合わせると、作成から確認までの流れを分けて学べます。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AIロードマップ",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを比較する",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-07-30",
+    "lastChecked": "2026-08-02",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/07/use-gemini-in-google-forms-to-quickly-create-a-new-quiz.html"
+  },
+  {
     "id": "2026-07-29-create-and-import-scatter-charts-with-multiple-x-serie-348b704d47",
     "headline": "Google Sheetsが複数の独立したx系列を持つ散布図の作成・編集に対応、Excelとの互換性も向上",
     "description": "Google Sheetsで複数の独立したx系列を持つ散布図を作成・編集できるようになりました。これにより、各データ系列ごとに異なるx軸を設定でき、Microsoft Excelとのインポート・エクスポート時の互換性も改善されています。個人アカウントやGoogle Workspace利用者が利用可能です。",
