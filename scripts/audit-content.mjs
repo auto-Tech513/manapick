@@ -18,6 +18,11 @@ const errors = [];
 const warnings = [];
 const ids = new Set();
 const genreKeys = new Set(genres.map((genre) => genre.key));
+const dayMs = 24 * 60 * 60 * 1000;
+const now = Date.now();
+const newestByGenre = new Map();
+let newestPublishedAt = 0;
+let recent90Days = 0;
 
 for (const [index, video] of videos.entries()) {
   const label = video.ytid || `index:${index}`;
@@ -36,6 +41,12 @@ for (const [index, video] of videos.entries()) {
   }
   if (!video.publishedAt || Number.isNaN(Date.parse(video.publishedAt))) {
     errors.push(`${label}: valid publishedAt is required`);
+  } else {
+    const publishedAt = Date.parse(video.publishedAt);
+    if (publishedAt > now + dayMs) errors.push(`${label}: publishedAt is in the future`);
+    newestPublishedAt = Math.max(newestPublishedAt, publishedAt);
+    if (now - publishedAt <= 90 * dayMs) recent90Days += 1;
+    newestByGenre.set(video.genre, Math.max(newestByGenre.get(video.genre) || 0, publishedAt));
   }
   if (!Array.isArray(video.axisScores)) {
     errors.push(`${label}: axisScores must be an array`);
@@ -68,6 +79,16 @@ for (const genre of publishedGenres) {
   }
 }
 
+const newestAgeDays = newestPublishedAt ? Math.floor((now - newestPublishedAt) / dayMs) : Infinity;
+if (newestAgeDays > 60) {
+  errors.push(`freshness: newest published video is ${newestAgeDays} days old (limit: 60)`);
+}
+for (const genre of publishedGenres) {
+  const newest = newestByGenre.get(genre.key) || 0;
+  const ageDays = newest ? Math.floor((now - newest) / dayMs) : Infinity;
+  if (ageDays > 180) warnings.push(`genre:${genre.key}: newest published video is ${ageDays} days old`);
+}
+
 if (warnings.length > 0) {
   console.warn(`[content:audit] warnings=${warnings.length}`);
   for (const warning of warnings.slice(0, 20)) console.warn(`- ${warning}`);
@@ -80,5 +101,5 @@ if (errors.length > 0) {
 }
 
 console.log(
-  `[content:audit] ok videos=${videos.length} genres=${publishedGenres.length} roadmaps=${roadmaps.length} warnings=${warnings.length}`
+  `[content:audit] ok videos=${videos.length} genres=${publishedGenres.length} roadmaps=${roadmaps.length} recent90=${recent90Days} newestAgeDays=${newestAgeDays} warnings=${warnings.length}`
 );

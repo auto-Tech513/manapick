@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-08-04",
+  "method": "YouTube Data API v3 videos.list(part=status), batches of 50 IDs",
+  "beforeCount": 705,
+  "removed": [
+    {
+      "ytid": "U6GqYyW6FxM",
+      "reason": "videos.list returned no item; public availability could not be confirmed"
+    },
+    {
+      "ytid": "iF8fWlQpOfE",
+      "reason": "videos.list returned no item; public availability could not be confirmed"
+    }
+  ],
+  "afterCount": 703,
+  "apiReturned": 703,
+  "missing": [],
+  "unavailable": []
+}

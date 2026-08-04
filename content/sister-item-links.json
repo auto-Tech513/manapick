@@ -255,14 +255,6 @@
       "url": "https://ai.manapick.app/tool/siri/"
     }
   ],
-  "iF8fWlQpOfE": [
-    {
-      "site": "ai",
-      "slug": "supabase",
-      "name": "Supabase",
-      "url": "https://ai.manapick.app/tool/supabase/"
-    }
-  ],
   "F2gAu3LUdZs": [
     {
       "site": "ai",
@@ -657,6 +649,28 @@
       "slug": "shindanshi",
       "name": "中小企業診断士",
       "url": "https://license.manapick.app/license/shindanshi/"
+    }
+  ],
+  "Zk-INRORkFo": [
+    {
+      "site": "career",
+      "slug": "software-engineer",
+      "name": "ソフトウェアエンジニア",
+      "url": "https://career.manapick.app/career/software-engineer/"
+    }
+  ],
+  "zjIsJ8LvCq0": [
+    {
+      "site": "ai",
+      "slug": "copilot",
+      "name": "Microsoft Copilot",
+      "url": "https://ai.manapick.app/tool/copilot/"
+    },
+    {
+      "site": "career",
+      "slug": "office-administration",
+      "name": "一般事務・営業事務",
+      "url": "https://career.manapick.app/career/office-administration/"
     }
   ]
 }

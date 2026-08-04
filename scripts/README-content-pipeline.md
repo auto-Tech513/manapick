@@ -9,6 +9,7 @@ Codex サンドボックスでは外部ネットワークとローカル Ollama 
 - `scripts/fetch-candidates.mjs`: YouTube Data API v3 から候補取得
 - `scripts/score-draft.mjs`: 7軸ヒューリスティック採点とレビュー草案生成
 - `scripts/ingest.mjs`: 採用済みdraftを `content/videos.json` へマージ
+- `scripts/audit-video-availability.mjs`: 全掲載動画の公開・埋め込み可否を50件ずつ再確認
 - `scripts/pipeline-config.json`: ジャンル/サブジャンル/検索キーワード設定
 - `scripts/com.manapick.pipeline.example.plist`: launchd例
 - `data/candidates.json`: 生成物。gitignore対象
@@ -167,3 +168,19 @@ npm run build
 ```
 
 問題なければ、既存の `push-manapick.command` など手元の承認済み手順でpushします。
+
+## 8. 公開状態の定期監査
+
+YouTube側で削除・非公開化・埋め込み不可になった動画を検出します。ビルド時の外部API依存を避けるため、候補収集時または週次点検時に実行します。
+
+```sh
+npm run content:availability
+```
+
+公開状態をJSONへ保存する場合:
+
+```sh
+node scripts/audit-video-availability.mjs --report data/availability-audit.json
+```
+
+1本でも応答なし、非公開、未処理、埋め込み不可、公開日の不一致があれば終了コード1を返します。APIキーはログやレポートへ出力しません。

@@ -10,7 +10,7 @@ Options:
   --in path       Default: data/drafts.json
   --out path      Default: content/videos.json
   --min-score n   Auto-ingest drafts with score >= n and no cutoff reasons
-  --report path   Default: data/ingest-report-2026-06-10.md
+  --report path   Default: data/ingest-report-YYYY-MM-DD.md (JST)
   --all-good      Ingest excellent drafts even if accepted is false
   --dry-run       Show what would be ingested without writing
 
@@ -101,6 +101,8 @@ function toVideo(draft) {
   };
   if (Number.isFinite(Number(draft.viewCount))) video.viewCount = Number(draft.viewCount);
   if (draft.publishedAt) video.publishedAt = draft.publishedAt;
+  if (draft.scoreConfirmedAt) video.scoreConfirmedAt = draft.scoreConfirmedAt;
+  if (draft.editorNote) video.editorNote = draft.editorNote;
   return video;
 }
 
@@ -138,13 +140,17 @@ function reportRows(items, mapper) {
   return items.map(mapper).join("\n");
 }
 
+function jstDateStamp(date = new Date()) {
+  return new Date(date.getTime() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
+}
+
 async function writeReport(reportPath, payload) {
   const skippedSummary = payload.skipped.reduce((acc, item) => {
     incrementObject(acc, item.reason);
     return acc;
   }, {});
   const lines = [
-    "# Manapick ingest report 2026-06-10",
+    `# Manapick ingest report ${jstDateStamp()}`,
     "",
     `- generatedAt: ${new Date().toISOString()}`,
     `- input: ${payload.input}`,
@@ -193,7 +199,7 @@ async function main() {
 
   const inputPath = path.resolve(rootDir, args.in || "data/drafts.json");
   const outPath = path.resolve(rootDir, args.out || "content/videos.json");
-  const reportPath = path.resolve(rootDir, args.report || path.join(dataDir, "ingest-report-2026-06-10.md"));
+  const reportPath = path.resolve(rootDir, args.report || path.join(dataDir, `ingest-report-${jstDateStamp()}.md`));
   const config = await readJson(path.resolve(rootDir, args.config || "scripts/pipeline-config.json"), {});
   const excludeIds = new Set(config.exclude_ytids || []);
   const weakTitleTerms = config.weak_title_terms || [];

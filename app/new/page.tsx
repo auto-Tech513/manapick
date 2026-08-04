@@ -3,11 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 import AdSlot from "@/components/AdSlot";
 import BrandLogo from "@/components/BrandLogo";
-import { absoluteUrl, genreLabel, scoreText, videoPath, youtubeThumbnail, type Video } from "@/lib/manapick";
+import {
+  absoluteUrl,
+  genreDisplayName,
+  genreLabel,
+  publishedGenreKeys,
+  scoreText,
+  videoPath,
+  videos,
+  youtubeThumbnail,
+  type Video
+} from "@/lib/manapick";
 import { recentVideos } from "@/lib/rankings";
 
-const newTitle = "最近追加・更新した動画 | Manapick";
-const newDescription = "Manapickで最近追加・更新した学習動画を、公開日の新しい順に確認できます。";
+const newTitle = "最新の無料学習動画｜YouTube公開日順 | Manapick";
+const newDescription = "生成AI、プログラミング、英語、資格など10ジャンルの無料YouTube学習動画を、公開日の新しい順に確認できます。";
 
 export const metadata: Metadata = {
   title: newTitle,
@@ -33,6 +43,19 @@ export const metadata: Metadata = {
 
 export default function NewPage() {
   const list = recentVideos(48);
+  const now = Date.now();
+  const dayMs = 24 * 60 * 60 * 1000;
+  const recent90Count = videos.filter((video) => {
+    const publishedAt = video.publishedAt ? Date.parse(video.publishedAt) : 0;
+    return publishedAt > 0 && now - publishedAt <= 90 * dayMs;
+  }).length;
+  const newestVideo = list[0] ?? null;
+  const latestByGenre = publishedGenreKeys.flatMap((genreKey) => {
+    const latest = videos
+      .filter((video) => video.genre === genreKey)
+      .sort((a, b) => publishedTime(b) - publishedTime(a))[0];
+    return latest ? [latest] : [];
+  });
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -84,6 +107,21 @@ export default function NewPage() {
           <span className="knowledge-title-phrase">動画</span>
         </h1>
         <p>{newDescription}</p>
+        <dl className="new-freshness-summary" aria-label="掲載動画の鮮度">
+          <div>
+            <dt>最新公開日</dt>
+            <dd>{newestVideo ? formatPublishedDate(newestVideo.publishedAt).replace("公開", "") : "-"}</dd>
+          </div>
+          <div>
+            <dt>90日以内に公開</dt>
+            <dd>{recent90Count}本</dd>
+          </div>
+          <div>
+            <dt>公開・内容を確認済み</dt>
+            <dd>{videos.length}本</dd>
+          </div>
+        </dl>
+        <p className="new-freshness-note">YouTube上の公開日を基準に表示しています。サイトへの掲載日とは異なります。</p>
       </section>
       <section className="knowledge-section" aria-labelledby="new-video-list-title">
         <h2 id="new-video-list-title">新しい順に見る</h2>
@@ -93,9 +131,28 @@ export default function NewPage() {
           ))}
         </div>
       </section>
+      <section className="knowledge-section" aria-labelledby="genre-latest-title">
+        <p className="section-eyebrow">Latest by Genre</p>
+        <h2 id="genre-latest-title">ジャンル別の最新1本</h2>
+        <div className="new-genre-latest-grid">
+          {latestByGenre.map((video) => (
+            <Link key={video.genre} className="new-genre-latest-card" href={videoPath(video.ytid)}>
+              <span>{genreDisplayName(video.genre)}</span>
+              <strong>{video.title}</strong>
+              <small>{formatPublishedDate(video.publishedAt)} / {scoreText(video)} / {video.minutes}分</small>
+            </Link>
+          ))}
+        </div>
+      </section>
       <AdSlot slot="1438236565" />
     </main>
   );
+}
+
+function publishedTime(video: Video) {
+  if (!video.publishedAt) return 0;
+  const time = Date.parse(video.publishedAt);
+  return Number.isNaN(time) ? 0 : time;
 }
 
 function NewVideoCard({ video }: { video: Video }) {

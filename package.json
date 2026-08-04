@@ -9,6 +9,7 @@
     "start": "next dev --webpack",
     "lint": "eslint .",
     "content:audit": "node scripts/audit-content.mjs",
+    "content:availability": "node scripts/audit-video-availability.mjs",
     "llms:generate": "node scripts/generate-llms.mjs",
     "brand:assets": "node scripts/generate-brand-assets.mjs",
     "news:quality": "node scripts/news-quality.mjs",

@@ -24578,67 +24578,6 @@
   },
   {
     "genre": "prog",
-    "sub": "JavaScript",
-    "ytid": "U6GqYyW6FxM",
-    "level": "初級",
-    "minutes": 6,
-    "channel": "100秒テック",
-    "score": 28,
-    "axisScores": [
-      {
-        "axis": "実用性",
-        "score": 4,
-        "note": "タイトル上は実務・手順に結びつきやすい"
-      },
-      {
-        "axis": "正確性・鮮度",
-        "score": 5,
-        "note": "公開から約1年半以内で鮮度が高い"
-      },
-      {
-        "axis": "分かりやすさ",
-        "score": 5,
-        "note": "初心者向けの説明が期待できる"
-      },
-      {
-        "axis": "体系性",
-        "score": 4,
-        "note": "体系的に学べる可能性が高い"
-      },
-      {
-        "axis": "信頼性",
-        "score": 2,
-        "note": "最低限の視聴実績。内容確認が必要"
-      },
-      {
-        "axis": "視聴体験",
-        "score": 3,
-        "note": "目的を絞れば使いやすい"
-      },
-      {
-        "axis": "規約・権利",
-        "score": 5,
-        "note": "公式YouTubeリンク/埋め込み前提で扱う"
-      }
-    ],
-    "title": "【超入門】Next.jsの基本がすぐ分かる！アニメーションで解説してみた",
-    "url": "https://www.youtube.com/watch?v=U6GqYyW6FxM",
-    "tags": [
-      "JavaScript",
-      "入門",
-      "講座"
-    ],
-    "review": [
-      "Next.jsの基礎概念を視覚的なアニメーションを用いて構造的に解説しています。",
-      "JavaScriptを用いた動的な演出により、複雑な処理の仕組みを具体化します。",
-      "技術要素を順序立てて整理しており、初学者向けの構成として整っています。"
-    ],
-    "scoreStatus": "confirmed",
-    "viewCount": 36402,
-    "publishedAt": "2025-03-09T13:22:37Z"
-  },
-  {
-    "genre": "prog",
     "sub": "SQL",
     "ytid": "b1PaI72vYyw",
     "level": "初級",
@@ -42379,64 +42318,132 @@
     "scoreConfirmedAt": "2026-07-12"
   },
   {
-    "genre": "ai",
-    "sub": "Supabase",
-    "ytid": "iF8fWlQpOfE",
+    "genre": "biz",
+    "sub": "資料作成",
+    "ytid": "zjIsJ8LvCq0",
     "level": "初級",
-    "minutes": 4,
-    "channel": "100秒テック",
-    "score": 27,
+    "minutes": 14,
+    "channel": "ユースフル / 実務変革のプロ",
+    "score": 31,
     "axisScores": [
       {
         "axis": "実用性",
-        "score": 4,
-        "note": "タイトル上は実務・手順に結びつきやすい"
+        "score": 5,
+        "note": "スライドマスター、構成、デザイン指示を使う実務手順を実演"
       },
       {
         "axis": "正確性・鮮度",
         "score": 5,
-        "note": "公開から約1年半以内で鮮度が高い"
+        "note": "2026年7月公開。現在のCopilotとPowerPointの操作例を扱う"
       },
       {
         "axis": "分かりやすさ",
-        "score": 5,
-        "note": "初心者向けの説明が期待できる"
+        "score": 4,
+        "note": "準備する3項目と生成後の編集を画面で追いやすい"
       },
       {
         "axis": "体系性",
         "score": 4,
-        "note": "体系的に学べる可能性が高い"
+        "note": "準備、生成、グラフ編集まで資料作成の一連の流れを扱う"
       },
       {
         "axis": "信頼性",
-        "score": 1,
-        "note": "視聴実績が少なく慎重に確認"
+        "score": 3,
+        "note": "一瞬という見出しは強いが、動画内では必要な準備と修正を明示"
       },
       {
         "axis": "視聴体験",
-        "score": 3,
-        "note": "目的を絞れば使いやすい"
+        "score": 5,
+        "note": "約14分で試し方を把握し、同じ手順を再現しやすい"
       },
       {
         "axis": "規約・権利",
         "score": 5,
-        "note": "公式YouTubeリンク/埋め込み前提で扱う"
+        "note": "YouTube上で公開・埋め込み可をAPIで確認"
       }
     ],
-    "title": "【超入門】Supabaseについてアニメーションで解説してみた",
-    "url": "https://www.youtube.com/watch?v=iF8fWlQpOfE",
+    "title": "【Copilot×PowerPoint】社内資料を一瞬で量産する資料作成術",
+    "url": "https://www.youtube.com/watch?v=zjIsJ8LvCq0",
     "tags": [
-      "Supabase",
-      "使い方"
+      "資料作成",
+      "PowerPoint",
+      "Copilot",
+      "スライドマスター",
+      "実務"
     ],
     "review": [
-      "Supabaseを仕事や実践に結びつける観点をつかみやすい。",
-      "入口で迷いやすいポイントをほどき、学習の順番を作りやすい。",
-      "短時間で要点を拾いやすい軽めの入口なので、ロードマップ上の前後の動画とも組み合わせやすい。"
+      "Copilotで資料を作る前に、スライドマスターを整える理由が分かる。",
+      "構成・デザイン・グラフを分けて指示し、編集可能な資料にする流れを実演。",
+      "生成後の手直しも含め、社内資料づくりを短時間で試したい人向け。"
     ],
     "scoreStatus": "confirmed",
-    "viewCount": 8438,
-    "publishedAt": "2025-05-25T01:44:21Z",
-    "scoreConfirmedAt": "2026-07-12"
+    "viewCount": 21761,
+    "publishedAt": "2026-07-16T10:00:15Z",
+    "scoreConfirmedAt": "2026-08-04",
+    "editorNote": "「一瞬で量産」を鵜呑みにせず、マスター・内容・指示の準備を前提に使う動画として選定。"
+  },
+  {
+    "genre": "prog",
+    "sub": "Git",
+    "ytid": "Zk-INRORkFo",
+    "level": "初級",
+    "minutes": 33,
+    "channel": "いまにゅのAIプログラミング塾",
+    "score": 31,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 4,
+        "note": "Git/GitHubの役割からclone、commit、branch、競合解消まで操作例で確認できる"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "2026年7月公開。現在のGit/GitHub学習の入口として使いやすい"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 5,
+        "note": "用語を図と操作画面で順に説明し、初学者が流れを追いやすい"
+      },
+      {
+        "axis": "体系性",
+        "score": 5,
+        "note": "導入、基本操作、共同作業、競合解消まで一続きで扱う"
+      },
+      {
+        "axis": "信頼性",
+        "score": 3,
+        "note": "具体操作で内容を照合できる一方、タイトル表現は強め"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 4,
+        "note": "約33分で基礎を通せる。操作しながら見ると定着しやすい"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "YouTube上で公開・埋め込み可をAPIで確認"
+      }
+    ],
+    "title": "0から学ぶGit/GitHub！初心者でもこの動画でAI時代に必須なGit/GitHubを理解できます！",
+    "url": "https://www.youtube.com/watch?v=Zk-INRORkFo",
+    "tags": [
+      "Git",
+      "GitHub",
+      "バージョン管理",
+      "入門"
+    ],
+    "review": [
+      "GitとGitHubの違いを起点に、保存・共有の流れを整理できる。",
+      "commit、branch、clone、競合解消まで、操作画面で順に追える。",
+      "AIコーディング前に、変更履歴を安全に扱う基礎を作りたい人向け。"
+    ],
+    "scoreStatus": "confirmed",
+    "viewCount": 15898,
+    "publishedAt": "2026-07-12T09:00:05Z",
+    "scoreConfirmedAt": "2026-08-04",
+    "editorNote": "全字幕と操作の流れを確認。AI開発に進む前のGit/GitHub入門として選定。"
   }
 ]

@@ -1,0 +1,130 @@
+{
+  "generatedAt": "2026-08-04T00:00:00+09:00",
+  "source": "YouTube Data API + public oEmbed + full auto-transcript editorial review",
+  "items": [
+    {
+      "ytid": "Zk-INRORkFo",
+      "title": "0から学ぶGit/GitHub！初心者でもこの動画でAI時代に必須なGit/GitHubを理解できます！",
+      "channelTitle": "いまにゅのAIプログラミング塾",
+      "durationMin": 33,
+      "viewCount": 15898,
+      "publishedAt": "2026-07-12T09:00:05Z",
+      "genre": "prog",
+      "sub": "Git",
+      "url": "https://www.youtube.com/watch?v=Zk-INRORkFo",
+      "level": "初級",
+      "score": 31,
+      "axisScores": [
+        {
+          "axis": "実用性",
+          "score": 4,
+          "note": "Git/GitHubの役割からclone、commit、branch、競合解消まで操作例で確認できる"
+        },
+        {
+          "axis": "正確性・鮮度",
+          "score": 5,
+          "note": "2026年7月公開。現在のGit/GitHub学習の入口として使いやすい"
+        },
+        {
+          "axis": "分かりやすさ",
+          "score": 5,
+          "note": "用語を図と操作画面で順に説明し、初学者が流れを追いやすい"
+        },
+        {
+          "axis": "体系性",
+          "score": 5,
+          "note": "導入、基本操作、共同作業、競合解消まで一続きで扱う"
+        },
+        {
+          "axis": "信頼性",
+          "score": 3,
+          "note": "具体操作で内容を照合できる一方、タイトル表現は強め"
+        },
+        {
+          "axis": "視聴体験",
+          "score": 4,
+          "note": "約33分で基礎を通せる。操作しながら見ると定着しやすい"
+        },
+        {
+          "axis": "規約・権利",
+          "score": 5,
+          "note": "YouTube上で公開・埋め込み可をAPIで確認"
+        }
+      ],
+      "tags": ["Git", "GitHub", "バージョン管理", "入門"],
+      "review": [
+        "GitとGitHubの違いを起点に、保存・共有の流れを整理できる。",
+        "commit、branch、clone、競合解消まで、操作画面で順に追える。",
+        "AIコーディング前に、変更履歴を安全に扱う基礎を作りたい人向け。"
+      ],
+      "editorNote": "全字幕と操作の流れを確認。AI開発に進む前のGit/GitHub入門として選定。",
+      "scoreStatus": "confirmed",
+      "scoreConfirmedAt": "2026-08-04",
+      "accepted": true,
+      "riskTerms": [],
+      "cutoffReasons": []
+    },
+    {
+      "ytid": "zjIsJ8LvCq0",
+      "title": "【Copilot×PowerPoint】社内資料を一瞬で量産する資料作成術",
+      "channelTitle": "ユースフル / 実務変革のプロ",
+      "durationMin": 14,
+      "viewCount": 21761,
+      "publishedAt": "2026-07-16T10:00:15Z",
+      "genre": "biz",
+      "sub": "資料作成",
+      "url": "https://www.youtube.com/watch?v=zjIsJ8LvCq0",
+      "level": "初級",
+      "score": 31,
+      "axisScores": [
+        {
+          "axis": "実用性",
+          "score": 5,
+          "note": "スライドマスター、構成、デザイン指示を使う実務手順を実演"
+        },
+        {
+          "axis": "正確性・鮮度",
+          "score": 5,
+          "note": "2026年7月公開。現在のCopilotとPowerPointの操作例を扱う"
+        },
+        {
+          "axis": "分かりやすさ",
+          "score": 4,
+          "note": "準備する3項目と生成後の編集を画面で追いやすい"
+        },
+        {
+          "axis": "体系性",
+          "score": 4,
+          "note": "準備、生成、グラフ編集まで資料作成の一連の流れを扱う"
+        },
+        {
+          "axis": "信頼性",
+          "score": 3,
+          "note": "一瞬という見出しは強いが、動画内では必要な準備と修正を明示"
+        },
+        {
+          "axis": "視聴体験",
+          "score": 5,
+          "note": "約14分で試し方を把握し、同じ手順を再現しやすい"
+        },
+        {
+          "axis": "規約・権利",
+          "score": 5,
+          "note": "YouTube上で公開・埋め込み可をAPIで確認"
+        }
+      ],
+      "tags": ["資料作成", "PowerPoint", "Copilot", "スライドマスター", "実務"],
+      "review": [
+        "Copilotで資料を作る前に、スライドマスターを整える理由が分かる。",
+        "構成・デザイン・グラフを分けて指示し、編集可能な資料にする流れを実演。",
+        "生成後の手直しも含め、社内資料づくりを短時間で試したい人向け。"
+      ],
+      "editorNote": "「一瞬で量産」を鵜呑みにせず、マスター・内容・指示の準備を前提に使う動画として選定。",
+      "scoreStatus": "confirmed",
+      "scoreConfirmedAt": "2026-08-04",
+      "accepted": true,
+      "riskTerms": [],
+      "cutoffReasons": []
+    }
+  ]
+}

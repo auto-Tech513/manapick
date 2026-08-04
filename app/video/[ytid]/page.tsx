@@ -39,7 +39,7 @@ type VideoPageProps = {
 };
 
 type SisterItemLink = {
-  site: "ai" | "license";
+  site: "ai" | "license" | "career";
   slug: string;
   name: string;
   url: string;
@@ -243,14 +243,20 @@ export default async function VideoPage({ params }: VideoPageProps) {
                 {link.site === "ai" ? (
                   <>
                     <span aria-hidden="true">🔧</span>
-                    <span>「{link.name}」の料金・無料枠・使い方を manapick AI で見る →</span>
+                    <span>「{link.name}」の料金・無料枠・使い方を manapick AI で見る</span>
+                  </>
+                ) : link.site === "license" ? (
+                  <>
+                    <span aria-hidden="true">📜</span>
+                    <span>「{link.name}」の難易度・費用・申込を manapick license で見る</span>
                   </>
                 ) : (
                   <>
-                    <span aria-hidden="true">📜</span>
-                    <span>「{link.name}」の難易度・費用・申込を manapick license で見る →</span>
+                    <span aria-hidden="true">→</span>
+                    <span>「{link.name}」の仕事内容・必要スキルを manapick career で見る</span>
                   </>
                 )}
+                <span className="sister-item-arrow" aria-hidden="true">→</span>
               </a>
             ))}
           </div>
