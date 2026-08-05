@@ -221,7 +221,9 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
               ) : (
                 <div className="study-plan-review-copy">
                   <strong>5分だけ振り返る</strong>
-                  <span>前回のメモを1つ見返す日。新しい動画を増やさなくて大丈夫です。</span>
+                  <span>
+                    <Link href="/my/#my-notes">学びメモ</Link>があれば1つ見返す日。なければ、前回の要点を1つ思い出すだけで十分です。
+                  </span>
                 </div>
               )}
             </li>

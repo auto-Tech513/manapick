@@ -1,5 +1,6 @@
 import { publishedGenreKeys } from "@/lib/manapick";
 import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
+import { siteStats } from "@/lib/site-stats";
 
 type FooterLink = {
   label: string;
@@ -16,6 +17,7 @@ const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
       { label: "今日の1本診断", href: "/start/" },
       { label: "7日学習プラン", href: "/study-plan/" },
       { label: "YouTube学習動画おすすめ", href: "/youtube-learning/" },
+      { label: `${siteStats.totalVideos}本の学習動画データ`, href: "/research/youtube-learning-data/" },
       { label: "検索で多い学習テーマ", href: "/learn/" },
       { label: "なりたい職業から選ぶ", href: "/#profession-routes" },
       { label: `${genreCount}ジャンル一覧`, href: "/#genre-picker" },

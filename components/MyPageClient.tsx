@@ -9,9 +9,11 @@ import PwaInstallButton from "@/components/PwaInstallButton";
 import genresData from "@/content/genres.json";
 import videosData from "@/content/videos.json";
 import { guidePath, guideStepVideos, guides } from "@/lib/guides";
+import { isReviewDue, type LearningNote } from "@/lib/learning-notes";
 import { BADGES_KEY, RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY, sendGaEvent } from "@/lib/retention";
 import { genreDisplayName, genreLabel, scoreText, videoPath, youtubeThumbnail, type Genre, type Video } from "@/lib/manapick";
 import { useLocalList } from "@/lib/useLocalList";
+import { useLearningNotes } from "@/lib/useLearningNotes";
 import { useStreakState } from "@/lib/useStreakState";
 
 const videos = videosData as Video[];
@@ -41,6 +43,7 @@ export default function MyPageClient() {
   const watched = useLocalList(WATCHED_KEY);
   const watchlist = useLocalList(WATCHLIST_KEY);
   const recent = useLocalList(RECENT_KEY);
+  const learningNotes = useLearningNotes();
   const streak = useStreakState();
 
   useEffect(() => {
@@ -51,6 +54,14 @@ export default function MyPageClient() {
   const watchedVideos = useMemo(() => watched.items.map((ytid) => videoById.get(ytid)).filter((video): video is Video => Boolean(video)), [watched.items]);
   const watchlistVideos = useMemo(() => watchlist.items.map((ytid) => videoById.get(ytid)).filter((video): video is Video => Boolean(video)), [watchlist.items]);
   const recentVideo = useMemo(() => recent.items.map((ytid) => videoById.get(ytid)).find(Boolean) ?? null, [recent.items]);
+  const dueNotes = useMemo(
+    () => learningNotes.notes.filter((note) => isReviewDue(note)).sort((a, b) => a.reviewAt.localeCompare(b.reviewAt)),
+    [learningNotes.notes]
+  );
+  const upcomingNotes = useMemo(
+    () => learningNotes.notes.filter((note) => !isReviewDue(note)).sort((a, b) => a.reviewAt.localeCompare(b.reviewAt)),
+    [learningNotes.notes]
+  );
 
   const genreProgress = useMemo(() => {
     return publishedGenres.map((genre) => {
@@ -119,10 +130,16 @@ export default function MyPageClient() {
         label: "ロードマップ修了",
         body: "いずれかのガイド動画をすべて視聴しました。",
         earned: guideProgress.some((guide) => guide.complete)
+      },
+      {
+        id: "learning-note",
+        label: "学びを言葉に",
+        body: "動画から得たことを自分の言葉で残しました。",
+        earned: learningNotes.notes.length >= 1
       }
     ];
     return badges;
-  }, [guideProgress, streak.state.count, watched.items.length, watchedVideos, watchlist.items.length]);
+  }, [guideProgress, learningNotes.notes.length, streak.state.count, watched.items.length, watchedVideos, watchlist.items.length]);
 
   useEffect(() => {
     if (!watched.ready || !watchlist.ready || !streak.ready) return;
@@ -138,16 +155,27 @@ export default function MyPageClient() {
 
   useEffect(() => {
     const media = window.matchMedia("(max-width: 640px)");
+    const openHashSection = () => {
+      const id = decodeURIComponent(window.location.hash.slice(1));
+      if (!id) return;
+      const target = document.getElementById(id);
+      if (target instanceof HTMLDetailsElement) target.open = true;
+    };
     const syncDetails = () => {
       const defaultOpenIds = new Set(media.matches ? ["my-summary"] : ["my-summary", "my-genre"]);
       const sections = Array.from(document.querySelectorAll<HTMLDetailsElement>(".my-section-details"));
       for (const section of sections) {
         section.open = defaultOpenIds.has(section.id);
       }
+      openHashSection();
     };
     syncDetails();
     media.addEventListener("change", syncDetails);
-    return () => media.removeEventListener("change", syncDetails);
+    window.addEventListener("hashchange", openHashSection);
+    return () => {
+      media.removeEventListener("change", syncDetails);
+      window.removeEventListener("hashchange", openHashSection);
+    };
   }, []);
 
   function openSection(id: string) {
@@ -170,12 +198,16 @@ export default function MyPageClient() {
         <p>登録不要・ログイン不要。視聴済み・あとで見る・連続学習日数は、お使いのブラウザにだけ保存されます（他の端末とは共有されません）。</p>
         <div className="my-hero-actions">
           {recentVideo ? <Link href={videoPath(recentVideo.ytid)}>続きから見る</Link> : <Link href="/#search">動画を探す</Link>}
+          {learningNotes.ready && dueNotes.length > 0 ? (
+            <a href="#my-notes" onClick={() => openSection("my-notes")}>今日の復習 {dueNotes.length}件</a>
+          ) : null}
           <PwaInstallButton />
         </div>
       </section>
 
       <nav className="my-page-toc" aria-label="マイページ内メニュー">
         <a href="#my-summary" onClick={() => openSection("my-summary")}>サマリー</a>
+        <a href="#my-notes" onClick={() => openSection("my-notes")}>学びメモ</a>
         <a href="#my-genre" onClick={() => openSection("my-genre")}>ジャンル達成率</a>
         <a href="#my-guides" onClick={() => openSection("my-guides")}>ガイド進捗</a>
         <a href="#my-badges" onClick={() => openSection("my-badges")}>バッジ</a>
@@ -212,6 +244,48 @@ export default function MyPageClient() {
             </div>
           </div>
           {recentVideo ? <MyVideoRow video={recentVideo} /> : <p className="my-empty">動画ページを開くと、ここから1タップで戻れます。</p>}
+        </section>
+      </details>
+
+      <details id="my-notes" className="my-section-details">
+        <summary className="my-accordion-summary">
+          <span>学びメモ</span>
+          <small>{dueNotes.length > 0 ? `今日の復習 ${dueNotes.length}件` : "見た内容を自分の言葉で残す"}</small>
+        </summary>
+        <section className="my-section" aria-labelledby="my-notes-title">
+          <div className="my-section-heading">
+            <div>
+              <p className="section-eyebrow">1分だけ振り返る</p>
+              <h2 id="my-notes-title">今日の復習</h2>
+            </div>
+          </div>
+          {!learningNotes.ready ? (
+            <p className="my-empty">学びメモを読み込んでいます。</p>
+          ) : learningNotes.notes.length === 0 ? (
+            <p className="my-empty">動画ページで「1分で学びメモを残す」を開くと、見返す内容がここに並びます。</p>
+          ) : (
+            <>
+              {dueNotes.length > 0 ? (
+                <div className="my-note-list is-due">
+                  {dueNotes.map((note) => (
+                    <MyLearningNote key={note.ytid} note={note} onRemove={learningNotes.remove} />
+                  ))}
+                </div>
+              ) : (
+                <p className="my-empty is-positive">今日が期限のメモはありません。次の動画を増やす前に、覚えていることを1つ言えれば十分です。</p>
+              )}
+              {upcomingNotes.length > 0 ? (
+                <div className="my-note-upcoming">
+                  <h3>これから見返すメモ</h3>
+                  <div className="my-note-list">
+                    {upcomingNotes.map((note) => (
+                      <MyLearningNote key={note.ytid} note={note} onRemove={learningNotes.remove} />
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+            </>
+          )}
         </section>
       </details>
 
@@ -377,5 +451,28 @@ function MyVideoRow({ video }: { video: Video }) {
         <span>{genreLabel(video.genre)} / {video.sub} / {scoreText(video)} / {video.minutes}分</span>
       </span>
     </Link>
+  );
+}
+
+function MyLearningNote({ note, onRemove }: { note: LearningNote; onRemove: (ytid: string) => void }) {
+  const video = videoById.get(note.ytid);
+  if (!video) return null;
+
+  const reviewDate = new Intl.DateTimeFormat("ja-JP", {
+    month: "numeric",
+    day: "numeric",
+    timeZone: "Asia/Tokyo"
+  }).format(new Date(note.reviewAt));
+
+  return (
+    <article className={isReviewDue(note) ? "my-note-card is-due" : "my-note-card"}>
+      <div>
+        <span>{isReviewDue(note) ? "今日見返す" : `${reviewDate}に見返す`}</span>
+        <h3><Link href={videoPath(video.ytid)}>{video.title}</Link></h3>
+        <p><strong>わかったこと</strong>{note.learned}</p>
+        {note.nextAction ? <p><strong>次に試すこと</strong>{note.nextAction}</p> : null}
+      </div>
+      <button type="button" onClick={() => onRemove(note.ytid)} aria-label={`${video.title}の学びメモを削除`}>削除</button>
+    </article>
   );
 }

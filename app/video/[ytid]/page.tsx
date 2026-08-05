@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import BrandLogo from "@/components/BrandLogo";
+import LearningNote from "@/components/LearningNote";
 import NetworkContextBand from "@/components/NetworkContextBand";
 import VideoActions from "@/components/VideoActions";
 import VideoEmbed from "@/components/VideoEmbed";
@@ -220,6 +221,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
           </a>
           <p className="video-embed-note">※埋め込み再生できない動画はYouTubeでご覧ください。</p>
           <VideoActions ytid={video.ytid} />
+          <LearningNote ytid={video.ytid} />
         </div>
       </article>
 

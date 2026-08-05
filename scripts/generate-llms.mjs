@@ -208,6 +208,7 @@ const lines = [
   "## 主要URL",
   `- トップ: ${absoluteUrl(siteUrl, "/")}`,
   `- YouTube学習動画おすすめ: ${absoluteUrl(siteUrl, "/youtube-learning/")}`,
+  `- YouTube学習動画${videos.length}本の独自集計: ${absoluteUrl(siteUrl, "/research/youtube-learning-data/")}`,
   `- 7日学習プラン: ${absoluteUrl(siteUrl, "/study-plan/")}`,
   `- Manapick Network（学ぶ・AI・資格・仕事）: ${absoluteUrl(siteUrl, "/network/")}`,
   `- 学習ロードマップ一覧: ${absoluteUrl(siteUrl, "/guide/")}`,

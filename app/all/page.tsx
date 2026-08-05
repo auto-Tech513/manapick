@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { genreDisplayName, publishedGenreKeys } from "@/lib/manapick";
+import { genreDisplayName, publishedGenreKeys, videos } from "@/lib/manapick";
 import { eligibleSubPagePath, eligibleSubPagesForGenre } from "@/lib/sub-pages";
 import { guides, guidePath } from "@/lib/guides";
 import { learningIntentPath, learningIntents } from "@/lib/learning-intents";
@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 const mainPages: { label: string; href: string }[] = [
   { label: "トップ", href: "/" },
   { label: "YouTube学習動画おすすめ", href: "/youtube-learning/" },
+  { label: `YouTube学習動画${videos.length}本の独自集計`, href: "/research/youtube-learning-data/" },
   { label: "検索で多い学習テーマ", href: "/learn/" },
   { label: "学習ロードマップ一覧", href: "/guide/" },
   { label: "今日の1本診断", href: "/start/" },

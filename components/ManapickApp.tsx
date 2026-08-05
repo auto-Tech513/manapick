@@ -1490,6 +1490,8 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
 
       <WhyManapickSection />
 
+      <LearningDataSection />
+
       <LearningLoopSection />
 
       <RecentUpdatesSection videos={recentUpdateVideos} />
@@ -2074,6 +2076,31 @@ function WhyManapickSection() {
         </div>
       </div>
       <p className="why-tagline">Manapickは、動画を見るサイトではなく「次に見る一本」を最短で決めるためのサイトです。</p>
+    </section>
+  );
+}
+
+function LearningDataSection() {
+  const durations = videos.map((video) => video.minutes).sort((a, b) => a - b);
+  const medianMinutes = durations[Math.floor(durations.length / 2)] ?? 0;
+  const underThirty = durations.filter((minutes) => minutes <= 30).length;
+  const underThirtyPercent = videos.length > 0 ? ((underThirty / videos.length) * 100).toFixed(1) : "0";
+  const scored = videos.map((video) => video.score).filter((score): score is number => score !== null);
+  const averageScore = scored.length > 0 ? (scored.reduce((sum, score) => sum + score, 0) / scored.length).toFixed(1) : "-";
+
+  return (
+    <section className="learning-data-section" aria-labelledby="learning-data-title">
+      <div>
+        <p className="section-eyebrow">選ぶ根拠も公開</p>
+        <h2 id="learning-data-title" className="section-title">{videos.length}本を見て分かった、選びやすい1本の目安</h2>
+        <p>掲載動画の実測値を集計し、都合の良い数字だけを切り取らず、対象と限界も公開しています。</p>
+      </div>
+      <dl>
+        <div><dt>時間の中央値</dt><dd>{medianMinutes}分</dd></div>
+        <div><dt>30分以下</dt><dd>{underThirtyPercent}%</dd></div>
+        <div><dt>平均スコア</dt><dd>{averageScore}/35</dd></div>
+      </dl>
+      <Link href="/research/youtube-learning-data/">集計方法と全データを見る <span aria-hidden="true">→</span></Link>
     </section>
   );
 }
