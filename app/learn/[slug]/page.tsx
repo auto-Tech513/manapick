@@ -18,6 +18,7 @@ import {
   learningIntentPath,
   learningIntents,
   learningIntentVideos,
+  relatedLearningIntents,
   type LearningIntent
 } from "@/lib/learning-intents";
 
@@ -65,6 +66,7 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
 
   const pageUrl = absoluteUrl(learningIntentPath(intent.slug));
   const selectedVideos = learningIntentVideos(intent, 6);
+  const relatedIntents = relatedLearningIntents(intent);
   const structuredData = buildStructuredData(intent, pageUrl, selectedVideos);
 
   return (
@@ -203,6 +205,21 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
       </section>
 
       <NetworkContextBand genreKey={intent.filters.genres[0]} />
+
+      {relatedIntents.length ? (
+        <section className="knowledge-section" aria-labelledby="related-intents-title">
+          <p className="section-eyebrow">関連テーマ</p>
+          <h2 id="related-intents-title">次の疑問を続けて解決する</h2>
+          <div className="learning-intent-links">
+            {relatedIntents.map((related) => (
+              <Link key={related.slug} href={learningIntentPath(related.slug)}>
+                <strong>{related.query}</strong>
+                <small>{related.description}</small>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section className="knowledge-section" aria-labelledby="intent-faq-title">
         <p className="section-eyebrow">FAQ</p>

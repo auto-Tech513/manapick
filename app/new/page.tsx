@@ -18,6 +18,7 @@ import { recentVideos } from "@/lib/rankings";
 
 const newTitle = "最新の無料学習動画｜YouTube公開日順 | Manapick";
 const newDescription = "生成AI、プログラミング、英語、資格など10ジャンルの無料YouTube学習動画を、公開日の新しい順に確認できます。";
+const buildTimestamp = Date.now();
 
 export const metadata: Metadata = {
   title: newTitle,
@@ -43,11 +44,10 @@ export const metadata: Metadata = {
 
 export default function NewPage() {
   const list = recentVideos(48);
-  const now = Date.now();
   const dayMs = 24 * 60 * 60 * 1000;
   const recent90Count = videos.filter((video) => {
     const publishedAt = video.publishedAt ? Date.parse(video.publishedAt) : 0;
-    return publishedAt > 0 && now - publishedAt <= 90 * dayMs;
+    return publishedAt > 0 && buildTimestamp - publishedAt <= 90 * dayMs;
   }).length;
   const newestVideo = list[0] ?? null;
   const latestByGenre = publishedGenreKeys.flatMap((genreKey) => {

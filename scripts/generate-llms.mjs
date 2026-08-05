@@ -134,6 +134,7 @@ const queryIntentLines = [
   ["リスキリング 何から始める", "/youtube-learning/#youtube-steps-title"],
   ["YouTubeサムネイルの作り方", "/learn/youtube-thumbnail/"],
   ["Pythonは難しい", "/learn/python-hard/"],
+  ["Python入門本の選び方", "/learn/python-beginner-book/"],
   ["エクセル統計の使い方", "/learn/excel-statistics/"],
   ["Copilot活用事例", "/learn/copilot-use-cases/"],
   ["AIプロンプトのコツ", "/learn/ai-prompt-tips/"],
@@ -142,6 +143,7 @@ const queryIntentLines = [
   ["Power BIの使い方", "/learn/power-bi/"],
   ["資産運用を無料で勉強", "/learn/money-study-free/"],
   ["FP3級 過去問", "/learn/fp3-past-questions/"],
+  ["ビジネス会計検定3級の勉強時間", "/learn/business-accounting-3-study-time/"],
   ["秘書検定2級の日程と勉強法", "/learn/secretary-test-schedule/"],
   ["Canva 初心者", "/genre/marke/SNS/"]
 ].map(([label, route]) => `- ${label}: ${absoluteUrl(siteUrl, route)}`);

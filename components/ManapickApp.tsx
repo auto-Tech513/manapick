@@ -170,6 +170,11 @@ const searchIntentLinks = [
     note: "初心者向けの順番"
   },
   {
+    label: "Python入門本の選び方",
+    href: "/learn/python-beginner-book/",
+    note: "無料動画との使い分け"
+  },
+  {
     label: "資産運用を無料で勉強",
     href: "/learn/money-study-free/",
     note: "家計・NISA・投資"
@@ -178,6 +183,11 @@ const searchIntentLinks = [
     label: "FP3級の過去問",
     href: "/learn/fp3-past-questions/",
     note: "公式問題と解説動画"
+  },
+  {
+    label: "ビジネス会計検定3級の勉強時間",
+    href: "/learn/business-accounting-3-study-time/",
+    note: "公式範囲から計画する"
   },
   {
     label: "社労士YouTubeおすすめ",
@@ -220,8 +230,10 @@ const popularSearchKeywords = [
   "エクセル統計",
   "マーケティング",
   "Python 難しい",
+  "Python 入門 本",
   "資産運用",
   "FP3級 過去問",
+  "ビジネス会計検定 3級",
   "社労士",
   "Power BI",
   "YouTubeサムネイル",

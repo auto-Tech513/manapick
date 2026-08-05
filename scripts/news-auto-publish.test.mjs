@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { validateNewsItems } from "./news-quality.mjs";
 import { isAllowedBySource, normalizeSourceUrl, parseAtom, parseRss } from "./news-watch.mjs";
-import { unsupportedNumericTokens } from "./news-auto-publish.mjs";
+import { newsProviderConfig, unsupportedNumericTokens } from "./news-auto-publish.mjs";
 
 test("current news corpus passes the strict quality gate", async () => {
   const items = JSON.parse(await readFile(new URL("../content/news.json", import.meta.url), "utf8"));
@@ -50,4 +50,23 @@ test("source-specific title filters reject recap posts", () => {
 test("numeric claims absent from the source are rejected", () => {
   const article = { whyCare: "10分で確認", facts: [], sections: [], relatedLinks: [] };
   assert.deepEqual(unsupportedNumericTokens(article, "公式では20分と案内"), ["10"]);
+});
+
+test("news provider requires an explicit model and credentials", () => {
+  assert.throws(
+    () => newsProviderConfig({}),
+    /NEWS_LLM_API_KEY, NEWS_LLM_API_URL, NEWS_LLM_MODEL/
+  );
+  assert.deepEqual(
+    newsProviderConfig({
+      NEWS_LLM_API_KEY: "test-key",
+      NEWS_LLM_API_URL: "https://example.com/v1/chat/completions",
+      NEWS_LLM_MODEL: "example-model"
+    }),
+    {
+      apiKey: "test-key",
+      apiUrl: "https://example.com/v1/chat/completions",
+      model: "example-model"
+    }
+  );
 });

@@ -35,7 +35,22 @@ function extractJson(value) {
   return JSON.parse(raw);
 }
 
-async function createArticle(candidate, token) {
+export function newsProviderConfig(env = process.env) {
+  const apiKey = env.NEWS_LLM_API_KEY || env.OPENAI_API_KEY || "";
+  const apiUrl = env.NEWS_LLM_API_URL || (env.OPENAI_API_KEY ? "https://api.openai.com/v1/chat/completions" : "");
+  const model = env.NEWS_LLM_MODEL || "";
+  const missing = [
+    !apiKey && "NEWS_LLM_API_KEY",
+    !apiUrl && "NEWS_LLM_API_URL",
+    !model && "NEWS_LLM_MODEL"
+  ].filter(Boolean);
+  if (missing.length) {
+    throw new Error(`news publish: provider is not configured (${missing.join(", ")}). Official-source monitoring completed; no article was generated.`);
+  }
+  return { apiKey, apiUrl, model };
+}
+
+async function createArticle(candidate, provider) {
   const today = new Date().toISOString().slice(0, 10);
   const prompt = `あなたはManapickのニュース編集者です。以下の公式一次情報だけを根拠に、日本語の記事JSONを1件作成してください。
 
@@ -62,11 +77,11 @@ ${[...allowedRelatedLinks].join("\n")}
 公式本文:
 ${candidate.sourceText}`;
 
-  const response = await fetch("https://models.github.ai/inference/chat/completions", {
+  const response = await fetch(provider.apiUrl, {
     method: "POST",
-    headers: { "content-type": "application/json", authorization: `Bearer ${token}` },
+    headers: { "content-type": "application/json", authorization: `Bearer ${provider.apiKey}` },
     body: JSON.stringify({
-      model: "openai/gpt-4.1",
+      model: provider.model,
       temperature: 0.15,
       max_tokens: 5000,
       messages: [
@@ -76,7 +91,7 @@ ${candidate.sourceText}`;
     }),
     signal: AbortSignal.timeout(120000)
   });
-  if (!response.ok) throw new Error(`GitHub Models HTTP ${response.status}: ${(await response.text()).slice(0, 500)}`);
+  if (!response.ok) throw new Error(`news provider HTTP ${response.status}: ${(await response.text()).slice(0, 500)}`);
   const payload = await response.json();
   const generated = extractJson(payload.choices?.[0]?.message?.content || "");
   const sourceHash = createHash("sha256").update(candidate.sourceUrl).digest("hex").slice(0, 10);
@@ -93,8 +108,6 @@ ${candidate.sourceText}`;
 }
 
 async function main() {
-  const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
-  if (!token) throw new Error("GITHUB_TOKEN is required for automatic publication");
   const current = JSON.parse(await readFile(newsPath, "utf8"));
   const watch = JSON.parse(await readFile(candidatesPath, "utf8"));
   const candidate = watch.candidates.find((item) => item.autoPublish);
@@ -103,7 +116,7 @@ async function main() {
     return;
   }
 
-  const article = await createArticle(candidate, token);
+  const article = await createArticle(candidate, newsProviderConfig());
   const badLinks = article.relatedLinks.filter((link) => !allowedRelatedLinks.has(link.href));
   if (badLinks.length) throw new Error(`generated article contains unapproved related links: ${badLinks.map((link) => link.href).join(", ")}`);
   const unsupported = unsupportedNumericTokens(article, candidate.sourceText);

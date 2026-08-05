@@ -12,7 +12,6 @@ concurrency:
 permissions:
   contents: write
   issues: write
-  models: read
 
 jobs:
   update:
@@ -35,7 +34,9 @@ jobs:
         id: publish
         continue-on-error: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NEWS_LLM_API_KEY: ${{ secrets.NEWS_LLM_API_KEY }}
+          NEWS_LLM_API_URL: ${{ vars.NEWS_LLM_API_URL }}
+          NEWS_LLM_MODEL: ${{ vars.NEWS_LLM_MODEL }}
         run: npm run news:publish
       - name: Verify content, metadata, and static export
         run: npm run news:test && npm run lint && npm run build && npm run site:links
@@ -62,7 +63,7 @@ jobs:
           else
             gh issue create \
               --title "$title" \
-              --body "Official-source monitoring succeeded, but article generation was unavailable. No unverified article was published. Review: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+              --body "Official-source monitoring succeeded, but the configured NEWS_LLM provider was unavailable or incomplete. No unverified article was published. Required settings: secret NEWS_LLM_API_KEY, variables NEWS_LLM_API_URL and NEWS_LLM_MODEL. Review: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           fi
       - name: Open an issue when a verification gate fails
         if: failure()

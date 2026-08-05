@@ -15,7 +15,17 @@ npm run dev
 npm run build
 ```
 
-`next.config.mjs` で `output: "export"` を指定しているため、Cloudflare Pages では `out/` を配信できます。公開デプロイ、GitHub連携、ASP/AdSense等の外部連携は承認後に実行します。
+`next.config.mjs` で `output: "export"` を指定しているため、Cloudflare Pages では `out/` を配信できます。
+
+## 検証済み学びニュースの自動更新
+
+日次ワークフローは許可済みの公式フィードを先に確認し、品質ゲートを通過した記事を1日最大1件だけ公開します。記事生成はOpenAI互換のChat Completions APIを明示設定して使用し、未検証テンプレートへの自動フォールバックは行いません。
+
+- GitHub Actions secret: `NEWS_LLM_API_KEY`
+- GitHub Actions variable: `NEWS_LLM_API_URL`
+- GitHub Actions variable: `NEWS_LLM_MODEL`
+
+設定不足やプロバイダー障害時も公式情報の監視とサイト全体の検証は継続し、記事は公開せず、対応に必要なGitHub Issueを1件だけ維持します。
 
 ## コンテンツ編集
 

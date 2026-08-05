@@ -434,6 +434,83 @@ export const learningIntents: readonly LearningIntent[] = [
       { question: "2級はCBTで受験できますか？", answer: "実施方式は公式の試験日程・受験要項で案内されています。希望地域と受験時期に合う方式を公式ページで確認してください。" },
       { question: "動画だけで合格できますか？", answer: "動画は全体像の理解に向きますが、合格を保証するものではありません。問題集や過去問で出題形式に慣れ、間違えた範囲を動画で復習する使い方が現実的です。" }
     ]
+  },
+  {
+    slug: "python-beginner-book",
+    query: "Python 入門 本",
+    title: "Python入門本の選び方｜無料動画との使い分けと学ぶ順番 | Manapick",
+    description: "Python入門本を選ぶ基準と、無料YouTube動画・公式チュートリアルを組み合わせる順番を整理。環境構築、文法、演習で迷わない入口です。",
+    h1: "Python入門本は、動画で試してから目的に合う一冊を選ぶ",
+    lead: "本を先に決めるのではなく、短い無料動画でPythonを動かし、つまずいた場所と作りたいものが分かってから選ぶと、教材の難易度を合わせやすくなります。",
+    answer: "Python入門本は、利用する環境の説明、実行できるサンプルコード、練習問題の3点を確認して選びます。最初に短い動画で環境構築と基本文法を試し、本で手を動かして復習し、分からない仕様はPython公式チュートリアルで確かめる順番が現実的です。",
+    audience: "Pythonの入門本を探している人、動画と本のどちらから始めるか迷っている人",
+    lastReviewed: "2026-08-05",
+    officialSources: [
+      {
+        label: "Python 公式チュートリアル",
+        href: "https://docs.python.org/ja/3/tutorial/",
+        note: "言語の基本機能、仮想環境、標準ライブラリを確認する一次情報"
+      }
+    ],
+    filters: { genres: ["prog"], subtopics: ["Python"], keywords: ["Python", "入門", "初心者", "環境構築", "基本", "文法"] },
+    steps: [
+      { title: "短い動画でPythonを一度動かす", body: "環境構築から実行までを試し、自分が止まる場所を確認します。", href: subGenrePath("prog", "Python") },
+      { title: "目的と難易度に合う本を選ぶ", body: "サンプルコード、練習問題、利用環境の説明が自分に合うかを目次と試し読みで確かめます。", href: "/shop/" },
+      { title: "本で手を動かし、動画と公式情報で補う", body: "コードを実行して結果を確認し、つまずいた操作は動画、仕様は公式チュートリアルで確認します。", href: guidePath("python") }
+    ],
+    links: [
+      { label: "Python完全ロードマップ", href: guidePath("python"), note: "入門からWebアプリまで学ぶ順番を確認" },
+      { label: "Python動画一覧", href: subGenrePath("prog", "Python"), note: "環境構築・文法・活用の動画を比較" },
+      { label: "manapi商店（PR）", href: "/shop/", note: "学習テーマ別の補助教材を見る" },
+      { label: "Python公式チュートリアル", href: "https://docs.python.org/ja/3/tutorial/", note: "言語仕様と基本機能を一次情報で確認" }
+    ],
+    faq: [
+      { question: "Pythonは本と動画のどちらから始めるべき？", answer: "まず短い動画で実行環境と基本操作を試し、継続できそうなら本で体系的に手を動かす方法があります。動画は操作の理解、本は復習と演習に向いています。" },
+      { question: "Python入門本は何を見て選べばいい？", answer: "自分のOSや実行環境に対応しているか、サンプルコードを実際に動かせるか、章ごとに練習問題があるかを確認します。" },
+      { question: "古いPython入門本でも学べますか？", answer: "基本文法は学べる場合がありますが、画面やライブラリ、推奨手順が現在と異なることがあります。出版情報に加え、Python公式ドキュメントの現行版も確認してください。" },
+      { question: "本を読むだけで身につきますか？", answer: "読むだけでなく、掲載コードを自分で入力・実行し、少し変更して結果を確かめる時間を組み込むことが大切です。" }
+    ]
+  },
+  {
+    slug: "business-accounting-3-study-time",
+    query: "ビジネス会計検定 3級 勉強時間",
+    title: "ビジネス会計検定3級の勉強時間は？学習計画の立て方 | Manapick",
+    description: "ビジネス会計検定3級の勉強時間を決める前に、公式出題範囲と問題例で現在地を確認し、財務諸表の読み方を学ぶ順番を整理します。",
+    h1: "ビジネス会計検定3級の勉強時間は、問題例から逆算する",
+    lead: "必要な時間は前提知識と学習頻度で変わります。根拠のない一律の時間を示さず、公式の出題範囲と問題例で現在地を確認して計画を作ります。",
+    answer: "ビジネス会計検定3級の勉強時間に公式の一律目安はありません。まず公式問題例を解き、貸借対照表、損益計算書、キャッシュ・フロー計算書のどこで止まるかを確認します。分からない範囲を動画とテキストで学び、週ごとの問題演習時間を確保して受験日から逆算してください。",
+    audience: "ビジネス会計検定3級の学習計画を立てたい人、簿記との違いや出題範囲を確認したい人",
+    lastReviewed: "2026-08-05",
+    officialSources: [
+      {
+        label: "ビジネス会計検定試験: 3級の内容・出題範囲",
+        href: "https://www.b-accounting.jp/about/course.html",
+        note: "財務諸表の構造・読み方・基本分析など、公式の試験範囲を確認"
+      },
+      {
+        label: "ビジネス会計検定試験: 試験時間",
+        href: "https://www.b-accounting.jp/guide/time.html",
+        note: "3級の試験時間と実施案内を公式情報で確認"
+      }
+    ],
+    filters: { genres: ["kaikei"], subtopics: ["簿記"], keywords: ["会計", "財務諸表", "貸借対照表", "損益計算書", "キャッシュフロー", "決算書", "簿記"] },
+    steps: [
+      { title: "公式範囲と問題例で現在地を測る", body: "財務諸表の構造と基本分析のうち、説明できない項目を先に洗い出します。", href: "https://www.b-accounting.jp/about/course.html" },
+      { title: "財務諸表の読み方を動画で補う", body: "貸借対照表、損益計算書、キャッシュ・フロー計算書を分けて学びます。", href: subGenrePath("kaikei", "簿記") },
+      { title: "問題演習を週の予定に固定する", body: "受験日から逆算し、学習と解き直しの時間を分けて確保します。", href: "https://license.manapick.app/license/biz-accounting-3/" }
+    ],
+    links: [
+      { label: "ビジネス会計検定3級を比較", href: "https://license.manapick.app/license/biz-accounting-3/", note: "難易度・費用・日程を姉妹サイトで確認" },
+      { label: "簿記・決算書の動画一覧", href: subGenrePath("kaikei", "簿記"), note: "財務諸表の基礎を学ぶ動画を比較" },
+      { label: "会計資格ロードマップ", href: guidePath("bookkeeping"), note: "簿記・FP・会計資格を学ぶ順番" },
+      { label: "公式の出題範囲", href: "https://www.b-accounting.jp/about/course.html", note: "試験範囲と問題形式を一次情報で確認" }
+    ],
+    faq: [
+      { question: "ビジネス会計検定3級の勉強時間は何時間ですか？", answer: "公式サイトは一律の勉強時間を示していません。簿記や財務諸表の前提知識で必要時間が変わるため、公式問題例を解いて不足分野を確認し、受験日から逆算してください。" },
+      { question: "3級では何を学びますか？", answer: "公式の出題範囲では、貸借対照表、損益計算書、キャッシュ・フロー計算書の構造と読み方、成長性・安全性・収益性などの基本分析が示されています。" },
+      { question: "簿記3級と何が違いますか？", answer: "簿記は取引の記録や決算書を作る仕組みを学び、ビジネス会計検定は財務諸表を読み、企業の状態を分析する力に重点があります。" },
+      { question: "動画だけで受験対策できますか？", answer: "動画は財務諸表の考え方を理解する補助に向きます。試験対策では公式範囲を確認し、問題例や問題集を自分で解く時間も必要です。" }
+    ]
   }
 ] as const;
 
@@ -474,6 +551,20 @@ export function learningIntentVideos(intent: LearningIntent, limit = 6) {
     .filter((item) => item.score >= 0)
     .sort((a, b) => b.score - a.score || (b.video.score ?? -1) - (a.video.score ?? -1) || a.video.minutes - b.video.minutes)
     .map((item) => item.video)
+    .slice(0, limit);
+}
+
+export function relatedLearningIntents(intent: LearningIntent, limit = 4) {
+  return learningIntents
+    .filter((candidate) => candidate.slug !== intent.slug)
+    .map((candidate) => ({
+      intent: candidate,
+      sharedGenres: candidate.filters.genres.filter((genre) => intent.filters.genres.includes(genre)).length,
+      sharedKeywords: candidate.filters.keywords.filter((keyword) => intent.filters.keywords.includes(keyword)).length
+    }))
+    .filter((item) => item.sharedGenres > 0)
+    .sort((a, b) => b.sharedKeywords - a.sharedKeywords || a.intent.query.localeCompare(b.intent.query, "ja"))
+    .map((item) => item.intent)
     .slice(0, limit);
 }
 
