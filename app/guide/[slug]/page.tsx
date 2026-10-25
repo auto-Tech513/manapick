@@ -382,7 +382,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           </div>
         </section>
 
-        <NetworkContextBand genreKey={guide.genre} />
+        <NetworkContextBand genreKey={guide.genre} pagePath={`/guide/${guide.slug}/`} />
 
         <GuidePrSection guide={guide} />
       </article>

@@ -10637,6 +10637,48 @@ ins.adsbygoogle:not(.ad-slot),
   transform: translateY(-1px);
 }
 
+.network-context-deep {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin-top: 10px;
+}
+
+.network-context-deep > span {
+  color: var(--color-ai-red-dark);
+  font-size: 0.72rem;
+  font-weight: 950;
+}
+
+.network-context-deep ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.network-context-deep a {
+  display: inline-block;
+  border: 1px solid var(--color-ai-red-line);
+  border-radius: 999px;
+  background: #fff;
+  padding: 5px 11px;
+  color: var(--color-ai-red-dark);
+  font-size: 0.78rem;
+  font-weight: 850;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.network-context-deep a:hover,
+.network-context-deep a:focus-visible {
+  background: var(--color-ai-red-soft);
+  text-decoration: none;
+}
+
 .guide-index-page {
   width: min(100% - 32px, 1040px);
   margin-inline: auto;

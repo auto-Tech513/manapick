@@ -4,15 +4,21 @@ import {
   manapickLicenseUrlForGenre
 } from "@/lib/brand-links";
 import { genreDisplayName } from "@/lib/manapick";
+import aiDeepLinks from "@/content/ai-deep-links.json";
+
+type AiDeepLink = { href: string; label: string };
+const AI_DEEP_LINKS = aiDeepLinks as Record<string, AiDeepLink[]>;
 
 type NetworkSite = "ai" | "license" | "career";
 
 type NetworkContextBandProps = {
   genreKey: string;
   exclude?: readonly NetworkSite[];
+  /** このページのパス（例: /genre/ai/ChatGPT/）。content/ai-deep-links.json にあれば manapick AI の関連ページを出す */
+  pagePath?: string;
 };
 
-export default function NetworkContextBand({ genreKey, exclude = [] }: NetworkContextBandProps) {
+export default function NetworkContextBand({ genreKey, exclude = [], pagePath }: NetworkContextBandProps) {
   const genreName = genreDisplayName(genreKey);
   const excluded = new Set(exclude);
   const links = [
@@ -39,6 +45,8 @@ export default function NetworkContextBand({ genreKey, exclude = [] }: NetworkCo
     }
   ].filter((link) => !excluded.has(link.site));
 
+  const deepLinks = pagePath && !excluded.has("ai") ? (AI_DEEP_LINKS[pagePath] ?? []).slice(0, 2) : [];
+
   if (links.length === 0) return null;
 
   return (
@@ -63,6 +71,20 @@ export default function NetworkContextBand({ genreKey, exclude = [] }: NetworkCo
           </a>
         ))}
       </div>
+      {deepLinks.length ? (
+        <div className="network-context-deep" aria-label="manapick AIの関連ページ">
+          <span>manapick AIの関連ページ</span>
+          <ul>
+            {deepLinks.map((link) => (
+              <li key={link.href}>
+                <a href={link.href} target="_blank" rel="noopener noreferrer">
+                  {link.label} <span aria-hidden="true">↗</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
       <a className="network-context-overview" href="/network/">
         4サイトの役割と使い分けを見る <span aria-hidden="true">→</span>
       </a>

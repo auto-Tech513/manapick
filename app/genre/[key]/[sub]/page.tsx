@@ -183,7 +183,7 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
           </div>
         </header>
 
-        <NetworkContextBand genreKey={key} />
+        <NetworkContextBand genreKey={key} pagePath={`/genre/${key}/${sub}/`} />
 
         <section className="sub-topic-section" aria-labelledby="sub-roadmap-title">
           <div className="sub-topic-heading">

@@ -1,0 +1,70 @@
+{
+  "/genre/ai/": [
+    { "href": "https://ai.manapick.app/ranking/", "label": "AIランキング" },
+    { "href": "https://ai.manapick.app/compare/", "label": "AI比較：主要サービスの料金・無料枠" }
+  ],
+  "/genre/ai/ChatGPT/": [
+    { "href": "https://ai.manapick.app/tool/chatgpt/", "label": "ChatGPTの料金・無料枠" },
+    { "href": "https://ai.manapick.app/guide/chatgpt-start/", "label": "ChatGPTの始め方" }
+  ],
+  "/genre/ai/Claude/": [
+    { "href": "https://ai.manapick.app/tool/claude/", "label": "Claudeの料金・無料枠" },
+    { "href": "https://ai.manapick.app/compare/chatgpt-vs-claude/", "label": "ChatGPTとClaudeの違い" }
+  ],
+  "/genre/ai/Gemini/": [
+    { "href": "https://ai.manapick.app/tool/gemini/", "label": "Geminiの料金・無料枠" },
+    { "href": "https://ai.manapick.app/guide/gemini-howto/", "label": "Geminiの使い方" }
+  ],
+  "/genre/ai/Copilot/": [
+    { "href": "https://ai.manapick.app/tool/copilot/", "label": "Microsoft Copilotの料金・無料枠" },
+    { "href": "https://ai.manapick.app/guide/microsoft-copilot-howto/", "label": "Microsoft Copilotの使い方" }
+  ],
+  "/genre/ai/プロンプト/": [
+    { "href": "https://ai.manapick.app/guide/prompt-basics/", "label": "AIプロンプトの書き方：5つの型" },
+    { "href": "https://ai.manapick.app/guide/prompt-tips/", "label": "プロンプトのコツ" }
+  ],
+  "/genre/ai/画像生成/": [
+    { "href": "https://ai.manapick.app/category/image/", "label": "画像のAI" },
+    { "href": "https://ai.manapick.app/guide/ai-image-generation-start/", "label": "画像生成AIの始め方" }
+  ],
+  "/genre/ai/自動化/": [
+    { "href": "https://ai.manapick.app/use/automate-workflow/", "label": "アプリ連携で定型作業を自動化したい" },
+    { "href": "https://ai.manapick.app/guide/ai-agent-basics/", "label": "AIエージェント入門" }
+  ],
+  "/genre/prog/Python/": [
+    { "href": "https://ai.manapick.app/use/learn-coding/", "label": "プログラミングを学びながら作りたい" },
+    { "href": "https://ai.manapick.app/guide/ai-coding-basics/", "label": "AIでプログラミング入門" }
+  ],
+  "/genre/data/データサイエンス/": [
+    { "href": "https://ai.manapick.app/use/analyze-data/", "label": "表・データをAIで分析したい" },
+    { "href": "https://ai.manapick.app/guide/ai-spreadsheet-analysis/", "label": "AIで表計算を分析する手順" }
+  ],
+  "/genre/english/英会話/": [
+    { "href": "https://ai.manapick.app/use/english-practice/", "label": "英会話・英文添削を練習したい" },
+    { "href": "https://ai.manapick.app/guide/ai-english-learning/", "label": "AIで英語を学ぶ" }
+  ],
+  "/genre/biz/プレゼン/": [
+    { "href": "https://ai.manapick.app/use/make-slides/", "label": "プレゼン資料を一気に作りたい" },
+    { "href": "https://ai.manapick.app/guide/ai-presentation-workflow/", "label": "AIで伝わるプレゼンを作る手順" }
+  ],
+  "/guide/generative-ai/": [
+    { "href": "https://ai.manapick.app/guide/ai-choose-basics/", "label": "初めてのAI選び" },
+    { "href": "https://ai.manapick.app/compare/", "label": "AI比較：主要サービスの料金・無料枠" }
+  ],
+  "/guide/video-editing/": [
+    { "href": "https://ai.manapick.app/category/video/", "label": "動画のAI" },
+    { "href": "https://ai.manapick.app/guide/vrew-subtitle-howto/", "label": "Vrewの使い方：自動字幕" }
+  ],
+  "/learn/chatgpt-getting-started/": [
+    { "href": "https://ai.manapick.app/guide/chatgpt-start/", "label": "ChatGPTの始め方" },
+    { "href": "https://ai.manapick.app/tool/chatgpt/", "label": "ChatGPTの料金・無料枠" }
+  ],
+  "/learn/ai-prompt-tips/": [
+    { "href": "https://ai.manapick.app/guide/prompt-tips/", "label": "プロンプトのコツ" },
+    { "href": "https://ai.manapick.app/guide/prompt-basics/", "label": "AIプロンプトの書き方：5つの型" }
+  ],
+  "/learn/copilot-use-cases/": [
+    { "href": "https://ai.manapick.app/guide/microsoft-copilot-howto/", "label": "Microsoft Copilotの使い方" },
+    { "href": "https://ai.manapick.app/tool/copilot/", "label": "Microsoft Copilotの料金・無料枠" }
+  ]
+}

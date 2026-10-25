@@ -300,7 +300,7 @@ export default async function GenrePage({ params }: GenrePageProps) {
           ))}
         </section>
       ) : null}
-      <NetworkContextBand genreKey={key} />
+      <NetworkContextBand genreKey={key} pagePath={`/genre/${key}/`} />
       <section className="genre-hub-editorial" aria-labelledby="genre-editorial-title">
         <p className="section-eyebrow">編集部の選び方</p>
         <h2 id="genre-editorial-title">{label}で注意して見ていること</h2>

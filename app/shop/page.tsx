@@ -73,7 +73,7 @@ export default function ShopPage() {
                   <img src={product.image} alt={`${product.name}の製品画像`} width={900} height={560} loading="lazy" />
                   <figcaption>{imageCredits[product.id]}</figcaption>
                 </figure>
-                <div><p className="mp-shop-maker"><span>PR案内</span>{product.maker}</p><h3>{product.name}</h3><p className="mp-shop-fit"><strong>向いている人</strong>{product.fit}</p><p>{product.reason}</p><ul>{product.checks.map((check) => <li key={check}>{check}</li>)}</ul><div className="mp-shop-actions"><a href={`https://ai.manapick.app/shop/?utm_source=manapick&utm_medium=referral&utm_campaign=manapi_shop#${product.id}`} target="_blank" rel="noopener noreferrer">購入先をAI版で確認 <span aria-hidden="true">↗</span></a><a href={product.officialUrl} target="_blank" rel="noopener noreferrer">公式仕様 <span aria-hidden="true">↗</span></a></div></div>
+                <div><p className="mp-shop-maker"><span>PR案内</span>{product.maker}</p><h3>{product.name}</h3><p className="mp-shop-fit"><strong>向いている人</strong>{product.fit}</p><p>{product.reason}</p><ul>{product.checks.map((check) => <li key={check}>{check}</li>)}</ul><div className="mp-shop-actions"><a href={`https://ai.manapick.app/shop/#${product.id}`} target="_blank" rel="noopener noreferrer">購入先をAI版で確認 <span aria-hidden="true">↗</span></a><a href={product.officialUrl} target="_blank" rel="noopener noreferrer">公式仕様 <span aria-hidden="true">↗</span></a></div></div>
               </article>
             ))}
           </div>

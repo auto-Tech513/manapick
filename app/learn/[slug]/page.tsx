@@ -204,7 +204,7 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
         </div>
       </section>
 
-      <NetworkContextBand genreKey={intent.filters.genres[0]} />
+      <NetworkContextBand genreKey={intent.filters.genres[0]} pagePath={`/learn/${intent.slug}/`} />
 
       {relatedIntents.length ? (
         <section className="knowledge-section" aria-labelledby="related-intents-title">
