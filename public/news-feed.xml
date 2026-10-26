@@ -5,7 +5,375 @@
     <link>https://manapick.app/news/</link>
     <description>公式発表を、学びと仕事に使える形へ整理します。</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 29 Jul 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>GeminiアプリからGemini Notebookを操作、チャットでノートブック作成や資料追加</title>
+      <link>https://manapick.app/news/2026-10-23-gemini-notebook-connected-app-gemini-app/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-10-23-gemini-notebook-connected-app-gemini-app/</guid>
+      <description>Gemini Notebookが、Geminiアプリの連携アプリとして使えるようになりました。チャットで「@Gemini Notebook」と入力すると、ノートブックの作成、資料の追加、メモの保存、ノートブックの内容を使った質問ができます。</description>
+      <category>生成AI</category>
+      <pubDate>Thu, 22 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Meetの音声翻訳が63言語に、話している言語を自動で判別</title>
+      <link>https://manapick.app/news/2026-10-22-google-meet-speech-translation-63-languages/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-10-22-google-meet-speech-translation-63-languages/</guid>
+      <description>Google MeetのGeminiによる音声翻訳が、ウェブとAndroid・iOSで63言語に対応しました。話している言語を自動で判別し、参加者それぞれが選んだ言語へほぼリアルタイムで翻訳します。翻訳は参加者が自分でオンにします。</description>
+      <category>仕事・整理</category>
+      <pubDate>Wed, 21 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Sheetsで箱ひげ図を標準作成、四分位や外れ値を自動計算</title>
+      <link>https://manapick.app/news/2026-10-22-google-sheets-box-and-whisker-charts/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-10-22-google-sheets-box-and-whisker-charts/</guid>
+      <description>Google Sheetsが箱ひげ図に標準対応しました。数値の範囲を選ぶだけで、最小値・四分位・中央値・最大値・平均・外れ値を自動で計算します。Excelファイルの箱ひげ図も読み込み時に保たれます。</description>
+      <category>Excel・データ</category>
+      <pubDate>Wed, 21 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Gemini Notebookのスライドと動画の概要、構成を確認しながら段階的に作成</title>
+      <link>https://manapick.app/news/2026-10-21-gemini-notebook-slide-deck-video-review/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-10-21-gemini-notebook-slide-deck-video-review/</guid>
+      <description>Gemini Notebookで、スライドと動画の概要を作るときに、いきなり完成品を出すのではなく、段階を追って内容や見た目を指示できるようになりました。完成前に構成案や制作メモを確認してコメントすることもできます。</description>
+      <category>生成AI</category>
+      <pubDate>Tue, 20 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Geminiアプリに「カスタマイズ」画面、スキルと連携アプリを1か所で管理</title>
+      <link>https://manapick.app/news/2026-10-21-gemini-app-customize-hub/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-10-21-gemini-app-customize-hub/</guid>
+      <description>Geminiアプリに、答え方やツールとの連携をまとめて設定できる「カスタマイズ」の画面が加わりました。スキルの設定と、40を超える外部サービスやGoogleのアプリとの連携を1か所で管理できます。</description>
+      <category>生成AI</category>
+      <pubDate>Tue, 20 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>スマホのGoogleドキュメントに「Docs Live」、話すだけで整理された文書の下書きを作成</title>
+      <link>https://manapick.app/news/2026-10-21-google-docs-live-voice-mobile/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-10-21-google-docs-live-voice-mobile/</guid>
+      <description>AndroidとiOSのGoogleドキュメントアプリで「Docs Live」の提供が始まりました。普段の会話のように話すと、Geminiがメールやチャット、ドライブの情報も参照しながら、整理された文書の下書きを作ります。</description>
+      <category>生成AI</category>
+      <pubDate>Tue, 20 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Classroomで先生が配ったGemini Notebookの利用状況を要約、つまずきやすい点を把握</title>
+      <link>https://manapick.app/news/2026-10-19-classroom-gemini-notebook-insight-summaries/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-10-19-classroom-gemini-notebook-insight-summaries/</guid>
+      <description>Google Classroomで先生が課題として配ったGemini Notebookについて、生徒のやり取りをGeminiが要約して先生に示す機能が加わりました。管理者は信頼できるドメインを含めて、ノートブックの外部共有も細かく設定できます。</description>
+      <category>学び方</category>
+      <pubDate>Sun, 18 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Chatに会議のまとめが自動投稿、決定事項と担当者付きのやることを確認</title>
+      <link>https://manapick.app/news/2026-10-19-google-chat-meeting-recaps/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-10-19-google-chat-meeting-recaps/</guid>
+      <description>Google Meetで「Take notes for me」を使った会議が終わると、その会議に関連するGoogle Chatの会話に、要約、決定事項、担当者付きのやること、メモや録画へのリンクをまとめたカードが自動で投稿されるようになりました。</description>
+      <category>仕事・整理</category>
+      <pubDate>Sun, 18 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google SheetsのGeminiでBigQueryのデータを会話で分析、ダッシュボードも作成</title>
+      <link>https://manapick.app/news/2026-10-19-gemini-sheets-bigquery-natural-language/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-10-19-gemini-sheets-bigquery-natural-language/</guid>
+      <description>Google Sheetsで、Connected SheetsでつないだBigQueryのデータを、Geminiに話しかけて分析できるようになりました。質問はBigQueryの全データに対して実行され、集計表やグラフを含むダッシュボードも作れます。</description>
+      <category>生成AI</category>
+      <pubDate>Sun, 18 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>iPhoneのGoogle SheetsでもGeminiが使えるように、外出先で表を分析</title>
+      <link>https://manapick.app/news/2026-10-19-gemini-in-google-sheets-ios/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-10-19-gemini-in-google-sheets-ios/</guid>
+      <description>Google SheetsのGeminiが、iOS端末でも使えるようになりました。Geminiのアイコンを押すと、データについて質問したり、分析の結果を出したり、グラフを作ったりできます。先に提供されたAndroid版に続く対応です。</description>
+      <category>生成AI</category>
+      <pubDate>Sun, 18 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Meetの会議後画面に「次のステップ」、お礼メールの下書きとToDo登録を自動化</title>
+      <link>https://manapick.app/news/2026-10-12-google-meet-post-meeting-next-steps/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-10-12-google-meet-post-meeting-next-steps/</guid>
+      <description>Google Meetの会議後の画面に「次のステップ」が加わりました。GeminiとWorkspace Studioを使い、会議の内容からGmailでのフォローアップメールの下書きや、Google ToDoリストへのやることの登録を自動で行えます。</description>
+      <category>仕事・整理</category>
+      <pubDate>Sun, 11 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>GoogleドキュメントでMarkdownファイルを直接編集、ドライブでは整形して表示</title>
+      <link>https://manapick.app/news/2026-10-05-markdown-files-google-docs-drive/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-10-05-markdown-files-google-docs-drive/</guid>
+      <description>Googleドキュメントで、Markdown（.mdや.markdown）のファイルを変換せずにそのまま表示・編集・共同作業できるようになりました。Googleドライブでも、表やリンクを整形した状態でプレビューできます。</description>
+      <category>仕事・整理</category>
+      <pubDate>Sun, 04 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Sheetsに株価チャート、高値・安値・終値を1つの印で表示</title>
+      <link>https://manapick.app/news/2026-10-05-google-sheets-stock-charts-hlc-ohlc/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-10-05-google-sheets-stock-charts-hlc-ohlc/</guid>
+      <description>Google Sheetsで新しい株価チャートを作れるようになりました。高値・安値・終値を示すHLCと、始値も加えたOHLCの2種類です。Excelとの間でファイルをやり取りしても図が保たれます。</description>
+      <category>Excel・データ</category>
+      <pubDate>Sun, 04 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Geminiの学習ツールをまとめた「学生向けハブ」が教育機関のアカウントでも利用可能に</title>
+      <link>https://manapick.app/news/2026-10-01-gemini-student-hub-workspace-education/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-10-01-gemini-student-hub-workspace-education/</guid>
+      <description>Geminiアプリで学習ツールを1か所にまとめた「学生向けハブ」が、あらゆる年齢のGoogle Workspace for Educationの利用者に提供されました。学習用ノートブック、単語カード、練習テストなどをここから始められます。</description>
+      <category>学び方</category>
+      <pubDate>Wed, 30 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Geminiに再利用できる指示「スキル」、Gemは段階的に終了へ</title>
+      <link>https://manapick.app/news/2026-09-30-gemini-skills-replace-gems/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-09-30-gemini-skills-replace-gems/</guid>
+      <description>Googleは、Geminiに作業の進め方を教える再利用できる指示「スキル」を、GeminiアプリとWorkspaceに広げると発表しました。スキルは今後Gemに代わる仕組みになり、Gemは段階的にサポートが終わります。</description>
+      <category>生成AI</category>
+      <pubDate>Tue, 29 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>ウェブ版Googleカレンダーで最大3つのタイムゾーンを並べて表示</title>
+      <link>https://manapick.app/news/2026-09-25-google-calendar-three-time-zones-web/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-09-25-google-calendar-three-time-zones-web/</guid>
+      <description>ウェブ版のGoogleカレンダーで、最大3つのタイムゾーンを並べて表示できるようになりました。これまでは2つまででした。予定の作成画面でも3つの時刻を確認でき、それぞれに独自のラベルを付けられます。</description>
+      <category>仕事・整理</category>
+      <pubDate>Thu, 24 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>GoogleドキュメントのGeminiがGemini Notebookの資料を参照、出典付きで下書き</title>
+      <link>https://manapick.app/news/2026-09-23-google-docs-gemini-notebook-grounding/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-09-23-google-docs-gemini-notebook-grounding/</guid>
+      <description>Googleドキュメントで、Gemini Notebookを情報源として使えるようになりました。サイドパネルや下部のバーで「@」と入力してノートブックを指定すると、Geminiがその資料に基づいて下書きを作り、本文中に出典を示します。</description>
+      <category>生成AI</category>
+      <pubDate>Tue, 22 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Geminiの学習用ノートブックが学校・職場のアカウントでも利用可能に</title>
+      <link>https://manapick.app/news/2026-09-22-gemini-study-notebooks-workspace-accounts/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-09-22-gemini-study-notebooks-workspace-accounts/</guid>
+      <description>Geminiを対話型の学習の場にする「学習用ノートブック」が、学校や職場から配られたGoogleアカウントでも使えるようになりました。授業の資料をもとに、短いレッスン、確認テスト、進み具合の画面で学べます。</description>
+      <category>学び方</category>
+      <pubDate>Mon, 21 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Meetの自動メモに「Quick notes」、会議の要点を1ページにまとめて最初に表示</title>
+      <link>https://manapick.app/news/2026-09-22-google-meet-quick-notes/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-09-22-google-meet-quick-notes/</guid>
+      <description>Google Meetの「Take notes for me」に、会議の要点を1ページにまとめた「Quick notes」が加わりました。メモの文書とメールで最初に表示され、詳しい内容は「Full notes」のタブで確認できます。</description>
+      <category>仕事・整理</category>
+      <pubDate>Mon, 21 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Sheetsのピボットテーブルで行と列を自由に並べ替え、ドラッグで順番を指定</title>
+      <link>https://manapick.app/news/2026-09-22-google-sheets-pivot-manual-reorder-custom-sort/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-09-22-google-sheets-pivot-manual-reorder-custom-sort/</guid>
+      <description>Google Sheetsのピボットテーブルで、行や列をドラッグして好きな順番に並べ替えられるようになりました。昇順・降順に限られず、複数の項目をまとめて動かせます。Excelの独自の並び順も読み込み時に保たれます。</description>
+      <category>Excel・データ</category>
+      <pubDate>Mon, 21 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Sheetsに手動計算の設定、再計算を止めてまとめて更新</title>
+      <link>https://manapick.app/news/2026-09-21-google-sheets-manual-calculation-setting/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-09-21-google-sheets-manual-calculation-setting/</guid>
+      <description>Google Sheetsに手動計算の設定が加わりました。数式の自動再計算を一時的に止め、編集をまとめてから好きなときにシート全体を更新できます。初期設定はオフで、利用者が自分で有効にします。</description>
+      <category>Excel・データ</category>
+      <pubDate>Sun, 20 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Gemini Notebookに録音機能や音声での対話、約60秒の学習用ショート動画を追加</title>
+      <link>https://manapick.app/news/2026-09-18-gemini-notebook-back-to-school-learning-tools/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-09-18-gemini-notebook-back-to-school-learning-tools/</guid>
+      <description>Gemini Notebookに、学習向けの新機能がまとめて加わりました。モバイルアプリの録音機能、ノートブックとの音声での対話、対話型の学習まとめ、クイズの新形式、約60秒の学習用ショート動画などです。</description>
+      <category>学び方</category>
+      <pubDate>Thu, 17 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Gemini Notebookに購入した電子書籍を追加、本の内容に基づいて質問やクイズ作成</title>
+      <link>https://manapick.app/news/2026-09-17-gemini-notebook-expert-intelligence-play-books/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-09-17-gemini-notebook-expert-intelligence-play-books/</guid>
+      <description>Googleは、信頼できる情報源をAIで活用する取り組み「Expert Intelligence」をGemini Notebookから始めました。Google Play ブックスで購入した対応の電子書籍をノートブックに追加し、本文に基づく質問やクイズ作成ができます。</description>
+      <category>学び方</category>
+      <pubDate>Wed, 16 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Geminiの「ノートブック」が学校と組織のアカウントにも、テーマごとに資料と会話を整理</title>
+      <link>https://manapick.app/news/2026-09-17-notebooks-in-gemini-schools-organizations/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-09-17-notebooks-in-gemini-schools-organizations/</guid>
+      <description>Geminiで、テーマごとに会話や資料をまとめる「ノートブック」が、学生、教員、仕事で使う人にも提供されました。資料を最大10件登録して、その内容に合わせた答えや資料作りに使えます。</description>
+      <category>生成AI</category>
+      <pubDate>Wed, 16 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Gmail検索のAIによる概要が世界に拡大、英語設定の有料プランが対象</title>
+      <link>https://manapick.app/news/2026-09-15-gmail-search-ai-overviews-global-english/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-09-15-gmail-search-ai-overviews-global-english/</guid>
+      <description>Gmailの検索欄に普通の言葉で質問すると、メールを探さなくても要点と答えを示す「AIによる概要」が、英語設定の有料プラン利用者へ世界的に広がりました。日本の個人アカウントは対象外です。</description>
+      <category>生成AI</category>
+      <pubDate>Mon, 14 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>AndroidのGoogle SheetsでGeminiが利用可能に、分析と要約に対応</title>
+      <link>https://manapick.app/news/2026-09-10-gemini-in-google-sheets-android/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-09-10-gemini-in-google-sheets-android/</guid>
+      <description>Google SheetsのGeminiが、Android端末でも使えるようになりました。データへの質問、分析結果の作成、グラフの作成ができます。モバイル版は分析と要約が中心で、複雑な編集や数式の作成はウェブ版を使います。</description>
+      <category>生成AI</category>
+      <pubDate>Wed, 09 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Sheetsのセル上限が2倍に、1ファイル最大2,000万セルへ</title>
+      <link>https://manapick.app/news/2026-09-10-google-sheets-20-million-cells/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-09-10-google-sheets-20-million-cells/</guid>
+      <description>Google Sheetsのセル数の上限が、これまでの最大1,000万セルから最大2,000万セルに増えました。新しいファイル、既存のファイル、ExcelやCSVから読み込むファイルのすべてに自動で適用されます。</description>
+      <category>Excel・データ</category>
+      <pubDate>Wed, 09 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Sheetsのピボットテーブルに計算フィールド専用の数式エディタ、入力中に誤りを確認</title>
+      <link>https://manapick.app/news/2026-09-09-google-sheets-pivot-calculated-field-editor/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-09-09-google-sheets-pivot-calculated-field-editor/</guid>
+      <description>Google Sheetsのピボットテーブルで、計算フィールドを作るための専用の数式エディタが加わりました。項目名をメニューから挿入でき、数式の誤りをその場で確かめてから反映できます。</description>
+      <category>Excel・データ</category>
+      <pubDate>Tue, 08 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Chatで送信前の下書きを自動保存、別の端末で続きを書いて送信</title>
+      <link>https://manapick.app/news/2026-09-08-google-chat-persistent-drafts/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-09-08-google-chat-persistent-drafts/</guid>
+      <description>Google Chatで、送っていないメッセージが自動で下書きとして保存されるようになりました。端末の間で同期されるため、パソコンで書き始めてスマホで仕上げて送ることもできます。下書きは最長30日間保存されます。</description>
+      <category>仕事・整理</category>
+      <pubDate>Mon, 07 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google SheetsのグラフでGoogle Fontsのフォントを自由に使用、Excelとのやり取りでも保持</title>
+      <link>https://manapick.app/news/2026-09-08-google-sheets-chart-custom-web-fonts/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-09-08-google-sheets-chart-custom-web-fonts/</guid>
+      <description>Google Sheetsのグラフで、Google Fontsのウェブフォントをすべて使えるようになりました。グラフのタイトル、軸、データラベル、凡例の文字に好きなフォントを設定できます。Excelとの読み書きでもフォントが保たれやすくなります。</description>
+      <category>Excel・データ</category>
+      <pubDate>Mon, 07 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google VidsでドキュメントやPDF、Wordを要約動画に変換</title>
+      <link>https://manapick.app/news/2026-09-02-google-vids-document-video-summaries/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-09-02-google-vids-document-video-summaries/</guid>
+      <description>Google Vidsで、Googleドキュメント、PDF、Wordのファイルから要約動画を作れるようになりました。AIが台本とナレーションを作り、内容に合った映像を付けます。研修資料や長い報告書の要点をつかむ用途を想定しています。</description>
+      <category>生成AI</category>
+      <pubDate>Tue, 01 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>WorkspaceのGemini、カスタム指示がドライブ・Chat・Gmail・スプレッドシート・スライドにも拡大</title>
+      <link>https://manapick.app/news/2026-09-02-gemini-workspace-custom-instructions-more-apps/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-09-02-gemini-workspace-custom-instructions-more-apps/</guid>
+      <description>Googleドキュメントで使えていたGeminiのカスタム指示が、ドライブとChatの「Ask Gemini」、Gmail・スプレッドシート・スライドのGeminiサイドパネルでも使えるようになりました。文体や形式の好みを毎回伝える必要がなくなります。</description>
+      <category>生成AI</category>
+      <pubDate>Tue, 01 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Workspaceに画像生成・編集の「Google Pics」、ドキュメントやスライドの画像も直接編集</title>
+      <link>https://manapick.app/news/2026-09-01-google-pics-ai-image-workspace-ga/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-09-01-google-pics-ai-image-workspace-ga/</guid>
+      <description>Googleは、AIで画像を作ったり、写っている物ごとに細かく編集したりできる「Google Pics」を正式に提供しました。ドキュメントやスライドの画像を選んで、そのままPicsで編集できます。</description>
+      <category>生成AI</category>
+      <pubDate>Mon, 31 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Sheetsのピボットテーブル、グループ化した項目を保存して再利用</title>
+      <link>https://manapick.app/news/2026-08-25-google-sheets-pivot-grouped-fields-persist/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-08-25-google-sheets-pivot-grouped-fields-persist/</guid>
+      <description>Google Sheetsのピボットテーブルで、日付や数値をグループ化した項目が編集パネルに残るようになりました。表から外しても設定が消えず、後から再び追加できます。Excelとの読み書きでも保たれます。</description>
+      <category>Excel・データ</category>
+      <pubDate>Mon, 24 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Geminiアプリが質問に合わせて動かせるシミュレーションや3Dモデルを作成</title>
+      <link>https://manapick.app/news/2026-08-24-gemini-app-interactive-simulations/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-08-24-gemini-app-interactive-simulations/</guid>
+      <description>Geminiアプリが、質問や難しいテーマを、会話の中で操作できる図やシミュレーションに変えられるようになりました。DNAの3D構造を回したり拡大したり、振り子のエネルギーの移り変わりを見たりできます。</description>
+      <category>生成AI</category>
+      <pubDate>Sun, 23 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>GoogleスライドからGoogle Vidsでプレゼンを録画、文字起こしで編集してすぐ共有</title>
+      <link>https://manapick.app/news/2026-08-20-google-slides-record-with-google-vids/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-08-20-google-slides-record-with-google-vids/</guid>
+      <description>Googleスライドの右側のメニューに「Record」（録画）が加わり、Google Vidsを使ってプレゼンを録画できるようになりました。文字起こしを使った編集やナレーションの生成に対応し、録画後すぐに共有できるリンクが作られます。</description>
+      <category>仕事・整理</category>
+      <pubDate>Wed, 19 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Chatに「Ask Gemini」、メールやドライブを横断して検索し予定やタスクも管理</title>
+      <link>https://manapick.app/news/2026-08-19-ask-gemini-in-google-chat/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-08-19-ask-gemini-in-google-chat/</guid>
+      <description>Google Chatに、Workspace全体のデータを使える「Ask Gemini」が8月26日から加わります。Gmailやドライブ、カレンダーを横断した検索、文章や画像の作成、会話の要約、予定やタスクの管理を1か所で行えます。</description>
+      <category>仕事・整理</category>
+      <pubDate>Tue, 18 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Gemini Notebookでノートブック全体をコピー、先生や同僚の資料をもとに自分用に</title>
+      <link>https://manapick.app/news/2026-08-17-gemini-notebook-make-a-copy/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-08-17-gemini-notebook-make-a-copy/</guid>
+      <description>Gemini Notebookで、コピーの権限があるノートブックを、資料やStudioで作った成果物ごと丸ごとコピーできるようになりました。先生が共有したノートブックをコピーして、自分の学習用に育てる使い方ができます。</description>
+      <category>学び方</category>
+      <pubDate>Sun, 16 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Meetの「自動メモ」が対面の会議にも対応、要約とやることを文書に保存</title>
+      <link>https://manapick.app/news/2026-08-13-google-meet-take-notes-in-person-meetings/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-08-13-google-meet-take-notes-in-person-meetings/</guid>
+      <description>Google Meetの「Take notes for me」が、ビデオ会議だけでなく対面の会議にも使えるようになりました。Meetのホーム画面から始めると、Geminiが要約、やること、文字起こしをGoogleドキュメントにまとめます。</description>
+      <category>仕事・整理</category>
+      <pubDate>Wed, 12 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Sheetsに「Sheets canvas」、指示文だけで表を操作できるミニアプリに</title>
+      <link>https://manapick.app/news/2026-08-13-google-sheets-canvas-interactive-mini-apps/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-08-13-google-sheets-canvas-interactive-mini-apps/</guid>
+      <description>Google Sheetsに、Geminiを使った新機能「Sheets canvas」が登場しました。普通の言葉で頼むだけで、表のデータからかんばんボードやダッシュボードなどの操作できるミニアプリを作れます。開始時点は英語設定のウェブ版のみです。</description>
+      <category>生成AI</category>
+      <pubDate>Wed, 12 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>ExcelのテーブルがGoogle Sheetsのテーブルとして読み込まれるように、連動するピボットも保持</title>
+      <link>https://manapick.app/news/2026-08-11-google-sheets-excel-table-pivot-import/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-08-11-google-sheets-excel-table-pivot-import/</guid>
+      <description>Google SheetsでExcelファイルを読み込むとき、ExcelのテーブルがSheetsのテーブルとしてそのまま変換されるようになりました。テーブル範囲を元にしたピボットテーブルも、固定の表にならずに読み込めます。</description>
+      <category>Excel・データ</category>
+      <pubDate>Mon, 10 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Workspace StudioでGemini Notebookへの資料追加を自動化、ノートブックを常に最新に</title>
+      <link>https://manapick.app/news/2026-08-07-workspace-studio-add-source-gemini-notebook/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-08-07-workspace-studio-add-source-gemini-notebook/</guid>
+      <description>Google Workspace Studioに、Gemini Notebookへ資料を追加する新しい手順が加わりました。文章、ドライブのファイルのリンク、YouTubeやウェブのURLを、繰り返し実行する作業の流れの中で自動で追加できます。</description>
+      <category>仕事・整理</category>
+      <pubDate>Thu, 06 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Classroomで課題の作成画面からGeminiが評価基準（ルーブリック）を作成</title>
+      <link>https://manapick.app/news/2026-08-05-google-classroom-gemini-rubric-generation/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-08-05-google-classroom-gemini-rubric-generation/</guid>
+      <description>Google Classroomで、課題を作る画面からGeminiに評価基準（ルーブリック）の案を作らせられるようになりました。課題の内容をもとに案が作られ、先生が確認・編集してから課題に追加します。</description>
+      <category>学び方</category>
+      <pubDate>Tue, 04 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google ClassroomのGeminiがあらゆる年齢の生徒に拡大、授業の内容に合わせた質問の入口</title>
+      <link>https://manapick.app/news/2026-08-04-google-classroom-gemini-all-ages-starter-prompts/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-08-04-google-classroom-gemini-all-ages-starter-prompts/</guid>
+      <description>Google ClassroomのGeminiが、8月10日から、管理者が利用を許可しているあらゆる年齢の小中高生と大学生に広がります。生徒向けの質問の例は、クラスと課題を選ぶと、その内容を踏まえたものになります。</description>
+      <category>学び方</category>
+      <pubDate>Mon, 03 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Meetの自動メモに発表画面のスクリーンショットを追加</title>
+      <link>https://manapick.app/news/2026-08-03-google-meet-notes-presentation-screenshots/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-08-03-google-meet-notes-presentation-screenshots/</guid>
+      <description>Google Meetの「Take notes for me」で、発表された画面のスクリーンショットが会議メモの文書に自動で入るようになりました。話した内容だけでは伝わらない図やグラフも、メモで確かめられます。</description>
+      <category>仕事・整理</category>
+      <pubDate>Sun, 02 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Googleドライブの動画に時間指定のコメント、該当場面へすぐ移動</title>
+      <link>https://manapick.app/news/2026-08-03-google-drive-video-timestamped-comments/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-08-03-google-drive-video-timestamped-comments/</guid>
+      <description>ウェブ版のGoogleドライブで、動画の特定の時間にコメントを付けられるようになりました。再生バーに印が表示され、押すとその場面へ移動してコメントが強調されます。動画の確認作業を文書やメールに分けずに進められます。</description>
+      <category>仕事・整理</category>
+      <pubDate>Sun, 02 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>Gmail、BCCで受信したスレッドへの「全員に返信」前に警告を表示</title>
       <link>https://manapick.app/news/2026-07-30-gmail-reply-all-bcc-warning/</link>

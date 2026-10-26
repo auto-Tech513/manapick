@@ -1,5 +1,2995 @@
 [
   {
+    "id": "2026-10-23-gemini-notebook-connected-app-gemini-app",
+    "headline": "GeminiアプリからGemini Notebookを操作、チャットでノートブック作成や資料追加",
+    "description": "Gemini Notebookが、Geminiアプリの連携アプリとして使えるようになりました。チャットで「@Gemini Notebook」と入力すると、ノートブックの作成、資料の追加、メモの保存、ノートブックの内容を使った質問ができます。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "whyCare": "調べものや学習で作ったノートブックを、普段のチャットから直接育てられるようになります。会話の内容をそのまま資料として残せるため、学んだことを1か所に集めて見返す習慣を作りやすくなります。",
+    "facts": [
+      "Gemini Notebookが、Geminiアプリの連携アプリとして使えるようになった。",
+      "チャットで「@Gemini Notebook」と入力して、ノートブックの作成、資料の追加、メモの保存、情報の取り出しができる。",
+      "Geminiが、関連する頼みごとに連携アプリを使うべき場面を自動で判断することもある。",
+      "初期設定で世界的にオンだが、欧州経済領域ではオフで、Geminiアプリの「設定」→「連携アプリ」で切り替えられる。"
+    ],
+    "sections": [
+      {
+        "heading": "チャットからノートブックを管理",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Gemini Notebookが、Geminiアプリの連携アプリとしても使えるようになりました。チャットの中で、普段の言葉を使ってノートブックを管理したり、内容について質問したりできます。",
+          "Geminiのチャットで「@Gemini Notebook」と入力すると、新しいノートブックを作る、ノートブックに資料を足す、大事なメモを保存する、既存のノートブックから情報を取り出すといった操作が素早くできます。関連する頼みごとでは、Geminiが連携アプリを使うべき場面を自動で判断することもあります。"
+        ]
+      },
+      {
+        "heading": "公式が示す頼み方の例",
+        "paragraphs": [
+          "ノートブックの作成・編集・削除では、「太陽光発電所の市場動向についてGemini Notebookを作って」のように頼めます。資料の追加・更新・削除では、「このチャットのコピーを生物学の授業のノートブックに追加して」のように頼めます。",
+          "ノートブックとその資料の一覧を出したり、「蝶の渡りについて、私のノートブックには何と書いてある？」のように、ノートブックの内容をもとに質問に答えさせたりもできます。"
+        ]
+      },
+      {
+        "heading": "設定と提供範囲",
+        "paragraphs": [
+          "管理者側では初期設定でオンになっており、GeminiとGemini Notebookのアクセス設定で管理します。両方がオンのグループや組織部門の利用者が使えます。",
+          "利用者側では世界的に初期設定でオンですが、欧州経済領域ではオフになっています。Geminiアプリの「設定」の「連携アプリ」で切り替えられます。対象は、すべてのGoogle Workspace利用者、Workspace Individualの契約者、個人のGoogleアカウントの利用者で、すでに使えます。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "学習中に役立った会話は、その場でノートブックに追加しておくと、後から復習するときの材料になります。テーマごとにノートブックを分け、追加するときにどのノートブックに入れるかをはっきり指定すると、資料が混ざりにくくなります。",
+          "ノートブックの内容をもとにした答えでも、元の資料が古かったり間違っていたりすれば答えも不正確になります。定期的に一覧を出して資料を見直し、不要なものを削除しておくと、AIの答えの質を保ちやすくなります。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AIロードマップ",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを比較する",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-10-23",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/10/take-actions-on-your-notebooks-from-Gemini-Notebook-directly-in-the-Gemini-app.html"
+  },
+  {
+    "id": "2026-10-22-google-meet-speech-translation-63-languages",
+    "headline": "Google Meetの音声翻訳が63言語に、話している言語を自動で判別",
+    "description": "Google MeetのGeminiによる音声翻訳が、ウェブとAndroid・iOSで63言語に対応しました。話している言語を自動で判別し、参加者それぞれが選んだ言語へほぼリアルタイムで翻訳します。翻訳は参加者が自分でオンにします。",
+    "category": "work",
+    "categoryLabel": "仕事・整理",
+    "whyCare": "言語の違う相手との会議で、通訳を手配しなくても話し合いを進めやすくなります。一方で、時間の上限や使えない場面もあるため、仕組みを知ったうえで使い分けることが大切です。",
+    "facts": [
+      "Gemini 3.5 Live Translateにより、同じ会議の中で63言語のどの組み合わせでも音声を翻訳できる。",
+      "話している言語を自動で判別し、聞く人が選んだ言語へほぼリアルタイムで翻訳する。",
+      "会議全体の設定ではなく、参加者が自分でツールバーから翻訳をオンにし、理解できる言語は翻訳しない設定もできる。",
+      "1回の会議で使える時間は、基本のWorkspaceとGoogle AI Proで最大90分、AI Expanded Access、AI Ultra Access、Google AI Ultraで最大8時間。"
+    ],
+    "sections": [
+      {
+        "heading": "63言語を自動で判別して翻訳",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google MeetのGeminiによる音声翻訳が、ウェブとAndroid・iOSで63言語に対応しました。Google Meetの会議室用ハードウェアでは、翻訳された音声を聞くことができます。",
+          "これまでは対応する言語の組み合わせが限られ、会議全体で1つの言語の組み合わせを設定する必要がありました。今回はGemini 3.5 Live Translateにより、同じ会議の中で63言語のどの組み合わせでも、少ない設定で翻訳できます。話している言語を自動で判別し、同じ会議で複数の言語が話されたり、話し手が言語を切り替えたりしても、聞く人それぞれが選んだ言語にほぼリアルタイムで翻訳します。"
+        ]
+      },
+      {
+        "heading": "参加者ごとの操作と字幕",
+        "paragraphs": [
+          "会議全体の設定ではなく、参加者が会議のツールバーにある翻訳の操作から、自分の分だけ翻訳をオンにできます。すでに理解できる言語を追加で設定し、その言語は翻訳しないようにすることもできます。",
+          "音声翻訳を使っているときは、翻訳された音声に合わせた字幕も表示され、読むことと聞くことの両方で内容を追えます。自分の声を他の人のために翻訳するかどうかは利用者が選べ、Meetの設定でいつでも変えられます。Googleは、声のデータを保存したり、声を使ってモデルを学習させたりしないとしています。"
+        ]
+      },
+      {
+        "heading": "使える条件と使えない場面",
+        "paragraphs": [
+          "対象のプランの人が主催した会議では、ほかのドメインのゲストを含むすべての参加者が翻訳を使えます。1対1の通話では、どちらか一方が対象のプランであれば両方が使えます。1回の会議で使える時間は、基本のWorkspaceのプランとGoogle AI Proで最大90分、AI Expanded Access、AI Ultra Access、Google AI Ultraで最大8時間です。",
+          "ライブ配信、会議の録画、クライアントサイド暗号化の会議、電話での参加やほかの会議システムとの相互接続、適応型の音声を使っている場合は利用できません。地域と年齢の制限もあります。展開は即時リリースのドメインで2026年10月22日から、計画的リリースのドメインで11月2日から始まり、モバイルではアプリの更新が必要です。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "機械翻訳を使う会議では、短い文で区切って話し、数字や固有名詞はチャットにも書いておくと、聞き違いを減らせます。大事な合意は、会議の後に文章で確認し合うようにしてください。",
+          "語学を学んでいる人は、自分の理解できる言語を設定して翻訳を必要な部分だけに絞ると、聞き取りの練習を続けながら会議にも参加できます。翻訳に頼る範囲と自分で理解する範囲を意識して分けることが、語学と仕事の両方の力を伸ばすことにつながります。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      },
+      {
+        "label": "仕事から必要な学びを探す",
+        "href": "https://career.manapick.app/",
+        "kind": "career"
+      }
+    ],
+    "publishedAt": "2026-10-22",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/10/real-time-speech-translation-in-google-Meet-expands-to-63-languages-with-automatic-language-detection.html"
+  },
+  {
+    "id": "2026-10-22-google-sheets-box-and-whisker-charts",
+    "headline": "Google Sheetsで箱ひげ図を標準作成、四分位や外れ値を自動計算",
+    "description": "Google Sheetsが箱ひげ図に標準対応しました。数値の範囲を選ぶだけで、最小値・四分位・中央値・最大値・平均・外れ値を自動で計算します。Excelファイルの箱ひげ図も読み込み時に保たれます。",
+    "category": "data",
+    "categoryLabel": "Excel・データ",
+    "whyCare": "データのばらつきを読む力は、統計やデータ分析の基礎です。補助の数式を組まずに箱ひげ図を作れるため、学び始めの人でも中央値や外れ値を目で確かめながら、分布の見方を練習しやすくなります。",
+    "facts": [
+      "数値の範囲を選ぶと、最小値・第1四分位・中央値・第3四分位・最大値・平均・外れ値をSheetsが計算する。",
+      "四分位の計算方法は、含む方式と含まない方式から選べる。",
+      "Excelから読み込んだ箱ひげ図は、データ参照・計算・書式を保ったまま残り、Sheetsで作った図はExcelへ編集可能な形で書き出せる。",
+      "すべてのGoogle Workspace利用者と個人のGoogleアカウントで使え、管理者設定はない。"
+    ],
+    "sections": [
+      {
+        "heading": "補助の数式なしで分布を図にする",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Sheetsは箱ひげ図を標準のグラフとして作れるようになりました。箱ひげ図は、データがどのように散らばっているかを1つの図で示す統計向けのグラフです。",
+          "使い方は、元になる数値の範囲を選ぶだけです。Sheetsが最小値、第1四分位、中央値、第3四分位、最大値、平均、外れ値を自動で計算するため、これまでのように四分位を求める補助の数式を用意する必要がありません。"
+        ]
+      },
+      {
+        "heading": "表示の調整とExcelとの互換性",
+        "paragraphs": [
+          "四分位の計算は、データの端を含む方式と含まない方式から選べます。図の中には、内側の点、外れ値、平均の印、平均の線を表示するか隠すかも設定できます。",
+          "Excelとの互換性も改善されました。これまでは箱ひげ図を含むExcelファイルを読み込むと図が消えていましたが、今後はデータ参照、計算、書式を保ったまま残ります。Sheetsで作った箱ひげ図も、Excelで編集できる形で書き出せます。"
+        ]
+      },
+      {
+        "heading": "提供範囲と展開時期",
+        "paragraphs": [
+          "この機能に管理者向けの設定はありません。すべてのGoogle Workspace利用者と、個人のGoogleアカウントの利用者が対象です。作り方はGoogleドキュメント エディタのヘルプにある、グラフの追加と編集のページで案内されています。",
+          "展開は、即時リリースのドメインで2026年10月22日から、計画的リリースのドメインで11月6日から始まり、それぞれ最大15日ほどかけて表示されます。自分の画面にまだ出ていない場合は、時間をおいて確かめてください。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "箱ひげ図は、平均だけでは見えない偏りや外れ値に気づくために役立ちます。まず、テストの点数や売上のように身近な数値を使い、中央値と平均がずれる例を自分で作ってみると、図の読み方が身につきやすくなります。",
+          "Excelでデータ分析を学んでいる人は、同じデータでExcelとSheetsの両方に箱ひげ図を作り、四分位の計算方式を切り替えて結果を見比べるのがおすすめです。計算方式の違いを理解しておくと、報告資料で数字を説明するときに迷いにくくなります。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Excelデータ分析ロードマップ",
+        "href": "/guide/excel-data/",
+        "kind": "guide"
+      },
+      {
+        "label": "Excel統計の学び方",
+        "href": "/learn/excel-statistics/",
+        "kind": "intent"
+      },
+      {
+        "label": "AIでデータ作業を効率化",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-10-22",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/10/create-box-and-whisker-charts-in-google-sheets.html"
+  },
+  {
+    "id": "2026-10-21-gemini-notebook-slide-deck-video-review",
+    "headline": "Gemini Notebookのスライドと動画の概要、構成を確認しながら段階的に作成",
+    "description": "Gemini Notebookで、スライドと動画の概要を作るときに、いきなり完成品を出すのではなく、段階を追って内容や見た目を指示できるようになりました。完成前に構成案や制作メモを確認してコメントすることもできます。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "whyCare": "AIに資料を作らせるとき、構成の段階で方向を直せると、作り直しの手間が減ります。何を伝えたいかを先に決めて指示する流れは、プレゼン資料作りの基本の考え方とも重なります。",
+    "facts": [
+      "チャットで頼むか、Studioパネルの「Slide Deck」「Video」を押すと、段階的な作成の流れが始まる。",
+      "資料に合わせて、重点テーマ、形式、見た目のスタイルの候補が示され、指示文で伝えた内容は選択済みになる。",
+      "「Review」をオンにすると、完成前にスライドの構成案や動画の制作メモを確認して文章で意見を伝えられる。",
+      "すぐに作りたい場合は、確認の手順を省いて作ることもできる。"
+    ],
+    "sections": [
+      {
+        "heading": "完成前に方向を決められる",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Gemini Notebookで、スライドと動画の概要の作り方をより細かく指示できるようになりました。いきなり完成品を作るのではなく、段階を追って作る流れが用意され、内容の方向や見た目のスタイル、形式を自分で導けます。",
+          "始めるには、チャットでプレゼンや動画を頼むか、Studioパネルの「Slide Deck」や「Video」を押します。"
+        ]
+      },
+      {
+        "heading": "3つの作り方",
+        "paragraphs": [
+          "1つ目は、案内に沿った調整です。チャットの中で、Gemini Notebookが資料に合わせて重点を置くテーマ、形式、見た目のスタイルを提案します。すでに決まっている場合は、指示文で伝えると、同じことを聞き直さずに選択済みの状態にしてくれます。",
+          "2つ目は、構成案と制作メモの確認です。「Review」の切り替えをオンにすると、Studioパネルでスライドの構成案や動画の制作メモを先に見て、完成品を作る前に文章で意見を伝えられます。3つ目は、手早く作る方法で、確認の手順を省いてすぐにスライドや動画の概要を作ることもできます。"
+        ]
+      },
+      {
+        "heading": "設定と提供範囲",
+        "paragraphs": [
+          "管理者向けの設定はありません。利用者は、「Review outline」や「Review producer notes」をオンにしてこの機能を使います。",
+          "対象は、すべてのGoogle Workspace利用者、Workspace Individualの契約者、個人のGoogleアカウントの利用者です。2026年10月16日から最大15日ほどかけて展開されています。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "スライドを作らせるときは、まず構成案の確認をオンにして、聞き手、目的、伝えたい結論が反映されているかを見るのがおすすめです。構成の段階で直す方が、完成したスライドを1枚ずつ直すより早く済みます。",
+          "プレゼンの作り方を学んでいる人は、AIが出した構成案と、自分で考えた構成を比べてみてください。どちらが聞き手にとって分かりやすい順番かを考えることが、資料作りの力を伸ばす練習になります。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AIロードマップ",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを比較する",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-10-21",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/10/gain-more-creative-control-over-slide-Decks-and-Video-Overviews-in-Gemini-Notebook.html"
+  },
+  {
+    "id": "2026-10-21-gemini-app-customize-hub",
+    "headline": "Geminiアプリに「カスタマイズ」画面、スキルと連携アプリを1か所で管理",
+    "description": "Geminiアプリに、答え方やツールとの連携をまとめて設定できる「カスタマイズ」の画面が加わりました。スキルの設定と、40を超える外部サービスやGoogleのアプリとの連携を1か所で管理できます。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "whyCare": "AIに自分の書き方や形式の好みを覚えさせ、使うアプリをつなぐ設定が1つの画面にまとまります。どのアプリにどんな権限を渡しているかを確かめやすくなるため、AIを安全に使う習慣づくりにも役立ちます。",
+    "facts": [
+      "Geminiアプリに、答え方とツールとの連携をまとめて設定する「カスタマイズ」の画面が加わった。",
+      "スキルでは、繰り返しの作業、文体の維持、答えの形の指定などのための独自のスキルと好みを設定できる。",
+      "連携アプリでは、40を超える外部サービスとGoogleのアプリを追加でき、権限はいつでも確認・解除できる。",
+      "ウェブ、モバイル、WindowsとmacOSのデスクトップアプリで、すべての利用者区分に世界的に展開される。"
+    ],
+    "sections": [
+      {
+        "heading": "カスタマイズを1つの画面に",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Geminiアプリに、Geminiの答え方とツールとのつながり方を1か所で調整できる「カスタマイズ」の画面が加わりました。アプリを探したり、スキルを追加したりして、自分の書き方に合わせる、決まった書式を守らせるといった繰り返しの作業を自動化できます。",
+          "独自のスキルと連携アプリを1つの場所にまとめることで、Geminiをどのように自分向けにしているかを見つけやすく、管理しやすくする狙いです。"
+        ]
+      },
+      {
+        "heading": "スキルと連携アプリ",
+        "paragraphs": [
+          "スキルでは、繰り返しの作業に取り組む、口調や文体を保つ、答えの構成を決めるといった目的で、独自のスキルや指示の好みを設定できます。",
+          "連携アプリでは、40を超える外部サービスとGoogleのアプリを追加できます。どのアプリをつなぐかは利用者が選び、権限はいつでも確認したり、接続を解除したりできます。管理者は、管理コンソールでGeminiの連携アプリと外部ツールとの統合を確認・管理できます。"
+        ]
+      },
+      {
+        "heading": "提供範囲と地域の制限",
+        "paragraphs": [
+          "「カスタマイズ」のメニューは、ウェブ、モバイル、WindowsとmacOSのGeminiデスクトップアプリで、すべての利用者区分に世界的に展開されます。使うには、Geminiの左側のメニューを開いて「カスタマイズ」を選びます。",
+          "ただし、ほとんどの連携アプリは今のところ米国の英語環境で使え、一部のアプリがほかの英語圏の地域、ブラジル、インドでも使えるとされています。対象は、すべてのGoogle Workspace利用者、Workspace Individualの契約者、個人のGoogleアカウントの利用者で、2026年10月13日から最大15日ほどかけて展開されています。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "連携アプリをつなぐ前に、そのアプリでGeminiに何をさせたいかを決めておくと、必要以上の権限を渡さずに済みます。使わなくなった連携は、カスタマイズの画面から定期的に見直して解除する習慣をつけましょう。",
+          "連携アプリの多くは米国の英語環境向けで、日本は対象の地域として挙げられていないため、まずはスキルの設定から試すのがおすすめです。自分がよく使う文章の形式をスキルにしておくと、毎回の指示が短くなり、AIの答えの質もそろいやすくなります。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AIロードマップ",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを比較する",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-10-21",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/10/an-easier-way-to-customize-how-gemini-works-for-you.html"
+  },
+  {
+    "id": "2026-10-21-google-docs-live-voice-mobile",
+    "headline": "スマホのGoogleドキュメントに「Docs Live」、話すだけで整理された文書の下書きを作成",
+    "description": "AndroidとiOSのGoogleドキュメントアプリで「Docs Live」の提供が始まりました。普段の会話のように話すと、Geminiがメールやチャット、ドライブの情報も参照しながら、整理された文書の下書きを作ります。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "whyCare": "会議の直後や移動中など、思いついたことをすぐ形にしたい場面で、声だけで文書の下書きを作れます。目的をはっきり伝えるほど結果が良くなるため、AIへの頼み方を実践的に身につける機会にもなります。",
+    "facts": [
+      "Docs Liveは、AndroidとiOSのGoogleドキュメントアプリで、対象のWorkspace利用者に提供が始まった。",
+      "話した内容から、Geminiがメール、チャット、ドライブのファイル、ウェブの情報も参照して、整理された文書の下書きを作る。",
+      "公式の例は、プロジェクトの進捗報告、機能の提案書、顧客への提案、イベントの計画、プレゼンの話す内容など。",
+      "Gemini in Docsが有効な利用者には初期設定でオンで、Business Standard・Plus、Enterprise Standard・Plus、Google AI Pro・Ultraなどが対象。"
+    ],
+    "sections": [
+      {
+        "heading": "声で文書を書き始める",
+        "paragraphs": [
+          "Google Workspace Updatesによると、AndroidとiOSのGoogleドキュメントアプリで、対象のWorkspace利用者に「Docs Live」の提供が始まりました。手を使わずに一緒に考えて書いてくれる相手として、普段の会話から整理された文書を作る機能です。",
+          "スマホで一から文書を書き始めるのは難しいものの、会議の直後や通勤中など、アイデアが新しいうちに書きたい場面はよくあります。考えがまとまっていなくても、Docs Liveはメール、チャット、ドライブのファイルの情報を参照しながら、文書の下書きを手伝います。"
+        ]
+      },
+      {
+        "heading": "作れる文書と上手な使い方",
+        "paragraphs": [
+          "公式の例として、プロジェクトの進捗報告、機能の提案書、顧客への提案、イベントの計画、プレゼンで話す内容などが挙げられています。",
+          "使い方のコツとして、必要なことを自然に話すこと、目的をはっきり伝えることが紹介されています。会議の要約を作りたいのか、最近の通話のメモから提案書を作りたいのかを具体的に伝えると、Geminiが合った成果物を作りやすくなります。Geminiは、Gmail、ドライブ、Chat、ウェブの関連する内容を自動で安全に参照します。"
+        ]
+      },
+      {
+        "heading": "対象プランと設定",
+        "paragraphs": [
+          "管理者側では、Gemini in Docsが有効な利用者に初期設定でオンになります。即時リリースと計画的リリースのドメインで、すでに使えます。",
+          "対象は、Business StandardとPlus、Enterprise StandardとPlus、個人向けのGoogle AI ProとUltra、Google AI Pro for Education、AI Expanded Accessです。使い方はGoogleヘルプの、音声で文書を作るページで案内されています。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "声で頼むときは、「誰に向けた」「何のための」文書かを最初に言うと、下書きの方向が定まりやすくなります。例えば「上司向けに、今日の会議で決まったことを3点にまとめた報告を作って」のように、相手、目的、形を入れてみてください。",
+          "AIが参照したメールやファイルの内容が正しく反映されているかは、必ず自分で確かめましょう。話して作った下書きを、後でパソコンで読み直して手を入れる流れにすると、スピードと正確さの両方を保ちやすくなります。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AIロードマップ",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを比較する",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-10-21",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/10/create-structured-documents-using-just-your-voice-with-Docs-Live-in-Google-Docs-on-mobile.html"
+  },
+  {
+    "id": "2026-10-19-classroom-gemini-notebook-insight-summaries",
+    "headline": "Google Classroomで先生が配ったGemini Notebookの利用状況を要約、つまずきやすい点を把握",
+    "description": "Google Classroomで先生が課題として配ったGemini Notebookについて、生徒のやり取りをGeminiが要約して先生に示す機能が加わりました。管理者は信頼できるドメインを含めて、ノートブックの外部共有も細かく設定できます。",
+    "category": "learning",
+    "categoryLabel": "学び方",
+    "whyCare": "生徒がどこで質問し、どこでつまずいているかを先生が把握しやすくなります。教える側にとっては、AIの要約を手がかりに授業を見直す使い方を学ぶ題材になり、学ぶ側にとっては、AIとのやり取りが先生に見えることを理解して使うことが大切になります。",
+    "facts": [
+      "先生は、課題として配ったノートブックへの生徒のやり取りをもとにした、Geminiによる要約を確認できる。",
+      "要約には、全体の取り組み方の概要、よくある質問・得意な点・支援が必要な点などの傾向、生徒ごとのチャットの記録が含まれる。",
+      "生徒には、課題のノートブックでの会話が先生に見えることを知らせる通知が表示される。",
+      "管理者は信頼できるドメインを含め、Gemini Notebookの外部共有を細かく設定でき、外部共有は初期設定でオフ。"
+    ],
+    "sections": [
+      {
+        "heading": "生徒の取り組みを先生が把握",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Classroomで先生が主導して使うGemini Notebookに、先生向けの要約機能が加わりました。生徒が課題として配られたノートブックとどのようにやり取りしたかが見えるようになり、教材としての価値を確かめたり、授業の計画に生かしたりできます。",
+          "先生は、Geminiが生徒の会話をもとに作った要約を見られます。内容は、配ったノートブックへの全体の取り組み方の概要、よくある質問や得意な点、支援が必要な点などの共通する傾向、そして生徒ごとのチャットの記録です。生徒ごとの記録は、背景を知ったり、AIの要約が正しいかを確かめたりするために使えます。"
+        ]
+      },
+      {
+        "heading": "生徒への通知と対象",
+        "paragraphs": [
+          "この機能は、Google Classroomを通じて配ったGemini Notebookだけが対象です。生徒には、課題のノートブックでの会話が先生に見えることを知らせる通知が、そのノートブックに表示されます。",
+          "要約は、管理者がGemini Notebookを有効にしていて、生徒が課題のノートブックを使った場合に表示されます。Google Workspace for Educationの利用者に提供が始まり、Gemini LTIの利用者には今後数週間で提供される予定です。"
+        ]
+      },
+      {
+        "heading": "管理者向けの共有設定",
+        "paragraphs": [
+          "Google Workspaceの管理者は、管理コンソールで、信頼できるドメインを含めてGemini Notebookの外部共有を細かく設定できるようになりました。例えば、先生と生徒が別のドメインにいても、両方が信頼できるドメインに指定され、管理者がその共有を有効にしていれば、Classroomでノートブックを作って配れます。外部共有は初期設定でオフで、ドメイン、組織部門、グループの単位で管理します。",
+          "対象はEducation Fundamentals、Standard、Plusです。要約は2026年10月19日から1〜3日ほどで全面展開され、外部共有の細かな設定はすでに使えます。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "AIによる要約は授業を見直す手がかりになりますが、生徒一人ひとりの理解を判断するときは、記録そのものや普段の様子も合わせて確かめることが大切です。公式も、AIの要約の正確さを確かめるために記録を見られるようにしていると説明しています。",
+          "学ぶ側は、AIとのやり取りが先生に見えることを前提に、分からない点を素直に質問するのがおすすめです。どこでつまずいたかが先生に伝わることで、次の授業で必要な支援を受けやすくなります。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "7日学習プランを作る",
+        "href": "/study-plan/",
+        "kind": "guide"
+      },
+      {
+        "label": "検索で多い学習テーマ",
+        "href": "/learn/",
+        "kind": "intent"
+      },
+      {
+        "label": "学びに使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-10-19",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/10/teacher-led-gemini-notebook-in-google-Classroom-now-offers-insight-summaries-for-educators-and-updated-sharing-settings-for-admins-including-trusted-domains.html"
+  },
+  {
+    "id": "2026-10-19-google-chat-meeting-recaps",
+    "headline": "Google Chatに会議のまとめが自動投稿、決定事項と担当者付きのやることを確認",
+    "description": "Google Meetで「Take notes for me」を使った会議が終わると、その会議に関連するGoogle Chatの会話に、要約、決定事項、担当者付きのやること、メモや録画へのリンクをまとめたカードが自動で投稿されるようになりました。",
+    "category": "work",
+    "categoryLabel": "仕事・整理",
+    "whyCare": "会議で決まったことが、チームが普段やり取りしているチャットにそのまま残ります。欠席した人も長い文字起こしを読まずに追いつけるため、会議の後の行動につなげやすくなります。",
+    "facts": [
+      "まとめには、会議の要約、メモ・録画・文字起こしへのリンク、主な決定事項、担当者付きのやることが含まれる。",
+      "Take notes for meを有効にし、会議に関連するChatの会話がある場合に、会議の後で自動で投稿される。",
+      "主催者がメモの送信先を「主催者と共同主催者のみ」にしている場合、まとめはグループのチャットに投稿されない。",
+      "まとめのカードは通知なしで届き、会話の参加者は誰でも削除できるが、元のメモの文書はドライブに残る。"
+    ],
+    "sections": [
+      {
+        "heading": "会議のまとめがチャットに届く",
+        "paragraphs": [
+          "Google Workspace Updatesによると、計画から行動に移りやすくするために、Google Chatに会議のまとめが加わりました。会議が終わると、Chatの中に分かりやすい要約が表示されます。",
+          "まとめには、主な話題と結論を示す会議の要約、Geminiの会議メモの文書・録画・文字起こしをワンクリックで開けるリンク、会議で決まった主な結論と合意、担当者が決まった次の作業が含まれます。チームメンバーはすぐに行動に移れます。"
+        ]
+      },
+      {
+        "heading": "表示される条件と通知",
+        "paragraphs": [
+          "まとめは、Google Meetで「Take notes for me」を有効にした会議について、その会議に関連するChatのスペースに自動で表示されます。参加者は合意した次の作業を見直せ、欠席した人や遅れて参加した人も、長い文字起こしを読んだりファイルを探したりせずに状況をつかめます。",
+          "主催者がMeetで「メモの送信先」を「主催者と共同主催者のみ」にしている場合、グループのチャットにはまとめが投稿されません。また、作業の邪魔にならないよう、まとめのカードは通知なしで届き、会話が太字になったり未読の印が付いたりしません。"
+        ]
+      },
+      {
+        "heading": "カードの管理と提供範囲",
+        "paragraphs": [
+          "会話の参加者は誰でも、その他のオプションの三点メニューから「削除」を選んで、まとめのカードを消せます。カードを消してもチャットから要約が消えるだけで、元のメモの文書はGoogleドライブに残ります。",
+          "管理者側では、Gemini for Google Workspaceを有効にしている組織で初期設定でオンになり、既存のTake notes for meとGeminiの管理設定に従います。利用者向けの設定はありません。対象はBusiness StandardとPlus、Enterprise StandardとPlus、Frontline Plusで、即時リリースのドメインで2026年10月16日から、計画的リリースのドメインで10月27日から展開されます。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "まとめがチャットに残るようになっても、担当者や期限が正しいかを会議の参加者で確かめることが大切です。カードが届いたら、自分の担当になっている作業に返信して、引き受けたことを伝えると、チームの中で認識がそろいます。",
+          "会議の運営を学んでいる人は、会議の最後に決定事項とやることを口に出して確認すると、AIのまとめもより正確になります。社外の人が参加する会議では、まとめがどのチャットに投稿されるかも事前に確かめておきましょう。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      },
+      {
+        "label": "仕事から必要な学びを探す",
+        "href": "https://career.manapick.app/",
+        "kind": "career"
+      }
+    ],
+    "publishedAt": "2026-10-19",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/10/follow-through-on-your-meeting-tasks-with-meeting-recaps-in-Google-Chat.html"
+  },
+  {
+    "id": "2026-10-19-gemini-sheets-bigquery-natural-language",
+    "headline": "Google SheetsのGeminiでBigQueryのデータを会話で分析、ダッシュボードも作成",
+    "description": "Google Sheetsで、Connected SheetsでつないだBigQueryのデータを、Geminiに話しかけて分析できるようになりました。質問はBigQueryの全データに対して実行され、集計表やグラフを含むダッシュボードも作れます。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "whyCare": "SQLを書かなくても、普段の言葉で大きなデータに質問できるようになります。一方で、出てきた数字が何を集計したものかを確かめる力は欠かせないため、データ分析の基礎とAIへの質問の仕方を一緒に学ぶ価値が高まります。",
+    "facts": [
+      "Connected SheetsでBigQueryにつないだ表で、Geminiと会話しながらデータを分析できる。",
+      "Geminiの質問は、表に見えている部分だけでなくBigQueryの全データに対して実行される。",
+      "Geminiは計画を示してから、データベース関数・ピボットテーブル・グラフを含む更新可能な新しいタブを作る。",
+      "初期設定でオンで、接続先のデータを照会する権限がある利用者が対象。Business Standard・Plus、Enterprise Standard・Plus、Google AI Pro・Ultraなどで使える。"
+    ],
+    "sections": [
+      {
+        "heading": "BigQueryの全データに会話で質問",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google SheetsでBigQueryのデータを分析する新しい方法が加わりました。Connected SheetsでBigQueryのデータにつないだ後、Geminiを使って、会話をするようにデータを調べられます。",
+          "Geminiの質問は、表に表示されている部分だけでなく、BigQueryにあるデータ全体に対して実行されます。そのため、とても大きなデータについても、質問したり、分析したり、見やすい形にまとめたりできます。"
+        ]
+      },
+      {
+        "heading": "質問から深掘り、ダッシュボードまで",
+        "paragraphs": [
+          "公式の例では、「北東地域の前四半期の売上合計は？」のように普通の言葉で尋ねると、BigQueryの全データに基づいて答えが返ります。続けて「前年の同じ四半期と比べるとどうか」「どの商品が増加をけん引したか」と深掘りすることもできます。",
+          "さらに、「地域別の売上、月別の推移、上位10商品を入れた四半期の売上レビューを作って」のように頼むと、Geminiはまず計画を示します。確認すると、データベース関数、ピボットテーブル、グラフといった、接続されていて更新できる要素で新しいタブを作ります。予定した更新で、常に最新の状態に保つこともできます。"
+        ]
+      },
+      {
+        "heading": "使える人と展開時期",
+        "paragraphs": [
+          "この機能は初期設定でオンになっており、管理者向けの設定はありません。BigQueryにつながったスプレッドシートで、接続先のデータを照会する権限がある利用者が使えます。始めるには、つながった表でGeminiのサイドパネルを開きます。",
+          "対象は、Business StandardとPlus、Enterprise StandardとPlus、個人向けのGoogle AI ProとUltra、教育機関向けのGoogle AI Pro for Education、AI Expanded Accessです。2026年10月19日から最大15日ほどかけて展開されます。Googleは、データチームにとっては一度きりの集計依頼が減る効果もあると説明しています。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "会話で答えが出るようになっても、どの期間、どの地域、どの条件で集計したかを確かめる作業は人が担います。Geminiが作ったピボットテーブルや数式を開き、集計の条件が質問の意図と合っているかを見直す習慣をつけてください。",
+          "これからデータ分析を学ぶ人は、まず小さな表でピボットテーブルとグラフを自分で作れるようにしておくと、AIが作った結果の正しさを判断しやすくなります。社内データを扱う場合は、照会の権限や共有範囲が所属先のルールに沿っているかも確認しましょう。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AIロードマップ",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを比較する",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-10-19",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/10/analyze-bigquery-data-using-natural-language-with-Gemini-in-Google-Sheets.html"
+  },
+  {
+    "id": "2026-10-19-gemini-in-google-sheets-ios",
+    "headline": "iPhoneのGoogle SheetsでもGeminiが使えるように、外出先で表を分析",
+    "description": "Google SheetsのGeminiが、iOS端末でも使えるようになりました。Geminiのアイコンを押すと、データについて質問したり、分析の結果を出したり、グラフを作ったりできます。先に提供されたAndroid版に続く対応です。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "whyCare": "移動中でも、スマホから表の内容を要約したり傾向を確かめたりできます。最初から用意された頼み方の例があるため、生成AIに表データを分析させる練習を、パソコンがない場面でも始めやすくなります。",
+    "facts": [
+      "ウェブ版とAndroid版に続き、iOS端末のGoogle SheetsでGeminiが使えるようになった。",
+      "Geminiのアイコンを押すと、データへの質問、分析結果の作成、グラフの作成ができる。",
+      "「この表を要約して」「傾向を分析して」といった頼み方の例が用意されている。",
+      "対象はBusiness Starter・Standard・Plus、Enterprise Starter・Standard・Plus、Google AI Plus・Pro・Ultraなど。"
+    ],
+    "sections": [
+      {
+        "heading": "iOSでもSheetsのGeminiを利用",
+        "paragraphs": [
+          "Google Workspace Updatesによると、ウェブ版のGemini in Sheetsと、先に始まったAndroid版に続いて、iOS端末のGoogle SheetsでもGeminiが使えるようになりました。外出先でも、データを素早く分析して理解できるようにするための更新です。",
+          "使い方は、Geminiのアイコンを押すだけです。データについて質問したり、分析から分かることをまとめさせたり、グラフを作らせたりできます。始めやすいように、「この表を要約して」「傾向を分析して」といった頼み方の例も用意されています。"
+        ]
+      },
+      {
+        "heading": "公式が示す活用例",
+        "paragraphs": [
+          "発表では、「Finance Tracker（財務の管理表）」と「Employee Tracker（従業員の管理表）」の画面が例として紹介されています。どちらも、管理表のデータをスマホのGeminiで分析する様子を示したものです。",
+          "利用者は、対応するスプレッドシートをiOS端末で開き、「Ask Gemini」のアイコンを押して使います。対象の利用者には初期設定で提供されます。"
+        ]
+      },
+      {
+        "heading": "管理者設定と対象プラン",
+        "paragraphs": [
+          "このモバイル向け機能だけを対象にした管理者設定はなく、ドメインや組織部門でGemini for Google Workspaceを有効にしているかどうかに従います。",
+          "対象は、Business Starter、Standard、Plus、Enterprise Starter、Standard、Plus、教育機関向けのGoogle AI Pro for Education、個人向けのGoogle AI Plus、Pro、Ultraです。即時リリースと計画的リリースのドメインで、2026年10月15日から最大15日ほどかけて展開が始まっています。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "スマホでのGeminiは、表の中身を素早くつかむ用途に向いています。まずは自分の家計簿や学習記録のような小さな表で「要約して」と頼み、返ってきた内容を元の数字と照らし合わせて、AIの要約の正確さを確かめてみてください。",
+          "本格的な表の作成や数式の練習は、パソコンで学ぶ方が効率的です。外出先ではGeminiで気づいた点をメモし、後でパソコンでピボットテーブルやグラフを作って確かめるという流れにすると、AI活用と表計算の基礎を同時に伸ばせます。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AIロードマップ",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを比較する",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-10-19",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/10/gemini-in-google-sheets-is-now-available-on-iOS-devices.html"
+  },
+  {
+    "id": "2026-10-12-google-meet-post-meeting-next-steps",
+    "headline": "Google Meetの会議後画面に「次のステップ」、お礼メールの下書きとToDo登録を自動化",
+    "description": "Google Meetの会議後の画面に「次のステップ」が加わりました。GeminiとWorkspace Studioを使い、会議の内容からGmailでのフォローアップメールの下書きや、Google ToDoリストへのやることの登録を自動で行えます。",
+    "category": "work",
+    "categoryLabel": "仕事・整理",
+    "whyCare": "会議の後に毎回やっている作業を自動化できると、決まったことを確実に次の行動へつなげやすくなります。どの作業を仕組みに任せられるかを考えることは、仕事の進め方を見直す練習になります。",
+    "facts": [
+      "会議後の画面の「Routines for this meeting」欄から、次のステップをワンタップで有効にできる。",
+      "開始時点の次のステップは、フォローアップメールの下書きと、やることのGoogle ToDoリストへの追加の2つ。",
+      "次のステップが表示されるには、会議中に「Take notes for me」を有効にしている必要がある。",
+      "対象はBusiness Standard・Plus、Enterprise Standard・Plus、Google AI Pro for Educationで、2026年10月5日から展開が始まった。"
+    ],
+    "sections": [
+      {
+        "heading": "会議の後の作業を自動化",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Meetに「次のステップ」が加わりました。GeminiとWorkspace Studioを使い、会議の後に繰り返し行う作業をGoogle Workspaceの中で自動化する機能です。会議での話し合いを、Gmailでのフォローアップメールの下書きや、やることのGoogle ToDoリストへの書き出しといった具体的な行動に変えます。",
+          "Googleは、会議は忙しい一日の作業の一部にすぎず、決まったことの記録や後の作業を手で入力すると、情報が散らばり時間も無駄になると説明しています。"
+        ]
+      },
+      {
+        "heading": "使い方と条件",
+        "paragraphs": [
+          "会議後の画面で「Routines for this meeting」（この会議のルーティン）という欄を探し、次のステップをワンタップで有効にします。次のステップが表示されるには、会議中に「Take notes for me」が有効になっている必要があります。",
+          "一度きりの会議でも定例会議でも使え、「Take notes for me」がオンのときは、特定の次のステップをすべての会議で有効にすることもできます。開始時点で使えるのは、フォローアップメールの下書きと、Google ToDoリストへのやることの追加の2つで、今後さらに増える予定です。"
+        ]
+      },
+      {
+        "heading": "管理者設定と展開時期",
+        "paragraphs": [
+          "管理者側では初期設定でオンになっており、Workspace Studioの管理設定か「Take notes for me」の設定で、ドメイン、組織部門、グループの単位でオフにできます。利用者は、会議後の画面か、一度有効にした後はWorkspace Studioのフローの一覧で、次のステップを管理できます。",
+          "対象は、Business StandardとPlus、Enterprise StandardとPlus、Google AI Pro for Educationです。2026年10月5日から、15日を超える場合もある長めの期間をかけて展開されています。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "自動で作られたフォローアップメールは、そのまま送らず、決定事項、担当者、期限が正しく書かれているかを確かめてから送るようにしてください。AIのメモが聞き違えた内容が、そのまま相手に伝わるのを防げます。",
+          "会議の進め方を学んでいる人は、会議の最後に「誰が、何を、いつまでに」を口に出して確認する習慣をつけると、AIのメモとToDoの登録の精度も上がります。自動化は、会議の基本の進め方ができていてこそ生きる仕組みです。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      },
+      {
+        "label": "仕事から必要な学びを探す",
+        "href": "https://career.manapick.app/",
+        "kind": "career"
+      }
+    ],
+    "publishedAt": "2026-10-12",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/10/find-your-routine-next-steps-on-post-meeting-screen-in-Google-Meet.html"
+  },
+  {
+    "id": "2026-10-05-markdown-files-google-docs-drive",
+    "headline": "GoogleドキュメントでMarkdownファイルを直接編集、ドライブでは整形して表示",
+    "description": "Googleドキュメントで、Markdown（.mdや.markdown）のファイルを変換せずにそのまま表示・編集・共同作業できるようになりました。Googleドライブでも、表やリンクを整形した状態でプレビューできます。",
+    "category": "work",
+    "categoryLabel": "仕事・整理",
+    "whyCare": "Markdownは、生成AIの出力やメモでよく使われる書き方です。ファイル形式を変えずにドキュメントで編集やコメントができると、AIが作った文章をチームで手直しする作業が進めやすくなります。",
+    "facts": [
+      "Markdown（.mdまたは.markdown）のファイルを、Googleドキュメントで直接表示・編集・共同作業できる。",
+      "これまではドキュメント形式への読み込みと変換が必要で、書式が変わったり、コメントが消えたり、ファイルが分かれたりすることがあった。",
+      "Googleドライブで、リンクや表を整形した状態のMarkdownをプレビューできる。",
+      "管理者・利用者の設定はなく、すべてのGoogle Workspace利用者と個人のGoogleアカウントが対象。"
+    ],
+    "sections": [
+      {
+        "heading": "Markdownをそのままドキュメントで扱う",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Markdown（.mdまたは.markdown）のファイルを、Googleドキュメントで直接表示、編集、共同作業できるようになりました。Googleドライブでも、整形された状態のプレビューを見られます。",
+          "Markdownは、表、見出し、箇条書きといった構造を、重いファイル形式を使わずに保てる標準的な文字の形式で、大規模言語モデルでも広く使われていると説明されています。"
+        ]
+      },
+      {
+        "heading": "これまでとの違い",
+        "paragraphs": [
+          "これまでは、Markdownのファイルをドキュメント形式に読み込んで変換する必要がありました。その際に書式が変わったり、コメントが消えたり、ファイルが分かれてしまったりすることがよくありました。",
+          "今後は、ファイルの種類を変えずに、Markdownのファイルを開いて編集し、共同作業できます。人もAIエージェントも、記号の書き方を直接打ち込んだり、手でファイルを変換したりせずに、ドキュメントのリアルタイム編集やコメントの機能を使って一緒に作業できます。"
+        ]
+      },
+      {
+        "heading": "ドライブでのプレビューと提供範囲",
+        "paragraphs": [
+          "Googleドライブでも、整形されたMarkdownの表示に対応しました。リンクを押せる状態で、表も整った形の文書としてドライブ上で確認できます。",
+          "管理者向けの設定も、利用者向けの設定もありません。すべてのGoogle Workspace利用者と個人のGoogleアカウントの利用者が対象で、2026年10月5日から最大15日ほどかけて展開されます。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "生成AIに文章を頼むと、見出しや箇条書きがMarkdownで返ってくることがよくあります。その出力を.mdファイルとして保存し、ドキュメントで開いてチームでコメントし合うと、AIの下書きを人が仕上げる流れを作りやすくなります。",
+          "Markdownの基本は、見出し、箇条書き、表、リンクの書き方を覚えるだけで十分に使えます。まずは自分の学習メモをMarkdownで書き、ドライブでどのように表示されるかを確かめてみると、書き方と見え方の関係が理解しやすくなります。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      },
+      {
+        "label": "仕事から必要な学びを探す",
+        "href": "https://career.manapick.app/",
+        "kind": "career"
+      }
+    ],
+    "publishedAt": "2026-10-05",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/10/preview-edit-and-collaborate-on-Markdown-files-natively-across-Drive-and-Docs.html"
+  },
+  {
+    "id": "2026-10-05-google-sheets-stock-charts-hlc-ohlc",
+    "headline": "Google Sheetsに株価チャート、高値・安値・終値を1つの印で表示",
+    "description": "Google Sheetsで新しい株価チャートを作れるようになりました。高値・安値・終値を示すHLCと、始値も加えたOHLCの2種類です。Excelとの間でファイルをやり取りしても図が保たれます。",
+    "category": "data",
+    "categoryLabel": "Excel・データ",
+    "whyCare": "価格の動きを読み取る図は、金融だけでなく売上や在庫の推移の分析にも通じる考え方です。表計算でグラフの種類を選び分ける練習の題材になり、Excelとの互換性も上がるため、職場でのファイルのやり取りでも作り直しの手間が減ります。",
+    "facts": [
+      "Google SheetsでHLC（高値・安値・終値）とOHLC（始値・高値・安値・終値）の株価チャートを作成・調整できる。",
+      "期間ごとの複数の価格を1つの印にまとめて表示する。",
+      "これまでExcelから読み込むと消えていた株価チャートが、ExcelとSheetsの間で保たれるようになった。",
+      "すべてのGoogle Workspace利用者と個人のGoogleアカウントで使え、管理者設定はない。"
+    ],
+    "sections": [
+      {
+        "heading": "複数の価格を1つの印で読む",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Sheetsで新しい種類の株価チャートを作れるようになりました。期間ごとの複数の価格を1つの印にまとめるため、別々の折れ線を見比べなくても、その期間の値動きの幅をひと目で読み取れます。",
+          "作れるのは2種類です。HLCは、各期間の最高値、最安値、終値を示し、値動きの幅とどこで落ち着いたかが分かります。OHLCは始値も加えたもので、その期間が上がって終わったか下がって終わったかもすぐに分かります。"
+        ]
+      },
+      {
+        "heading": "金融分析の作業を想定した機能",
+        "paragraphs": [
+          "Googleは、この機能を、金融アナリストがすでにSheetsで行っている作業に合わせて作ったと説明しています。例として、株式や商品の値動きの追跡や、過去の価格データを使った企業価値の評価モデルづくりが挙げられています。",
+          "Excelとの互換性も改善されました。これまでは株価チャートを含むExcelファイルをSheetsに読み込むと図が消え、作り直す必要がありました。今後は、HLCとOHLCの株価チャートがExcelとSheetsの間で正しく保たれます。"
+        ]
+      },
+      {
+        "heading": "提供範囲と展開時期",
+        "paragraphs": [
+          "この機能に管理者向けの設定はありません。すべてのGoogle Workspace利用者と、個人のGoogleアカウントの利用者が使えます。作り方は、Googleドキュメント エディタのヘルプにある、グラフの追加と編集のページで案内されています。",
+          "展開は、即時リリースのドメインで2026年10月5日から、計画的リリースのドメインで10月22日から始まりました。どちらも最大15日ほどかけて、利用者の画面に表示されていきます。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "株価チャートは、始値・高値・安値・終値という4つの列をどう並べるかを考える良い練習になります。まずは公開されている価格データを数週間分だけ表にまとめ、HLCとOHLCを両方作って、どちらが自分の目的に合うかを比べてみてください。",
+          "グラフを選ぶ力は、データ分析の報告で伝わりやすさを大きく左右します。Excelでグラフの基本を学んでいる人は、同じデータを折れ線グラフと株価チャートで描き分け、読み手にとってどちらが分かりやすいかを確かめると理解が深まります。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Excelデータ分析ロードマップ",
+        "href": "/guide/excel-data/",
+        "kind": "guide"
+      },
+      {
+        "label": "Excel統計の学び方",
+        "href": "/learn/excel-statistics/",
+        "kind": "intent"
+      },
+      {
+        "label": "AIでデータ作業を効率化",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-10-05",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/10/use-stock-charts-in-sheets-to-better-visualize-price-movements.html"
+  },
+  {
+    "id": "2026-10-01-gemini-student-hub-workspace-education",
+    "headline": "Geminiの学習ツールをまとめた「学生向けハブ」が教育機関のアカウントでも利用可能に",
+    "description": "Geminiアプリで学習ツールを1か所にまとめた「学生向けハブ」が、あらゆる年齢のGoogle Workspace for Educationの利用者に提供されました。学習用ノートブック、単語カード、練習テストなどをここから始められます。",
+    "category": "learning",
+    "categoryLabel": "学び方",
+    "whyCare": "学習に使えるAIの機能が増えるほど、どこから始めればよいか迷いやすくなります。入口が1つにまとまると、目的に合った学び方を選びやすくなり、AIを使った自習の習慣を作るきっかけになります。",
+    "facts": [
+      "学生向けハブは、Geminiの学習ツールを1か所にまとめた専用の場所。",
+      "個人のアカウントで先に始まり、あらゆる年齢のGoogle Workspace for Educationの利用者に広がった。",
+      "学習用ノートブックの作成、単語カードの作成、練習テストなどをここから始められ、今後の学習ツールもここに追加される。",
+      "gemini.google.com/studentsか、Geminiアプリのメニューの「Students」から開ける。"
+    ],
+    "sections": [
+      {
+        "heading": "学習ツールの入口を1つに",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Geminiアプリに、Geminiの学習ツールをまとめて使い始められる専用の「学生向けハブ」が設けられました。最初は個人のアカウントで提供され、今回、あらゆる年齢のGoogle Workspace for Educationの利用者にも提供が広がりました。",
+          "ハブは学生の学習の整理を助けるためのもので、学習用ノートブックを始めたり、単語カードを作ったり、練習テストを受けたりできます。Geminiに新しい学習ツールが加わると、このハブに表示されます。"
+        ]
+      },
+      {
+        "heading": "開き方",
+        "paragraphs": [
+          "始めるには、gemini.google.com/studentsにアクセスするか、Geminiアプリのメニューで「Students」を選びます。",
+          "利用者向けの設定はありません。即時リリースと計画的リリースのドメインで、すでに使えます。"
+        ]
+      },
+      {
+        "heading": "管理者設定と提供範囲",
+        "paragraphs": [
+          "Geminiアプリとアプリ内の関連ツールは、Workspaceの管理コンソールにある生成AIの設定で管理されています。学生向けハブも、この既存の設定に従います。",
+          "対象は、すべてのGoogle Workspace利用者、Workspace Individualの契約者、個人のGoogleアカウントの利用者です。10月19日の更新で、欧州経済領域のGoogle Workspace利用者も対象に加わりました。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "ハブを使うときは、まず学ぶ目標を1つ決め、学習用ノートブックで教材を整理してから、単語カードや練習テストで確認する順番がおすすめです。ツールを次々に試すより、1つの流れを繰り返す方が学習の効果を実感しやすくなります。",
+          "AIが作った問題や解説には誤りが含まれることがあるため、間違えた問題は教科書や授業の資料で確かめ直してください。Manapickの7日学習プランと組み合わせて、毎日の学習時間を決めておくと続けやすくなります。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "7日学習プランを作る",
+        "href": "/study-plan/",
+        "kind": "guide"
+      },
+      {
+        "label": "検索で多い学習テーマ",
+        "href": "/learn/",
+        "kind": "intent"
+      },
+      {
+        "label": "学びに使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-10-01",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/10/find-your-learning-tools-all-in-one-place-with-the-student-hub-in-Gemini.html"
+  },
+  {
+    "id": "2026-09-30-gemini-skills-replace-gems",
+    "headline": "Geminiに再利用できる指示「スキル」、Gemは段階的に終了へ",
+    "description": "Googleは、Geminiに作業の進め方を教える再利用できる指示「スキル」を、GeminiアプリとWorkspaceに広げると発表しました。スキルは今後Gemに代わる仕組みになり、Gemは段階的にサポートが終わります。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "whyCare": "よく頼む作業の指示を部品のように保存し、組み合わせて使えるようになります。Gemを使っている人は、移行の日程を把握しておく必要があります。自分の仕事の手順を言葉にしてAIに渡す力は、生成AIを使いこなすうえで欠かせません。",
+    "facts": [
+      "スキルは、GeminiアプリとほとんどのWorkspaceアプリで、Geminiに頼むときにいつでも使える再利用できる独自の指示。",
+      "Gemと違い、スキルは会話の中で使い、1つの指示に複数のスキルを重ねて使える。",
+      "スキルはMarkdownを基本にしたオープンなSKILL.mdの標準に沿って作られ、ほかの場所で作ったスキルを持ち込める。",
+      "11月17日にGemはGeminiアプリの設定パネルに移り、企業向けは早くて2027年3月1日、教育機関向けは早くて2027年6月1日にGemが使えなくなる。"
+    ],
+    "sections": [
+      {
+        "heading": "スキルとは何か",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Geminiの進め方を指示する再利用できる指示文「スキル」が、今後数週間でWorkspaceの利用者に広がり、いずれ特定の作業向けの指示を作る道具としてGemに代わります。スキルは、GeminiアプリとほとんどのWorkspaceアプリで、Geminiに頼むときにいつでも使えます。",
+          "例として、ブログ記事の下書きのためのブランドの文体のスキルや、授業準備の時間を減らす授業計画のスキルが挙げられています。同じ指示の中で複数のスキルを使ったり、会話の途中で別のスキルを使ったりもできます。なお、現時点ではGeminiアプリとWorkspaceアプリの間でスキルは同期されず、両方で使う場合はそれぞれで作る必要があります。"
+        ]
+      },
+      {
+        "heading": "Gemとの違い",
+        "paragraphs": [
+          "Gemと違い、スキルは1つの会話の中で働くため、複数の独自の指示を同時に重ねて使えます。例えば、教員なら「学級だより」のスキルと「学校のブランドの指針」のスキルを組み合わせ、ビジネスの利用者なら「取引先の評価」と「役員向けメールの下書き」のスキルを組み合わせて、一度に作業を進められます。",
+          "また、スキルはMarkdownを基本にしたオープンな標準であるSKILL.mdに沿って作られています。そのため、ほかの場所で作ったスキルを、GeminiアプリやWorkspaceアプリに持ち込めます。"
+        ]
+      },
+      {
+        "heading": "Gemの移行の日程と展開の遅れ",
+        "paragraphs": [
+          "当面はGeminiアプリでGemを作って使い続けられますが、Workspace Studioで「Ask a Gem」の手順を含むフローは新しく作れなくなりました。2026年11月17日にGemはGeminiアプリの設定パネルに移ります。企業向けでは早くて2027年3月1日、教育機関向けでは早くて2027年6月1日に、Gemの作成・編集・利用ができなくなり、残っているGemはスキルの下書きに自動で移されます。自動移行の詳細は、少なくとも30日前に管理者へ知らされます。",
+          "10月13日の更新によると、Geminiアプリでのスキルの展開は始まりましたが、Workspace StudioとWorkspaceアプリへの展開は遅れています。Workspaceのスキルは18歳以上の利用者だけが対象で、Geminiアプリのスキルはすべての年齢で使えるようになる予定です。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "スキルを作るときは、毎回同じように頼んでいる作業を1つ選び、目的、手順、出力の形を短く書き出すところから始めるのがおすすめです。小さなスキルを複数作って組み合わせる方が、大きな1つの指示より直しやすくなります。",
+          "Gemを使っている人は、移行の期限を待たずに、よく使うGemから順にスキルとして作り直しておくと安心です。GeminiアプリとWorkspaceでは同期されないため、どちらで使うかを決めてから作ると、管理の手間を減らせます。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AIロードマップ",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを比較する",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-09-30",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/skills-gemini-app-workspace.html"
+  },
+  {
+    "id": "2026-09-25-google-calendar-three-time-zones-web",
+    "headline": "ウェブ版Googleカレンダーで最大3つのタイムゾーンを並べて表示",
+    "description": "ウェブ版のGoogleカレンダーで、最大3つのタイムゾーンを並べて表示できるようになりました。これまでは2つまででした。予定の作成画面でも3つの時刻を確認でき、それぞれに独自のラベルを付けられます。",
+    "category": "work",
+    "categoryLabel": "仕事・整理",
+    "whyCare": "海外の取引先や拠点と働く人は、時差の計算に手間がかかります。3つの地域の時刻を同時に見られると、会議の候補を決めるときのミスが減り、国をまたいだ仕事の段取りを考えやすくなります。",
+    "facts": [
+      "メイン、2つ目に加えて、新たに3つ目のタイムゾーンを設定し、カレンダーに表示できる。",
+      "日、週、カスタムの複数日表示で、左側にタイムゾーンの列が最大3つ並ぶ。",
+      "予定の作成・編集時の「時間を探す」でも、最大3つのタイムゾーンが表示される。",
+      "設定で各タイムゾーンに「SFO」「NYC」「ZRH」のような独自のラベルを付けられる。"
+    ],
+    "sections": [
+      {
+        "heading": "タイムゾーンが3つまでに",
+        "paragraphs": [
+          "Google Workspace Updatesによると、ウェブ版のGoogleカレンダーで表示できるタイムゾーンが増えました。メイン、2つ目に加えて、新たに3つ目のタイムゾーンを設定し、カレンダーの表に表示できます。これまでは2つまでしか表示できませんでした。",
+          "公式の例として、地域をまたぐ役員の予定を管理する秘書、世界同時の発表を調整するプロジェクトの責任者、サンフランシスコ、ニューヨーク、チューリッヒの同僚と働く人などが挙げられています。3つの時刻を同時に見られることで、予定調整の手間と手作業での時差の計算が減ると説明されています。"
+        ]
+      },
+      {
+        "heading": "表示される場所とラベル",
+        "paragraphs": [
+          "日、週、カスタムの複数日表示では、カレンダーの左側に、ラベル付きのタイムゾーンの列が最大3つ並び、それぞれの地域の勤務時間をひと目で比べられます。",
+          "予定を作ったり編集したりするときの「時間を探す」の画面でも、最大3つのタイムゾーンが表示されます。設定で、3つのタイムゾーンそれぞれに「SFO」「NYC」「ZRH」のような独自のラベルを付けられ、表の中で見分けやすくなります。"
+        ]
+      },
+      {
+        "heading": "提供範囲と展開時期",
+        "paragraphs": [
+          "管理者向けの設定はありません。対象は、すべてのGoogle Workspace利用者、Workspace Individualの契約者、個人のGoogleアカウントの利用者です。",
+          "10月1日の更新によると、即時リリースのドメインでは9月25日から長めの期間をかけて展開され、10月13日までに完了する予定です。計画的リリースのドメインでは10月中旬から全面展開が始まり、10月22日までに完了する予定とされています。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "海外とやり取りする人は、自分の地域、相手の地域、そして会議でよく使う第三の地域を設定しておくと、候補時間を出すときに迷いにくくなります。ラベルは都市名の略称など、自分がひと目で分かるものにしましょう。",
+          "時差のある会議では、相手の勤務時間内に収まっているかに加えて、夏時間の切り替え時期にも注意が必要です。予定を送る前に、相手の地域の時刻で表示を確認する習慣をつけると、時間の行き違いを防げます。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      },
+      {
+        "label": "仕事から必要な学びを探す",
+        "href": "https://career.manapick.app/",
+        "kind": "career"
+      }
+    ],
+    "publishedAt": "2026-09-25",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/view-up-to-three-time-zones-in-google-Calendar-on-the-web.html"
+  },
+  {
+    "id": "2026-09-23-google-docs-gemini-notebook-grounding",
+    "headline": "GoogleドキュメントのGeminiがGemini Notebookの資料を参照、出典付きで下書き",
+    "description": "Googleドキュメントで、Gemini Notebookを情報源として使えるようになりました。サイドパネルや下部のバーで「@」と入力してノートブックを指定すると、Geminiがその資料に基づいて下書きを作り、本文中に出典を示します。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "whyCare": "調べた資料をもとに文書を書くとき、タブを切り替えたりコピーしたりする手間が減ります。出典が示されるため、AIの文章をうのみにせず、事実を確かめながら書く習慣を身につけやすくなります。",
+    "facts": [
+      "Googleドキュメントで、Gemini Notebookを文脈の情報源として使える。",
+      "サイドパネルや下部のバーで「@」と入力し、既存のノートブックを指定する。",
+      "Geminiは資料に基づいて出力し、本文中に出典を示す。",
+      "Business Standard・Plus、Enterprise Standard・Plus、Education Plus、Google AI Pro・Ultraなどが対象で、Workspaceのスマート機能を有効にする必要がある。"
+    ],
+    "sections": [
+      {
+        "heading": "調べた資料を書く場所で使う",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Googleドキュメントで、Gemini Notebookを文脈の情報源として使えるようになりました。Workspace Intelligenceを基盤に、深い調べものと文章作りの間をつなぎ、整理した知識をもとに下書きを作れるようにする機能です。タブを切り替えたり、ツールの間でコピーと貼り付けをしたりする必要はありません。",
+          "Gemini Notebookで調べた内容を整理していれば、ドキュメントで書いているその場所から、そのノートブックを使えます。"
+        ]
+      },
+      {
+        "heading": "使い方と出典の表示",
+        "paragraphs": [
+          "プロジェクトの提案書や技術資料を書くときに、サイドパネルか下部のバーで「@」と入力し、既存のノートブックを指定します。",
+          "Geminiは、ノートブックの資料に基づいて文章を作り、本文中に出典を示します。作業の流れを止めずに、事実を確かめやすくなると説明されています。"
+        ]
+      },
+      {
+        "heading": "設定と対象プラン",
+        "paragraphs": [
+          "管理者側では、ドライブでのGemini for Workspaceが有効なら、初期設定で使えます。利用者は、Workspaceのスマート機能を有効にしている必要があります。即時リリースと計画的リリースのドメインで、すでに使えます。",
+          "対象は、Business StandardとPlus、Enterprise StandardとPlus、Education Plus、個人向けのGoogle AI ProとUltra、Google AI Pro for Education、Teaching and Learning、AI Expanded Accessです。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "出典が示されたら、その資料の該当部分を実際に開いて、書かれた内容と合っているかを確かめてください。出典があることと、要約が正確であることは別の問題です。",
+          "レポートや提案書を書く練習では、先にGemini Notebookに信頼できる資料だけを集め、ドキュメントでそれを参照して下書きを作る流れがおすすめです。どの資料を選ぶかで文章の質が決まることを、実感しながら学べます。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AIロードマップ",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを比較する",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-09-23",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/ground-ai-prompts-in-google-docs-on-existing-sources-from-Gemini-Notebook.html"
+  },
+  {
+    "id": "2026-09-22-gemini-study-notebooks-workspace-accounts",
+    "headline": "Geminiの学習用ノートブックが学校・職場のアカウントでも利用可能に",
+    "description": "Geminiを対話型の学習の場にする「学習用ノートブック」が、学校や職場から配られたGoogleアカウントでも使えるようになりました。授業の資料をもとに、短いレッスン、確認テスト、進み具合の画面で学べます。",
+    "category": "learning",
+    "categoryLabel": "学び方",
+    "whyCare": "自分の教材をもとに、苦手な部分を見つけて短いレッスンで学べるため、資格の勉強や仕事の学び直しにも使えます。会社や学校のアカウントで使えるようになったことで、学習を業務や授業と結びつけやすくなります。",
+    "facts": [
+      "管理者がGeminiアプリとGemini Notebookを有効にしていれば、学校や職場のGoogleアカウントで年齢を問わず学習用ノートブックを使える。",
+      "Geminiアプリの左側のサイドバーで「New notebook」を選び、「Study and learn」を選んで、学ぶ内容と教材を登録する。",
+      "確認テストで得意・苦手を見つけ、練習問題付きの短いレッスンで学び、目標ごとの進み具合を画面で確認できる。",
+      "10月19日の更新で、欧州経済領域のWorkspace利用者も対象に加わった。"
+    ],
+    "sections": [
+      {
+        "heading": "学校・職場のアカウントでも使える",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Geminiを対話型で一人ひとりに合わせて変わる学習の場にする「学習用ノートブック」が、学校や職場から配られたGoogleアカウントでも使えるようになりました。学校の授業でも、新しいスキルの習得でも、学ぶ目標に合わせたレッスンを提供します。",
+          "対象は、学校や職場のGoogleアカウントにログインしている、あらゆる年齢の利用者です。ただし、管理者がGeminiアプリとGemini Notebookの両方を有効にしている必要があります。"
+        ]
+      },
+      {
+        "heading": "学習用ノートブックの使い方",
+        "paragraphs": [
+          "Geminiアプリの左側のサイドバーで「New notebook」を選び、「Study and learn」を選びます。何を学んでいるかを伝え、授業の資料などを読み込ませます。",
+          "進み具合を確かめる確認テストを頼むと、得意な部分と苦手な部分が分かり、自分に合った学習の出発点を作れます。その後は、練習問題が入った短いレッスンで学び、途中でいつでも質問できます。目標を細かい項目に分けた画面で、「得意」と「重点的に学ぶ分野」に整理された進み具合を確認でき、優先して学ぶべきレッスンが勧められます。"
+        ]
+      },
+      {
+        "heading": "管理者設定と提供範囲",
+        "paragraphs": [
+          "管理者は、学習用ノートブックを使える人を管理できます。GeminiとGemini Notebookの両方がオンになっているグループや組織部門の利用者が使えます。利用者向けの設定はありません。",
+          "対象は、すべてのGoogle Workspace利用者、Workspace Individualの契約者、個人のGoogleアカウントの利用者です。即時リリースのドメインでは2026年9月17日から展開が始まり、10月19日の更新で欧州経済領域のWorkspace利用者も対象に加わりました。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "学習用ノートブックは、信頼できる教材を入れるほど学習内容が安定します。資格の勉強なら、公式の出題範囲や自分のノートを登録し、最初に確認テストで苦手な分野を把握してから学ぶ順番を決めるのがおすすめです。",
+          "AIのレッスンだけで学習を完結させず、間違えた問題は教科書や公式の資料で確かめ直してください。Manapickの7日学習プランのように、学ぶ時間と復習の日をあらかじめ決めておくと、ノートブックの進み具合の画面とも組み合わせやすくなります。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "7日学習プランを作る",
+        "href": "/study-plan/",
+        "kind": "guide"
+      },
+      {
+        "label": "検索で多い学習テーマ",
+        "href": "/learn/",
+        "kind": "intent"
+      },
+      {
+        "label": "学びに使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-09-22",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/study-notebooks-in-gemini-are-now-available-for-Google-Workspace-accounts.html"
+  },
+  {
+    "id": "2026-09-22-google-meet-quick-notes",
+    "headline": "Google Meetの自動メモに「Quick notes」、会議の要点を1ページにまとめて最初に表示",
+    "description": "Google Meetの「Take notes for me」に、会議の要点を1ページにまとめた「Quick notes」が加わりました。メモの文書とメールで最初に表示され、詳しい内容は「Full notes」のタブで確認できます。",
+    "category": "work",
+    "categoryLabel": "仕事・整理",
+    "whyCare": "会議の結論とやることを短時間でつかめるため、参加できなかった会議の内容を素早く追いかけやすくなります。要点だけをまとめる形は、議事録や報告の書き方を学ぶ手本にもなります。",
+    "facts": [
+      "Quick notesは、会議の主なやること、結果、話題だけを1ページに収めた概要。",
+      "Take notes for meの文書で最初に開くタブになり、メモのメールでも最初に表示される要約になった。",
+      "詳しい内容は、従来の形式の「Full notes」タブで確認できる。",
+      "利用者の設定はなく、Business Standard・Plus、Enterprise Standard・Plus、Frontline Plus、Google AI Pro・Ultraなどで使える。"
+    ],
+    "sections": [
+      {
+        "heading": "要点だけを1ページに",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Meetの「Take notes for me」に「Quick notes」が加わりました。会議の主な要点を高い視点でまとめたもので、細かい部分を一つずつ読まなくても、大事な情報を素早く確認できます。",
+          "内容は1ページに収まり、会議で決まったやること、結果、話題のうち最も重要なものに絞られています。Googleは、主に役員や、細かい議論に深く関わらない人が、できるだけ早く情報をつかむためのものだと説明しています。"
+        ]
+      },
+      {
+        "heading": "文書とメールで最初に表示",
+        "paragraphs": [
+          "Quick notesは、Take notes for meの文書で最初に開くタブになりました。移動中にメモを確認する人のために、Take notes for meのメールでも、最初に目立つ形で表示される要約になります。文書を開く前に、核心をつかめるようにするための変更です。",
+          "会議の詳しい内容を確認したい場合は、「Full notes」のタブに移ります。これは以前の標準のメモの形式で、話し合いの詳しい流れや背景がすべて残っています。"
+        ]
+      },
+      {
+        "heading": "設定と対象プラン",
+        "paragraphs": [
+          "管理者向けの設定は、既存のTake notes for meの設定以外にはありません。利用者向けの設定もなく、即時リリースと計画的リリースのドメインですでに使えます。",
+          "対象は、Business StandardとPlus、Enterprise StandardとPlus、Frontline Plus、Google AI Pro for Education、個人向けのGoogle AI ProとUltraです。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "Quick notesは素早く要点をつかむのに便利ですが、判断の理由や反対意見はFull notesにしか残っていないことがあります。大事な決定について確認するときは、Full notesのタブも開いて流れを確かめてください。",
+          "議事録の書き方を学んでいる人は、Quick notesを手本に、結論、やること、話題の3つに分けて自分でも要点をまとめてみましょう。上司への報告メールを書くときにも、この形を使うと読み手が短時間で内容を理解できます。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      },
+      {
+        "label": "仕事から必要な学びを探す",
+        "href": "https://career.manapick.app/",
+        "kind": "career"
+      }
+    ],
+    "publishedAt": "2026-09-22",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/quick-notes-in-take-notes-for-me.html"
+  },
+  {
+    "id": "2026-09-22-google-sheets-pivot-manual-reorder-custom-sort",
+    "headline": "Google Sheetsのピボットテーブルで行と列を自由に並べ替え、ドラッグで順番を指定",
+    "description": "Google Sheetsのピボットテーブルで、行や列をドラッグして好きな順番に並べ替えられるようになりました。昇順・降順に限られず、複数の項目をまとめて動かせます。Excelの独自の並び順も読み込み時に保たれます。",
+    "category": "data",
+    "categoryLabel": "Excel・データ",
+    "whyCare": "集計表は、読み手が理解しやすい順番に並べることで伝わり方が変わります。部署や工程の順番どおりに並べられると、報告資料をそのまま作りやすくなり、データを見せる工夫を学ぶ題材にもなります。",
+    "facts": [
+      "ピボットテーブルの行や列の見出しを、表の上で直接ドラッグして並べ替えられる。",
+      "複数の行や列をまとめて動かせ、入れ子の子項目は親項目と一緒に動く。",
+      "独自の並び順は、ブラウザを閉じても、データの更新・絞り込み・配置の変更をしても保たれる。",
+      "Excelから読み込むと昇順・降順に戻っていた独自の並び順が保たれ、Excelへ書き出しても残る。"
+    ],
+    "sections": [
+      {
+        "heading": "昇順・降順以外の並べ方に対応",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Sheetsのピボットテーブルで、独自の並べ替えと手動での並べ替えができるようになりました。行や列をドラッグ&ドロップして、見せ方の都合や会社独自の階層に合わせた順番にできます。",
+          "これまでは、文字や数字の昇順か降順に限られていました。今回の更新で、例えば部署の並びや工程の順番など、決まった順番どおりに集計結果を並べられます。"
+        ]
+      },
+      {
+        "heading": "4つの新しい操作",
+        "paragraphs": [
+          "1つ目は、表の上で行や列の見出しを直接つかんで動かす操作で、落とす位置が分かる目印が表示されます。2つ目は、複数の行や列を選んでまとめて動かす操作です。",
+          "3つ目は、入れ子になった子項目が親項目と一緒に自動で動き、開いたり閉じたりしても構造が保たれることです。4つ目は、独自の並び順が、ブラウザを閉じた後も、データの更新、絞り込み、配置の変更をしても保たれることです。"
+        ]
+      },
+      {
+        "heading": "Excelとの互換性と展開時期",
+        "paragraphs": [
+          "Excelとのやり取りも大きく改善されました。これまでは、手動や独自の並び順を設定したピボットテーブルを含むExcelファイルを読み込むと、昇順か降順に戻っていました。今後は独自の並び順がそのまま保たれ、Excelへ書き出しても残ります。",
+          "管理者向けの設定はなく、すべてのGoogle Workspace利用者と個人のGoogleアカウントで使えます。展開は即時リリースのドメインで2026年9月22日から、計画的リリースのドメインで10月5日から始まり、それぞれ最大15日ほどかけて表示されます。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "ピボットテーブルを報告に使うときは、数字の大きさ順と、読み手がなじんでいる順番のどちらが伝わりやすいかを考えることが大切です。同じ集計を両方の並べ方で作り、上司や同僚に見せる場面を想像して比べてみてください。",
+          "Excelでピボットテーブルを学んでいる人は、Excelで独自の並び順を設定したファイルをSheetsに読み込み、順番が保たれるかを確かめる練習がおすすめです。ソフトをまたいだ作業に慣れておくと、職場での資料の受け渡しが楽になります。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Excelデータ分析ロードマップ",
+        "href": "/guide/excel-data/",
+        "kind": "guide"
+      },
+      {
+        "label": "Excel統計の学び方",
+        "href": "/learn/excel-statistics/",
+        "kind": "intent"
+      },
+      {
+        "label": "AIでデータ作業を効率化",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-09-22",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/manually-reorder-and-custom-sort-pivot.html"
+  },
+  {
+    "id": "2026-09-21-google-sheets-manual-calculation-setting",
+    "headline": "Google Sheetsに手動計算の設定、再計算を止めてまとめて更新",
+    "description": "Google Sheetsに手動計算の設定が加わりました。数式の自動再計算を一時的に止め、編集をまとめてから好きなときにシート全体を更新できます。初期設定はオフで、利用者が自分で有効にします。",
+    "category": "data",
+    "categoryLabel": "Excel・データ",
+    "whyCare": "数式が多い表では、入力のたびに再計算が走って作業が止まりがちです。計算のタイミングを自分で決められると、シナリオ分析や大量データの貼り付けを落ち着いて進められ、表計算の仕組みを理解するきっかけにもなります。",
+    "facts": [
+      "編集者は自動再計算を止め、編集をまとめてから、シート全体の更新を好きなときに実行できる。",
+      "公式の例は、大量データの更新、前提条件を変えるシナリオ分析、乱数や現在時刻のような変動する関数を使う表の3つ。",
+      "初期設定はオフで、「ファイル」→「設定」→「計算の設定」から利用者が有効にする。",
+      "すべてのGoogle Workspace利用者とWorkspace Individualの契約者が対象。"
+    ],
+    "sections": [
+      {
+        "heading": "計算のタイミングを自分で決める",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Sheetsに新しい手動計算の設定が加わりました。数式や参照がいつ更新されるかを細かく決められるようにするものです。",
+          "複雑な表やデータの多い表を編集する人は、自動の再計算を一時的に止め、編集をまとめて入力し、結果を見たいタイミングでシート全体を更新できます。Googleは、高度な分析作業を途切れずに進められる作業環境になると説明しています。"
+        ]
+      },
+      {
+        "heading": "公式が挙げる3つの使いどころ",
+        "paragraphs": [
+          "1つ目は大量の更新です。複数シートをまたぐ検索や集計など、数式が網の目のようにつながった表に大きなデータを貼り付けるとき、操作のたびに途中の再計算が走らず、まとめて入力できます。",
+          "2つ目は、財務や予測のモデルで前提条件を順番に変えるシナリオ分析です。最後に1回だけ計算すれば、途中の中途半端な結果ではなく完成した状態だけを確認できます。3つ目は、乱数や現在時刻のように変動する関数を使う表で、数字を止めたまま分析や説明ができます。"
+        ]
+      },
+      {
+        "heading": "設定方法と提供範囲",
+        "paragraphs": [
+          "管理者向けの設定はありません。機能は初期設定でオフになっており、利用者が表の「ファイル」から「設定」を開き、「計算の設定」で有効にします。詳しい手順はGoogleヘルプのスプレッドシートの地域と計算の設定のページで案内されています。",
+          "提供対象は、すべてのGoogle Workspace利用者とWorkspace Individualの契約者です。即時リリースと計画的リリースのドメインで、2026年9月21日から最大15日ほどかけて展開されます。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "手動計算に切り替えると、更新を実行するまで表の数字が古いままになる点に注意が必要です。共同で編集する表では、手動計算にしていることを周りに伝え、確認や共有の前には必ず全体を更新する習慣をつけてください。",
+          "Excelで計算方法の設定を学んだことがある人は、Sheetsでも同じ考え方で使えるかを小さな表で試すと理解が深まります。まずRANDのような変動する関数を入れた練習用の表を作り、自動と手動で数字の動き方がどう変わるかを確かめてみましょう。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Excelデータ分析ロードマップ",
+        "href": "/guide/excel-data/",
+        "kind": "guide"
+      },
+      {
+        "label": "Excel統計の学び方",
+        "href": "/learn/excel-statistics/",
+        "kind": "intent"
+      },
+      {
+        "label": "AIでデータ作業を効率化",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-09-21",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/new-manual-calculation-setting-in-Google-Sheets.html"
+  },
+  {
+    "id": "2026-09-18-gemini-notebook-back-to-school-learning-tools",
+    "headline": "Gemini Notebookに録音機能や音声での対話、約60秒の学習用ショート動画を追加",
+    "description": "Gemini Notebookに、学習向けの新機能がまとめて加わりました。モバイルアプリの録音機能、ノートブックとの音声での対話、対話型の学習まとめ、クイズの新形式、約60秒の学習用ショート動画などです。",
+    "category": "learning",
+    "categoryLabel": "学び方",
+    "whyCare": "講義の録音から復習、クイズでの確認、苦手分野の見直しまでを1つのノートブックで進められます。自分の資料に基づいた学習の流れを作りやすくなり、資格の勉強や学び直しにも応用できます。",
+    "facts": [
+      "AndroidとiOSのGemini Notebookアプリに録音機能が加わり、録音したメモは資料と並べて保存される。",
+      "18歳以上の利用者は、モバイルアプリで100近い言語を使い、ノートブックと声でリアルタイムに対話できる。",
+      "クイズに短い記述、選択式、穴埋めの形式が加わり、直近のクイズや単語カードの結果についてノートブックと話せる。",
+      "80を超える言語で、約60秒の学習用ショート動画の概要を作り、共有できる。"
+    ],
+    "sections": [
+      {
+        "heading": "録音と声での対話",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Gemini Notebookに、より一人ひとりに合った学習のための新機能がまとめて加わりました。AndroidとiOSのGemini Notebookアプリでは新しい録音機能を使って、講義を録音したり、移動中に考えを記録したりできます。録音したメモは資料と並べて保存され、引用や後からの編集もしやすくなっています。",
+          "18歳以上の利用者は、モバイルアプリで100近い言語を使い、ノートブックとリアルタイムに声で対話できます。答えはすべて資料に基づいているため、手順を追った案内を受けたり、質問したり、話すだけでいつでも割り込んだりできます。"
+        ]
+      },
+      {
+        "heading": "学習のまとめと試験対策",
+        "paragraphs": [
+          "学習中の集中を助けるために、「Reports」の中に対話型の学習のまとめが加わりました。要約と、クイズ、単語カード、マインドマップといったStudioの成果物を組み合わせたものです。",
+          "試験対策の機能も広がりました。クイズに短い記述、選択式、穴埋めの新しい形式が加わり、直近に終えたクイズや単語カードの結果についてノートブックと話して、次に何に集中すべきかを考えられます。クイズや単語カードは、問題を追加したり編集したりして自分用に調整できます。"
+        ]
+      },
+      {
+        "heading": "学習用のショート動画と提供範囲",
+        "paragraphs": [
+          "80を超える言語で、学習用のショート動画の概要も作れるようになりました。約60秒の短い動画で、説明と教育用のアニメーションを組み合わせ、複雑な公式や図、科学の概念を理解しやすくします。クラスメートなどと共有することもできます。",
+          "これらの機能は、Gemini Notebookがオンのグループや組織部門の利用者が使え、利用者向けの設定はありません。対象は、すべてのGoogle Workspace利用者、Workspace Individualの契約者、個人のGoogleアカウントの利用者で、2026年9月15日から長めの期間をかけて展開されています。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "講義やセミナーを録音してノートブックに入れ、その日のうちにクイズを作って解くと、聞いた内容の復習を短時間で済ませられます。間違えた問題についてノートブックと話し、どこを読み直すべきかを確かめる流れがおすすめです。",
+          "録音するときは、講義の主催者や話し手の許可を得ることを忘れないでください。ショート動画は全体像をつかむ入口として使い、細かい内容は元の資料で確かめると、AIに頼りすぎない学び方ができます。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "7日学習プランを作る",
+        "href": "/study-plan/",
+        "kind": "guide"
+      },
+      {
+        "label": "検索で多い学習テーマ",
+        "href": "/learn/",
+        "kind": "intent"
+      },
+      {
+        "label": "学びに使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-09-18",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/new-back-to-school-features-and-learning-tools-available-in-Gemini-Notebook.html"
+  },
+  {
+    "id": "2026-09-17-gemini-notebook-expert-intelligence-play-books",
+    "headline": "Gemini Notebookに購入した電子書籍を追加、本の内容に基づいて質問やクイズ作成",
+    "description": "Googleは、信頼できる情報源をAIで活用する取り組み「Expert Intelligence」をGemini Notebookから始めました。Google Play ブックスで購入した対応の電子書籍をノートブックに追加し、本文に基づく質問やクイズ作成ができます。",
+    "category": "learning",
+    "categoryLabel": "学び方",
+    "whyCare": "本で学んだ内容を、自分のノートや授業の資料と組み合わせて復習できます。本の本文に基づいて答えが返るため、読書をきっかけにした学び直しや、仕事の課題に本の考え方を当てはめる練習に使えます。",
+    "facts": [
+      "Expert Intelligenceは、主要な出版社の10万冊を超える本を対象に、Gemini Notebookから始まった。",
+      "Google Play ブックスで購入した対応の電子書籍をノートブックに追加し、本文に基づいて質問できる。",
+      "本の内容からインフォグラフィック、音声の概要、クイズなどを作れ、自分の資料と組み合わせられる。",
+      "共有されたノートブックで電子書籍を使うには、受け取った人も対象の電子書籍を購入している必要がある。"
+    ],
+    "sections": [
+      {
+        "heading": "本の内容をノートブックで使う",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Googleは、GoogleのAI製品を通じて信頼できる情報源を活用できるようにする取り組み「Expert Intelligence」を、Gemini Notebookから始めました。主要な出版社の10万冊を超える本が対象で、働く人や学生が、著者や専門家の知見をGemini Notebookに直接取り入れられます。",
+          "Google Play ブックスで購入した対応の電子書籍を、Gemini Notebookに直接追加できます。本について質問すると、本文に基づいた答えが返ります。インフォグラフィック、音声の概要、クイズなどを作って、本を新しい形で理解することもできます。米国の18歳以上の利用者には、数に限りがある中で本を1冊提供するとされています。"
+        ]
+      },
+      {
+        "heading": "自分の資料と組み合わせる例",
+        "paragraphs": [
+          "本の知見は、自分の情報を含むほかの資料と組み合わせられます。公式の例では、学生が授業のシラバスと講義ノートを購入した本と一緒に入れて、期末試験に向けた音声の概要や練習問題を作る使い方が紹介されています。",
+          "管理職が、マネジメントの実践についての本を参照しながら、部下へのフィードバックの伝え方や難しい会話の進め方について、Gemini Notebookと一緒に考える例もあります。なお、共有されたノートブックで電子書籍に質問したり成果物を作ったりするには、受け取った人も対象の電子書籍を購入している必要があります。"
+        ]
+      },
+      {
+        "heading": "使える条件",
+        "paragraphs": [
+          "使うには、Gemini Notebook、Google Play、Googleブックスの3つがオンになっている組織部門に所属している必要があります。教育機関では、Education PlusかTeaching and Learningのアドオンがあれば、管理者がグループ向けの購入で本を買い、Google Playへのアクセスを与えずに生徒へ割り当てることもできます。",
+          "本が対象かどうかは、Google Play ブックスの本の詳細ページで「ツール」の表示を押し、Gemini Notebookが表示されるかで確かめられます。対象は、Gemini Notebook、Google Play、Googleブックスが使えるすべてのGoogle Workspace利用者、Workspace Individualの契約者、個人のGoogleアカウントの利用者で、すでに使えます。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "本を読んだ後に、章ごとの要点をGeminiに質問し、自分の理解と比べると、読み落としに気づけます。クイズを作らせて答えることで、読んだ内容が記憶に残りやすくなります。",
+          "仕事に関する本なら、自分の業務のメモと一緒に登録し、「この考え方を今のチームの課題に当てはめると？」と尋ねてみてください。ただし、本の考え方をそのまま当てはめるのではなく、職場の状況に合うかを自分で判断することが大切です。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "7日学習プランを作る",
+        "href": "/study-plan/",
+        "kind": "guide"
+      },
+      {
+        "label": "検索で多い学習テーマ",
+        "href": "/learn/",
+        "kind": "intent"
+      },
+      {
+        "label": "学びに使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-09-17",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/introducing-expert-intelligence-in-Gemini-Notebook.html"
+  },
+  {
+    "id": "2026-09-17-notebooks-in-gemini-schools-organizations",
+    "headline": "Geminiの「ノートブック」が学校と組織のアカウントにも、テーマごとに資料と会話を整理",
+    "description": "Geminiで、テーマごとに会話や資料をまとめる「ノートブック」が、学生、教員、仕事で使う人にも提供されました。資料を最大10件登録して、その内容に合わせた答えや資料作りに使えます。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "whyCare": "テーマごとに資料と会話を分けて整理できると、AIとのやり取りが散らばらず、後から見返しやすくなります。授業の資料や仕事の調査資料を登録しておけば、その内容に沿った答えを得やすくなり、学びと仕事の両方に生かせます。",
+    "facts": [
+      "4月に個人向けに発表されたGeminiのノートブックが、学生、教員、仕事で使う人にも提供された。",
+      "Geminiアプリの左側のパネルで「New notebook」を選び、資料と取り組むテーマを登録する。資料は1つのノートブックに最大10件まで追加できる。",
+      "GeminiアプリとGemini Notebookを組み合わせて、同じ資料から動画の概要や学習ガイドを作れる。",
+      "初期設定でオンで、GeminiとGemini Notebookの両方がオンの利用者が使える。10月19日の更新で欧州経済領域のWorkspace利用者も対象に加わった。"
+    ],
+    "sections": [
+      {
+        "heading": "テーマごとに会話を整理する場所",
+        "paragraphs": [
+          "Google Workspace Updatesによると、4月に個人向けに発表されたGeminiの「ノートブック」が、あらゆる年齢の学生、教員、仕事で使う人にも提供されました。ノートブックは、プロジェクトや会話を整理するための専用の場所で、1つのテーマについての会話を1か所にまとめられます。",
+          "公式の例として、学生は授業の資料をすべて1つのノートブックに入れ、練習問題を作ったり難しい内容をかみ砕いたりする学習の相棒にできます。教員は、カリキュラムの基準、課題の評価基準、授業の型を入れて、それに沿った課題や教材、生徒へのフィードバックを素早く作れます。仕事で使う人は、製品情報、プロジェクトの詳細、調査報告、戦略のメモを入れて、要点をまとめたり成果物の下書きを作ったりできます。"
+        ]
+      },
+      {
+        "heading": "GeminiアプリとGemini Notebookの連携",
+        "paragraphs": [
+          "この機能は、GeminiアプリとGemini Notebookという2つのAIツールを組み合わせています。",
+          "例えば学生なら、授業のノートをノートブックに追加して、Gemini Notebookで動画の概要を作り、翌日にはGeminiアプリで同じノートブックを開いて、同じ資料から学習ガイドを作ってもらうといった使い方ができます。"
+        ]
+      },
+      {
+        "heading": "始め方と提供範囲",
+        "paragraphs": [
+          "始めるには、Geminiアプリの左側のパネルを開き、「New notebook」を押して、資料と取り組むテーマを追加します。1つのノートブックには、最大10件の資料を追加できます。",
+          "管理者側では初期設定でオンになっており、GeminiアプリとGemini Notebookのアクセス設定で管理します。両方がオンのグループや組織部門の利用者が使えます。対象は、すべてのGoogle Workspace利用者、Workspace Individualの契約者、個人のGoogleアカウントの利用者で、2026年9月14日から展開が始まり、10月19日の更新で欧州経済領域のWorkspace利用者も対象に加わりました。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "ノートブックは、1つのテーマに1つずつ作るのが基本です。例えば「Excel関数の学習」「来月の企画書」のように目的を分けると、登録する資料が混ざらず、Geminiの答えもその目的に沿ったものになりやすくなります。",
+          "登録できる資料は10件までなので、何を入れるかを選ぶこと自体が学習の整理になります。古くなった資料は入れ替え、答えの根拠になった資料を確かめる習慣をつけると、AIの答えを安心して使えるようになります。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AIロードマップ",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを比較する",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-09-17",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/notebooks-in-gemini-dedicated-workspace-for-focused-organized-work-now-for-schools-and-organizations.html"
+  },
+  {
+    "id": "2026-09-15-gmail-search-ai-overviews-global-english",
+    "headline": "Gmail検索のAIによる概要が世界に拡大、英語設定の有料プランが対象",
+    "description": "Gmailの検索欄に普通の言葉で質問すると、メールを探さなくても要点と答えを示す「AIによる概要」が、英語設定の有料プラン利用者へ世界的に広がりました。日本の個人アカウントは対象外です。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "whyCare": "メールの中から必要な情報を探す時間は、仕事の中で意外に大きな負担です。質問の形で検索できるようになると、検索語の選び方より、何を知りたいかを言葉にする力が大切になります。ただし日本の個人アカウントは対象外なので、使える条件を先に確かめる必要があります。",
+    "facts": [
+      "Gmailの検索欄に自然な言葉で質問すると、メールを読み込まなくても簡潔な要約と答えが表示される。",
+      "これまでは英語設定の米国の利用者に限られていたが、英語設定の有料プラン利用者へ世界的に拡大した。",
+      "個人向けのGoogle AI Plus・Pro・Ultraでは、欧州経済領域、英国、スイス、日本の個人アカウントが対象外。",
+      "Gmail、Chat、Meetのスマート機能と、Google Workspaceのスマート機能の両方をオンにする必要がある。"
+    ],
+    "sections": [
+      {
+        "heading": "検索欄で質問し、要点を受け取る",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Gmailの検索で使える「AIによる概要」の提供範囲が広がりました。この機能では、Gmailの検索欄に普通の言葉で質問すると、メールを一通ずつ探さなくても、簡潔な要約と答えが表示されます。",
+          "これまでは、言語を英語に設定した米国の利用者だけが対象でした。今回から、Gmailの言語を英語に設定している世界の有料プランの利用者に提供が広がります。"
+        ]
+      },
+      {
+        "heading": "使うために必要な設定",
+        "paragraphs": [
+          "管理者側では、GmailでのGemini for WorkspaceとWorkspace IntelligenceのGmailへのアクセスが有効になっていれば、初期設定でオンになります。",
+          "利用者側では、「Gmail、Chat、Meetのスマート機能」と「Google Workspaceのスマート機能」の両方がオンになっている必要があります。どちらかがオフの場合は、AIによる概要は使えません。"
+        ]
+      },
+      {
+        "heading": "対象プランと日本での扱い",
+        "paragraphs": [
+          "対象は、Business Starter、Standard、Plus、Enterprise Starter、Standard、Plus、Frontline Plus、教育機関向けのGoogle AI Pro for Education、AI Expanded Accessです。個人向けではGoogle AI Plus、Pro、Ultraが対象ですが、欧州経済領域、英国、スイス、日本の個人アカウントは除かれています。",
+          "展開は、即時リリースのドメインと個人アカウントで2026年9月3日から、計画的リリースのドメインで9月21日から始まりました。日本の会社や学校のWorkspaceアカウントの場合も、Gmailの言語が英語であることが条件です。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "質問の形で検索するときは、「誰から」「いつごろ」「何について」を入れると、知りたいことが伝わりやすくなります。AIの要約は便利ですが、大事な日付や金額は必ず元のメールを開いて確かめてください。",
+          "日本語設定の環境では使えないため、日本の利用者は検索演算子を使った通常の検索を身につけておくことも大切です。差出人や期間で絞り込む基本の検索を覚えておけば、AIの機能が使えない場面でもメールを素早く探せます。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AIロードマップ",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを比較する",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-09-15",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/gmail-searchs-ai-overviews-now-available-globally.html"
+  },
+  {
+    "id": "2026-09-10-gemini-in-google-sheets-android",
+    "headline": "AndroidのGoogle SheetsでGeminiが利用可能に、分析と要約に対応",
+    "description": "Google SheetsのGeminiが、Android端末でも使えるようになりました。データへの質問、分析結果の作成、グラフの作成ができます。モバイル版は分析と要約が中心で、複雑な編集や数式の作成はウェブ版を使います。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "whyCare": "スマホからでも表の内容をすぐに確かめられます。モバイル版とウェブ版でできることが違うため、AIに任せる作業と自分で操作する作業を分けて考える練習にもなります。",
+    "facts": [
+      "ウェブ版に続き、Android端末のGoogle SheetsでGeminiが使えるようになった。",
+      "Geminiのアイコンから、データへの質問、分析結果の作成、グラフの作成ができる。",
+      "モバイル版は分析と分かることの整理が中心で、複雑な編集・書式設定・数式の作成はウェブ版で行う。",
+      "対象はBusiness Standard・Plus、Enterprise Standard・Plus、Google AI Pro・Ultra、Google AI Pro for Education。"
+    ],
+    "sections": [
+      {
+        "heading": "AndroidでもSheetsのGeminiを利用",
+        "paragraphs": [
+          "Google Workspace Updatesによると、ウェブ版のGemini in Sheetsに続いて、Android端末のGoogle SheetsでもGeminiが使えるようになりました。外出先でも、データを素早く分析して理解できるようにするための更新です。",
+          "Geminiのアイコンを押すと、データについて質問したり、分析から分かることをまとめさせたり、グラフを作らせたりできます。「この表を要約して」「傾向を分析して」といった頼み方の例も用意されています。"
+        ]
+      },
+      {
+        "heading": "モバイル版でできることの範囲",
+        "paragraphs": [
+          "発表では、モバイル版の機能は今のところデータの分析と、そこから分かることの整理に重点を置いていると注意書きがあります。",
+          "複雑な編集、書式の設定、数式の作成をしたい場合は、ウェブ版のGemini in Google Sheetsを使うよう案内されています。スマホでは内容の確認、パソコンでは表づくりという使い分けが前提になっています。"
+        ]
+      },
+      {
+        "heading": "使い方と対象プラン",
+        "paragraphs": [
+          "対象の利用者には初期設定で提供されます。対応するスプレッドシートをAndroid端末で開き、「Ask Gemini」のアイコンを押して使います。このモバイル向け機能だけを対象にした管理者設定はなく、Gemini for Google Workspaceの有効化の設定に従います。",
+          "対象は、Business StandardとPlus、Enterprise StandardとPlus、教育機関向けのGoogle AI Pro for Education、個人向けのGoogle AI ProとUltraです。2026年9月9日から最大15日ほどかけて展開が始まっています。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "スマホでGeminiを使うときは、まず要約や傾向の確認から始めるのが向いています。返ってきた説明は元の数字と見比べ、どの列を使って判断したのかを確かめる癖をつけると、AIの答えをうのみにせずに済みます。",
+          "数式やピボットテーブルを自分で作る力は、ウェブ版やパソコンで練習するのが近道です。スマホで気づいた疑問を学習メモに残し、後で表計算の基礎として学び直すと、AI活用と表計算のスキルを両方伸ばせます。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AIロードマップ",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを比較する",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-09-10",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/08/gemini-in-google-sheets-is-now-available-on-Android-devices.html"
+  },
+  {
+    "id": "2026-09-10-google-sheets-20-million-cells",
+    "headline": "Google Sheetsのセル上限が2倍に、1ファイル最大2,000万セルへ",
+    "description": "Google Sheetsのセル数の上限が、これまでの最大1,000万セルから最大2,000万セルに増えました。新しいファイル、既存のファイル、ExcelやCSVから読み込むファイルのすべてに自動で適用されます。",
+    "category": "data",
+    "categoryLabel": "Excel・データ",
+    "whyCare": "大きなデータを扱うと、表計算ソフトの上限にすぐ届いてしまいます。上限が広がることで、ExcelやCSVの大きなデータをそのままSheetsで練習や分析に使いやすくなり、データを分割する手間も減ります。",
+    "facts": [
+      "セル数の上限が最大1,000万セルから最大2,000万セルに増えた。",
+      "上限は新規、既存、読み込んだファイルに適用され、ExcelやCSVの読み込みも含まれる。",
+      "利用者の設定は不要で、作成・拡張・読み込みのときに自動で適用される。",
+      "読み込むファイルのバイト数の上限も、近く引き上げる予定とされている。"
+    ],
+    "sections": [
+      {
+        "heading": "1ファイルで扱えるセルが2倍に",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Sheetsのセル数の上限が、これまでの最大1,000万セルから最大2,000万セルに増え、正式に提供されました。Googleは、Sheetsを高性能で反応が速く、規模を広げられる表計算ツールにするための改善の一つと説明しています。",
+          "新しい上限は、新しく作るファイルだけでなく、既存のファイルや読み込んだファイルにも適用されます。一から表を作る場合も、既存のブックを広げる場合も、1つのスプレッドシートで最大2,000万セルまで扱えます。"
+        ]
+      },
+      {
+        "heading": "ExcelやCSVの大きなデータも読み込みやすく",
+        "paragraphs": [
+          "公式発表では、Microsoft Excelの.xlsx形式やCSVファイルから大きなデータを読み込む場面も対象に含まれると明記されています。これまで上限に届いていたデータも、1つのファイルにまとめやすくなります。",
+          "さらにGoogleは、ほかの表計算形式から読み込むファイルのバイト数の上限も、近く引き上げる予定だとしています。ただし、具体的な数値や時期は今回の発表には書かれていません。"
+        ]
+      },
+      {
+        "heading": "設定は不要、展開時期と対象",
+        "paragraphs": [
+          "管理者向けにも利用者向けにも設定はありません。表を作るとき、広げるとき、読み込むときに、新しい上限が自動で適用されます。",
+          "展開は、即時リリースのドメインで2026年9月10日から、計画的リリースのドメインで9月28日から始まり、それぞれ最大15日ほどかけて表示されます。対象は、すべてのGoogle Workspace利用者、Workspace Individualの契約者、個人のGoogleアカウントの利用者です。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "セル数が増えても、表が大きくなると、動作が重く感じられる場合もあります。大量のデータを扱うときは、元データのシートと集計用のシートを分け、必要な列だけを使う設計にすると、後から見直すときにも分かりやすくなります。",
+          "データ分析を学ぶ人は、公開されているCSVデータを読み込み、ピボットテーブルで集計する練習から始めるのがおすすめです。データがさらに大きくなった場合に備えて、Power BIのような専用ツールの考え方にも少しずつ触れておくと、次の学習につなげやすくなります。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Excelデータ分析ロードマップ",
+        "href": "/guide/excel-data/",
+        "kind": "guide"
+      },
+      {
+        "label": "Excel統計の学び方",
+        "href": "/learn/excel-statistics/",
+        "kind": "intent"
+      },
+      {
+        "label": "AIでデータ作業を効率化",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-09-10",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/doubled-cell-limits-in-google-sheets-now-generally-available.html"
+  },
+  {
+    "id": "2026-09-09-google-sheets-pivot-calculated-field-editor",
+    "headline": "Google Sheetsのピボットテーブルに計算フィールド専用の数式エディタ、入力中に誤りを確認",
+    "description": "Google Sheetsのピボットテーブルで、計算フィールドを作るための専用の数式エディタが加わりました。項目名をメニューから挿入でき、数式の誤りをその場で確かめてから反映できます。",
+    "category": "data",
+    "categoryLabel": "Excel・データ",
+    "whyCare": "計算フィールドは、売上から利益率を出すような独自の指標を集計表に加えるときに使います。項目名の打ち間違いや数式の誤りに気づきやすくなるため、ピボットテーブルを学ぶ段階でのつまずきが減ります。",
+    "facts": [
+      "計算フィールドを作成・編集するための専用の数式エディタの画面が加わった。",
+      "項目を選ぶメニューから列名を挿入でき、手で打ち込む必要がない。",
+      "数式の書き方や誤りをリアルタイムで確かめ、反映する前に間違いに気づける。",
+      "これまではサイドバーのカードに数式を入力し、項目名を正確に手入力する必要があり、その場での誤りの確認もなかった。"
+    ],
+    "sections": [
+      {
+        "heading": "計算フィールド専用のエディタ",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Sheetsのピボットテーブルで、計算フィールドを作ったり直したりするための専用の数式エディタが加わりました。独自の数式や、ほかの値から計算する指標を作る作業を、より速く正確に進められるようにするものです。",
+          "新しいエディタには3つの特長があります。独自の計算を作成・変更するための専用の画面、列名を手で打たずに挿入できる項目選択メニュー、そして変更を反映する前に誤りに気づけるリアルタイムの書き方と数式のチェックです。"
+        ]
+      },
+      {
+        "heading": "これまでとの違い",
+        "paragraphs": [
+          "これまでGoogle Sheetsで計算フィールドを作るには、サイドバーの中のカードに数式を直接入力する必要がありました。項目名を一字一句正確に手入力しなければならず、入力中に誤りを確かめる仕組みもありませんでした。",
+          "今回の更新で、計算フィールドをより速く、より正確に作って管理できるようになります。Googleは、数式をスプレッドシート全体で一貫させ、保守しやすくすることにつながると説明しています。"
+        ]
+      },
+      {
+        "heading": "提供範囲と展開時期",
+        "paragraphs": [
+          "この機能に管理者向けの設定はありません。すべてのGoogle Workspace利用者と、個人のGoogleアカウントの利用者が対象です。使い方は、Googleドキュメント エディタのヘルプにあるピボットテーブルの作成と使用のページで案内されています。",
+          "展開は、即時リリースのドメインで2026年9月8日から、計画的リリースのドメインで9月21日から始まり、それぞれ最大15日ほどかけて表示されます。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "計算フィールドを学ぶときは、売上と原価の列がある練習用の表を用意し、利益や利益率を計算フィールドで作ってみるのが分かりやすい方法です。元の表に列を追加する方法と結果を比べると、それぞれの向き不向きが見えてきます。",
+          "数式のチェック機能に頼りすぎず、計算の結果が手計算や別の方法での集計と一致するかを一度確かめておくと安心です。Excelでも同じ考え方の機能があるため、両方で作り方を比べると、集計の仕組みをより深く理解できます。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Excelデータ分析ロードマップ",
+        "href": "/guide/excel-data/",
+        "kind": "guide"
+      },
+      {
+        "label": "Excel統計の学び方",
+        "href": "/learn/excel-statistics/",
+        "kind": "intent"
+      },
+      {
+        "label": "AIでデータ作業を効率化",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-09-09",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/create-and-edit-calculated-fields-in-Google-Sheets-pivot-tables-with-an-improved-editor.html"
+  },
+  {
+    "id": "2026-09-08-google-chat-persistent-drafts",
+    "headline": "Google Chatで送信前の下書きを自動保存、別の端末で続きを書いて送信",
+    "description": "Google Chatで、送っていないメッセージが自動で下書きとして保存されるようになりました。端末の間で同期されるため、パソコンで書き始めてスマホで仕上げて送ることもできます。下書きは最長30日間保存されます。",
+    "category": "work",
+    "categoryLabel": "仕事・整理",
+    "whyCare": "書きかけの連絡を失わずに済み、落ち着いて文面を見直してから送れるようになります。チャットでの報告や相談を丁寧に書く習慣づくりにも役立ち、移動中にスマホで仕上げるといった柔軟な働き方を後押しします。",
+    "facts": [
+      "送っていないメッセージは自動で保存され、Chatを閉じたり端末を再起動したりしても残る。",
+      "下書きは端末の間で同期され、ある端末で書き始めて別の端末で送れる。",
+      "下書きは会話ごとに保存され、入力欄と「下書き」のショートカットで確認できる。",
+      "送っていない下書きは最長30日間保持され、管理者・利用者の設定はない。"
+    ],
+    "sections": [
+      {
+        "heading": "書きかけのメッセージが自動で残る",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Chatで下書きが保存されるようになりました。送っていないメッセージは自動で保存されるため、後で仕上げて送れます。Chatを閉じたり、端末を再起動したりしても、書きかけの内容は消えません。",
+          "下書きは端末の間でも同期されます。公式の例では、机で書き始めたメッセージを、通勤中にタブレットやスマホで仕上げて送る使い方が紹介されています。"
+        ]
+      },
+      {
+        "heading": "下書きの保存場所と保存期間",
+        "paragraphs": [
+          "下書きは、個人のメッセージ、グループのメッセージ、スペースといった会話ごとに保存されます。ある会話やスレッドの下書きは、その入力欄に残っています。",
+          "すべての会話の下書きは、「下書き」のショートカットでまとめて確認できます。送っていない下書きは、最長30日間保持されます。"
+        ]
+      },
+      {
+        "heading": "展開時期と対象",
+        "paragraphs": [
+          "管理者向けの設定も、利用者向けの設定もありません。対象は、すべてのGoogle Workspace利用者、Workspace Individualの契約者、個人のGoogleアカウントの利用者です。",
+          "ウェブ版は即時リリースのドメインで2026年9月8日から展開されました。その後、10月8日の更新で展開の進め方が変わり、ウェブ版の計画的リリースとAndroid版は9月22日から、iOS版は10月13日から、15日を超える場合もある長めの期間をかけて展開されています。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "大事な報告や相談のメッセージは、すぐに送らず一度下書きとして置き、時間をおいて読み直すと、伝わりにくい表現に気づきやすくなります。下書きが自動で残るようになったことで、この見直しの習慣を取り入れやすくなりました。",
+          "下書きは30日を過ぎると保持されないため、長く残したい文章はドキュメントなど別の場所に保存してください。仕事の連絡文の書き方を学んでいる人は、結論、理由、お願いの順に書く練習を、下書き機能を使って繰り返してみるのもおすすめです。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      },
+      {
+        "label": "仕事から必要な学びを探す",
+        "href": "https://career.manapick.app/",
+        "kind": "career"
+      }
+    ],
+    "publishedAt": "2026-09-08",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/pick-up-where-you-left-off-with-persistent-drafts-in-Google-Chat.html"
+  },
+  {
+    "id": "2026-09-08-google-sheets-chart-custom-web-fonts",
+    "headline": "Google SheetsのグラフでGoogle Fontsのフォントを自由に使用、Excelとのやり取りでも保持",
+    "description": "Google Sheetsのグラフで、Google Fontsのウェブフォントをすべて使えるようになりました。グラフのタイトル、軸、データラベル、凡例の文字に好きなフォントを設定できます。Excelとの読み書きでもフォントが保たれやすくなります。",
+    "category": "data",
+    "categoryLabel": "Excel・データ",
+    "whyCare": "グラフの文字の見やすさは、資料の伝わりやすさに直結します。会社の資料の書体に合わせやすくなり、Excelとファイルをやり取りしてもフォントが崩れにくくなるため、見せ方まで含めた資料作りを学ぶ機会になります。",
+    "facts": [
+      "グラフエディタのフォント選択で「その他のフォント」を選ぶと、Google Fontsのウェブフォントを検索・追加・適用できる。",
+      "対象は、グラフのタイトルと副題、横軸・縦軸のタイトルとラベル、データラベル、凡例の文字。",
+      "これまでExcelから読み込むと別のフォントに置き換わっていたが、両方にあるフォントは読み込み・書き出しで保たれる。",
+      "すべてのGoogle Workspace利用者と個人のGoogleアカウントで使え、管理者設定はない。"
+    ],
+    "sections": [
+      {
+        "heading": "グラフでGoogle Fontsを利用",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Sheetsのグラフで、Google Fontsのウェブフォントをすべて使えるようになりました。グラフエディタのサイドバーにあるフォントの選択欄で「その他のフォント」を選ぶと、フォントを探して追加し、グラフの主な文字に設定できます。",
+          "フォントを変えられるのは、グラフのタイトルと副題、横軸と縦軸のタイトルとラベル、データラベル、凡例の文字です。グラフの中の主な文字を、資料全体の書体に合わせられるようになります。"
+        ]
+      },
+      {
+        "heading": "Excelとのやり取りでもフォントを保持",
+        "paragraphs": [
+          "今回の更新では、Microsoft Excelとの読み込みと書き出しの互換性も上がりました。これまでは、独自のフォントを使ったグラフを含むExcelファイルを読み込むと、フォントが欠けたり別のフォントに置き換わったりしていました。",
+          "今後は、両方のソフトにある独自のフォントは、ファイルの読み込みと書き出しで保たれます。Googleは、SheetsとExcelの間でファイルを移しても、見た目の統一感とブランドの表現を保てると説明しています。"
+        ]
+      },
+      {
+        "heading": "提供範囲と展開時期",
+        "paragraphs": [
+          "この機能に管理者向けの設定はありません。すべてのGoogle Workspace利用者と、個人のGoogleアカウントの利用者が対象です。使い方は、Googleドキュメント エディタのヘルプにあるグラフの追加と編集のページで案内されています。",
+          "展開は、即時リリースのドメインで2026年9月1日から、計画的リリースのドメインで9月21日から始まり、それぞれ最大15日ほどかけて表示されます。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "グラフのフォントを選ぶときは、デザインの好みよりも、小さな文字でも読みやすいかを優先するのがおすすめです。資料全体で使うフォントを1つか2つに決め、グラフのタイトルとラベルに同じルールを当てはめると、見た目がまとまります。",
+          "資料作りを学んでいる人は、同じグラフをフォントだけ変えて何パターンか作り、画面とスマホの両方で読みやすさを比べてみてください。Excelとファイルをやり取りする職場では、相手の環境にもそのフォントがあるかを事前に確かめておくと安心です。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Excelデータ分析ロードマップ",
+        "href": "/guide/excel-data/",
+        "kind": "guide"
+      },
+      {
+        "label": "Excel統計の学び方",
+        "href": "/learn/excel-statistics/",
+        "kind": "intent"
+      },
+      {
+        "label": "AIでデータ作業を効率化",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-09-08",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/use-custom-web-fonts-in-google-sheets-charts.html"
+  },
+  {
+    "id": "2026-09-02-google-vids-document-video-summaries",
+    "headline": "Google VidsでドキュメントやPDF、Wordを要約動画に変換",
+    "description": "Google Vidsで、Googleドキュメント、PDF、Wordのファイルから要約動画を作れるようになりました。AIが台本とナレーションを作り、内容に合った映像を付けます。研修資料や長い報告書の要点をつかむ用途を想定しています。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "whyCare": "文章の多い資料を短い動画にできると、研修資料の共有や復習の方法が増えます。資料のどこが要点かをAIがどうまとめるかを確かめることで、要約の質を見極める目も養えます。",
+    "facts": [
+      "Googleドキュメント、PDF、Wordのファイルから、Google Vidsで要約動画を作れる。",
+      "AIが台本とナレーションを作り、内容に合った映像を付ける。",
+      "管理者設定も利用者の設定もなく、vids.newから試せる。",
+      "対象はBusiness Starter・Standard・Plus、Enterprise Starter・Standard・Plus、Education Plus、Google AI Plus・Pro・Ultra、Nonprofitsなど。"
+    ],
+    "sections": [
+      {
+        "heading": "文書を短い動画にまとめる",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Vidsで、Googleドキュメント、PDF、Wordのファイルを要約動画に変えられるようになりました。AIを使って台本とナレーションを作り、内容に合わせた映像を付けて、文書を動画として見られるようにします。",
+          "Googleは、研修資料や会議メモに目を通すとき、長い文書や報告書を確認するときなどに、情報を取り込みやすくするための機能だと説明しています。文字の多いファイルを短い動画にすることで、要点を素早くつかめるようにするものです。"
+        ]
+      },
+      {
+        "heading": "始め方と展開時期",
+        "paragraphs": [
+          "この機能には、管理者向けの設定も利用者向けの設定もありません。Googleヘルプの「Google Vidsで文書から要約動画を作成する」のページで使い方が案内されており、vids.newからすぐに試せます。",
+          "即時リリースのドメインではすでに使えます。計画的リリースのドメインでは、2026年9月5日から最大15日ほどかけて展開されます。"
+        ]
+      },
+      {
+        "heading": "対象プラン",
+        "paragraphs": [
+          "対象は、Business Starter、Standard、Plus、Enterprise Starter、Standard、Plus、Education Plus、個人向けのGoogle AI Plus、Pro、Ultra、Nonprofitsです。",
+          "教育機関向けのアドオンでは、Google AI Pro for EducationとTeaching and Learningも対象に含まれています。所属先の契約によって使えるかどうかが変わるため、使えない場合は管理者に確認してください。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "要約動画は、元の資料を読む代わりではなく、全体像をつかむ入口として使うのがおすすめです。動画を見た後に元の文書を開き、AIが取り上げなかった大事な点がないかを確かめると、要約の限界にも気づけます。",
+          "社内研修の資料を作る人は、同じ資料から作った要約動画と、自分で作った箇条書きの要約を比べてみてください。どちらが伝わりやすいかを同僚に聞くと、資料を短くまとめる力を伸ばすきっかけになります。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AIロードマップ",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを比較する",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-09-02",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/turn-google-docs-pdfs-and-word-files-into-video-summaries-in-Google-Vids.html"
+  },
+  {
+    "id": "2026-09-02-gemini-workspace-custom-instructions-more-apps",
+    "headline": "WorkspaceのGemini、カスタム指示がドライブ・Chat・Gmail・スプレッドシート・スライドにも拡大",
+    "description": "Googleドキュメントで使えていたGeminiのカスタム指示が、ドライブとChatの「Ask Gemini」、Gmail・スプレッドシート・スライドのGeminiサイドパネルでも使えるようになりました。文体や形式の好みを毎回伝える必要がなくなります。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "whyCare": "AIに毎回同じ条件を伝える手間が減り、どのアプリでも自分に合った答えが返りやすくなります。どんな指示を保存すると役立つかを考えることは、生成AIを仕事で使いこなすための基本の練習になります。",
+    "facts": [
+      "Googleドキュメントで先に始まったGeminiのカスタム指示が、ほかのWorkspaceのGeminiにも広がった。",
+      "対象は、ドライブのAsk Gemini、ChatのAsk Gemini、Gmail・スプレッドシート・スライドのGeminiサイドパネル。",
+      "Geminiに頼んで指示を保存でき、メニューの「設定」→「パーソナライズ」で確認・管理できる。",
+      "管理者設定はなく、対象のGemini機能を使えるすべてのWorkspace利用者が対象。"
+    ],
+    "sections": [
+      {
+        "heading": "カスタム指示が使えるアプリが増える",
+        "paragraphs": [
+          "Google Workspace Updatesによると、今年初めにGoogleドキュメントで始まったGeminiのカスタム指示が、ほかのWorkspaceのGeminiでも使えるようになりました。カスタム指示は、Geminiに覚えておいてほしい好みや条件を保存しておく機能です。",
+          "新たに対象になったのは、ドライブのAsk Gemini、ChatのAsk Gemini、そしてGmail、スプレッドシート、スライドのGeminiサイドパネルです。"
+        ]
+      },
+      {
+        "heading": "毎回伝えなくても好みに合わせる",
+        "paragraphs": [
+          "カスタム指示を使うと、Geminiが自分の文体、口調、書式の好みに合わせて答えるようになり、会話のたびに同じことを繰り返す必要がなくなります。Googleは、時間の節約と、答えの一貫性につながると説明しています。",
+          "利用者は、これらのGeminiの画面で共通して守られる指示をまとめて作れます。どのアプリで使っても、自分の必要や好みに合った体験がそろうようにするための更新です。"
+        ]
+      },
+      {
+        "heading": "指示の保存方法と展開時期",
+        "paragraphs": [
+          "始めるには、サイドパネル、ドライブのAsk Gemini、ChatのAsk Geminiのいずれかを開き、特定の指示を保存するようGeminiに頼みます。保存した指示は、メニューから「設定」を開き、「パーソナライズ」で確認や管理ができます。",
+          "管理者向けの設定はありません。ドライブとChatのAsk Gemini、Gmail・スプレッドシート・スライドのGeminiサイドパネルを使えるすべてのWorkspace利用者が対象で、2026年9月2日から最大15日ほどかけて展開されます。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "カスタム指示には、「結論を先に書く」「箇条書きは3つまで」のように、どの仕事でも共通して使える条件を入れるのがおすすめです。アプリごとに変えたい細かい条件は、その都度の指示で伝える方が混乱しにくくなります。",
+          "指示を保存したら、同じ質問を保存の前後で試し、答えがどう変わるかを確かめてください。思ったとおりに働かない指示は、言い方を変えて書き直すことで、AIに伝わる指示の書き方が身についていきます。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AIロードマップ",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを比較する",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-09-02",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/custom-instructions-for-gemini-in-Workspace-now-available-in-more-apps.html"
+  },
+  {
+    "id": "2026-09-01-google-pics-ai-image-workspace-ga",
+    "headline": "Google Workspaceに画像生成・編集の「Google Pics」、ドキュメントやスライドの画像も直接編集",
+    "description": "Googleは、AIで画像を作ったり、写っている物ごとに細かく編集したりできる「Google Pics」を正式に提供しました。ドキュメントやスライドの画像を選んで、そのままPicsで編集できます。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "whyCare": "資料に使う画像を、別の画像ソフトを覚えなくても作ったり直したりできます。指示文の書き方で結果が変わるため、生成AIへの頼み方を、資料作りという身近な作業の中で練習できます。",
+    "facts": [
+      "Picsでは、指示文から画像を作るほか、パソコン、Googleドライブ、Googleフォトの画像を読み込んでAIで編集できる。",
+      "画像の中の要素を選んだ部分的な編集、文字の編集や翻訳、用途に合わせた切り抜き、2Kや4Kへの高解像度化、版の履歴に対応する。",
+      "ドキュメントやスライドで画像を選ぶと、ワンクリックでPicsの編集機能を使える。",
+      "対象はBusiness Standard・Plus、Enterprise Standard・Plus、Google AI Pro・Ultraなどで、生成AI機能には使用量の上限がある。"
+    ],
+    "sections": [
+      {
+        "heading": "画像の生成と細かな編集を1つのアプリで",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Picsが正式に提供されました。高度なAIによる画像生成と、写っている物ごとに細かく直せる画像編集を、Workspaceでの制作作業に取り入れるものです。Picsを開いて指示文を入力すると、Googleの画像生成モデルで画像を作れます。パソコン、Googleドライブ、Googleフォトから画像を読み込んで、AIで編集することもできます。",
+          "主な機能は、指示文による画像の生成や手直し、複数の候補の提示、画像の中の要素を選んだ部分的な編集です。画像内の文字を編集したり、形式を変えたり、翻訳したりもできます。さらに、ウェブ、SNS、印刷などの用途に合わせた切り抜き、2Kや4Kへの高解像度化、元に戻せる版の履歴にも対応しています。"
+        ]
+      },
+      {
+        "heading": "ドキュメントやスライドから直接編集",
+        "paragraphs": [
+          "Picsは、普段使っているツールの中でも使えます。Googleドキュメントやスライドで画像を選ぶと、ワンクリックで、アプリやタブを切り替えずにPicsの編集機能を使えます。",
+          "ほかのWorkspaceアプリと同じように、チームの人を招いて一緒に作業したり、リンクで画像を共有したり、GoogleドライブからPicsの画像を作ったり開いたりできます。今後数週間のうちに、ドライブに保存したほとんどの画像をワンクリックでPicsで開いて編集できるようになる予定です。"
+        ]
+      },
+      {
+        "heading": "対象プランと使用量の上限",
+        "paragraphs": [
+          "管理者側では初期設定でオンになっており、ドメイン、組織部門、グループの単位でオフにできます。対象は、Business StandardとPlus、Enterprise StandardとPlus、個人向けのGoogle AI ProとUltra、Google AI Pro for Education、AI Expanded Accessです。",
+          "Picsの生成AI機能には使用量の上限があります。少なくとも2027年2月28日までは多めに使えますが、その後は制限される可能性があり、変更前に知らせるとされています。スライドなどほかのアプリから使う場合は、既存の画像生成の上限が適用されます。展開は即時リリースのドメインで2026年9月1日から、計画的リリースのドメインで9月15日から始まります。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "資料用の画像を作るときは、「何を」「どんな雰囲気で」「どこに使うか」を指示文に入れると、目的に合った候補が出やすくなります。複数の候補を見比べ、伝えたい内容に一番合うものを選ぶ練習をしてみてください。",
+          "AIで作った画像を社外向けの資料に使う場合は、所属先の利用ルールや、画像に含まれる文字や人物の扱いを確認することが大切です。まずは社内向けの資料や学習用のメモで試し、編集機能に慣れてから本番の資料に使うと安心です。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AIロードマップ",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを比較する",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-09-01",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/google-pics-brings-pro-level-ai-image-creation-and-editing-to-Google-Workspace.html"
+  },
+  {
+    "id": "2026-08-25-google-sheets-pivot-grouped-fields-persist",
+    "headline": "Google Sheetsのピボットテーブル、グループ化した項目を保存して再利用",
+    "description": "Google Sheetsのピボットテーブルで、日付や数値をグループ化した項目が編集パネルに残るようになりました。表から外しても設定が消えず、後から再び追加できます。Excelとの読み書きでも保たれます。",
+    "category": "data",
+    "categoryLabel": "Excel・データ",
+    "whyCare": "ピボットテーブルは、データ集計の学習で必ず通る機能です。グループ化の設定を作り直さずに出し入れできると、月別・四半期別などの切り口を気軽に試せるため、集計の考え方を手を動かしながら身につけやすくなります。",
+    "facts": [
+      "独自のグループ化や、日付・時刻・数値のグループ化項目が、ピボットテーブルの編集パネルに再利用できる元の項目として残る。",
+      "グループ化した項目を表の配置から外しても、設定は失われない。",
+      "これまでExcelから読み込むと消えていたグループ化の設定が、読み込み・書き出しで保たれる。",
+      "すべてのGoogle Workspace利用者と個人のGoogleアカウントで使え、管理者設定はない。"
+    ],
+    "sections": [
+      {
+        "heading": "グループ化した項目が編集パネルに残る",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Sheetsのピボットテーブルで、グループ化した項目を保持できるようになりました。独自に作ったグループや、日付、時刻、数値をまとめた項目が、ピボットテーブルの編集パネルに再利用できる元の項目として残ります。",
+          "これにより、グループ化した項目を表の配置から一度外しても、元の設定は失われません。必要になったときに再び追加したり、内容を直したりするのがいつでも簡単にできます。"
+        ]
+      },
+      {
+        "heading": "Excelファイルとのやり取りも改善",
+        "paragraphs": [
+          "今回の更新では、Microsoft Excelの.xlsxファイルとの互換性も上がりました。これまでは、グループ化した項目を含むピボットテーブルをExcelから読み込むと、その独自のグループが項目の一覧から消え、手作業で作り直す必要がありました。",
+          "今後は、ファイルを読み込むときも書き出すときも、グループ化の設定が正しく保たれます。Excelで作った集計表をSheetsで引き継ぐ場面でも、作業をやり直す手間が減ります。"
+        ]
+      },
+      {
+        "heading": "提供範囲と展開時期",
+        "paragraphs": [
+          "この機能に管理者向けの設定はありません。すべてのGoogle Workspace利用者と、個人のGoogleアカウントの利用者が対象です。使い方は、Googleドキュメント エディタのヘルプにあるピボットテーブルの作成とカスタマイズのページで案内されています。",
+          "展開は、即時リリースのドメインで2026年8月25日から、計画的リリースのドメインで9月14日から始まり、それぞれ最大15日ほどかけて表示されます。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "ピボットテーブルを学ぶときは、同じ売上データを日付で月ごと、四半期ごとにまとめ直し、見え方の違いを比べる練習が効果的です。グループ化した項目が残るようになったので、切り口を入れ替えながら試す練習がしやすくなりました。",
+          "Excelでピボットテーブルを学んでいる人は、Excelでグループ化した表をSheetsに読み込み、設定がどう引き継がれるかを確かめてみてください。両方のソフトで同じ集計ができるようになると、職場の環境が変わっても対応しやすくなります。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Excelデータ分析ロードマップ",
+        "href": "/guide/excel-data/",
+        "kind": "guide"
+      },
+      {
+        "label": "Excel統計の学び方",
+        "href": "/learn/excel-statistics/",
+        "kind": "intent"
+      },
+      {
+        "label": "AIでデータ作業を効率化",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-08-25",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/08/preserve-and-reuse-grouped-pivot-table-fields-in-Google-Sheets.html"
+  },
+  {
+    "id": "2026-08-24-gemini-app-interactive-simulations",
+    "headline": "Geminiアプリが質問に合わせて動かせるシミュレーションや3Dモデルを作成",
+    "description": "Geminiアプリが、質問や難しいテーマを、会話の中で操作できる図やシミュレーションに変えられるようになりました。DNAの3D構造を回したり拡大したり、振り子のエネルギーの移り変わりを見たりできます。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "whyCare": "文章だけでは分かりにくい仕組みを、手で動かしながら理解できます。理科や数学の学び直し、仕事で扱う数字の関係を確かめるときに、自分で条件を変えて試す学び方がしやすくなります。",
+    "facts": [
+      "Geminiアプリが、質問に合わせて操作できる図やシミュレーションを会話の中に作る。",
+      "答えには、質問のために作られた表、グリッド、シミュレーションなどの視覚的な要素が含まれる。",
+      "「DNAの仕組みを3Dで見せて」と頼むと、3DのDNA構造を回したり拡大したりできる。",
+      "すべてのWorkspace利用者、Workspace Individualの契約者、年齢条件を満たす利用者が対象で、使用量の上限がある。"
+    ],
+    "sections": [
+      {
+        "heading": "文章と静止画から、動かせる図へ",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Geminiアプリが、質問や複雑なテーマを、会話の中で操作できる独自の図に変えられるようになりました。",
+          "これまでの答えは、主に文章と動かない図でした。今後は、質問したテーマの理解を助ける、実際に動かせるシミュレーションが返ります。分子を回転させたり、複雑な物理の仕組みを再現したりと、1つの指示文でさらに深く調べられます。"
+        ]
+      },
+      {
+        "heading": "公式が示す例",
+        "paragraphs": [
+          "答えには、表、グリッド、シミュレーションなど、その質問のために作られた視覚的な要素が含まれます。例えば「DNAの仕組みを3Dで見せて」と頼むと、3DのDNA構造を回したり拡大したりしながら見られます。",
+          "ほかにも、振り子がエネルギーを行き来させる様子を見たり、資金の減り方を対話型の表で学んだりする例が紹介されています。始めるには、Geminiに「見せて」「見える形にして」と頼みます。"
+        ]
+      },
+      {
+        "heading": "対象と管理者設定",
+        "paragraphs": [
+          "Geminiを有効にしているすべての組織で、初期設定でオンになっています。Geminiアプリと関連するツールは、Workspaceの管理コンソールにある生成AIの設定で管理され、この機能もその設定に従います。利用者向けの設定はありません。",
+          "対象は、すべてのGoogle Workspace利用者、Workspace Individualの契約者、年齢の条件を満たす利用者です。即時リリースと計画的リリースのドメインですでに使えますが、使用量の上限があります。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "シミュレーションは、条件を少しずつ変えて結果を比べるときに力を発揮します。学び直しでは、教科書で読んだ仕組みをGeminiに図にしてもらい、自分で動かして確かめてから、もう一度文章で説明してみると理解が定着しやすくなります。",
+          "AIが作った図や数字が正しいとは限らないため、大事な内容は教科書や公式の資料と照らし合わせてください。仕事で使う場合は、計算の前提を自分で書き出し、図の動きがその前提と合っているかを確かめる習慣をつけると安心です。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AIロードマップ",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを比較する",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-08-24",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/08/generate-interactive-simulations-and-models-in-the-Gemini-app.html"
+  },
+  {
+    "id": "2026-08-20-google-slides-record-with-google-vids",
+    "headline": "GoogleスライドからGoogle Vidsでプレゼンを録画、文字起こしで編集してすぐ共有",
+    "description": "Googleスライドの右側のメニューに「Record」（録画）が加わり、Google Vidsを使ってプレゼンを録画できるようになりました。文字起こしを使った編集やナレーションの生成に対応し、録画後すぐに共有できるリンクが作られます。",
+    "category": "work",
+    "categoryLabel": "仕事・整理",
+    "whyCare": "説明動画や研修動画を、いつものスライドから作れるようになります。話し方や構成を録画で見直せるため、プレゼンの練習や、会議に出られない人への共有にも使いやすくなります。",
+    "facts": [
+      "スライドの右側のメニューに新しい「Record」（録画）が加わり、Google Vidsで録画できる。",
+      "文字起こしを使った編集やナレーションの生成など、Vidsの作成機能を使える。",
+      "従来のスライドの録画機能は「表示」→「スライドの録画」に移り、新旧の両方を使える。",
+      "すべてのGoogle Workspace利用者、Workspace Individualの契約者、個人のGoogleアカウントで使える。"
+    ],
+    "sections": [
+      {
+        "heading": "スライドの画面から録画を開始",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Googleスライドの画面から、Google Vidsを使ってプレゼンを録画できるようになりました。スライドの右側のメニューに新しい「Record」（録画）が表示されます。",
+          "このメニューを選ぶと、分かりやすい手順で録画が進み、最後にすぐ共有できるリンクが作られます。"
+        ]
+      },
+      {
+        "heading": "Vidsの編集機能で仕上げる",
+        "paragraphs": [
+          "今回の連携で、文字起こしを使った編集や、ナレーションの生成といった、Vidsの高度な作成機能を使えるようになります。",
+          "Googleは、シンプルなスライドを、短時間で完成度の高い動画に変えられると説明しています。録画した後に言い間違いを直したり、説明を整えたりする作業を、Vidsの中で進められます。"
+        ]
+      },
+      {
+        "heading": "これまでの録画機能との関係",
+        "paragraphs": [
+          "すでにスライドの録画機能を使っている組織では、従来の録画機能と新しいVidsの録画機能の両方を使えます。従来の録画機能は、「表示」メニューの「スライドの録画」に移ります。",
+          "管理者向けの設定も、利用者向けの設定もありません。対象は、すべてのGoogle Workspace利用者、Workspace Individualの契約者、個人のGoogleアカウントの利用者です。展開は即時リリースのドメインで2026年8月20日から、計画的リリースのドメインで9月7日から始まりました。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "プレゼンの練習では、一度録画して自分で見返すだけでも、話す速さや言葉の癖に気づけます。文字起こしを読むと、同じ言葉を繰り返していないか、結論が先に伝わっているかも確かめやすくなります。",
+          "研修や引き継ぎの資料を作る人は、スライド1枚ごとに話す内容を短いメモにまとめてから録画すると、撮り直しが減ります。完成した動画のリンクを共有するときは、見てほしい人だけが開ける共有設定になっているかも確認してください。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      },
+      {
+        "label": "仕事から必要な学びを探す",
+        "href": "https://career.manapick.app/",
+        "kind": "career"
+      }
+    ],
+    "publishedAt": "2026-08-20",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/08/record-presentations-in-google-slides-with-Google-Vids.html"
+  },
+  {
+    "id": "2026-08-19-ask-gemini-in-google-chat",
+    "headline": "Google Chatに「Ask Gemini」、メールやドライブを横断して検索し予定やタスクも管理",
+    "description": "Google Chatに、Workspace全体のデータを使える「Ask Gemini」が8月26日から加わります。Gmailやドライブ、カレンダーを横断した検索、文章や画像の作成、会話の要約、予定やタスクの管理を1か所で行えます。",
+    "category": "work",
+    "categoryLabel": "仕事・整理",
+    "whyCare": "情報を探してタブを行き来する時間を減らすための機能です。チャットで仕事を進める職場では、AIに何を頼めば作業が早くなるかを考えることが、日々の業務を見直すきっかけになります。",
+    "facts": [
+      "Ask Gemini in Chatは、Workspace Intelligenceを使い、Gmail・ドライブ・カレンダーなどのデータを横断して検索できる。",
+      "開始に合わせて、ChatのGeminiサイドパネルは表示されなくなり、Chatのサイドパネルの会話履歴は新しい画面に移行しない。",
+      "この変更は、Googleアカウントの言語が英語の利用者だけが対象で、ほかの言語の利用者はサイドパネルを使い続けられる。",
+      "2026年10月1日までは上限が高い試用期間で、その後は使用量の上限が適用される。"
+    ],
+    "sections": [
+      {
+        "heading": "Chatから仕事全体に話しかける",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Chatに「Ask Gemini」が2026年8月26日から加わります。Workspace Intelligenceを使った、仕事のための統合された指示の入口と位置づけられています。",
+          "できることとして、Gmail、ドライブ、カレンダーなどのデータを横断して情報を集める、会話の場を離れずに画像や重要な連絡文を作る、すべての会話の状況を1か所でつかむ、会議の予定を入れてタスクを管理する、といった例が挙げられています。話題ごとのセッションに分けて、後から続きを進めることもできます。"
+        ]
+      },
+      {
+        "heading": "Geminiサイドパネルからの変更点",
+        "paragraphs": [
+          "Ask Geminiは、これまでChatのGeminiサイドパネルにあった、ファイルを探す、やることを書き出す、会話を要約するといった機能の多くを引き継ぎます。開始後は、Chatのサイドパネルは表示されなくなり、ChatからGemを使うこともできなくなります。Gemは、ほかのWorkspaceアプリのサイドパネルでは引き続き使えます。",
+          "Chatのサイドパネルでの会話履歴は、新しいAsk Geminiには移りません。管理者は会話履歴を書き出せ、組織が許可していれば利用者もダウンロードできます。データのエクスポートやGoogle Takeoutでは、「Google Chat」ではなく「Gemini in Workspace」の中に保存されています。"
+        ]
+      },
+      {
+        "heading": "対象の言語と使い方",
+        "paragraphs": [
+          "この変更の対象は、Googleアカウントの言語を英語にしている利用者だけです。ほかの言語の利用者は、これまでどおりサイドパネルを使えます。対応言語は今後増やすとされています。",
+          "使うにはWorkspaceのスマート機能が有効になっている必要があり、Chatの左側の「ショートカット」に表示されます。キーボードでは、ChromeOSとWindowsはCtrl＋g、macOSはCommand＋gで開けます。2026年10月1日までは上限が高い試用期間で、その後は使用量の上限が適用されます。対象はBusiness StandardとPlus、Enterprise StandardとPlus、Google AI Pro for Educationです。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "Ask Geminiに頼むときは、「先週のどの会議の」「どのプロジェクトについて」のように範囲をはっきりさせると、横断検索の結果を絞り込みやすくなります。返ってきた情報は、元のメールやファイルを開いて確かめてから使うようにしてください。",
+          "日本語設定の環境では、当面は従来のサイドパネルが使われます。英語設定に切り替えて試す場合は、サイドパネルの会話履歴が新しい画面に移らない点に注意し、必要な履歴は事前に保存しておくと安心です。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      },
+      {
+        "label": "仕事から必要な学びを探す",
+        "href": "https://career.manapick.app/",
+        "kind": "career"
+      }
+    ],
+    "publishedAt": "2026-08-19",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/08/ask-gemini-in-chat.html"
+  },
+  {
+    "id": "2026-08-17-gemini-notebook-make-a-copy",
+    "headline": "Gemini Notebookでノートブック全体をコピー、先生や同僚の資料をもとに自分用に",
+    "description": "Gemini Notebookで、コピーの権限があるノートブックを、資料やStudioで作った成果物ごと丸ごとコピーできるようになりました。先生が共有したノートブックをコピーして、自分の学習用に育てる使い方ができます。",
+    "category": "learning",
+    "categoryLabel": "学び方",
+    "whyCare": "先生や同僚が整えた資料を土台に、自分だけの学習ノートを作れます。一から資料を集める手間が減る分、自分の理解に合わせた問題作りや復習に時間を使えるようになります。",
+    "facts": [
+      "コピーの権限があれば、資料とStudioの成果物を含めてノートブック全体をコピーできる。",
+      "ドライブの資料は、コピーする人が元のファイルにアクセスしてコピーできる権限を持つ場合だけ含まれる。",
+      "個人のチャット履歴と利用者が書いたメモはコピーされず、コピーは元のノートブックと同期しない。",
+      "ノートブックの所有者は共有設定の「Allow copies」でコピーを許可するか決められ、初期設定は許可。"
+    ],
+    "sections": [
+      {
+        "heading": "既存のノートブックを土台にする",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Gemini Notebookで、コピーの権限があるノートブックを、関連する資料とStudioの成果物ごと丸ごとコピーできるようになりました。ほかの人が共有した作業やひな形を土台に、作業を進められます。",
+          "例えば、学生は先生が共有したノートブックをコピーし、自分の学習メモを足して、自分に合った練習問題や単語カードを作れます。同僚が基本情報をまとめたノートブックをコピーし、資料を足して特定のプロジェクト向けに整えることもできます。"
+        ]
+      },
+      {
+        "heading": "コピーされるものとされないもの",
+        "paragraphs": [
+          "コピーすると、資料とStudioの内容が新しい利用者のライブラリに入ります。Studioの内容には、音声の概要、動画の概要、学習ガイド、単語カード、クイズ、スライドといった成果物と、それらを作るための指示文や独自のチャット設定が含まれます。ただし、ドライブの資料は、コピーする人が元のファイルにアクセスしてコピーできる場合だけ含まれます。",
+          "個人のチャット履歴と、利用者が書いたメモは引き継がれません。また、コピーしたノートブックは元のノートブックと同期しないため、元の所有者が後で更新しても、コピーの内容は上書きされません。"
+        ]
+      },
+      {
+        "heading": "共有設定と提供範囲",
+        "paragraphs": [
+          "ノートブックの所有者は、共有設定の「Allow copies」の欄で、ほかの人にコピーを許可するかどうかを決められます。初期設定では、コピーは許可されています。管理者向けの設定はありません。",
+          "対象は、Gemini Notebookを使えるすべてのGoogle Workspace利用者と、個人のGoogleアカウントの利用者です。即時リリースと計画的リリースのドメインで、すでに使えます。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "コピーは元と同期しないため、元のノートブックが更新されたら、必要に応じて新しい資料を自分のコピーにも追加してください。どの時点の資料をもとにしているかをメモしておくと、内容の古さに気づきやすくなります。",
+          "自分のノートブックを共有する人は、初期設定でコピーが許可されている点に注意が必要です。社外秘の資料を含む場合は、共有前に「Allow copies」の設定を確かめ、必要ならコピーを許可しない設定に変えましょう。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "7日学習プランを作る",
+        "href": "/study-plan/",
+        "kind": "guide"
+      },
+      {
+        "label": "検索で多い学習テーマ",
+        "href": "/learn/",
+        "kind": "intent"
+      },
+      {
+        "label": "学びに使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-08-17",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/08/make-copy-of-notebook-in-gemini-notebook.html"
+  },
+  {
+    "id": "2026-08-13-google-meet-take-notes-in-person-meetings",
+    "headline": "Google Meetの「自動メモ」が対面の会議にも対応、要約とやることを文書に保存",
+    "description": "Google Meetの「Take notes for me」が、ビデオ会議だけでなく対面の会議にも使えるようになりました。Meetのホーム画面から始めると、Geminiが要約、やること、文字起こしをGoogleドキュメントにまとめます。",
+    "category": "work",
+    "categoryLabel": "仕事・整理",
+    "whyCare": "対面の打ち合わせでも、メモを取ることに気を取られずに話し合いに集中できます。会議の内容を後から確かめやすくなる一方、録音を始める前に参加者へ伝えるなど、記録の扱い方を学ぶきっかけにもなります。",
+    "facts": [
+      "ウェブ版やモバイル版のMeetのホーム画面で「Take notes」（メモを取る）のボタンを選ぶと、対面の会議のメモを始められる。",
+      "会議の後、Geminiが整理された要約、やること、文字起こし全文をGoogleドキュメントにまとめ、ドライブに保存してリンクをメールで送る。",
+      "Androidは8月11日から、ウェブは早くて8月14日から、iOSは早くて8月31日から、長めの期間をかけて展開される。",
+      "対象はBusiness Standard・Plus、Enterprise Standard・Plus、Google AI Pro・Ultra、Frontline Plusなど。"
+    ],
+    "sections": [
+      {
+        "heading": "対面の会議もMeetでメモ",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Meetの「Take notes for me」が、対面の会議でも使えるようになりました。Googleは、会話に集中することと、後で必要になる内容を記録することの両立は難しいとして、ビデオ会議だけでなく対面での共同作業も支えられるようにすると説明しています。",
+          "始めるには、ウェブ版やモバイル版のGoogle Meetのホーム画面で「Take notes」（メモを取る）のボタンを選びます。録音が始まると、Geminiが対面の会議のメモを取り始めます。"
+        ]
+      },
+      {
+        "heading": "会議の後に届く成果物",
+        "paragraphs": [
+          "会議が終わったら、ボタンを押して音声の記録を止めます。すると、Geminiが整理された要約、やること、文字起こし全文を自動で1つのGoogleドキュメントにまとめます。",
+          "まとめた文書はGoogleドライブに直接保存され、そのリンクがメールで届きます。会議の後に自分でメモを清書する手間を減らせる仕組みです。"
+        ]
+      },
+      {
+        "heading": "管理者設定と展開時期",
+        "paragraphs": [
+          "この機能は、既存のGoogle Meetのメモに関する管理者設定で管理されます。対象は、Business StandardとPlus、Enterprise StandardとPlus、個人向けのGoogle AI ProとUltra、Frontline Plus、Google AI Pro for Educationです。",
+          "展開は、Androidで2026年8月11日から、ウェブで早くて8月14日から、iOSで早くて8月31日から始まり、いずれも15日を超える場合もある長めの期間をかけて表示されます。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "対面の会議で記録を取るときは、始める前に参加者へ伝えて了承を得ることが大切です。社外の人がいる場合や、個人情報を扱う場合は、所属先の記録に関するルールも確認してください。",
+          "AIがまとめた要約とやることは、会議の最後に参加者全員で見直すと、聞き違いや抜けに気づけます。議事録の書き方を学んでいる人は、AIの要約と自分のメモを比べ、何が決まり、誰がいつまでに何をするかが書かれているかを確かめる練習をしてみましょう。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      },
+      {
+        "label": "仕事から必要な学びを探す",
+        "href": "https://career.manapick.app/",
+        "kind": "career"
+      }
+    ],
+    "publishedAt": "2026-08-13",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/08/take-notes-with-me-for-in-person-meetings-is-now-available.html"
+  },
+  {
+    "id": "2026-08-13-google-sheets-canvas-interactive-mini-apps",
+    "headline": "Google Sheetsに「Sheets canvas」、指示文だけで表を操作できるミニアプリに",
+    "description": "Google Sheetsに、Geminiを使った新機能「Sheets canvas」が登場しました。普通の言葉で頼むだけで、表のデータからかんばんボードやダッシュボードなどの操作できるミニアプリを作れます。開始時点は英語設定のウェブ版のみです。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "whyCare": "数式やプログラムを書かずに、表のデータを見やすい画面に変えられます。生成AIへの頼み方と、元データの整え方の両方が結果を左右するため、AI活用とデータ整理を一緒に学ぶ題材になります。",
+    "facts": [
+      "Sheets canvasは、普通の言葉の指示で、表のデータから読み書きできるミニアプリを作るGeminiの機能。",
+      "canvasでの変更は元の表にすぐ反映され、表の更新もcanvasに即時に反映される。",
+      "開始時点では、言語を英語に設定したアカウントのウェブ版でのみ使える。",
+      "対象はBusiness Standard・Plus、Enterprise Standard・Plus、Google AI Pro・Ultraなどで、利用者ごとの使用量の上限がある。"
+    ],
+    "sections": [
+      {
+        "heading": "表の上に重ねて使うミニアプリ",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Sheetsに「Sheets canvas」が加わりました。Geminiを使い、簡単な指示文だけで、表をその人の作業に合った操作できるアプリに変える機能です。表のデータの上に重ねて表示され、チームで見やすい形に整えられます。",
+          "主な特長として、1つの指示文だけで、コードや数式、外部ツールなしに作れることが挙げられています。canvasでカードを動かしたり項目を足したりすると元の表にすぐ反映され、表を更新するとcanvasにも反映されます。Geminiに頼んで配置や見た目、機能を後から直すこともでき、共有設定は元の表と同じものが使われます。"
+        ]
+      },
+      {
+        "heading": "公式が示す作れるものの例",
+        "paragraphs": [
+          "例として、予算の表を使う財務担当者が、費用の要因が四半期の予算にどう影響するかを分析する対話型のダッシュボードを頼む場面が紹介されています。物流を担当する人が、地域ごとの担当割り当てを見える化する管理表を頼む例もあります。",
+          "作れるものの例は、作業の段階ごとにタスクを並べてドラッグで進み具合を更新できるかんばんボード、シナリオを変えて試せる財務予測のダッシュボード、付箋を使ってアイデアを出し合うホワイトボードです。"
+        ]
+      },
+      {
+        "heading": "使える条件と展開時期",
+        "paragraphs": [
+          "開始時点では、言語を英語に設定したアカウントのウェブ版でのみ使えます。Gemini in Sheetsが有効な利用者には初期設定で提供され、Workspaceのスマート機能をオンにしている必要があります。対象の人には、SheetsのサイドパネルにGeminiのアイコンが表示されます。",
+          "対象はBusiness StandardとPlus、Enterprise StandardとPlus、個人向けのGoogle AI ProとUltra、教育機関向けのGoogle AI Pro for Education、AI Expanded Accessなどです。作成と編集には利用者ごとの使用量の上限があります。展開は即時リリースのドメインで2026年8月10日から、計画的リリースのドメインで8月31日から始まります。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "canvasの出来は、元の表がどれだけ整理されているかに左右されます。見出しの行をそろえ、1行に1件のデータを入れるという表の基本を先に押さえておくと、Geminiへの指示も短く分かりやすくなります。",
+          "試すときは、自分のタスク一覧のような小さな表から始め、かんばんボードを作って、カードを動かしたときに元の表がどう変わるかを確かめてみてください。英語設定が必要な点に注意し、業務の大事なデータで使う前に、共有範囲と使用量の上限を確認しておきましょう。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AIロードマップ",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを比較する",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-08-13",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/08/use-google-sheets-canvas-to-visualize-data.html"
+  },
+  {
+    "id": "2026-08-11-google-sheets-excel-table-pivot-import",
+    "headline": "ExcelのテーブルがGoogle Sheetsのテーブルとして読み込まれるように、連動するピボットも保持",
+    "description": "Google SheetsでExcelファイルを読み込むとき、ExcelのテーブルがSheetsのテーブルとしてそのまま変換されるようになりました。テーブル範囲を元にしたピボットテーブルも、固定の表にならずに読み込めます。",
+    "category": "data",
+    "categoryLabel": "Excel・データ",
+    "whyCare": "職場ではExcelとGoogle Sheetsの両方を使う場面が多くあります。読み込み後に表の形や集計を作り直す手間が減ると、学んだ表の作り方をどちらのソフトでも生かしやすくなり、ファイルの引き継ぎで起きるミスも減らせます。",
+    "facts": [
+      "ExcelのテーブルがSheetsのテーブルとして読み込まれるようになった。",
+      "Excelでテーブル範囲を元にしたピボットテーブルを、Sheetsで完全に読み込めるようになった。",
+      "これまでは、テーブルはSheetsのテーブルにならず、テーブルに連動するピボットテーブルは固定の表に置き換わっていた。",
+      "すべてのGoogle Workspace利用者と個人のGoogleアカウントで使え、管理者設定はない。"
+    ],
+    "sections": [
+      {
+        "heading": "2つの読み込み改善",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google SheetsでMicrosoft Excelのファイルを変換するときに、書式と連動するデータを保つ2つの改善が加わりました。",
+          "1つ目は、ExcelのテーブルがSheetsのテーブルとしてそのまま読み込まれるようになったことです。2つ目は、Excelでテーブル範囲を元にして作ったピボットテーブルを、Sheetsで完全に読み込めるようになったことです。"
+        ]
+      },
+      {
+        "heading": "これまでとの違い",
+        "paragraphs": [
+          "これまでは、Excelファイルを変換しても、ExcelのテーブルはSheetsのテーブルになりませんでした。そのため、テーブルの構造や書式の便利さを使えないままでした。",
+          "また、テーブルに連動するピボットテーブルは、動かない固定の表に置き換わっていました。今回の更新で、データの構造が保たれたまま読み込まれ、読み込んだ表をすぐに使えるようになります。Googleは、手作業で作り直す必要がないことを最も大きな利点として挙げています。"
+        ]
+      },
+      {
+        "heading": "提供範囲と展開時期",
+        "paragraphs": [
+          "どちらの機能にも管理者向けの設定はありません。すべてのGoogle Workspace利用者と、個人のGoogleアカウントの利用者が対象です。使い方は、Googleドキュメント エディタのヘルプにあるテーブルとピボットテーブルのページで案内されています。",
+          "テーブルの読み込みは、即時リリースと計画的リリースのどちらのドメインでもすでに使えます。連動するピボットテーブルの読み込みは、2026年8月11日から最大15日ほどかけて展開されます。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "テーブルは、見出しと範囲がはっきりした表を作るための基本の機能です。Excelで表をテーブルに変換し、そのテーブルを元にピボットテーブルを作るという流れを一度練習しておくと、Sheetsへ移したときにも同じ考え方で扱えます。",
+          "実際に試すときは、練習用のExcelファイルをSheetsに読み込み、元データに行を足したときにピボットテーブルの集計がどう変わるかを確かめてください。両方のソフトで動きを確かめておくと、職場でファイルを受け渡すときにも安心です。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Excelデータ分析ロードマップ",
+        "href": "/guide/excel-data/",
+        "kind": "guide"
+      },
+      {
+        "label": "Excel統計の学び方",
+        "href": "/learn/excel-statistics/",
+        "kind": "intent"
+      },
+      {
+        "label": "AIでデータ作業を効率化",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-08-11",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/08/improved-file-import-google-sheets-tables.html"
+  },
+  {
+    "id": "2026-08-07-workspace-studio-add-source-gemini-notebook",
+    "headline": "Workspace StudioでGemini Notebookへの資料追加を自動化、ノートブックを常に最新に",
+    "description": "Google Workspace Studioに、Gemini Notebookへ資料を追加する新しい手順が加わりました。文章、ドライブのファイルのリンク、YouTubeやウェブのURLを、繰り返し実行する作業の流れの中で自動で追加できます。",
+    "category": "work",
+    "categoryLabel": "仕事・整理",
+    "whyCare": "情報収集の作業を自動化すると、ノートブックを最新の状態に保ちながら、内容を読んで考えることに時間を使えます。どの作業を自動化できるかを考えることは、仕事の進め方を見直すきっかけになります。",
+    "facts": [
+      "Workspace Studioに「Add a source to Gemini Notebook」の手順が加わった。",
+      "文章、ドライブのファイルへのリンク、YouTubeやウェブのURLを、ノートブックの資料として自動で追加できる。",
+      "これまでは、ノートブックを最新に保つには資料を1件ずつ手で追加する必要があった。",
+      "管理者がGemini for Google Workspaceの手順を許可していれば初期設定で使え、Business Starter・Standard・Plus、Enterprise Standard・Plus、Education Fundamentals・Standard・Plusなどが対象。"
+    ],
+    "sections": [
+      {
+        "heading": "資料の追加を作業の流れに組み込む",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Workspace StudioとGemini Notebookの新しい連携で、ノートブックへの資料の追加を、繰り返し実行する作業の流れの一部として自動化できるようになりました。",
+          "これまでは、Gemini Notebookを最新の状態に保つために、資料を1件ずつ手で追加する必要がありました。新しい「Add a source to Gemini Notebook」の手順を使うと、文章、ドライブのファイルへのリンク、YouTubeやウェブのURLを、ノートブックの資料として追加し、常に最新の内容を反映させられます。"
+        ]
+      },
+      {
+        "heading": "使い方",
+        "paragraphs": [
+          "利用者は、Google Workspace Studioでこの手順を試せます。Workspace Studioは、繰り返しの作業の流れを作って自動で動かすためのツールです。",
+          "詳しい使い方は、Workspace Studioのヘルプにある、Gemini Notebookに資料を追加する手順のページで案内されています。"
+        ]
+      },
+      {
+        "heading": "管理者設定と対象プラン",
+        "paragraphs": [
+          "管理者がGemini for Google Workspaceの手順を許可していれば、この手順は初期設定で使えます。展開は2026年8月6日から始まり、最大15営業日ほどかけて表示されます。",
+          "対象は、Business Starter、Standard、Plus、Enterprise StandardとPlus、Education Fundamentals、Standard、Plus、教育機関向けのGoogle AI Pro for EducationとTeaching and Learning、AI Expanded Accessです。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "例えば、毎週更新される社内の報告書や、定期的にチェックしている業界のウェブページを自動で追加するようにしておくと、ノートブックに聞くだけで最新の動きを確かめられます。",
+          "自動で資料が増え続けると、古い情報と新しい情報が混ざりやすくなります。月に一度は資料の一覧を見直し、不要になったものを外すなど、自動化と手入れを組み合わせて使うのがおすすめです。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      },
+      {
+        "label": "仕事から必要な学びを探す",
+        "href": "https://career.manapick.app/",
+        "kind": "career"
+      }
+    ],
+    "publishedAt": "2026-08-07",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/08/automatically-add-sources-to-your-Gemini-Notebooks-in-Workspace-Studio.html"
+  },
+  {
+    "id": "2026-08-05-google-classroom-gemini-rubric-generation",
+    "headline": "Google Classroomで課題の作成画面からGeminiが評価基準（ルーブリック）を作成",
+    "description": "Google Classroomで、課題を作る画面からGeminiに評価基準（ルーブリック）の案を作らせられるようになりました。課題の内容をもとに案が作られ、先生が確認・編集してから課題に追加します。",
+    "category": "learning",
+    "categoryLabel": "学び方",
+    "whyCare": "評価基準を作る準備の時間を減らせます。何をどのように評価するかを言葉にすることは、教える人だけでなく、社内研修を担当する人や、学ぶ側が目標を確かめるうえでも役立つ考え方です。",
+    "facts": [
+      "課題の作成画面の「Rubrics」欄で、課題の内容をもとにGeminiがClassroomで使える評価基準を作る。",
+      "先生は、提案された評価基準の項目を確認・編集してから課題に追加できる。",
+      "既存の評価基準のファイルをClassroom用に変換したり、Geminiタブで作った評価基準をスプレッドシートやドキュメントに書き出したりもできる。",
+      "18歳以上の利用者だけが対象で、Education Fundamentals、Standard、Plusで使える。"
+    ],
+    "sections": [
+      {
+        "heading": "課題の内容から評価基準を作る",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Classroomで評価基準を作って採点する作業を簡単にするため、先生が課題を作る流れの中で、課題の内容をもとにClassroomで使える評価基準をすぐに作れるようになりました。",
+          "課題の作成画面にある「Rubrics」の欄で、Geminiの助けを借りて課題に合った評価基準を作ります。先生は、提案された評価の項目を確認して編集してから課題に追加できるため、準備の時間を節約できます。"
+        ]
+      },
+      {
+        "heading": "評価基準を作る3つの方法",
+        "paragraphs": [
+          "今回の更新で、Classroomで評価基準を作って使う方法は複数になりました。新しく加わったのが、課題の作成画面でGeminiに評価基準の案を作らせる方法です。",
+          "ほかに、課題の作成画面の「Rubrics」欄で、すでに持っている評価基準を選んでClassroom用に変換する方法があります。また、授業を計画するときにGeminiタブで情報を伝えて評価基準を作り、スプレッドシートやドキュメントに書き出してからクラスに添付する方法もあります。"
+        ]
+      },
+      {
+        "heading": "対象と展開時期",
+        "paragraphs": [
+          "この機能は18歳以上の利用者だけが対象です。管理者がGemini in Classroomを有効にしていれば、初期設定で使えます。",
+          "対象はEducation Fundamentals、Standard、Plusです。即時リリースと計画的リリースのドメインで、2026年8月5日から1〜3日ほどで全面展開されました。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "AIが作った評価基準は、授業のねらいと合っているか、生徒が読んで理解できる言葉になっているかを確かめてから使うのがおすすめです。評価の観点が多すぎる場合は、本当に見たい力に絞ると採点もしやすくなります。",
+          "社内研修やeラーニングを作る人にとっても、評価基準を先に決めてから教材を作る考え方は参考になります。学ぶ側も、評価基準を見て何ができればよいかを確かめてから取り組むと、学習の目標がはっきりします。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "7日学習プランを作る",
+        "href": "/study-plan/",
+        "kind": "guide"
+      },
+      {
+        "label": "検索で多い学習テーマ",
+        "href": "/learn/",
+        "kind": "intent"
+      },
+      {
+        "label": "学びに使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-08-05",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/08/streamlining-rubric-generation-in-Google-Classroom-with-Gemini.html"
+  },
+  {
+    "id": "2026-08-04-google-classroom-gemini-all-ages-starter-prompts",
+    "headline": "Google ClassroomのGeminiがあらゆる年齢の生徒に拡大、授業の内容に合わせた質問の入口",
+    "description": "Google ClassroomのGeminiが、8月10日から、管理者が利用を許可しているあらゆる年齢の小中高生と大学生に広がります。生徒向けの質問の例は、クラスと課題を選ぶと、その内容を踏まえたものになります。",
+    "category": "learning",
+    "categoryLabel": "学び方",
+    "whyCare": "授業の資料をもとに、単語カードや練習問題を作って自分で復習できるようになります。AIの答えには誤りがあり得るため、授業の内容と照らし合わせて使う姿勢を身につけることが大切です。",
+    "facts": [
+      "8月10日から、Gemini in Classroom、Gemini、Gemini Notebookの利用を管理者に許可されているあらゆる年齢の生徒がGemini in Classroomを使える。",
+      "生徒はGeminiタブで、授業の資料から単語カードや練習問題を作れ、Gemini Notebookに教材を同期できる。",
+      "質問の例を押すとクラスと課題を選ぶ欄が表示され、課題名、指示、教材がGeminiへの指示に取り込まれる。",
+      "管理者は、18歳未満の生徒だけを含む組織部門を作ってその部門だけGemini in Classroomをオフにできる。"
+    ],
+    "sections": [
+      {
+        "heading": "あらゆる年齢の生徒へ拡大",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google ClassroomのGeminiは、先生の授業準備を助けるために始まり、その後18歳以上の大学生にも広がっていました。2026年8月10日からは、管理者がGemini in Classroom、Gemini、Gemini Notebookの利用を許可しているあらゆる年齢の小中高生と大学生も使えるようになります。",
+          "生徒はClassroomのGeminiタブで、授業の資料を学習に役立つ対話型の形に変えられます。例えば、授業の資料を選んで、そのクラスに合った単語カードや練習問題をGeminiと作れます。Gemini Notebookを使える生徒は、先生が配った資料をGemini Notebookに同期し、学習ガイド、音声の概要、インフォグラフィックなどを作れます。"
+        ]
+      },
+      {
+        "heading": "授業の内容を踏まえた質問の入口",
+        "paragraphs": [
+          "生徒向けのGeminiタブにある質問の例が、Classroomの情報を使えるようになりました。質問の例を押すと、特定のクラスと課題を選ぶ欄が表示され、その課題名、指示、教材がGeminiへの指示に取り込まれます。",
+          "また、Gemini in ClassroomとGeminiアプリが有効なら、新しいClassroomのホームの「Due Soon」にある課題にカーソルを合わせると「Learn with Gemini」が表示されます。授業の内容に沿って、案内付きの支援を受けたり、学習ガイド、練習問題、単語カードを作ったりできます。"
+        ]
+      },
+      {
+        "heading": "管理者設定と展開時期",
+        "paragraphs": [
+          "Geminiタブは、先生とあらゆる年齢の生徒に初期設定でオンになり、Gemini in Classroomの設定で管理されます。現在生徒向けにオフにしている場合は、18歳未満を含むすべての生徒でオフのままです。18歳未満の生徒だけを含む組織部門を作り、その部門だけオフにすることもできます。",
+          "対象はEducation Fundamentals、Standard、Plusで、Geminiが使える言語のうちClassroomが対応する言語で世界的に使えます。展開はウェブで2026年8月10日から、モバイルで8月17日から始まります。公式は、AIは間違えることがあるため、作られた内容は必ず確かめて、自分の状況や地域の方針に合わせて直すよう呼びかけています。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "生徒がAIで作った単語カードや練習問題は、授業の資料と照らし合わせて答えが合っているかを確かめる習慣をつけることが大切です。間違いに気づくこと自体が、内容の理解を深める学習になります。",
+          "保護者や先生は、どの年齢の生徒にどの機能を使わせるかを、学校の方針と合わせて話し合っておくと安心です。AIは答えを教えてもらう道具ではなく、自分で考えるための相手として使うよう伝えると、学びの質が保たれます。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "7日学習プランを作る",
+        "href": "/study-plan/",
+        "kind": "guide"
+      },
+      {
+        "label": "検索で多い学習テーマ",
+        "href": "/learn/",
+        "kind": "intent"
+      },
+      {
+        "label": "学びに使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ],
+    "publishedAt": "2026-08-04",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/08/gemini-in-google-classroom-is-expanding-to-users-of-all-ages-with-contextualized-Gemini-starter-prompts-for-students.html"
+  },
+  {
+    "id": "2026-08-03-google-meet-notes-presentation-screenshots",
+    "headline": "Google Meetの自動メモに発表画面のスクリーンショットを追加",
+    "description": "Google Meetの「Take notes for me」で、発表された画面のスクリーンショットが会議メモの文書に自動で入るようになりました。話した内容だけでは伝わらない図やグラフも、メモで確かめられます。",
+    "category": "work",
+    "categoryLabel": "仕事・整理",
+    "whyCare": "会議メモに資料の画面が残ると、後から読む人が「この図」「このグラフ」が何を指していたかを理解しやすくなります。会議の記録に何を残すと役立つかを考える機会にもなります。",
+    "facts": [
+      "「Take notes for me」で、発表された内容のスクリーンショットを会議メモの文書に自動で入れられる。",
+      "文字起こしだけでは、話し手が説明せずに示した図やグラフのような視覚的な情報が抜けることがあった。",
+      "管理者は、スクリーンショットを常に許可するか、録画が有効なときだけ許可するかを選べる。",
+      "発表者には通知が表示され、メモのパネルから機能をオフにできる。"
+    ],
+    "sections": [
+      {
+        "heading": "メモに発表画面が入る",
+        "paragraphs": [
+          "Google Workspace Updatesによると、Google Meetの「Take notes for me」が改善され、発表された内容のスクリーンショットを、会議メモの文書に自動で入れられるようになりました。",
+          "これまでの文字起こしは、話した内容は記録できても、発表された資料のような視覚的な情報が抜けがちでした。話し手が図やグラフを口で説明せずに示した場合、メモの内容が足りなかったり分かりにくかったりすることがありました。"
+        ]
+      },
+      {
+        "heading": "発表者への通知と停止方法",
+        "paragraphs": [
+          "メモを取っている会議で発表を始めると、Geminiが発表内容のスクリーンショットをメモに加える場合があることを知らせる通知が表示されます。",
+          "この機能は、メモのパネルからオフにできます。見せたくない画面を映す場合は、発表の前に設定を確かめておくと安心です。"
+        ]
+      },
+      {
+        "heading": "管理者設定と対象プラン",
+        "paragraphs": [
+          "管理者は管理コンソールで、発表内容のスクリーンショットを常に許可するか、録画が有効なときだけ許可するかを設定できます。",
+          "対象は、Business StandardとPlus、Enterprise StandardとPlus、Google AI Pro for Educationです。即時リリースと計画的リリースのドメインで、2026年8月3日から最大15日ほどかけて展開されます。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "発表資料に社外秘の情報や個人情報が含まれる場合、スクリーンショットとしてメモに残ることを前提に準備する必要があります。共有範囲が広い会議では、映す資料を絞るか、メモのパネルから機能をオフにしてください。",
+          "会議の資料を作る人は、スクリーンショットだけでも内容が伝わるよう、1枚のスライドに伝えたいことを1つに絞り、グラフにはタイトルと単位を入れておくのがおすすめです。メモを読む人にとっても分かりやすい資料になります。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      },
+      {
+        "label": "仕事から必要な学びを探す",
+        "href": "https://career.manapick.app/",
+        "kind": "career"
+      }
+    ],
+    "publishedAt": "2026-08-03",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/08/visual-screenshots-now-included-in-Google-Meet-meeting-notes.html"
+  },
+  {
+    "id": "2026-08-03-google-drive-video-timestamped-comments",
+    "headline": "Googleドライブの動画に時間指定のコメント、該当場面へすぐ移動",
+    "description": "ウェブ版のGoogleドライブで、動画の特定の時間にコメントを付けられるようになりました。再生バーに印が表示され、押すとその場面へ移動してコメントが強調されます。動画の確認作業を文書やメールに分けずに進められます。",
+    "category": "work",
+    "categoryLabel": "仕事・整理",
+    "whyCare": "研修動画や説明動画への意見を、「何分何秒のどこか」を探さずにやり取りできます。動画で学んだり教えたりする場面で、具体的なフィードバックを返す習慣をつけやすくなります。",
+    "facts": [
+      "ウェブ版のGoogleドライブで、動画の特定の時間にコメントを固定できる。",
+      "時間指定のコメントは再生バーに印として表示され、押すとその時点へ移動して該当コメントが強調される。",
+      "時間指定のコメントはウェブで作る必要があり、iOSやAndroidでは通常のファイル全体へのコメントとして表示される。",
+      "すべてのGoogle Workspace利用者、Workspace Individualの契約者、個人のGoogleアカウントで使え、すでに利用できる。"
+    ],
+    "sections": [
+      {
+        "heading": "動画の時間にコメントを固定",
+        "paragraphs": [
+          "Google Workspace Updatesによると、ウェブ版のGoogleドライブで、動画に時間指定のコメントを付けられるようになりました。動画の特定の時間にコメントを固定できるため、動画を使った共同作業がより直接的で正確になります。",
+          "動画ファイルを確認するとき、コメントの入力画面にある切り替えボタンで、時間指定のコメントか、ファイル全体へのコメントかを選べます。"
+        ]
+      },
+      {
+        "heading": "再生バーの印で場面へ移動",
+        "paragraphs": [
+          "時間指定のコメントを付けると、動画の再生バーに印が表示されます。印を押すとその時点に自動で移動し、関連するコメントが強調されるため、確認する人も動画の持ち主も、手で巻き戻しや早送りをせずに意見をたどれます。",
+          "コメントの編集、解決、返信、@を使った同僚への通知といった通常のコメント機能も、そのまま使えます。Googleは、時間付きの意見を別の文書、チャット、メールで管理する必要がなくなると説明しています。"
+        ]
+      },
+      {
+        "heading": "モバイルでの表示と提供範囲",
+        "paragraphs": [
+          "時間指定のコメントはウェブで作る必要があります。iOSやAndroidで動画を見ている利用者には、通常のファイル全体へのコメントとして表示されます。",
+          "管理者向けの設定も利用者向けの設定もなく、すべての利用者に初期設定で提供されます。対象は、すべてのGoogle Workspace利用者、Workspace Individualの契約者、個人のGoogleアカウントの利用者で、即時リリースと計画的リリースのドメインですでに使えます。"
+        ]
+      },
+      {
+        "heading": "Manapick編集部の使い方提案",
+        "paragraphs": [
+          "公式は、デモ、研修動画、マーケティング用の動画、録画したプレゼンの確認に役立つと紹介しています。動画で教える人は、受講者に「分かりにくかった場面に時間指定でコメントを付けてもらう」と、改善すべき場所が具体的に分かります。",
+          "自分の発表を録画して練習する場合も、気になった場面に時間指定でメモを残すと、次の練習で直す点を整理できます。コメントを付けるときは、何が問題で、どう直すとよいかを1つずつ書くと、受け取る人が対応しやすくなります。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Office・資料作成ロードマップ",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "仕事に使うAIを確認",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      },
+      {
+        "label": "仕事から必要な学びを探す",
+        "href": "https://career.manapick.app/",
+        "kind": "career"
+      }
+    ],
+    "publishedAt": "2026-08-03",
+    "lastChecked": "2026-10-26",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/08/provide-more-clear-contextual-feedback-with-timestamped-comments-in-Google-Drive-videos.html"
+  },
+  {
     "id": "2026-07-30-gmail-reply-all-bcc-warning",
     "headline": "Gmail、BCCで受信したスレッドへの「全員に返信」前に警告を表示",
     "description": "Gmailで、BCC受信者がスレッドに「全員に返信」しようとした際、送信前に確認を促す警告が表示されるようになりました。意図しない宛先への情報開示を防ぐための更新です。",
