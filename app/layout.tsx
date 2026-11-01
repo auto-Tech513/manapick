@@ -52,7 +52,7 @@ const commonJsonLd = {
       "@id": absoluteUrl("/#website"),
       name: "Manapick",
       url: absoluteUrl("/"),
-      description: "社会人の学び直し・リスキリングに役立つ無料YouTube学習動画を、視聴確認済みレビューとロードマップで整理するメディア。",
+      description: "社会人の学び直し・リスキリングに役立つ無料YouTube学習動画を、独自の7軸採点レビューとロードマップで整理するメディア。",
       publisher: {
         "@id": absoluteUrl("/#organization")
       },
@@ -64,7 +64,7 @@ const commonJsonLd = {
 export const metadata: Metadata = {
   title: "Manapick | 学び直しを、最短ルートに。",
   description:
-    "社会人の学び直し・リスキリングに役立つ無料YouTube学習動画を、視聴確認済みレビューとロードマップで整理するメディア。",
+    "社会人の学び直し・リスキリングに役立つ無料YouTube学習動画を、独自の7軸採点レビューとロードマップで整理するメディア。",
   metadataBase: new URL(SITE_URL),
   manifest: "/manifest.webmanifest",
   icons: {

@@ -12,7 +12,7 @@ const rankingDescription =
 
 const rankingSections: { mode: RankingMode; id: string; title: string; note: string }[] = [
   { mode: "popular", id: "popular", title: "総合人気", note: "YouTube再生数と公開からの経過時間をもとにした参考順です。" },
-  { mode: "score", id: "score", title: "高スコア", note: "Manapickスコア順。運営者が視聴確認した学習用途の評価です。" },
+  { mode: "score", id: "score", title: "高スコア", note: "Manapickスコア順。運営者が採点した学習用途の評価です。" },
   { mode: "new", id: "new", title: "新着", note: "公開日が新しい動画から確認できます。" }
 ];
 

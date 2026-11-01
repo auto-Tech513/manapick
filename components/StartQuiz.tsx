@@ -190,7 +190,7 @@ export default function StartQuiz() {
           <div className="rounded-lg border border-leaf/30 bg-leaf/5 p-4">
             <p className="text-sm font-black text-leaf">あなたの“今日の1本”はこちら</p>
             <p className="mt-1 text-sm font-bold leading-7 text-muted">
-              {genreDisplayName(genre)}の動画から、視聴確認済み・Manapickスコア順で提案しています。
+              {genreDisplayName(genre)}の動画から、Manapickスコア順で提案しています。
               {result.relaxed ? " 条件に完全一致する動画が少ないため、近い候補も含めています。" : ""}
             </p>
           </div>

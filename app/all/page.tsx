@@ -42,7 +42,7 @@ export default function AllPagesIndex() {
     <main className="static-page" style={{ maxWidth: 880, margin: "0 auto", padding: "24px 16px 64px", lineHeight: 1.8 }}>
       <h1>サイトマップ（全ページ一覧）</h1>
       <p>
-        Manapickの全ジャンル・サブカテゴリ・ロードマップ・主要ページの一覧です。学び直したいテーマから、運営者が視聴確認して7軸35点で採点し“見る順”に整理した無料YouTube学習動画へ進めます。登録不要・全部無料です。
+        Manapickの全ジャンル・サブカテゴリ・ロードマップ・主要ページの一覧です。学び直したいテーマから、運営者が7軸35点で採点し“見る順”に整理した無料YouTube学習動画へ進めます。登録不要・全部無料です。
       </p>
 
       <h2>ジャンルとサブカテゴリ</h2>

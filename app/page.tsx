@@ -12,7 +12,7 @@ const homeTitle = "Manapick | 無料YouTube学習動画を、見る順まで整�
 const homeDescription =
   "社会人の学び直し・リスキリングに役立つ無料YouTube学習動画" +
   siteStats.totalVideos +
-  "本を、視聴確認済みレビューとロードマップで整理するメディア。";
+  "本を、独自の7軸採点レビューとロードマップで整理するメディア。";
 const homeOgImage = absoluteUrl("/brand/ogp-manapick.png");
 const homeCarouselVideos = [
   ...rankedVideos("popular", 4),

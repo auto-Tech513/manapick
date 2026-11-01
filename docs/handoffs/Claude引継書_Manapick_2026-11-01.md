@@ -5,7 +5,8 @@
 ## 0. この引継ぎの対象
 
 - 対象は **Manapick本体 `manapick.app` のみ**。
-- 正本リポジトリ: `/Volumes/SSD256GB/My Folder/02_CODEX/Manapick/01_ACTIVE_REPOS/manapick-repo`
+- **追記（2026-11-01）: SSD256GBの容量不足のため、正本は `/Volumes/HDD2TB/20_開発/Manapick/01_ACTIVE_REPOS/manapick-repo` に移行した。SSD上の旧コピーは更新しない。** 動画追加の記録は `docs/content/2026-11-01-freshness-additions.md`。
+- 正本リポジトリ（移行前）: `/Volumes/SSD256GB/My Folder/02_CODEX/Manapick/01_ACTIVE_REPOS/manapick-repo`
 - Git remote: `https://github.com/auto-Tech513/manapick.git`
 - ブランチ: `main`
 - 本体の今回の実装commit: `b38c9fe083a75c4ac19aa13e09cbded58a197a30` (`fix: verify content freshness and improve network links`)

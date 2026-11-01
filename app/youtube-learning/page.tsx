@@ -12,7 +12,7 @@ const pageTitle = "YouTube学習動画おすすめ｜無料で何から始める
 const pageDescription =
   "YouTubeで勉強したい社会人向けに、無料学習動画の選び方、リスキリングで何から始めるか、ジャンル別おすすめ動画を整理。" +
   siteStats.totalVideos +
-  "本の視聴確認済み動画を7軸35点で採点しています。";
+  "本の掲載動画を7軸35点で採点しています。";
 const pageUrl = absoluteUrl("/youtube-learning/");
 
 const intentCards = [
@@ -64,7 +64,7 @@ const faq = [
   {
     question: "YouTubeのおすすめ動画だけで勉強しても大丈夫ですか？",
     answer:
-      "入口としては便利ですが、視聴時間を伸ばす動画と学習に役立つ動画は一致しないことがあります。Manapickでは運営者が視聴確認し、7軸35点で学習用途として採点した動画だけを掲載しています。"
+      "入口としては便利ですが、視聴時間を伸ばす動画と学習に役立つ動画は一致しないことがあります。Manapickでは運営者が7軸35点で学習用途として採点した動画だけを掲載しています。"
   },
   {
     question: "リスキリングは何から始めればいいですか？",
@@ -201,7 +201,7 @@ export default function YoutubeLearningPage() {
         </h1>
         <p>
           「youtube おすすめ」「動画 勉強」「リスキリング 何から始める」で迷う人向けに、
-          視聴確認済み{siteStats.totalVideos}本から、最初の1本と次の順番を整理しました。
+          採点済み{siteStats.totalVideos}本から、最初の1本と次の順番を整理しました。
         </p>
         <div className="youtube-learning-cta-row">
           <Link href="/start/">3つの質問で今日の1本を選ぶ</Link>

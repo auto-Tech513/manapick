@@ -259,12 +259,12 @@ function scoreText(video: Video) {
 }
 
 function scoreStatusText(_video: Video) {
-  return "運営者が視聴確認済み";
+  return "運営者が採点済み";
 }
 
 function scoreConfirmationText(video: Video) {
   const date = video.scoreConfirmedAt ? video.scoreConfirmedAt.replace(/-/g, "/") : null;
-  return "運営者が実際に視聴し7軸35点で採点したスコアです" + (date ? "（確認日: " + date + "）" : "");
+  return "運営者が7軸35点で採点したスコアです" + (date ? "（確認日: " + date + "）" : "");
 }
 
 function scoreClasses(video: Video) {
@@ -1480,7 +1480,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
 
             <p className="hero-proof">
               公開中{siteStats.publishedGenreCount}ジャンル
-              {confirmedCount > 0 ? " ／ 視聴確認済" + confirmedCount + "本" : ""}
+              {confirmedCount > 0 ? " ／ 採点済" + confirmedCount + "本" : ""}
               {" ／ 順次拡大"}
             </p>
           </div>
@@ -2123,7 +2123,7 @@ function LearningLoopSection() {
       site: "video",
       eyebrow: "一本を選ぶ",
       title: "Manapick",
-      description: `${siteStats.totalVideos}本の視聴確認済み動画から、目的と時間に合う一本を決める`,
+      description: `${siteStats.totalVideos}本の採点済み動画から、目的と時間に合う一本を決める`,
       href: "/start/",
       external: false
     },
@@ -2255,7 +2255,7 @@ function StudyPlanPromoSection() {
       <div>
         <p className="section-eyebrow">見る順を、予定に変える</p>
         <h2 id="study-plan-promo-title" className="section-title">今週の7日学習プランを作る</h2>
-        <p>ジャンル・1日の時間・週の学習日数を選ぶだけ。休む日も含め、視聴確認済み動画を無理のない順番に並べます。</p>
+        <p>ジャンル・1日の時間・週の学習日数を選ぶだけ。休む日も含め、採点済み動画を無理のない順番に並べます。</p>
       </div>
       <a href="/study-plan/">
         7日プランを作る <span aria-hidden="true">→</span>
@@ -3034,7 +3034,7 @@ function HeroTrustStats({ totalVideos, confirmedCount }: { totalVideos: number; 
 
   if (confirmedCount > 0) {
     stats.push({
-      label: "✓ 視聴確認済 " + confirmedCount + "本",
+      label: "✓ 採点済 " + confirmedCount + "本",
       icon: (
         <svg viewBox="0 0 24 24" role="presentation" focusable="false">
           <path d="M20 6 9 17l-5-5" />

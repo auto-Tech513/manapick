@@ -46,7 +46,7 @@ const recentYearCount = videos.filter((video) => {
 
 const pageTitle = `YouTube学習動画${videos.length}本を分析｜選びやすい長さとジャンル | Manapick`;
 const pageDescription =
-  `運営者が視聴確認したYouTube学習動画${videos.length}本を集計。中央値${medianMinutes}分、30分以下${underThirtyCount}本。` +
+  `運営者が採点したYouTube学習動画${videos.length}本を集計。中央値${medianMinutes}分、30分以下${underThirtyCount}本。` +
   "社会人が無料動画を選ぶときの長さ・ジャンル・鮮度の見方を、調査方法と限界を含めて公開します。";
 
 export const metadata: Metadata = {
@@ -86,12 +86,12 @@ export default function YoutubeLearningDataPage() {
       {
         "@type": "Dataset",
         name: `Manapick掲載YouTube学習動画${videos.length}本の集計`,
-        description: "Manapick運営者が視聴確認した掲載動画について、所要時間、ジャンル、公開日、7軸35点のスコアを集計したデータです。YouTube全体を代表する標本ではありません。",
+        description: "Manapick運営者が採点した掲載動画について、所要時間、ジャンル、公開日、7軸35点のスコアを集計したデータです。YouTube全体を代表する標本ではありません。",
         url: pageUrl,
         dateModified: REVIEWED_AT,
         creator: { "@id": absoluteUrl("/#organization") },
         inLanguage: "ja",
-        measurementTechnique: "運営者による全編視聴確認と7軸35点採点、動画メタデータの集計",
+        measurementTechnique: "運営者による視聴または公開情報の確認と7軸35点採点、動画メタデータの集計",
         variableMeasured: ["動画本数", "動画時間", "ジャンル", "公開日", "Manapickスコア"]
       },
       {
@@ -142,9 +142,9 @@ export default function YoutubeLearningDataPage() {
         <h2 id="data-summary-title">掲載動画の{percent(underThirtyCount)}%が30分以下。中央値は{medianMinutes}分</h2>
         <div className="research-metric-grid">
           <article>
-            <span>視聴確認済み</span>
+            <span>採点済み</span>
             <strong>{videos.length}<small>本</small></strong>
-            <p>全件を運営者が視聴確認</p>
+            <p>全件を運営者が7軸で採点</p>
           </article>
           <article>
             <span>動画時間の中央値</span>
@@ -216,7 +216,7 @@ export default function YoutubeLearningDataPage() {
           </article>
           <article>
             <h3>公開から1年以内</h3>
-            <p><strong>{recentYearCount}本</strong>。新しさだけでなく、現在も入口として使えるかを全編視聴で確認します。</p>
+            <p><strong>{recentYearCount}本</strong>。新しさだけでなく、学習用途に合うかを確認して採点しています。</p>
           </article>
         </div>
         <p>AI・制度・ソフトウェア操作は公開日を重く見ます。一方、英語の基礎や考え方のように変化が緩やかなテーマは、古くても内容を視聴確認し、現在も入口として使える動画を残しています。</p>
@@ -227,7 +227,7 @@ export default function YoutubeLearningDataPage() {
         <h2 id="data-method-title">数字を過大に見せないための前提</h2>
         <ul>
           <li>対象はManapickに掲載している動画だけです。YouTube上の全学習動画を無作為抽出した調査ではありません。</li>
-          <li>運営者が全編を視聴し、実用性・正確性と鮮度・分かりやすさ・体系性・信頼性・視聴体験・規約と権利の7軸で採点しています。</li>
+          <li>運営者が、視聴または公開情報の確認にもとづき、実用性・正確性と鮮度・分かりやすさ・体系性・信頼性・視聴体験・規約と権利の7軸で採点しています。</li>
           <li>平均スコアは採用基準を通過した動画だけの値です。YouTube動画全体の平均品質を示しません。</li>
           <li>動画の完視聴率や学習成果は測定していません。時間分布から効果を断定せず、選ぶ負担を減らす目安として公開しています。</li>
         </ul>

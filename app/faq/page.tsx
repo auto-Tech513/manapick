@@ -5,7 +5,7 @@ import { siteFaqItems } from "@/content/site-faq";
 import { absoluteUrl } from "@/lib/manapick";
 
 const faqTitle = "よくある質問 | Manapick";
-const faqDescription = "Manapickの使い方、採点方法、視聴確認済みの方針、manapick AIとの違いをまとめました。";
+const faqDescription = "Manapickの使い方、採点方法、確認・採点の方針、manapick AIとの違いをまとめました。";
 
 export const metadata: Metadata = {
   title: faqTitle,

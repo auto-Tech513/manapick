@@ -18,7 +18,7 @@ type Roadmap = {
 };
 
 const pageTitle = "7日学習プラン｜無料動画を続けられる順番に整理 | Manapick";
-const pageDescription = "ジャンル・1日の時間・週の学習日数を選ぶだけ。視聴確認済みの無料YouTube学習動画から、今週の7日学習プランを作れます。登録不要。";
+const pageDescription = "ジャンル・1日の時間・週の学習日数を選ぶだけ。採点済みの無料YouTube学習動画から、今週の7日学習プランを作れます。登録不要。";
 const pageUrl = absoluteUrl("/study-plan/");
 
 const roadmaps = roadmapsData as Roadmap[];
@@ -69,7 +69,7 @@ const faq = [
   },
   {
     question: "どの基準で動画を選んでいますか？",
-    answer: "運営者が視聴確認した動画から、ジャンル別ロードマップの順番、Manapickスコア、所要時間を使って選びます。"
+    answer: "運営者が採点した動画から、ジャンル別ロードマップの順番、Manapickスコア、所要時間を使って選びます。"
   },
   {
     question: "保存したプランは別の端末でも見られますか？",
@@ -156,11 +156,11 @@ export default function StudyPlanPage() {
         <p className="section-eyebrow">見るだけで終わらせない</p>
         <h1>無料動画を、今週の予定に変える。</h1>
         <p>
-          ジャンル・1日の時間・学習日数を選ぶと、視聴確認済み動画から7日分の順番を作ります。
+          ジャンル・1日の時間・学習日数を選ぶと、採点済み動画から7日分の順番を作ります。
           過度な連続記録や通知は使わず、休む日も含めて無理なく続けるための道具です。
         </p>
         <div className="study-plan-hero-stats" aria-label="学習プランの特徴">
-          <span>登録不要</span><span>全動画を視聴確認</span><span>この端末だけに保存</span>
+          <span>登録不要</span><span>全動画を7軸で採点</span><span>この端末だけに保存</span>
         </div>
       </section>
 

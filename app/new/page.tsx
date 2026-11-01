@@ -117,7 +117,7 @@ export default function NewPage() {
             <dd>{recent90Count}本</dd>
           </div>
           <div>
-            <dt>公開・内容を確認済み</dt>
+            <dt>公開状態を確認・採点済み</dt>
             <dd>{videos.length}本</dd>
           </div>
         </dl>

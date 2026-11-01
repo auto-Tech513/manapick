@@ -96,7 +96,7 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
         <p>{intent.lead}</p>
         <div className="learning-intent-meta" aria-label="ページの対象">
           <span>無料YouTube動画</span>
-          <span>視聴確認済み {selectedVideos.length}本を厳選</span>
+          <span>採点済み {selectedVideos.length}本を厳選</span>
           <span>スマホで15分から</span>
           {intent.lastReviewed ? <span>情報確認 {formatReviewedDate(intent.lastReviewed)}</span> : null}
         </div>
@@ -121,7 +121,7 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
               <h2 id="intent-sources-title">確認した公式情報</h2>
             </div>
             <p>
-              制度・仕様は公式情報を優先し、動画は運営者が実際に視聴して7軸35点で確認しています。
+              制度・仕様は公式情報を優先し、動画は運営者が7軸35点で採点しています。
               <Link href="/about-score/">採点方法</Link>と<Link href="/operator/">運営者情報</Link>も公開しています。
             </p>
           </div>

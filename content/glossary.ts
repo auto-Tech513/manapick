@@ -8,7 +8,7 @@ export type GlossaryTerm = {
 export const glossaryTerms: GlossaryTerm[] = [
   { term: "Manapickスコア", body: "学習動画を7軸35点で見るための独自スコアです。視聴前の期待値をそろえる目的で使います。", href: "/about-score/", label: "採点方法" },
   { term: "7軸35点", body: "実用性、正確性・鮮度、分かりやすさなど7項目を各5点で確認するManapickの採点形式です。", href: "/about-score/", label: "採点方法" },
-  { term: "視聴確認済み", body: "運営者が実際に動画を見て、タイトルと内容の一致、学習用途としての品質を確認した状態です。", href: "/about-score/", label: "採点方法" },
+  { term: "採点済み", body: "運営者が視聴、またはYouTube上の公開情報（タイトル・概要欄・チャプター・公開日・再生回数）の確認にもとづき、7軸35点で採点した状態です。", href: "/about-score/", label: "採点方法" },
   { term: "ロードマップ", body: "初級から中級、上級へ進む順番をまとめた学習ルートです。何から見るか迷う時間を減らします。", href: "/#roadmap", label: "ロードマップ" },
   { term: "初級", body: "前提知識が少なくても見られる入口の動画です。全体像や基本操作を確認する段階です。", href: "/about-score/#level-definitions", label: "レベル定義" },
   { term: "中級", body: "基礎を一通り触れた人が、応用や体系化へ進むための動画です。", href: "/about-score/#level-definitions", label: "レベル定義" },

@@ -105,8 +105,8 @@ export default async function VideoPage({ params }: VideoPageProps) {
   const confirmationDate = scoreConfirmationDate(video);
   const hasStoredAxisBreakdown = video.axisScores.length === 7;
   const scoreConfirmationText = hasStoredAxisBreakdown
-    ? "運営者が実際に視聴し7軸35点で採点したスコアです" + (confirmationDate ? "（確認日: " + confirmationDate + "）" : "")
-    : "運営者が実際に視聴して確認済みの総合スコアです。軸別内訳は準備中です" + (confirmationDate ? "（確認日: " + confirmationDate + "）" : "");
+    ? "運営者が7軸35点で採点したスコアです" + (confirmationDate ? "（確認日: " + confirmationDate + "）" : "")
+    : "運営者が確認済みの総合スコアです。軸別内訳は準備中です" + (confirmationDate ? "（確認日: " + confirmationDate + "）" : "");
   const positionText = videoPositionText(video);
   const audienceText = videoAudienceText(video);
   const learningPoints = videoLearningPoints(video);
@@ -202,7 +202,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
           {channel ? <p className="video-channel">チャンネル: {channel}</p> : null}
           <div className="video-score-card is-confirmed">
             <p>{scoreText(video)}</p>
-            <span>運営者が視聴確認済み</span>
+            <span>運営者が採点済み</span>
           </div>
           <p className="video-score-note is-confirmed">
             {scoreConfirmationText}

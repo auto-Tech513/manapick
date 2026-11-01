@@ -24,7 +24,7 @@ const stages = [
     number: "01",
     eyebrow: "動画で学ぶ",
     title: "Manapick",
-    body: "視聴確認済みの無料YouTube動画から、最初の1本と見る順を決めます。",
+    body: "採点済みの無料YouTube動画から、最初の1本と見る順を決めます。",
     href: "/start/",
     action: "今日の1本を選ぶ",
     external: false
@@ -236,7 +236,7 @@ export default function NetworkPage() {
             <article key={genre}>
               <div>
                 <strong>{genreDisplayName(genre)}</strong>
-                <span>{genreVideoCount(genre)}本の視聴確認済み動画</span>
+                <span>{genreVideoCount(genre)}本の採点済み動画</span>
               </div>
               <nav aria-label={`${genreDisplayName(genre)}の関連サービス`}>
                 <Link className="is-learn" href={`/genre/${genre}/`}>動画で学ぶ</Link>

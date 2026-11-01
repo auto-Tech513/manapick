@@ -110,7 +110,7 @@ export default function SiteFooter() {
             <span>学び直しを、最短ルートに。</span>
           </div>
           <small>
-            無料のYouTube学習動画を運営者が視聴し、7軸35点で採点。次に見る一本と学ぶ順番を整理しています。
+            無料のYouTube学習動画を運営者が7軸35点で採点。次に見る一本と学ぶ順番を整理しています。
           </small>
         </div>
 

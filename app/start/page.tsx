@@ -20,11 +20,11 @@ export default function StartPage() {
             “今日の1本”を、迷わず選ぶ。
           </h1>
           <p className="mt-4 max-w-3xl text-base font-bold leading-8 text-muted min-[760px]:text-lg">
-            ジャンル・レベル・使える時間に答えるだけで、運営者が視聴確認し7軸35点で採点した学習動画から、
+            ジャンル・レベル・使える時間に答えるだけで、運営者が7軸35点で採点した学習動画から、
             <strong className="text-primaryInk">今日まず見るべき1本</strong>を提案します。登録不要・全部無料です。
           </p>
           <div className="mt-5 flex flex-wrap gap-2 text-xs font-black text-primaryInk">
-            <span className="rounded-pill border border-line bg-white px-3 py-1">視聴確認済みを優先</span>
+            <span className="rounded-pill border border-line bg-white px-3 py-1">Manapickスコア順</span>
             <span className="rounded-pill border border-line bg-white px-3 py-1">7軸35点で採点</span>
             <span className="rounded-pill border border-line bg-white px-3 py-1">スマホで1分診断</span>
           </div>
