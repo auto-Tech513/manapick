@@ -887,6 +887,10 @@
   --color-career-gold-soft: #fff9d6;
   --color-career-gold-line: #ead76b;
   --color-career-navy: #14213d;
+  --color-company-pink: #be185d;
+  --color-company-pink-dark: #831843;
+  --color-company-pink-soft: #fce7f3;
+  --color-company-pink-line: #f9a8d4;
   --color-spark: #f59e0b;
   --color-coral: #d95b48;
   --color-ink: #161b22;
@@ -1009,7 +1013,8 @@ ins.adsbygoogle:not(.ad-slot),
 
 .header-ai-link,
 .header-license-link,
-.header-career-link {
+.header-career-link,
+.header-company-link {
   position: relative;
   display: inline-flex;
   min-height: 34px;
@@ -1029,7 +1034,8 @@ ins.adsbygoogle:not(.ad-slot),
 
 .header-ai-link::before,
 .header-license-link::before,
-.header-career-link::before {
+.header-career-link::before,
+.header-company-link::before {
   display: inline-grid;
   width: 17px;
   height: 17px;
@@ -1066,16 +1072,29 @@ ins.adsbygoogle:not(.ad-slot),
   box-shadow: 0 1px 0 rgba(113, 93, 0, 0.08), 0 8px 18px rgba(113, 93, 0, 0.08);
 }
 
+.header-company-link {
+  border-color: var(--color-company-pink-line);
+  background: linear-gradient(135deg, #fff, var(--color-company-pink-soft));
+  color: var(--color-company-pink-dark);
+  box-shadow: 0 1px 0 rgba(190, 24, 93, 0.08), 0 8px 18px rgba(190, 24, 93, 0.08);
+}
+
 .header-career-link::before {
   background: linear-gradient(135deg, var(--color-career-gold), #f4b400);
   color: var(--color-career-navy);
 }
 
+.header-company-link::before {
+  background: linear-gradient(135deg, var(--color-company-pink), #db2777);
+}
+
 .header-ai-link span,
 .header-license-link span,
-.header-career-link span {
+.header-career-link span,
+.header-company-link span {
   font-weight: 950;
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .header-ai-link small,
@@ -1095,10 +1114,15 @@ ins.adsbygoogle:not(.ad-slot),
   color: color-mix(in srgb, var(--color-career-gold-dark) 76%, var(--color-muted));
 }
 
+.header-company-link small {
+  color: color-mix(in srgb, var(--color-company-pink-dark) 76%, var(--color-muted));
+}
+
 /* The drawer carries the descriptions; compact header chips keep all four network controls visible. */
 .site-header .header-ai-link small,
 .site-header .header-license-link small,
-.site-header .header-career-link small {
+.site-header .header-career-link small,
+.site-header .header-company-link small {
   display: none;
 }
 
@@ -1126,6 +1150,13 @@ ins.adsbygoogle:not(.ad-slot),
     radial-gradient(circle at 16% 10%, rgba(255, 215, 0, 0.3), transparent 1.7rem),
     linear-gradient(135deg, #fff, color-mix(in srgb, var(--color-career-gold) 16%, white));
   color: var(--color-career-navy);
+  transform: translateY(-1px);
+}
+
+.header-company-link:hover {
+  border-color: color-mix(in srgb, var(--color-company-pink) 54%, var(--color-company-pink-line));
+  background: linear-gradient(135deg, #fff, color-mix(in srgb, var(--color-company-pink) 10%, white));
+  color: var(--color-company-pink-dark);
   transform: translateY(-1px);
 }
 
@@ -1556,6 +1587,37 @@ ins.adsbygoogle:not(.ad-slot),
   color: var(--color-career-navy);
 }
 
+.site-menu-company-link {
+  display: grid;
+  align-items: flex-start;
+  gap: 4px;
+  border-color: var(--color-company-pink-line);
+  background: linear-gradient(135deg, #fff, var(--color-company-pink-soft));
+  color: var(--color-company-pink-dark);
+}
+
+.site-menu-company-link span,
+.site-menu-company-link small {
+  display: block;
+}
+
+.site-menu-company-link span {
+  white-space: nowrap;
+}
+
+.site-menu-company-link small {
+  margin-top: 2px;
+  color: color-mix(in srgb, var(--color-company-pink-dark) 68%, var(--color-muted));
+  font-size: 0.76rem;
+  font-weight: 850;
+}
+
+.site-menu-company-link:hover {
+  border-color: color-mix(in srgb, var(--color-company-pink) 48%, var(--color-company-pink-line));
+  background: linear-gradient(135deg, #fff, color-mix(in srgb, var(--color-company-pink) 10%, white));
+  color: var(--color-company-pink-dark);
+}
+
 .site-menu-profession-list {
   display: grid;
   gap: 7px;
@@ -1788,6 +1850,12 @@ ins.adsbygoogle:not(.ad-slot),
   color: #fff2a8;
 }
 
+.site-footer-network a.is-company {
+  border-color: rgba(249, 168, 212, 0.58);
+  background: rgba(190, 24, 93, 0.2);
+  color: #fbcfe8;
+}
+
 .site-footer-lower > p {
   color: rgba(255, 255, 255, 0.48);
   font-size: 0.68rem;
@@ -1900,7 +1968,14 @@ ins.adsbygoogle:not(.ad-slot),
 
 @media (min-width: 720px) and (max-width: 899px) {
   .header-license-link,
-  .header-career-link {
+  .header-career-link,
+  .header-company-link {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1439px) {
+  .header-company-link {
     display: none;
   }
 }

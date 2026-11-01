@@ -12,7 +12,7 @@ import genresData from "@/content/genres.json";
 import professionRoutesData from "@/content/professions.json";
 import roadmapsData from "@/content/roadmaps.json";
 import videosData from "@/content/videos.json";
-import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
+import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
 import { RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY, jstDateKey, selectTodayVideo, sendGaEvent } from "@/lib/retention";
 import { siteStats } from "@/lib/site-stats";
 import { buildSubRoadmap } from "@/lib/sub-roadmap";
@@ -1341,6 +1341,17 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
               >
                 <span>career ↗</span>
                 <small>仕事を知る</small>
+              </a>
+              <a
+                className="header-company-link"
+                href={MANAPICK_COMPANY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => sendGaEvent("company_crosslink_click", { placement: "header", target: "manapick_company" })}
+                aria-label="manapick companyへ。法人向け導入情報"
+              >
+                <span>company ↗</span>
+                <small>法人向け</small>
               </a>
             </nav>
             <button
@@ -2787,6 +2798,19 @@ function SiteMenuDrawer({
           >
             <span>manapick career ↗</span>
             <small>仕事内容と学ぶ順番を確認</small>
+          </a>
+          <a
+            className="site-menu-link site-menu-company-link"
+            href={MANAPICK_COMPANY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => {
+              sendGaEvent("company_crosslink_click", { placement: "menu", target: "manapick_company" });
+              onClose();
+            }}
+          >
+            <span>manapick company ↗</span>
+            <small>法人向け導入情報を見る</small>
           </a>
         </nav>
       </aside>
