@@ -32,7 +32,26 @@ function formatDate(value: string) {
   return value.replaceAll("-", "/");
 }
 
+type NewsMonthGroup = { key: string; label: string; items: typeof newsItems };
+
+// newsItems は公開日の新しい順。公開日の年月（YYYY-MM）ごとにまとめ、順序はそのまま保つ。
+function groupNewsByMonth(items: typeof newsItems): NewsMonthGroup[] {
+  const groups: NewsMonthGroup[] = [];
+  for (const item of items) {
+    const key = item.publishedAt.slice(0, 7);
+    const last = groups[groups.length - 1];
+    if (last && last.key === key) {
+      last.items.push(item);
+    } else {
+      const [year, month] = key.split("-");
+      groups.push({ key, label: `${year}年${Number(month)}月`, items: [item] });
+    }
+  }
+  return groups;
+}
+
 export default function NewsPage() {
+  const monthGroups = groupNewsByMonth(newsItems);
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -94,18 +113,31 @@ export default function NewsPage() {
           </div>
           <p>{newsItems[0]?.lastChecked.replaceAll("-", "/")}まで確認済み</p>
         </header>
-        <div className="news-index-grid">
-          {newsItems.map((item) => (
-            <Link key={item.id} className={`news-index-card is-${item.category}`} href={newsPath(item.id)}>
-              <span className="news-index-meta">
-                <span>{item.categoryLabel}</span>
-                <time dateTime={item.publishedAt}>{formatDate(item.publishedAt)}</time>
-              </span>
-              <h3>{item.headline}</h3>
-              <p>{item.description}</p>
-              <span className="news-index-source">出典: {item.sourceName}</span>
-              <span className="news-index-read">約{newsReadingMinutes(item)}分 <span aria-hidden="true">→</span></span>
-            </Link>
+        <p className="news-month-note">最新の月は開いた状態で表示しています。それより前の記事は月ごとにまとめているので、読みたい月を開いてください。</p>
+        <div className="news-month-groups">
+          {monthGroups.map((group, index) => (
+            <details key={group.key} className="fold-group news-month-group" open={index === 0}>
+              <summary>
+                <span className="fold-group-name">{group.label}</span>
+                <span className="fold-group-count">{group.items.length}件</span>
+              </summary>
+              <div className="fold-group-body">
+                <div className="news-index-grid">
+                  {group.items.map((item) => (
+                    <Link key={item.id} className={`news-index-card is-${item.category}`} href={newsPath(item.id)}>
+                      <span className="news-index-meta">
+                        <span>{item.categoryLabel}</span>
+                        <time dateTime={item.publishedAt}>{formatDate(item.publishedAt)}</time>
+                      </span>
+                      <h3>{item.headline}</h3>
+                      <p>{item.description}</p>
+                      <span className="news-index-source">出典: {item.sourceName}</span>
+                      <span className="news-index-read">約{newsReadingMinutes(item)}分 <span aria-hidden="true">→</span></span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </details>
           ))}
         </div>
       </section>

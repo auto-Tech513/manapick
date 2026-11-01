@@ -7,6 +7,8 @@ import { absoluteUrl, genreLabel, publishedGenreKeys, scoreText, videoPath, vide
 import { rankedVideos, type RankingMode } from "@/lib/rankings";
 
 const rankingTitle = "人気の学習動画ランキング | Manapick";
+// 各ランキングで最初から表示する本数。4位以降は折りたたむ（ページ内リンクと掲載本数は変えない）。
+const RANKING_LEAD_COUNT = 3;
 const rankingDescription =
   "Manapick掲載動画を、YouTube再生数ベースの総合人気、高スコア、新着の3つの見方で整理しました。";
 
@@ -105,11 +107,36 @@ export default function RankingPage() {
             </div>
             <p>{section.note}</p>
           </div>
-          <div className="ranking-grid">
-            {rankedVideos(section.mode, 12).map((video, index) => (
-              <RankingVideoCard key={section.id + video.ytid} video={video} rank={index + 1} priority={section.mode === "popular" && index < 2} />
-            ))}
-          </div>
+          {(() => {
+            const ranked = rankedVideos(section.mode, 12);
+            const lead = ranked.slice(0, RANKING_LEAD_COUNT);
+            const more = ranked.slice(RANKING_LEAD_COUNT);
+
+            return (
+              <>
+                <div className="ranking-grid">
+                  {lead.map((video, index) => (
+                    <RankingVideoCard key={section.id + video.ytid} video={video} rank={index + 1} priority={section.mode === "popular" && index < 2} />
+                  ))}
+                </div>
+                {more.length > 0 ? (
+                  <details className="fold-group ranking-more">
+                    <summary>
+                      <span className="fold-group-name">{RANKING_LEAD_COUNT + 1}位〜{ranked.length}位を見る</span>
+                      <span className="fold-group-count">{more.length}本</span>
+                    </summary>
+                    <div className="fold-group-body">
+                      <div className="ranking-grid">
+                        {more.map((video, index) => (
+                          <RankingVideoCard key={section.id + video.ytid} video={video} rank={RANKING_LEAD_COUNT + index + 1} priority={false} />
+                        ))}
+                      </div>
+                    </div>
+                  </details>
+                ) : null}
+              </>
+            );
+          })()}
         </section>
       ))}
       <AdSlot slot="1438236565" />

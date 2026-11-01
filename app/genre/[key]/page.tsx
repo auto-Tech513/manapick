@@ -17,7 +17,7 @@ import {
   youtubeThumbnail,
   type Video
 } from "@/lib/manapick";
-import { eligibleSubPagePath, eligibleSubPagesForGenre } from "@/lib/sub-pages";
+import { MIN_SUB_PAGE_VIDEOS, eligibleSubPagePath, eligibleSubPagesForGenre } from "@/lib/sub-pages";
 import GuidePrCard from "@/components/GuidePrCard";
 import prLinksData from "@/content/pr-links.json";
 import type { GuidePrLink } from "@/lib/pr-links";
@@ -38,6 +38,30 @@ function genreVideos(key: string): Video[] {
   return videos
     .filter((video) => video.genre === key)
     .sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
+}
+
+const TOP_VIDEO_COUNT = 6;
+
+type VideoGroup = { sub: string; videos: Video[] };
+
+const OTHER_GROUP_LABEL = "その他のトピック";
+
+// サブジャンルごとにまとめる。並びは掲載本数の多い順、同数ならサブジャンル名順。各グループ内はスコア順を保つ。
+// 掲載がトピック別ページの基準（MIN_SUB_PAGE_VIDEOS本）に満たないサブジャンルは、折りたたみが細かくなりすぎないよう最後の1グループにまとめる。
+function groupVideosBySub(list: Video[]): VideoGroup[] {
+  const map = new Map<string, Video[]>();
+  for (const video of list) {
+    const sub = video.sub || OTHER_GROUP_LABEL;
+    const bucket = map.get(sub);
+    if (bucket) bucket.push(video);
+    else map.set(sub, [video]);
+  }
+  const groups = Array.from(map, ([sub, videos]) => ({ sub, videos }));
+  const major = groups
+    .filter((group) => group.videos.length >= MIN_SUB_PAGE_VIDEOS && group.sub !== OTHER_GROUP_LABEL)
+    .sort((a, b) => b.videos.length - a.videos.length || a.sub.localeCompare(b.sub, "ja"));
+  const minorVideos = list.filter((video) => !major.some((group) => group.sub === (video.sub || OTHER_GROUP_LABEL)));
+  return minorVideos.length > 0 ? [...major, { sub: OTHER_GROUP_LABEL, videos: minorVideos }] : major;
 }
 
 type ChannelStat = { channel: string; count: number; total: number; scored: number; top: Video };
@@ -285,6 +309,32 @@ export default async function GenrePage({ params }: GenrePageProps) {
   const seo = genreSeoFor(key, label, list.length);
   const prCourseItems = (guidePrLinks[key] ?? []).filter((item) => item.kind === "course");
   const channelStats = genreChannelStats(list);
+  const topVideos = list.slice(0, TOP_VIDEO_COUNT);
+  const rest = list.slice(TOP_VIDEO_COUNT);
+  const videoGroups = groupVideosBySub(list);
+  const renderVideoCard = (video: Video) => {
+    const freshness = videoFreshness(video);
+
+    return (
+      <li key={video.ytid}>
+        <Link href={videoPath(video.ytid)} className="genre-hub-card">
+          <span className="genre-hub-thumb">
+            <Image
+              src={youtubeThumbnail(video.ytid)}
+              alt={video.title + "のサムネイル"}
+              width={320}
+              height={180}
+              sizes="(min-width: 768px) 320px, 90vw"
+              loading="lazy"
+            />
+            {freshness ? <span className={`freshness-badge is-${freshness.tone}`}>{freshness.label}</span> : null}
+          </span>
+          <span className="genre-hub-card-title">{video.title}</span>
+          <span className="genre-hub-card-meta">{scoreText(video)}・{video.minutes}分・{video.sub}</span>
+        </Link>
+      </li>
+    );
+  };
 
   const collection = {
     "@context": "https://schema.org",
@@ -380,6 +430,63 @@ export default async function GenrePage({ params }: GenrePageProps) {
         </section>
       ) : null}
 
+      <section className="genre-hub-videos" id="videos" aria-labelledby="genre-hub-videos-title">
+        <p className="section-eyebrow">掲載動画</p>
+        <h2 id="genre-hub-videos-title">{label}の掲載動画{list.length}本</h2>
+        <p className="genre-hub-videos-note">
+          {rest.length > 0
+            ? videoGroups.length > 1
+              ? `スコアが高い${topVideos.length}本を先に表示しています。すべての動画はトピックごとにまとめているので、気になるトピックを開いてください。`
+              : `スコアが高い${topVideos.length}本を先に表示しています。残りの${rest.length}本は下の一覧を開くと表示されます。`
+            : `掲載している${list.length}本をスコアの高い順に表示しています。`}
+        </p>
+        <h3 className="genre-hub-videos-subtitle">スコア上位{topVideos.length}本</h3>
+        <ul className="genre-hub-grid" role="list">
+          {topVideos.map((video) => renderVideoCard(video))}
+        </ul>
+        {rest.length > 0 && videoGroups.length > 1 ? (
+          <>
+            <h3 className="genre-hub-videos-subtitle">トピック別にすべて見る</h3>
+            <div className="genre-hub-groups">
+              {videoGroups.map((group) => {
+                const subPage = subPages.find((item) => item.sub === group.sub);
+
+                return (
+                  <details key={group.sub} className="fold-group">
+                    <summary>
+                      <span className="fold-group-name">{group.sub}</span>
+                      <span className="fold-group-count">{group.videos.length}本</span>
+                    </summary>
+                    <div className="fold-group-body">
+                      <ul className="genre-hub-grid" role="list">
+                        {group.videos.map((video) => renderVideoCard(video))}
+                      </ul>
+                      {subPage ? (
+                        <p className="fold-group-link">
+                          <Link href={eligibleSubPagePath(subPage)}>{group.sub}の見る順ページへ</Link>
+                        </p>
+                      ) : null}
+                    </div>
+                  </details>
+                );
+              })}
+            </div>
+          </>
+        ) : rest.length > 0 ? (
+          <details className="fold-group">
+            <summary>
+              <span className="fold-group-name">残りの動画</span>
+              <span className="fold-group-count">{rest.length}本</span>
+            </summary>
+            <div className="fold-group-body">
+              <ul className="genre-hub-grid" role="list">
+                {rest.map((video) => renderVideoCard(video))}
+              </ul>
+            </div>
+          </details>
+        ) : null}
+      </section>
+
       {channelStats.length > 0 ? (
         <section className="genre-hub-channels" aria-labelledby="genre-hub-channels-title">
           <p className="section-eyebrow">チャンネルから選ぶ</p>
@@ -440,31 +547,6 @@ export default async function GenrePage({ params }: GenrePageProps) {
       ) : null}
 
       <AdSlot slot="1438236565" />
-      <ul className="genre-hub-grid" role="list">
-        {list.map((video) => {
-          const freshness = videoFreshness(video);
-
-          return (
-            <li key={video.ytid}>
-              <Link href={videoPath(video.ytid)} className="genre-hub-card">
-                <span className="genre-hub-thumb">
-                  <Image
-                    src={youtubeThumbnail(video.ytid)}
-                    alt={video.title + "のサムネイル"}
-                    width={320}
-                    height={180}
-                    sizes="(min-width: 768px) 320px, 90vw"
-                    loading="lazy"
-                  />
-                  {freshness ? <span className={`freshness-badge is-${freshness.tone}`}>{freshness.label}</span> : null}
-                </span>
-                <span className="genre-hub-card-title">{video.title}</span>
-                <span className="genre-hub-card-meta">{scoreText(video)}・{video.minutes}分・{video.sub}</span>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
 
       <p className="genre-hub-back">
         <Link href="/">← すべてのジャンルを見る</Link>

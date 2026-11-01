@@ -1,7 +1,8 @@
 export const MANAPICK_AI_URL = "https://ai.manapick.app";
 export const MANAPICK_LICENSE_URL = "https://license.manapick.app";
 export const MANAPICK_CAREER_URL = "https://career.manapick.app";
-export const MANAPICK_COMPANY_URL = "https://company.manapick.app/?utm_source=manapick&utm_medium=network&utm_campaign=manapick_to_company#companies";
+// 姉妹サイトへのリンクは他の3サイトと同じくUTMなしのURLに揃える（2026-11-01）。
+export const MANAPICK_COMPANY_URL = "https://company.manapick.app/#companies";
 export const MANAPICK_COMPANY_ORIGIN = "https://company.manapick.app/";
 
 const MANAPICK_LICENSE_CATEGORY_BY_GENRE: Record<string, string> = {
