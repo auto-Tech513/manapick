@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { guidePath, guides } from "@/lib/guides";
 import AdSlot from "@/components/AdSlot";
 import NetworkContextBand from "@/components/NetworkContextBand";
+import FoldSection from "@/components/FoldSection";
 import {
   absoluteUrl,
   displayChannel,
@@ -411,11 +412,9 @@ export default async function GenrePage({ params }: GenrePageProps) {
         </section>
       ) : null}
       <NetworkContextBand genreKey={key} pagePath={`/genre/${key}/`} />
-      <section className="genre-hub-editorial" aria-labelledby="genre-editorial-title">
-        <p className="section-eyebrow">編集部の選び方</p>
-        <h2 id="genre-editorial-title">{label}で注意して見ていること</h2>
+      <FoldSection className="genre-hub-editorial" titleId="genre-editorial-title" eyebrow="編集部の選び方" title={`${label}で注意して見ていること`}>
         <p>{genreEditorialNote(key, label)}</p>
-      </section>
+      </FoldSection>
       {subPages.length > 0 ? (
         <section className="genre-hub-subpages" aria-labelledby="genre-hub-subpages-title">
           <h2 id="genre-hub-subpages-title">{label}のトピック別ロードマップ</h2>

@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import GuidePrCard from "@/components/GuidePrCard";
 import AdSlot from "@/components/AdSlot";
 import NetworkContextBand from "@/components/NetworkContextBand";
+import FoldSection from "@/components/FoldSection";
 import prLinksData from "@/content/pr-links.json";
 import { guidePath, guides } from "@/lib/guides";
 import {
@@ -189,7 +190,7 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
           </div>
         </header>
 
-        <NetworkContextBand genreKey={key} pagePath={`/genre/${key}/${sub}/`} />
+        <NetworkContextBand genreKey={key} sub={sub} pagePath={`/genre/${key}/${sub}/`} />
 
         <section className="sub-topic-section" aria-labelledby="sub-roadmap-title">
           <div className="sub-topic-heading">
@@ -215,11 +216,7 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
           </div>
         </section>
 
-        <section className="sub-topic-section" aria-labelledby="sub-video-list-title">
-          <div className="sub-topic-heading">
-            <p className="section-eyebrow">全動画一覧</p>
-            <h2 id="sub-video-list-title">{sub}の無料YouTube動画一覧（{list.length}本）</h2>
-          </div>
+        <FoldSection className="sub-topic-section" titleId="sub-video-list-title" eyebrow="全動画一覧" title={`${sub}の無料YouTube動画一覧（${list.length}本）`} hint="スコア順・タイトルと採点コメント">
           <div className="sub-topic-list">
             {list.map((video) => (
               <Link key={video.ytid} href={videoPath(video.ytid)} className="sub-topic-list-card">
@@ -229,7 +226,7 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
               </Link>
             ))}
           </div>
-        </section>
+        </FoldSection>
 
         <AdSlot slot="1438236565" />
         <section className="sub-topic-section" aria-labelledby="sub-faq-title">

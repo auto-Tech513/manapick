@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import BrandLogo from "@/components/BrandLogo";
 import LearningNote from "@/components/LearningNote";
 import NetworkContextBand from "@/components/NetworkContextBand";
+import FoldSection from "@/components/FoldSection";
 import VideoActions from "@/components/VideoActions";
 import VideoEmbed from "@/components/VideoEmbed";
 import sisterItemLinks from "@/content/sister-item-links.json";
@@ -115,7 +116,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
   const editorialSummary = videoEditorialSummary(video, related[0]);
   const freshness = videoFreshness(video);
   const sisterLinks = (sisterItemLinks as Record<string, SisterItemLink[]>)[video.ytid] ?? [];
-  const linkedSisterSites = sisterLinks.map((link) => link.site);
+  const linkedSisterHrefs = sisterLinks.map((link) => link.url);
   const videoObject = {
     "@type": "VideoObject",
     name: video.title,
@@ -265,15 +266,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
         </section>
       ) : null}
 
-      <section className="video-editorial-section" aria-labelledby="video-editorial-title">
-        <div className="section-heading-row">
-          <div>
-            <p className="section-eyebrow">Manapick独自解説</p>
-            <h2 id="video-editorial-title" className="section-title">この動画をどう使うか</h2>
-          </div>
-        </div>
-        <p className="video-editorial-body">{editorialSummary}</p>
-        <AdSlot slot="1438236565" />
+      <nav className="video-quick-next" aria-label="この動画のあとに">
         {related[0] ? (
           <Link className="video-next-link" href={videoPath(related[0].ytid)}>
             次に見る1本：{related[0].title}
@@ -284,6 +277,10 @@ export default async function VideoPage({ params }: VideoPageProps) {
             {videoGuideLinkLabel(video.genre)}
           </Link>
         ) : null}
+      </nav>
+
+      <FoldSection className="video-editorial-section" titleId="video-editorial-title" titleClassName="section-title" eyebrow="Manapick独自解説" title="この動画をどう使うか">
+        <p className="video-editorial-body">{editorialSummary}</p>
         <ol className="video-learning-loop" aria-label="動画を学びにつなげる4ステップ">
           <li>
             <span>01</span>
@@ -306,15 +303,11 @@ export default async function VideoPage({ params }: VideoPageProps) {
             <small><a href={`#network-context-${video.genre}`}>AI・資格・仕事の詳しい情報へ</a></small>
           </li>
         </ol>
-      </section>
+      </FoldSection>
 
-      <section className="video-context-section" aria-labelledby="video-context-title">
-        <div className="section-heading-row">
-          <div>
-            <p className="section-eyebrow">視聴前ガイド</p>
-            <h2 id="video-context-title" className="section-title">この動画を選ぶ前に知っておきたいこと</h2>
-          </div>
-        </div>
+      <AdSlot slot="1438236565" />
+
+      <FoldSection className="video-context-section" titleId="video-context-title" titleClassName="section-title" eyebrow="視聴前ガイド" title="この動画を選ぶ前に知っておきたいこと" hint="位置づけ・おすすめの人・学べること・注意点">
         <div className="video-context-grid">
           <section className="video-context-card">
             <h3>この動画の位置づけ</h3>
@@ -339,16 +332,10 @@ export default async function VideoPage({ params }: VideoPageProps) {
             ))}
           </section>
         </div>
-      </section>
+      </FoldSection>
 
-      <section className="video-axis-section" aria-labelledby="score-detail-title">
-        <div className="section-heading-row">
-          <div>
-            <p className="section-eyebrow">Manapickスコア</p>
-            <h2 id="score-detail-title" className="section-title">7軸の採点コメント</h2>
-          </div>
-          <Link href="/about-score/">採点方法を見る</Link>
-        </div>
+      <FoldSection className="video-axis-section" titleId="score-detail-title" titleClassName="section-title" eyebrow="Manapickスコア" title="7軸の採点コメント" hint={scoreText(video)}>
+        <p className="video-axis-method"><Link href="/about-score/">採点方法を見る</Link></p>
         <div className="video-axis-commentary">
           {axisCommentary.map((line) => (
             <p key={line}>{line}</p>
@@ -366,9 +353,9 @@ export default async function VideoPage({ params }: VideoPageProps) {
         ) : (
           <p className="video-empty-score">{scoreConfirmationText}</p>
         )}
-      </section>
+      </FoldSection>
 
-      <NetworkContextBand genreKey={video.genre} exclude={linkedSisterSites} />
+      <NetworkContextBand genreKey={video.genre} sub={video.sub} skipHrefs={linkedSisterHrefs} />
 
       <AdSlot slot="1438236565" />
       <section className="video-related-section" aria-labelledby="related-title">

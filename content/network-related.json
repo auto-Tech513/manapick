@@ -1,0 +1,1301 @@
+{
+  "checkedAt": "2026-11-02",
+  "genres": {
+    "english": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/toeic-lr/",
+          "label": "TOEIC Listening & Reading Test"
+        },
+        {
+          "href": "https://license.manapick.app/license/eiken-2/",
+          "label": "実用英語技能検定（英検）2級"
+        },
+        {
+          "href": "https://license.manapick.app/license/eiken-pre1/",
+          "label": "実用英語技能検定（英検）準1級"
+        },
+        {
+          "href": "https://license.manapick.app/license/tsuyaku-annaishi/",
+          "label": "全国通訳案内士"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/career/english-sales-support/",
+          "label": "英語を使う営業・カスタマーサポート"
+        },
+        {
+          "href": "https://career.manapick.app/occupation/86/",
+          "label": "翻訳者"
+        }
+      ],
+      "ai": [
+        {
+          "href": "https://ai.manapick.app/tool/notebooklm/",
+          "label": "Gemini Notebook（NotebookLM）"
+        },
+        {
+          "href": "https://ai.manapick.app/guide/ai-english-learning/",
+          "label": "AIで英語を学ぶ"
+        },
+        {
+          "href": "https://ai.manapick.app/use/english-practice/",
+          "label": "英会話・英文添削を練習したい"
+        },
+        {
+          "href": "https://ai.manapick.app/tool/deepl/",
+          "label": "DeepL"
+        }
+      ],
+      "company": [
+        {
+          "href": "https://company.manapick.app/company/mitsubishi-corp/",
+          "label": "三菱商事"
+        },
+        {
+          "href": "https://company.manapick.app/company/itochu/",
+          "label": "伊藤忠商事"
+        },
+        {
+          "href": "https://company.manapick.app/company/mitsui-co/",
+          "label": "三井物産"
+        },
+        {
+          "href": "https://company.manapick.app/company/honyaku-center/",
+          "label": "翻訳センター"
+        }
+      ]
+    },
+    "ai": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/seisei-ai-passport/",
+          "label": "生成AIパスポート試験"
+        },
+        {
+          "href": "https://license.manapick.app/license/g-kentei/",
+          "label": "G検定（JDLA ジェネラリスト検定）"
+        },
+        {
+          "href": "https://license.manapick.app/license/it-passport/",
+          "label": "ITパスポート試験（iパス）"
+        },
+        {
+          "href": "https://license.manapick.app/license/ai-901/",
+          "label": "Microsoft Certified: AI Fundamentals（AI-901）"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/occupation/321/",
+          "label": "AIエンジニア"
+        },
+        {
+          "href": "https://career.manapick.app/occupation/319/",
+          "label": "データサイエンティスト"
+        },
+        {
+          "href": "https://career.manapick.app/career/it-consultant/",
+          "label": "ITコンサルタント"
+        }
+      ],
+      "ai": [
+        {
+          "href": "https://ai.manapick.app/tool/chatgpt/",
+          "label": "ChatGPT"
+        },
+        {
+          "href": "https://ai.manapick.app/tool/claude/",
+          "label": "Claude"
+        },
+        {
+          "href": "https://ai.manapick.app/tool/gemini/",
+          "label": "Gemini"
+        },
+        {
+          "href": "https://ai.manapick.app/tool/notebooklm/",
+          "label": "Gemini Notebook（NotebookLM）"
+        }
+      ],
+      "company": [
+        {
+          "href": "https://company.manapick.app/company/fujitsu/",
+          "label": "富士通"
+        },
+        {
+          "href": "https://company.manapick.app/company/nec/",
+          "label": "日本電気"
+        },
+        {
+          "href": "https://company.manapick.app/company/hitachi/",
+          "label": "日立製作所"
+        },
+        {
+          "href": "https://company.manapick.app/company/ntt/",
+          "label": "NTT"
+        }
+      ]
+    },
+    "prog": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/fe/",
+          "label": "基本情報技術者試験（FE）"
+        },
+        {
+          "href": "https://license.manapick.app/license/ap/",
+          "label": "応用情報技術者試験（AP）"
+        },
+        {
+          "href": "https://license.manapick.app/license/python3-basic/",
+          "label": "Python3エンジニア認定基礎試験"
+        },
+        {
+          "href": "https://license.manapick.app/license/aws-clf/",
+          "label": "AWS認定 クラウドプラクティショナー（CLF）"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/occupation/309/",
+          "label": "プログラマー"
+        },
+        {
+          "href": "https://career.manapick.app/career/software-engineer/",
+          "label": "ソフトウェアエンジニア"
+        },
+        {
+          "href": "https://career.manapick.app/occupation/310/",
+          "label": "システムエンジニア（Webサービス開発）"
+        },
+        {
+          "href": "https://career.manapick.app/career/it-consultant/",
+          "label": "ITコンサルタント"
+        }
+      ],
+      "ai": [
+        {
+          "href": "https://ai.manapick.app/tool/github-copilot/",
+          "label": "GitHub Copilot"
+        },
+        {
+          "href": "https://ai.manapick.app/tool/claude-code/",
+          "label": "Claude Code"
+        },
+        {
+          "href": "https://ai.manapick.app/tool/cursor/",
+          "label": "Cursor"
+        },
+        {
+          "href": "https://ai.manapick.app/use/learn-coding/",
+          "label": "プログラミングを学びながら作りたい"
+        }
+      ],
+      "company": [
+        {
+          "href": "https://company.manapick.app/company/fujitsu/",
+          "label": "富士通"
+        },
+        {
+          "href": "https://company.manapick.app/company/ntt/",
+          "label": "NTT"
+        },
+        {
+          "href": "https://company.manapick.app/company/nomura-research-institute/",
+          "label": "野村総合研究所"
+        },
+        {
+          "href": "https://company.manapick.app/company/tis/",
+          "label": "TISI"
+        }
+      ]
+    },
+    "data": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/statistics-2/",
+          "label": "統計検定 2級"
+        },
+        {
+          "href": "https://license.manapick.app/license/data-scientist-kentei/",
+          "label": "データサイエンティスト検定"
+        },
+        {
+          "href": "https://license.manapick.app/license/mos/",
+          "label": "MOS（マイクロソフト オフィス スペシャリスト）"
+        },
+        {
+          "href": "https://license.manapick.app/license/vba-expert-excel-standard/",
+          "label": "VBAエキスパート Excel VBA スタンダード"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/career/data-analyst/",
+          "label": "データアナリスト"
+        },
+        {
+          "href": "https://career.manapick.app/occupation/319/",
+          "label": "データサイエンティスト"
+        },
+        {
+          "href": "https://career.manapick.app/occupation/495/",
+          "label": "データエンジニア"
+        }
+      ],
+      "ai": [
+        {
+          "href": "https://ai.manapick.app/use/analyze-data/",
+          "label": "表・データをAIで分析したい"
+        },
+        {
+          "href": "https://ai.manapick.app/guide/ai-spreadsheet-analysis/",
+          "label": "AIで表計算を分析する手順"
+        },
+        {
+          "href": "https://ai.manapick.app/use/make-chart-report/",
+          "label": "表からグラフ・レポートを作りたい"
+        },
+        {
+          "href": "https://ai.manapick.app/tool/julius/",
+          "label": "Julius AI"
+        }
+      ],
+      "company": [
+        {
+          "href": "https://company.manapick.app/company/ly-corp/",
+          "label": "LINEヤフー"
+        },
+        {
+          "href": "https://company.manapick.app/company/sakura-internet/",
+          "label": "さくらインターネット"
+        }
+      ]
+    },
+    "marke": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/web-analyst-waca/",
+          "label": "ウェブ解析士"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/career/web-marketer/",
+          "label": "Webマーケター"
+        },
+        {
+          "href": "https://career.manapick.app/career/social-media-manager/",
+          "label": "SNS運用担当"
+        }
+      ],
+      "ai": [
+        {
+          "href": "https://ai.manapick.app/use/sns-copy/",
+          "label": "SNS・広告のキャッチコピーを作りたい"
+        },
+        {
+          "href": "https://ai.manapick.app/use/write-blog/",
+          "label": "ブログ記事を書きたい"
+        },
+        {
+          "href": "https://ai.manapick.app/tool/canva/",
+          "label": "Canva (Magic Studio)"
+        }
+      ],
+      "company": [
+        {
+          "href": "https://company.manapick.app/company/dentsu-group/",
+          "label": "電通グループ"
+        },
+        {
+          "href": "https://company.manapick.app/company/hakuhodo-dy-holdings/",
+          "label": "株式会社博報堂DYホールディングス"
+        },
+        {
+          "href": "https://company.manapick.app/company/cyberagent/",
+          "label": "サイバーエージェント"
+        }
+      ]
+    },
+    "biz": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/mos/",
+          "label": "MOS（マイクロソフト オフィス スペシャリスト）"
+        },
+        {
+          "href": "https://license.manapick.app/license/nissho-pc-bunsho-3/",
+          "label": "日商PC検定（文書作成）3級"
+        },
+        {
+          "href": "https://license.manapick.app/license/hisho-2/",
+          "label": "秘書検定 2級"
+        },
+        {
+          "href": "https://license.manapick.app/license/biz-law-3/",
+          "label": "ビジネス実務法務検定試験 3級"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/career/office-administration/",
+          "label": "一般事務・営業事務"
+        },
+        {
+          "href": "https://career.manapick.app/occupation/403/",
+          "label": "一般事務"
+        },
+        {
+          "href": "https://career.manapick.app/occupation/401/",
+          "label": "秘書"
+        }
+      ],
+      "ai": [
+        {
+          "href": "https://ai.manapick.app/tool/copilot/",
+          "label": "Microsoft Copilot"
+        },
+        {
+          "href": "https://ai.manapick.app/guide/microsoft-copilot-howto/",
+          "label": "Microsoft Copilotの使い方"
+        },
+        {
+          "href": "https://ai.manapick.app/use/make-slides/",
+          "label": "プレゼン資料を一気に作りたい"
+        },
+        {
+          "href": "https://ai.manapick.app/tool/gamma/",
+          "label": "Gamma"
+        }
+      ]
+    },
+    "kaikei": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/boki-3/",
+          "label": "日商簿記検定 3級"
+        },
+        {
+          "href": "https://license.manapick.app/license/boki-2/",
+          "label": "日商簿記検定 2級"
+        },
+        {
+          "href": "https://license.manapick.app/license/fp-3/",
+          "label": "FP技能検定 3級（ファイナンシャル・プランニング技能士）"
+        },
+        {
+          "href": "https://license.manapick.app/license/biz-accounting-3/",
+          "label": "ビジネス会計検定3級"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/career/accounting/",
+          "label": "経理"
+        },
+        {
+          "href": "https://career.manapick.app/occupation/405/",
+          "label": "経理事務"
+        },
+        {
+          "href": "https://career.manapick.app/career/tax-accountant/",
+          "label": "税理士"
+        },
+        {
+          "href": "https://career.manapick.app/occupation/89/",
+          "label": "公認会計士"
+        }
+      ],
+      "ai": [
+        {
+          "href": "https://ai.manapick.app/guide/tip-excel-formula-test/",
+          "label": "Excelの関数をAIに日本語で頼む"
+        },
+        {
+          "href": "https://ai.manapick.app/guide/tip-receipt-budget/",
+          "label": "レシートの写真を家計簿の表にする"
+        },
+        {
+          "href": "https://ai.manapick.app/tool/copilot/",
+          "label": "Microsoft Copilot"
+        }
+      ],
+      "company": [
+        {
+          "href": "https://company.manapick.app/company/freee/",
+          "label": "フリー"
+        },
+        {
+          "href": "https://company.manapick.app/company/money-forward/",
+          "label": "マネーフォワード"
+        }
+      ]
+    },
+    "money": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/fp-3/",
+          "label": "FP技能検定 3級（ファイナンシャル・プランニング技能士）"
+        },
+        {
+          "href": "https://license.manapick.app/license/fp-2/",
+          "label": "FP技能検定 2級（ファイナンシャル・プランニング技能士）"
+        },
+        {
+          "href": "https://license.manapick.app/license/gaimuin-2/",
+          "label": "証券外務員 二種"
+        },
+        {
+          "href": "https://license.manapick.app/license/dc-planner-2/",
+          "label": "DCプランナー2級"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/occupation/81/",
+          "label": "ファイナンシャル・プランナー"
+        },
+        {
+          "href": "https://career.manapick.app/occupation/428/",
+          "label": "保険営業（生命保険、損害保険）"
+        },
+        {
+          "href": "https://career.manapick.app/occupation/413/",
+          "label": "銀行等窓口事務"
+        }
+      ],
+      "ai": [
+        {
+          "href": "https://ai.manapick.app/guide/tip-receipt-budget/",
+          "label": "レシートの写真を家計簿の表にする"
+        },
+        {
+          "href": "https://ai.manapick.app/use/research-cited/",
+          "label": "最新情報を出典つきで調べたい"
+        }
+      ],
+      "company": [
+        {
+          "href": "https://company.manapick.app/company/nomura-holdings/",
+          "label": "野村ホールディングス"
+        },
+        {
+          "href": "https://company.manapick.app/company/sbi-holdings/",
+          "label": "SBIホールディングス"
+        },
+        {
+          "href": "https://company.manapick.app/company/monex-group/",
+          "label": "マネックスグループ"
+        },
+        {
+          "href": "https://company.manapick.app/company/matsui-securities/",
+          "label": "松井証券"
+        }
+      ]
+    },
+    "video": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/cg-creator-2/",
+          "label": "CGクリエイター検定 ベーシック"
+        },
+        {
+          "href": "https://license.manapick.app/license/adobe-photoshop/",
+          "label": "Adobe Certified Professional Photoshop"
+        },
+        {
+          "href": "https://license.manapick.app/license/shikisai-3/",
+          "label": "色彩検定 3級"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/career/video-editor/",
+          "label": "動画編集者"
+        },
+        {
+          "href": "https://career.manapick.app/occupation/330/",
+          "label": "グラフィックデザイナー"
+        },
+        {
+          "href": "https://career.manapick.app/career/web-designer/",
+          "label": "Webデザイナー"
+        }
+      ],
+      "ai": [
+        {
+          "href": "https://ai.manapick.app/tool/capcut/",
+          "label": "CapCut"
+        },
+        {
+          "href": "https://ai.manapick.app/tool/vrew/",
+          "label": "Vrew"
+        },
+        {
+          "href": "https://ai.manapick.app/use/edit-video-fast/",
+          "label": "動画編集を字幕つきで早く終わらせたい"
+        },
+        {
+          "href": "https://ai.manapick.app/tool/descript/",
+          "label": "Descript"
+        }
+      ],
+      "company": [
+        {
+          "href": "https://company.manapick.app/company/toho/",
+          "label": "東宝"
+        },
+        {
+          "href": "https://company.manapick.app/company/toei-animation/",
+          "label": "東映アニメーション"
+        }
+      ]
+    },
+    "shikaku": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/it-passport/",
+          "label": "ITパスポート試験（iパス）"
+        },
+        {
+          "href": "https://license.manapick.app/license/takken/",
+          "label": "宅地建物取引士（宅建士）"
+        },
+        {
+          "href": "https://license.manapick.app/license/boki-3/",
+          "label": "日商簿記検定 3級"
+        },
+        {
+          "href": "https://license.manapick.app/license/fp-3/",
+          "label": "FP技能検定 3級（ファイナンシャル・プランニング技能士）"
+        }
+      ],
+      "ai": [
+        {
+          "href": "https://ai.manapick.app/use/study-exam/",
+          "label": "資格・テスト勉強を効率よくしたい"
+        },
+        {
+          "href": "https://ai.manapick.app/guide/notebooklm-study/",
+          "label": "NotebookLMの学習ガイド"
+        },
+        {
+          "href": "https://ai.manapick.app/tool/notebooklm/",
+          "label": "Gemini Notebook（NotebookLM）"
+        }
+      ]
+    }
+  },
+  "subs": {
+    "english/TOEIC": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/toeic-lr/",
+          "label": "TOEIC Listening & Reading Test"
+        },
+        {
+          "href": "https://license.manapick.app/license/toefl/",
+          "label": "TOEFL iBT"
+        },
+        {
+          "href": "https://license.manapick.app/license/ielts/",
+          "label": "IELTS"
+        }
+      ]
+    },
+    "english/ビジネス英語": {
+      "career": [
+        {
+          "href": "https://career.manapick.app/career/english-sales-support/",
+          "label": "英語を使う営業・カスタマーサポート"
+        },
+        {
+          "href": "https://career.manapick.app/occupation/86/",
+          "label": "翻訳者"
+        }
+      ]
+    },
+    "english/「ハングル」能力検定": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/hangul-3/",
+          "label": "「ハングル」能力検定 3級"
+        }
+      ]
+    },
+    "ai/ChatGPT": {
+      "ai": [
+        {
+          "href": "https://ai.manapick.app/tool/chatgpt/",
+          "label": "ChatGPT"
+        },
+        {
+          "href": "https://ai.manapick.app/guide/chatgpt-start/",
+          "label": "ChatGPTの始め方"
+        }
+      ]
+    },
+    "ai/Claude": {
+      "ai": [
+        {
+          "href": "https://ai.manapick.app/tool/claude/",
+          "label": "Claude"
+        },
+        {
+          "href": "https://ai.manapick.app/tool/claude-code/",
+          "label": "Claude Code"
+        }
+      ]
+    },
+    "ai/Gemini": {
+      "ai": [
+        {
+          "href": "https://ai.manapick.app/tool/gemini/",
+          "label": "Gemini"
+        },
+        {
+          "href": "https://ai.manapick.app/guide/gemini-howto/",
+          "label": "Geminiの使い方"
+        },
+        {
+          "href": "https://ai.manapick.app/tool/notebooklm/",
+          "label": "Gemini Notebook（NotebookLM）"
+        }
+      ]
+    },
+    "ai/Copilot": {
+      "ai": [
+        {
+          "href": "https://ai.manapick.app/tool/copilot/",
+          "label": "Microsoft Copilot"
+        },
+        {
+          "href": "https://ai.manapick.app/guide/microsoft-copilot-howto/",
+          "label": "Microsoft Copilotの使い方"
+        }
+      ]
+    },
+    "ai/プロンプト": {
+      "ai": [
+        {
+          "href": "https://ai.manapick.app/guide/prompt-tips/",
+          "label": "プロンプトのコツ"
+        },
+        {
+          "href": "https://ai.manapick.app/guide/prompt-basics/",
+          "label": "AIプロンプトの書き方"
+        }
+      ]
+    },
+    "ai/画像生成": {
+      "ai": [
+        {
+          "href": "https://ai.manapick.app/category/image/",
+          "label": "画像のAI"
+        },
+        {
+          "href": "https://ai.manapick.app/guide/ai-image-generation-start/",
+          "label": "画像生成AIの始め方"
+        }
+      ]
+    },
+    "ai/自動化": {
+      "ai": [
+        {
+          "href": "https://ai.manapick.app/use/automate-workflow/",
+          "label": "アプリ連携で定型作業を自動化したい"
+        },
+        {
+          "href": "https://ai.manapick.app/tool/n8n/",
+          "label": "n8n"
+        },
+        {
+          "href": "https://ai.manapick.app/tool/zapier/",
+          "label": "Zapier (AI)"
+        }
+      ]
+    },
+    "ai/AI資格": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/seisei-ai-passport/",
+          "label": "生成AIパスポート試験"
+        },
+        {
+          "href": "https://license.manapick.app/license/g-kentei/",
+          "label": "G検定（JDLA ジェネラリスト検定）"
+        }
+      ]
+    },
+    "prog/Python": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/python3-basic/",
+          "label": "Python3エンジニア認定基礎試験"
+        },
+        {
+          "href": "https://license.manapick.app/license/fe/",
+          "label": "基本情報技術者試験（FE）"
+        }
+      ]
+    },
+    "prog/インフラ": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/aws-clf/",
+          "label": "AWS認定 クラウドプラクティショナー（CLF）"
+        },
+        {
+          "href": "https://license.manapick.app/license/linuc-1/",
+          "label": "LinuC レベル1"
+        },
+        {
+          "href": "https://license.manapick.app/license/lpic-1/",
+          "label": "LPIC-1"
+        }
+      ]
+    },
+    "prog/Web開発": {
+      "career": [
+        {
+          "href": "https://career.manapick.app/occupation/310/",
+          "label": "システムエンジニア（Webサービス開発）"
+        },
+        {
+          "href": "https://career.manapick.app/career/web-designer/",
+          "label": "Webデザイナー"
+        }
+      ]
+    },
+    "data/統計": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/statistics-2/",
+          "label": "統計検定 2級"
+        },
+        {
+          "href": "https://license.manapick.app/license/data-scientist-kentei/",
+          "label": "データサイエンティスト検定"
+        }
+      ]
+    },
+    "data/Excel": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/mos/",
+          "label": "MOS（マイクロソフト オフィス スペシャリスト）"
+        },
+        {
+          "href": "https://license.manapick.app/license/vba-expert-excel-standard/",
+          "label": "VBAエキスパート Excel VBA スタンダード"
+        }
+      ]
+    },
+    "data/データサイエンス": {
+      "career": [
+        {
+          "href": "https://career.manapick.app/occupation/319/",
+          "label": "データサイエンティスト"
+        },
+        {
+          "href": "https://career.manapick.app/occupation/495/",
+          "label": "データエンジニア"
+        }
+      ]
+    },
+    "marke/SNS": {
+      "career": [
+        {
+          "href": "https://career.manapick.app/career/social-media-manager/",
+          "label": "SNS運用担当"
+        }
+      ]
+    },
+    "marke/SEO": {
+      "career": [
+        {
+          "href": "https://career.manapick.app/career/web-marketer/",
+          "label": "Webマーケター"
+        }
+      ]
+    },
+    "kaikei/簿記": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/boki-3/",
+          "label": "日商簿記検定 3級"
+        },
+        {
+          "href": "https://license.manapick.app/license/boki-2/",
+          "label": "日商簿記検定 2級"
+        }
+      ]
+    },
+    "kaikei/FP": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/fp-3/",
+          "label": "FP技能検定 3級（ファイナンシャル・プランニング技能士）"
+        },
+        {
+          "href": "https://license.manapick.app/license/fp-2/",
+          "label": "FP技能検定 2級（ファイナンシャル・プランニング技能士）"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/occupation/81/",
+          "label": "ファイナンシャル・プランナー"
+        }
+      ]
+    },
+    "kaikei/税理士": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/zeirishi/",
+          "label": "税理士"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/career/tax-accountant/",
+          "label": "税理士"
+        }
+      ]
+    },
+    "kaikei/中小企業診断士": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/shindanshi/",
+          "label": "中小企業診断士"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/occupation/79/",
+          "label": "中小企業診断士"
+        }
+      ]
+    },
+    "money/NISA": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/fp-3/",
+          "label": "FP技能検定 3級（ファイナンシャル・プランニング技能士）"
+        },
+        {
+          "href": "https://license.manapick.app/license/gaimuin-2/",
+          "label": "証券外務員 二種"
+        }
+      ]
+    },
+    "video/CapCut": {
+      "ai": [
+        {
+          "href": "https://ai.manapick.app/tool/capcut/",
+          "label": "CapCut"
+        }
+      ]
+    },
+    "video/デザイン": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/adobe-photoshop/",
+          "label": "Adobe Certified Professional Photoshop"
+        },
+        {
+          "href": "https://license.manapick.app/license/shikisai-3/",
+          "label": "色彩検定 3級"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/career/web-designer/",
+          "label": "Webデザイナー"
+        },
+        {
+          "href": "https://career.manapick.app/occupation/330/",
+          "label": "グラフィックデザイナー"
+        }
+      ]
+    },
+    "shikaku/宅建": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/takken/",
+          "label": "宅地建物取引士（宅建士）"
+        },
+        {
+          "href": "https://license.manapick.app/license/chintai/",
+          "label": "賃貸不動産経営管理士"
+        },
+        {
+          "href": "https://license.manapick.app/license/kanri-gyomu/",
+          "label": "管理業務主任者"
+        }
+      ]
+    },
+    "shikaku/社労士": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/sharoshi/",
+          "label": "社会保険労務士（社労士）"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/occupation/82/",
+          "label": "社会保険労務士"
+        }
+      ]
+    },
+    "shikaku/危険物乙4": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/kikenbutsu-otsu4/",
+          "label": "危険物取扱者 乙種第4類（乙4）"
+        }
+      ]
+    },
+    "shikaku/行政書士": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/gyoseishoshi/",
+          "label": "行政書士"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/occupation/84/",
+          "label": "行政書士"
+        }
+      ]
+    },
+    "shikaku/IT": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/it-passport/",
+          "label": "ITパスポート試験（iパス）"
+        },
+        {
+          "href": "https://license.manapick.app/license/fe/",
+          "label": "基本情報技術者試験（FE）"
+        },
+        {
+          "href": "https://license.manapick.app/license/sg/",
+          "label": "情報セキュリティマネジメント試験（SG）"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/career/it-consultant/",
+          "label": "ITコンサルタント"
+        },
+        {
+          "href": "https://career.manapick.app/occupation/316/",
+          "label": "ヘルプデスク（IT）"
+        }
+      ]
+    },
+    "shikaku/登録販売者": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/touroku-hanbai/",
+          "label": "登録販売者"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/career/registered-salesperson/",
+          "label": "登録販売者"
+        },
+        {
+          "href": "https://career.manapick.app/occupation/423/",
+          "label": "医薬品販売/登録販売者"
+        }
+      ]
+    },
+    "shikaku/ITパスポート": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/it-passport/",
+          "label": "ITパスポート試験（iパス）"
+        },
+        {
+          "href": "https://license.manapick.app/license/sg/",
+          "label": "情報セキュリティマネジメント試験（SG）"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/career/it-consultant/",
+          "label": "ITコンサルタント"
+        }
+      ],
+      "company": [
+        {
+          "href": "https://company.manapick.app/company/fujitsu/",
+          "label": "富士通"
+        },
+        {
+          "href": "https://company.manapick.app/company/ntt/",
+          "label": "NTT"
+        }
+      ]
+    },
+    "shikaku/基本情報技術者": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/fe/",
+          "label": "基本情報技術者試験（FE）"
+        },
+        {
+          "href": "https://license.manapick.app/license/ap/",
+          "label": "応用情報技術者試験（AP）"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/occupation/309/",
+          "label": "プログラマー"
+        },
+        {
+          "href": "https://career.manapick.app/career/software-engineer/",
+          "label": "ソフトウェアエンジニア"
+        }
+      ],
+      "company": [
+        {
+          "href": "https://company.manapick.app/company/fujitsu/",
+          "label": "富士通"
+        },
+        {
+          "href": "https://company.manapick.app/company/nec/",
+          "label": "日本電気"
+        }
+      ]
+    },
+    "shikaku/G検定": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/g-kentei/",
+          "label": "G検定（JDLA ジェネラリスト検定）"
+        },
+        {
+          "href": "https://license.manapick.app/license/seisei-ai-passport/",
+          "label": "生成AIパスポート試験"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/occupation/321/",
+          "label": "AIエンジニア"
+        },
+        {
+          "href": "https://career.manapick.app/occupation/319/",
+          "label": "データサイエンティスト"
+        }
+      ]
+    },
+    "shikaku/介護福祉士": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/kaigo-fukushi/",
+          "label": "介護福祉士"
+        },
+        {
+          "href": "https://license.manapick.app/license/care-manager/",
+          "label": "ケアマネジャー（介護支援専門員）"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/career/certified-care-worker/",
+          "label": "介護福祉士"
+        }
+      ]
+    },
+    "shikaku/生成AIパスポート": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/seisei-ai-passport/",
+          "label": "生成AIパスポート試験"
+        },
+        {
+          "href": "https://license.manapick.app/license/g-kentei/",
+          "label": "G検定（JDLA ジェネラリスト検定）"
+        }
+      ],
+      "ai": [
+        {
+          "href": "https://ai.manapick.app/tool/chatgpt/",
+          "label": "ChatGPT"
+        },
+        {
+          "href": "https://ai.manapick.app/tool/gemini/",
+          "label": "Gemini"
+        }
+      ]
+    },
+    "shikaku/AI検定": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/g-kentei/",
+          "label": "G検定（JDLA ジェネラリスト検定）"
+        },
+        {
+          "href": "https://license.manapick.app/license/seisei-ai-passport/",
+          "label": "生成AIパスポート試験"
+        }
+      ]
+    },
+    "shikaku/MOS": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/mos/",
+          "label": "MOS（マイクロソフト オフィス スペシャリスト）"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/career/office-administration/",
+          "label": "一般事務・営業事務"
+        }
+      ]
+    },
+    "shikaku/保育士": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/hoikushi/",
+          "label": "保育士"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/career/childcare-worker/",
+          "label": "保育士"
+        }
+      ]
+    },
+    "shikaku/電験三種": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/denken-3/",
+          "label": "第三種電気主任技術者（電験三種）"
+        }
+      ]
+    },
+    "shikaku/医療事務": {
+      "career": [
+        {
+          "href": "https://career.manapick.app/occupation/418/",
+          "label": "医療事務"
+        }
+      ]
+    },
+    "shikaku/秘書検定": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/hisho-2/",
+          "label": "秘書検定 2級"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/occupation/401/",
+          "label": "秘書"
+        }
+      ]
+    },
+    "shikaku/管理業務主任者": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/kanri-gyomu/",
+          "label": "管理業務主任者"
+        }
+      ]
+    },
+    "shikaku/第二種電気工事士": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/denki-2/",
+          "label": "第二種電気工事士"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/occupation/45/",
+          "label": "電気工事士"
+        }
+      ]
+    },
+    "shikaku/二級ボイラー技士": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/boiler-2/",
+          "label": "二級ボイラー技士"
+        }
+      ]
+    },
+    "shikaku/ビジネス実務法務検定試験": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/biz-law-3/",
+          "label": "ビジネス実務法務検定試験 3級"
+        }
+      ]
+    },
+    "shikaku/賃貸不動産経営管理士": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/chintai/",
+          "label": "賃貸不動産経営管理士"
+        }
+      ]
+    },
+    "shikaku/衛生管理者": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/eisei-kanri-1/",
+          "label": "衛生管理者（第一種）"
+        },
+        {
+          "href": "https://license.manapick.app/license/eisei-kanri-2/",
+          "label": "第二種衛生管理者"
+        }
+      ]
+    },
+    "shikaku/日本漢字能力検定": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/kanken-2/",
+          "label": "日本漢字能力検定（漢検）2級"
+        }
+      ]
+    },
+    "shikaku/国家公務員採用一般職試験": {
+      "career": [
+        {
+          "href": "https://career.manapick.app/occupation/137/",
+          "label": "国家公務員（行政事務）"
+        }
+      ]
+    },
+    "shikaku/測量士補": {
+      "license": [
+        {
+          "href": "https://license.manapick.app/license/sokuryo-ho/",
+          "label": "測量士補"
+        }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/occupation/24/",
+          "label": "測量士"
+        }
+      ]
+    }
+  }
+}

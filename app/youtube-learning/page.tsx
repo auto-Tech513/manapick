@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import FoldSection from "@/components/FoldSection";
 import AdSlot from "@/components/AdSlot";
 import BrandLogo from "@/components/BrandLogo";
 import { learningIntentPath, learningIntents } from "@/lib/learning-intents";
@@ -308,9 +309,7 @@ export default function YoutubeLearningPage() {
         </ol>
       </section>
 
-      <section className="knowledge-section" aria-labelledby="youtube-pr-title">
-        <p className="section-eyebrow">教材・講座の考え方</p>
-        <h2 id="youtube-pr-title">有料教材は「足りないところを補う」ために使う</h2>
+      <FoldSection className="knowledge-section" titleId="youtube-pr-title" eyebrow="教材・講座の考え方" title="有料教材は「足りないところを補う」ために使う">
         <p>
           Manapickは無料動画から始められる設計です。書籍や講座のPRリンクがある場合も、「動画で全体像をつかむ → 演習量が必要なら教材で補う」という順番を推奨します。広告報酬でランキングやスコアを操作しません。
         </p>
@@ -319,7 +318,7 @@ export default function YoutubeLearningPage() {
           <Link href="/about-score/">採点方法を見る</Link>
           <Link href="/faq/">よくある質問を見る</Link>
         </nav>
-      </section>
+      </FoldSection>
 
       <section className="knowledge-section" aria-labelledby="youtube-faq-title">
         <p className="section-eyebrow">FAQ</p>

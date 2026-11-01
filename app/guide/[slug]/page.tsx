@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import BrandLogo from "@/components/BrandLogo";
 import GuidePrCard from "@/components/GuidePrCard";
 import NetworkContextBand from "@/components/NetworkContextBand";
+import FoldSection from "@/components/FoldSection";
 import prLinksData from "@/content/pr-links.json";
 import { findGuide, guidePath, guides, guideStepVideos, type Guide } from "@/lib/guides";
 import {
@@ -226,7 +227,11 @@ export default async function GuidePage({ params }: GuidePageProps) {
               ))}
             </div>
           </div>
-          <h2 id="guide-overview-title">この記事でわかること</h2>
+          <details className="guide-overview-fold">
+            <summary>
+              <h2 id="guide-overview-title">この記事でわかること</h2>
+              <span className="fold-section-toggle" aria-hidden="true" />
+            </summary>
           <div className="guide-point-box">
             <ul>
               {learnPoints.map((point) => (
@@ -236,6 +241,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
             <p><strong>想定読者：</strong>{guide.audience ?? genreDisplayName(guide.genre) + "を無料動画で基礎から学びたい社会人向けです。"}</p>
             <p><strong>合計視聴時間：</strong>{totalVideos}本・約{durationLabel(totalMinutes)}。動画カードの時間はvideos.jsonから自動で表示しています。</p>
           </div>
+          </details>
           <details className="guide-toc">
             <summary>目次</summary>
             <ol>
@@ -265,12 +271,11 @@ export default async function GuidePage({ params }: GuidePageProps) {
           <p>合計{totalVideos}本・約{durationLabel(totalMinutes)}ぶん。{guide.conclusionClosing}</p>
         </section>
 
-        <section className="guide-section" aria-labelledby="guide-reason-title">
-          <h2 id="guide-reason-title">{guide.reasonTitle ?? "なぜこの順番か（多くの人がつまずく理由）"}</h2>
+        <FoldSection className="guide-section" titleId="guide-reason-title" title={guide.reasonTitle ?? "なぜこの順番か（多くの人がつまずく理由）"}>
           {guide.reasonParagraphs.map((paragraph) => (
             <p key={paragraph}>{strongText(paragraph)}</p>
           ))}
-        </section>
+        </FoldSection>
 
         <AdSlot slot="1438236565" />
         <section className="guide-section" aria-labelledby="guide-videos-title">
@@ -305,8 +310,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         </section>
 
         <AdSlot slot="1438236565" />
-        <section className="guide-section" aria-labelledby="guide-next-title">
-          <h2 id="guide-next-title">つまずきポイントと回避策</h2>
+        <FoldSection className="guide-section" titleId="guide-next-title" title="つまずきポイントと回避策" hint={`${stumbleRows.length}項目`}>
           <div className="guide-table-wrap">
             <table className="guide-table">
               <thead>
@@ -333,10 +337,9 @@ export default async function GuidePage({ params }: GuidePageProps) {
               </li>
             ))}
           </ul>
-        </section>
+        </FoldSection>
 
-        <section className="guide-section" aria-labelledby="guide-plan-title">
-          <h2 id="guide-plan-title">学習プラン例</h2>
+        <FoldSection className="guide-section" titleId="guide-plan-title" title="学習プラン例" hint={`${studyPlans.length}パターン`}>
           <div className="guide-table-wrap">
             <table className="guide-table">
               <thead>
@@ -357,7 +360,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
               </tbody>
             </table>
           </div>
-        </section>
+        </FoldSection>
 
         {remainingFaq.length > 0 ? (
           <section className="guide-section" aria-labelledby="guide-faq-title">

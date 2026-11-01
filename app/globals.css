@@ -13614,6 +13614,8 @@ body {
 @supports (word-break: auto-phrase) {
   :where(h1, h2, h3, h4, dt, button) {
     word-break: auto-phrase;
+    /* 「【AWS認定クラウドプラクティショナー】」のように1文節が画面幅より長いときだけ、文節の途中でも折り返す */
+    overflow-wrap: anywhere;
   }
 }
 
@@ -13754,4 +13756,180 @@ summary.cursor-pointer {
 .eyebrow-chunk {
   display: inline-block;
   white-space: nowrap;
+}
+
+/* 2026-11-02: ネットワーク欄を「サイト名リンク」から「関連する資格・仕事・AI・企業の個別ページ」へ */
+div.network-context-link {
+  align-content: start;
+  gap: 6px;
+}
+
+div.network-context-link:hover,
+div.network-context-link:focus-within {
+  transform: none;
+}
+
+.network-context-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 2px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.network-context-items a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  max-width: 100%;
+  border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  padding: 4px 10px;
+  color: var(--color-ink);
+  font-size: 0.78rem;
+  font-weight: 850;
+  line-height: 1.35;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.network-context-items a:hover,
+.network-context-items a:focus-visible {
+  border-color: currentColor;
+  text-decoration: underline;
+}
+
+.network-context-more {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  justify-self: start;
+  color: var(--color-muted);
+  font-size: 0.76rem;
+  font-weight: 850;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* 2026-11-02: 長い説明は初期状態で閉じる（FoldSection） */
+.fold-section-details > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 48px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.fold-section-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.fold-section-heading {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.fold-section-heading .fold-section-title {
+  margin: 0;
+}
+
+.fold-section-hint {
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  font-weight: 850;
+}
+
+.fold-section-toggle {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  background: #fff;
+}
+
+.fold-section-toggle::before {
+  content: "+";
+  color: var(--color-primary-ink);
+  font-size: 1.15rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.fold-section-details[open] > summary .fold-section-toggle::before {
+  content: "−";
+}
+
+.fold-section-details > summary:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-accent) 55%, transparent);
+  outline-offset: 3px;
+  border-radius: var(--radius-md);
+}
+
+.fold-section-details[open] > .fold-section-body {
+  margin-top: 12px;
+}
+
+
+.guide-overview-fold > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 48px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.guide-overview-fold > summary::-webkit-details-marker {
+  display: none;
+}
+
+.guide-overview-fold > summary h2 {
+  margin: 0;
+}
+
+.guide-overview-fold[open] > summary .fold-section-toggle::before {
+  content: "−";
+}
+
+.video-quick-next {
+  display: grid;
+  gap: 8px;
+  width: min(100% - 32px, 1120px);
+  margin: 20px auto 0;
+}
+
+.video-quick-next a {
+  color: var(--color-primary);
+  font-size: 0.86rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.video-axis-method {
+  margin: 0 0 10px;
+  font-weight: 850;
+}
+
+/* 2026-11-02: 24px未満だったリンクを、ポインターの種類に関係なく24px以上にする（WCAG 2.2 SC 2.5.8） */
+nav[aria-label="パンくず"] a,
+.mp-shop-breadcrumbs a,
+.mp-shop-topbar a,
+.static-page li > a,
+.static-page h3 > a,
+.video-header-link,
+.guide-detail-link,
+.genre-ranking-card-head a,
+.section-heading-row > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
 }

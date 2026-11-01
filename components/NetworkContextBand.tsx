@@ -6,102 +6,118 @@ import {
 } from "@/lib/brand-links";
 import { genreDisplayName } from "@/lib/manapick";
 import aiDeepLinks from "@/content/ai-deep-links.json";
+import networkRelated from "@/content/network-related.json";
 
 type AiDeepLink = { href: string; label: string };
 const AI_DEEP_LINKS = aiDeepLinks as Record<string, AiDeepLink[]>;
 
 type NetworkSite = "ai" | "license" | "career" | "company";
+type RelatedItem = { href: string; label: string };
+type RelatedSites = Partial<Record<NetworkSite, RelatedItem[]>>;
 
-// manapick company（企業の業績・配当・年収を一次情報で整理）につながるのは、投資を扱う「お金・投資」ジャンルだけにする。
-const COMPANY_GENRES = new Set(["money"]);
+// content/network-related.json には、相手サイトのページが200を返し、ページ名が学習内容と対応するものだけを登録している（2026-11-02確認）。
+// ジャンル単位の既定値に、サブジャンル単位の項目を先頭で重ねる。
+const RELATED = networkRelated as { checkedAt: string; genres: Record<string, RelatedSites>; subs: Record<string, RelatedSites> };
+const MAX_ITEMS = 4;
 
 type NetworkContextBandProps = {
   genreKey: string;
-  exclude?: readonly NetworkSite[];
-  /** このページのパス（例: /genre/ai/ChatGPT/）。content/ai-deep-links.json にあれば manapick AI の関連ページを出す */
+  /** サブジャンル（例: TOEIC）。content/network-related.json の subs にあれば先頭に出す */
+  sub?: string;
+  /** このページ内の別の場所ですでにリンクしているURL（重複を避ける） */
+  skipHrefs?: readonly string[];
+  /** このページのパス（例: /genre/ai/ChatGPT/）。content/ai-deep-links.json にあれば manapick AI の関連ページを足す */
   pagePath?: string;
 };
 
-export default function NetworkContextBand({ genreKey, exclude = [], pagePath }: NetworkContextBandProps) {
+function relatedItems(genreKey: string, sub: string | undefined, site: NetworkSite, skip: Set<string>, extra: RelatedItem[] = []) {
+  const fromSub = sub ? RELATED.subs[`${genreKey}/${sub}`]?.[site] ?? [] : [];
+  const fromGenre = RELATED.genres[genreKey]?.[site] ?? [];
+  const seen = new Set<string>();
+  const items: RelatedItem[] = [];
+  for (const item of [...fromSub, ...extra, ...fromGenre]) {
+    if (seen.has(item.href) || skip.has(item.href)) continue;
+    seen.add(item.href);
+    items.push(item);
+    if (items.length >= MAX_ITEMS) break;
+  }
+  return items;
+}
+
+export default function NetworkContextBand({ genreKey, sub, skipHrefs = [], pagePath }: NetworkContextBandProps) {
   const genreName = genreDisplayName(genreKey);
-  const excluded = new Set(exclude);
-  const links = [
-    {
-      site: "ai" as const,
-      eyebrow: "AIを選ぶ",
-      title: "manapick AI",
-      description: `${genreName}の学習や実務を助けるAIの料金・無料枠・使い方を確認`,
-      href: manapickAiUrlForGenre(genreKey)
-    },
+  const skip = new Set(skipHrefs);
+  const deepLinks = pagePath ? (AI_DEEP_LINKS[pagePath] ?? []).slice(0, 2) : [];
+
+  const cards = [
     {
       site: "license" as const,
       eyebrow: "資格を選ぶ",
       title: "manapick license",
-      description: `${genreName}に関連する資格の要件・費用・申込方法を確認`,
-      href: manapickLicenseUrlForGenre(genreKey)
+      more: manapickLicenseUrlForGenre(genreKey),
+      moreLabel: "資格をもっと見る",
+      items: relatedItems(genreKey, sub, "license", skip)
     },
     {
       site: "career" as const,
       eyebrow: "仕事を知る",
       title: "manapick career",
-      description: `${genreName}を生かせる仕事・必要スキル・学ぶ順番を確認`,
-      href: manapickCareerUrlForGenre(genreKey)
+      more: manapickCareerUrlForGenre(genreKey),
+      moreLabel: "仕事をもっと見る",
+      items: relatedItems(genreKey, sub, "career", skip)
     },
-    ...(COMPANY_GENRES.has(genreKey)
-      ? [
-          {
-            site: "company" as const,
-            eyebrow: "企業を調べる",
-            title: "manapick company",
-            description: "配当利回り・ROE・平均年収など、上場企業の数字を出典つきで比較",
-            href: `${MANAPICK_COMPANY_ORIGIN}ranking/`
-          }
-        ]
-      : [])
-  ].filter((link) => !excluded.has(link.site));
+    {
+      site: "ai" as const,
+      eyebrow: "学習に使うAI",
+      title: "manapick AI",
+      more: manapickAiUrlForGenre(genreKey),
+      moreLabel: "AIをもっと見る",
+      items: relatedItems(genreKey, sub, "ai", skip, deepLinks)
+    },
+    {
+      site: "company" as const,
+      eyebrow: "企業を調べる",
+      title: "manapick company",
+      more: `${MANAPICK_COMPANY_ORIGIN}ranking/`,
+      moreLabel: "企業ランキングを見る",
+      items: relatedItems(genreKey, sub, "company", skip)
+    }
+  ].filter((card) => card.site !== "company" || card.items.length > 0);
 
-  const deepLinks = pagePath && !excluded.has("ai") ? (AI_DEEP_LINKS[pagePath] ?? []).slice(0, 2) : [];
-
-  if (links.length === 0) return null;
+  const subject = sub ?? genreName;
+  const hasCompany = cards.some((card) => card.site === "company");
 
   return (
     <section id={`network-context-${genreKey}`} className="network-context-band" aria-labelledby={`network-context-title-${genreKey}`}>
       <div className="network-context-heading">
         <p className="section-eyebrow">MANAPICK NETWORK</p>
-        <h2 id={`network-context-title-${genreKey}`}>学んだ先まで、同じ基準で迷わない</h2>
-        <p>{links.some((link) => link.site === "company") ? "動画で学ぶManapickから、AI・資格・仕事・企業の詳しい比較へつながります。" : "動画で学ぶManapickから、AI・資格・仕事の詳しい比較へつながります。"}</p>
+        <h2 id={`network-context-title-${genreKey}`}>{subject}の次に調べる</h2>
+        <p>関連する資格・仕事・AI{hasCompany ? "・企業" : ""}を姉妹サイトで確認できます。</p>
       </div>
-      <div className={`network-context-links${links.length === 4 ? " has-four" : ""}`}>
-        {links.map((link) => (
-          <a
-            key={link.site}
-            className={`network-context-link is-${link.site}`}
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>{link.eyebrow}</span>
-            <strong>{link.title} <span aria-hidden="true">↗</span></strong>
-            <small>{link.description}</small>
-          </a>
+      <div className={`network-context-links${cards.length === 4 ? " has-four" : ""}`}>
+        {cards.map((card) => (
+          <div key={card.site} className={`network-context-link is-${card.site}`}>
+            <span>{card.eyebrow}</span>
+            <strong>{card.title}</strong>
+            {card.items.length > 0 ? (
+              <ul className="network-context-items">
+                {card.items.map((item) => (
+                  <li key={item.href}>
+                    <a href={item.href} target="_blank" rel="noopener noreferrer">
+                      {item.label} <span aria-hidden="true">↗</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+            <a className="network-context-more" href={card.more} target="_blank" rel="noopener noreferrer">
+              {card.moreLabel} <span aria-hidden="true">↗</span>
+            </a>
+          </div>
         ))}
       </div>
-      {deepLinks.length ? (
-        <div className="network-context-deep" aria-label="manapick AIの関連ページ">
-          <span>manapick AIの関連ページ</span>
-          <ul>
-            {deepLinks.map((link) => (
-              <li key={link.href}>
-                <a href={link.href} target="_blank" rel="noopener noreferrer">
-                  {link.label} <span aria-hidden="true">↗</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ) : null}
       <a className="network-context-overview" href="/network/">
-        4サイトの役割と使い分けを見る <span aria-hidden="true">→</span>
+        5サイトの役割と使い分けを見る <span aria-hidden="true">→</span>
       </a>
     </section>
   );

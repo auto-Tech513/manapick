@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import FoldSection from "@/components/FoldSection";
 import { notFound } from "next/navigation";
 import AdSlot from "@/components/AdSlot";
 import BrandLogo from "@/components/BrandLogo";
@@ -131,14 +132,13 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
             <ul>{item.facts.map((fact) => <li key={fact}>{fact}</li>)}</ul>
           </section>
 
-          {item.sections.map((section) => (
-            <section key={section.heading}>
-              <h2>{section.heading}</h2>
+          {item.sections.map((section, index) => (
+            <FoldSection key={section.heading} className="news-detail-fold" titleId={`news-section-${index + 1}`} title={section.heading}>
               {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
               {section.bullets?.length ? (
                 <ul>{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>
               ) : null}
-            </section>
+            </FoldSection>
           ))}
         </article>
 
