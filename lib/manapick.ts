@@ -157,7 +157,16 @@ export function displayChannel(video: Video) {
 }
 
 export function videoDescription(video: Video) {
-  return (video.review[0] ?? video.title).replace(/\s+/g, " ").slice(0, 150);
+  // レビュー1文目だけでは短く重複もあるため、掲載データ（ジャンル・レベル・長さ・確定スコア）を添えて一意で具体的な説明にする。
+  const facts = [
+    video.sub && video.sub !== genreLabel(video.genre) ? `${genreLabel(video.genre)}「${video.sub}」` : genreLabel(video.genre),
+    video.level,
+    video.minutes > 0 ? `約${video.minutes}分` : null,
+    typeof video.score === "number" ? `Manapickスコア${video.score}/35` : null
+  ].filter(Boolean).join("・");
+  const suffix = `（${facts}）`;
+  const base = (video.review[0] ?? video.title).replace(/\s+/g, " ").trim();
+  return compactText(base, Math.max(40, 150 - suffix.length)) + suffix;
 }
 
 function compactText(value: string, maxLength: number) {

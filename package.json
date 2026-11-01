@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --webpack",
-    "prebuild": "npm run content:audit && npm run news:quality && npm run news:og && npm run news:feed && npm run llms:generate",
+    "prebuild": "npm run content:audit && npm run news:quality && npm run news:og && npm run news:feed && npm run llms:generate && npm run redirects:generate",
     "build": "next build",
     "start": "next dev --webpack",
     "lint": "eslint .",
@@ -12,6 +12,8 @@
     "content:freshness": "node scripts/audit-content.mjs --strict-freshness",
     "content:availability": "node scripts/audit-video-availability.mjs",
     "llms:generate": "node scripts/generate-llms.mjs",
+    "redirects:generate": "node scripts/generate-redirects.mjs",
+    "redirects:check": "node scripts/generate-redirects.mjs --check",
     "brand:assets": "node scripts/generate-brand-assets.mjs",
     "news:quality": "node scripts/news-quality.mjs",
     "news:og": "node scripts/generate-news-og.mjs",

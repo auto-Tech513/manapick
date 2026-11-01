@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: absoluteUrl("/shop/") },
-  openGraph: { title, description, url: absoluteUrl("/shop/"), type: "website" },
+  openGraph: { title, description, url: absoluteUrl("/shop/"), type: "website", images: [{ url: absoluteUrl("/brand/ogp-manapick.png"), width: 1200, height: 630, alt: "Manapick - 学び直しを、最短ルートに。" }] },
   twitter: { card: "summary", title, description }
 };
 

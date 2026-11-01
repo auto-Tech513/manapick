@@ -1,0 +1,32 @@
+[
+  {
+    "from": "/video/iF8fWlQpOfE/",
+    "to": "/genre/ai/",
+    "reason": "非公開化で掲載終了したSupabase解説動画（dd5ea24で除外）。ai.manapick.app/tool/supabase/ から参照あり",
+    "checkedAt": "2026-11-01"
+  },
+  {
+    "from": "/genre/kaikei/中小企業診断士/",
+    "to": "/genre/kaikei/",
+    "reason": "掲載2本でサブカテゴリページ基準（3本以上）未満。license.manapick.app から参照あり",
+    "checkedAt": "2026-11-01"
+  },
+  {
+    "from": "/genre/kaikei/税理士/",
+    "to": "/genre/kaikei/",
+    "reason": "掲載2本でサブカテゴリページ基準（3本以上）未満。license.manapick.app から参照あり",
+    "checkedAt": "2026-11-01"
+  },
+  {
+    "from": "/genre/shikaku/医療事務/",
+    "to": "/genre/shikaku/",
+    "reason": "掲載2本でサブカテゴリページ基準（3本以上）未満。license.manapick.app から参照あり",
+    "checkedAt": "2026-11-01"
+  },
+  {
+    "from": "/genre/shikaku/秘書検定/",
+    "to": "/genre/shikaku/",
+    "reason": "掲載1本でサブカテゴリページ基準（3本以上）未満。license.manapick.app から参照あり",
+    "checkedAt": "2026-11-01"
+  }
+]

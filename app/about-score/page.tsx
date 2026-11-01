@@ -16,7 +16,8 @@ export const metadata: Metadata = {
     title: scorePageTitle,
     description: scorePageDescription,
     url: absoluteUrl("/about-score/"),
-    type: "article"
+    type: "article",
+    images: [{ url: absoluteUrl("/brand/ogp-manapick.png"), width: 1200, height: 630, alt: "Manapick - 学び直しを、最短ルートに。" }]
   },
   twitter: {
     card: "summary",

@@ -11953,20 +11953,35 @@ ins.adsbygoogle:not(.ad-slot),
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 7px;
-    margin: 4px 16px 0 0;
+    gap: 0;
+    margin: 0 16px 0 0;
   }
 
+  /* 見た目は8pxのドットのまま、タップ領域を24×24px（WCAG 2.2 SC 2.5.8）確保する */
   .profession-dots button {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .profession-dots button::before {
+    content: "";
     width: 8px;
     height: 8px;
-    border: 0;
     border-radius: 999px;
     background: color-mix(in srgb, var(--color-primary) 22%, white);
-    padding: 0;
   }
 
   .profession-dots button.is-active {
+    width: 36px;
+  }
+
+  .profession-dots button.is-active::before {
     width: 22px;
     background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
   }
@@ -13389,4 +13404,28 @@ ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; height: 0
   .learning-note-panel *,
   .learning-data-section *,
   .research-data-page * { scroll-behavior: auto !important; transition: none !important; }
+}
+
+/* タッチ端末でのタップ領域を最低24px確保（WCAG 2.2 SC 2.5.8）。見た目の文字サイズは変えない。 */
+@media (pointer: coarse) {
+  nav[aria-label="パンくず"] a,
+  .mp-shop-breadcrumbs a,
+  .static-page h3 > a,
+  .static-page li > a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+  }
+
+  .static-page li + li {
+    margin-top: 4px;
+  }
+
+  .search-intent-head-actions > a,
+  .video-header-link,
+  .section-heading-row > a,
+  .genre-ranking-card-head > a,
+  .mp-shop-topbar > a {
+    min-height: 24px;
+  }
 }

@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: SubGenrePageProps): Promise<M
   if (!page) return {};
 
   const title = `${sub}の勉強におすすめ無料YouTube動画${page.count}本｜見る順｜Manapick`;
-  const description = `${sub}の独学に役立つ無料YouTube動画を7軸35点で採点し、見る順（ロードマップ）に整理。登録不要・全部無料。`;
+  const description = `${genreDisplayName(key)}の「${sub}」の独学に役立つ無料YouTube動画${page.count}本を7軸35点で採点し、見る順（ロードマップ）に整理。登録不要・全部無料。`;
   const url = absoluteUrl(subGenrePath(key, sub));
 
   return {

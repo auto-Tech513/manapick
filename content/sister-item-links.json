@@ -395,6 +395,12 @@
       "slug": "touroku-hanbai",
       "name": "登録販売者",
       "url": "https://license.manapick.app/license/touroku-hanbai/"
+    },
+    {
+      "site": "career",
+      "slug": "registered-salesperson",
+      "name": "登録販売者",
+      "url": "https://career.manapick.app/career/registered-salesperson/"
     }
   ],
   "-O6abEpLImE": [
@@ -477,6 +483,12 @@
       "slug": "hoikushi",
       "name": "保育士",
       "url": "https://license.manapick.app/license/hoikushi/"
+    },
+    {
+      "site": "career",
+      "slug": "childcare-worker",
+      "name": "保育士",
+      "url": "https://career.manapick.app/career/childcare-worker/"
     }
   ],
   "YRnaxaX46pY": [
@@ -625,6 +637,12 @@
       "slug": "zeirishi",
       "name": "税理士",
       "url": "https://license.manapick.app/license/zeirishi/"
+    },
+    {
+      "site": "career",
+      "slug": "tax-accountant",
+      "name": "税理士",
+      "url": "https://career.manapick.app/career/tax-accountant/"
     }
   ],
   "bRIIf5EcDkY": [
@@ -671,6 +689,92 @@
       "slug": "office-administration",
       "name": "一般事務・営業事務",
       "url": "https://career.manapick.app/career/office-administration/"
+    }
+  ],
+  "HCZNs3AyFM8": [
+    {
+      "site": "career",
+      "slug": "software-engineer",
+      "name": "ソフトウェアエンジニア",
+      "url": "https://career.manapick.app/career/software-engineer/"
+    }
+  ],
+  "ok8-ekot_dc": [
+    {
+      "site": "career",
+      "slug": "data-analyst",
+      "name": "データアナリスト",
+      "url": "https://career.manapick.app/career/data-analyst/"
+    }
+  ],
+  "J9QdxiZb8P4": [
+    {
+      "site": "career",
+      "slug": "it-consultant",
+      "name": "ITコンサルタント",
+      "url": "https://career.manapick.app/career/it-consultant/"
+    }
+  ],
+  "kt5GIVHtCPM": [
+    {
+      "site": "career",
+      "slug": "social-media-manager",
+      "name": "SNS運用担当",
+      "url": "https://career.manapick.app/career/social-media-manager/"
+    },
+    {
+      "site": "career",
+      "slug": "web-marketer",
+      "name": "Webマーケター",
+      "url": "https://career.manapick.app/career/web-marketer/"
+    }
+  ],
+  "jSNPN5NnB_E": [
+    {
+      "site": "career",
+      "slug": "video-editor",
+      "name": "動画編集者",
+      "url": "https://career.manapick.app/career/video-editor/"
+    }
+  ],
+  "HAcJ4ldjdn4": [
+    {
+      "site": "career",
+      "slug": "office-administration",
+      "name": "一般事務・営業事務",
+      "url": "https://career.manapick.app/career/office-administration/"
+    }
+  ],
+  "n3STyxX_Ixg": [
+    {
+      "site": "career",
+      "slug": "accounting",
+      "name": "経理",
+      "url": "https://career.manapick.app/career/accounting/"
+    }
+  ],
+  "nVbhz29JMn8": [
+    {
+      "site": "career",
+      "slug": "web-designer",
+      "name": "Webデザイナー",
+      "url": "https://career.manapick.app/career/web-designer/"
+    }
+  ],
+  "kNXEZgZbTrs": [
+    {
+      "site": "career",
+      "slug": "certified-care-worker",
+      "name": "介護福祉士",
+      "url": "https://career.manapick.app/career/certified-care-worker/"
+    }
+  ],
+  "DBUpkM6X-JM": [
+    {
+      "site": "career",
+      "slug": "english-sales-support",
+      "name": "英語を使う営業・カスタマーサポート",
+      "url": "https://career.manapick.app/career/english-sales-support/"
     }
   ]
 }
