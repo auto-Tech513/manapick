@@ -20,5 +20,57 @@
       "type": "image/png",
       "purpose": "any maskable"
     }
+  ],
+  "id": "/",
+  "lang": "ja",
+  "shortcuts": [
+    {
+      "name": "今日の1本診断",
+      "short_name": "診断",
+      "url": "/start/?source=pwa-shortcut",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "7日学習プラン",
+      "short_name": "学習プラン",
+      "url": "/study-plan/?source=pwa-shortcut",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "マイページ（あとで見る）",
+      "short_name": "マイページ",
+      "url": "/my/?source=pwa-shortcut",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "新着動画",
+      "short_name": "新着",
+      "url": "/new/?source=pwa-shortcut",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
   ]
 }

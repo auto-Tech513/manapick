@@ -12,6 +12,7 @@ import genresData from "@/content/genres.json";
 import professionRoutesData from "@/content/professions.json";
 import roadmapsData from "@/content/roadmaps.json";
 import videosData from "@/content/videos.json";
+import PwaInstallButton from "@/components/PwaInstallButton";
 import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
 import { RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY, jstDateKey, selectTodayVideo, sendGaEvent } from "@/lib/retention";
 import { siteStats } from "@/lib/site-stats";
@@ -2758,6 +2759,10 @@ function SiteMenuDrawer({
               <a href="/contact/" onClick={onClose}>お問い合わせ</a>
             </div>
           </details>
+
+          <div className="site-menu-install">
+            <PwaInstallButton />
+          </div>
 
           <p className="site-menu-section-label">姉妹サイト</p>
           <a

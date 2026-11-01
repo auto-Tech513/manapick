@@ -13933,3 +13933,248 @@ nav[aria-label="パンくず"] a,
   align-items: center;
   min-height: 24px;
 }
+
+
+/* ---- 2026-11-02: ホーム画面に追加の手順（in-flowで表示）・学習プランのカレンダー書き出し・サブページのメニュー ---- */
+.pwa-install-wrap:has(.pwa-install-hint) {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.pwa-install-hint {
+  position: static;
+  width: min(100%, 520px);
+  font-weight: 750;
+}
+
+.pwa-install-hint strong {
+  display: block;
+  color: var(--color-ink);
+  font-size: 0.8rem;
+  font-weight: 950;
+}
+
+.pwa-install-hint ol {
+  margin: 6px 0;
+  padding-left: 1.3em;
+}
+
+.pwa-install-hint li + li {
+  margin-top: 4px;
+}
+
+.pwa-install-hint small {
+  display: block;
+  color: #687386;
+  font-size: 0.68rem;
+}
+
+.site-menu-install {
+  display: flex;
+  border: 1px dashed color-mix(in srgb, var(--color-primary) 24%, var(--color-line));
+  border-radius: var(--radius-md);
+  padding: 10px;
+}
+
+.study-plan-calendar,
+.study-plan-install {
+  margin-top: 22px;
+  border: 1px solid #dce5f2;
+  border-radius: 12px;
+  background: #f8fbff;
+  padding: 18px;
+}
+
+.study-plan-calendar-head h3 {
+  margin: 4px 0 6px;
+  color: #172554;
+  font-size: 1.05rem;
+}
+
+.study-plan-calendar-head p:not(.section-eyebrow),
+.study-plan-install p,
+.study-plan-calendar-google p,
+.study-plan-calendar-privacy,
+.study-plan-calendar-note {
+  margin: 0;
+  color: #5f6b7a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.study-plan-calendar-fields {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.study-plan-calendar-fields label {
+  display: grid;
+  gap: 4px;
+  color: #39445b;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.study-plan-calendar-fields input[type="date"],
+.study-plan-calendar-fields input[type="time"] {
+  min-height: 44px;
+  min-width: 150px;
+  border: 1px solid #c9d5e6;
+  border-radius: 8px;
+  background: #fff;
+  padding: 8px 10px;
+  color: #172554;
+  font: inherit;
+  font-size: 0.95rem;
+}
+
+.study-plan-calendar-fields .study-plan-calendar-check {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 8px;
+}
+
+.study-plan-calendar-check input {
+  width: 20px;
+  height: 20px;
+}
+
+.study-plan-calendar-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.study-plan-calendar-ics {
+  display: grid;
+  width: fit-content;
+  min-height: 52px;
+  cursor: pointer;
+  gap: 2px;
+  border: 0;
+  border-radius: 9px;
+  background: #1f3a8a;
+  padding: 10px 18px;
+  color: #fff;
+  font: inherit;
+  font-weight: 900;
+  text-align: left;
+}
+
+.study-plan-calendar-ics small {
+  color: #dbe5ff;
+  font-size: 0.7rem;
+  font-weight: 750;
+}
+
+.study-plan-calendar-ics:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.study-plan-calendar-google {
+  margin-top: 14px;
+  border: 1px solid #dce5f2;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.study-plan-calendar-google summary {
+  display: flex;
+  min-height: 46px;
+  cursor: pointer;
+  align-items: center;
+  padding: 10px 14px;
+  color: #1f3a8a;
+  font-size: 0.86rem;
+  font-weight: 950;
+}
+
+.study-plan-calendar-google[open] summary {
+  border-bottom: 1px solid #dce5f2;
+}
+
+.study-plan-calendar-google p {
+  padding: 10px 14px 0;
+}
+
+.study-plan-calendar-google ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 10px 14px 14px;
+  list-style: none;
+}
+
+.study-plan-calendar-google a {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #dce5f2;
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #172554;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.study-plan-calendar-google a strong {
+  flex: none;
+  color: #1f3a8a;
+}
+
+.study-plan-calendar-google a span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.study-plan-calendar-privacy {
+  margin-top: 10px;
+  font-size: 0.7rem;
+}
+
+.study-plan-install {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+@media (max-width: 767px) {
+  .study-plan-calendar,
+  .study-plan-install {
+    padding: 14px;
+  }
+
+  .study-plan-calendar-fields label:not(.study-plan-calendar-check) {
+    flex: 1 1 140px;
+  }
+
+  .study-plan-calendar-fields input[type="date"],
+  .study-plan-calendar-fields input[type="time"] {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .study-plan-calendar-ics {
+    width: 100%;
+  }
+
+  .site-bottom-nav button {
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.66rem;
+    font-weight: 900;
+  }
+}

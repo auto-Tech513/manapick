@@ -9,6 +9,8 @@ import {
   manapickLicenseUrlForGenre
 } from "@/lib/brand-links";
 import { sendGaEvent } from "@/lib/retention";
+import PwaInstallButton from "@/components/PwaInstallButton";
+import StudyPlanCalendar from "@/components/StudyPlanCalendar";
 
 export type StudyPlanVideo = {
   ytid: string;
@@ -233,6 +235,13 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
         <div className="study-plan-primary-action">
           {selectedVideos[0] ? <Link href={selectedVideos[0].detailUrl}>DAY 1の動画を見る</Link> : null}
           <span>保存内容はお使いのブラウザだけに残り、他の端末とは共有されません。</span>
+        </div>
+
+        <StudyPlanCalendar genreKey={genre} genreLabel={selectedGenre?.label ?? genre} schedule={schedule} />
+
+        <div className="study-plan-install">
+          <p>毎日すぐ開けるように、ホーム画面にManapickを置けます。</p>
+          <PwaInstallButton />
         </div>
       </section>
 

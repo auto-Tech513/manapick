@@ -80,6 +80,11 @@ export const metadata: Metadata = {
     }
   },
   manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    title: "Manapick",
+    statusBarStyle: "default"
+  },
   icons: {
     icon: [
       { url: "/favicon.ico" },
