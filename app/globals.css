@@ -20,6 +20,7 @@
 .study-plan-faq,
 .network-page-hero,
 .network-stage-section,
+.network-company-section,
 .network-route-section,
 .network-career-section,
 .network-policy-section,
@@ -92,6 +93,7 @@
 .study-plan-next,
 .study-plan-faq,
 .network-stage-section,
+.network-company-section,
 .network-route-section,
 .network-career-section,
 .network-policy-section,
@@ -107,6 +109,7 @@
 .study-plan-next,
 .study-plan-faq,
 .network-stage-section,
+.network-company-section,
 .network-route-section,
 .network-career-section,
 .network-faq {
@@ -509,6 +512,70 @@
   margin-top: 24px;
 }
 
+.network-company-section {
+  display: flex;
+  width: min(1120px, calc(100% - 32px));
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 24px auto 0;
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid #f9a8d4;
+  border-radius: 14px;
+  background: linear-gradient(115deg, #fff 0%, #fdf2f8 100%);
+}
+
+.network-company-section h2 {
+  margin: 4px 0 0;
+  color: #17233f;
+  font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+  font-weight: 900;
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+.network-company-section p:last-child {
+  margin: 8px 0 0;
+  color: #5f6b7a;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.network-company-section > a {
+  display: grid;
+  min-width: 220px;
+  min-height: 68px;
+  align-content: center;
+  gap: 4px;
+  padding: 11px 16px;
+  border: 1px solid #f9a8d4;
+  border-radius: 10px;
+  background: #fff;
+  color: #831843;
+  text-decoration: none;
+}
+
+.network-company-section > a span {
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.network-company-section > a strong {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.network-company-section > a:hover,
+.network-company-section > a:focus-visible {
+  border-color: #be185d;
+  background: #fce7f3;
+}
+
+.network-company-section > a:focus-visible {
+  outline: 3px solid rgba(190, 24, 93, 0.3);
+  outline-offset: 2px;
+}
+
 .network-stage-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -766,6 +833,7 @@
   .study-plan-faq,
   .network-page-hero,
   .network-stage-section,
+  .network-company-section,
   .network-route-section,
   .network-career-section,
   .network-policy-section,
@@ -801,6 +869,8 @@
   .study-plan-promo { width: min(100% - 24px, 1120px); align-items: stretch; flex-direction: column; gap: 16px; margin-block: 18px; padding: 18px 16px; }
   .study-plan-promo > a { width: 100%; }
   .network-stage-grid { grid-template-columns: 1fr; }
+  .network-company-section { align-items: stretch; flex-direction: column; gap: 14px; padding: 18px 16px; }
+  .network-company-section > a { width: 100%; min-width: 0; }
   .network-stage-card { min-height: 0; padding: 17px; }
   .network-stage-card > small { margin-top: 12px; }
   .network-stage-card > p { margin-top: 8px; }

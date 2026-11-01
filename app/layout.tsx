@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import AdSenseScript from "@/components/AdSenseScript";
 import PwaSetup from "@/components/PwaSetup";
-import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
+import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_ORIGIN, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
 import SiteFooter from "@/components/SiteFooter";
 import SiteBottomNav from "@/components/SiteBottomNav";
 import { absoluteUrl, SITE_URL } from "@/lib/manapick";
@@ -23,7 +23,7 @@ const commonJsonLd = {
       name: "Manapick",
       url: absoluteUrl("/"),
       logo: absoluteUrl("/brand/manapick-logo-master.png"),
-      sameAs: [xAccountUrl, MANAPICK_AI_URL, MANAPICK_LICENSE_URL, MANAPICK_CAREER_URL],
+      sameAs: [xAccountUrl, MANAPICK_AI_URL, MANAPICK_LICENSE_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_ORIGIN],
       subOrganization: [
         {
           "@type": "Organization",
@@ -39,6 +39,11 @@ const commonJsonLd = {
           "@type": "Organization",
           name: "manapick career",
           url: MANAPICK_CAREER_URL
+        },
+        {
+          "@type": "Organization",
+          name: "manapick company",
+          url: MANAPICK_COMPANY_ORIGIN
         }
       ]
     },

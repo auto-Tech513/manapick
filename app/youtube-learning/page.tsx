@@ -37,7 +37,7 @@ const intentCards = [
   {
     label: "学習 無料 動画",
     title: "無料で学べる動画を探す人へ",
-    body: "ManapickはYouTube公式動画だけを紹介します。会員登録不要で、あとで見る・視聴済みの記録もこの端末だけで使えます。",
+    body: "ManapickはYouTube上で公開されている学習動画を紹介します。動画はリンクまたはYouTube公式プレーヤーから視聴できます。会員登録不要で、あとで見る・視聴済みの記録もこの端末だけで使えます。",
     href: "/new/"
   }
 ] as const;
@@ -214,7 +214,7 @@ export default function YoutubeLearningPage() {
         <h2 id="youtube-answer-title">無料動画で勉強するなら、まず「目的・レベル・時間」を1つずつ決める</h2>
         <p>
           YouTubeには良い動画が多い一方で、サムネイルの強さや再生数だけでは学習向きか判断しにくいことがあります。
-          Manapickでは、誇大な成果保証や情報商材誘導が強い動画を外し、公式YouTube動画だけを7軸35点で採点しています。
+          Manapickでは、誇大な成果保証や情報商材誘導が強い動画を外し、YouTube上の公開動画を7軸35点で採点しています。
         </p>
         <div className="youtube-intent-grid">
           {intentCards.map((item) => (

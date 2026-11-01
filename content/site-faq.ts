@@ -1,7 +1,7 @@
 export const siteFaqItems = [
   {
     question: "Manapickは無料で使えますか？",
-    answer: "はい。掲載動画はYouTube公式動画へのリンクまたは公式埋め込みで、Manapickの利用に会員登録は不要です。"
+    answer: "はい。掲載動画はYouTube上で公開されている動画です。動画へのリンクまたはYouTube公式プレーヤーで視聴でき、Manapickの利用に会員登録は不要です。"
   },
   {
     question: "Manapickスコアは何を見ていますか？",

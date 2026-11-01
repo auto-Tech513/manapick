@@ -61,7 +61,7 @@ const planVideos: StudyPlanVideo[] = publishedGenreKeys.flatMap((genre) => {
 const faq = [
   {
     question: "この7日プランは無料ですか？",
-    answer: "無料です。会員登録も不要で、紹介する動画はYouTube公式動画です。"
+    answer: "無料です。会員登録も不要で、紹介する動画はYouTube上で公開されている動画です。リンクまたはYouTube公式プレーヤーから視聴できます。"
   },
   {
     question: "1日15分を超える動画はどう見ればいいですか？",

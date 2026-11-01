@@ -4,6 +4,7 @@ import BrandLogo from "@/components/BrandLogo";
 import {
   MANAPICK_AI_URL,
   MANAPICK_CAREER_URL,
+  MANAPICK_COMPANY_URL,
   MANAPICK_LICENSE_URL,
   manapickAiUrlForGenre,
   manapickCareerUrlForGenre,
@@ -13,8 +14,8 @@ import { absoluteUrl, genreDisplayName, publishedGenreKeys } from "@/lib/manapic
 import { genreVideoCount } from "@/lib/site-stats";
 import professions from "@/content/professions.json";
 
-const pageTitle = "Manapick Network｜学ぶ・AI・資格・仕事を1本の導線に";
-const pageDescription = "Manapick、manapick AI、manapick license、manapick careerの役割と使い分けを整理。学ぶ分野を保ったまま、AI・資格・仕事へ進めます。";
+const pageTitle = "Manapick Network｜学ぶ・AI・資格・仕事・企業情報";
+const pageDescription = "Manapick、manapick AI、manapick license、manapick careerの役割と使い分けに加え、企業向け情報サイトmanapick companyへの導線を案内します。";
 const pageUrl = absoluteUrl("/network/");
 
 const stages = [
@@ -132,6 +133,12 @@ export default function NetworkPage() {
         }))
       },
       {
+        "@type": "WebPage",
+        name: "manapick company｜法人・企業向け",
+        url: MANAPICK_COMPANY_URL,
+        description: "企業向け情報・導入案内"
+      },
+      {
         "@type": "ItemList",
         name: "仕事から選ぶManapickの学習入口",
         numberOfItems: careerEntrances.length,
@@ -178,7 +185,7 @@ export default function NetworkPage() {
         <p className="section-eyebrow">MANAPICK NETWORK</p>
         <h1>学ぶところから、仕事の入口まで。</h1>
         <p>
-          4サイトは同じものを重複掲載するのではなく、動画・AI・資格・仕事を分担しています。
+          学習者向けの4サイトは動画・AI・資格・仕事を分担しています。法人・企業向け情報は姉妹サイトのmanapick companyで案内しています。
           どこから入っても、同じ学習テーマを保ったまま次の判断へ進めます。
         </p>
       </section>
@@ -205,6 +212,17 @@ export default function NetworkPage() {
             </a>
           ))}
         </div>
+      </section>
+
+      <section className="network-company-section" aria-labelledby="network-company-title">
+        <div>
+          <p className="section-eyebrow">企業・法人向け</p>
+          <h2 id="network-company-title">学びを、組織の人材育成へ。</h2>
+          <p>企業向けのサービス・導入情報は、manapick companyの案内をご確認ください。</p>
+        </div>
+        <a href={MANAPICK_COMPANY_URL} target="_blank" rel="noopener noreferrer">
+          <span>manapick company</span><strong>企業向け情報を見る <span aria-hidden="true">↗</span></strong>
+        </a>
       </section>
 
       <section className="network-route-section" aria-labelledby="network-route-title">

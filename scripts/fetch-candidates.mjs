@@ -19,7 +19,7 @@ import {
 const YOUTUBE_API_BASE = "https://www.googleapis.com/youtube/v3";
 
 function usage() {
-  console.log(`Usage: node scripts/fetch-candidates.mjs [options]\n\nOptions:\n  --genre ai,data       Comma-separated genre keys to fetch (skips weekly rotation)\n  --config path         Default: scripts/pipeline-config.json\n  --out path            Default: data/candidates.json\n  --max-results 40      YouTube search.list maxResults per query\n  --max-queries 90      Maximum search queries per run\n  --rotation-week 27    Override ISO week number for the 2-week genre rotation\n  --no-rotation         Fetch configured genres in order, still capped by --max-queries\n  --min-views 10000     Minimum view count\n  --fresh-years 8       Exclude videos older than this many years\n  --dry-run             Print planned queries without calling YouTube\n\nDefault runs a 2-week genre rotation so all 10 genres are covered across two executions while each run stays under 90 queries.\nRequires YT_API_KEY or YOUTUBE_API_KEY in env/local .env/.env.local. Env files are ignored by git.`);
+  console.log(`Usage: node scripts/fetch-candidates.mjs [options]\n\nOptions:\n  --genre ai,data       Comma-separated genre keys to fetch (skips weekly rotation)\n  --config path         Default: scripts/pipeline-config.json\n  --out path            Default: data/candidates.json\n  --max-results 40      YouTube search.list maxResults per query\n  --max-queries 90      Maximum search queries per run\n  --rotation-week 27    Override ISO week number for the 2-week genre rotation\n  --no-rotation         Fetch configured genres in order, still capped by --max-queries\n  --min-views 10000     Minimum view count\n  --fresh-years 8       Exclude videos older than this many years\n  --order date          YouTube search order (default: date)\n  --dry-run             Print planned queries without calling YouTube\n\nDefault runs a 2-week genre rotation so all 10 genres are covered across two executions while each run stays under 90 queries.\nRequires YT_API_KEY or YOUTUBE_API_KEY in env/local .env/.env.local. Env files are ignored by git.`);
 }
 
 function chunk(array, size) {
@@ -267,8 +267,12 @@ async function main() {
     freshYears: toNumber(args["fresh-years"], defaults.freshYears || 8),
     minDurationMin: toNumber(args["min-duration"], defaults.minDurationMin || 4),
     maxDurationMin: toNumber(args["max-duration"], defaults.maxDurationMin || 240),
+    order: args.order || defaults.order || "date",
     weakTitleTerms: config.weak_title_terms || defaults.weakTitleTerms || []
   };
+  if (!["date", "relevance", "viewCount", "rating", "title", "videoCount"].includes(options.order)) {
+    throw new Error(`Invalid --order value: ${options.order}`);
+  }
   const { queries, plan: queryPlan } = plannedQueries(config, args, options.maxQueries);
 
   if (args["dry-run"]) {
@@ -311,6 +315,7 @@ async function main() {
         relevanceLanguage: options.relevanceLanguage,
         regionCode: options.regionCode,
         maxResults: options.maxResults,
+        order: options.order,
         safeSearch: "none",
         videoEmbeddable: "true"
       }, apiKey);

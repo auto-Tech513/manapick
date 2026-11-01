@@ -41,7 +41,7 @@ const homeFaq = [
     name: "無料の学習動画だけで始められますか？",
     acceptedAnswer: {
       "@type": "Answer",
-      text: "はい。Manapickで紹介する動画はYouTube公式動画で、会員登録なしで視聴できます。必要になった段階で書籍や講座を補助教材として検討できます。"
+      text: "Manapickで紹介するのはYouTube上で公開されている動画です。リンクまたはYouTube公式プレーヤーから視聴でき、会員登録は不要です。必要になった段階で書籍や講座を補助教材として検討できます。"
     }
   }
 ];
@@ -97,7 +97,7 @@ function roadmapHowToNodes() {
       supply: [
         {
           "@type": "HowToSupply",
-          name: "YouTube公式動画"
+          name: "YouTubeで公開されている学習動画"
         }
       ],
       tool: [

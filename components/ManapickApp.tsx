@@ -1744,7 +1744,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
                   {selectedGenreData?.status === "preparing" ? "。このジャンルは近日公開です。" : ""}
                   {selectedGenreData?.status === "checking" ? "。このジャンルは確認中です。" : ""}
                 </p>
-                <p>視聴はYouTube公式リンクのみ。動画のダウンロード機能はありません。</p>
+                <p>視聴はYouTubeへのリンクから行います。動画のダウンロード機能はありません。</p>
               </div>
             </div>
           </div>
@@ -2073,7 +2073,7 @@ function WhyManapickSection() {
             </svg>
           </span>
           <p className="why-pain">釣りサムネや「誰でも稼げる」系が混ざる</p>
-          <p className="why-answer">煽り・効果保証系の動画は、採点する前に不採用。公式動画だけを掲載します。</p>
+          <p className="why-answer">煽り・効果保証系の動画は、採点する前に不採用。YouTube上で公開されている動画を、学習用途に沿って確認して掲載します。</p>
         </div>
         <div className="why-card">
           <span className="why-icon" aria-hidden="true">
@@ -3022,7 +3022,7 @@ function HeroTrustStats({ totalVideos, confirmedCount }: { totalVideos: number; 
       )
     },
     {
-      label: "YouTube公式動画・すべて無料",
+      label: "YouTubeで視聴・すべて無料",
       icon: (
         <svg viewBox="0 0 24 24" role="presentation" focusable="false">
           <path d="M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6z" />

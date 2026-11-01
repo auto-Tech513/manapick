@@ -33,7 +33,7 @@ export default function DisclaimerPage() {
       sections={[
         {
           heading: "動画リンクについて",
-          body: "掲載動画はYouTube公式リンクまたは公式埋め込みを前提に紹介します。動画ファイルのダウンロード、再配布、権利回避を促す機能は提供しません。"
+          body: "掲載動画はYouTube上で公開されている動画です。YouTubeへのリンク、またはYouTube公式プレーヤーによる埋め込みで紹介します。動画ファイルのダウンロード、再配布、権利回避を促す機能は提供しません。"
         },
         {
           heading: "正確性について",

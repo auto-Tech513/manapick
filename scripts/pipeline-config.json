@@ -3,6 +3,7 @@
     "regionCode": "JP",
     "relevanceLanguage": "ja",
     "maxResults": 40,
+    "order": "date",
     "minViews": 10000,
     "freshYears": 8,
     "minDurationMin": 4,

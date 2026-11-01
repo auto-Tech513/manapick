@@ -281,7 +281,7 @@ function scoreCandidate(candidate, minScore, weakTitleTerms) {
   const freshness = scoreFreshness(candidate);
   const viewing = scoreViewing(candidate.durationMin);
   let reliability = scoreReliability(candidate.viewCount);
-  const rights = { score: 5, note: "公式YouTubeリンク/埋め込み前提で扱う" };
+  const rights = { score: 5, note: "YouTubeへの標準リンクまたは公式プレーヤーで視聴できることを前提に紹介" };
 
   if (riskTerms.length) {
     practical = Math.max(1, practical - 1);

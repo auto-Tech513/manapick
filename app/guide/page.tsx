@@ -74,7 +74,7 @@ export default function GuideIndexPage() {
       <section className="guide-index-hero">
         <p className="section-eyebrow">10分野の見る順</p>
         <h1>学習ロードマップ一覧</h1>
-        <p>長い動画を闇雲に見るのではなく、入口・基礎・応用の3段階で次の一本を選べます。すべてYouTube公式動画で、会員登録は不要です。</p>
+        <p>長い動画を闇雲に見るのではなく、入口・基礎・応用の3段階で次の一本を選べます。掲載動画はYouTube上で公開されており、会員登録は不要です。</p>
       </section>
       <section className="guide-index-list" aria-label="分野別ロードマップ">
         {guides.map((guide, index) => (

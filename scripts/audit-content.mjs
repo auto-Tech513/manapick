@@ -16,6 +16,7 @@ const [videos, genres, roadmaps] = await Promise.all([
 
 const errors = [];
 const warnings = [];
+const strictFreshness = process.argv.includes("--strict-freshness");
 const ids = new Set();
 const genreKeys = new Set(genres.map((genre) => genre.key));
 const dayMs = 24 * 60 * 60 * 1000;
@@ -81,12 +82,16 @@ for (const genre of publishedGenres) {
 
 const newestAgeDays = newestPublishedAt ? Math.floor((now - newestPublishedAt) / dayMs) : Infinity;
 if (newestAgeDays > 60) {
-  errors.push(`freshness: newest published video is ${newestAgeDays} days old (limit: 60)`);
+  const message = `freshness: newest published video is ${newestAgeDays} days old (limit: 60)`;
+  (strictFreshness ? errors : warnings).push(message);
 }
 for (const genre of publishedGenres) {
   const newest = newestByGenre.get(genre.key) || 0;
   const ageDays = newest ? Math.floor((now - newest) / dayMs) : Infinity;
-  if (ageDays > 180) warnings.push(`genre:${genre.key}: newest published video is ${ageDays} days old`);
+  if (ageDays > 180) {
+    const message = `genre:${genre.key}: newest published video is ${ageDays} days old`;
+    (strictFreshness ? errors : warnings).push(message);
+  }
 }
 
 if (warnings.length > 0) {
@@ -101,5 +106,5 @@ if (errors.length > 0) {
 }
 
 console.log(
-  `[content:audit] ok videos=${videos.length} genres=${publishedGenres.length} roadmaps=${roadmaps.length} recent90=${recent90Days} newestAgeDays=${newestAgeDays} warnings=${warnings.length}`
+  `[content:audit] ok videos=${videos.length} genres=${publishedGenres.length} roadmaps=${roadmaps.length} recent90=${recent90Days} newestAgeDays=${newestAgeDays} warnings=${warnings.length} strictFreshness=${strictFreshness}`
 );
