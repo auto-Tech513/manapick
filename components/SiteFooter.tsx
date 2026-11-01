@@ -92,7 +92,7 @@ const networkLinks = [
   },
   {
     label: "manapick company",
-    description: "法人向け導入情報",
+    description: "企業を読む",
     href: MANAPICK_COMPANY_URL,
     className: "is-company",
     external: true

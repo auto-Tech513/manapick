@@ -29,7 +29,7 @@
   "dependencies": {
     "fuse.js": "^7.0.0",
     "gray-matter": "^4.0.3",
-    "next": "^16.2.11",
+    "next": "^16.4.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "styled-jsx": "^5.1.7"
@@ -40,14 +40,18 @@
     "@types/react-dom": "^18.3.5",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.39.4",
-    "eslint-config-next": "^16.2.6",
-    "postcss": "^8.5.15",
-    "sharp": "^0.35.3",
+    "eslint-config-next": "^16.4.2",
+    "postcss": "^8.5.30",
+    "sharp": "^0.35.5",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.2"
   },
   "overrides": {
     "postcss": "$postcss",
-    "sharp": "$sharp"
+    "sharp": "$sharp",
+    "baseline-browser-mapping": "2.11.29",
+    "gray-matter": {
+      "js-yaml": "3.15.2"
+    }
   }
 }

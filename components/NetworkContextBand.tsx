@@ -1,4 +1,5 @@
 import {
+  MANAPICK_COMPANY_ORIGIN,
   manapickAiUrlForGenre,
   manapickCareerUrlForGenre,
   manapickLicenseUrlForGenre
@@ -9,7 +10,10 @@ import aiDeepLinks from "@/content/ai-deep-links.json";
 type AiDeepLink = { href: string; label: string };
 const AI_DEEP_LINKS = aiDeepLinks as Record<string, AiDeepLink[]>;
 
-type NetworkSite = "ai" | "license" | "career";
+type NetworkSite = "ai" | "license" | "career" | "company";
+
+// manapick company（企業の業績・配当・年収を一次情報で整理）につながるのは、投資を扱う「お金・投資」ジャンルだけにする。
+const COMPANY_GENRES = new Set(["money"]);
 
 type NetworkContextBandProps = {
   genreKey: string;
@@ -42,7 +46,18 @@ export default function NetworkContextBand({ genreKey, exclude = [], pagePath }:
       title: "manapick career",
       description: `${genreName}を生かせる仕事・必要スキル・学ぶ順番を確認`,
       href: manapickCareerUrlForGenre(genreKey)
-    }
+    },
+    ...(COMPANY_GENRES.has(genreKey)
+      ? [
+          {
+            site: "company" as const,
+            eyebrow: "企業を調べる",
+            title: "manapick company",
+            description: "配当利回り・ROE・平均年収など、上場企業の数字を出典つきで比較",
+            href: `${MANAPICK_COMPANY_ORIGIN}ranking/`
+          }
+        ]
+      : [])
   ].filter((link) => !excluded.has(link.site));
 
   const deepLinks = pagePath && !excluded.has("ai") ? (AI_DEEP_LINKS[pagePath] ?? []).slice(0, 2) : [];
@@ -54,9 +69,9 @@ export default function NetworkContextBand({ genreKey, exclude = [], pagePath }:
       <div className="network-context-heading">
         <p className="section-eyebrow">MANAPICK NETWORK</p>
         <h2 id={`network-context-title-${genreKey}`}>学んだ先まで、同じ基準で迷わない</h2>
-        <p>動画で学ぶManapickから、AI・資格・仕事の詳しい比較へつながります。</p>
+        <p>{links.some((link) => link.site === "company") ? "動画で学ぶManapickから、AI・資格・仕事・企業の詳しい比較へつながります。" : "動画で学ぶManapickから、AI・資格・仕事の詳しい比較へつながります。"}</p>
       </div>
-      <div className="network-context-links">
+      <div className={`network-context-links${links.length === 4 ? " has-four" : ""}`}>
         {links.map((link) => (
           <a
             key={link.site}

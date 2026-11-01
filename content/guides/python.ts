@@ -34,11 +34,11 @@ const pythonGuide = {
       title: "STEP1：初級 — まず一周する",
       videos: [
         {
-          title: "【最新版】Python超入門講座（合併版）｜Pythonの超基本をたった1時間で",
+          title: "【最新版】Python超入門講座（合併版）｜Pythonの超基本的な部分をたった1時間で学べます【プログラミング初心者向け入門講座】",
           why: "環境構築から基本文法まで手を動かして追える「最初の1本」の決定版"
         },
         {
-          title: "【2026年最新】宇宙一簡単なPython入門講座！初心者OK（Windows/Mac対応）",
+          title: "【2026年最新】宇宙一簡単なPython入門講座！インストール〜全基礎文法【Windows/Mac対応】",
           why: "Windows/Macの環境差に配慮があり、専門用語が少なく親切"
         }
       ]
@@ -47,7 +47,7 @@ const pythonGuide = {
       title: "STEP2：中級 — 反復して固める",
       videos: [
         {
-          title: "【総集編】Python入門講座｜基礎を3時間でしっかり（高校生・初心者向け）",
+          title: "【総集編】Python入門講座｜Pythonの基礎を3時間でしっかり学べます！高校生・プログラミング初心者向け",
           why: "腰を据えて基礎を一周し直せる体系的な総集編。分割視聴に向く"
         }
       ]

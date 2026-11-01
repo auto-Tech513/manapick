@@ -10775,6 +10775,20 @@ ins.adsbygoogle:not(.ad-slot),
   color: var(--color-career-navy);
 }
 
+.network-context-link.is-company {
+  border-color: rgba(190, 24, 93, 0.28);
+  background: linear-gradient(135deg, #fff, rgba(252, 231, 243, 0.9));
+}
+
+.network-context-link.is-company > span,
+.network-context-link.is-company strong {
+  color: #9d174d;
+}
+
+.network-context-links.has-four {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .network-context-link:hover,
 .network-context-link:focus-visible {
   box-shadow: var(--shadow-card);
@@ -10952,7 +10966,8 @@ ins.adsbygoogle:not(.ad-slot),
     padding: 14px;
   }
 
-  .network-context-links {
+  .network-context-links,
+  .network-context-links.has-four {
     grid-template-columns: 1fr;
   }
 
@@ -13709,4 +13724,34 @@ body {
   line-height: 1.55;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+
+/* 2026-11-02: WCAG 2.2（2.5.8）の24px基準に満たなかったタップ対象をそろえる */
+.genre-hub-crumb a,
+.knowledge-breadcrumb a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+}
+
+.metric-help button {
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.search-intent-head-actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+}
+
+summary.cursor-pointer {
+  min-height: 24px;
+  padding-block: 2px;
+}
+
+/* 見出し上の小見出しを「ジャンル名」「無料YouTubeロードマップ」の単位で折り返す */
+.eyebrow-chunk {
+  display: inline-block;
+  white-space: nowrap;
 }

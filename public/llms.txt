@@ -54,8 +54,8 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - ガイドURL: https://manapick.app/guide/generative-ai/
 - 主なトピック: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Cline / Copilot / DeepL / DeepSeek / ElevenLabs / Figma(Figma AI) / Gamma / Gemini / Gemma / GitHub Copilot / Google AI Mode / Google Veo / Google翻訳 / Grok / Hailuo AI / HeyGen / Kling AI / Manus / Midjourney / Notion AI / Notta / Ollama / OpenAI Codex / OpenClaw / Perplexity / PixVerse / Replit Agent / Runway / Siri AI / Stable Diffusion / Suno / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
 - ロードマップ: 生成AIロードマップ
-  - STEP1（初級）: アカウントを作り、AIに指示して回答を得られる。ChatGPT/Gemini/Claudeの違いが分かる。｜動画: 【2025年最新版】超初心者OK！ChatGPTの使い方・基礎をわかりやすく解説！(資料付き) / 【完全マスター】AI初心者が学ぶべきGeminiの基本的な使い方を徹底解説するで。 / 【完全版】Claudeの使い方入門・全機能をまるっと解説（Projects / Skills / Cowork / Claude Code）
-  - STEP2（中級）: 無料版の応用機能・主要機能を業務に当てはめて使える。｜動画: 【保存版】ChatGPT 2025年最新入門〜6つのステップで基礎〜応用機能までマスター（無料版対応） / 【脱初心者】AIへの指示出しがうまくいくプロンプトの基礎徹底解説するで！ / 【初心者向け】APIとは何か、実際の使い方や注意点が全部分かる動画【AI自動化】
+  - STEP1（初級）: アカウントを作り、AIに指示して回答を得られる。ChatGPT/Gemini/Claudeの違いが分かる。｜動画: 【最新版】超初心者OK！ChatGPTの使い方・基礎をわかりやすく解説！(資料付き) / 【完全マスター】AI初心者が学ぶべきGeminiの基本的な使い方を徹底解説するで。 / 【完全版】Claudeの使い方入門・全機能をまるっと解説します！〈Projects / Skills / Cowork / Claude Codeまで〉
+  - STEP2（中級）: 無料版の応用機能・主要機能を業務に当てはめて使える。｜動画: 【保存版】ChatGPT 2025年最新入門～6つのステップでChatGPTの基礎～応用機能までマスター！ChatGPT無料版に対応！これから始める初心者も、多少使ったことがある中級者も / 【脱初心者】AIへの指示出しがうまくいくプロンプトの基礎徹底解説するで！ / 【初心者向け】APIとは何か、実際の使い方や注意点が全部分かる動画【AI自動化】
   - STEP3（中〜上級）: AIに作業を任せる自動化と、プロンプト設計の入口を理解して使い分けられる。｜動画: 【1本で全て分かる】初心者でも簡単に自動化！究極のAIエージェント「n8n」の使い方・入門講座。（活用事例：ChatGPT/Google/Slack連携） / 【40分でマスター】完全初心者でも”明日から実務で使える”Microsoft 365 Copilot完全攻略 / 【完全攻略】Googleの画像生成AI「Nano Banana Pro」の使い方を解説します
 - 代表動画:
 1. 【完全マスター】AI初心者が学ぶべきGeminiの基本的な使い方を徹底解説するで。（生成AI / 自動化 / 34/35 / 17分 / publishedAt=2025-07-31T10:01:20Z） https://manapick.app/video/k1qFX5zJwLk/
@@ -69,7 +69,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - ガイドURL: https://manapick.app/guide/python/
 - 主なトピック: AWS認定 クラウドプラクティショナー / AWS認定 ソリューションアーキテクト / Git / JavaScript / Python / SQL / Web開発 / インフラ / 情報セキュリティマネジメント試験
 - ロードマップ: プログラミングロードマップ
-  - STEP1（初級）: Pythonの環境と基本文法を一周し、学習の全体像をつかむ。｜動画: 【最新版】Python超入門講座（合併版）｜Pythonの超基本をたった1時間で / 8分で理解するPython基礎講座【Python入門】 / 【初心者でもわかる！】Gitの使い方講座
+  - STEP1（初級）: Pythonの環境と基本文法を一周し、学習の全体像をつかむ。｜動画: 【最新版】Python超入門講座（合併版）｜Pythonの超基本的な部分をたった1時間で学べます【プログラミング初心者向け入門講座】 / 【Python入門】8分で挫折知らず！プログラミングの基礎を完全攻略 / 【初心者でもわかる！】Gitの使い方講座
   - STEP2（中級）: 長尺で反復しながら、基礎を体系的に固める。｜動画: Python学習ロードマップを40分で徹底解説｜作りたいもの別のおすすめ学習方法、学習時間を初心者向けに解説 / 【プログラミング入門】SQLの基本を解説！データベース操作の学ぼう！〜VTuberと学習〜【初心者向け】 / 【Git入門講座 合併版】この動画1本でGitとGitHubの基礎をゼロからマスター！【初心者向け】
   - STEP3（上級）: PythonでWebアプリ開発の入口に進み、作れるものを広げる。｜動画: たった50分でFlaskの基礎を習得！PythonによるWebアプリ開発 ~Flask超入門 vol.1~ / Webアプリが動く仕組みや開発できる言語の違いを初心者向けに解説【JavaWeb入門講座1】Webアプリケーションとは / 【Cursor入門】初心者OK！AIを使ってアプリ開発する方法を全て解説します ~AI駆動開発入門~
 - 代表動画:
@@ -84,9 +84,9 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - ガイドURL: https://manapick.app/guide/video-editing/
 - 主なトピック: After Effects / CapCut / DaVinci / Premiere Pro / デザイン / 色彩検定
 - ロードマップ: 動画編集ロードマップ
-  - STEP1（初級）: 編集の流れと初期設定を把握し、1本目の編集に着手できる。｜動画: 【2025年最新】1本で丸わかり！初心者にも優しいYouTube動画編集のやり方【Premiere Pro】 / 【PremierePro入門講座#1】超初心者向けプレミアプロの始め方「新規プロジェクト・シーケンス・素材取り込み方法」 / 【2026年最新版】CapCutの使い方&編集方法を0から完全解説！動画編集初心者でも大丈夫！#CapCut使い方 #キャップカット使い方#capcut操作方法#cupcut無料#
+  - STEP1（初級）: 編集の流れと初期設定を把握し、1本目の編集に着手できる。｜動画: 【2025年最新】1本で丸わかり！初心者にも優しいYouTube動画編集のやり方を徹底解説！【Premiere Pro】 / 【PremierePro入門講座#1】超初心者向けプレミアプロの始め方「新規プロジェクト・シーケンス・素材取り込み方法」 / 【2026年最新版】CapCutの使い方&編集方法を0から完全解説！動画編集初心者でも大丈夫！#CapCut使い方 #キャップカット使い方#capcut操作方法#cupcut無料#
   - STEP2（中級）: 公式の基本操作を確認し、カット編集を安定して行える。｜動画: 【Premiere Pro初心者講座】自動文字起こし機能の使い方徹底解説「フルテロップも簡単！」 / 【保存版】初心者のためのCapCut基本操作方法 | おすすめの編集手順で解説します！これだけ見れば完全攻略 | スマホ動画編集 / 【2025年最新】アフターエフェクト初心者が最初に覚える２０の基本！After Effects基本操作〜応用まで幅広く完全攻略！【永久保存版】
-  - STEP3（上級）: After Effectsとモーショングラフィックスで表現の幅を広げる。｜動画: 【DaVinci Resolve】15分間で完全攻略！改｜超初心者向け / 2025年のYouTubeが爆発的に伸びるサムネイルの作り方完全攻略 / 【After Effects】仕事の幅が広がる！After Effects入門講座｜アドビ公式
+  - STEP3（上級）: After Effectsとモーショングラフィックスで表現の幅を広げる。｜動画: 【DaVinci Resolve】15分間で完全攻略！改｜超初心者向け / 2025年のYouTubeが爆発的に伸びるサムネイルの作り方完全攻略 / 【After Effects】仕事の幅が広がる！After Effects入門講座 | アドビ公式
 - 代表動画:
 1. 【2026年最新版】CapCutの使い方&編集方法を0から完全解説！動画編集初心者でも大丈夫！#CapCut使い方 #キャップカット使い方#capcut操作方法#cupcut無料#（動画編集・クリエイティブ / CapCut / 33/35 / 22分 / publishedAt=2025-06-23T12:00:34Z） https://manapick.app/video/Fb60hQ7S2j4/
 2. 【完全攻略 2026最新】PC版CapCutの使い方｜これ1本でOK・初心者向け・動画編集（動画編集・クリエイティブ / CapCut / 33/35 / 30分 / publishedAt=2026-02-12T11:00:00Z） https://manapick.app/video/v1kG3Hj2178/
@@ -129,8 +129,8 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - ガイドURL: https://manapick.app/guide/web-marketing/
 - 主なトピック: SEO / SNS / Webマーケ
 - ロードマップ: Webマーケ・SNS運用ロードマップ
-  - STEP1（初級）: Webマーケティングの全体像を短時間でつかみ、学ぶ順番を決める。｜動画: Webマーケティングとは？初心者がまず学ぶべき全体像をプロが紹介【9分で理解】 / 【マーケティングとは？】ＵＳＪを劇的に変えた、たった１つの考え方｜日本一わかりやすい「マーケティング講座」です。 / 【神授業】Webマーケティングなんて初心者でも楽勝！この1本で基礎をマスターせよ
-  - STEP2（中級）: SEOの基本と具体策を押さえ、AI時代の集客を理解する。｜動画: SEOとは？初心者向けに対策の基本を完全解説【2026年最新版｜AI時代】 / 【2024年最新版】超初心者OK！SEO対策完全講義（基礎〜具体的対策・資料付き） / GA4（Googleアナリティクス4）の見るべき指標や使い方を完全解説！
+  - STEP1（初級）: Webマーケティングの全体像を短時間でつかみ、学ぶ順番を決める。｜動画: Webマーケティングとは？初心者がまず学ぶべき全体像をプロがわかりやすく紹介【9分で理解】 / 【マーケティングとは？】ＵＳＪを劇的に変えた、たった１つの考え方｜日本一わかりやすい「マーケティング講座」です。 / 【神授業】Webマーケティングなんて初心者でも楽勝！この1本で基礎をマスターせよ
+  - STEP2（中級）: SEOの基本と具体策を押さえ、AI時代の集客を理解する。｜動画: SEOとは？初心者向けに対策の基本を完全解説【2026年最新版｜AI時代に選ばれるサイト作り】 / 【2024年最新版】超初心者OK！SEO対策完全講義！（基礎〜具体的対策方法まで）【資料付き】 / GA4（Googleアナリティクス4）の見るべき指標や使い方を完全解説！
   - STEP3（中〜上級）: SNS運用と計測を組み合わせ、継続的に改善する型を作る。｜動画: 【最新版】超初心者OK! Instagram（インスタグラム）の始め方・基礎講座【登録/プロフィール書き方/投稿のコツ/リールのコツ/ストーリーズ活用法/リール】 / Xエックス（旧ツイッター）アプリの使い方解説。初心者入門者向け。【Twitter / iPhone・iPad】 / 【初心者向け】Web広告の基礎用語／30分で徹底解説します【事例解説つき】
 - 代表動画:
 1. 【最新】超初心者さんOK！Canva使い方入門・基礎をわかりやすく解説（Webマーケ・SNS運用 / SNS / 33/35 / 23分 / publishedAt=2025-06-10T10:19:44Z） https://manapick.app/video/wVf1wuIFH3A/

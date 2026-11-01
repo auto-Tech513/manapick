@@ -46,8 +46,9 @@ export async function generateMetadata({ params }: SubGenrePageProps): Promise<M
   const page = findEligibleSubPage(key, sub);
   if (!page) return {};
 
+  const stats = subStats(subPageVideos(key, sub));
   const title = `${sub}の勉強におすすめ無料YouTube動画${page.count}本｜見る順｜Manapick`;
-  const description = `${genreDisplayName(key)}の「${sub}」の独学に役立つ無料YouTube動画${page.count}本を7軸35点で採点し、見る順（ロードマップ）に整理。登録不要・全部無料。`;
+  const description = `${genreDisplayName(key)}の「${sub}」の無料YouTube学習動画${page.count}本を7軸35点で採点し、見る順に整理。合計${formatTotal(stats.totalMinutes)}、15分以内は${stats.shortCount}本。登録不要・全部無料。`;
   const url = absoluteUrl(subGenrePath(key, sub));
 
   return {
@@ -89,11 +90,14 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
 
   const guide = guides.find((item) => item.genre === key);
   const relatedPages = eligibleSubPagesForGenre(key).filter((item) => item.sub !== sub);
-  const faqs = buildFaq(sub, isQualificationGenre(key));
+  const stats = subStats(list);
+  const firstVideo = list.find((item) => item.ytid === roadmap.steps[0]?.videos[0]) ?? list[0];
+  const faqs = buildFaq(sub, isQualificationGenre(key), list, stats, firstVideo);
   const prItems = guidePrLinks[key] ?? [];
   const title = `${sub}の勉強におすすめの無料YouTube動画｜見る順ロードマップ`;
-  const description = introText(sub, key);
-  const articleModified = new Date().toISOString();
+  const description = introText(sub, list.length, stats);
+  // dateModified はビルド時刻ではなく、掲載動画の採点確認日の最新値を使う（なければ出さない）。
+  const articleModified = stats.latestConfirmed ? `${stats.latestConfirmed}T00:00:00+09:00` : undefined;
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -103,7 +107,7 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
         headline: title,
         description,
         inLanguage: "ja",
-        dateModified: articleModified,
+        ...(articleModified ? { dateModified: articleModified } : {}),
         mainEntityOfPage: pageUrl,
         image: ogImage,
         author: {
@@ -173,13 +177,15 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
 
       <article className="sub-topic-article">
         <header className="sub-topic-hero">
-          <p className="section-eyebrow">{genreName} / 無料YouTubeロードマップ</p>
+          <p className="section-eyebrow"><span className="eyebrow-chunk">{genreName}</span> / <span className="eyebrow-chunk">無料YouTubeロードマップ</span></p>
           <h1>{title}</h1>
           <p>{description}</p>
           <div className="sub-topic-trust-row" aria-label="ページの信頼情報">
             <span>{list.length}本を掲載</span>
+            <span>合計{formatTotal(stats.totalMinutes)}</span>
+            <span>15分以内 {stats.shortCount}本</span>
+            {stats.latestPublished ? <span>最新 {stats.latestPublished.replace(/-/g, "/")}公開</span> : null}
             <span>7軸35点で採点</span>
-            <span>登録不要・全部無料</span>
           </div>
         </header>
 
@@ -322,44 +328,77 @@ function isQualificationGenre(key: string) {
   return key === "shikaku" || key === "kaikei";
 }
 
-function introText(sub: string, key: string) {
-  if (isQualificationGenre(key)) {
-    return `${sub}の独学は、何から見るかを決めるだけで一気に進みます。Manapickは${sub}の学習動画を7軸35点で採点し、まず見るべき1本から順に並べました。スクールに通う前に、無料のYouTube動画で全体像と頻出ポイントをつかむのが近道です。忙しい社会人でも、通勤前後の短時間で進めやすい順番です。登録不要・全部無料。`;
-  }
+type SubStats = {
+  totalMinutes: number;
+  shortCount: number;
+  levels: Record<string, number>;
+  latestPublished: string | null;
+  sinceLastYear: number;
+  channelCount: number;
+  latestConfirmed: string | null;
+};
 
-  return `${sub}の学び直しは、最初に見る順番を決めると迷いにくくなります。Manapickは${sub}の学習動画を7軸35点で採点し、まず見るべき1本から順に整理しました。無料のYouTube動画で全体像と実践ポイントをつかみ、必要に応じて教材や講座を足せます。忙しい日でも、15〜30分ずつ積み上げやすい流れです。登録不要・全部無料。`;
+// 掲載データだけから数える。publishedAt・scoreConfirmedAt がない動画は鮮度の集計から外す。
+function subStats(list: Video[]): SubStats {
+  const levels: Record<string, number> = {};
+  for (const video of list) levels[video.level] = (levels[video.level] ?? 0) + 1;
+  const published = list.map((video) => video.publishedAt?.slice(0, 10)).filter((value): value is string => Boolean(value)).sort();
+  const confirmed = list.map((video) => video.scoreConfirmedAt?.slice(0, 10)).filter((value): value is string => Boolean(value)).sort();
+  const thisYear = new Date().getFullYear();
+  return {
+    totalMinutes: list.reduce((sum, video) => sum + (video.minutes || 0), 0),
+    shortCount: list.filter((video) => video.minutes > 0 && video.minutes <= 15).length,
+    levels,
+    latestPublished: published.length ? published[published.length - 1] : null,
+    sinceLastYear: published.filter((value) => Number(value.slice(0, 4)) >= thisYear - 1).length,
+    channelCount: new Set(list.map((video) => video.channel?.trim()).filter(Boolean)).size,
+    latestConfirmed: confirmed.length ? confirmed[confirmed.length - 1] : null
+  };
 }
 
-function buildFaq(sub: string, qualification: boolean) {
-  if (qualification) {
-    return [
-      {
-        question: `${sub}は独学で合格できますか？`,
-        answer: "可能です。まず無料動画で全体像→頻出分野→過去問の順に進めるのが定石です。"
-      },
-      {
-        question: "無料のYouTube動画だけで足りますか？",
-        answer: "入門〜基礎は十分です。直前期は問題演習や有料講座の併用が安心です。"
-      },
-      {
-        question: "どれくらいの期間が必要ですか？",
-        answer: `${sub}の難易度により数週間〜数か月です。毎日の短時間視聴と過去問を組み合わせるのが近道です。`
-      }
-    ];
-  }
+function formatTotal(minutes: number) {
+  const hours = Math.floor(minutes / 60);
+  const rest = minutes % 60;
+  if (hours === 0) return `約${rest}分`;
+  return rest === 0 ? `約${hours}時間` : `約${hours}時間${rest}分`;
+}
 
-  return [
+function levelText(levels: Record<string, number>) {
+  return ["初級", "中級", "上級"].filter((level) => levels[level]).map((level) => `${level}${levels[level]}本`).join("・");
+}
+
+function introText(sub: string, count: number, stats: SubStats) {
+  return `${sub}の無料YouTube学習動画${count}本を7軸35点で採点し、見る順に並べました。合計は${formatTotal(stats.totalMinutes)}で、15分以内で見られる動画は${stats.shortCount}本です。登録不要で、YouTube公式プレーヤーまたはYouTubeで視聴できます。`;
+}
+
+function buildFaq(sub: string, qualification: boolean, list: Video[], stats: SubStats, first: Video) {
+  const thisYear = new Date().getFullYear();
+  const faqs = [
     {
-      question: `${sub}は独学で身につけられますか？`,
-      answer: "可能です。まず無料動画で全体像をつかみ、基礎を固めてから小さく実践する順番がおすすめです。"
+      question: `${sub}の無料YouTube学習動画は何本ありますか？`,
+      answer: `Manapickでは${list.length}本を掲載しています（${stats.channelCount}チャンネル）。合計は${formatTotal(stats.totalMinutes)}で、15分以内の動画は${stats.shortCount}本、難易度の内訳は${levelText(stats.levels)}です。`
     },
     {
-      question: "無料のYouTube動画だけで足りますか？",
-      answer: "入門〜基礎の理解には十分です。仕事で使う段階では、演習教材や講座を足すと手を動かす量を増やせます。"
-    },
-    {
-      question: "どれくらいの期間が必要ですか？",
-      answer: `${sub}の範囲や目標によりますが、毎日15〜30分の視聴と復習を続けると数週間で入口をつかめます。`
+      question: `${sub}は最初にどの動画を見ればいいですか？`,
+      answer: `見る順ロードマップの最初の1本は「${first.title}」（${first.channel?.trim() || "チャンネル名未確認"}・約${first.minutes}分・${scoreText(first)}）です。`
     }
   ];
+  if (stats.latestPublished) {
+    faqs.push({
+      question: `${sub}の動画は新しいものも入っていますか？`,
+      answer: `掲載動画で最も新しい公開日は${stats.latestPublished.replace(/-/g, "/")}です。${thisYear - 1}年以降に公開された動画は${stats.sinceLastYear}本あります。`
+    });
+  }
+  faqs.push(
+    qualification
+      ? {
+          question: "無料のYouTube動画だけで足りますか？",
+          answer: `Manapickが紹介するのは無料公開のYouTube動画です。試験日・出題範囲・受験料は変わることがあるため、${sub}の公式の試験情報と過去問であわせて確認してください。`
+        }
+      : {
+          question: "無料のYouTube動画だけで足りますか？",
+          answer: "Manapickが紹介するのは無料公開のYouTube動画です。手を動かす演習や体系的な教材が必要な場合は、このページの教材・講座（PR）もあわせて比較できます。"
+        }
+  );
+  return faqs;
 }

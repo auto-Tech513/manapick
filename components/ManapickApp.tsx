@@ -1348,10 +1348,10 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => sendGaEvent("company_crosslink_click", { placement: "header", target: "manapick_company" })}
-                aria-label="manapick companyへ。法人向け導入情報"
+                aria-label="manapick companyへ。企業の業績・年収を一次情報で確認"
               >
                 <span>company ↗</span>
-                <small>法人向け</small>
+                <small>企業を読む</small>
               </a>
             </nav>
             <button
@@ -2810,7 +2810,7 @@ function SiteMenuDrawer({
             }}
           >
             <span>manapick company ↗</span>
-            <small>法人向け導入情報を見る</small>
+            <small>企業の業績・年収を読む</small>
           </a>
         </nav>
       </aside>
