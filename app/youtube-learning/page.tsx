@@ -200,8 +200,7 @@ export default function YoutubeLearningPage() {
           <span className="knowledge-title-phrase">見る順まで決める。</span>
         </h1>
         <p>
-          「youtube おすすめ」「動画 勉強」「リスキリング 何から始める」で迷う人向けに、
-          採点済み{siteStats.totalVideos}本から、最初の1本と次の順番を整理しました。
+          「youtube おすすめ」「動画 勉強」「リスキリング 何から始める」で迷う人向けに、採点済み{siteStats.totalVideos}本から、最初の1本と次の順番を整理しました。
         </p>
         <div className="youtube-learning-cta-row">
           <Link href="/start/">3つの質問で今日の1本を選ぶ</Link>
@@ -213,8 +212,7 @@ export default function YoutubeLearningPage() {
         <p className="section-eyebrow">結論</p>
         <h2 id="youtube-answer-title">無料動画で勉強するなら、まず「目的・レベル・時間」を1つずつ決める</h2>
         <p>
-          YouTubeには良い動画が多い一方で、サムネイルの強さや再生数だけでは学習向きか判断しにくいことがあります。
-          Manapickでは、誇大な成果保証や情報商材誘導が強い動画を外し、YouTube上の公開動画を7軸35点で採点しています。
+          YouTubeには良い動画が多い一方で、サムネイルの強さや再生数だけでは学習向きか判断しにくいことがあります。Manapickでは、誇大な成果保証や情報商材誘導が強い動画を外し、YouTube上の公開動画を7軸35点で採点しています。
         </p>
         <div className="youtube-intent-grid">
           {intentCards.map((item) => (
@@ -314,9 +312,7 @@ export default function YoutubeLearningPage() {
         <p className="section-eyebrow">教材・講座の考え方</p>
         <h2 id="youtube-pr-title">有料教材は「足りないところを補う」ために使う</h2>
         <p>
-          Manapickは無料動画から始められる設計です。書籍や講座のPRリンクがある場合も、
-          「動画で全体像をつかむ → 演習量が必要なら教材で補う」という順番を推奨します。
-          広告報酬でランキングやスコアを操作しません。
+          Manapickは無料動画から始められる設計です。書籍や講座のPRリンクがある場合も、「動画で全体像をつかむ → 演習量が必要なら教材で補う」という順番を推奨します。広告報酬でランキングやスコアを操作しません。
         </p>
         <nav className="knowledge-link-grid youtube-monetize-links" aria-label="教材と広告方針">
           <Link href="/affiliate/">広告・アフィリエイト方針を見る</Link>

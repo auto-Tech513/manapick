@@ -7,6 +7,7 @@ import AdSlot from "@/components/AdSlot";
 import NetworkContextBand from "@/components/NetworkContextBand";
 import {
   absoluteUrl,
+  displayChannel,
   genreDisplayName,
   publishedGenreKeys,
   scoreText,
@@ -37,6 +38,30 @@ function genreVideos(key: string): Video[] {
   return videos
     .filter((video) => video.genre === key)
     .sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
+}
+
+type ChannelStat = { channel: string; count: number; total: number; scored: number; top: Video };
+
+// 掲載データだけから算出する「掲載本数が多いチャンネル」。チャンネル名が確認できない動画は除く。
+function genreChannelStats(list: Video[]): ChannelStat[] {
+  const map = new Map<string, ChannelStat>();
+  for (const video of list) {
+    const channel = displayChannel(video);
+    if (!channel) continue;
+    const entry = map.get(channel) ?? { channel, count: 0, total: 0, scored: 0, top: video };
+    entry.count += 1;
+    if (typeof video.score === "number") {
+      entry.total += video.score;
+      entry.scored += 1;
+    }
+    if ((video.score ?? -1) > (entry.top.score ?? -1)) entry.top = video;
+    map.set(channel, entry);
+  }
+  const average = (item: ChannelStat) => (item.scored > 0 ? item.total / item.scored : 0);
+  return Array.from(map.values())
+    .filter((item) => item.count >= 2)
+    .sort((a, b) => b.count - a.count || average(b) - average(a) || a.channel.localeCompare(b.channel, "ja"))
+    .slice(0, 5);
 }
 
 function genreGuideSlug(key: string): string | null {
@@ -74,9 +99,9 @@ function genreSeoFor(key: string, label: string, count: number): GenreSeo {
         { label: "動画編集ロードマップ", href: "/guide/video-editing/", note: "編集の流れからサムネイルまで順番に学ぶ" }
       ],
       faq: [
-        { question: "YouTubeサムネイルの作り方は何から学べばいい？", answer: "まずは文字量、構図、背景と人物の見せ方など、クリック前に伝わる情報を整理します。その後に使うツールを選ぶと、デザインだけが先走りにくくなります。" },
+        { question: "動画編集は何から学べばいい？", answer: "まず無料の編集ソフトで短い動画を1本完成させ、カット・テロップ・BGMの基本操作を一通り経験するのがおすすめです。その後、エフェクトやサムネイルなど必要な技術を足していくと迷いにくくなります。" },
         { question: "動画編集初心者はサムネイルも同時に学ぶべき？", answer: "最初は短い動画を1本完成させ、次にサムネイルを整える順番がおすすめです。動画内容と入口の見せ方を合わせると、改善点を見つけやすくなります。" },
-        { question: "無料ツールだけでも練習できますか？", answer: "できます。CapCut、DaVinci Resolve、無料デザインツールなどから始められます。まずは無料で1本作り、必要になった機能だけ有料ツールを検討すれば十分です。" }
+        { question: "無料ツールだけでも練習できますか？", answer: "できます。CapCutやDaVinci Resolveの無料版から始められます。まずは無料で1本作り、必要になった機能だけ有料ツール（Premiere Pro、After Effectsなど）を検討すれば十分です。" }
       ]
     },
     prog: {
@@ -136,10 +161,10 @@ function genreSeoFor(key: string, label: string, count: number): GenreSeo {
         { label: "資格勉強の始め方ロードマップ", href: "/guide/certification/", note: "計画から過去問までの順番を見る" }
       ],
       faq: [
-        { question: "社労士試験は独学でも始められますか？", answer: "始められます。ただし科目数が多いため、最初に試験日、学習時間、過去問演習の開始時期を決めることが重要です。" },
-        { question: "社労士試験は何から勉強すればいい？", answer: "まず試験制度と全科目の地図を見て、次に労働基準法など入口になりやすい科目へ進むのがおすすめです。過去問で出方を確認しながら戻ると続けやすくなります。" },
+        { question: "資格試験は独学でも始められますか？", answer: "始められます。最初に試験日、必要な学習時間の目安、過去問演習を始める時期を決めておくと、範囲の広い試験でも計画を立てやすくなります。" },
+        { question: "資格試験は何から勉強すればいい？", answer: "まず試験制度と出題範囲の全体像を確認し、次に入口になりやすい分野から学びます。過去問で出題の傾向を確認しながら戻ると続けやすくなります。資格ごとの動画は、このページの資格別一覧から選べます。" },
         { question: "資格勉強は動画だけで足りますか？", answer: "動画だけでは演習量が不足します。動画で全体像をつかみ、問題集や過去問で確認する組み合わせが現実的です。" },
-        { question: "社労士などの資格は取った後どんな仕事につながる？", answer: "資格は取得後の使い道まで見ると、学習の目的がぶれません。人事・労務系の仕事像はmanapick careerの人・資格分野、受験要件や費用はmanapick licenseで確認できます。試験制度と将来像を合わせて把握すると、計画を立てやすくなります。" }
+        { question: "資格を取った後、どんな仕事につながる？", answer: "資格は取得後の使い道まで見ると、学習の目的がぶれません。仕事像はmanapick career、受験要件や費用はmanapick licenseで確認できます。試験制度と将来像を合わせて把握すると、計画を立てやすくなります。" }
       ]
     },
     marke: {
@@ -161,7 +186,41 @@ function genreSeoFor(key: string, label: string, count: number): GenreSeo {
     }
   };
 
-  return targets[key] ?? fallback;
+  // タイトル・H1・説明文はジャンル全体の中身を表す形に統一する。
+  // 特定クエリ向けの言い回しは /learn/ の個別ページが担い、ジャンル・ガイドと同じ語を奪い合わないようにする。
+  // Search Consoleでは「〇〇 youtube おすすめ」系の順位が一般語より高かった（2026-11-01確認）ため、その意図に合わせる。
+  const seoLabels: Record<string, string> = {
+    ai: "生成AI",
+    prog: "プログラミング",
+    video: "動画編集",
+    english: "英語",
+    data: "Excel・データ分析",
+    marke: "Webマーケティング",
+    biz: "Office・資料作成",
+    shikaku: "資格試験",
+    kaikei: "簿記・FP・会計資格",
+    money: "お金・投資"
+  };
+  const seoLabel = seoLabels[key] ?? label;
+  const topSubs = eligibleSubPagesForGenre(key)
+    .slice(0, 3)
+    .map((item) => item.sub)
+    .join("・");
+  const leads: Record<string, string> = {
+    video: `動画編集は、まず1本を完成させる基本操作、次にテロップやエフェクト、最後にサムネイルなどの見せ方へ進むと迷いにくくなります。このページでは、${topSubs}などの無料YouTube学習動画を7軸35点で採点し、見る順に整理しています。`,
+    shikaku: `資格試験の勉強は、試験日から逆算して計画を作り、出題範囲を確認してから過去問へ進む順番が基本です。このページでは、${topSubs}など、資格試験の無料YouTube学習動画を7軸35点で採点し、資格ごとに見る順を整理しています。`,
+    data: `Excelやデータ分析は、表を整える、集計する、グラフで読み取る流れを先に体験すると、統計用語も後からつながりやすくなります。このページでは、${topSubs}などの無料YouTube学習動画を7軸35点で採点し、見る順に整理しています。`,
+    ai: `生成AIは、まず基本操作を触り、次に文章作成・表の整理・資料作成など自分の仕事に当てはめる順番が使いやすいです。このページでは、${topSubs}などの無料YouTube学習動画を7軸35点で採点し、見る順に整理しています。`,
+    prog: `プログラミングは、環境構築と基本文法を一周し、次に小さな題材で手を動かす順番が続けやすいです。このページでは、${topSubs}などの無料YouTube学習動画を7軸35点で採点し、見る順に整理しています。`
+  };
+  const base = targets[key] ?? fallback;
+  return {
+    ...base,
+    title: `${seoLabel}のおすすめYouTube学習動画${count}本｜${topSubs} | Manapick`,
+    description: `${seoLabel}（${topSubs}など）の無料YouTube学習動画${count}本を7軸35点で採点し、見る順に整理。登録不要・全部無料。`,
+    h1: `${seoLabel}のおすすめYouTube学習動画（${count}本）`,
+    lead: leads[key] ?? base.lead
+  };
 }
 
 function genreEditorialNote(key: string, label: string) {
@@ -225,6 +284,7 @@ export default async function GenrePage({ params }: GenrePageProps) {
   const subPages = eligibleSubPagesForGenre(key);
   const seo = genreSeoFor(key, label, list.length);
   const prCourseItems = (guidePrLinks[key] ?? []).filter((item) => item.kind === "course");
+  const channelStats = genreChannelStats(list);
 
   const collection = {
     "@context": "https://schema.org",
@@ -317,6 +377,32 @@ export default async function GenrePage({ params }: GenrePageProps) {
               </Link>
             ))}
           </div>
+        </section>
+      ) : null}
+
+      {channelStats.length > 0 ? (
+        <section className="genre-hub-channels" aria-labelledby="genre-hub-channels-title">
+          <p className="section-eyebrow">チャンネルから選ぶ</p>
+          <h2 id="genre-hub-channels-title">{label}で掲載本数が多いYouTubeチャンネル</h2>
+          <p className="genre-hub-channels-note">
+            Manapickに掲載している{list.length}本のうち、同じチャンネルの動画が2本以上あるものを掲載本数の多い順に表示しています。チャンネル自体の評価や公式な順位ではありません。
+          </p>
+          <ol className="genre-hub-channel-list">
+            {channelStats.map((item, index) => (
+              <li key={item.channel}>
+                <Link href={videoPath(item.top.ytid)}>
+                  <span className="genre-hub-channel-rank" aria-hidden="true">{index + 1}</span>
+                  <span className="genre-hub-channel-body">
+                    <strong>{item.channel}</strong>
+                    <span className="genre-hub-channel-meta">
+                      掲載{item.count}本{item.scored > 0 ? `・平均${Math.round((item.total / item.scored) * 10) / 10}/35` : ""}
+                    </span>
+                    <span className="genre-hub-channel-top">代表動画：{item.top.title}</span>
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ol>
         </section>
       ) : null}
 

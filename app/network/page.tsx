@@ -185,8 +185,7 @@ export default function NetworkPage() {
         <p className="section-eyebrow">MANAPICK NETWORK</p>
         <h1>学ぶところから、仕事の入口まで。</h1>
         <p>
-          学習者向けの4サイトは動画・AI・資格・仕事を分担しています。法人・企業向け情報は姉妹サイトのmanapick companyで案内しています。
-          どこから入っても、同じ学習テーマを保ったまま次の判断へ進めます。
+          学習者向けの4サイトは動画・AI・資格・仕事を分担しています。法人・企業向け情報は姉妹サイトのmanapick companyで案内しています。どこから入っても、同じ学習テーマを保ったまま次の判断へ進めます。
         </p>
       </section>
 
@@ -274,8 +273,7 @@ export default function NetworkPage() {
           <p className="section-eyebrow">収益と編集を分ける</p>
           <h2 id="network-policy-title">無料で試してから、必要な選択肢だけ比較</h2>
           <p>
-            Manapickは無料動画を先に案内します。教材・講座などのPRリンクは明示し、報酬の有無で動画採点やランキングを操作しません。
-            価格や申込条件は、リンク先の最新情報を確認してください。
+            Manapickは無料動画を先に案内します。教材・講座などのPRリンクは明示し、報酬の有無で動画採点やランキングを操作しません。価格や申込条件は、リンク先の最新情報を確認してください。
           </p>
         </div>
         <div>

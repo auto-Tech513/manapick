@@ -66,6 +66,19 @@ export const metadata: Metadata = {
   description:
     "社会人の学び直し・リスキリングに役立つ無料YouTube学習動画を、独自の7軸採点レビューとロードマップで整理するメディア。",
   metadataBase: new URL(SITE_URL),
+  // Google Discoverの大きな画像表示は max-image-preview:large で有効になる（Google検索セントラル）。
+  // noindexが必要なページ（/my/ など）は各ページのrobots指定で上書きされる。
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1
+    }
+  },
   manifest: "/manifest.webmanifest",
   icons: {
     icon: [

@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import BrandLogo from "@/components/BrandLogo";
+
+// レイアウトの robots(index) と Next.js の既定 noindex が重複しないよう、404は明示的に noindex にする。
+export const metadata: Metadata = {
+  title: "ページが見つかりません | Manapick",
+  robots: { index: false, follow: true }
+};
 
 export default function NotFound() {
   return (

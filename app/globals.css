@@ -13407,6 +13407,11 @@ ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; height: 0
 }
 
 /* タッチ端末でのタップ領域を最低24px確保（WCAG 2.2 SC 2.5.8）。見た目の文字サイズは変えない。 */
+/* パンくずの項目は常に縦中央でそろえる（リンクだけ高さが違うページでのずれ防止） */
+nav[aria-label="パンくず"] {
+  align-items: center;
+}
+
 @media (pointer: coarse) {
   nav[aria-label="パンくず"] a,
   .mp-shop-breadcrumbs a,
@@ -13428,4 +13433,130 @@ ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; height: 0
   .mp-shop-topbar > a {
     min-height: 24px;
   }
+}
+
+/* 日本語の自然な改行（2026-11-01）
+   本文は最終行に1〜2文字だけ残る改行を避け（text-wrap: pretty）、見出し・短いUIは行長をそろえる（balance）。
+   :where() で詳細度0にして、既存の個別指定を上書きしない。未対応ブラウザでは従来どおり表示される。 */
+body {
+  text-wrap: pretty;
+}
+
+:where(h1, h2, h3, h4, dt, figcaption, button, .section-eyebrow, .section-title) {
+  text-wrap: balance;
+}
+
+@supports (word-break: auto-phrase) {
+  :where(h1, h2, h3, h4, dt, button) {
+    word-break: auto-phrase;
+  }
+}
+
+/* 研究データ：ジャンル構成比の横棒 */
+.research-genre-share {
+  display: grid;
+  grid-template-columns: minmax(80px, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ジャンル：掲載本数が多いチャンネル */
+.genre-hub-channels {
+  margin: 18px 0 24px;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 16%, var(--color-line));
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow-line);
+  padding: 16px;
+}
+
+.genre-hub-channels h2 {
+  margin: 2px 0 8px;
+  color: var(--color-ink);
+  font-size: 1.08rem;
+  font-weight: 950;
+  line-height: 1.35;
+}
+
+.genre-hub-channels-note {
+  margin: 0 0 12px;
+  color: var(--color-muted);
+  font-size: 0.82rem;
+  font-weight: 760;
+  line-height: 1.7;
+}
+
+.genre-hub-channel-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .genre-hub-channel-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.genre-hub-channel-list a {
+  display: flex;
+  height: 100%;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--color-bg-soft) 50%, white);
+  color: var(--color-ink);
+  padding: 12px;
+  text-decoration: none;
+}
+
+.genre-hub-channel-list a:hover {
+  border-color: color-mix(in srgb, var(--color-primary) 40%, var(--color-line));
+}
+
+.genre-hub-channel-rank {
+  display: grid;
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: #fff;
+  font-size: 0.86rem;
+  font-weight: 950;
+}
+
+.genre-hub-channel-body {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.genre-hub-channel-body strong {
+  color: var(--color-primary-ink);
+  font-size: 0.95rem;
+  font-weight: 950;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.genre-hub-channel-meta {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 820;
+}
+
+.genre-hub-channel-top {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--color-ink);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }

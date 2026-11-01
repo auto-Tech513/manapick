@@ -7,7 +7,8 @@ import {
   videos
 } from "@/lib/manapick";
 
-const REVIEWED_AT = "2026-08-05";
+const REVIEWED_AT = "2026-11-01";
+const reviewedLabel = (() => { const [y, m, d] = REVIEWED_AT.split("-").map(Number); return `${y}年${m}月${d}日`; })();
 const pageUrl = absoluteUrl("/research/youtube-learning-data/");
 
 function percent(value: number, total = videos.length) {
@@ -125,16 +126,15 @@ export default function YoutubeLearningDataPage() {
 
       <section className="knowledge-hero research-data-hero">
         <p className="section-eyebrow">Manapick独自集計</p>
-        <h1>YouTube学習動画{videos.length}本を見て分かった、選びやすい1本の条件</h1>
+        <h1>YouTube学習動画{videos.length}本を分析して分かった、選びやすい1本の条件</h1>
         <p>
-          Manapick掲載動画を、長さ・ジャンル・公開日・スコアで集計しました。
-          最初の1本は「30分以下」と「次に見る順番」がある動画を候補にすると、選択肢を絞りやすくなります。
+          Manapick掲載動画を、長さ・ジャンル・公開日・スコアで集計しました。最初の1本は「30分以下」と「次に見る順番」がある動画を候補にすると、選択肢を絞りやすくなります。
         </p>
         <div className="research-data-hero-actions">
           <Link href="/start/">3つの質問で今日の1本を選ぶ</Link>
           <Link href="/study-plan/">7日学習プランを作る</Link>
         </div>
-        <p className="research-caution">最終集計日: 2026年8月5日 ／ 対象: Manapick掲載動画。YouTube全体を代表する調査ではありません。</p>
+        <p className="research-caution">最終集計日: {reviewedLabel} ／ 対象: Manapick掲載動画。YouTube全体を代表する調査ではありません。</p>
       </section>
 
       <section className="knowledge-section" aria-labelledby="data-summary-title">
@@ -197,7 +197,12 @@ export default function YoutubeLearningDataPage() {
                 <tr key={item.genre}>
                   <th scope="row">{item.label}</th>
                   <td>{item.count}本</td>
-                  <td>{percent(item.count)}%</td>
+                  <td>
+                    <span className="research-genre-share">
+                      <span className="research-bar-track" aria-hidden="true"><i style={{ width: `${percent(item.count, genreCounts[0]?.count ?? 1)}%` }} /></span>
+                      {percent(item.count)}%
+                    </span>
+                  </td>
                   <td><Link href={`/genre/${item.genre}/`}>見る順を確認 →</Link></td>
                 </tr>
               ))}

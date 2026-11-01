@@ -56,7 +56,7 @@ function staticPriority(route: string): number {
 const PAGE_REVIEW_DATES = new Map<string, string>([
   ["/", "2026-08-05"],
   ["/learn/", "2026-08-05"],
-  ["/research/youtube-learning-data/", "2026-08-05"]
+  ["/research/youtube-learning-data/", "2026-11-01"]
 ]);
 
 function safeDate(value: string | undefined) {

@@ -81,8 +81,7 @@ export default function LearnIndexPage() {
         <p className="section-eyebrow">検索から来た人へ</p>
         <h1>検索で多い学習テーマを、見る順で選ぶ。</h1>
         <p>
-          検索で実際に見つけられているテーマを、無料YouTube動画・ロードマップ・公式情報・FAQにまとめました。
-          まず1ページで答えと見る順をつかみ、必要な動画だけを比較できます。
+          検索で実際に見つけられているテーマを、無料YouTube動画・ロードマップ・公式情報・FAQにまとめました。まず1ページで答えと見る順をつかみ、必要な動画だけを比較できます。
         </p>
       </section>
       <section className="knowledge-section" aria-labelledby="learn-index-title">
