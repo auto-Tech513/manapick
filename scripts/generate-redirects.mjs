@@ -50,13 +50,12 @@ for (const rule of rules) {
     console.warn(`[redirects] skip (ページが生成されるため): ${from}`);
     continue;
   }
-  const variants = new Set([from, encodeURI(from)]);
-  for (const f of variants) {
-    for (const src of [f, f.slice(0, -1)]) {
-      if (seen.has(src)) continue;
-      seen.add(src);
-      lines.push(`${src} ${to} 301`);
-    }
+  // Cloudflare は日本語パスを%エンコード形に正規化して照合するため、生の形だけ出力する
+  // （エンコード形を併記すると重複ルールとして無視される。2026-11-01 デプロイログで確認）。
+  for (const src of [from, from.slice(0, -1)]) {
+    if (seen.has(src)) continue;
+    seen.add(src);
+    lines.push(`${src} ${to} 301`);
   }
 }
 if (errors.length) {
