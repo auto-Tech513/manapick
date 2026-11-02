@@ -1008,5 +1008,101 @@
       "name": "生成AIパスポート試験",
       "url": "https://license.manapick.app/license/seisei-ai-passport/"
     }
+  ],
+  "0R3m6gTji4g": [
+    {
+      "site": "license",
+      "slug": "ap",
+      "name": "応用情報技術者試験（AP）",
+      "url": "https://license.manapick.app/license/ap/"
+    }
+  ],
+  "GBXantggKhU": [
+    {
+      "site": "license",
+      "slug": "ap",
+      "name": "応用情報技術者試験（AP）",
+      "url": "https://license.manapick.app/license/ap/"
+    }
+  ],
+  "guTJ3zjAONs": [
+    {
+      "site": "license",
+      "slug": "it-passport",
+      "name": "ITパスポート試験（iパス）",
+      "url": "https://license.manapick.app/license/it-passport/"
+    }
+  ],
+  "yJS1A1JEVtc": [
+    {
+      "site": "license",
+      "slug": "fp-3",
+      "name": "FP技能検定 3級（ファイナンシャル・プランニング技能士）",
+      "url": "https://license.manapick.app/license/fp-3/"
+    }
+  ],
+  "X-iZFnuwXjI": [
+    {
+      "site": "license",
+      "slug": "boki-2",
+      "name": "日商簿記検定 2級",
+      "url": "https://license.manapick.app/license/boki-2/"
+    }
+  ],
+  "62JcKRHh18s": [
+    {
+      "site": "license",
+      "slug": "boki-2",
+      "name": "日商簿記検定 2級",
+      "url": "https://license.manapick.app/license/boki-2/"
+    }
+  ],
+  "w40zRfN1P0w": [
+    {
+      "site": "license",
+      "slug": "boki-3",
+      "name": "日商簿記検定 3級",
+      "url": "https://license.manapick.app/license/boki-3/"
+    }
+  ],
+  "LmbLijdLhiQ": [
+    {
+      "site": "license",
+      "slug": "eiken-pre1",
+      "name": "実用英語技能検定（英検）準1級",
+      "url": "https://license.manapick.app/license/eiken-pre1/"
+    }
+  ],
+  "aQx3804fhQg": [
+    {
+      "site": "license",
+      "slug": "aws-clf",
+      "name": "AWS認定 クラウドプラクティショナー（CLF）",
+      "url": "https://license.manapick.app/license/aws-clf/"
+    }
+  ],
+  "-b2jmF653sw": [
+    {
+      "site": "ai",
+      "slug": "gemini",
+      "name": "Gemini",
+      "url": "https://ai.manapick.app/tool/gemini/"
+    }
+  ],
+  "bc7aLyuPwMs": [
+    {
+      "site": "ai",
+      "slug": "copilot",
+      "name": "Microsoft Copilot",
+      "url": "https://ai.manapick.app/tool/copilot/"
+    }
+  ],
+  "-l8SzZP1XOg": [
+    {
+      "site": "ai",
+      "slug": "copilot",
+      "name": "Microsoft Copilot",
+      "url": "https://ai.manapick.app/tool/copilot/"
+    }
   ]
 }

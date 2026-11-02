@@ -45030,5 +45030,939 @@
     "scoreStatus": "confirmed",
     "scoreConfirmedAt": "2026-11-01",
     "scoreBasis": "public-metadata"
+  },
+  {
+    "genre": "shikaku",
+    "sub": "IT",
+    "ytid": "0R3m6gTji4g",
+    "level": "中級",
+    "minutes": 141,
+    "channel": "石田宏実の情報処理技術者試験講座",
+    "score": 24,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 3,
+        "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "2026年10月公開（2026年11月3日確認）"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 3,
+        "note": "タイトルに対象者・難易度を示す語はない"
+      },
+      {
+        "axis": "体系性",
+        "score": 3,
+        "note": "タイトルに体系を示す語はない。チャプター23個"
+      },
+      {
+        "axis": "信頼性",
+        "score": 2,
+        "note": "再生回数40,035回（2026年11月3日時点）"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 3,
+        "note": "約141分"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
+      }
+    ],
+    "title": "【応用情報技術者試験】一問一答 574問　聞き流し｜科目A 全分野【ちょいむず】",
+    "url": "https://www.youtube.com/watch?v=0R3m6gTji4g",
+    "tags": [
+      "一問一答",
+      "聞き流し",
+      "科目A"
+    ],
+    "review": [
+      "応用情報技術者試験の科目A向けに、一問一答574問を読み上げる聞き流し動画。",
+      "概要欄によると、IPAのシラバスVer.7.2の用語例から、テクノロジ系・マネジメント系・ストラテジ系の全分野を選んでいる。",
+      "計算問題や図が必要な問題は入れていないと明記。チャプターは分野ごとに23個。"
+    ],
+    "viewCount": 40035,
+    "publishedAt": "2026-10-27T22:00:09Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-11-03",
+    "scoreBasis": "public-metadata"
+  },
+  {
+    "genre": "shikaku",
+    "sub": "IT",
+    "ytid": "GBXantggKhU",
+    "level": "中級",
+    "minutes": 15,
+    "channel": "IT技術の寺子屋",
+    "score": 29,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 4,
+        "note": "タイトルに入門・解説などの語あり"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "2026年7月公開（2026年11月3日確認）"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 4,
+        "note": "タイトルに入門・基礎・解説の語あり"
+      },
+      {
+        "axis": "体系性",
+        "score": 5,
+        "note": "タイトルに体系を示す語あり"
+      },
+      {
+        "axis": "信頼性",
+        "score": 1,
+        "note": "再生回数1,813回（2026年11月3日時点）"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 5,
+        "note": "約15分"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
+      }
+    ],
+    "title": "【2026年7月最新】ついに完全CBT化！応用情報・高度試験の変更点と新スケジュール徹底解説",
+    "url": "https://www.youtube.com/watch?v=GBXantggKhU",
+    "tags": [
+      "試験制度",
+      "CBT"
+    ],
+    "review": [
+      "IPAが発表した令和8年度（2026年度）の応用情報技術者試験・高度試験・情報処理安全確保支援士試験の実施期間とルールを解説する回。",
+      "概要欄によると、前期・後期ともペーパー方式からパソコンで受けるCBT方式へ移行。試験区分の名称変更や申込時の注意点も扱う。",
+      "IPA公式ページへのリンクが概要欄にある。"
+    ],
+    "viewCount": 1813,
+    "publishedAt": "2026-07-11T08:13:19Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-11-03",
+    "scoreBasis": "public-metadata"
+  },
+  {
+    "genre": "shikaku",
+    "sub": "ITパスポート",
+    "ytid": "guTJ3zjAONs",
+    "level": "初級",
+    "minutes": 55,
+    "channel": "資格応援隊",
+    "score": 25,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 3,
+        "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "2026年5月公開（2026年11月3日確認）"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 3,
+        "note": "タイトルに対象者・難易度を示す語はない"
+      },
+      {
+        "axis": "体系性",
+        "score": 3,
+        "note": "タイトルに体系を示す語はない"
+      },
+      {
+        "axis": "信頼性",
+        "score": 2,
+        "note": "再生回数14,899回（2026年11月3日時点）"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 4,
+        "note": "約55分"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
+      }
+    ],
+    "title": "ITパスポート 令和8年度 過去問(公開問題) 240問 [一問一答]",
+    "url": "https://www.youtube.com/watch?v=guTJ3zjAONs",
+    "tags": [
+      "過去問",
+      "一問一答"
+    ],
+    "review": [
+      "2026年4月30日に公開された令和8年度ITパスポート試験の公開問題を、一問一答形式にした回。",
+      "概要欄によると、文章問題や計算問題など一問一答に合わない問題は除いている。",
+      "約55分で240問。"
+    ],
+    "viewCount": 14899,
+    "publishedAt": "2026-05-04T09:30:32Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-11-03",
+    "scoreBasis": "public-metadata"
+  },
+  {
+    "genre": "kaikei",
+    "sub": "FP",
+    "ytid": "yJS1A1JEVtc",
+    "level": "初級",
+    "minutes": 53,
+    "channel": "みみスタ",
+    "score": 24,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 3,
+        "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "2026年10月公開（2026年11月3日確認）"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 3,
+        "note": "タイトルに対象者・難易度を示す語はない"
+      },
+      {
+        "axis": "体系性",
+        "score": 3,
+        "note": "タイトルに体系を示す語はない。チャプター4個"
+      },
+      {
+        "axis": "信頼性",
+        "score": 1,
+        "note": "再生回数1,732回（2026年11月3日時点）"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 4,
+        "note": "約53分"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
+      }
+    ],
+    "title": "【FP3級】予想問題100問！2026年版｜試験直前の総復習・聞き流しにも",
+    "url": "https://www.youtube.com/watch?v=yJS1A1JEVtc",
+    "tags": [
+      "予想問題",
+      "直前対策"
+    ],
+    "review": [
+      "FP3級の試験直前向けに、オリジナルの予想問題100問を出す回。",
+      "概要欄によると、○×問題78問と短答問題22問。問題のあとに解答時間がある。",
+      "前半が○×問題、後半が短答問題。計算問題は一時停止して解く想定と概要欄に記載。"
+    ],
+    "viewCount": 1732,
+    "publishedAt": "2026-10-05T08:00:00Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-11-03",
+    "scoreBasis": "public-metadata"
+  },
+  {
+    "genre": "kaikei",
+    "sub": "簿記",
+    "ytid": "X-iZFnuwXjI",
+    "level": "中級",
+    "minutes": 25,
+    "channel": "ヨーコのわかりやすい簿記",
+    "score": 25,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 3,
+        "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "2026年9月公開（2026年11月3日確認）"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 3,
+        "note": "タイトルに対象者・難易度を示す語はない"
+      },
+      {
+        "axis": "体系性",
+        "score": 3,
+        "note": "タイトルに体系を示す語はない。チャプター6個"
+      },
+      {
+        "axis": "信頼性",
+        "score": 1,
+        "note": "再生回数1,541回（2026年11月3日時点）"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 5,
+        "note": "約25分"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
+      }
+    ],
+    "title": "【工業簿記２級】総合原価計算２（直接材料の投入方法の違いを完璧にマスターしよう・加工費の予定配賦）",
+    "url": "https://www.youtube.com/watch?v=X-iZFnuwXjI",
+    "tags": [
+      "工業簿記",
+      "原価計算"
+    ],
+    "review": [
+      "日商簿記2級の工業簿記から、総合原価計算（直接材料の投入方法・加工費の予定配賦）を扱う回。",
+      "チャプターは、直接材料の4つの投入方法の考え方、問題と解説、加工費の予定配賦と勘定連絡図、問題と解説の順。",
+      "解答用紙は概要欄のリンクからダウンロードできる。"
+    ],
+    "viewCount": 1541,
+    "publishedAt": "2026-09-04T09:00:22Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-11-03",
+    "scoreBasis": "public-metadata"
+  },
+  {
+    "genre": "kaikei",
+    "sub": "簿記",
+    "ytid": "62JcKRHh18s",
+    "level": "中級",
+    "minutes": 29,
+    "channel": "ヨーコのわかりやすい簿記",
+    "score": 25,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 3,
+        "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "2026年6月公開（2026年11月3日確認）"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 3,
+        "note": "タイトルに対象者・難易度を示す語はない"
+      },
+      {
+        "axis": "体系性",
+        "score": 3,
+        "note": "タイトルに体系を示す語はない。チャプター9個"
+      },
+      {
+        "axis": "信頼性",
+        "score": 1,
+        "note": "再生回数2,301回（2026年11月3日時点）"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 5,
+        "note": "約29分"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
+      }
+    ],
+    "title": "【工業簿記２級】個別原価計算１（個別原価計算と原価計算表・製造間接費の予定配賦と製造間接費配賦差異・仕損費・実践問題にチャレンジ）",
+    "url": "https://www.youtube.com/watch?v=62JcKRHh18s",
+    "tags": [
+      "工業簿記",
+      "原価計算"
+    ],
+    "review": [
+      "日商簿記2級の工業簿記から、個別原価計算を扱う回。",
+      "原価計算表（製造間接費の実際配賦・予定配賦）、勘定連絡図、仕損費、実践問題の順にチャプターがある。",
+      "解答用紙は概要欄のリンクからダウンロードできる。"
+    ],
+    "viewCount": 2301,
+    "publishedAt": "2026-06-19T09:00:07Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-11-03",
+    "scoreBasis": "public-metadata"
+  },
+  {
+    "genre": "kaikei",
+    "sub": "簿記",
+    "ytid": "w40zRfN1P0w",
+    "level": "初級",
+    "minutes": 17,
+    "channel": "【簿記】石州 / 博士 (学術)",
+    "score": 30,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 4,
+        "note": "タイトルに入門・解説などの語あり"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "2025年9月公開（2026年11月3日確認）"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 5,
+        "note": "タイトルに初心者向けを示す語あり"
+      },
+      {
+        "axis": "体系性",
+        "score": 5,
+        "note": "タイトルに体系を示す語あり。チャプター12個"
+      },
+      {
+        "axis": "信頼性",
+        "score": 1,
+        "note": "再生回数1,808回（2026年11月3日時点）"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 5,
+        "note": "約17分"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
+      }
+    ],
+    "title": "【簿記3級】勘定科目を完全解説！【初心者でも安心の入門講座】vol.107",
+    "url": "https://www.youtube.com/watch?v=w40zRfN1P0w",
+    "tags": [
+      "勘定科目",
+      "入門"
+    ],
+    "review": [
+      "日商簿記3級の勘定科目を、初学者向けに解説する回（シリーズvol.107）。",
+      "資産・負債・純資産・費用・収益の代表的な科目、要素の見分け方、確認問題の順にチャプターがある。",
+      "動画内の問題と勘定科目の一覧は、概要欄のリンクから無料でダウンロードできる。"
+    ],
+    "viewCount": 1808,
+    "publishedAt": "2025-09-01T08:01:08Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-11-03",
+    "scoreBasis": "public-metadata"
+  },
+  {
+    "genre": "english",
+    "sub": "英検",
+    "ytid": "LmbLijdLhiQ",
+    "level": "中級",
+    "minutes": 9,
+    "channel": "ふわり。",
+    "score": 28,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 5,
+        "note": "タイトルに手順・実務を示す語あり"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "2026年8月公開（2026年11月3日確認）"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 4,
+        "note": "タイトルに入門・基礎・解説の語あり"
+      },
+      {
+        "axis": "体系性",
+        "score": 3,
+        "note": "タイトルに体系を示す語はない。チャプター5個"
+      },
+      {
+        "axis": "信頼性",
+        "score": 1,
+        "note": "再生回数9,359回（2026年11月3日時点）"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 5,
+        "note": "約9分"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
+      }
+    ],
+    "title": "英検準1級合格のための勉強法‼️英単語の効率的な覚え方⌇4技能全ての勉強法を解説します⌇改訂版",
+    "url": "https://www.youtube.com/watch?v=LmbLijdLhiQ",
+    "tags": [
+      "勉強法",
+      "英単語",
+      "AI活用"
+    ],
+    "review": [
+      "英検準1級に合格した投稿者が、4技能それぞれの勉強法を紹介する改訂版。",
+      "概要欄によると、日本育ち・留学経験なしで合格。チャプターは単語、リーディング、ライティング（AI添削）、リスニング（倍速トレーニング）、スピーキング・二次試験の順。",
+      "ライティングと二次試験の対策に、AIツールを使う方法を含む。"
+    ],
+    "viewCount": 9359,
+    "publishedAt": "2026-08-22T10:12:48Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-11-03",
+    "scoreBasis": "public-metadata"
+  },
+  {
+    "genre": "prog",
+    "sub": "インフラ",
+    "ytid": "aQx3804fhQg",
+    "level": "初級",
+    "minutes": 11,
+    "channel": "100日後に合格するずんだもん【IT・クラウド資格解説】",
+    "score": 28,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 4,
+        "note": "タイトルに入門・解説などの語あり"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "2025年9月公開（2026年11月3日確認）"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 4,
+        "note": "タイトルに入門・基礎・解説の語あり"
+      },
+      {
+        "axis": "体系性",
+        "score": 3,
+        "note": "タイトルに体系を示す語はない。チャプター10個"
+      },
+      {
+        "axis": "信頼性",
+        "score": 2,
+        "note": "再生回数17,470回（2026年11月3日時点）"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 5,
+        "note": "約11分"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
+      }
+    ],
+    "title": "【AWS クラウドプラクティショナー】どんな資格？取得メリット、合格の近道、頻出概念を解説！",
+    "url": "https://www.youtube.com/watch?v=aQx3804fhQg",
+    "tags": [
+      "AWS",
+      "資格概要"
+    ],
+    "review": [
+      "AWS認定クラウドプラクティショナー（CLF-C02）の概要を約10分でまとめた回。",
+      "概要欄によると、どんな資格か、取得のメリット、合格への近道、頻出概念を扱う。",
+      "AWS公式の試験ガイドへのリンクが概要欄にある。チャプター10個。"
+    ],
+    "viewCount": 17470,
+    "publishedAt": "2025-09-07T11:00:03Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-11-03",
+    "scoreBasis": "public-metadata"
+  },
+  {
+    "genre": "prog",
+    "sub": "アプリ",
+    "ytid": "cClpzva20AA",
+    "level": "初級",
+    "minutes": 17,
+    "channel": "AIエンジニアらむね・村井宗明",
+    "score": 27,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 3,
+        "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "2025年11月公開（2026年11月3日確認）"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 5,
+        "note": "タイトルに初心者向けを示す語あり"
+      },
+      {
+        "axis": "体系性",
+        "score": 3,
+        "note": "タイトルに体系を示す語はない"
+      },
+      {
+        "axis": "信頼性",
+        "score": 1,
+        "note": "再生回数6,861回（2026年11月3日時点）"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 5,
+        "note": "約17分"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
+      }
+    ],
+    "title": "初心者でも簡単にできる！Google AI Studioでアプリ作成と公開",
+    "url": "https://www.youtube.com/watch?v=cClpzva20AA",
+    "tags": [
+      "Google AI Studio",
+      "デプロイ"
+    ],
+    "review": [
+      "Google AI StudioのBuildモードで作ったアプリを、公開するまでの手順を解説する回。",
+      "概要欄によると、GitHubにそのまま上げるとtsxファイルが動かない、FTPではAPIキーが危ないという課題に対し、Google Cloudへデプロイする方法を説明している。",
+      "概要欄の手順にはGoogle Cloudプロジェクトの作成と課金設定が含まれる。手順をまとめたPDFへのリンクがある。"
+    ],
+    "viewCount": 6861,
+    "publishedAt": "2025-11-03T01:39:26Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-11-03",
+    "scoreBasis": "public-metadata"
+  },
+  {
+    "genre": "data",
+    "sub": "Excel",
+    "ytid": "-b2jmF653sw",
+    "level": "初級",
+    "minutes": 17,
+    "channel": "LCエクセル講座",
+    "score": 28,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 4,
+        "note": "タイトルに入門・解説などの語あり"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "2026年9月公開（2026年11月3日確認）"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 3,
+        "note": "タイトルに対象者・難易度を示す語はない"
+      },
+      {
+        "axis": "体系性",
+        "score": 5,
+        "note": "タイトルに体系を示す語あり。チャプター10個"
+      },
+      {
+        "axis": "信頼性",
+        "score": 1,
+        "note": "再生回数3,023回（2026年11月3日時点）"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 5,
+        "note": "約17分"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
+      }
+    ],
+    "title": "【エクセル】GeminiでExcelのマクロ（VBA）を作る！ChatGPT・Claudeとの違いも徹底比較（超わかりやすいエクセルEXCEL講座）",
+    "url": "https://www.youtube.com/watch?v=-b2jmF653sw",
+    "tags": [
+      "VBA",
+      "Gemini",
+      "マクロ"
+    ],
+    "review": [
+      "Excelのマクロ（VBA）をGeminiに作ってもらう手順を実演する回。",
+      "チャプターは、データ抽出マクロとレポート自動生成マクロの実践、エラーが出たときの頼み方、ChatGPT・Claude・Geminiの使い分けの順。",
+      "同じチャンネルの前回は、ClaudeでVBAを作る回（概要欄より）。"
+    ],
+    "viewCount": 3023,
+    "publishedAt": "2026-09-22T11:36:31Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-11-03",
+    "scoreBasis": "public-metadata"
+  },
+  {
+    "genre": "data",
+    "sub": "データサイエンス",
+    "ytid": "9N8JfpLIKBs",
+    "level": "初級",
+    "minutes": 20,
+    "channel": "田中嘉博",
+    "score": 28,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 4,
+        "note": "タイトルに入門・解説などの語あり"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "2026年1月公開（2026年11月3日確認）"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 4,
+        "note": "タイトルに入門・基礎・解説の語あり"
+      },
+      {
+        "axis": "体系性",
+        "score": 4,
+        "note": "タイトルに入門・基礎・まとめの語あり。チャプター4個"
+      },
+      {
+        "axis": "信頼性",
+        "score": 1,
+        "note": "再生回数6,447回（2026年11月3日時点）"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 5,
+        "note": "約20分"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
+      }
+    ],
+    "title": "20分でぜんぶ学ぶ 統計学・機械学習の基礎を一気に習得 最短コンパクト学習：P値と帰無仮説（仮説検定）、ｔ検定、分散分析、カイ二乗検定、回帰分析、重回帰分析",
+    "url": "https://www.youtube.com/watch?v=9N8JfpLIKBs",
+    "tags": [
+      "仮説検定",
+      "P値"
+    ],
+    "review": [
+      "統計学の仮説検定（P値と帰無仮説）を約20分でまとめた回。",
+      "概要欄によると、以前公開した「36分でぜんぶ学ぶ…」を短く再編集したもの。",
+      "より詳しく説明した関連動画があると概要欄に記載。"
+    ],
+    "viewCount": 6447,
+    "publishedAt": "2026-01-21T04:07:47Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-11-03",
+    "scoreBasis": "public-metadata"
+  },
+  {
+    "genre": "ai",
+    "sub": "Copilot",
+    "ytid": "bc7aLyuPwMs",
+    "level": "初級",
+    "minutes": 14,
+    "channel": "LCエクセル講座",
+    "score": 29,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 4,
+        "note": "タイトルに入門・解説などの語あり"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "2026年9月公開（2026年11月3日確認）"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 4,
+        "note": "タイトルに入門・基礎・解説の語あり"
+      },
+      {
+        "axis": "体系性",
+        "score": 5,
+        "note": "タイトルに体系を示す語あり。チャプター10個"
+      },
+      {
+        "axis": "信頼性",
+        "score": 1,
+        "note": "再生回数2,435回（2026年11月3日時点）"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 5,
+        "note": "約14分"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
+      }
+    ],
+    "title": "【エクセル】日本語で指示するだけ！CopilotでExcelを自動操作する方法を完全解説（超わかりやすいエクセルEXCEL講座）",
+    "url": "https://www.youtube.com/watch?v=bc7aLyuPwMs",
+    "tags": [
+      "Excel",
+      "Copilot"
+    ],
+    "review": [
+      "Microsoft 365のCopilotにExcel上で日本語の指示を出し、集計・分析、グラフ、数式を作る手順を実演する回。",
+      "チャプターは、Copilotと他のAIとの違い、起動方法と画面の見方、集計・分析、グラフ生成、数式作成の順。",
+      "概要欄によると、ChatGPTやClaudeのように別のサイトを開かずにExcel内で使える点を扱う。"
+    ],
+    "viewCount": 2435,
+    "publishedAt": "2026-09-05T10:50:06Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-11-03",
+    "scoreBasis": "public-metadata"
+  },
+  {
+    "genre": "ai",
+    "sub": "Copilot",
+    "ytid": "-l8SzZP1XOg",
+    "level": "初級",
+    "minutes": 6,
+    "channel": "yuriask_ai",
+    "score": 27,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 5,
+        "note": "タイトルに手順・実務を示す語あり"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "2025年10月公開（2026年11月3日確認）"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 4,
+        "note": "タイトルに入門・基礎・解説の語あり"
+      },
+      {
+        "axis": "体系性",
+        "score": 3,
+        "note": "タイトルに体系を示す語はない。チャプター10個"
+      },
+      {
+        "axis": "信頼性",
+        "score": 2,
+        "note": "再生回数20,681回（2026年11月3日時点）"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 3,
+        "note": "約6分"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
+      }
+    ],
+    "title": "【解説】Excelがついに自動で働く！Copilot Agent Modeの全貌と使い方。",
+    "url": "https://www.youtube.com/watch?v=-l8SzZP1XOg",
+    "tags": [
+      "Excel",
+      "Copilot",
+      "Agent Mode"
+    ],
+    "review": [
+      "Microsoft 365 CopilotのExcel向け「Agent Mode」の概要と設定方法を紹介する約6分の回。",
+      "チャプターは、書式の統一、空白セルの補完、表記ゆれの修正、外部情報の取得、ダッシュボード生成など。",
+      "概要欄に記載の動作環境はExcel Labs（Web版Excel）。"
+    ],
+    "viewCount": 20681,
+    "publishedAt": "2025-10-07T22:00:01Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-11-03",
+    "scoreBasis": "public-metadata"
+  },
+  {
+    "genre": "money",
+    "sub": "家計",
+    "ytid": "AFAH0RqDZyM",
+    "level": "初級",
+    "minutes": 15,
+    "channel": "よーこ 凸凹だらけの家計と暮らし",
+    "score": 27,
+    "axisScores": [
+      {
+        "axis": "実用性",
+        "score": 3,
+        "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
+      },
+      {
+        "axis": "正確性・鮮度",
+        "score": 5,
+        "note": "2026年7月公開（2026年11月3日確認）"
+      },
+      {
+        "axis": "分かりやすさ",
+        "score": 5,
+        "note": "タイトルに初心者向けを示す語あり"
+      },
+      {
+        "axis": "体系性",
+        "score": 3,
+        "note": "タイトルに体系を示す語はない。チャプター7個"
+      },
+      {
+        "axis": "信頼性",
+        "score": 1,
+        "note": "再生回数1,498回（2026年11月3日時点）"
+      },
+      {
+        "axis": "視聴体験",
+        "score": 5,
+        "note": "約15分"
+      },
+      {
+        "axis": "規約・権利",
+        "score": 5,
+        "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
+      }
+    ],
+    "title": "【初心者向け】家計管理の始め方｜家計簿が続かなかった私が実践した4ステップ",
+    "url": "https://www.youtube.com/watch?v=AFAH0RqDZyM",
+    "tags": [
+      "家計簿",
+      "家計管理"
+    ],
+    "review": [
+      "家計管理を始めたい人向けに、投稿者が実践した4つのステップを紹介する回。",
+      "チャプターは、目的を決める、まず記録する、自分に合った予算を決める、管理方法を育てる、やらない方がよいことの順。",
+      "概要欄によると、家計簿が続かなかった投稿者が3回目で1年続いた経験にもとづく。"
+    ],
+    "viewCount": 1498,
+    "publishedAt": "2026-07-20T09:00:20Z",
+    "scoreStatus": "confirmed",
+    "scoreConfirmedAt": "2026-11-03",
+    "scoreBasis": "public-metadata"
   }
 ]

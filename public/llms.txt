@@ -4,16 +4,16 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 動画はYouTube上で公開されているものを掲載し、YouTubeへのリンクまたはYouTube公式プレーヤーで紹介します。ダウンロードや再配布は扱いません。
 
 ## 公開中の10ジャンル
-- 生成AI（151本）: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Cline / Copilot / DeepL / DeepSeek / ElevenLabs / Figma(Figma AI) / Gamma / Gemini / Gemma / GitHub Copilot / Google AI Mode / Google Veo / Google翻訳 / Grok / Hailuo AI / HeyGen / Kling AI / Manus / Midjourney / Notion AI / Notta / Ollama / OpenAI Codex / OpenClaw / Perplexity / PixVerse / Replit Agent / Runway / Siri AI / Stable Diffusion / Suno / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
-- プログラミング・IT（58本）: AWS認定 クラウドプラクティショナー / AWS認定 ソリューションアーキテクト / Git / JavaScript / Python / SQL / Web開発 / インフラ / 情報セキュリティマネジメント試験
+- 生成AI（153本）: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Cline / Copilot / DeepL / DeepSeek / ElevenLabs / Figma(Figma AI) / Gamma / Gemini / Gemma / GitHub Copilot / Google AI Mode / Google Veo / Google翻訳 / Grok / Hailuo AI / HeyGen / Kling AI / Manus / Midjourney / Notion AI / Notta / Ollama / OpenAI Codex / OpenClaw / Perplexity / PixVerse / Replit Agent / Runway / Siri AI / Stable Diffusion / Suno / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
+- プログラミング・IT（60本）: AWS認定 クラウドプラクティショナー / AWS認定 ソリューションアーキテクト / Git / JavaScript / Python / SQL / Web開発 / アプリ / インフラ / 情報セキュリティマネジメント試験
 - 動画編集・クリエイティブ（70本）: After Effects / CapCut / DaVinci / Premiere Pro / デザイン / 色彩検定
-- 語学・英語（56本）: TOEIC / 「ハングル」能力検定 / ビジネス英語 / 発音 / 英会話
-- データ分析・DX（33本）: BI / Excel / データサイエンス / 統計
+- 語学・英語（57本）: TOEIC / 「ハングル」能力検定 / ビジネス英語 / 発音 / 英会話 / 英検
+- データ分析・DX（35本）: BI / Excel / データサイエンス / 統計
 - Webマーケ・SNS運用（31本）: SEO / SNS / Webマーケ
 - Office・資料作成（40本）: Excel / Word / プレゼン / 資料作成
-- 資格・検定（223本）: AI検定 / G検定 / IT / ITパスポート / MOS / ネイリスト / ビジネス実務法務検定試験 / 二級ボイラー技士 / 介護福祉士 / 保育士 / 医療事務 / 危険物乙4 / 国家公務員採用一般職試験 / 基本情報技術者 / 宅建 / 日本漢字能力検定 / 測量士補 / 生成AIパスポート / 登録販売者 / 社労士 / 秘書検定 / 第二種電気工事士 / 管理栄養士 / 管理業務主任者 / 行政書士 / 衛生管理者 / 賃貸不動産経営管理士 / 電験三種 / 食生活アドバイザー
-- 会計・経営系資格（57本）: FP / 中小企業診断士 / 税理士 / 簿記
-- お金・投資（26本）: NISA / 家計 / 投資
+- 資格・検定（226本）: AI検定 / G検定 / IT / ITパスポート / MOS / ネイリスト / ビジネス実務法務検定試験 / 二級ボイラー技士 / 介護福祉士 / 保育士 / 医療事務 / 危険物乙4 / 国家公務員採用一般職試験 / 基本情報技術者 / 宅建 / 日本漢字能力検定 / 測量士補 / 生成AIパスポート / 登録販売者 / 社労士 / 秘書検定 / 第二種電気工事士 / 管理栄養士 / 管理業務主任者 / 行政書士 / 衛生管理者 / 賃貸不動産経営管理士 / 電験三種 / 食生活アドバイザー
+- 会計・経営系資格（61本）: FP / 中小企業診断士 / 税理士 / 簿記
+- お金・投資（27本）: NISA / 家計 / 投資
 
 ## 採点方法
 - Manapickスコアは7軸×5点=35点満点です。
@@ -49,7 +49,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 2026-10-19 Google Classroomで先生が配ったGemini Notebookの利用状況を要約、つまずきやすい点を把握: https://manapick.app/news/2026-10-19-classroom-gemini-notebook-insight-summaries/ | 出典 Google Workspace Updates
 
 ## ジャンル別AEOインデックス
-### 生成AI（151本）
+### 生成AI（153本）
 - ジャンルURL: https://manapick.app/genre/ai/
 - ガイドURL: https://manapick.app/guide/generative-ai/
 - 主なトピック: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Cline / Copilot / DeepL / DeepSeek / ElevenLabs / Figma(Figma AI) / Gamma / Gemini / Gemma / GitHub Copilot / Google AI Mode / Google Veo / Google翻訳 / Grok / Hailuo AI / HeyGen / Kling AI / Manus / Midjourney / Notion AI / Notta / Ollama / OpenAI Codex / OpenClaw / Perplexity / PixVerse / Replit Agent / Runway / Siri AI / Stable Diffusion / Suno / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
@@ -64,10 +64,10 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【初心者OK🔰】アンソロピック「Claude Cowork」使い方基礎講座！活用法まで分かりやすく解説！（生成AI / Claude / 33/35 / 23分 / publishedAt=2026-03-14T10:15:05Z） https://manapick.app/video/NTFIFwmrjiw/
 5. 【完全版】Googleの最強AIツールGeminiの使い方徹底解説【初心者必見】（生成AI / Gemini / 33/35 / 31分 / publishedAt=2026-03-11T11:15:03Z） https://manapick.app/video/SfCNwzANbUY/
 
-### プログラミング・IT（58本）
+### プログラミング・IT（60本）
 - ジャンルURL: https://manapick.app/genre/prog/
 - ガイドURL: https://manapick.app/guide/python/
-- 主なトピック: AWS認定 クラウドプラクティショナー / AWS認定 ソリューションアーキテクト / Git / JavaScript / Python / SQL / Web開発 / インフラ / 情報セキュリティマネジメント試験
+- 主なトピック: AWS認定 クラウドプラクティショナー / AWS認定 ソリューションアーキテクト / Git / JavaScript / Python / SQL / Web開発 / アプリ / インフラ / 情報セキュリティマネジメント試験
 - ロードマップ: プログラミングロードマップ
   - STEP1（初級）: Pythonの環境と基本文法を一周し、学習の全体像をつかむ。｜動画: 【最新版】Python超入門講座（合併版）｜Pythonの超基本的な部分をたった1時間で学べます【プログラミング初心者向け入門講座】 / 【Python入門】8分で挫折知らず！プログラミングの基礎を完全攻略 / 【初心者でもわかる！】Gitの使い方講座
   - STEP2（中級）: 長尺で反復しながら、基礎を体系的に固める。｜動画: Python学習ロードマップを40分で徹底解説｜作りたいもの別のおすすめ学習方法、学習時間を初心者向けに解説 / 【プログラミング入門】SQLの基本を解説！データベース操作の学ぼう！〜VTuberと学習〜【初心者向け】 / 【Git入門講座 合併版】この動画1本でGitとGitHubの基礎をゼロからマスター！【初心者向け】
@@ -94,10 +94,10 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【Premiere Pro初心者講座】自動文字起こし機能の使い方徹底解説「フルテロップも簡単！」（動画編集・クリエイティブ / Premiere Pro / 32/35 / 21分 / publishedAt=2025-06-18T11:00:33Z） https://manapick.app/video/C9GymZxUrF4/
 5. 【完全無料】はじめてのDavinci Resolve！無料版を使った動画編集初心者向け編集チュートリアル！超入門20分解説。【2025年最新版ダビンチリゾルブの使い方】（動画編集・クリエイティブ / DaVinci / 32/35 / 28分 / publishedAt=2025-10-30T10:45:07Z） https://manapick.app/video/vjFZXXPA888/
 
-### 語学・英語（56本）
+### 語学・英語（57本）
 - ジャンルURL: https://manapick.app/genre/english/
 - ガイドURL: https://manapick.app/guide/english/
-- 主なトピック: TOEIC / 「ハングル」能力検定 / ビジネス英語 / 発音 / 英会話
+- 主なトピック: TOEIC / 「ハングル」能力検定 / ビジネス英語 / 発音 / 英会話 / 英検
 - ロードマップ: 英語ロードマップ
   - STEP1（初級）: 英語学習の全体像と「やる順番」を知り、遠回りを避ける。｜動画: 【何年かかる？】英語力ゼロからペラペラ英会話を独学で作る勉強法のロードマップ完全解説（40代/50代/初心者/留学なし純ジャパ/かっこいい） / 英語力は“やる順番”でほぼ勝負がつくゾ！話せるようになるロードマップをワシが教えたる！
   - STEP2（中級）: 毎日続けられる学習サイクルを作り、話す練習を始める。｜動画: 初心者でも3ヶ月で英語が話せるようになる勉強方法 / アメリカ英語発音入門  完全ガイド 【超有料級】 / 【英語発音完全ガイド】学校では教わらない発音上達法／YouTuberだいじろーが解説／初中級者必見 まずは母音を攻略せよ／盆踊りのリズムを捨てろ／エミネムも歌える【ENGLISH SKILL SET】
@@ -109,7 +109,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. TOEIC完全初心者が2ヶ月で600点を取るための勉強ロードマップ【2024最新版】（語学・英語 / TOEIC / 32/35 / 23分 / publishedAt=2024-02-28T11:00:02Z） https://manapick.app/video/aRKYpz19vPE/
 5. 【TOEIC完全ロードマップ】これで伸びなかったら諦めてください。推奨教材と勉強方法を全て解説します（語学・英語 / TOEIC / 32/35 / 21分 / publishedAt=2026-04-28T09:31:55Z） https://manapick.app/video/yZBvdoTDjBE/
 
-### データ分析・DX（33本）
+### データ分析・DX（35本）
 - ジャンルURL: https://manapick.app/genre/data/
 - ガイドURL: https://manapick.app/guide/excel-data/
 - 主なトピック: BI / Excel / データサイエンス / 統計
@@ -154,7 +154,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【2025年最新】Geminiでパワポ・スライド資料を爆速作成する裏ワザを解説します（Office・資料作成 / 資料作成 / 30/35 / 19分 / publishedAt=2025-09-07T10:01:24Z） https://manapick.app/video/vri3RfONGfM/
 5. 【神アプデ】最新版Geminiでパワポ・スライド資料作成が一瞬で終わる方法を解説します（Office・資料作成 / 資料作成 / 30/35 / 14分 / publishedAt=2025-07-21T11:30:32Z） https://manapick.app/video/VY82g_vQzEM/
 
-### 資格・検定（223本）
+### 資格・検定（226本）
 - ジャンルURL: https://manapick.app/genre/shikaku/
 - ガイドURL: https://manapick.app/guide/certification/
 - 主なトピック: AI検定 / G検定 / IT / ITパスポート / MOS / ネイリスト / ビジネス実務法務検定試験 / 二級ボイラー技士 / 介護福祉士 / 保育士 / 医療事務 / 危険物乙4 / 国家公務員採用一般職試験 / 基本情報技術者 / 宅建 / 日本漢字能力検定 / 測量士補 / 生成AIパスポート / 登録販売者 / 社労士 / 秘書検定 / 第二種電気工事士 / 管理栄養士 / 管理業務主任者 / 行政書士 / 衛生管理者 / 賃貸不動産経営管理士 / 電験三種 / 食生活アドバイザー
@@ -169,7 +169,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【宅建受験生必見】一発合格ロードマップ完全版！試験本番までのスケジュールと戦略をこざりえが徹底解説 ！（資格・検定 / 宅建 / 31/35 / 27分 / publishedAt=2026-04-25T10:00:53Z） https://manapick.app/video/_rIozAfVG3A/
 5. 【参考書を丸ごと１冊覚える方法】エクセルのスケジュール表を無料配布します！宅建合格までのロードマップを公開して解説します。大量記憶表ダウンロードできます。（資格・検定 / 宅建 / 31/35 / 19分 / publishedAt=2025-04-08T09:00:32Z） https://manapick.app/video/MpVoaibTNGk/
 
-### 会計・経営系資格（57本）
+### 会計・経営系資格（61本）
 - ジャンルURL: https://manapick.app/genre/kaikei/
 - ガイドURL: https://manapick.app/guide/bookkeeping/
 - 主なトピック: FP / 中小企業診断士 / 税理士 / 簿記
@@ -184,7 +184,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【2025.5｜3級学科】CBT公表分　読み上げと解答動画です。聞き流しもOK！2級勉強中の方にも基礎のおさらいにオススメ！　FP技能士3級　ファイナンシャルプランナー　過去問実践（会計・経営系資格 / FP / 30/35 / 31分 / publishedAt=2025-06-20T14:22:27Z） https://manapick.app/video/5SUv1DVJzdc/
 5. 【超入門】簿記の基本を25分で完全理解！初心者でも全体の流れと基礎がスッキリ理解できる【日商簿記3級対策】（会計・経営系資格 / 簿記 / 30/35 / 26分 / publishedAt=2025-09-01T09:01:17Z） https://manapick.app/video/reHqDGh4r2Y/
 
-### お金・投資（26本）
+### お金・投資（27本）
 - ジャンルURL: https://manapick.app/genre/money/
 - ガイドURL: https://manapick.app/guide/money-basics/
 - 主なトピック: NISA / 家計 / 投資
@@ -230,7 +230,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 ## 主要URL
 - トップ: https://manapick.app/
 - YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
-- YouTube学習動画745本の独自集計: https://manapick.app/research/youtube-learning-data/
+- YouTube学習動画760本の独自集計: https://manapick.app/research/youtube-learning-data/
 - 7日学習プラン: https://manapick.app/study-plan/
 - Manapick Network（学ぶ・AI・資格・仕事）: https://manapick.app/network/
 - 学習ロードマップ一覧: https://manapick.app/guide/
