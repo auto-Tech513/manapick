@@ -49,26 +49,51 @@ const sessionDays: Record<number, number[]> = {
   7: [1, 2, 3, 4, 5, 6, 7]
 };
 
-function selectPlanVideos(videos: StudyPlanVideo[], dailyMinutes: number, frequency: number) {
-  const durationCeiling = Math.max(dailyMinutes + 5, Math.round(dailyMinutes * 1.35));
-  const fitting = videos.filter((video) => video.minutes <= durationCeiling);
-  const source = fitting.length >= frequency ? fitting : videos;
+export type StudyPlanSession = {
+  day: number;
+  videos: StudyPlanVideo[];
+  minutes: number;
+};
 
-  return [...source]
-    .sort((a, b) => a.sequence - b.sequence || (b.score ?? -1) - (a.score ?? -1) || a.minutes - b.minutes)
-    .slice(0, frequency);
-}
-
-function scheduleForWeek(videos: StudyPlanVideo[], frequency: number) {
+// 1回の学習時間（dailyMinutes）に収まるよう、ロードマップ順の動画を学習日ごとに詰める。
+// 上限は目安時間の115%。目安の85%に達したらその日は締める。どの動画も収まらない日は、残りで最も短い1本を入れる。
+function buildSessions(videos: StudyPlanVideo[], dailyMinutes: number, frequency: number): StudyPlanSession[] {
   const learningDays = sessionDays[frequency] ?? sessionDays[5];
-  let videoIndex = 0;
+  const cap = Math.round(dailyMinutes * 1.15);
+  const queue = [...videos].sort(
+    (a, b) => a.sequence - b.sequence || (b.score ?? -1) - (a.score ?? -1) || a.minutes - b.minutes
+  );
+  const sessions: StudyPlanSession[] = [];
 
-  return Array.from({ length: 7 }, (_, index) => {
-    const day = index + 1;
-    const isLearningDay = learningDays.includes(day);
-    const video = isLearningDay ? videos[videoIndex++] ?? null : null;
-    return { day, video };
-  });
+  for (const day of learningDays) {
+    const picked: StudyPlanVideo[] = [];
+    let total = 0;
+    for (let index = 0; index < queue.length; ) {
+      const video = queue[index];
+      if (total + video.minutes <= cap) {
+        picked.push(video);
+        total += video.minutes;
+        queue.splice(index, 1);
+        if (total >= dailyMinutes * 0.85) break;
+      } else {
+        index += 1;
+      }
+    }
+    if (picked.length === 0 && queue.length > 0) {
+      let shortest = 0;
+      queue.forEach((video, index) => {
+        if (video.minutes < queue[shortest].minutes) shortest = index;
+      });
+      const [video] = queue.splice(shortest, 1);
+      picked.push(video);
+      total = video.minutes;
+    }
+    if (picked.length === 0) break;
+    picked.sort((a, b) => a.sequence - b.sequence);
+    sessions.push({ day, videos: picked, minutes: total });
+  }
+
+  return sessions;
 }
 
 export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderProps) {
@@ -100,12 +125,16 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
 
   const selectedGenre = genres.find((item) => item.key === genre) ?? genres[0];
   const genreVideos = useMemo(() => videos.filter((video) => video.genre === genre), [genre, videos]);
-  const selectedVideos = useMemo(
-    () => selectPlanVideos(genreVideos, dailyMinutes, frequency),
+  const sessions = useMemo(
+    () => buildSessions(genreVideos, dailyMinutes, frequency),
     [dailyMinutes, frequency, genreVideos]
   );
-  const schedule = useMemo(() => scheduleForWeek(selectedVideos, frequency), [frequency, selectedVideos]);
-  const totalMinutes = selectedVideos.reduce((total, video) => total + video.minutes, 0);
+  const videoCount = sessions.reduce((total, session) => total + session.videos.length, 0);
+  const totalMinutes = sessions.reduce((total, session) => total + session.minutes, 0);
+  const restDays = Array.from({ length: 7 }, (_, index) => index + 1).filter(
+    (day) => !sessions.some((session) => session.day === day)
+  );
+  const firstVideo = sessions[0]?.videos[0];
 
   function savePlan() {
     const value: SavedPlan = { genre, dailyMinutes, frequency };
@@ -120,7 +149,7 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
         <div className="study-plan-controls-heading">
           <p className="section-eyebrow">3つだけ選ぶ</p>
           <h2 id="study-plan-controls-title">今週の学ぶ順番を作る</h2>
-          <p>動画の尺は目安です。長い動画は途中で止めても、翌日に続きから見られます。</p>
+          <p>選んだ時間に収まるよう、1回に見る動画を組み合わせます。動画の尺は目安です。</p>
         </div>
 
         <fieldset>
@@ -146,7 +175,7 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
 
         <div className="study-plan-control-row">
           <fieldset>
-            <legend><span>2</span> 1日に使える時間</legend>
+            <legend><span>2</span> 1回に使える時間</legend>
             <div className="study-plan-option-grid">
               {[15, 30, 60].map((minutes) => (
                 <button
@@ -193,51 +222,57 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
         <div className="study-plan-result-head">
           <div>
             <p className="section-eyebrow">あなたの7日プラン</p>
-            <h2 id="study-plan-result-title">{selectedGenre?.label}を、週{frequency}日で進める</h2>
-            <p>合計{selectedVideos.length}本・約{totalMinutes}分。ロードマップの順番と所要時間から選んでいます。</p>
+            <h2 id="study-plan-result-title">{selectedGenre?.label}を、週{sessions.length}回・1回約{dailyMinutes}分で進める</h2>
+            <p>合計{videoCount}本・約{totalMinutes}分。ロードマップの順番に、1回{dailyMinutes}分前後に収まる動画を組み合わせています。</p>
           </div>
           <button type="button" className={saved ? "is-saved" : ""} onClick={savePlan}>
             {saved ? "この端末に保存済み" : "このプランを保存"}
           </button>
         </div>
 
-        <ol className="study-plan-week">
-          {schedule.map(({ day, video }) => (
-            <li key={day} className={video ? "is-learning" : "is-review"}>
-              <span className="study-plan-day">DAY {day}</span>
-              {video ? (
-                <Link href={video.detailUrl} onClick={() => sendGaEvent("study_plan_video_click", { genre, day, ytid: video.ytid })}>
-                  <Image
-                    src={video.thumbnailUrl}
-                    alt={`${video.title}のサムネイル`}
-                    width={320}
-                    height={180}
-                    sizes="(max-width: 767px) 108px, 160px"
-                  />
-                  <span className="study-plan-video-copy">
-                    <small>{video.level}・{video.sub}</small>
-                    <strong>{video.title}</strong>
-                    <span>{video.score === null ? "スコア準備中" : `${video.score}/35`} ／ {video.minutes}分</span>
-                  </span>
-                </Link>
-              ) : (
-                <div className="study-plan-review-copy">
-                  <strong>5分だけ振り返る</strong>
-                  <span>
-                    <Link href="/my/#my-notes">学びメモ</Link>があれば1つ見返す日。なければ、前回の要点を1つ思い出すだけで十分です。
-                  </span>
-                </div>
-              )}
+        <ol className="study-plan-week is-sessions">
+          {sessions.map((session) => (
+            <li key={session.day} className="study-plan-session">
+              <div className="study-plan-session-head">
+                <span className="study-plan-day">DAY {session.day}</span>
+                <strong>{session.videos.length}本・約{session.minutes}分</strong>
+              </div>
+              <ol className="study-plan-session-videos">
+                {session.videos.map((video) => (
+                  <li key={video.ytid}>
+                    <Link
+                      href={video.detailUrl}
+                      onClick={() => sendGaEvent("study_plan_video_click", { genre, day: session.day, ytid: video.ytid })}
+                    >
+                      <Image
+                        src={video.thumbnailUrl}
+                        alt={`${video.title}のサムネイル`}
+                        width={320}
+                        height={180}
+                        sizes="(max-width: 767px) 108px, 160px"
+                      />
+                      <span className="study-plan-video-copy">
+                        <small>{video.level}・{video.sub}</small>
+                        <strong>{video.title}</strong>
+                        <span>{video.score === null ? "スコア準備中" : `${video.score}/35`} ／ {video.minutes}分</span>
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ol>
             </li>
           ))}
         </ol>
+        {restDays.length > 0 && sessions.length > 0 ? (
+          <p className="study-plan-rest-days">DAY {restDays.join("・")} はお休みです。</p>
+        ) : null}
 
         <div className="study-plan-primary-action">
-          {selectedVideos[0] ? <Link href={selectedVideos[0].detailUrl}>DAY 1の動画を見る</Link> : null}
+          {firstVideo ? <Link href={firstVideo.detailUrl}>DAY 1の動画を見る</Link> : null}
           <span>保存内容はお使いのブラウザだけに残り、他の端末とは共有されません。</span>
         </div>
 
-        <StudyPlanCalendar genreKey={genre} genreLabel={selectedGenre?.label ?? genre} schedule={schedule} />
+        <StudyPlanCalendar genreKey={genre} genreLabel={selectedGenre?.label ?? genre} sessions={sessions} />
 
         <div className="study-plan-install">
           <p>毎日すぐ開けるように、ホーム画面にManapickを置けます。</p>
