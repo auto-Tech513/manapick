@@ -65,6 +65,33 @@ export function useLocalList(key: string) {
     });
   }
 
+  // 複数件をまとめて追加・削除する（学習プランの「できた」など）。順序は既存のあとに追加。
+  function addMany(ids: string[]) {
+    setItems((previous) => {
+      const next = [...previous, ...ids.filter((id, index) => !previous.includes(id) && ids.indexOf(id) === index)];
+      try {
+        window.localStorage.setItem(key, JSON.stringify(next));
+        notifyLocalListChange(key, next);
+      } catch {
+        // Keep the UI usable even when persistence is unavailable.
+      }
+      return next;
+    });
+  }
+
+  function removeMany(ids: string[]) {
+    setItems((previous) => {
+      const next = previous.filter((item) => !ids.includes(item));
+      try {
+        window.localStorage.setItem(key, JSON.stringify(next));
+        notifyLocalListChange(key, next);
+      } catch {
+        // Keep the UI usable even when persistence is unavailable.
+      }
+      return next;
+    });
+  }
+
   function clear() {
     setItems([]);
     try {
@@ -81,6 +108,8 @@ export function useLocalList(key: string) {
     toggle,
     push,
     clear,
+    addMany,
+    removeMany,
     has: (id: string) => items.includes(id)
   };
 }

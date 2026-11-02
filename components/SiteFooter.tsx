@@ -1,6 +1,7 @@
 import { publishedGenreKeys } from "@/lib/manapick";
 import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
 import { siteStats } from "@/lib/site-stats";
+import SiteSearchForm from "@/components/SiteSearchForm";
 
 type FooterLink = {
   label: string;
@@ -102,6 +103,9 @@ const networkLinks = [
 export default function SiteFooter() {
   return (
     <footer className="site-footer-main">
+      <div className="site-footer-search">
+        <SiteSearchForm id="site-footer-search" />
+      </div>
       <div className="site-footer-inner">
         <div className="site-footer-brand">
           <div className="site-footer-brand-mark" aria-hidden="true">✓</div>

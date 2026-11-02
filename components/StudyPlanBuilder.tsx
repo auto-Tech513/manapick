@@ -8,7 +8,9 @@ import {
   manapickCareerUrlForGenre,
   manapickLicenseUrlForGenre
 } from "@/lib/brand-links";
-import { sendGaEvent } from "@/lib/retention";
+import { WATCHED_KEY, sendGaEvent } from "@/lib/retention";
+import { useLocalList } from "@/lib/useLocalList";
+import { useStreakState } from "@/lib/useStreakState";
 import PwaInstallButton from "@/components/PwaInstallButton";
 import StudyPlanCalendar from "@/components/StudyPlanCalendar";
 
@@ -40,6 +42,9 @@ type SavedPlan = {
   genre: string;
   dailyMinutes: number;
   frequency: number;
+  // 「次の7日を作る」で除外した視聴済み動画と、何週目か
+  skip?: string[];
+  week?: number;
 };
 
 const STORAGE_KEY = "manapick-study-plan-v1";
@@ -101,6 +106,10 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
   const [dailyMinutes, setDailyMinutes] = useState(15);
   const [frequency, setFrequency] = useState(5);
   const [saved, setSaved] = useState(false);
+  const [skip, setSkip] = useState<string[]>([]);
+  const [week, setWeek] = useState(1);
+  const watched = useLocalList(WATCHED_KEY);
+  const streak = useStreakState();
 
   useEffect(() => {
     let restoreTimer: number | undefined;
@@ -112,6 +121,8 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
         if (typeof value.genre === "string" && genres.some((item) => item.key === value.genre)) setGenre(value.genre);
         if ([15, 30, 60].includes(Number(value.dailyMinutes))) setDailyMinutes(Number(value.dailyMinutes));
         if ([3, 5, 7].includes(Number(value.frequency))) setFrequency(Number(value.frequency));
+        if (Array.isArray(value.skip)) setSkip(value.skip.filter((item): item is string => typeof item === "string"));
+        if (Number.isInteger(value.week) && Number(value.week) > 0) setWeek(Number(value.week));
         setSaved(true);
       }, 0);
     } catch {
@@ -124,7 +135,10 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
   }, [genres]);
 
   const selectedGenre = genres.find((item) => item.key === genre) ?? genres[0];
-  const genreVideos = useMemo(() => videos.filter((video) => video.genre === genre), [genre, videos]);
+  const genreVideos = useMemo(
+    () => videos.filter((video) => video.genre === genre && !skip.includes(video.ytid)),
+    [genre, skip, videos]
+  );
   const sessions = useMemo(
     () => buildSessions(genreVideos, dailyMinutes, frequency),
     [dailyMinutes, frequency, genreVideos]
@@ -135,10 +149,56 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
     (day) => !sessions.some((session) => session.day === day)
   );
   const firstVideo = sessions[0]?.videos[0];
+  const isDone = (session: StudyPlanSession) => watched.ready && session.videos.every((video) => watched.has(video.ytid));
+  const doneCount = sessions.filter(isDone).length;
+  const allDone = sessions.length > 0 && doneCount === sessions.length;
+  // 今のプランに入っていない視聴済み動画（プラン外で見た動画）の本数
+  const planIds = new Set(sessions.flatMap((session) => session.videos.map((video) => video.ytid)));
+  const watchedInGenre = watched.ready
+    ? videos.filter(
+        (video) => video.genre === genre && watched.has(video.ytid) && !skip.includes(video.ytid) && !planIds.has(video.ytid)
+      ).length
+    : 0;
+
+  function persist(value: SavedPlan) {
+    try {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(value));
+    } catch {
+      // Saving is a convenience; the plan still works without storage.
+    }
+  }
+
+  function toggleSession(session: StudyPlanSession) {
+    const ids = session.videos.map((video) => video.ytid);
+    if (isDone(session)) {
+      watched.removeMany(ids);
+      return;
+    }
+    watched.addMany(ids);
+    streak.record(ids[0]);
+    sendGaEvent("study_plan_session_done", { genre, day: session.day, week, videos: ids.length });
+  }
+
+  // 視聴済みの動画を除いて、続きの7日を組み直す
+  function buildNextWeek() {
+    const nextSkip = Array.from(new Set([...skip, ...videos.filter((video) => video.genre === genre && watched.has(video.ytid)).map((video) => video.ytid)]));
+    const nextWeek = allDone ? week + 1 : week;
+    setSkip(nextSkip);
+    setWeek(nextWeek);
+    persist({ genre, dailyMinutes, frequency, skip: nextSkip, week: nextWeek });
+    setSaved(true);
+    sendGaEvent("study_plan_next_week", { genre, week: nextWeek, skipped: nextSkip.length });
+  }
+
+  function resetProgress() {
+    setSkip([]);
+    setWeek(1);
+    persist({ genre, dailyMinutes, frequency, skip: [], week: 1 });
+  }
 
   function savePlan() {
-    const value: SavedPlan = { genre, dailyMinutes, frequency };
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(value));
+    const value: SavedPlan = { genre, dailyMinutes, frequency, skip, week };
+    persist(value);
     setSaved(true);
     sendGaEvent("study_plan_save", { genre, daily_minutes: dailyMinutes, frequency });
   }
@@ -163,6 +223,8 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
                 aria-pressed={genre === item.key}
                 onClick={() => {
                   setGenre(item.key);
+                  setSkip([]);
+                  setWeek(1);
                   setSaved(false);
                 }}
               >
@@ -221,7 +283,7 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
       <section className="study-plan-result" aria-live="polite" aria-labelledby="study-plan-result-title">
         <div className="study-plan-result-head">
           <div>
-            <p className="section-eyebrow">あなたの7日プラン</p>
+            <p className="section-eyebrow">{week > 1 ? `第${week}週のプラン` : "あなたの7日プラン"}</p>
             <h2 id="study-plan-result-title">{selectedGenre?.label}を、週{sessions.length}回・1回約{dailyMinutes}分で進める</h2>
             <p>合計{videoCount}本・約{totalMinutes}分。ロードマップの順番に、1回{dailyMinutes}分前後に収まる動画を組み合わせています。</p>
           </div>
@@ -232,10 +294,20 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
 
         <ol className="study-plan-week is-sessions">
           {sessions.map((session) => (
-            <li key={session.day} className="study-plan-session">
+            <li key={session.day} className={isDone(session) ? "study-plan-session is-done" : "study-plan-session"}>
               <div className="study-plan-session-head">
                 <span className="study-plan-day">DAY {session.day}</span>
                 <strong>{session.videos.length}本・約{session.minutes}分</strong>
+                {watched.ready ? (
+                  <button
+                    type="button"
+                    className="study-plan-done-button"
+                    aria-pressed={isDone(session)}
+                    onClick={() => toggleSession(session)}
+                  >
+                    {isDone(session) ? "✓ できた" : "できたら押す"}
+                  </button>
+                ) : null}
               </div>
               <ol className="study-plan-session-videos">
                 {session.videos.map((video) => (
@@ -265,6 +337,25 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
         </ol>
         {restDays.length > 0 && sessions.length > 0 ? (
           <p className="study-plan-rest-days">DAY {restDays.join("・")} はお休みです。</p>
+        ) : null}
+        {sessions.length === 0 ? (
+          <div className="study-plan-progress is-complete">
+            <strong>このジャンルの掲載動画は、すべてプランで見終えました。</strong>
+            <button type="button" onClick={resetProgress}>最初から組み直す</button>
+          </div>
+        ) : watched.ready ? (
+          <div className={allDone ? "study-plan-progress is-complete" : "study-plan-progress"} role="status">
+            <strong>{allDone ? `第${week}週のぶんが完了しました。` : `今週 ${doneCount}/${sessions.length}回 できた`}</strong>
+            {allDone ? (
+              <button type="button" onClick={buildNextWeek}>次の7日を作る</button>
+            ) : watchedInGenre > 0 ? (
+              <button type="button" className="is-secondary" onClick={buildNextWeek}>
+                見た動画（{watchedInGenre}本）を除いて組み直す
+              </button>
+            ) : (
+              <span>見終えたら「できたら押す」を押すと、視聴済みとして記録されます。</span>
+            )}
+          </div>
         ) : null}
 
         <div className="study-plan-primary-action">

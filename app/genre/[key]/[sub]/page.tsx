@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import GuidePrCard from "@/components/GuidePrCard";
 import AdSlot from "@/components/AdSlot";
 import NetworkContextBand from "@/components/NetworkContextBand";
+import DurationFilter from "@/components/DurationFilter";
 import FoldSection from "@/components/FoldSection";
 import prLinksData from "@/content/pr-links.json";
 import { guidePath, guides } from "@/lib/guides";
@@ -216,10 +217,12 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
           </div>
         </section>
 
+        <div id="sub-video-list" className="sub-video-list-scope">
+        <DurationFilter scopeId="sub-video-list" pagePath={`/genre/${key}/${sub}/`} />
         <FoldSection className="sub-topic-section" titleId="sub-video-list-title" eyebrow="全動画一覧" title={`${sub}の無料YouTube動画一覧（${list.length}本）`} hint="スコア順・タイトルと採点コメント">
           <div className="sub-topic-list">
             {list.map((video) => (
-              <Link key={video.ytid} href={videoPath(video.ytid)} className="sub-topic-list-card">
+              <Link key={video.ytid} href={videoPath(video.ytid)} className="sub-topic-list-card" data-minutes={video.minutes} data-ytid={video.ytid}>
                 <span className="sub-topic-list-title">{video.title}</span>
                 <span className="sub-topic-list-meta">{scoreText(video)}・{video.minutes}分</span>
                 <span className="sub-topic-list-review">{video.review[0] ?? "学習の入口として確認しやすい動画です。"}</span>
@@ -227,6 +230,7 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
             ))}
           </div>
         </FoldSection>
+        </div>
 
         <AdSlot slot="1438236565" />
         <section className="sub-topic-section" aria-labelledby="sub-faq-title">

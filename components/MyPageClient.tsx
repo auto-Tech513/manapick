@@ -233,6 +233,12 @@ export default function MyPageClient() {
             help="1日見られなくても連続が途切れない“おまもり”です。もらい方＝最初に1枚、さらに7日連続するごとに1枚（最大3枚）。使い方＝操作は不要。1日あいても翌日また動画を見れば自動で1枚使われ、連続が続きます（2日以上あくとリセット）。"
           />
           <MyStat label="視聴済み" value={watched.items.length + "本"} note="手動で記録した本数" />
+          <MyStat
+            label="合計学習時間"
+            value={formatStudyTime(watchedVideos.reduce((total, video) => total + (video.minutes || 0), 0))}
+            note="視聴済みにした動画の長さの合計"
+            help="『視聴済み』にした動画の再生時間（掲載時の分数）を足した目安です。倍速や途中まで見た分は反映されません。"
+          />
           <MyStat label="あとで見る" value={watchlist.items.length + "本"} note="保存中の動画" />
         </section>
 
@@ -475,4 +481,11 @@ function MyLearningNote({ note, onRemove }: { note: LearningNote; onRemove: (yti
       <button type="button" onClick={() => onRemove(note.ytid)} aria-label={`${video.title}の学びメモを削除`}>削除</button>
     </article>
   );
+}
+
+function formatStudyTime(minutes: number) {
+  if (minutes < 60) return `約${minutes}分`;
+  const hours = Math.floor(minutes / 60);
+  const rest = minutes % 60;
+  return rest === 0 ? `約${hours}時間` : `約${hours}時間${rest}分`;
 }

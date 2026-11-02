@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from "react";
 import PwaInstallButton from "@/components/PwaInstallButton";
+import SiteSearchForm from "@/components/SiteSearchForm";
 import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
 
 type MenuGenre = { key: string; label: string };
@@ -121,6 +122,7 @@ export default function SiteMobileNav({ genres }: { genres: MenuGenre[] }) {
                 ×
               </button>
             </div>
+            <SiteSearchForm id="site-menu-search" className="is-menu" />
             <nav className="site-menu-links" aria-label="メニューリンク">
               <p className="site-menu-section-label">まず選ぶ</p>
               <div className="site-menu-primary-grid">

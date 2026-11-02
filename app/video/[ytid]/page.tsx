@@ -198,6 +198,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
             <span>{genreLabel(video.genre)}</span>
             <span>{video.sub}</span>
             <span>{video.minutes}分</span>
+            {video.minutes >= 6 ? <span title="YouTubeの再生速度を1.5倍にした場合の目安">1.5倍速なら約{Math.ceil(video.minutes / 1.5)}分</span> : null}
             {freshness ? <span className={`freshness-badge is-${freshness.tone}`} title={freshness.note}>{freshness.label}</span> : null}
           </div>
           {channel ? <p className="video-channel">チャンネル: {channel}</p> : null}

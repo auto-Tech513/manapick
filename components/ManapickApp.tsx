@@ -758,6 +758,20 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
         const sub = params.get("sub");
         if (sub) setSelectedSub(availableSubForGenre(genre, sub));
       }
+      // 他ページの検索フォーム（?q=）と時間の指定（?time=）を受け取る
+      const time = params.get("time");
+      if (time && timeBuckets.some((bucket) => bucket.value === time)) {
+        setSelectedTime(time);
+        setMobileFiltersOpen(true);
+      }
+      const query = params.get("q")?.trim();
+      if (query) {
+        setSearchDraft(query);
+        setKeyword(query);
+        window.setTimeout(() => {
+          document.getElementById("search")?.scrollIntoView({ block: "start", behavior: "auto" });
+        }, 400);
+      }
     }, 0);
     return () => window.clearTimeout(timeout);
   }, []);

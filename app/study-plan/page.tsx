@@ -43,7 +43,7 @@ const planVideos: StudyPlanVideo[] = publishedGenreKeys.flatMap((genre) => {
       const indexB = roadmapIndex.get(b.ytid) ?? 1000;
       return indexA - indexB || (b.score ?? -1) - (a.score ?? -1) || a.minutes - b.minutes;
     })
-    .slice(0, 24)
+    .slice(0, 48)
     .map((video, sequence) => ({
       ytid: video.ytid,
       genre: video.genre,

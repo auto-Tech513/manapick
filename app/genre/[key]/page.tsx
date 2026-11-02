@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { guidePath, guides } from "@/lib/guides";
 import AdSlot from "@/components/AdSlot";
 import NetworkContextBand from "@/components/NetworkContextBand";
+import DurationFilter from "@/components/DurationFilter";
 import FoldSection from "@/components/FoldSection";
 import {
   absoluteUrl,
@@ -317,7 +318,7 @@ export default async function GenrePage({ params }: GenrePageProps) {
     const freshness = videoFreshness(video);
 
     return (
-      <li key={video.ytid}>
+      <li key={video.ytid} data-minutes={video.minutes} data-ytid={video.ytid}>
         <Link href={videoPath(video.ytid)} className="genre-hub-card">
           <span className="genre-hub-thumb">
             <Image
@@ -439,10 +440,13 @@ export default async function GenrePage({ params }: GenrePageProps) {
               : `スコアが高い${topVideos.length}本を先に表示しています。残りの${rest.length}本は下の一覧を開くと表示されます。`
             : `掲載している${list.length}本をスコアの高い順に表示しています。`}
         </p>
-        <h3 className="genre-hub-videos-subtitle">スコア上位{topVideos.length}本</h3>
-        <ul className="genre-hub-grid" role="list">
-          {topVideos.map((video) => renderVideoCard(video))}
-        </ul>
+        <DurationFilter scopeId="videos" pagePath={`/genre/${key}/`} />
+        <div data-filter-group>
+          <h3 className="genre-hub-videos-subtitle">スコア上位{topVideos.length}本</h3>
+          <ul className="genre-hub-grid" role="list">
+            {topVideos.map((video) => renderVideoCard(video))}
+          </ul>
+        </div>
         {rest.length > 0 && videoGroups.length > 1 ? (
           <>
             <h3 className="genre-hub-videos-subtitle">トピック別にすべて見る</h3>
