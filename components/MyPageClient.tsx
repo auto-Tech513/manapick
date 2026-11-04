@@ -1,14 +1,16 @@
 "use client";
 
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import BrandLogo, { BrandMark } from "@/components/BrandLogo";
 import MetricHelp from "@/components/MetricHelp";
 import PwaInstallButton from "@/components/PwaInstallButton";
 import genresData from "@/content/genres.json";
+import roadmapsData from "@/content/roadmaps.json";
 import videosData from "@/content/videos.json";
 import { guidePath, guideStepVideos, guides } from "@/lib/guides";
+import { readSavedPlan, summarizeSavedPlan, type SavedPlan } from "@/lib/study-plan";
 import { isReviewDue, type LearningNote } from "@/lib/learning-notes";
 import { BADGES_KEY, RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY, sendGaEvent } from "@/lib/retention";
 import { genreDisplayName, genreLabel, scoreText, videoPath, youtubeThumbnail, type Genre, type Video } from "@/lib/manapick";
@@ -51,9 +53,34 @@ export default function MyPageClient() {
   }, []);
 
   const watchedSet = useMemo(() => new Set(watched.items), [watched.items]);
+  // 7日プランの進捗は /study-plan/ の外でも見えるようにする（UX改善 P0-2）。
+  // 保存済みプランを読み、StudyPlanBuilder と同じ計算で進捗を再計算する。
+  const [savedPlan, setSavedPlan] = useState<SavedPlan | null>(null);
+  useEffect(() => {
+    const timer = window.setTimeout(() => setSavedPlan(readSavedPlan()), 0);
+    return () => window.clearTimeout(timer);
+  }, []);
+  const planSummary = useMemo(() => {
+    if (!savedPlan || !watched.ready) return null;
+    return summarizeSavedPlan(
+      savedPlan,
+      videos,
+      roadmapsData as { genre: string; steps: { videos: string[] }[] }[],
+      publishedGenres.map((genre) => genre.key),
+      watchedSet
+    );
+  }, [savedPlan, watched.ready, watchedSet]);
   const watchedVideos = useMemo(() => watched.items.map((ytid) => videoById.get(ytid)).filter((video): video is Video => Boolean(video)), [watched.items]);
   const watchlistVideos = useMemo(() => watchlist.items.map((ytid) => videoById.get(ytid)).filter((video): video is Video => Boolean(video)), [watchlist.items]);
-  const recentVideo = useMemo(() => recent.items.map((ytid) => videoById.get(ytid)).find(Boolean) ?? null, [recent.items]);
+  // 「続きから」は未視聴の直近動画だけを指す。視聴済みにした動画自身が
+  // 続きとして残る看板と中身の不一致をなくす（UX改善 P1-3）。
+  const recentVideo = useMemo(
+    () =>
+      recent.items
+        .map((ytid) => videoById.get(ytid))
+        .find((video): video is Video => video !== undefined && !watchedSet.has(video.ytid)) ?? null,
+    [recent.items, watchedSet]
+  );
   const dueNotes = useMemo(
     () => learningNotes.notes.filter((note) => isReviewDue(note)).sort((a, b) => a.reviewAt.localeCompare(b.reviewAt)),
     [learningNotes.notes]
@@ -82,13 +109,15 @@ export default function MyPageClient() {
       const ids = guide.steps.flatMap((step) => guideStepVideos(step).map(({ video }) => video.ytid));
       const uniqueIds = Array.from(new Set(ids));
       const count = uniqueIds.filter((ytid) => watchedSet.has(ytid)).length;
+      const nextId = uniqueIds.find((ytid) => !watchedSet.has(ytid));
       return {
         slug: guide.slug,
         title: guide.title.replace("【YouTube無料・2026年版】", ""),
         href: guidePath(guide.slug),
         count,
         total: uniqueIds.length,
-        complete: uniqueIds.length > 0 && count === uniqueIds.length
+        complete: uniqueIds.length > 0 && count === uniqueIds.length,
+        nextVideo: nextId ? videoById.get(nextId) ?? null : null
       };
     });
   }, [watchedSet]);
@@ -242,14 +271,56 @@ export default function MyPageClient() {
           <MyStat label="あとで見る" value={watchlist.items.length + "本"} note="保存中の動画" />
         </section>
 
+        {planSummary ? (
+          <section className="my-section" aria-labelledby="my-plan-title">
+            <div className="my-section-heading">
+              <div>
+                <p className="section-eyebrow">7日学習プラン</p>
+                <h2 id="my-plan-title">あなたのプラン</h2>
+              </div>
+            </div>
+            <div className="my-plan-card">
+              <strong>
+                {genreDisplayName(planSummary.genre)}のプラン 第{planSummary.week}週
+              </strong>
+              {planSummary.sessions.length === 0 ? (
+                <p>このジャンルの掲載動画は、プランではすべて見終えました。</p>
+              ) : planSummary.allDone ? (
+                <p>
+                  今週分は {planSummary.doneCount}/{planSummary.sessions.length}回 すべて完了しています。
+                </p>
+              ) : (
+                <p>
+                  今週 {planSummary.doneCount}/{planSummary.sessions.length}回 完了
+                </p>
+              )}
+              {planSummary.nextVideo && planSummary.nextSession ? (
+                <p>
+                  次はDAY{planSummary.nextSession.day}：
+                  <Link href={videoPath(planSummary.nextVideo.ytid)}>{planSummary.nextVideo.title}</Link>
+                </p>
+              ) : null}
+              <Link className="my-plan-link" href="/study-plan/">
+                プランを開く
+              </Link>
+            </div>
+          </section>
+        ) : null}
+
         <section className="my-section" aria-labelledby="my-continue-title">
           <div className="my-section-heading">
             <div>
               <p className="section-eyebrow">続きから</p>
-              <h2 id="my-continue-title">最後に開いた動画</h2>
+              <h2 id="my-continue-title">最後に開いた未視聴の動画</h2>
             </div>
           </div>
-          {recentVideo ? <MyVideoRow video={recentVideo} /> : <p className="my-empty">動画ページを開くと、ここから1タップで戻れます。</p>}
+          {recentVideo ? (
+            <MyVideoRow video={recentVideo} />
+          ) : recent.items.length > 0 ? (
+            <p className="my-empty">最近開いた動画はすべて視聴済みです。おつかれさまでした。次の動画を探しましょう。</p>
+          ) : (
+            <p className="my-empty">動画ページを開くと、ここから1タップで戻れます。</p>
+          )}
         </section>
       </details>
 
@@ -330,11 +401,24 @@ export default function MyPageClient() {
           </div>
           <div className="my-guide-grid">
             {guideProgress.map((guide) => (
-              <Link key={guide.slug} className={guide.complete ? "my-guide-card is-complete" : "my-guide-card"} href={guide.href}>
-                <span>{guide.complete ? "修了" : "進行中"}</span>
-                <strong>{guide.title}</strong>
-                <small>{guide.count}/{guide.total}本</small>
-              </Link>
+              <div key={guide.slug} className={guide.complete ? "my-guide-card is-complete" : "my-guide-card"}>
+                <Link className="my-guide-card-main" href={guide.href}>
+                  <span>{guide.complete ? "修了" : "進行中"}</span>
+                  <strong>{guide.title}</strong>
+                  <small>{guide.count}/{guide.total}本</small>
+                </Link>
+                {guide.nextVideo ? (
+                  <a
+                    className="my-guide-card-next"
+                    href={videoPath(guide.nextVideo.ytid)}
+                    onClick={() =>
+                      sendGaEvent("guide_next_click", { guide_slug: guide.slug, video_id: guide.nextVideo?.ytid ?? "" })
+                    }
+                  >
+                    次はこれ：{guide.nextVideo.title}
+                  </a>
+                ) : null}
+              </div>
             ))}
           </div>
         </section>

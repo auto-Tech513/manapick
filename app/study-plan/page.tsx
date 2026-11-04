@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BrandLogo from "@/components/BrandLogo";
-import StudyPlanBuilder, { type StudyPlanGenre, type StudyPlanVideo } from "@/components/StudyPlanBuilder";
+import StudyPlanBuilder, { type StudyPlanGenre } from "@/components/StudyPlanBuilder";
+import { buildPlanVideos } from "@/lib/study-plan";
 import roadmapsData from "@/content/roadmaps.json";
 import {
   absoluteUrl,
@@ -30,33 +31,8 @@ const genreOptions: StudyPlanGenre[] = publishedGenreKeys.map((key) => ({
   count: publishedVideos.filter((video) => video.genre === key).length
 }));
 
-const planVideos: StudyPlanVideo[] = publishedGenreKeys.flatMap((genre) => {
-  const roadmapIds = roadmaps
-    .find((item) => item.genre === genre)
-    ?.steps.flatMap((step) => step.videos) ?? [];
-  const roadmapIndex = new Map(roadmapIds.map((ytid, index) => [ytid, index]));
-
-  return publishedVideos
-    .filter((video) => video.genre === genre)
-    .sort((a, b) => {
-      const indexA = roadmapIndex.get(a.ytid) ?? 1000;
-      const indexB = roadmapIndex.get(b.ytid) ?? 1000;
-      return indexA - indexB || (b.score ?? -1) - (a.score ?? -1) || a.minutes - b.minutes;
-    })
-    .slice(0, 48)
-    .map((video, sequence) => ({
-      ytid: video.ytid,
-      genre: video.genre,
-      title: video.title,
-      sub: video.sub,
-      level: video.level,
-      minutes: video.minutes,
-      score: video.score,
-      detailUrl: videoPath(video.ytid),
-      thumbnailUrl: youtubeThumbnail(video.ytid),
-      sequence
-    }));
-});
+// プラン候補の動画列は lib/study-plan.ts の buildPlanVideos で作る（マイページの進捗再計算と共有）。
+const planVideos = buildPlanVideos(videos, roadmaps, publishedGenreKeys);
 
 const faq = [
   {

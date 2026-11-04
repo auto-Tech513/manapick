@@ -3,10 +3,17 @@
 import { useEffect } from "react";
 import LikeButton from "@/components/LikeButton";
 import { RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY, sendGaEvent } from "@/lib/retention";
+import { videoPath } from "@/lib/manapick";
 import { useLocalList } from "@/lib/useLocalList";
 import { useStreakState } from "@/lib/useStreakState";
 
-export default function VideoActions({ ytid }: { ytid: string }) {
+type VideoActionsProps = {
+  ytid: string;
+  // 詳細ページ側で決めた「次に見る1本」。視聴済みにした直後にだけ出す（UX改善 P1-1）。
+  nextVideo?: { ytid: string; title: string } | null;
+};
+
+export default function VideoActions({ ytid, nextVideo }: VideoActionsProps) {
   const watchlist = useLocalList(WATCHLIST_KEY);
   const watched = useLocalList(WATCHED_KEY);
   const streak = useStreakState();
@@ -28,6 +35,7 @@ export default function VideoActions({ ytid }: { ytid: string }) {
   const isWatched = watched.has(ytid);
 
   return (
+    <>
     <div className="video-action-row" aria-label="動画の操作">
       <button
         type="button"
@@ -56,5 +64,19 @@ export default function VideoActions({ ytid }: { ytid: string }) {
       </button>
       <LikeButton ytid={ytid} className="is-detail-action" />
     </div>
+    {isWatched && nextVideo ? (
+      <p className="video-actions-next">
+        <span aria-hidden="true">✓</span> 記録しました。次はこの1本 →
+        <a
+          href={videoPath(nextVideo.ytid)}
+          onClick={() =>
+            sendGaEvent("next_video_click", { placement: "after_watched", from_video_id: ytid, to_video_id: nextVideo.ytid })
+          }
+        >
+          {nextVideo.title}
+        </a>
+      </p>
+    ) : null}
+    </>
   );
 }

@@ -5,6 +5,12 @@ import { reviewDateAfter } from "@/lib/learning-notes";
 import { sendGaEvent } from "@/lib/retention";
 import { useLearningNotes } from "@/lib/useLearningNotes";
 
+function formatReviewDate(iso: string) {
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return "";
+  return `${date.getMonth() + 1}月${date.getDate()}日`;
+}
+
 export default function LearningNote({ ytid }: { ytid: string }) {
   const { notes, ready, upsert, remove } = useLearningNotes();
   const stored = notes.find((note) => note.ytid === ytid);
@@ -109,6 +115,12 @@ export default function LearningNote({ ytid }: { ytid: string }) {
           ) : null}
         </div>
         <p>メモはお使いのブラウザだけに保存され、外部には送信されません。</p>
+        {saved ? (
+          <p className="learning-note-mypage-link">
+            見返す日（{formatReviewDate(stored?.reviewAt ?? reviewDateAfter(reviewDays))}）に、マイページの「学びメモ」で見返せます →
+            <a href="/my/#my-notes">マイページを開く</a>
+          </p>
+        ) : null}
       </form>
     </details>
   );

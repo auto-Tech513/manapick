@@ -9,23 +9,21 @@ import {
   manapickLicenseUrlForGenre
 } from "@/lib/brand-links";
 import { WATCHED_KEY, sendGaEvent } from "@/lib/retention";
+import {
+  STUDY_PLAN_KEY,
+  buildSessions,
+  type SavedPlan,
+  type StudyPlanSession,
+  type StudyPlanVideo
+} from "@/lib/study-plan";
 import { useLocalList } from "@/lib/useLocalList";
 import { useStreakState } from "@/lib/useStreakState";
 import PwaInstallButton from "@/components/PwaInstallButton";
 import StudyPlanCalendar from "@/components/StudyPlanCalendar";
 
-export type StudyPlanVideo = {
-  ytid: string;
-  genre: string;
-  title: string;
-  sub: string;
-  level: string;
-  minutes: number;
-  score: number | null;
-  detailUrl: string;
-  thumbnailUrl: string;
-  sequence: number;
-};
+// プランの型と構築ロジックは lib/study-plan.ts に切り出し済み（マイページの
+// 進捗表示と共有するため）。ここでは従来の import 元として型だけ再公開する。
+export type { StudyPlanSession, StudyPlanVideo };
 
 export type StudyPlanGenre = {
   key: string;
@@ -37,69 +35,6 @@ type StudyPlanBuilderProps = {
   genres: StudyPlanGenre[];
   videos: StudyPlanVideo[];
 };
-
-type SavedPlan = {
-  genre: string;
-  dailyMinutes: number;
-  frequency: number;
-  // 「次の7日を作る」で除外した視聴済み動画と、何週目か
-  skip?: string[];
-  week?: number;
-};
-
-const STORAGE_KEY = "manapick-study-plan-v1";
-const sessionDays: Record<number, number[]> = {
-  3: [1, 3, 6],
-  5: [1, 2, 4, 5, 7],
-  7: [1, 2, 3, 4, 5, 6, 7]
-};
-
-export type StudyPlanSession = {
-  day: number;
-  videos: StudyPlanVideo[];
-  minutes: number;
-};
-
-// 1回の学習時間（dailyMinutes）に収まるよう、ロードマップ順の動画を学習日ごとに詰める。
-// 上限は目安時間の115%。目安の85%に達したらその日は締める。どの動画も収まらない日は、残りで最も短い1本を入れる。
-function buildSessions(videos: StudyPlanVideo[], dailyMinutes: number, frequency: number): StudyPlanSession[] {
-  const learningDays = sessionDays[frequency] ?? sessionDays[5];
-  const cap = Math.round(dailyMinutes * 1.15);
-  const queue = [...videos].sort(
-    (a, b) => a.sequence - b.sequence || (b.score ?? -1) - (a.score ?? -1) || a.minutes - b.minutes
-  );
-  const sessions: StudyPlanSession[] = [];
-
-  for (const day of learningDays) {
-    const picked: StudyPlanVideo[] = [];
-    let total = 0;
-    for (let index = 0; index < queue.length; ) {
-      const video = queue[index];
-      if (total + video.minutes <= cap) {
-        picked.push(video);
-        total += video.minutes;
-        queue.splice(index, 1);
-        if (total >= dailyMinutes * 0.85) break;
-      } else {
-        index += 1;
-      }
-    }
-    if (picked.length === 0 && queue.length > 0) {
-      let shortest = 0;
-      queue.forEach((video, index) => {
-        if (video.minutes < queue[shortest].minutes) shortest = index;
-      });
-      const [video] = queue.splice(shortest, 1);
-      picked.push(video);
-      total = video.minutes;
-    }
-    if (picked.length === 0) break;
-    picked.sort((a, b) => a.sequence - b.sequence);
-    sessions.push({ day, videos: picked, minutes: total });
-  }
-
-  return sessions;
-}
 
 export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderProps) {
   const [genre, setGenre] = useState(genres[0]?.key ?? "ai");
@@ -114,7 +49,7 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
   useEffect(() => {
     let restoreTimer: number | undefined;
     try {
-      const raw = window.localStorage.getItem(STORAGE_KEY);
+      const raw = window.localStorage.getItem(STUDY_PLAN_KEY);
       if (!raw) return;
       const value = JSON.parse(raw) as Partial<SavedPlan>;
       restoreTimer = window.setTimeout(() => {
@@ -148,8 +83,10 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
   const restDays = Array.from({ length: 7 }, (_, index) => index + 1).filter(
     (day) => !sessions.some((session) => session.day === day)
   );
-  const firstVideo = sessions[0]?.videos[0];
   const isDone = (session: StudyPlanSession) => watched.ready && session.videos.every((video) => watched.has(video.ytid));
+  // 主CTAは最初の未完了セッションに向ける（DAY1完了後もDAY1を指し続けない）。
+  const nextSession = sessions.find((session) => !isDone(session));
+  const nextVideo = nextSession?.videos[0];
   const doneCount = sessions.filter(isDone).length;
   const allDone = sessions.length > 0 && doneCount === sessions.length;
   // 今のプランに入っていない視聴済み動画（プラン外で見た動画）の本数
@@ -162,7 +99,7 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
 
   function persist(value: SavedPlan) {
     try {
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(value));
+      window.localStorage.setItem(STUDY_PLAN_KEY, JSON.stringify(value));
     } catch {
       // Saving is a convenience; the plan still works without storage.
     }
@@ -359,7 +296,14 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
         ) : null}
 
         <div className="study-plan-primary-action">
-          {firstVideo ? <Link href={firstVideo.detailUrl}>DAY 1の動画を見る</Link> : null}
+          {nextVideo && nextSession ? (
+            <Link
+              href={nextVideo.detailUrl}
+              onClick={() => sendGaEvent("study_plan_video_click", { genre, day: nextSession.day, ytid: nextVideo.ytid })}
+            >
+              DAY {nextSession.day}の動画を見る
+            </Link>
+          ) : null}
           <span>保存内容はお使いのブラウザだけに残り、他の端末とは共有されません。</span>
         </div>
 

@@ -14445,3 +14445,83 @@ details.fold-group[hidden] {
     width: 100%;
   }
 }
+
+/* UX改善 P1-1: 視聴済みにした直後に出す「次の1本」への一手 */
+.video-actions-next {
+  width: min(100%, 620px);
+  margin: 10px 0 0;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 42%, var(--color-line));
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--color-accent) 9%, white);
+  padding: 10px 13px;
+  font-size: 0.86rem;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.video-actions-next a {
+  color: var(--color-primary-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* UX改善 P1-2: 学びメモ保存後、マイページの復習への受け皿 */
+.learning-note-mypage-link {
+  border: 1px solid color-mix(in srgb, var(--color-accent) 42%, var(--color-line));
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--color-accent) 9%, white);
+  padding: 9px 12px;
+  font-weight: 800;
+}
+
+.learning-note-mypage-link a {
+  color: var(--color-primary-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* UX改善 P0-2: マイページの7日プラン進捗カード */
+.my-plan-card {
+  display: grid;
+  gap: 8px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: #fff;
+  padding: 14px;
+  box-shadow: var(--shadow-line);
+}
+
+.my-plan-card p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.my-plan-card a {
+  color: var(--color-primary-ink);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.my-plan-link {
+  justify-self: start;
+}
+
+/* UX改善 P0-3: ガイド進捗カード内の「次の未視聴の1本」 */
+.my-guide-card-main {
+  display: grid;
+  gap: 6px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.my-guide-card-next {
+  border-top: 1px dashed var(--color-line);
+  padding-top: 8px;
+  color: var(--color-primary-ink);
+  font-size: 0.8rem;
+  font-weight: 800;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

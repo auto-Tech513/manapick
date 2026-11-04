@@ -114,7 +114,9 @@ export default async function VideoPage({ params }: VideoPageProps) {
   const learningPoints = videoLearningPoints(video);
   const axisCommentary = videoAxisCommentary(video);
   const viewingTips = videoViewingTips(video);
-  const editorialSummary = videoEditorialSummary(video, related[0]);
+  // 「次に見る1本」はページ内で nextPick（ロードマップ上の次を最優先）に統一する。
+  // quick-next ナビ・独自解説・下部の次カードが別々の動画を指す矛盾をなくす（UX改善 P0-1）。
+  const editorialSummary = videoEditorialSummary(video, nextPick?.video ?? related[0]);
   const freshness = videoFreshness(video);
   const sisterLinks = (sisterItemLinks as Record<string, SisterItemLink[]>)[video.ytid] ?? [];
   const linkedSisterHrefs = sisterLinks.map((link) => link.url);
@@ -240,7 +242,10 @@ export default async function VideoPage({ params }: VideoPageProps) {
             YouTubeで視聴
           </TrackedGaLink>
           <p className="video-embed-note">※埋め込み再生できない動画はYouTubeでご覧ください。</p>
-          <VideoActions ytid={video.ytid} />
+          <VideoActions
+            ytid={video.ytid}
+            nextVideo={nextPick ? { ytid: nextPick.video.ytid, title: nextPick.video.title } : null}
+          />
           <LearningNote ytid={video.ytid} />
         </div>
       </article>
@@ -288,10 +293,15 @@ export default async function VideoPage({ params }: VideoPageProps) {
       ) : null}
 
       <nav className="video-quick-next" aria-label="この動画のあとに">
-        {related[0] ? (
-          <Link className="video-next-link" href={videoPath(related[0].ytid)}>
-            次に見る1本：{related[0].title}
-          </Link>
+        {nextPick ? (
+          <TrackedGaLink
+            className="video-next-link"
+            href={videoPath(nextPick.video.ytid)}
+            eventName="next_video_click"
+            eventParams={{ placement: "quick_next", from_video_id: video.ytid, to_video_id: nextPick.video.ytid }}
+          >
+            次に見る1本：{nextPick.video.title}
+          </TrackedGaLink>
         ) : null}
         {guide ? (
           <Link className="video-guide-link" href={guidePath(guide.slug)}>
@@ -379,6 +389,40 @@ export default async function VideoPage({ params }: VideoPageProps) {
       <NetworkContextBand genreKey={video.genre} sub={video.sub} skipHrefs={linkedSisterHrefs} />
 
       <AdSlot slot="1438236565" />
+      {nextPick ? (
+        <section className="video-next-section" aria-labelledby="video-next-title">
+          <div className="section-heading-row">
+            <div>
+              <p className="section-eyebrow">次の一歩</p>
+              <h2 id="video-next-title" className="section-title">次に見る1本</h2>
+            </div>
+            <Link href={`/genre/${video.genre}/`}>{genreDisplayName(video.genre)}の一覧へ</Link>
+          </div>
+          <TrackedGaLink
+            className="video-next-card"
+            href={videoPath(nextPick.video.ytid)}
+            eventName="next_video_click"
+            eventParams={{ placement: "next_section", from_video_id: video.ytid, to_video_id: nextPick.video.ytid }}
+          >
+            <span className="video-next-thumb">
+              <Image
+                src={youtubeThumbnail(nextPick.video.ytid)}
+                alt={nextPick.video.title + "のサムネイル"}
+                width={480}
+                height={270}
+                sizes="(min-width: 760px) 220px, 92vw"
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </span>
+            <span className="video-next-card-body">
+              <span>{nextPick.video.sub} / {scoreText(nextPick.video)} / {nextPick.video.minutes}分</span>
+              <strong>{nextPick.video.title}</strong>
+              <span>{nextPick.reason}</span>
+            </span>
+          </TrackedGaLink>
+        </section>
+      ) : null}
       <section className="video-related-section" aria-labelledby="related-title">
         <div className="section-heading-row">
           <div>
@@ -410,35 +454,6 @@ export default async function VideoPage({ params }: VideoPageProps) {
         </div>
       </section>
 
-      {nextPick ? (
-        <section className="video-next-section" aria-labelledby="video-next-title">
-          <div className="section-heading-row">
-            <div>
-              <p className="section-eyebrow">次の一歩</p>
-              <h2 id="video-next-title" className="section-title">次に見る1本</h2>
-            </div>
-            <Link href={`/genre/${video.genre}/`}>{genreDisplayName(video.genre)}の一覧へ</Link>
-          </div>
-          <Link className="video-next-card" href={videoPath(nextPick.video.ytid)}>
-            <span className="video-next-thumb">
-              <Image
-                src={youtubeThumbnail(nextPick.video.ytid)}
-                alt={nextPick.video.title + "のサムネイル"}
-                width={480}
-                height={270}
-                sizes="(min-width: 760px) 220px, 92vw"
-                loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            </span>
-            <span className="video-next-card-body">
-              <span>{nextPick.video.sub} / {scoreText(nextPick.video)} / {nextPick.video.minutes}分</span>
-              <strong>{nextPick.video.title}</strong>
-              <span>{nextPick.reason}</span>
-            </span>
-          </Link>
-        </section>
-      ) : null}
     </main>
   );
 }

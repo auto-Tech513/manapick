@@ -707,9 +707,18 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
       .slice(0, 8);
   }, [recent.items]);
 
+  // 「続きから」と今日の1本は視聴済みを除外する。見終わった動画が
+  // 続きとして残る看板と中身の不一致をなくす（UX改善 P1-3）。
+  const watchedIdSet = useMemo(() => new Set(watched.items), [watched.items]);
+  const continueVideo = useMemo(
+    () => recentVideos.find((video) => !watchedIdSet.has(video.ytid)) ?? null,
+    [recentVideos, watchedIdSet]
+  );
   const todayVideo = useMemo(() => {
-    return todayKey ? selectTodayVideo(publishedVideos, todayKey) : null;
-  }, [publishedVideos, todayKey]);
+    if (!todayKey) return null;
+    const unwatched = publishedVideos.filter((video) => !watchedIdSet.has(video.ytid));
+    return selectTodayVideo(unwatched.length > 0 ? unwatched : publishedVideos, todayKey);
+  }, [publishedVideos, todayKey, watchedIdSet]);
 
   const searchSuggestions = useMemo(() => (searchActive ? filteredVideos.slice(0, 5) : []), [filteredVideos, searchActive]);
   const liveSearchTotal = searchActive ? filteredVideos.length : videos.length;
@@ -1434,7 +1443,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
 
       <RetentionBand
         todayVideo={todayVideo}
-        continueVideo={recentVideos[0] ?? null}
+        continueVideo={continueVideo}
         streak={streak.state}
         ready={streak.ready}
         watchedCount={watched.ready ? watched.items.length : 0}
@@ -1544,7 +1553,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
                 <p className="section-eyebrow">今週のイチオシ</p>
                 <h2 id="weekly-pick-title" className="section-title">最高スコアの一本から始める</h2>
               </div>
-              <WeeklyPickCard video={weeklyPick} likeCounts={popularLikeCounts} />
+              <WeeklyPickCard video={weeklyPick} likeCounts={popularLikeCounts} imageLoading="lazy" />
             </div>
             <AllGenreHighlights onGenreSelect={jumpToGenre} />
           </div>
@@ -3321,7 +3330,17 @@ function ScoreBadge({ video, compact = false }: { video: Video; compact?: boolea
   );
 }
 
-function WeeklyPickCard({ video, likeCounts }: { video: Video; likeCounts: LikeCounts }) {
+function WeeklyPickCard({
+  video,
+  likeCounts,
+  imageLoading = "eager"
+}: {
+  video: Video;
+  likeCounts: LikeCounts;
+  // イチオシはモバイル/PCの2配置が両方DOMに残るため、片方のサムネイルだけ
+  // eager にし、もう片方は lazy にして二重取得を避ける（UX専門家判断 2026-11-04）。
+  imageLoading?: "eager" | "lazy";
+}) {
   const reviewLine = video.review[0] ?? "今週まず見てほしい、Manapick最高スコアの一本です。";
 
   return (
@@ -3334,7 +3353,7 @@ function WeeklyPickCard({ video, likeCounts }: { video: Video; likeCounts: LikeC
             width={480}
             height={270}
             sizes="(min-width: 1320px) 680px, (min-width: 760px) 92vw, 92vw"
-            loading="eager"
+            loading={imageLoading}
             className="absolute inset-0 h-full w-full object-cover"
           />
         </a>
