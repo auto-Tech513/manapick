@@ -128,6 +128,16 @@ export default async function VideoPage({ params }: VideoPageProps) {
     embedUrl: youtubeEmbedUrl(video.ytid),
     contentUrl: video.url,
     url: pageUrl,
+    // 再生回数は保存データがある動画だけ出す（無い動画は捏造せず省略）。
+    ...(typeof video.viewCount === "number"
+      ? {
+          interactionStatistic: {
+            "@type": "InteractionCounter",
+            interactionType: "https://schema.org/WatchAction",
+            userInteractionCount: video.viewCount
+          }
+        }
+      : {}),
     isAccessibleForFree: true,
     inLanguage: "ja",
     genre: genreDisplayName(video.genre),

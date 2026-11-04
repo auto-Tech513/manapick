@@ -65,8 +65,11 @@ function safeDate(value: string | undefined) {
   return Number.isNaN(date.getTime()) ? null : date;
 }
 
+// lastmod は「運営が内容を確認した日」が記録されている場合だけ出す。
+// scoreConfirmedAt が無い動画で YouTube 公開日を lastmod にすると、内容の
+// 更新日であるかのように誤認されるため省略する（SEO専門家レビュー 2026-11-04）。
 function videoModifiedAt(video: Video) {
-  return safeDate(video.scoreConfirmedAt) ?? safeDate(video.publishedAt);
+  return safeDate(video.scoreConfirmedAt);
 }
 
 function latestVideoDate(items: readonly Video[]) {
@@ -77,12 +80,12 @@ function latestVideoDate(items: readonly Video[]) {
   return timestamps.length ? new Date(Math.max(...timestamps)) : null;
 }
 
-const latestContentDate = latestVideoDate(videos);
-
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticRoutes.map((route) => {
-      const reviewedAt = safeDate(PAGE_REVIEW_DATES.get(route)) ?? latestContentDate;
+      // 確認日が登録されていない静的ページは lastmod を付けない。
+      // 無関係な最新日にフォールバックすると全ページが同日に見える。
+      const reviewedAt = safeDate(PAGE_REVIEW_DATES.get(route));
       return {
         url: absoluteUrl(route),
         ...(reviewedAt ? { lastModified: reviewedAt } : {}),
@@ -118,7 +121,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
     ...guides.map((guide) => ({
       url: absoluteUrl(guidePath(guide.slug)),
-      lastModified: new Date(guide.publishedAt),
+      lastModified: new Date(guide.updatedAt ?? guide.publishedAt),
       changeFrequency: "weekly" as const,
       priority: 0.9
     })),

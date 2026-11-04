@@ -8,10 +8,11 @@ async function readJson(relativePath) {
   return JSON.parse(await readFile(path.join(repoRoot, relativePath), "utf8"));
 }
 
-const [videos, genres, roadmaps] = await Promise.all([
+const [videos, genres, roadmaps, newsItems] = await Promise.all([
   readJson("content/videos.json"),
   readJson("content/genres.json"),
-  readJson("content/roadmaps.json")
+  readJson("content/roadmaps.json"),
+  readJson("content/news.json")
 ]);
 
 const errors = [];
@@ -112,6 +113,72 @@ if (genericKeys.length > 0) {
   const topGeneric = genericKeys.sort((a, b) => b[1] - a[1]).slice(0, 5);
   for (const [key, count] of topGeneric) {
     warnings.push(`axis-notes: x${count} ${key.split("|").slice(0, 2).join(" ")} ${key.split("|")[2]?.slice(0, 40) ?? ""}`);
+  }
+}
+
+// 固有化の後退検出（2026-11-04 第2ラウンド）。
+// 汎用プール（同一キー >=10本）に属するコメントを1つも持たない動画の数を数え、
+// 実績値を下限として固定する。固有化済み動画のコメントが汎用文へ差し戻されたり、
+// 固有化済み動画が削除されたりすると、この数が減ってエラーになる。
+// 固有化がさらに進んだら、この下限を引き上げること（引き下げは後退の隠蔽になる）。
+const FULLY_UNIQUE_FLOOR = 117; // 2026-11-04 実測: 軸内訳を持ち汎用コメントが無い動画は117本（軸内訳なしの動画は数えない）
+const genericKeySet = new Set(genericKeys.map(([key]) => key));
+let fullyUniqueVideos = 0;
+for (const video of videos) {
+  const axes = (video.axisScores || []).filter((axis) => axis.axis !== "規約・権利");
+  if (axes.length === 0) continue;
+  const hasGeneric = axes.some((axis) => {
+    const key = `${axis.axis}|${axis.score}|${String(axis.note || "").trim().replace(/。$/, "")}`;
+    return genericKeySet.has(key);
+  });
+  if (!hasGeneric) fullyUniqueVideos += 1;
+}
+if (fullyUniqueVideos < FULLY_UNIQUE_FLOOR) {
+  errors.push(
+    `axis-notes: fully-unique videos regressed: ${fullyUniqueVideos} < floor ${FULLY_UNIQUE_FLOOR} (generic-note individualization must not regress)`
+  );
+}
+
+// 定型句フラグメントの混入チェック（同ラウンド、コンテンツ方法論レビュー）。
+// 汎用プール外（＝固有のはず）のコメントに定型断片が残っていると、固有化の
+// 見かけだけが進む。件数と実例を警告する。
+const TEMPLATE_FRAGMENTS = [
+  "期待できる",
+  "可能性が高い",
+  "要確認",
+  "タイトル上は",
+  "扱いやすい内容",
+  "つなげやすい",
+  "確認しやすい",
+  "追いやすい構成",
+  "見切りやすい長さ"
+];
+const fragmentHits = [];
+for (const video of videos) {
+  for (const axis of video.axisScores || []) {
+    if (axis.axis === "規約・権利") continue;
+    const note = String(axis.note || "");
+    const key = `${axis.axis}|${axis.score}|${note.trim().replace(/。$/, "")}`;
+    if (genericKeySet.has(key)) continue;
+    const hit = TEMPLATE_FRAGMENTS.find((fragment) => note.includes(fragment));
+    if (hit) fragmentHits.push(`${video.ytid}/${axis.axis}: 「${hit}」 ${note.slice(0, 40)}`);
+  }
+}
+if (fragmentHits.length > 0) {
+  warnings.push(`axis-notes: template fragments inside non-generic notes: ${fragmentHits.length}`);
+  for (const hit of fragmentHits.slice(0, 5)) warnings.push(`axis-notes: ${hit}`);
+}
+
+// ニュースの鮮度警告（同ラウンド P7）。学びニュースは鮮度が価値そのものなので、
+// 最新記事の日齢が開いたら警告する（動画側の --strict-freshness と同じ考え方）。
+const newestNewsAt = newsItems.reduce((max, item) => {
+  const t = Date.parse(item.publishedAt || "");
+  return Number.isNaN(t) ? max : Math.max(max, t);
+}, 0);
+if (newestNewsAt > 0) {
+  const newsAgeDays = Math.floor((now - newestNewsAt) / dayMs);
+  if (newsAgeDays > 30) {
+    warnings.push(`news: newest article is ${newsAgeDays} days old (limit: 30)`);
   }
 }
 

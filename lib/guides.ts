@@ -16,6 +16,7 @@ export type Guide = {
   title: string;
   description: string;
   publishedAt: string;
+  updatedAt?: string;
   intro: string;
   learnPoints?: readonly string[];
   audience?: string;

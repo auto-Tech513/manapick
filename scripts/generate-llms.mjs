@@ -73,10 +73,11 @@ const guideRoutesByGenre = {
   money: "/guide/money-basics/"
 };
 
+// 冒頭のジャンル一覧は「名前＋本数＋URL」のみにする。サブジャンル一覧は
+// 後段のAEOインデックス（主なトピック）と逐語重複していたため、冒頭からは
+// 外した（SEO専門家レビュー 2026-11-04：同一ファイル内の二重情報の圧縮）。
 const genreLines = publishedGenres.map((genre) => {
-  const subgenres = [...(subtopicsByGenre[genre.key] || [])].sort();
-  const subgenreText = subgenres.length > 0 ? `: ${subgenres.join(" / ")}` : "";
-  return `- ${displayGenreName(genre)}（${genreCounts[genre.key]}本）${subgenreText}`;
+  return `- ${displayGenreName(genre)}（${genreCounts[genre.key]}本）: ${absoluteUrl(siteUrl, `/genre/${genre.key}/`)}`;
 });
 
 function videoPath(ytid) {
@@ -148,22 +149,18 @@ const queryIntentLines = [
   ["Canva 初心者", "/genre/marke/SNS/"]
 ].map(([label, route]) => `- ${label}: ${absoluteUrl(siteUrl, route)}`);
 
-const guideLines = [
-  ["生成AIロードマップ記事", "/guide/generative-ai/"],
-  ["Pythonロードマップ記事", "/guide/python/"],
-  ["動画編集ロードマップ記事", "/guide/video-editing/"],
-  ["英語ロードマップ記事", "/guide/english/"],
-  ["Excelデータ分析ロードマップ記事", "/guide/excel-data/"],
-  ["Webマーケティングロードマップ記事", "/guide/web-marketing/"],
-  ["Office・資料作成ロードマップ記事", "/guide/office-skills/"],
-  ["資格勉強ロードマップ記事", "/guide/certification/"],
-  ["会計資格ロードマップ記事", "/guide/bookkeeping/"],
-  ["お金・投資ロードマップ記事", "/guide/money-basics/"]
-].map(([label, route]) => `- ${label}: ${absoluteUrl(siteUrl, route)}`);
+// ガイド個別URLはジャンル別AEOインデックス側（ガイドURL）で案内するため、
+// ガイド記事セクションは一覧への1行に圧縮する（同レビュー）。
 
+// ニュース埋め込みには鮮度条件を付ける：生成時点で45日より古い記事は
+// llms.txt に載せず、一覧リンクのみに留める。ニュースが停滞したときに
+// AEO面へ「最新情報」として古い記事が伝播するのを防ぐ（同レビュー P7）。
+const NEWS_FRESH_DAYS = 45;
+const newsCutoff = new Date(Date.now() - NEWS_FRESH_DAYS * 24 * 60 * 60 * 1000);
 const newsLines = news
   .slice()
   .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || b.id.localeCompare(a.id))
+  .filter((item) => new Date(item.publishedAt) >= newsCutoff)
   .slice(0, 10)
   .map((item) => `- ${item.publishedAt} ${item.headline}: ${absoluteUrl(siteUrl, `/news/${item.id}/`)} | 出典 ${item.sourceName}`);
 
@@ -184,7 +181,6 @@ const lines = [
   "",
   "## ガイド記事",
   `- 学習ロードマップ一覧: ${absoluteUrl(siteUrl, "/guide/")}`,
-  ...guideLines,
   "",
   "## 学びニュース",
   `- 一覧: ${absoluteUrl(siteUrl, "/news/")}`,

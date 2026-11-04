@@ -25,8 +25,12 @@ type GuidePageProps = {
   params: Promise<{ slug: string }>;
 };
 
-const buildDate = new Date();
-const buildDateIso = buildDate.toISOString();
+// 最終更新日はガイドデータの updatedAt（実際に改訂したガイドだけが持つ）を正とし、
+// 無い場合は公開日に一致させる。ビルド日を使うとデプロイのたびに全ガイドが
+// 「今日更新」に見えてしまうため使わない（SEO専門家レビュー 2026-11-04）。
+function guideModifiedAt(guide: Guide): string {
+  return guide.updatedAt ?? guide.publishedAt;
+}
 const guideOgImage = absoluteUrl("/brand/ogp-manapick.png");
 const guideIconSources: Record<string, string> = {
   ai: "/brand/icon-ai.png",
@@ -67,7 +71,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
       url: pageUrl,
       type: "article",
       publishedTime: guide.publishedAt,
-      modifiedTime: buildDateIso,
+      modifiedTime: guideModifiedAt(guide),
       images: [
         {
           url: guideOgImage,
@@ -114,7 +118,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         headline: guide.title,
         description: guide.description,
         datePublished: guide.publishedAt,
-        dateModified: buildDateIso,
+        dateModified: guideModifiedAt(guide),
         inLanguage: "ja",
         mainEntityOfPage: pageUrl,
         image: guideOgImage,
@@ -203,7 +207,10 @@ export default async function GuidePage({ params }: GuidePageProps) {
           <h1>{guideTitle(guide.title)}</h1>
           <p>{strongText(guide.intro)}</p>
           <div className="guide-trust-row" aria-label="記事の信頼情報">
-            <span>最終更新日: {formatDate(buildDate)}</span>
+            <span>公開日: {formatDate(new Date(guide.publishedAt))}</span>
+            {guide.updatedAt ? (
+              <span>最終更新日: {formatDate(new Date(guide.updatedAt))}</span>
+            ) : null}
             <span>読了目安: 約{readingMinutes}分</span>
             <Link href="/about-score/">採点方法を見る</Link>
             <span>情報商材誘導・誇大表現の動画は除外</span>

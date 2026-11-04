@@ -4,16 +4,16 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 動画はYouTube上で公開されているものを掲載し、YouTubeへのリンクまたはYouTube公式プレーヤーで紹介します。ダウンロードや再配布は扱いません。
 
 ## 公開中の10ジャンル
-- 生成AI（153本）: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Cline / Copilot / DeepL / DeepSeek / ElevenLabs / Figma(Figma AI) / Gamma / Gemini / Gemma / GitHub Copilot / Google AI Mode / Google Veo / Google翻訳 / Grok / Hailuo AI / HeyGen / Kling AI / Manus / Midjourney / Notion AI / Notta / Ollama / OpenAI Codex / OpenClaw / Perplexity / PixVerse / Replit Agent / Runway / Siri AI / Stable Diffusion / Suno / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
-- プログラミング・IT（60本）: AWS認定 クラウドプラクティショナー / AWS認定 ソリューションアーキテクト / Git / JavaScript / Python / SQL / Web開発 / アプリ / インフラ / 情報セキュリティマネジメント試験
-- 動画編集・クリエイティブ（70本）: After Effects / CapCut / DaVinci / Premiere Pro / デザイン / 色彩検定
-- 語学・英語（57本）: TOEIC / 「ハングル」能力検定 / ビジネス英語 / 発音 / 英会話 / 英検
-- データ分析・DX（35本）: BI / Excel / データサイエンス / 統計
-- Webマーケ・SNS運用（31本）: SEO / SNS / Webマーケ
-- Office・資料作成（40本）: Excel / Word / プレゼン / 資料作成
-- 資格・検定（226本）: AI検定 / G検定 / IT / ITパスポート / MOS / ネイリスト / ビジネス実務法務検定試験 / 二級ボイラー技士 / 介護福祉士 / 保育士 / 医療事務 / 危険物乙4 / 国家公務員採用一般職試験 / 基本情報技術者 / 宅建 / 日本漢字能力検定 / 測量士補 / 生成AIパスポート / 登録販売者 / 社労士 / 秘書検定 / 第二種電気工事士 / 管理栄養士 / 管理業務主任者 / 行政書士 / 衛生管理者 / 賃貸不動産経営管理士 / 電験三種 / 食生活アドバイザー
-- 会計・経営系資格（61本）: FP / 中小企業診断士 / 税理士 / 簿記
-- お金・投資（27本）: NISA / 家計 / 投資
+- 生成AI（153本）: https://manapick.app/genre/ai/
+- プログラミング・IT（60本）: https://manapick.app/genre/prog/
+- 動画編集・クリエイティブ（70本）: https://manapick.app/genre/video/
+- 語学・英語（57本）: https://manapick.app/genre/english/
+- データ分析・DX（35本）: https://manapick.app/genre/data/
+- Webマーケ・SNS運用（31本）: https://manapick.app/genre/marke/
+- Office・資料作成（40本）: https://manapick.app/genre/biz/
+- 資格・検定（226本）: https://manapick.app/genre/shikaku/
+- 会計・経営系資格（61本）: https://manapick.app/genre/kaikei/
+- お金・投資（27本）: https://manapick.app/genre/money/
 
 ## 採点方法
 - Manapickスコアは7軸×5点=35点満点です。
@@ -23,16 +23,6 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 
 ## ガイド記事
 - 学習ロードマップ一覧: https://manapick.app/guide/
-- 生成AIロードマップ記事: https://manapick.app/guide/generative-ai/
-- Pythonロードマップ記事: https://manapick.app/guide/python/
-- 動画編集ロードマップ記事: https://manapick.app/guide/video-editing/
-- 英語ロードマップ記事: https://manapick.app/guide/english/
-- Excelデータ分析ロードマップ記事: https://manapick.app/guide/excel-data/
-- Webマーケティングロードマップ記事: https://manapick.app/guide/web-marketing/
-- Office・資料作成ロードマップ記事: https://manapick.app/guide/office-skills/
-- 資格勉強ロードマップ記事: https://manapick.app/guide/certification/
-- 会計資格ロードマップ記事: https://manapick.app/guide/bookkeeping/
-- お金・投資ロードマップ記事: https://manapick.app/guide/money-basics/
 
 ## 学びニュース
 - 一覧: https://manapick.app/news/
