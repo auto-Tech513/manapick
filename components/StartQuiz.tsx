@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   genreDisplayName,
   publishedGenreKeys,
@@ -12,6 +12,7 @@ import {
   youtubeThumbnail,
   type Video
 } from "@/lib/manapick";
+import { sendGaEvent } from "@/lib/retention";
 
 type Level = "初級" | "中級" | "上級" | "";
 type TimeKey = "short" | "mid" | "long" | "";
@@ -81,6 +82,21 @@ export default function StartQuiz() {
   const selectedLevelName = optionLabel(level, "こだわらない");
   const selectedTimeName = timeOptions.find((item) => item.value === time)?.label ?? "こだわらない";
 
+  // 診断の完了を1回だけ計測する（再レンダリングや選び直しで二重に数えない）。
+  const completedRef = useRef(false);
+  useEffect(() => {
+    if (step >= 4 && !completedRef.current) {
+      completedRef.current = true;
+      sendGaEvent("diagnosis_complete", {
+        genre,
+        level: level || "any",
+        result_count: result.items.length,
+        top_video_id: result.items[0]?.ytid ?? ""
+      });
+    }
+    if (step < 4) completedRef.current = false;
+  }, [step, genre, level, result.items]);
+
   function reset() {
     setStep(1);
     setGenre("");
@@ -124,6 +140,7 @@ export default function StartQuiz() {
                 type="button"
                 className="min-h-14 rounded-lg border border-line bg-surface px-3 py-3 text-left text-sm font-black text-ink shadow-sm transition hover:-translate-y-0.5 hover:border-leaf hover:shadow-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary motion-reduce:transform-none"
                 onClick={() => {
+                  sendGaEvent("diagnosis_start", { genre: key });
                   setGenre(key);
                   setStep(2);
                 }}

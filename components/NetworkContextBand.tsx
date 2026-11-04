@@ -4,6 +4,7 @@ import {
   manapickCareerUrlForGenre,
   manapickLicenseUrlForGenre
 } from "@/lib/brand-links";
+import TrackedGaLink from "@/components/TrackedGaLink";
 import { genreDisplayName } from "@/lib/manapick";
 import aiDeepLinks from "@/content/ai-deep-links.json";
 import networkRelated from "@/content/network-related.json";
@@ -103,16 +104,29 @@ export default function NetworkContextBand({ genreKey, sub, skipHrefs = [], page
               <ul className="network-context-items">
                 {card.items.map((item) => (
                   <li key={item.href}>
-                    <a href={item.href} target="_blank" rel="noopener noreferrer">
+                    <TrackedGaLink
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      eventName="network_click"
+                      eventParams={{ destination_site: card.site, placement: "context_band_item", genre: genreKey }}
+                    >
                       {item.label} <span aria-hidden="true">↗</span>
-                    </a>
+                    </TrackedGaLink>
                   </li>
                 ))}
               </ul>
             ) : null}
-            <a className="network-context-more" href={card.more} target="_blank" rel="noopener noreferrer">
+            <TrackedGaLink
+              className="network-context-more"
+              href={card.more}
+              target="_blank"
+              rel="noopener noreferrer"
+              eventName="network_click"
+              eventParams={{ destination_site: card.site, placement: "context_band_more", genre: genreKey }}
+            >
               {card.moreLabel} <span aria-hidden="true">↗</span>
-            </a>
+            </TrackedGaLink>
           </div>
         ))}
       </div>

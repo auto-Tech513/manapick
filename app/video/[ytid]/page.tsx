@@ -8,6 +8,7 @@ import NetworkContextBand from "@/components/NetworkContextBand";
 import FoldSection from "@/components/FoldSection";
 import VideoActions from "@/components/VideoActions";
 import VideoEmbed from "@/components/VideoEmbed";
+import TrackedGaLink from "@/components/TrackedGaLink";
 import sisterItemLinks from "@/content/sister-item-links.json";
 import { guidePath, guides } from "@/lib/guides";
 import {
@@ -218,9 +219,16 @@ export default async function VideoPage({ params }: VideoPageProps) {
             ))}
           </ol>
           {video.editorNote ? <p className="editor-note">編集メモ: {video.editorNote}</p> : null}
-          <a className="video-watch-button" href={video.url} target="_blank" rel="noopener noreferrer">
+          <TrackedGaLink
+            className="video-watch-button"
+            href={video.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            eventName="youtube_click"
+            eventParams={{ video_id: video.ytid, placement: "video_detail", genre: video.genre, score_total: video.score ?? 0 }}
+          >
             YouTubeで視聴
-          </a>
+          </TrackedGaLink>
           <p className="video-embed-note">※埋め込み再生できない動画はYouTubeでご覧ください。</p>
           <VideoActions ytid={video.ytid} />
           <LearningNote ytid={video.ytid} />
@@ -237,12 +245,14 @@ export default async function VideoPage({ params }: VideoPageProps) {
           </div>
           <div className="sister-item-links">
             {sisterLinks.map((link) => (
-              <a
+              <TrackedGaLink
                 key={`${link.site}-${link.slug}`}
                 className={`sister-item-link is-${link.site}`}
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                eventName="network_click"
+                eventParams={{ destination_site: link.site, placement: "video_detail_items", genre: video.genre, video_id: video.ytid }}
               >
                 {link.site === "ai" ? (
                   <>
@@ -261,7 +271,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
                   </>
                 )}
                 <span className="sister-item-arrow" aria-hidden="true">→</span>
-              </a>
+              </TrackedGaLink>
             ))}
           </div>
         </section>

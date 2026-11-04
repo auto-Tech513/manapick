@@ -174,6 +174,15 @@ function compactText(value: string, maxLength: number) {
   return normalized.length > maxLength ? normalized.slice(0, maxLength - 1) + "…" : normalized;
 }
 
+// 軸コメントは文の途中で切り取ったり、文の途中に埋め込んだりしない。
+// 必ず独立した1文として置くことで、「内容。点を評価しています」のような
+// 文の破綻（2026-11-04 の横断評価で実測）を防ぐ。
+function noteSentence(note: string) {
+  const normalized = note.replace(/\s+/g, " ").trim();
+  if (!normalized) return "";
+  return /[。！？]$/.test(normalized) ? normalized : normalized + "。";
+}
+
 function stableIndex(value: string, length: number, salt = 0) {
   if (length <= 0) return 0;
   return (Array.from(value).reduce((total, char, index) => {
@@ -301,28 +310,41 @@ export function videoAxisCommentary(video: Video) {
   const low = ascending[0];
   const lines =
     axisStyle === 0
-      ? [`${video.sub}の観点では「${top.axis}」が${top.score}/5で、${top.note}点が評価されています。`]
-      : [`採点上の強みは「${top.axis}」で${top.score}/5。${top.note}という点から、視聴前の期待値を置きやすい動画です。`];
+      ? [`${video.sub}の観点では「${top.axis}」が最も高く${top.score}/5です。${noteSentence(top.note)}`]
+      : [`採点上の強みは「${top.axis}」で${top.score}/5です。${noteSentence(top.note)}`];
 
   if (second) {
     lines.push(
       axisStyle === 0
-        ? `あわせて「${second.axis}」も${second.score}/5。${second.note}と整理されているため、${video.level}の学習者が視聴前に期待値を置きやすい動画です。`
-        : `次に高いのは「${second.axis}」で${second.score}/5です。${second.note}というメモがあり、強みを複数の角度から確認できます。`
+        ? `あわせて「${second.axis}」も${second.score}/5です。${noteSentence(second.note)}`
+        : `次に高いのは「${second.axis}」で${second.score}/5です。${noteSentence(second.note)}`
     );
   }
 
-  if (low.score <= 3) {
+  if (low.axis === top.axis) {
+    // 全軸同点などで最高軸と最低軸が同じ場合は、同じ軸・同じコメントを
+    // 「強み」と「弱点」の両方に使い回さない。
+    lines.push(
+      `軸ごとの点数に大きな差はなく、最も低い軸でも${low.score}/5です。弱点の有無よりも、自分の目的に合うかで選ぶと判断しやすい動画です。`
+    );
+  } else if (second && low.axis === second.axis) {
+    // 2番目に紹介した軸がそのまま最低軸でもある場合は、同じコメントを繰り返さない。
+    lines.push(
+      low.score <= 3
+        ? `点数が最も低い軸も「${low.axis}」の${low.score}/5です。必要なら関連動画や教材で補う前提で見ると安心です。`
+        : `点数が最も低い軸も「${low.axis}」の${low.score}/5です。大きな弱点は少ないものの、自分の目的に合うかは視聴前に確認しておくと無駄がありません。`
+    );
+  } else if (low.score <= 3) {
     lines.push(
       axisStyle === 0
-        ? `一方で「${low.axis}」は${low.score}/5。${low.note}という補足があるため、必要なら関連動画や教材で補う前提で見ると安心です。`
-        : `注意して見たいのは「${low.axis}」です。${low.score}/5で、${low.note}という補足があるため、必要なら別動画で確認すると判断が偏りにくくなります。`
+        ? `一方で「${low.axis}」は${low.score}/5です。${noteSentence(low.note)}必要なら関連動画や教材で補う前提で見ると安心です。`
+        : `注意して見たいのは「${low.axis}」です。${low.score}/5です。${noteSentence(low.note)}必要なら別動画で確認すると判断が偏りにくくなります。`
     );
   } else {
     lines.push(
       axisStyle === 0
-        ? `低めの軸でも「${low.axis}」が${low.score}/5で、${low.note}と整理されています。大きな弱点は少ないものの、自分の目的に合うかは視聴前に確認しておくと無駄がありません。`
-        : `最も控えめな軸は「${low.axis}」ですが${low.score}/5です。${low.note}と整理されており、弱点を把握したうえで視聴できます。`
+        ? `低めの軸でも「${low.axis}」が${low.score}/5あります。${noteSentence(low.note)}大きな弱点は少ないものの、自分の目的に合うかは視聴前に確認しておくと無駄がありません。`
+        : `最も控えめな軸は「${low.axis}」ですが${low.score}/5です。${noteSentence(low.note)}弱点を把握したうえで視聴できます。`
     );
   }
 
@@ -347,8 +369,8 @@ export function videoViewingTips(video: Video) {
       : shortTips[stableIndex(video.ytid, shortTips.length, 43)];
   const caution = low
     ? low.score <= 3
-      ? `気をつけたい点は「${low.axis}」です。${low.note}と整理されているため、見終わったあとに同じテーマの別動画で確認すると判断が偏りにくくなります。`
-      : `最低スコア軸は「${low.axis}」ですが${low.score}/5あり、${low.note}と整理されています。自分の目的と合う部分を中心に見ると使いやすいです。`
+      ? `気をつけたい点は「${low.axis}」です。${noteSentence(low.note)}見終わったあとに同じテーマの別動画で確認すると判断が偏りにくくなります。`
+      : `最低スコア軸は「${low.axis}」ですが${low.score}/5あります。${noteSentence(low.note)}自分の目的と合う部分を中心に見ると使いやすいです。`
     : `7軸メモがない動画なので、レビュー本文とタイトルを照らし合わせ、必要に応じて関連動画で補足確認してください。`;
 
   return [durationTip, caution];
@@ -365,10 +387,12 @@ export function videoEditorialSummary(video: Video, nextVideo?: Video) {
     上級: "実務や試験対策で具体的に確認したい人"
   };
   const topAxisText = topAxis
-    ? `採点では「${topAxis.axis}」が${topAxis.score}/5で、${compactText(topAxis.note, 28)}点を評価しています。`
+    ? `採点では「${topAxis.axis}」が最も高く${topAxis.score}/5です。${noteSentence(topAxis.note)}`
     : "採点メモが薄い動画では、レビュー本文とタイトルの一致を中心に確認しています。";
   const cautionText = lowAxis
-    ? `一方で「${lowAxis.axis}」は${lowAxis.score}/5。${compactText(lowAxis.note, 28)}という補足を意識すると判断が偏りにくくなります。`
+    ? topAxis && lowAxis.axis === topAxis.axis
+      ? `軸ごとの点数差は小さく、最も低い軸でも${lowAxis.score}/5です。弱点よりも目的との相性で判断すると選びやすい動画です。`
+      : `一方で「${lowAxis.axis}」は${lowAxis.score}/5です。${noteSentence(lowAxis.note)}この点を意識すると判断が偏りにくくなります。`
     : "視聴後は、分かったことと残った疑問を分けてメモすると次の動画を選びやすくなります。";
   const nextText = nextVideo
     ? `続けるなら、次は「${compactText(nextVideo.title, 30)}」で別角度から補えます。`

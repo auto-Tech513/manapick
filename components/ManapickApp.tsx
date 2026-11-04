@@ -2196,7 +2196,7 @@ function LearningLoopSection() {
         ))}
       </div>
       <a className="learning-loop-overview" href="/network/">
-        4サイトの役割と使い分けを見る <span aria-hidden="true">→</span>
+        5サイトの役割と使い分けを見る <span aria-hidden="true">→</span>
       </a>
     </section>
   );
@@ -2726,7 +2726,7 @@ function SiteMenuDrawer({
             <a href="/my/" onClick={onClose}>マイページ</a>
             <a href="/glossary/" onClick={onClose}>用語集</a>
             <a href="/faq/" onClick={onClose}>よくある質問</a>
-            <a href="/network/" onClick={onClose}>4サイト案内</a>
+            <a href="/network/" onClick={onClose}>5サイト案内</a>
             <a href="/shop/" onClick={onClose}>manapi商店</a>
             <a href="/contact/" onClick={onClose}>お問い合わせ</a>
           </div>
@@ -3349,7 +3349,13 @@ function WeeklyPickCard({ video, likeCounts }: { video: Video; likeCounts: LikeC
           <span>{video.minutes}分</span>
         </div>
         <LikeButton ytid={video.ytid} initialCount={likeCounts[video.ytid] ?? 0} className="is-card-action" />
-        <a className="weekly-pick-button" href={video.url} target="_blank" rel="noopener noreferrer">
+        <a
+          className="weekly-pick-button"
+          href={video.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => sendGaEvent("youtube_click", { video_id: video.ytid, placement: "weekly_pick", genre: video.genre, score_total: video.score ?? 0 })}
+        >
           YouTubeで視聴
         </a>
       </div>
@@ -3516,6 +3522,7 @@ function VideoCard({
           href={video.url}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => sendGaEvent("youtube_click", { video_id: video.ytid, placement: "video_card", genre: video.genre, score_total: video.score ?? 0 })}
         >
           YouTubeで視聴
         </a>

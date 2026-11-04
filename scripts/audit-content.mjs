@@ -80,6 +80,41 @@ for (const genre of publishedGenres) {
   }
 }
 
+// 軸コメントの汎用化チェック（2026-11-04 横断評価 Phase 0-1）。
+// 同じ（軸・点数・コメント）が多数の動画に出現するコメントは、動画固有の
+// 観察文とは言えない。件数を警告として可視化し、固有化の進捗を測れるようにする。
+const GENERIC_NOTE_THRESHOLD = 10;
+const noteKeyCounts = new Map();
+for (const video of videos) {
+  for (const axis of video.axisScores || []) {
+    // 「規約・権利」の定型文は採点コメントではなく共通注記に近いため、汎用判定から除く。
+    if (axis.axis === "規約・権利") continue;
+    const key = `${axis.axis}|${axis.score}|${String(axis.note || "").trim().replace(/。$/, "")}`;
+    noteKeyCounts.set(key, (noteKeyCounts.get(key) || 0) + 1);
+  }
+}
+const genericKeys = [...noteKeyCounts.entries()].filter(([, count]) => count >= GENERIC_NOTE_THRESHOLD);
+if (genericKeys.length > 0) {
+  const genericInstances = genericKeys.reduce((total, [, count]) => total + count, 0);
+  const totalNotes = [...noteKeyCounts.values()].reduce((total, count) => total + count, 0);
+  const affectedIds = new Set();
+  for (const video of videos) {
+    const hasGeneric = (video.axisScores || []).some((axis) => {
+      if (axis.axis === "規約・権利") return false;
+      const key = `${axis.axis}|${axis.score}|${String(axis.note || "").trim().replace(/。$/, "")}`;
+      return (noteKeyCounts.get(key) || 0) >= GENERIC_NOTE_THRESHOLD;
+    });
+    if (hasGeneric) affectedIds.add(video.ytid);
+  }
+  warnings.push(
+    `axis-notes: generic notes (same axis/score/text in >=${GENERIC_NOTE_THRESHOLD} videos): keys=${genericKeys.length} instances=${genericInstances}/${totalNotes} videos-affected=${affectedIds.size}/${videos.length}`
+  );
+  const topGeneric = genericKeys.sort((a, b) => b[1] - a[1]).slice(0, 5);
+  for (const [key, count] of topGeneric) {
+    warnings.push(`axis-notes: x${count} ${key.split("|").slice(0, 2).join(" ")} ${key.split("|")[2]?.slice(0, 40) ?? ""}`);
+  }
+}
+
 const newestAgeDays = newestPublishedAt ? Math.floor((now - newestPublishedAt) / dayMs) : Infinity;
 if (newestAgeDays > 60) {
   const message = `freshness: newest published video is ${newestAgeDays} days old (limit: 60)`;

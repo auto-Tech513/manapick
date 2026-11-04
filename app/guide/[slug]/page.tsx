@@ -329,14 +329,24 @@ export default async function GuidePage({ params }: GuidePageProps) {
               </tbody>
             </table>
           </div>
-          <ul className="guide-advice-list">
-            {guide.stumblingBlocks.map((item) => (
-              <li key={item.label}>
-                <strong>{item.label}</strong>
-                <span>{item.text}</span>
-              </li>
-            ))}
-          </ul>
+          {(() => {
+            // 表が stumblingBlocks から生成されている場合（stumbleTable が無い
+            // ガイド）、同じ項目を直下のリストで二重に表示しない。
+            // 表に出ていない項目（「次の一歩」等）だけをリストに残す。
+            const shownLabels = new Set(stumbleRows.map((row) => row.stumble));
+            const extraBlocks = guide.stumblingBlocks.filter((item) => !shownLabels.has(item.label));
+            if (extraBlocks.length === 0) return null;
+            return (
+              <ul className="guide-advice-list">
+                {extraBlocks.map((item) => (
+                  <li key={item.label}>
+                    <strong>{item.label}</strong>
+                    <span>{item.text}</span>
+                  </li>
+                ))}
+              </ul>
+            );
+          })()}
         </FoldSection>
 
         <FoldSection className="guide-section" titleId="guide-plan-title" title="学習プラン例" hint={`${studyPlans.length}パターン`}>

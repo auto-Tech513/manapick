@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BrandLogo from "@/components/BrandLogo";
+import TrackedGaLink from "@/components/TrackedGaLink";
 import {
   MANAPICK_AI_URL,
   MANAPICK_CAREER_URL,
@@ -63,8 +64,8 @@ const stages = [
 
 const faq = [
   {
-    question: "4サイトはどの順番で使えばいいですか？",
-    answer: "迷っている場合は、仕事を知る、必要な資格を確認する、使うAIを選ぶ、無料動画で学ぶの順でも構いません。目的が決まっている場合は、Manapickで先に無料動画を1本試せます。"
+    question: "5サイトはどの順番で使えばいいですか？",
+    answer: "迷っている場合は、仕事を知る、必要な資格を確認する、使うAIを選ぶ、無料動画で学ぶの順でも構いません。目的が決まっている場合は、Manapickで先に無料動画を1本試せます。働きたい企業が決まっている場合は、manapick companyで業績や給与水準の数字を確認できます。"
   },
   {
     question: "サイトをまたぐと学習記録は共有されますか？",
@@ -123,7 +124,7 @@ export default function NetworkPage() {
       },
       {
         "@type": "ItemList",
-        name: "Manapick Networkの4サービス",
+        name: "Manapick Networkの学びの4サービス",
         numberOfItems: stages.length,
         itemListElement: stages.map((stage, index) => ({
           "@type": "ListItem",
@@ -185,31 +186,44 @@ export default function NetworkPage() {
         <p className="section-eyebrow">MANAPICK NETWORK</p>
         <h1>学ぶところから、仕事の入口まで。</h1>
         <p>
-          学習者向けの4サイトは動画・AI・資格・仕事を分担しています。企業の業績や給与水準は、姉妹サイトのmanapick companyで一次情報をもとに確認できます。どこから入っても、同じ学習テーマを保ったまま次の判断へ進めます。
+          Manapick Networkは、学習向けの4サイト（動画・AI・資格・仕事）と、企業情報のmanapick companyを合わせた5サイトです。企業の業績や給与水準は、manapick companyで一次情報をもとに確認できます。どこから入っても、同じ学習テーマを保ったまま次の判断へ進めます。
         </p>
       </section>
 
       <section className="network-stage-section" aria-labelledby="network-stage-title">
         <div className="network-section-heading">
-          <p className="section-eyebrow">4つの役割</p>
+          <p className="section-eyebrow">学びの4つの役割</p>
           <h2 id="network-stage-title">必要なところだけ使う</h2>
           <p>順番は固定ではありません。いま困っている段階から始められます。</p>
         </div>
         <div className="network-stage-grid">
-          {stages.map((stage) => (
-            <a
-              key={stage.key}
-              className={`network-stage-card is-${stage.key}`}
-              href={stage.href}
-              {...(stage.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            >
-              <span className="network-stage-number">{stage.number}</span>
-              <small>{stage.eyebrow}</small>
-              <strong>{stage.title}</strong>
-              <p>{stage.body}</p>
-              <span className="network-stage-action">{stage.action} <span aria-hidden="true">→</span></span>
-            </a>
-          ))}
+          {stages.map((stage) =>
+            stage.external ? (
+              <TrackedGaLink
+                key={stage.key}
+                className={`network-stage-card is-${stage.key}`}
+                href={stage.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                eventName="network_click"
+                eventParams={{ destination_site: stage.key, placement: "network_page_stage" }}
+              >
+                <span className="network-stage-number">{stage.number}</span>
+                <small>{stage.eyebrow}</small>
+                <strong>{stage.title}</strong>
+                <p>{stage.body}</p>
+                <span className="network-stage-action">{stage.action} <span aria-hidden="true">→</span></span>
+              </TrackedGaLink>
+            ) : (
+              <a key={stage.key} className={`network-stage-card is-${stage.key}`} href={stage.href}>
+                <span className="network-stage-number">{stage.number}</span>
+                <small>{stage.eyebrow}</small>
+                <strong>{stage.title}</strong>
+                <p>{stage.body}</p>
+                <span className="network-stage-action">{stage.action} <span aria-hidden="true">→</span></span>
+              </a>
+            )
+          )}
         </div>
       </section>
 
@@ -219,9 +233,15 @@ export default function NetworkPage() {
           <h2 id="network-company-title">働きたい会社を、数字で読む。</h2>
           <p>manapick companyでは、上場企業の成り立ち・決算の要約・業績・給与水準を、決算短信や有価証券報告書などの一次情報で確認して整理しています。</p>
         </div>
-        <a href={MANAPICK_COMPANY_URL} target="_blank" rel="noopener noreferrer">
+        <TrackedGaLink
+          href={MANAPICK_COMPANY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          eventName="network_click"
+          eventParams={{ destination_site: "company", placement: "network_page_company" }}
+        >
           <span>manapick company</span><strong>企業を調べる <span aria-hidden="true">↗</span></strong>
-        </a>
+        </TrackedGaLink>
       </section>
 
       <section className="network-route-section" aria-labelledby="network-route-title">
@@ -239,9 +259,9 @@ export default function NetworkPage() {
               </div>
               <nav aria-label={`${genreDisplayName(genre)}の関連サービス`}>
                 <Link className="is-learn" href={`/genre/${genre}/`}>動画で学ぶ</Link>
-                <a className="is-ai" href={manapickAiUrlForGenre(genre)} target="_blank" rel="noopener noreferrer">AIを選ぶ</a>
-                <a className="is-license" href={manapickLicenseUrlForGenre(genre)} target="_blank" rel="noopener noreferrer">資格を選ぶ</a>
-                <a className="is-career" href={manapickCareerUrlForGenre(genre)} target="_blank" rel="noopener noreferrer">仕事を知る</a>
+                <TrackedGaLink className="is-ai" href={manapickAiUrlForGenre(genre)} target="_blank" rel="noopener noreferrer" eventName="network_click" eventParams={{ destination_site: "ai", placement: "network_page_genre", genre }}>AIを選ぶ</TrackedGaLink>
+                <TrackedGaLink className="is-license" href={manapickLicenseUrlForGenre(genre)} target="_blank" rel="noopener noreferrer" eventName="network_click" eventParams={{ destination_site: "license", placement: "network_page_genre", genre }}>資格を選ぶ</TrackedGaLink>
+                <TrackedGaLink className="is-career" href={manapickCareerUrlForGenre(genre)} target="_blank" rel="noopener noreferrer" eventName="network_click" eventParams={{ destination_site: "career", placement: "network_page_genre", genre }}>仕事を知る</TrackedGaLink>
               </nav>
             </article>
           ))}
@@ -257,11 +277,11 @@ export default function NetworkPage() {
         <div className="network-career-grid">
           {careerEntrances.map((career) => (
             <article key={career.href}>
-              <a href={career.href} target="_blank" rel="noopener noreferrer">
+              <TrackedGaLink href={career.href} target="_blank" rel="noopener noreferrer" eventName="network_click" eventParams={{ destination_site: "career", placement: "network_page_career" }}>
                 <small>{career.profession}</small>
                 <strong>{career.label}</strong>
                 <span>仕事内容・必要スキルを見る <span aria-hidden="true">↗</span></span>
-              </a>
+              </TrackedGaLink>
               <Link href={career.guideHref}>関連する学習ロードマップ <span aria-hidden="true">→</span></Link>
             </article>
           ))}
@@ -285,7 +305,7 @@ export default function NetworkPage() {
 
       <section className="network-faq" aria-labelledby="network-faq-title">
         <p className="section-eyebrow">よくある質問</p>
-        <h2 id="network-faq-title">4サイトを使う前に</h2>
+        <h2 id="network-faq-title">5サイトを使う前に</h2>
         {faq.map((item) => (
           <details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>
         ))}

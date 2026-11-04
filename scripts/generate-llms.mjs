@@ -203,6 +203,7 @@ const lines = [
   "- Q. AIツール自体を比較したい場合は？ A. 公式AI版のmanapick AIで、料金・無料枠・使い方を7軸で確認できます。",
   "- Q. 関連する資格の要件や費用を比較したい場合は？ A. manapick licenseで、受験要件・費用・申込方法を公式情報から確認できます。",
   "- Q. 学んだ先の仕事内容を調べたい場合は？ A. manapick careerで、仕事内容・必要スキル・注意点・学ぶ順番を公式情報から確認できます。",
+  "- Q. 働きたい企業の業績や給与水準を調べたい場合は？ A. manapick companyで、企業の成り立ち・決算の要約・業績・給与水準を、決算短信や有価証券報告書などの一次情報から確認できます。",
   "- Q. 広告やアフィリエイトで順位は変わりますか？ A. 紹介料で掲載順位を操作せず、Manapick独自基準での採点を優先します。",
   "",
   "## 主要URL",
@@ -210,7 +211,7 @@ const lines = [
   `- YouTube学習動画おすすめ: ${absoluteUrl(siteUrl, "/youtube-learning/")}`,
   `- YouTube学習動画${videos.length}本の独自集計: ${absoluteUrl(siteUrl, "/research/youtube-learning-data/")}`,
   `- 7日学習プラン: ${absoluteUrl(siteUrl, "/study-plan/")}`,
-  `- Manapick Network（学ぶ・AI・資格・仕事）: ${absoluteUrl(siteUrl, "/network/")}`,
+  `- Manapick Network（学ぶ・AI・資格・仕事・企業）: ${absoluteUrl(siteUrl, "/network/")}`,
   `- 学習ロードマップ一覧: ${absoluteUrl(siteUrl, "/guide/")}`,
   `- ランキング: ${absoluteUrl(siteUrl, "/ranking/")}`,
   `- 最近追加・更新した動画: ${absoluteUrl(siteUrl, "/new/")}`,
@@ -227,9 +228,11 @@ const lines = [
   "- 姉妹サイト（AIツール比較）: https://ai.manapick.app/",
   "- 姉妹サイト（資格・検定比較）: https://license.manapick.app/",
   "- 姉妹サイト（職業情報）: https://career.manapick.app/",
+  "- 姉妹サイト（企業情報）: https://company.manapick.app/",
   "",
   "## クローラー向け補足",
   "Manapickの本文、見出し、動画タイトル、レビューはHTMLテキストとして提供しています。検索・絞り込みUIは補助機能であり、主要な動画詳細ページは静的URLで参照できます。",
+  "本ファイルに載せる動画はジャンルごとの代表動画のみです。全動画の詳細ページURLは sitemap.xml を参照してください。",
   ""
 ];
 
