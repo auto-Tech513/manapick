@@ -513,6 +513,9 @@ export default async function GenrePage({ params }: GenrePageProps) {
               </li>
             ))}
           </ol>
+          <p className="genre-hub-research-link">
+            <Link href="/research/youtube-learning-data/">掲載動画全体の集計（長さ・スコアの分布）も見る <span aria-hidden="true">→</span></Link>
+          </p>
         </section>
       ) : null}
 

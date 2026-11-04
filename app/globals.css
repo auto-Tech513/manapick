@@ -14525,3 +14525,79 @@ details.fold-group[hidden] {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+/* ジャンル内の位置（P4、2026-11-05） */
+.video-genre-position {
+  display: grid;
+  gap: 6px;
+  margin: 14px 0 4px;
+  padding: 14px 16px;
+  border: 1px solid #e3e8ee;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+.video-genre-position > div {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+.video-genre-position dt {
+  flex: 0 0 3.5em;
+  color: #5b6b7c;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+.video-genre-position dd {
+  margin: 0;
+  font-size: 0.92rem;
+}
+.video-genre-position-head dt {
+  flex: 1 1 auto;
+  color: #22303f;
+  font-size: 0.95rem;
+}
+.video-genre-position-head dd {
+  color: #5b6b7c;
+  font-size: 0.82rem;
+}
+.video-genre-position-link {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+}
+
+.genre-hub-research-link {
+  margin: 14px 0 0;
+  font-size: 0.9rem;
+}
+
+.my-genre-note {
+  margin: 0 0 6px;
+  color: #5b6b7c;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+.my-progress-milestone {
+  margin: 4px 0 0;
+  color: #5b6b7c;
+  font-size: 0.8rem;
+}
+
+/* 表示側の正直化：汎用コメントの一次評価チップと注記（2026-11-05） */
+.video-axis-primary-chip {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 8px;
+  border: 1px solid #d5dce4;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 700;
+  vertical-align: 2px;
+}
+.video-axis-note-disclosure {
+  margin: 8px 0 0;
+  color: #5b6b7c;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}

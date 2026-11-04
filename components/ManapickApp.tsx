@@ -15,7 +15,8 @@ import videosData from "@/content/videos.json";
 import PwaInstallButton from "@/components/PwaInstallButton";
 import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
 import { RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY, jstDateKey, selectTodayVideo, sendGaEvent } from "@/lib/retention";
-import { siteStats } from "@/lib/site-stats";
+import { genericAxisNoteCount, isGenericAxisNote } from "@/lib/manapick";
+import { averageScoreOf, medianOf, siteStats } from "@/lib/site-stats";
 import { buildSubRoadmap } from "@/lib/sub-roadmap";
 import { useLocalList } from "@/lib/useLocalList";
 import { useStreakState } from "@/lib/useStreakState";
@@ -2116,12 +2117,13 @@ function WhyManapickSection() {
 }
 
 function LearningDataSection() {
-  const durations = videos.map((video) => video.minutes).sort((a, b) => a - b);
-  const medianMinutes = durations[Math.floor(durations.length / 2)] ?? 0;
+  // 中央値・平均の定義は lib/site-stats.ts に集約（research ページと定義を一致させる）。
+  const durations = videos.map((video) => video.minutes);
+  const medianMinutes = medianOf(durations);
   const underThirty = durations.filter((minutes) => minutes <= 30).length;
   const underThirtyPercent = videos.length > 0 ? ((underThirty / videos.length) * 100).toFixed(1) : "0";
-  const scored = videos.map((video) => video.score).filter((score): score is number => score !== null);
-  const averageScore = scored.length > 0 ? (scored.reduce((sum, score) => sum + score, 0) / scored.length).toFixed(1) : "-";
+  const average = averageScoreOf(videos);
+  const averageScore = average !== null ? average.toFixed(1) : "-";
 
   return (
     <section className="learning-data-section" aria-labelledby="learning-data-title">
@@ -3513,19 +3515,29 @@ function VideoCard({
         {video.axisScores.length > 0 ? (
           <details className="rounded-md border border-line bg-bg px-3 py-2 text-sm open:bg-white">
             <summary className="cursor-pointer font-black text-primaryInk">詳細スコアを見る</summary>
-            <p className="mt-2 text-xs font-bold text-muted">
-              <a className="underline decoration-dotted underline-offset-4" href="/about-score/">採点方法</a>
-              も確認できます。
-            </p>
+            {genericAxisNoteCount(video) >= 6 ? (
+              <p className="mt-2 text-xs font-bold text-muted">この動画の軸別コメントは作成中のため、点数のみの一次評価です。</p>
+            ) : (
+              <p className="mt-2 text-xs font-bold text-muted">
+                <a className="underline decoration-dotted underline-offset-4" href="/about-score/">採点方法</a>
+                も確認できます。
+              </p>
+            )}
             <dl className="mt-3 grid gap-2">
-              {video.axisScores.map((axis) => (
-                <div key={axis.axis} className="grid gap-1 border-t border-line pt-2 first:border-t-0 first:pt-0">
-                  <dt className="font-black text-ink">
-                    {axis.axis} {axis.score}/5
-                  </dt>
-                  <dd className="leading-6 text-muted">{axis.note}</dd>
-                </div>
-              ))}
+              {video.axisScores.map((axis) => {
+                const generic = isGenericAxisNote(axis);
+                return (
+                  <div key={axis.axis} className="grid gap-1 border-t border-line pt-2 first:border-t-0 first:pt-0">
+                    <dt className="font-black text-ink">
+                      {axis.axis} {axis.score}/5
+                      {generic ? (
+                        <span className="ml-2 rounded-pill border border-line bg-bg px-2 py-0.5 text-[0.68rem] font-bold text-muted">一次評価</span>
+                      ) : null}
+                    </dt>
+                    {generic ? null : <dd className="leading-6 text-muted">{axis.note}</dd>}
+                  </div>
+                );
+              })}
             </dl>
           </details>
         ) : (

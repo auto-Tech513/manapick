@@ -6,6 +6,7 @@ import {
   genreDisplayName,
   videos
 } from "@/lib/manapick";
+import { averageScoreOf, medianOf } from "@/lib/site-stats";
 
 const REVIEWED_AT = "2026-11-01";
 const reviewedLabel = (() => { const [y, m, d] = REVIEWED_AT.split("-").map(Number); return `${y}年${m}月${d}日`; })();
@@ -23,11 +24,9 @@ const durationGroups = [
   { label: "61分以上", count: durations.filter((minutes) => minutes >= 61).length, note: "体系的に深掘り" }
 ] as const;
 const underThirtyCount = durations.filter((minutes) => minutes <= 30).length;
-const medianMinutes = durations[Math.floor(durations.length / 2)] ?? 0;
-const scores = videos.map((video) => video.score).filter((score): score is number => score !== null);
-const averageScore = scores.length > 0
-  ? Math.round((scores.reduce((total, score) => total + score, 0) / scores.length) * 10) / 10
-  : null;
+// 中央値・平均の定義は lib/site-stats.ts に集約（詳細ページの表示と定義を一致させる）。
+const medianMinutes = medianOf(durations);
+const averageScore = averageScoreOf(videos);
 const genreCounts = Array.from(new Set(videos.map((video) => video.genre)))
   .map((genre) => ({
     genre,
@@ -235,6 +234,8 @@ export default function YoutubeLearningDataPage() {
           <li>運営者が、視聴または公開情報の確認にもとづき、実用性・正確性と鮮度・分かりやすさ・体系性・信頼性・視聴体験・規約と権利の7軸で採点しています。</li>
           <li>平均スコアは採用基準を通過した動画だけの値です。YouTube動画全体の平均品質を示しません。</li>
           <li>動画の完視聴率や学習成果は測定していません。時間分布から効果を断定せず、選ぶ負担を減らす目安として公開しています。</li>
+          <li>中央値は、値を並べ替えた中央の値です。本数が偶数のときは中央2値のうち大きい方を取ります。</li>
+          <li>動画ページの「ジャンル内の位置」は順位ではなく、「その動画より高いスコアの動画の本数と、ジャンル全体に対する割合」で示します。スコアは27〜34点に集中し同点が多いため、順位は数え方で大きく変わり、位置の説明には適しません。</li>
         </ul>
         <div className="research-method-links">
           <Link href="/about-score/">7軸35点の採点方法</Link>

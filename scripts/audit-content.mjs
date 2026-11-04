@@ -121,7 +121,7 @@ if (genericKeys.length > 0) {
 // 実績値を下限として固定する。固有化済み動画のコメントが汎用文へ差し戻されたり、
 // 固有化済み動画が削除されたりすると、この数が減ってエラーになる。
 // 固有化がさらに進んだら、この下限を引き上げること（引き下げは後退の隠蔽になる）。
-const FULLY_UNIQUE_FLOOR = 117; // 2026-11-04 実測: 軸内訳を持ち汎用コメントが無い動画は117本（軸内訳なしの動画は数えない）
+const FULLY_UNIQUE_FLOOR = 132; // 2026-11-05 実測: 軸内訳を持ち汎用コメントが無い動画は132本（軸内訳なしの動画は数えない）
 const genericKeySet = new Set(genericKeys.map(([key]) => key));
 let fullyUniqueVideos = 0;
 for (const video of videos) {

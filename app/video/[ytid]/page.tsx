@@ -22,6 +22,8 @@ import {
   scoreConfirmationDate,
   scoreText,
   videoAudienceText,
+  genericAxisNoteCount,
+  isGenericAxisNote,
   videoAxisCommentary,
   videoDescription,
   videoEditorialSummary,
@@ -35,6 +37,7 @@ import {
   youtubeThumbnail
 } from "@/lib/manapick";
 import { nextWatchVideo } from "@/lib/rankings";
+import { genrePosition } from "@/lib/site-stats";
 import AdSlot from "@/components/AdSlot";
 
 type VideoPageProps = {
@@ -102,6 +105,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
   const channel = displayChannel(video);
   const related = relatedVideos(video);
   const nextPick = nextWatchVideo(video);
+  const position = genrePosition(video);
   const guide = guides.find((item) => item.genre === video.genre) ?? null;
   const pageUrl = absoluteUrl(videoPath(video.ytid));
   const confirmationDate = scoreConfirmationDate(video);
@@ -113,6 +117,9 @@ export default async function VideoPage({ params }: VideoPageProps) {
   const audienceText = videoAudienceText(video);
   const learningPoints = videoLearningPoints(video);
   const axisCommentary = videoAxisCommentary(video);
+  // 表示側の正直化の段階（専門家裁定 2026-11-05）：0=全軸固有、1=一部汎用、2=全6軸汎用。
+  const genericNoteCount = genericAxisNoteCount(video);
+  const noteStage = video.axisScores.length === 0 ? 0 : genericNoteCount >= 6 ? 2 : genericNoteCount > 0 ? 1 : 0;
   const viewingTips = videoViewingTips(video);
   // 「次に見る1本」はページ内で nextPick（ロードマップ上の次を最優先）に統一する。
   // quick-next ナビ・独自解説・下部の次カードが別々の動画を指す矛盾をなくす（UX改善 P0-1）。
@@ -222,6 +229,33 @@ export default async function VideoPage({ params }: VideoPageProps) {
           <p className="video-score-note is-confirmed">
             {scoreConfirmationText}
           </p>
+          {position ? (
+            <dl className="video-genre-position" aria-label="ジャンル内の位置">
+              <div className="video-genre-position-head">
+                <dt>{genreDisplayName(video.genre)}の中での位置</dt>
+                <dd>掲載{position.count}本</dd>
+              </div>
+              <div>
+                <dt>スコア</dt>
+                <dd>{video.score}点 ／ ジャンル中央値 {position.medianScore}点</dd>
+              </div>
+              <div>
+                <dt>長さ</dt>
+                <dd>{video.minutes}分 ／ ジャンル中央値 {position.medianMinutes}分</dd>
+              </div>
+              <div>
+                <dt>位置</dt>
+                <dd>
+                  {position.higherCount > 0
+                    ? `この動画より高いスコアの動画は、ジャンルの${position.higherPercent}%（${position.higherCount}本）です`
+                    : "この動画より高いスコアの動画は、ジャンル内にありません"}
+                </dd>
+              </div>
+              <p className="video-genre-position-link">
+                <Link href="/research/youtube-learning-data/">集計の方法と全ジャンルの分布を見る <span aria-hidden="true">→</span></Link>
+              </p>
+            </dl>
+          ) : null}
           <ol className="video-review-list">
             {video.review.map((line, index) => (
               <li key={`${index}-${line}`}>
@@ -365,8 +399,13 @@ export default async function VideoPage({ params }: VideoPageProps) {
         </div>
       </FoldSection>
 
-      <FoldSection className="video-axis-section" titleId="score-detail-title" titleClassName="section-title" eyebrow="Manapickスコア" title="7軸の採点コメント" hint={scoreText(video)}>
+      <FoldSection className="video-axis-section" titleId="score-detail-title" titleClassName="section-title" eyebrow="Manapickスコア" title={noteStage === 2 ? "7軸の採点メモ（公開情報に基づく一次評価）" : "7軸の採点コメント"} hint={scoreText(video)}>
         <p className="video-axis-method"><Link href="/about-score/">採点方法を見る</Link></p>
+        {noteStage === 2 ? (
+          <p className="video-axis-note-disclosure">この動画の軸別コメントは作成中のため、点数のみを表示しています。点数は、運営者の視聴またはYouTube上の公開情報の確認に基づく一次評価です。採点の考え方は「採点方法」で説明しています。</p>
+        ) : noteStage === 1 ? (
+          <p className="video-axis-note-disclosure">一部の軸は個別コメントを作成中のため、「一次評価」と付いた軸は点数のみを表示しています。点数は、運営者の視聴またはYouTube上の公開情報の確認に基づく評価です。</p>
+        ) : null}
         <div className="video-axis-commentary">
           {axisCommentary.map((line) => (
             <p key={line}>{line}</p>
@@ -374,12 +413,18 @@ export default async function VideoPage({ params }: VideoPageProps) {
         </div>
         {video.axisScores.length > 0 ? (
           <dl className="video-axis-grid">
-            {video.axisScores.map((axis) => (
-              <div key={axis.axis}>
-                <dt>{axis.axis} <span>{axis.score}/5</span></dt>
-                <dd>{axis.note}</dd>
-              </div>
-            ))}
+            {video.axisScores.map((axis) => {
+              const generic = isGenericAxisNote(axis);
+              return (
+                <div key={axis.axis}>
+                  <dt>
+                    {axis.axis} <span>{axis.score}/5</span>
+                    {generic ? <span className="video-axis-primary-chip">一次評価</span> : null}
+                  </dt>
+                  {generic ? null : <dd>{axis.note}</dd>}
+                </div>
+              );
+            })}
           </dl>
         ) : (
           <p className="video-empty-score">{scoreConfirmationText}</p>

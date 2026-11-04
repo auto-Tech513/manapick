@@ -191,7 +191,7 @@ export default function MyPageClient() {
       if (target instanceof HTMLDetailsElement) target.open = true;
     };
     const syncDetails = () => {
-      const defaultOpenIds = new Set(media.matches ? ["my-summary"] : ["my-summary", "my-genre"]);
+      const defaultOpenIds = new Set(media.matches ? ["my-summary"] : ["my-summary", "my-guides"]);
       const sections = Array.from(document.querySelectorAll<HTMLDetailsElement>(".my-section-details"));
       for (const section of sections) {
         section.open = defaultOpenIds.has(section.id);
@@ -237,8 +237,8 @@ export default function MyPageClient() {
       <nav className="my-page-toc" aria-label="マイページ内メニュー">
         <a href="#my-summary" onClick={() => openSection("my-summary")}>サマリー</a>
         <a href="#my-notes" onClick={() => openSection("my-notes")}>学びメモ</a>
-        <a href="#my-genre" onClick={() => openSection("my-genre")}>ジャンル達成率</a>
         <a href="#my-guides" onClick={() => openSection("my-guides")}>ガイド進捗</a>
+        <a href="#my-genre" onClick={() => openSection("my-genre")}>ジャンル達成率</a>
         <a href="#my-badges" onClick={() => openSection("my-badges")}>バッジ</a>
         <a href="#my-saved" onClick={() => openSection("my-saved")}>保存・履歴</a>
       </nav>
@@ -366,28 +366,7 @@ export default function MyPageClient() {
         </section>
       </details>
 
-      <details id="my-genre" className="my-section-details" open>
-        <summary className="my-accordion-summary">
-          <span>ジャンル達成率</span>
-          <small>横にスワイプして確認</small>
-        </summary>
-        <section className="my-section" aria-labelledby="my-genre-title">
-          <div className="my-section-heading">
-            <div>
-              <p className="section-eyebrow">ジャンル別</p>
-              <h2 id="my-genre-title">達成率</h2>
-            </div>
-          </div>
-          <p className="my-scroll-hint">横にスワイプ →</p>
-          <div className="my-progress-list">
-            {genreProgress.map((item) => (
-              <ProgressRow key={item.key} label={item.label} count={item.count} total={item.total} percent={item.percent} />
-            ))}
-          </div>
-        </section>
-      </details>
-
-      <details id="my-guides" className="my-section-details">
+      <details id="my-guides" className="my-section-details" open>
         <summary className="my-accordion-summary">
           <span>ガイド進捗</span>
           <small>ロードマップ別の進み具合</small>
@@ -419,6 +398,35 @@ export default function MyPageClient() {
                   </a>
                 ) : null}
               </div>
+            ))}
+          </div>
+        </section>
+      </details>
+
+      <details id="my-genre" className="my-section-details">
+        <summary className="my-accordion-summary">
+          <span>ジャンル達成率</span>
+          <small>横にスワイプして確認</small>
+        </summary>
+        <section className="my-section" aria-labelledby="my-genre-title">
+          <div className="my-section-heading">
+            <div>
+              <p className="section-eyebrow">ジャンル別</p>
+              <h2 id="my-genre-title">達成率</h2>
+            </div>
+          </div>
+          <p className="my-genre-note">達成率はジャンルの掲載全本数が分母です。ロードマップに沿って進める場合は、ガイド進捗が目安になります。</p>
+          <p className="my-scroll-hint">横にスワイプ →</p>
+          <div className="my-progress-list">
+            {genreProgress.map((item) => (
+              <ProgressRow
+                key={item.key}
+                label={item.label}
+                count={item.count}
+                total={item.total}
+                percent={item.percent}
+                milestone={genreMilestone(item.count, item.total, item.percent)}
+              />
             ))}
           </div>
         </section>
@@ -508,17 +516,44 @@ function MyStat({ label, value, note, help }: { label: string; value: string; no
   );
 }
 
-function ProgressRow({ label, count, total, percent }: { label: string; count: number; total: number; percent: number }) {
+const PROGRESS_MILESTONES = [10, 25, 50, 75, 100];
+
+// 次の節目までの距離。節目は「表示中（丸め後）の達成率より大きい」ものだけを選び、
+// 画面の数字と矛盾しないようにする（UX改善 P2-1、2026-11-05）。
+function genreMilestone(count: number, total: number, percent: number): string | null {
+  if (count === 0 || total === 0 || count >= total) return null;
+  const milestone = PROGRESS_MILESTONES.find((value) => value > percent);
+  if (milestone === undefined) return null;
+  const needed = Math.ceil((milestone * total) / 100) - count;
+  return needed >= 1 ? `あと${needed}本で${milestone}%` : null;
+}
+
+function ProgressRow({
+  label,
+  count,
+  total,
+  percent,
+  milestone
+}: {
+  label: string;
+  count: number;
+  total: number;
+  percent: number;
+  milestone?: string | null;
+}) {
   return (
-    <div className="my-progress-row">
-      <div>
-        <strong>{label}</strong>
-        <span>{count}/{total}本</span>
+    <div className="my-progress-row-wrap">
+      <div className="my-progress-row">
+        <div>
+          <strong>{label}</strong>
+          <span>{count}/{total}本</span>
+        </div>
+        <div className="my-progress-track" aria-hidden="true">
+          <span style={{ width: percent + "%" }} />
+        </div>
+        <small>{percent}%</small>
       </div>
-      <div className="my-progress-track" aria-hidden="true">
-        <span style={{ width: percent + "%" }} />
-      </div>
-      <small>{percent}%</small>
+      {milestone ? <p className="my-progress-milestone">{milestone}</p> : null}
     </div>
   );
 }
