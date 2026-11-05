@@ -12,6 +12,21 @@ export type NewsLink = {
   kind: "guide" | "intent" | "video" | "ai" | "career";
 };
 
+export type NewsFigureRow = {
+  label: string;
+  before?: string;
+  after?: string;
+  value?: string;
+};
+
+// 本文中の図表（任意）。数値は記事の facts / 本文で確認済みのものだけを入れ、
+// 出典は記事の sourceUrl と同一とする。作れない記事には付けない。
+export type NewsFigure = {
+  type: "compare" | "limits";
+  title: string;
+  rows: NewsFigureRow[];
+};
+
 export type NewsItem = {
   id: string;
   headline: string;
@@ -29,6 +44,7 @@ export type NewsItem = {
   facts: string[];
   sections: NewsSection[];
   relatedLinks: NewsLink[];
+  figure?: NewsFigure;
 };
 
 export const newsItems = (newsData as NewsItem[]).slice().sort((a, b) =>
@@ -37,6 +53,12 @@ export const newsItems = (newsData as NewsItem[]).slice().sort((a, b) =>
 
 export function newsPath(id: string) {
   return `/news/${id}/`;
+}
+
+export function relatedNewsItems(item: NewsItem, count = 3): NewsItem[] {
+  return newsItems
+    .filter((candidate) => candidate.category === item.category && candidate.id !== item.id)
+    .slice(0, count);
 }
 
 export function findNews(id: string) {

@@ -6,7 +6,8 @@ import AdSlot from "@/components/AdSlot";
 import BrandLogo from "@/components/BrandLogo";
 import NewsShareBar from "@/components/NewsShareBar";
 import { absoluteUrl } from "@/lib/manapick";
-import { findNews, newsItems, newsPath, newsReadingMinutes } from "@/lib/news";
+import { findNews, newsItems, newsPath, newsReadingMinutes, relatedNewsItems } from "@/lib/news";
+import NetworkContextBand from "@/components/NetworkContextBand";
 
 type NewsDetailPageProps = {
   params: Promise<{ id: string }>;
@@ -19,6 +20,9 @@ function formatDate(value: string) {
 export function generateStaticParams() {
   return newsItems.map((item) => ({ id: item.id }));
 }
+
+// ニュースのカテゴリを姉妹サイト連携バンドのジャンルへ対応させる。
+const NEWS_GENRE: Record<string, string> = { ai: "ai", data: "data", work: "biz" };
 
 export async function generateMetadata({ params }: NewsDetailPageProps): Promise<Metadata> {
   const { id } = await params;
@@ -58,6 +62,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
   if (!item) notFound();
 
   const url = absoluteUrl(newsPath(item.id));
+  const related = relatedNewsItems(item);
   const image = absoluteUrl(`/og/news/${item.id}.png`);
   const structuredData = {
     "@context": "https://schema.org",
@@ -118,19 +123,43 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
         <p className="news-article-byline">執筆・確認：<Link href="/operator/">Manapick 編集部</Link></p>
       </header>
 
-      <NewsShareBar title={item.headline} url={url} />
-
       <div className="news-article-layout">
         <article className="news-article-body">
+          <section className="news-fact-section" aria-labelledby="facts-title">
+            <h2 id="facts-title">公式発表で確認できたこと</h2>
+            <ul>{item.facts.map((fact) => <li key={fact}>{fact}</li>)}</ul>
+          </section>
+
+          {item.figure ? (
+            <section className="news-figure" aria-labelledby="figure-title">
+              <h2 id="figure-title">{item.figure.title}</h2>
+              <table>
+                {item.figure.type === "compare" ? (
+                  <>
+                    <thead>
+                      <tr><th scope="col">項目</th><th scope="col">変更前</th><th scope="col">変更後</th></tr>
+                    </thead>
+                    <tbody>
+                      {item.figure.rows.map((row) => (
+                        <tr key={row.label}><th scope="row">{row.label}</th><td>{row.before}</td><td>{row.after}</td></tr>
+                      ))}
+                    </tbody>
+                  </>
+                ) : (
+                  <tbody>
+                    {item.figure.rows.map((row) => (
+                      <tr key={row.label}><th scope="row">{row.label}</th><td>{row.value}</td></tr>
+                    ))}
+                  </tbody>
+                )}
+              </table>
+            </section>
+          ) : null}
+
           <section className="news-why-care" aria-labelledby="why-care-title">
             <p className="section-eyebrow">Why It Matters</p>
             <h2 id="why-care-title">この更新が学びにどう関係するか</h2>
             <p>{item.whyCare}</p>
-          </section>
-
-          <section className="news-fact-section" aria-labelledby="facts-title">
-            <h2 id="facts-title">公式発表で確認できたこと</h2>
-            <ul>{item.facts.map((fact) => <li key={fact}>{fact}</li>)}</ul>
           </section>
 
           {item.sections.map((section, index) => (
@@ -167,6 +196,27 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
           </section>
         </aside>
       </div>
+
+      {related.length ? (
+        <section className="news-related" aria-labelledby="news-related-title">
+          <p className="section-eyebrow">Related News</p>
+          <h2 id="news-related-title">同じカテゴリのニュース</h2>
+          <ul>
+            {related.map((rel) => (
+              <li key={rel.id}>
+                <Link href={newsPath(rel.id)}>
+                  <time dateTime={rel.publishedAt}>{formatDate(rel.publishedAt)}</time>
+                  <span>{rel.headline}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
+      <NetworkContextBand genreKey={NEWS_GENRE[item.category] ?? "biz"} skipHrefs={item.relatedLinks.map((link) => link.href)} />
+
+      <NewsShareBar title={item.headline} url={url} />
       <AdSlot slot="1438236565" />
     </main>
   );

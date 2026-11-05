@@ -103,6 +103,7 @@ export default function NewsPage() {
           <span>事実と活用法を分離</span>
           <span>公開日・確認日を表示</span>
         </div>
+        <p className="news-index-scope">現在の掲載は、主に Google Workspace の公式アップデートを追っています。</p>
       </section>
 
       <section className="knowledge-section news-index-section" aria-labelledby="news-list-title">

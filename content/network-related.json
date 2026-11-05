@@ -585,6 +585,20 @@
           "href": "https://ai.manapick.app/tool/notebooklm/",
           "label": "Gemini Notebook（NotebookLM）"
         }
+      ],
+      "career": [
+        {
+          "href": "https://career.manapick.app/guide/lawyer-vs-shiho-vs-gyosei/",
+          "label": "弁護士・司法書士・行政書士の違い"
+        },
+        {
+          "href": "https://career.manapick.app/guide/sharoushi-vs-gyoseishoshi/",
+          "label": "社会保険労務士と行政書士の違い"
+        },
+        {
+          "href": "https://career.manapick.app/guide/shiho-shoshi-vs-land-surveyor/",
+          "label": "司法書士と土地家屋調査士の違い"
+        }
       ]
     }
   },

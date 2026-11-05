@@ -8,6 +8,7 @@ import NetworkContextBand from "@/components/NetworkContextBand";
 import FoldSection from "@/components/FoldSection";
 import prLinksData from "@/content/pr-links.json";
 import { findGuide, guidePath, guides, guideStepVideos, type Guide } from "@/lib/guides";
+import { newsItems, newsPath } from "@/lib/news";
 import {
   absoluteUrl,
   genreDisplayName,
@@ -102,6 +103,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
   const totalMinutes = guide.steps.reduce((sum, step) => {
     return sum + guideStepVideos(step).reduce((stepSum, item) => stepSum + item.video.minutes, 0);
   }, 0);
+  const newsCategory = ({ ai: "ai", data: "data", biz: "work" } as Record<string, string>)[guide.genre];
+  const latestNews = newsCategory ? newsItems.find((item) => item.category === newsCategory) : undefined;
   const readingMinutes = guideReadingMinutes(guide);
   const learnPoints = guideLearnPoints(guide);
   const stumbleRows = guideStumbleRows(guide);
@@ -250,24 +253,10 @@ export default async function GuidePage({ params }: GuidePageProps) {
             <p><strong>合計視聴時間：</strong>{totalVideos}本・約{durationLabel(totalMinutes)}。動画カードの時間はvideos.jsonから自動で表示しています。</p>
           </div>
           </details>
-          <details className="guide-toc">
-            <summary>目次</summary>
-            <ol>
-              <li><a href="#guide-conclusion-title">結論：この順番で見れば最短です</a></li>
-              <li><a href="#guide-quick-faq-title">このページのQ&amp;A</a></li>
-              <li><a href="#guide-reason-title">なぜこの順番か</a></li>
-              <li><a href="#guide-videos-title">各STEPの厳選動画</a></li>
-              <li><a href="#guide-next-title">つまずきポイントと回避策</a></li>
-              <li><a href="#guide-plan-title">学習プラン例</a></li>
-              {remainingFaq.length > 0 ? <li><a href="#guide-faq-title">補足FAQ</a></li> : null}
-              <li><a href="#guide-cta-title">関連ロードマップ</a></li>
-            </ol>
-          </details>
         </section>
 
         <section className="guide-section" aria-labelledby="guide-conclusion-title">
           <h2 id="guide-conclusion-title">結論：この順番で見れば最短です</h2>
-          <p>{strongText(guide.intro)}</p>
           <ul className="guide-step-summary">
             {guide.conclusionBullets.map((item) => (
               <li key={item.label}>
@@ -286,6 +275,19 @@ export default async function GuidePage({ params }: GuidePageProps) {
         </FoldSection>
 
         <AdSlot slot="1438236565" />
+          <details className="guide-toc">
+            <summary>目次</summary>
+            <ol>
+              <li><a href="#guide-conclusion-title">結論：この順番で見れば最短です</a></li>
+              <li><a href="#guide-quick-faq-title">このページのQ&amp;A</a></li>
+              <li><a href="#guide-reason-title">なぜこの順番か</a></li>
+              <li><a href="#guide-videos-title">各STEPの厳選動画</a></li>
+              <li><a href="#guide-next-title">つまずきポイントと回避策</a></li>
+              <li><a href="#guide-plan-title">学習プラン例</a></li>
+              {remainingFaq.length > 0 ? <li><a href="#guide-faq-title">補足FAQ</a></li> : null}
+              <li><a href="#guide-cta-title">関連ロードマップ</a></li>
+            </ol>
+          </details>
         <section className="guide-section" aria-labelledby="guide-videos-title">
           <h2 id="guide-videos-title">各STEPの厳選動画</h2>
           <div className="guide-step-list">
@@ -402,6 +404,19 @@ export default async function GuidePage({ params }: GuidePageProps) {
             ))}
           </div>
         </section>
+
+        {latestNews ? (
+          <section className="guide-section guide-related-news" aria-labelledby="guide-news-title">
+            <p className="section-eyebrow">Related News</p>
+            <h2 id="guide-news-title">関連する公式アップデート</h2>
+            <p>
+              <Link href={newsPath(latestNews.id)}>
+                <time dateTime={latestNews.publishedAt}>{latestNews.publishedAt.replaceAll("-", "/")}</time>
+                {" "}{latestNews.headline}
+              </Link>
+            </p>
+          </section>
+        ) : null}
 
         <NetworkContextBand genreKey={guide.genre} pagePath={`/guide/${guide.slug}/`} />
 

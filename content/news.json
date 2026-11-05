@@ -127,7 +127,25 @@
     "publishedAt": "2026-10-22",
     "lastChecked": "2026-10-26",
     "sourceName": "Google Workspace Updates",
-    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/10/real-time-speech-translation-in-google-Meet-expands-to-63-languages-with-automatic-language-detection.html"
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/10/real-time-speech-translation-in-google-Meet-expands-to-63-languages-with-automatic-language-detection.html",
+    "figure": {
+      "type": "limits",
+      "title": "プラン別の利用条件",
+      "rows": [
+        {
+          "label": "対応言語",
+          "value": "63言語の組み合わせで翻訳可能"
+        },
+        {
+          "label": "1回の会議で使える時間（基本のWorkspaceプラン・Google AI Pro）",
+          "value": "最大90分"
+        },
+        {
+          "label": "1回の会議で使える時間（AI Expanded Access・AI Ultra Access・Google AI Ultra）",
+          "value": "最大8時間"
+        }
+      ]
+    }
   },
   {
     "id": "2026-10-22-google-sheets-box-and-whisker-charts",
@@ -1037,7 +1055,18 @@
     "publishedAt": "2026-09-25",
     "lastChecked": "2026-10-26",
     "sourceName": "Google Workspace Updates",
-    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/view-up-to-three-time-zones-in-google-Calendar-on-the-web.html"
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/view-up-to-three-time-zones-in-google-Calendar-on-the-web.html",
+    "figure": {
+      "type": "compare",
+      "title": "変更点の対比",
+      "rows": [
+        {
+          "label": "並べて表示できるタイムゾーン",
+          "before": "最大2つ",
+          "after": "最大3つ"
+        }
+      ]
+    }
   },
   {
     "id": "2026-09-23-google-docs-gemini-notebook-grounding",
@@ -1752,7 +1781,18 @@
     "publishedAt": "2026-09-10",
     "lastChecked": "2026-10-26",
     "sourceName": "Google Workspace Updates",
-    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/doubled-cell-limits-in-google-sheets-now-generally-available.html"
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/09/doubled-cell-limits-in-google-sheets-now-generally-available.html",
+    "figure": {
+      "type": "compare",
+      "title": "変更点の対比",
+      "rows": [
+        {
+          "label": "1ファイルあたりのセル数の上限",
+          "before": "最大1,000万セル",
+          "after": "最大2,000万セル"
+        }
+      ]
+    }
   },
   {
     "id": "2026-09-09-google-sheets-pivot-calculated-field-editor",
@@ -3753,6 +3793,17 @@
         "href": "https://ai.manapick.app/",
         "kind": "ai"
       }
-    ]
+    ],
+    "figure": {
+      "type": "compare",
+      "title": "変更点の対比（カスタム指示、7月15日の案内）",
+      "rows": [
+        {
+          "label": "カスタム指示の文字数上限",
+          "before": "1,500文字",
+          "after": "5,000文字"
+        }
+      ]
+    }
   }
 ]
