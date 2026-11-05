@@ -23,6 +23,7 @@ import {
   scoreText,
   videoAudienceText,
   genericAxisNoteCount,
+  videoLargeImage,
   isGenericAxisNote,
   videoAxisCommentary,
   videoDescription,
@@ -65,7 +66,7 @@ export async function generateMetadata({ params }: VideoPageProps): Promise<Meta
   const title = video.title + " | Manapick";
   const description = videoDescription(video);
   const pageUrl = absoluteUrl(videoPath(video.ytid));
-  const image = youtubeThumbnail(video.ytid);
+  const image = videoLargeImage(video);
 
   return {
     title,
@@ -81,8 +82,8 @@ export async function generateMetadata({ params }: VideoPageProps): Promise<Meta
       images: [
         {
           url: image,
-          width: 480,
-          height: 360,
+          width: 1280,
+          height: 720,
           alt: video.title + "のサムネイル"
         }
       ]
@@ -131,7 +132,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
     "@type": "VideoObject",
     name: video.title,
     description: videoDescription(video),
-    thumbnailUrl: [youtubeThumbnail(video.ytid)],
+    thumbnailUrl: [videoLargeImage(video), youtubeThumbnail(video.ytid)],
     ...(video.publishedAt ? { uploadDate: video.publishedAt } : {}),
     duration: isoDuration(video.minutes),
     embedUrl: youtubeEmbedUrl(video.ytid),
@@ -207,7 +208,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
 
       <article className="video-detail-shell">
         <div className="video-detail-media">
-          <VideoEmbed ytid={video.ytid} title={video.title} />
+          <VideoEmbed ytid={video.ytid} title={video.title} poster={videoLargeImage(video)} />
         </div>
 
         <div className="video-detail-main">

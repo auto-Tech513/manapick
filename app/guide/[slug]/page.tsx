@@ -31,7 +31,8 @@ type GuidePageProps = {
 function guideModifiedAt(guide: Guide): string {
   return guide.updatedAt ?? guide.publishedAt;
 }
-const guideOgImage = absoluteUrl("/brand/ogp-manapick.png");
+// ガイド固有の生成 OG 画像（scripts/generate-guide-og.mjs、prebuild で生成）。
+const guideOgImage = (slug: string) => absoluteUrl(`/og/guides/${slug}.png`);
 const guideIconSources: Record<string, string> = {
   ai: "/brand/icon-ai.png",
   prog: "/brand/icon-prog.png",
@@ -74,7 +75,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
       modifiedTime: guideModifiedAt(guide),
       images: [
         {
-          url: guideOgImage,
+          url: guideOgImage(guide.slug),
           width: 1200,
           height: 630,
           alt: "Manapick - 学び直しを、最短ルートに。"
@@ -86,7 +87,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
       site: "@manapick_app",
       title: guide.title,
       description: guide.description,
-      images: [guideOgImage]
+      images: [guideOgImage(guide.slug)]
     }
   };
 }
@@ -121,7 +122,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         dateModified: guideModifiedAt(guide),
         inLanguage: "ja",
         mainEntityOfPage: pageUrl,
-        image: guideOgImage,
+        image: guideOgImage(guide.slug),
         author: {
           "@id": absoluteUrl("/#organization")
         },

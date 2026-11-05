@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --webpack",
-    "prebuild": "npm run content:audit && npm run news:quality && npm run news:og && npm run news:feed && npm run llms:generate && npm run redirects:generate",
+    "prebuild": "npm run content:audit && npm run news:quality && npm run news:og && npm run guides:og && npm run videos:og && npm run news:feed && npm run llms:generate && npm run redirects:generate",
     "build": "next build",
     "start": "next dev --webpack",
     "lint": "eslint .",
@@ -24,7 +24,10 @@
     "site:links": "node scripts/check-static-links.mjs",
     "pipeline:fetch": "node scripts/fetch-candidates.mjs",
     "pipeline:score": "node scripts/score-draft.mjs",
-    "pipeline:ingest": "node scripts/ingest.mjs"
+    "pipeline:ingest": "node scripts/ingest.mjs",
+    "guides:og": "node scripts/generate-guide-og.mjs",
+    "videos:og": "node scripts/generate-video-og.mjs",
+    "videos:maxres": "node scripts/backfill-maxres.mjs"
   },
   "dependencies": {
     "fuse.js": "^7.0.0",

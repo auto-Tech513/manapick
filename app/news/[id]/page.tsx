@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: NewsDetailPageProps): Promise
       url,
       type: "article",
       publishedTime: item.publishedAt,
-      modifiedTime: item.lastChecked,
+      modifiedTime: item.updatedAt,
       section: item.categoryLabel,
       images: [{ url: image, width: 1200, height: 630, alt: item.headline }]
     },
@@ -68,7 +68,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
         description: item.description,
         image: [image],
         datePublished: item.publishedAt,
-        dateModified: item.lastChecked,
+        ...(item.updatedAt ? { dateModified: item.updatedAt } : {}),
         articleSection: item.categoryLabel,
         inLanguage: "ja",
         mainEntityOfPage: url,
@@ -115,6 +115,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
           <time dateTime={item.lastChecked}>最終確認 {formatDate(item.lastChecked)}</time>
           <span>約{newsReadingMinutes(item)}分</span>
         </div>
+        <p className="news-article-byline">執筆・確認：<Link href="/operator/">Manapick 編集部</Link></p>
       </header>
 
       <NewsShareBar title={item.headline} url={url} />

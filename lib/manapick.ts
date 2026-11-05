@@ -51,6 +51,9 @@ export type Video = {
   scoreStatus?: ScoreStatus;
   scoreConfirmedAt?: string;
   editorNote?: string;
+  // YouTube Data API の thumbnails.maxres 有無（実寸確認で記録）。
+  // Discover の大きな画像の振り分けに使う。未記録は「なし」として扱う。
+  hasMaxresThumbnail?: boolean;
   axisScores: AxisScore[];
   title: string;
   url: string;
@@ -118,6 +121,14 @@ export function absoluteUrl(path: string) {
 
 export function youtubeThumbnail(ytid: string) {
   return "https://i.ytimg.com/vi/" + ytid + "/hqdefault.jpg";
+}
+
+// Discover の大きな画像（幅1200px以上・16:9）用。maxres（1280×720）が
+// ある動画はそれ、無い動画は生成カード（/og/videos/、1280×720）を使う。
+export function videoLargeImage(video: Video) {
+  return video.hasMaxresThumbnail
+    ? "https://i.ytimg.com/vi/" + video.ytid + "/maxresdefault.jpg"
+    : absoluteUrl("/og/videos/" + video.ytid + ".png");
 }
 
 export function youtubeEmbedUrl(ytid: string) {

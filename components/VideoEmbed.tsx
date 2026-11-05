@@ -3,7 +3,20 @@
 import Image from "next/image";
 import { useState } from "react";
 
-export default function VideoEmbed({ ytid, title }: { ytid: string; title: string }) {
+export default function VideoEmbed({
+  ytid,
+  title,
+  poster,
+  posterWidth = 1280,
+  posterHeight = 720
+}: {
+  ytid: string;
+  title: string;
+  // ファサードのポスターは Discover の大きな画像と同一のものを使う。
+  poster?: string;
+  posterWidth?: number;
+  posterHeight?: number;
+}) {
   const [playing, setPlaying] = useState(false);
 
   if (playing) {
@@ -28,10 +41,10 @@ export default function VideoEmbed({ ytid, title }: { ytid: string; title: strin
       aria-label={title + "をこのページで再生する"}
     >
       <Image
-        src={"https://i.ytimg.com/vi/" + ytid + "/hqdefault.jpg"}
+        src={poster ?? "https://i.ytimg.com/vi/" + ytid + "/hqdefault.jpg"}
         alt={title + "のサムネイル"}
-        width={480}
-        height={360}
+        width={poster ? posterWidth : 480}
+        height={poster ? posterHeight : 360}
         priority
         sizes="(min-width: 980px) 520px, 100vw"
         className="video-detail-thumb"

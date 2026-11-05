@@ -20,6 +20,9 @@ export type NewsItem = {
   categoryLabel: string;
   publishedAt: string;
   lastChecked: string;
+  // 内容を実質的に更新した日（任意）。最終確認日とは別で、構造化データの
+  // dateModified と OG の modifiedTime はこの値がある場合だけ出す。
+  updatedAt?: string;
   sourceName: string;
   sourceUrl: string;
   whyCare: string;

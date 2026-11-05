@@ -14601,3 +14601,14 @@ details.fold-group[hidden] {
   font-size: 0.85rem;
   line-height: 1.7;
 }
+
+.news-article-byline {
+  margin: 10px 0 0;
+  color: #5b6b7c;
+  font-size: 0.85rem;
+}
+.news-article-byline a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
