@@ -8,6 +8,7 @@ import NewsShareBar from "@/components/NewsShareBar";
 import { absoluteUrl } from "@/lib/manapick";
 import { findNews, newsItems, newsPath, newsReadingMinutes, relatedNewsItems } from "@/lib/news";
 import NetworkContextBand from "@/components/NetworkContextBand";
+import NewsletterSignup from "@/components/NewsletterSignup";
 
 type NewsDetailPageProps = {
   params: Promise<{ id: string }>;
@@ -215,6 +216,8 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
       ) : null}
 
       <NetworkContextBand genreKey={NEWS_GENRE[item.category] ?? "biz"} skipHrefs={item.relatedLinks.map((link) => link.href)} />
+
+      <NewsletterSignup placement="news_article" />
 
       <NewsShareBar title={item.headline} url={url} />
       <AdSlot slot="1438236565" />

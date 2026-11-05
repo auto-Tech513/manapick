@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import BrandLogo from "@/components/BrandLogo";
 import GuidePrCard from "@/components/GuidePrCard";
 import NetworkContextBand from "@/components/NetworkContextBand";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import FoldSection from "@/components/FoldSection";
 import prLinksData from "@/content/pr-links.json";
 import { findGuide, guidePath, guides, guideStepVideos, type Guide } from "@/lib/guides";
@@ -417,6 +418,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
             </p>
           </section>
         ) : null}
+
+        <NewsletterSignup placement="guide_article" />
 
         <NetworkContextBand genreKey={guide.genre} pagePath={`/guide/${guide.slug}/`} />
 

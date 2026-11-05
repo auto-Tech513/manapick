@@ -2,6 +2,7 @@ import { publishedGenreKeys } from "@/lib/manapick";
 import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
 import { siteStats } from "@/lib/site-stats";
 import SiteSearchForm from "@/components/SiteSearchForm";
+import NewsletterSignup from "@/components/NewsletterSignup";
 
 type FooterLink = {
   label: string;
@@ -137,6 +138,10 @@ export default function SiteFooter() {
             </section>
           ))}
         </nav>
+      </div>
+
+      <div className="site-footer-newsletter">
+        <NewsletterSignup placement="footer" dark />
       </div>
 
       <div className="site-footer-lower">

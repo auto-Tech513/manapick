@@ -14710,3 +14710,86 @@ details.fold-group[hidden] {
   color: #5b6b7c;
   font-size: 0.85rem;
 }
+
+/* メールマガジン登録（Kit へのネイティブPOSTフォーム） */
+.newsletter-signup {
+  margin-top: 40px;
+  padding: 26px 24px;
+  border: 1px solid #dbe3ef;
+  border-radius: 16px;
+  background: #f6f8fc;
+}
+.newsletter-signup h2 {
+  margin: 4px 0 8px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+.newsletter-signup p {
+  margin: 0;
+  line-height: 1.8;
+}
+.newsletter-signup form {
+  margin-top: 16px;
+}
+.newsletter-signup label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.newsletter-signup-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.newsletter-signup-row input {
+  flex: 1 1 240px;
+  min-height: 48px;
+  padding: 10px 14px;
+  border: 1px solid #c3cede;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--color-ink);
+  font-size: 1rem;
+}
+.newsletter-signup-row button {
+  min-height: 48px;
+  padding: 10px 22px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--color-ink);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.newsletter-signup small {
+  display: block;
+  margin-top: 12px;
+  color: #5b6b7c;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+.newsletter-signup.is-dark {
+  margin-top: 0;
+  border-color: #25304a;
+  background: #171e2e;
+  color: #fff;
+}
+.newsletter-signup.is-dark small {
+  color: rgba(255, 255, 255, 0.65);
+}
+.newsletter-signup.is-dark .newsletter-signup-row input {
+  border-color: #33405c;
+}
+.site-footer-newsletter {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 4px;
+}
+main .newsletter-signup {
+  width: min(1120px, calc(100% - 32px));
+  margin-right: auto;
+  margin-left: auto;
+}
