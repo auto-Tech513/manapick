@@ -49,7 +49,7 @@ export default function ContactPage() {
         </p>
         <a
           className="mt-5 inline-flex h-11 items-center justify-center rounded-md bg-primary px-5 text-sm font-black text-white shadow-button transition duration-200 ease-[var(--ease-standard)] hover:bg-primaryInk focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary motion-reduce:transition-none"
-          href="https://forms.gle/JzMbxUMYEucEZsbn6"
+          href="https://forms.gle/peNeHJf7paQw7Bqu8"
           target="_blank"
           rel="noopener"
         >
