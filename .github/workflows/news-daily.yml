@@ -42,7 +42,10 @@ jobs:
         run: npm run news:test && npm run lint && npm run build && npm run site:links
       - name: Commit generated article and assets
         run: |
-          if git diff --quiet; then
+          # 判定はコミット対象パスの差分だけで行う。検証ビルドが再生成する
+          # public/og/videos/*.png のバイナリ差分（実行環境のフォント差）で
+          # 「記事なし」の日が失敗扱いにならないようにするため。
+          if git diff --quiet -- content/news.json public/og/news public/news-feed.xml public/llms.txt; then
             echo "No qualifying official update today."
             exit 0
           fi
