@@ -227,6 +227,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
             <p className="section-eyebrow">結論先出し</p>
             <h2 id="guide-answer-title">まず何をすればいい？</h2>
             <p>{strongText(directAnswer)}</p>
+            <p>{guide.conclusionClosing}</p>
           </div>
           <div className="guide-quick-faq" aria-labelledby="guide-quick-faq-title">
             <h2 id="guide-quick-faq-title">このページのQ&amp;A</h2>
@@ -256,19 +257,6 @@ export default async function GuidePage({ params }: GuidePageProps) {
           </details>
         </section>
 
-        <section className="guide-section" aria-labelledby="guide-conclusion-title">
-          <h2 id="guide-conclusion-title">結論：この順番で見れば最短です</h2>
-          <ul className="guide-step-summary">
-            {guide.conclusionBullets.map((item) => (
-              <li key={item.label}>
-                <strong>{item.label}</strong>
-                <span>{item.text}</span>
-              </li>
-            ))}
-          </ul>
-          <p>合計{totalVideos}本・約{durationLabel(totalMinutes)}ぶん。{guide.conclusionClosing}</p>
-        </section>
-
         <FoldSection className="guide-section" titleId="guide-reason-title" title={guide.reasonTitle ?? "なぜこの順番か（多くの人がつまずく理由）"}>
           {guide.reasonParagraphs.map((paragraph) => (
             <p key={paragraph}>{strongText(paragraph)}</p>
@@ -279,7 +267,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           <details className="guide-toc">
             <summary>目次</summary>
             <ol>
-              <li><a href="#guide-conclusion-title">結論：この順番で見れば最短です</a></li>
+              <li><a href="#guide-answer-title">まず何をすればいい？</a></li>
               <li><a href="#guide-quick-faq-title">このページのQ&amp;A</a></li>
               <li><a href="#guide-reason-title">なぜこの順番か</a></li>
               <li><a href="#guide-videos-title">各STEPの厳選動画</a></li>

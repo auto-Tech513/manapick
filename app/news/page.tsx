@@ -104,6 +104,7 @@ export default function NewsPage() {
           <span>公開日・確認日を表示</span>
         </div>
         <p className="news-index-scope">現在の掲載は、主に Google Workspace の公式アップデートを追っています。</p>
+        <p className="news-index-scope">新着は<a href="/news-feed.xml">RSSフィード</a>でも受け取れます。</p>
       </section>
 
       <section className="knowledge-section news-index-section" aria-labelledby="news-list-title">

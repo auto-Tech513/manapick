@@ -5504,7 +5504,6 @@ ins.adsbygoogle:not(.ad-slot),
 
 .hero-lead-mobile,
 .mobile-hero-primary-cta,
-.mobile-weekly-pick-section,
 .mobile-genre-status-note,
 .mobile-filter-toggle,
 .mobile-back-to-top,
@@ -12204,25 +12203,6 @@ ins.adsbygoogle:not(.ad-slot),
     line-height: 1.25;
     text-decoration: none;
     box-shadow: var(--shadow-button);
-  }
-
-  .mobile-weekly-pick-section {
-    display: grid;
-    gap: 10px;
-    min-width: 0;
-    padding-block: 16px;
-  }
-
-  .mobile-weekly-pick-section .weekly-pick-heading {
-    margin-bottom: 0;
-  }
-
-  .mobile-weekly-pick-section .section-title {
-    font-size: 1.35rem;
-  }
-
-  .desktop-weekly-pick-section {
-    display: none;
   }
 
   .purpose-nav {

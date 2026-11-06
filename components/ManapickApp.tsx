@@ -1498,7 +1498,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
             <p className="hero-benefit-line">
               “次に見る1本”を最短で決める ／ 7軸35点で厳選 ／ 無料・登録不要
             </p>
-            <a className="mobile-hero-primary-cta" href="#mobile-weekly-pick">
+            <a className="mobile-hero-primary-cta" href="#weekly-pick">
               ▶ 迷ったら、まずこの1本
             </a>
             <PurposeNav onSelect={handlePurposeSelect} />
@@ -1509,20 +1509,26 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
               {" ／ 順次拡大"}
             </p>
           </div>
-          {weeklyPick ? (
-            <section id="mobile-weekly-pick" className="mobile-weekly-pick-section" aria-labelledby="mobile-weekly-pick-title">
-              <div className="weekly-pick-heading">
-                <p className="section-eyebrow">今週のイチオシ</p>
-                <h2 id="mobile-weekly-pick-title" className="section-title">最高スコアの一本から始める</h2>
-              </div>
-              <WeeklyPickCard video={weeklyPick} likeCounts={popularLikeCounts} />
-            </section>
-          ) : null}
           <div className="hero-visual-column">
             <HeroVideoCarousel slides={heroCarouselSlides} />
           </div>
         </div>
       </section>
+
+      {weeklyPick ? (
+        <section id="weekly-pick" className="weekly-pick-section" aria-labelledby="weekly-pick-title">
+          <div className="weekly-pick-shell">
+            <div className="weekly-pick-column">
+              <div className="weekly-pick-heading">
+                <p className="section-eyebrow">今週のイチオシ</p>
+                <h2 id="weekly-pick-title" className="section-title">最高スコアの一本から始める</h2>
+              </div>
+              <WeeklyPickCard video={weeklyPick} likeCounts={popularLikeCounts} />
+            </div>
+            <AllGenreHighlights onGenreSelect={jumpToGenre} />
+          </div>
+        </section>
+      ) : null}
 
       <WhyManapickSection />
 
@@ -1545,21 +1551,6 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
       />
 
       {recent.ready && recentVideos.length > 0 ? <RecentStrip videos={recentVideos} /> : null}
-
-      {weeklyPick ? (
-        <section className="weekly-pick-section desktop-weekly-pick-section" aria-labelledby="weekly-pick-title">
-          <div className="weekly-pick-shell">
-            <div className="weekly-pick-column">
-              <div className="weekly-pick-heading">
-                <p className="section-eyebrow">今週のイチオシ</p>
-                <h2 id="weekly-pick-title" className="section-title">最高スコアの一本から始める</h2>
-              </div>
-              <WeeklyPickCard video={weeklyPick} likeCounts={popularLikeCounts} imageLoading="lazy" />
-            </div>
-            <AllGenreHighlights onGenreSelect={jumpToGenre} />
-          </div>
-        </section>
-      ) : null}
 
       <section id="search" className="border-b border-line bg-white/64">
         <div className="mx-auto max-w-7xl px-4 py-7 min-[760px]:px-6">
@@ -3334,14 +3325,10 @@ function ScoreBadge({ video, compact = false }: { video: Video; compact?: boolea
 
 function WeeklyPickCard({
   video,
-  likeCounts,
-  imageLoading = "eager"
+  likeCounts
 }: {
   video: Video;
   likeCounts: LikeCounts;
-  // イチオシはモバイル/PCの2配置が両方DOMに残るため、片方のサムネイルだけ
-  // eager にし、もう片方は lazy にして二重取得を避ける（UX専門家判断 2026-11-04）。
-  imageLoading?: "eager" | "lazy";
 }) {
   const reviewLine = video.review[0] ?? "今週まず見てほしい、Manapick最高スコアの一本です。";
 
@@ -3355,7 +3342,7 @@ function WeeklyPickCard({
             width={480}
             height={270}
             sizes="(min-width: 1320px) 680px, (min-width: 760px) 92vw, 92vw"
-            loading={imageLoading}
+            loading="eager"
             className="absolute inset-0 h-full w-full object-cover"
           />
         </a>
