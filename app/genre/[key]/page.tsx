@@ -220,7 +220,7 @@ function genreSeoFor(key: string, label: string, count: number): GenreSeo {
     prog: "プログラミング",
     video: "動画編集",
     english: "英語",
-    data: "Excel・データ分析",
+    data: "データ分析・DX",
     marke: "Webマーケティング",
     biz: "Office・資料作成",
     shikaku: "資格試験",
