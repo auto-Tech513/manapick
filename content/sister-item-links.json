@@ -1384,5 +1384,53 @@
    "slug": "chori",
    "url": "https://license.manapick.app/license/chori/"
   }
+ ],
+ "5uGt_t4t1iU": [
+  {
+   "name": "Stable Diffusion",
+   "site": "ai",
+   "slug": "stable-diffusion",
+   "url": "https://ai.manapick.app/tool/stable-diffusion/"
+  }
+ ],
+ "EfF0jRP5vec": [
+  {
+   "name": "第一種衛生管理者",
+   "site": "license",
+   "slug": "eisei-kanri-1",
+   "url": "https://license.manapick.app/license/eisei-kanri-1/"
+  }
+ ],
+ "R7bo3KDMz-8": [
+  {
+   "name": "介護職員初任者研修",
+   "site": "license",
+   "slug": "kaigo-shoninsha",
+   "url": "https://license.manapick.app/license/kaigo-shoninsha/"
+  }
+ ],
+ "UZOencQhI1g": [
+  {
+   "name": "Siri",
+   "site": "ai",
+   "slug": "siri",
+   "url": "https://ai.manapick.app/tool/siri/"
+  }
+ ],
+ "dM0EVBvCyt8": [
+  {
+   "name": "ビジネス実務法務検定試験 3級",
+   "site": "license",
+   "slug": "biz-law-3",
+   "url": "https://license.manapick.app/license/biz-law-3/"
+  }
+ ],
+ "oszZEMGRbdQ": [
+  {
+   "name": "AWS認定 ソリューションアーキテクト アソシエイト",
+   "site": "license",
+   "slug": "aws-saa",
+   "url": "https://license.manapick.app/license/aws-saa/"
+  }
  ]
 }
