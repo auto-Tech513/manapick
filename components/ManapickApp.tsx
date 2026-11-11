@@ -1305,7 +1305,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
             />
           </div>
           <div className="header-actions">
-            <nav className="site-nav flex flex-wrap gap-3 text-sm font-semibold text-muted" aria-label="サイト内リンク">
+            <nav className="site-nav flex flex-wrap gap-3 text-sm font-bold text-muted" aria-label="サイト内リンク">
               <a className="transition hover:text-accent" href="#search">
                 探す
               </a>
