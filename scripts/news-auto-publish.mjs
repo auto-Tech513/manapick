@@ -77,20 +77,37 @@ ${[...allowedRelatedLinks].join("\n")}
 公式本文:
 ${candidate.sourceText}`;
 
-  const response = await fetch(provider.apiUrl, {
-    method: "POST",
-    headers: { "content-type": "application/json", authorization: `Bearer ${provider.apiKey}` },
-    body: JSON.stringify({
-      model: provider.model,
-      temperature: 0.15,
-      max_tokens: 5000,
-      messages: [
-        { role: "system", content: "Use only the supplied official source. Return valid JSON and no markdown." },
-        { role: "user", content: prompt }
-      ]
-    }),
-    signal: AbortSignal.timeout(120000)
+  const requestBody = JSON.stringify({
+    model: provider.model,
+    temperature: 0.15,
+    max_tokens: 5000,
+    messages: [
+      { role: "system", content: "Use only the supplied official source. Return valid JSON and no markdown." },
+      { role: "user", content: prompt }
+    ]
   });
+  // The free-tier provider intermittently needs longer than 120s for a full
+  // article; a single 120s cap silently dropped whole days (2026-11-09..11).
+  // Allow up to 240s per attempt and retry once on timeout / 429 / 5xx.
+  let response;
+  let lastError;
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    try {
+      response = await fetch(provider.apiUrl, {
+        method: "POST",
+        headers: { "content-type": "application/json", authorization: `Bearer ${provider.apiKey}` },
+        body: requestBody,
+        signal: AbortSignal.timeout(240000)
+      });
+    } catch (error) {
+      lastError = error;
+      response = undefined;
+    }
+    if (response?.ok) break;
+    if (response && response.status !== 429 && response.status < 500) break;
+    if (attempt < 2) await new Promise((resolve) => setTimeout(resolve, 15000));
+  }
+  if (!response) throw lastError ?? new Error("news provider request failed");
   if (!response.ok) throw new Error(`news provider HTTP ${response.status}: ${(await response.text()).slice(0, 500)}`);
   const payload = await response.json();
   const generated = extractJson(payload.choices?.[0]?.message?.content || "");
