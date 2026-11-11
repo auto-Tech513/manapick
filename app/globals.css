@@ -13246,7 +13246,7 @@ ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; height: 0
 @media (max-width: 900px) {
   .latest-news-grid,
   .news-index-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .news-article-layout { grid-template-columns: 1fr; }
+  .news-article-layout { grid-template-columns: minmax(0, 1fr); }
   .news-article-aside { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
@@ -14773,3 +14773,8 @@ main .newsletter-signup {
   margin-right: auto;
   margin-left: auto;
 }
+
+/* MAIN-U02: 幅広の表を含むニュース記事が 375px で横にはみ出さないようにする */
+.news-article-body,
+.news-article-aside { min-width: 0; }
+.news-article-body .news-figure { max-width: 100%; overflow-x: auto; }
