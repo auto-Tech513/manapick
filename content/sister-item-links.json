@@ -1432,5 +1432,13 @@
    "slug": "aws-saa",
    "url": "https://license.manapick.app/license/aws-saa/"
   }
+ ],
+ "SN2ilrxQ-N4": [
+  {
+   "site": "ai",
+   "slug": "chatgpt",
+   "name": "ChatGPT",
+   "url": "https://ai.manapick.app/tool/chatgpt/"
+  }
  ]
 }
