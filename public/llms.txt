@@ -4,14 +4,14 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 動画はYouTube上で公開されているものを掲載し、YouTubeへのリンクまたはYouTube公式プレーヤーで紹介します。ダウンロードや再配布は扱いません。
 
 ## 公開中の10ジャンル
-- 生成AI（153本）: https://manapick.app/genre/ai/
+- 生成AI（158本）: https://manapick.app/genre/ai/
 - プログラミング・IT（60本）: https://manapick.app/genre/prog/
 - 動画編集・クリエイティブ（70本）: https://manapick.app/genre/video/
 - 語学・英語（57本）: https://manapick.app/genre/english/
 - データ分析・DX（35本）: https://manapick.app/genre/data/
 - Webマーケ・SNS運用（31本）: https://manapick.app/genre/marke/
 - Office・資料作成（40本）: https://manapick.app/genre/biz/
-- 資格・検定（226本）: https://manapick.app/genre/shikaku/
+- 資格・検定（228本）: https://manapick.app/genre/shikaku/
 - 会計・経営系資格（61本）: https://manapick.app/genre/kaikei/
 - お金・投資（27本）: https://manapick.app/genre/money/
 
@@ -39,7 +39,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 2026-10-19 iPhoneのGoogle SheetsでもGeminiが使えるように、外出先で表を分析: https://manapick.app/news/2026-10-19-gemini-in-google-sheets-ios/ | 出典 Google Workspace Updates
 
 ## ジャンル別AEOインデックス
-### 生成AI（153本）
+### 生成AI（158本）
 - ジャンルURL: https://manapick.app/genre/ai/
 - ガイドURL: https://manapick.app/guide/generative-ai/
 - 主なトピック: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Cline / Copilot / DeepL / DeepSeek / ElevenLabs / Figma(Figma AI) / Gamma / Gemini / Gemma / GitHub Copilot / Google AI Mode / Google Veo / Google翻訳 / Grok / Hailuo AI / HeyGen / Kling AI / Manus / Midjourney / Notion AI / Notta / Ollama / OpenAI Codex / OpenClaw / Perplexity / PixVerse / Replit Agent / Runway / Siri AI / Stable Diffusion / Suno / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
@@ -144,7 +144,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【2025年最新】Geminiでパワポ・スライド資料を爆速作成する裏ワザを解説します（Office・資料作成 / 資料作成 / 30/35 / 19分 / publishedAt=2025-09-07T10:01:24Z） https://manapick.app/video/vri3RfONGfM/
 5. 【神アプデ】最新版Geminiでパワポ・スライド資料作成が一瞬で終わる方法を解説します（Office・資料作成 / 資料作成 / 30/35 / 14分 / publishedAt=2025-07-21T11:30:32Z） https://manapick.app/video/VY82g_vQzEM/
 
-### 資格・検定（226本）
+### 資格・検定（228本）
 - ジャンルURL: https://manapick.app/genre/shikaku/
 - ガイドURL: https://manapick.app/guide/certification/
 - 主なトピック: AI検定 / G検定 / IT / ITパスポート / MOS / ネイリスト / ビジネス実務法務検定試験 / 二級ボイラー技士 / 介護福祉士 / 保育士 / 医療事務 / 危険物乙4 / 国家公務員採用一般職試験 / 基本情報技術者 / 宅建 / 日本漢字能力検定 / 測量士補 / 生成AIパスポート / 登録販売者 / 社労士 / 秘書検定 / 第二種電気工事士 / 管理栄養士 / 管理業務主任者 / 行政書士 / 衛生管理者 / 賃貸不動産経営管理士 / 電験三種 / 食生活アドバイザー
@@ -153,11 +153,11 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
   - STEP2（中級）: ITパスポート・基本情報の全体像を押さえ、学習範囲を整理する。｜動画: 【2025年最新・完全保存版】超まとめ　ITパスポート最強勉強法 #ITパスポート, #ITパスポート試験,　#iパス / 【完全版】爆速合格ロードマップ！！ITパスポートに最速で合格するためのステップやコツをまとめて紹介！ / インターネットの仕組み入門～IPアドレス・DNS・MACアドレス【高校情報１・基本情報技術者・ITパスポート】高校情報Ⅰ教科書完全準拠版
   - STEP3（上級）: 過去問・重点分野へ進み、合格に向けた実践演習へ移る。｜動画: 【宅建】『権利関係』完全攻略法！合格率80%超の人気講師こざりえが完全解説！ / 【2023年版】基本情報技術者試験完全攻略（科目B解説編） / 最先端でAI活用したいならこのステップで学習してください！AI活用のプロがAI初心者からAIを使いこなすまでの学習法を解説します
 - 代表動画:
-1. 【資格完全版】数多くの資格試験を攻略した河野玄斗が実践する勉強法！この勉強法はきっとあなたの助けになります！【河野玄斗/資格/勉強】（資格・検定 / 基本情報技術者 / 31/35 / 20分 / publishedAt=2024-02-01T11:00:11Z） https://manapick.app/video/ER56G8-s7XM/
-2. 【2025年改訂版】危険物乙4「危険物の性質」を20分で完全解説｜特殊引火物〜動植物油類まで網羅｜聞き流しOK・試験直前対策にも！（資格・検定 / 危険物乙4 / 31/35 / 21分 / publishedAt=2025-03-20T09:00:39Z） https://manapick.app/video/YRnaxaX46pY/
-3. [セルフネイル🔰初心者] 知らないと損するベースジェルの作り方をプロが徹底解説（反り爪、下地作り）（資格・検定 / ネイリスト / 31/35 / 19分 / publishedAt=2025-06-14T11:05:06Z） https://manapick.app/video/zqz3bnvSg9I/
-4. 【宅建受験生必見】一発合格ロードマップ完全版！試験本番までのスケジュールと戦略をこざりえが徹底解説 ！（資格・検定 / 宅建 / 31/35 / 27分 / publishedAt=2026-04-25T10:00:53Z） https://manapick.app/video/_rIozAfVG3A/
-5. 【参考書を丸ごと１冊覚える方法】エクセルのスケジュール表を無料配布します！宅建合格までのロードマップを公開して解説します。大量記憶表ダウンロードできます。（資格・検定 / 宅建 / 31/35 / 19分 / publishedAt=2025-04-08T09:00:32Z） https://manapick.app/video/MpVoaibTNGk/
+1. 【2026年 対応】猿でも分かる‼️第2種電気工事士 筆記講義【第1講】電線の種類#第2種電気工事士#けみちる （資格・検定 / 第二種電気工事士 / 31/35 / 11分 / publishedAt=2021-10-06T21:54:47Z） https://manapick.app/video/ZXwfO1Wq5D4/
+2. 【資格完全版】数多くの資格試験を攻略した河野玄斗が実践する勉強法！この勉強法はきっとあなたの助けになります！【河野玄斗/資格/勉強】（資格・検定 / 基本情報技術者 / 31/35 / 20分 / publishedAt=2024-02-01T11:00:11Z） https://manapick.app/video/ER56G8-s7XM/
+3. 【2025年改訂版】危険物乙4「危険物の性質」を20分で完全解説｜特殊引火物〜動植物油類まで網羅｜聞き流しOK・試験直前対策にも！（資格・検定 / 危険物乙4 / 31/35 / 21分 / publishedAt=2025-03-20T09:00:39Z） https://manapick.app/video/YRnaxaX46pY/
+4. [セルフネイル🔰初心者] 知らないと損するベースジェルの作り方をプロが徹底解説（反り爪、下地作り）（資格・検定 / ネイリスト / 31/35 / 19分 / publishedAt=2025-06-14T11:05:06Z） https://manapick.app/video/zqz3bnvSg9I/
+5. 【宅建受験生必見】一発合格ロードマップ完全版！試験本番までのスケジュールと戦略をこざりえが徹底解説 ！（資格・検定 / 宅建 / 31/35 / 27分 / publishedAt=2026-04-25T10:00:53Z） https://manapick.app/video/_rIozAfVG3A/
 
 ### 会計・経営系資格（61本）
 - ジャンルURL: https://manapick.app/genre/kaikei/
@@ -221,7 +221,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 ## 主要URL
 - トップ: https://manapick.app/
 - YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
-- YouTube学習動画760本の独自集計: https://manapick.app/research/youtube-learning-data/
+- YouTube学習動画767本の独自集計: https://manapick.app/research/youtube-learning-data/
 - 7日学習プラン: https://manapick.app/study-plan/
 - Manapick Network（学ぶ・AI・資格・仕事・企業）: https://manapick.app/network/
 - 学習ロードマップ一覧: https://manapick.app/guide/
