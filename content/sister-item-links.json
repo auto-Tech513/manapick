@@ -1296,5 +1296,93 @@
    "slug": "codex",
    "url": "https://ai.manapick.app/tool/codex/"
   }
+ ],
+ "-5yA-CUphP8": [
+  {
+   "name": "色彩検定 3級",
+   "site": "license",
+   "slug": "shikisai-3",
+   "url": "https://license.manapick.app/license/shikisai-3/"
+  }
+ ],
+ "5fEKhO9OvFA": [
+  {
+   "name": "情報セキュリティマネジメント試験",
+   "site": "license",
+   "slug": "sg",
+   "url": "https://license.manapick.app/license/sg/"
+  }
+ ],
+ "CNxDmkMLNsM": [
+  {
+   "name": "二級ボイラー技士",
+   "site": "license",
+   "slug": "boiler-2",
+   "url": "https://license.manapick.app/license/boiler-2/"
+  }
+ ],
+ "KuR-lcoqrQY": [
+  {
+   "name": "AWS認定クラウドプラクティショナー",
+   "site": "license",
+   "slug": "aws-clf",
+   "url": "https://license.manapick.app/license/aws-clf/"
+  }
+ ],
+ "RjD6Hv0DWNc": [
+  {
+   "name": "管理業務主任者",
+   "site": "license",
+   "slug": "kanri-gyomu",
+   "url": "https://license.manapick.app/license/kanri-gyomu/"
+  }
+ ],
+ "SeLkpdUeJss": [
+  {
+   "name": "基本情報技術者試験",
+   "site": "license",
+   "slug": "fe",
+   "url": "https://license.manapick.app/license/fe/"
+  }
+ ],
+ "_RatwLpCMhM": [
+  {
+   "name": "管理業務主任者",
+   "site": "license",
+   "slug": "kanri-gyomu",
+   "url": "https://license.manapick.app/license/kanri-gyomu/"
+  }
+ ],
+ "ahdSvdkCO8M": [
+  {
+   "name": "ビジネス会計検定 3級",
+   "site": "license",
+   "slug": "biz-accounting-3",
+   "url": "https://license.manapick.app/license/biz-accounting-3/"
+  }
+ ],
+ "cTDTETumGxc": [
+  {
+   "name": "Webデザイナー",
+   "site": "career",
+   "slug": "web-designer",
+   "url": "https://career.manapick.app/career/web-designer/"
+  }
+ ],
+ "l6bUroqVrIg": [
+  {
+   "name": "Python3エンジニア認定基礎試験",
+   "site": "license",
+   "slug": "python3-basic",
+   "url": "https://license.manapick.app/license/python3-basic/"
+  }
+ ],
+ "vSh4byOJ6JQ": [
+  {
+   "name": "調理師",
+   "site": "license",
+   "slug": "chori",
+   "url": "https://license.manapick.app/license/chori/"
+  }
  ]
 }

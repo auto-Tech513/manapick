@@ -5,14 +5,14 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 
 ## 公開中の10ジャンル
 - 生成AI（172本）: https://manapick.app/genre/ai/
-- プログラミング・IT（60本）: https://manapick.app/genre/prog/
-- 動画編集・クリエイティブ（70本）: https://manapick.app/genre/video/
-- 語学・英語（57本）: https://manapick.app/genre/english/
+- プログラミング・IT（64本）: https://manapick.app/genre/prog/
+- 動画編集・クリエイティブ（72本）: https://manapick.app/genre/video/
+- 語学・英語（58本）: https://manapick.app/genre/english/
 - データ分析・DX（35本）: https://manapick.app/genre/data/
 - Webマーケ・SNS運用（31本）: https://manapick.app/genre/marke/
 - Office・資料作成（40本）: https://manapick.app/genre/biz/
-- 資格・検定（239本）: https://manapick.app/genre/shikaku/
-- 会計・経営系資格（61本）: https://manapick.app/genre/kaikei/
+- 資格・検定（243本）: https://manapick.app/genre/shikaku/
+- 会計・経営系資格（62本）: https://manapick.app/genre/kaikei/
 - お金・投資（27本）: https://manapick.app/genre/money/
 
 ## 採点方法
@@ -54,10 +54,10 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【初心者OK🔰】アンソロピック「Claude Cowork」使い方基礎講座！活用法まで分かりやすく解説！（生成AI / Claude / 33/35 / 23分 / publishedAt=2026-03-14T10:15:05Z） https://manapick.app/video/NTFIFwmrjiw/
 5. 【完全版】Googleの最強AIツールGeminiの使い方徹底解説【初心者必見】（生成AI / Gemini / 33/35 / 31分 / publishedAt=2026-03-11T11:15:03Z） https://manapick.app/video/SfCNwzANbUY/
 
-### プログラミング・IT（60本）
+### プログラミング・IT（64本）
 - ジャンルURL: https://manapick.app/genre/prog/
 - ガイドURL: https://manapick.app/guide/python/
-- 主なトピック: AWS認定 クラウドプラクティショナー / AWS認定 ソリューションアーキテクト / Git / JavaScript / Python / SQL / Web開発 / アプリ / インフラ / 情報セキュリティマネジメント試験
+- 主なトピック: AWS認定 クラウドプラクティショナー / AWS認定 ソリューションアーキテクト / Git / JavaScript / Python / Python3エンジニア認定基礎試験 / SQL / Web開発 / アプリ / インフラ / 基本情報技術者 / 情報セキュリティマネジメント試験
 - ロードマップ: プログラミングロードマップ
   - STEP1（初級）: Pythonの環境と基本文法を一周し、学習の全体像をつかむ。｜動画: 【最新版】Python超入門講座（合併版）｜Pythonの超基本的な部分をたった1時間で学べます【プログラミング初心者向け入門講座】 / 【Python入門】8分で挫折知らず！プログラミングの基礎を完全攻略 / 【初心者でもわかる！】Gitの使い方講座
   - STEP2（中級）: 長尺で反復しながら、基礎を体系的に固める。｜動画: Python学習ロードマップを40分で徹底解説｜作りたいもの別のおすすめ学習方法、学習時間を初心者向けに解説 / 【プログラミング入門】SQLの基本を解説！データベース操作の学ぼう！〜VTuberと学習〜【初心者向け】 / 【Git入門講座 合併版】この動画1本でGitとGitHubの基礎をゼロからマスター！【初心者向け】
@@ -69,10 +69,10 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 0から学ぶGit/GitHub！初心者でもこの動画でAI時代に必須なGit/GitHubを理解できます！（プログラミング・IT / Git / 31/35 / 33分 / publishedAt=2026-07-12T09:00:05Z） https://manapick.app/video/Zk-INRORkFo/
 5. 【2026年春最新】Claude Code(クロードコード)を使うなら知っておきたいGitHub超入門｜しくみ・導入・使い方をやさしく解説！（プログラミング・IT / Git / 31/35 / 23分 / publishedAt=2026-05-03T09:06:05Z） https://manapick.app/video/a_ETr9zrkQg/
 
-### 動画編集・クリエイティブ（70本）
+### 動画編集・クリエイティブ（72本）
 - ジャンルURL: https://manapick.app/genre/video/
 - ガイドURL: https://manapick.app/guide/video-editing/
-- 主なトピック: After Effects / CapCut / DaVinci / Premiere Pro / デザイン / 色彩検定
+- 主なトピック: After Effects / CapCut / DaVinci / Premiere Pro / Webクリエイター能力認定試験 / デザイン / 色彩検定
 - ロードマップ: 動画編集ロードマップ
   - STEP1（初級）: 編集の流れと初期設定を把握し、1本目の編集に着手できる。｜動画: 【2025年最新】1本で丸わかり！初心者にも優しいYouTube動画編集のやり方を徹底解説！【Premiere Pro】 / 【PremierePro入門講座#1】超初心者向けプレミアプロの始め方「新規プロジェクト・シーケンス・素材取り込み方法」 / 【2026年最新版】CapCutの使い方&編集方法を0から完全解説！動画編集初心者でも大丈夫！#CapCut使い方 #キャップカット使い方#capcut操作方法#cupcut無料#
   - STEP2（中級）: 公式の基本操作を確認し、カット編集を安定して行える。｜動画: 【Premiere Pro初心者講座】自動文字起こし機能の使い方徹底解説「フルテロップも簡単！」 / 【保存版】初心者のためのCapCut基本操作方法 | おすすめの編集手順で解説します！これだけ見れば完全攻略 | スマホ動画編集 / 【2025年最新】アフターエフェクト初心者が最初に覚える２０の基本！After Effects基本操作〜応用まで幅広く完全攻略！【永久保存版】
@@ -84,7 +84,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【Premiere Pro初心者講座】自動文字起こし機能の使い方徹底解説「フルテロップも簡単！」（動画編集・クリエイティブ / Premiere Pro / 32/35 / 21分 / publishedAt=2025-06-18T11:00:33Z） https://manapick.app/video/C9GymZxUrF4/
 5. 【完全無料】はじめてのDavinci Resolve！無料版を使った動画編集初心者向け編集チュートリアル！超入門20分解説。【2025年最新版ダビンチリゾルブの使い方】（動画編集・クリエイティブ / DaVinci / 32/35 / 28分 / publishedAt=2025-10-30T10:45:07Z） https://manapick.app/video/vjFZXXPA888/
 
-### 語学・英語（57本）
+### 語学・英語（58本）
 - ジャンルURL: https://manapick.app/genre/english/
 - ガイドURL: https://manapick.app/guide/english/
 - 主なトピック: TOEIC / 「ハングル」能力検定 / ビジネス英語 / 発音 / 英会話 / 英検
@@ -144,10 +144,10 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【2025年最新】Geminiでパワポ・スライド資料を爆速作成する裏ワザを解説します（Office・資料作成 / 資料作成 / 30/35 / 19分 / publishedAt=2025-09-07T10:01:24Z） https://manapick.app/video/vri3RfONGfM/
 5. 【神アプデ】最新版Geminiでパワポ・スライド資料作成が一瞬で終わる方法を解説します（Office・資料作成 / 資料作成 / 30/35 / 14分 / publishedAt=2025-07-21T11:30:32Z） https://manapick.app/video/VY82g_vQzEM/
 
-### 資格・検定（239本）
+### 資格・検定（243本）
 - ジャンルURL: https://manapick.app/genre/shikaku/
 - ガイドURL: https://manapick.app/guide/certification/
-- 主なトピック: AI検定 / G検定 / IT / ITパスポート / MOS / ネイリスト / ビジネス実務法務検定試験 / 二級ボイラー技士 / 介護福祉士 / 保育士 / 医療事務 / 危険物乙4 / 国家公務員採用一般職試験 / 基本情報技術者 / 宅建 / 日商PC検定 / 日本漢字能力検定 / 測量士補 / 生成AIパスポート / 登録販売者 / 社労士 / 秘書検定 / 第二種電気工事士 / 管理栄養士 / 管理業務主任者 / 行政書士 / 衛生管理者 / 賃貸不動産経営管理士 / 電験三種 / 食生活アドバイザー
+- 主なトピック: AI検定 / G検定 / IT / ITパスポート / MOS / ネイリスト / ビジネス実務法務検定試験 / 二級ボイラー技士 / 介護福祉士 / 保育士 / 医療事務 / 危険物乙4 / 国家公務員採用一般職試験 / 基本情報技術者 / 宅建 / 日商PC検定 / 日本漢字能力検定 / 測量士補 / 生成AIパスポート / 登録販売者 / 社労士 / 秘書検定 / 第二種電気工事士 / 管理栄養士 / 管理業務主任者 / 行政書士 / 衛生管理者 / 調理師 / 賃貸不動産経営管理士 / 電験三種 / 食生活アドバイザー
 - ロードマップ: 資格・検定ロードマップ
   - STEP1（初級）: 宅建学習のスケジュールと独学の進め方を決める。｜動画: 【2026年宅建】今年の宅建に受かりたい人は絶対見て！１月から勉強を始めた人向けに合格までのロードマップを徹底解説します / 【宅建受験生必見】一発合格ロードマップ完全版！試験本番までのスケジュールと戦略をこざりえが徹底解説 ！ / 【宅建2026】完全初心者OK！この勉強スケジュールで一発合格【保存版】
   - STEP2（中級）: ITパスポート・基本情報の全体像を押さえ、学習範囲を整理する。｜動画: 【2025年最新・完全保存版】超まとめ　ITパスポート最強勉強法 #ITパスポート, #ITパスポート試験,　#iパス / 【完全版】爆速合格ロードマップ！！ITパスポートに最速で合格するためのステップやコツをまとめて紹介！ / インターネットの仕組み入門～IPアドレス・DNS・MACアドレス【高校情報１・基本情報技術者・ITパスポート】高校情報Ⅰ教科書完全準拠版
@@ -159,10 +159,10 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【2025年改訂版】危険物乙4「危険物の性質」を20分で完全解説｜特殊引火物〜動植物油類まで網羅｜聞き流しOK・試験直前対策にも！（資格・検定 / 危険物乙4 / 31/35 / 21分 / publishedAt=2025-03-20T09:00:39Z） https://manapick.app/video/YRnaxaX46pY/
 5. [セルフネイル🔰初心者] 知らないと損するベースジェルの作り方をプロが徹底解説（反り爪、下地作り）（資格・検定 / ネイリスト / 31/35 / 19分 / publishedAt=2025-06-14T11:05:06Z） https://manapick.app/video/zqz3bnvSg9I/
 
-### 会計・経営系資格（61本）
+### 会計・経営系資格（62本）
 - ジャンルURL: https://manapick.app/genre/kaikei/
 - ガイドURL: https://manapick.app/guide/bookkeeping/
-- 主なトピック: FP / 中小企業診断士 / 税理士 / 簿記
+- 主なトピック: FP / ビジネス会計検定試験 / 中小企業診断士 / 税理士 / 簿記
 - ロードマップ: 会計・経営系資格ロードマップ
   - STEP1（初級）: 簿記3級の範囲で、仕訳と決算書の基本構造がわかる。｜動画: ✧第1回✧【簿記3級】入門①（簿記とは？） / ✧第2回✧【簿記3級】入門②（決算書・5要素） / ✧第3回✧【簿記3級】入門③（一連の流れ）
   - STEP2（中級）: 簿記2級・FP3級へ進み、ビジネスとお金の知識を体系化する。｜動画: 【初心者も必見】簿記3級の次に「簿記2級・1級」を学ぶ5つのメリット【お金の勉強初級編】：（アニメ動画）第358回 / FP3級爆速講義 #5 難しい公的年金のしくみを初学者でも基礎からスッキリ理解（ライフ） / 【FP2級】ここからFP2級に簡単合格！FPの職業倫理と関連法規から始まるNo.1FP講師のプロ講義（完全A01）
@@ -221,7 +221,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 ## 主要URL
 - トップ: https://manapick.app/
 - YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
-- YouTube学習動画792本の独自集計: https://manapick.app/research/youtube-learning-data/
+- YouTube学習動画804本の独自集計: https://manapick.app/research/youtube-learning-data/
 - 7日学習プラン: https://manapick.app/study-plan/
 - Manapick Network（学ぶ・AI・資格・仕事・企業）: https://manapick.app/network/
 - 学習ロードマップ一覧: https://manapick.app/guide/
