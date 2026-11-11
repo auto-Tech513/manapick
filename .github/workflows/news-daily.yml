@@ -15,7 +15,11 @@ permissions:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    # Pinned 2026-11-11: ubuntu-latest migrated to Ubuntu 26 (resolute) whose
+    # runners could not reach azure.archive.ubuntu.com, failing the fonts
+    # install step (exit 100) twice in a row and taking the whole pipeline
+    # down. Revisit the pin once the resolute image's archive access is fixed.
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v6
