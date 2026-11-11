@@ -1184,5 +1184,117 @@
    "slug": "biz-law-3",
    "url": "https://license.manapick.app/license/biz-law-3/"
   }
+ ],
+ "66lepdjDHFA": [
+  {
+   "name": "Runway",
+   "site": "ai",
+   "slug": "runway",
+   "url": "https://ai.manapick.app/tool/runway/"
+  }
+ ],
+ "8FcHpCeHJ4w": [
+  {
+   "name": "Perplexity",
+   "site": "ai",
+   "slug": "perplexity",
+   "url": "https://ai.manapick.app/tool/perplexity/"
+  }
+ ],
+ "A6Dx8xXUcaA": [
+  {
+   "name": "GitHub Copilot",
+   "site": "ai",
+   "slug": "github-copilot",
+   "url": "https://ai.manapick.app/tool/github-copilot/"
+  }
+ ],
+ "E2uVUiEapZY": [
+  {
+   "name": "Suno",
+   "site": "ai",
+   "slug": "suno",
+   "url": "https://ai.manapick.app/tool/suno/"
+  }
+ ],
+ "EvB5np7BlJo": [
+  {
+   "name": "Google Veo",
+   "site": "ai",
+   "slug": "veo",
+   "url": "https://ai.manapick.app/tool/veo/"
+  }
+ ],
+ "FkqW5ol-y5A": [
+  {
+   "name": "Copilot",
+   "site": "ai",
+   "slug": "copilot",
+   "url": "https://ai.manapick.app/tool/copilot/"
+  }
+ ],
+ "QEPjooQWRyw": [
+  {
+   "name": "Gamma",
+   "site": "ai",
+   "slug": "gamma",
+   "url": "https://ai.manapick.app/tool/gamma/"
+  }
+ ],
+ "amVbrnqh69A": [
+  {
+   "name": "Bolt.new",
+   "site": "ai",
+   "slug": "bolt",
+   "url": "https://ai.manapick.app/tool/bolt/"
+  }
+ ],
+ "eJHofUOWpG0": [
+  {
+   "name": "Google翻訳",
+   "site": "ai",
+   "slug": "google-translate",
+   "url": "https://ai.manapick.app/tool/google-translate/"
+  }
+ ],
+ "pHTKrBcLBb0": [
+  {
+   "name": "VOICEVOX",
+   "site": "ai",
+   "slug": "voicevox",
+   "url": "https://ai.manapick.app/tool/voicevox/"
+  }
+ ],
+ "vIA0Ey8RzSA": [
+  {
+   "name": "Kling AI",
+   "site": "ai",
+   "slug": "kling",
+   "url": "https://ai.manapick.app/tool/kling/"
+  }
+ ],
+ "7jrOqwBAWKY": [
+  {
+   "name": "DeepSeek",
+   "site": "ai",
+   "slug": "deepseek",
+   "url": "https://ai.manapick.app/tool/deepseek/"
+  }
+ ],
+ "N1tXVR9lplM": [
+  {
+   "name": "Stable Diffusion",
+   "site": "ai",
+   "slug": "stable-diffusion",
+   "url": "https://ai.manapick.app/tool/stable-diffusion/"
+  }
+ ],
+ "uWg7ILnmGC8": [
+  {
+   "name": "OpenAI Codex",
+   "site": "ai",
+   "slug": "codex",
+   "url": "https://ai.manapick.app/tool/codex/"
+  }
  ]
 }
