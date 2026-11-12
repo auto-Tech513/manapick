@@ -14795,13 +14795,6 @@ nav[aria-label="パンくず"] a,
   min-height: 44px;
   margin-block: -8.5px;
 }
-/* 関連リンクのチップ（高さ32px）。枠線つきのチップなので見た目ごと44pxにする（行の間隔は6px→8px） */
-.network-context-items {
-  row-gap: 8px;
-}
-.network-context-items a {
-  min-height: 44px;
-}
 /* 「〜をもっと見る」（高さ28px）。上のチップと範囲が重ならないよう8px下げる */
 .network-context-more {
   min-height: 44px;
