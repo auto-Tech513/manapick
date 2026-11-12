@@ -14778,3 +14778,47 @@ main .newsletter-signup {
 .news-article-body,
 .news-article-aside { min-width: 0; }
 .news-article-body .news-figure { max-width: 100%; overflow-x: auto; }
+
+/* 2026-11-12: スマートフォンで押しにくかったリンクのタップ範囲を44px以上にする。
+   広げた分は負のマージンで相殺し、文字の位置と周囲の配置は変えない。 */
+nav[aria-label="パンくず"] a,
+.video-header-link {
+  min-height: 44px;
+  margin-block: -10px;
+  padding-inline: 4px;
+  margin-inline: -4px;
+}
+.knowledge-header-link,
+.guide-header-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-block: -8.5px;
+}
+/* 関連リンクのチップ（高さ32px）。枠線つきのチップなので見た目ごと44pxにする（行の間隔は6px→8px） */
+.network-context-items {
+  row-gap: 8px;
+}
+.network-context-items a {
+  min-height: 44px;
+}
+/* 「〜をもっと見る」（高さ28px）。上のチップと範囲が重ならないよう8px下げる */
+.network-context-more {
+  min-height: 44px;
+  margin-top: 0;
+  margin-bottom: -8px;
+}
+/* 動画ページの「集計の方法と全ジャンルの分布を見る」（高さ14px）。インライン要素の上下の余白は行の高さに影響しない */
+.video-genre-position-link a {
+  padding-block: 15px;
+}
+/* 学習プラン・ネットワークのページは、幅420px以下で既に44pxにしているので相殺を外す */
+@media (max-width: 420px) {
+  .study-plan-page .knowledge-header-link,
+  .network-page .knowledge-header-link,
+  .study-plan-page .knowledge-breadcrumb a,
+  .network-page .knowledge-breadcrumb a {
+    margin: 0;
+    padding-inline: 0;
+  }
+}
