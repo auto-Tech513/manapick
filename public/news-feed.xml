@@ -5,7 +5,15 @@
     <link>https://manapick.app/news/</link>
     <description>公式発表を、学びと仕事に使える形へ整理します。</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 04 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Google、Sheets canvasを単独リンクで共有・公開できる新機能を発表</title>
+      <link>https://manapick.app/news/2026-11-11-publish-a-sheets-canvas-as-a-standalone-link-d58ce595ea/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-11-publish-a-sheets-canvas-as-a-standalone-link-d58ce595ea/</guid>
+      <description>Googleは、Googleスプレッドシートの「Sheets canvas」を単独リンクとして公開できる機能を導入しました。元のファイル全体を共有せずに、閲覧専用の対話型ミニアプリとして共有可能です。自動再公開や静的ビューの選択、独自の公開範囲設定にも対応しています。</description>
+      <category>生成AI</category>
+      <pubDate>Tue, 10 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>Google VidsでGemini Omni 1.2 Flashが利用可能に、最大15秒の動画生成と品質向上を実現</title>
       <link>https://manapick.app/news/2026-11-05-gemini-omni-1-2-flash-now-in-vids-with-15-second-gener-6aa8935159/</link>
