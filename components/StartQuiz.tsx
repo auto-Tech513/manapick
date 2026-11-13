@@ -105,8 +105,8 @@ export default function StartQuiz() {
   }
 
   return (
-    <section className="mt-6 rounded-2xl border border-line bg-white p-4 shadow-card min-[760px]:p-6" aria-labelledby="start-quiz-title">
-      <div className="flex flex-col gap-3 min-[760px]:flex-row min-[760px]:items-center min-[760px]:justify-between">
+    <section className="mt-6 rounded-2xl border border-line bg-white p-4 shadow-card sm:p-6" aria-labelledby="start-quiz-title">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="text-xs font-black uppercase tracking-[0.08em] text-leaf">Start</p>
           <h2 id="start-quiz-title" className="text-2xl font-black leading-tight text-ink">
@@ -133,7 +133,7 @@ export default function StartQuiz() {
       {step === 1 ? (
         <div className="mt-5">
           <p className="mb-3 text-sm font-bold text-muted">いま学びたいテーマを選んでください。</p>
-          <div className="grid grid-cols-2 gap-2 min-[760px]:grid-cols-5">
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
             {publishedGenreKeys.map((key) => (
               <button
                 key={key}
@@ -155,7 +155,7 @@ export default function StartQuiz() {
       {step === 2 ? (
         <div className="mt-5">
           <p className="mb-3 text-sm font-bold text-muted">迷う場合は「はじめて」からで大丈夫です。</p>
-          <div className="grid gap-2 min-[640px]:grid-cols-2">
+          <div className="grid gap-2 sm:grid-cols-2">
             {levelOptions.map((option) => (
               <button
                 key={option.label}
@@ -180,7 +180,7 @@ export default function StartQuiz() {
       {step === 3 ? (
         <div className="mt-5">
           <p className="mb-3 text-sm font-bold text-muted">今すぐ使える時間に近いものを選んでください。</p>
-          <div className="grid gap-2 min-[640px]:grid-cols-2">
+          <div className="grid gap-2 sm:grid-cols-2">
             {timeOptions.map((option) => (
               <button
                 key={option.label}
@@ -218,7 +218,7 @@ export default function StartQuiz() {
             ))}
           </div>
 
-          <div className="mt-5 grid gap-2 min-[560px]:flex min-[560px]:flex-wrap">
+          <div className="mt-5 grid gap-2 sm:flex sm:flex-wrap">
             <Link
               href={`/genre/${genre}/`}
               className="inline-flex min-h-11 items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-black text-white shadow-button transition hover:bg-primaryInk focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
@@ -247,7 +247,7 @@ function ResultCard({ video, rank }: { video: Video; rank: number }) {
     <Link
       href={videoPath(video.ytid)}
       className={[
-        "group grid gap-3 rounded-xl border bg-surface p-3 text-ink no-underline shadow-sm transition hover:-translate-y-0.5 hover:shadow-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary motion-reduce:transform-none min-[700px]:grid-cols-[220px_1fr]",
+        "group grid gap-3 rounded-xl border bg-surface p-3 text-ink no-underline shadow-sm transition hover:-translate-y-0.5 hover:shadow-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary motion-reduce:transform-none sm:grid-cols-[220px_1fr]",
         isFirst ? "border-leaf/50 bg-leaf/5" : "border-line"
       ].join(" ")}
     >
@@ -268,7 +268,7 @@ function ResultCard({ video, rank }: { video: Video; rank: number }) {
         <p className="text-xs font-black text-leaf">
           {scoreText(video)} / {video.minutes}分 / {video.level}
         </p>
-        <h3 className="mt-1 text-base font-black leading-6 text-ink min-[760px]:text-lg">
+        <h3 className="mt-1 text-base font-black leading-6 text-ink sm:text-lg">
           {video.title}
         </h3>
         {video.review[0] ? <p className="mt-2 text-sm font-bold leading-7 text-muted">{video.review[0]}</p> : null}

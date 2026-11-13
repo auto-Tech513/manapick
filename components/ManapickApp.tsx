@@ -1261,7 +1261,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
   return (
     <main>
       <header className="site-header border-b border-line bg-surface/92 backdrop-blur">
-        <div className="site-header-inner mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 min-[720px]:flex-row min-[720px]:items-center min-[720px]:justify-between min-[720px]:px-6">
+        <div className="site-header-inner mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <a href="#top" className="min-w-0 shrink-0" aria-label="Manapick トップ">
             <BrandLogo compact />
           </a>
@@ -1555,8 +1555,8 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
       {recent.ready && recentVideos.length > 0 ? <RecentStrip videos={recentVideos} /> : null}
 
       <section id="search" className="border-b border-line bg-white/64">
-        <div className="mx-auto max-w-7xl px-4 py-7 min-[760px]:px-6">
-          <div id="genre-picker" className="mb-5 flex flex-col gap-2 min-[720px]:flex-row min-[720px]:items-end min-[720px]:justify-between">
+        <div className="mx-auto max-w-7xl px-4 py-7 sm:px-6">
+          <div id="genre-picker" className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-sm font-bold text-leaf">①ざっくり探す</p>
               <h2 className="text-2xl font-black text-ink">ジャンルから選ぶ</h2>
@@ -1684,7 +1684,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
               <h2 className="text-2xl font-black text-ink">条件で絞り込む</h2>
             </div>
             <div id="filter-accordion-body" className="filter-accordion-body">
-              <div className="filter-control-grid grid gap-3 min-[560px]:grid-cols-2 min-[940px]:grid-cols-[1fr_0.8fr_0.9fr_1.4fr_auto]">
+              <div className="filter-control-grid grid gap-3 sm:grid-cols-2 lg:grid-cols-[1fr_0.8fr_0.9fr_1.4fr_auto]">
                 <label className="filter-control">
                   <span className="mb-1 block text-sm font-bold text-muted">サブジャンル</span>
                   <select
@@ -1756,7 +1756,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
 
               <PopularKeywordChips onSelect={applySearchKeyword} />
 
-              <div className="mt-5 flex flex-col gap-2 text-sm text-muted min-[680px]:flex-row min-[680px]:items-center min-[680px]:justify-between">
+              <div className="mt-5 flex flex-col gap-2 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
                 <p>
                   <span className="font-black text-ink">{filteredVideos.length}</span>件ヒット
                   {selectedGenreData?.status === "preparing" ? "。このジャンルは近日公開です。" : ""}
@@ -1774,7 +1774,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-8 min-[760px]:px-6" aria-label="動画一覧">
+      <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6" aria-label="動画一覧">
         {!searchActive && selectedGenreData?.status === "published" ? (
           <GenreSummaryPanel
             genre={selectedGenreData}
@@ -1824,7 +1824,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
                 {groupedPageVideos.map((group) => (
                   <section key={group.genreKey} className="search-result-group">
                     <h2>{genreLabel(group.genreKey)} <span>{group.items.length}件</span></h2>
-                    <div className="grid gap-4 min-[560px]:grid-cols-2 min-[880px]:grid-cols-3">
+                    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                       {group.items.map((video) => (
                         <VideoCard
                           key={video.ytid}
@@ -1841,7 +1841,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
                 ))}
               </div>
             ) : (
-              <div className="grid gap-4 min-[560px]:grid-cols-2 min-[880px]:grid-cols-3">
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {pageVideos.map((video) => (
                   <VideoCard
                     key={video.ytid}
@@ -1910,12 +1910,12 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
       </section>
 
       {SHOW_TOP_PR_SECTION ? (
-        <section id="pr" className="mx-auto max-w-7xl px-4 py-8 min-[760px]:px-6">
+        <section id="pr" className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
           <div className="mb-5">
             <p className="text-sm font-bold text-coral">PR / 広告</p>
             <h2 className="text-2xl font-black text-ink">おすすめ教材・スクール（PR）</h2>
           </div>
-          <div className="grid gap-4 min-[640px]:grid-cols-2 min-[980px]:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {visiblePrGenres.map((genre) => (
               <PrBlock key={genre.key} genre={genre} />
             ))}

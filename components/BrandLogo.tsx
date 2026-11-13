@@ -46,11 +46,11 @@ export default function BrandLogo({ compact = false, className = "" }: BrandLogo
         <BrandMark className="h-8 w-8" />
       </span>
       <span className="leading-none">
-        <span className="block text-[1.35rem] font-black tracking-normal text-[#1F3A8A] min-[520px]:text-2xl">
+        <span className="block text-[1.35rem] font-black tracking-normal text-[#1F3A8A] sm:text-2xl">
           Manapick
         </span>
         {!compact ? (
-          <span className="mt-1 block text-[0.72rem] font-bold leading-tight text-ink/62 min-[520px]:text-xs">
+          <span className="mt-1 block text-[0.72rem] font-bold leading-tight text-ink/62 sm:text-xs">
             学び直しを、最短ルートに。
           </span>
         ) : null}
