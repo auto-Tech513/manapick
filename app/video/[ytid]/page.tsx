@@ -20,6 +20,7 @@ import {
   isoDuration,
   relatedVideos,
   scoreConfirmationDate,
+  youtubePublishedDate,
   scoreText,
   videoAudienceText,
   genericAxisNoteCount,
@@ -110,6 +111,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
   const guide = guides.find((item) => item.genre === video.genre) ?? null;
   const pageUrl = absoluteUrl(videoPath(video.ytid));
   const confirmationDate = scoreConfirmationDate(video);
+  const publishedDate = youtubePublishedDate(video);
   const hasStoredAxisBreakdown = video.axisScores.length === 7;
   const scoreConfirmationText = hasStoredAxisBreakdown
     ? "運営者が7軸35点で採点したスコアです" + (confirmationDate ? "（確認日: " + confirmationDate + "）" : "")
@@ -223,6 +225,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
             {freshness ? <span className={`freshness-badge is-${freshness.tone}`} title={freshness.note}>{freshness.label}</span> : null}
           </div>
           {channel ? <p className="video-channel">チャンネル: {channel}</p> : null}
+          {publishedDate ? <p className="video-channel video-published">YouTube公開日: <time dateTime={video.publishedAt}>{publishedDate}</time></p> : null}
           <div className="video-score-card is-confirmed">
             <p>{scoreText(video)}</p>
             <span>運営者が採点済み</span>

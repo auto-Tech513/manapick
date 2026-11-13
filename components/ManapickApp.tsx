@@ -3538,7 +3538,7 @@ function VideoCard({
           <LikeButton ytid={video.ytid} initialCount={likeCounts[video.ytid] ?? 0} className="is-card-action" />
         </div>
         <a
-          className="mt-auto inline-flex h-11 items-center justify-center rounded-md bg-accent px-4 text-sm font-black text-white shadow-button transition duration-200 ease-[var(--ease-standard)] hover:bg-primary focus-visible:outline-primary motion-reduce:transition-none"
+          className="mt-auto inline-flex h-11 items-center justify-center rounded-md bg-[var(--color-accent-ink)] px-4 text-sm font-black text-white shadow-button transition duration-200 ease-[var(--ease-standard)] hover:bg-primary focus-visible:outline-primary motion-reduce:transition-none"
           href={video.url}
           target="_blank"
           rel="noopener noreferrer"

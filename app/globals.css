@@ -2359,7 +2359,7 @@ ins.adsbygoogle:not(.ad-slot),
   place-items: center;
   border-radius: 999px;
   background: color-mix(in srgb, var(--color-accent) 12%, white);
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
 }
 
 .hero-trust-icon svg {
@@ -2904,7 +2904,7 @@ ins.adsbygoogle:not(.ad-slot),
 
 .weekly-pick-eyebrow {
   margin: 0;
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
   font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.04em;
@@ -3270,7 +3270,7 @@ ins.adsbygoogle:not(.ad-slot),
 
 .section-eyebrow {
   margin: 0;
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
   font-size: 0.875rem;
   font-weight: 800;
   line-height: 1.6;
@@ -3435,7 +3435,7 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .roadmap-progress-topline strong {
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
 }
 
 .roadmap-progress-track {
@@ -3641,7 +3641,7 @@ ins.adsbygoogle:not(.ad-slot),
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.82);
   border-radius: 999px;
-  background: var(--color-accent);
+  background: var(--color-accent-ink);
   color: #fff;
   font-size: 0.8rem;
   font-weight: 900;
@@ -4281,7 +4281,7 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .recent-update-body span {
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
   font-size: 0.72rem;
   font-weight: 900;
 }
@@ -4343,7 +4343,7 @@ ins.adsbygoogle:not(.ad-slot),
 
 .search-intent-head-actions > a:hover,
 .search-intent-head-actions > a:focus-visible {
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -4749,7 +4749,7 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .profession-score-badge.is-confirmed {
-  background: rgba(15, 169, 139, 0.94);
+  background: rgba(8, 116, 99, 0.94);
 }
 
 .profession-feature-body {
@@ -5654,8 +5654,8 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .score-badge.is-confirmed.is-high {
-  border-color: var(--color-accent);
-  background: var(--color-accent);
+  border-color: var(--color-accent-ink);
+  background: var(--color-accent-ink);
   color: #fff;
 }
 
@@ -5691,7 +5691,7 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .score-badge-status.is-confirmed {
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
 }
 
 .score-badge.is-confirmed .score-badge-status.is-confirmed {
@@ -5991,7 +5991,7 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .score-page-badge.confirmed {
-  background: var(--color-accent);
+  background: var(--color-accent-ink);
   color: #fff;
 }
 
@@ -6761,7 +6761,7 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .video-related-meta {
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
   font-size: 0.72rem;
   font-weight: 900;
 }
@@ -6825,7 +6825,7 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .video-next-card-body span:first-child {
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
   font-size: 0.76rem;
   font-weight: 900;
 }
@@ -8570,7 +8570,7 @@ ins.adsbygoogle:not(.ad-slot),
 
 .ranking-video-meta,
 .new-video-meta {
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
   font-size: 0.74rem;
   font-weight: 900;
   line-height: 1.45;
@@ -8699,7 +8699,7 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .new-genre-latest-card > span {
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
   font-size: 0.72rem;
   font-weight: 900;
 }
@@ -9241,7 +9241,7 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .guide-step-heading > span {
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
   font-size: 0.82rem;
   font-weight: 900;
 }
@@ -10038,7 +10038,7 @@ ins.adsbygoogle:not(.ad-slot),
   justify-self: start;
   border: 0;
   background: transparent;
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
   padding: 0;
   font-size: 0.72rem;
   font-weight: 900;
@@ -10184,7 +10184,7 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .highlight-genre {
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
   font-size: 0.75rem;
   font-weight: 900;
 }
@@ -10383,7 +10383,7 @@ ins.adsbygoogle:not(.ad-slot),
 
 .featured-video-eyebrow {
   margin: 0 0 4px;
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
   font-size: 0.76rem;
   font-weight: 900;
 }
@@ -10903,7 +10903,7 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .guide-index-number {
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
   font-size: 0.78rem;
   font-weight: 900;
 }
@@ -14831,4 +14831,19 @@ nav[aria-label="パンくず"] a,
   color: var(--color-ink);
   font-size: 0.85rem;
   font-weight: 800;
+}
+
+/* 2026-11-13: 文字用の緑（所有者承認 2026-11-11）。ブランド色 --color-accent（#0fa98b）は線・装飾・グラデーションに残し、
+   文字とバッジだけ --color-accent-ink（#087463、白地で約5.6:1）にする。Tailwind の text-accent / text-leaf も同じ扱い */
+.text-accent,
+.text-leaf {
+  color: var(--color-accent-ink);
+}
+/* 暗い背景（#171e2e）の上では、従来のブランド緑のほうが読みやすい（約5.6:1）ので戻す */
+.newsletter-signup.is-dark .section-eyebrow {
+  color: var(--color-accent);
+}
+/* 白文字の小さなバッジも文字用の緑に（ジャンルの「公開中」） */
+.genre-state-legend .bg-leaf {
+  background-color: var(--color-accent-ink);
 }
