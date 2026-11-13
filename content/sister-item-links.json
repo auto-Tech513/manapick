@@ -1450,5 +1450,21 @@
    "name": "Google翻訳",
    "url": "https://ai.manapick.app/tool/google-translate/"
   }
+ ],
+ "lTZDUgxF1YI": [
+  {
+   "site": "license",
+   "slug": "hangul-3",
+   "name": "「ハングル」能力検定 3級",
+   "url": "https://license.manapick.app/license/hangul-3/"
+  }
+ ],
+ "KK6X09YLd8Q": [
+  {
+   "site": "ai",
+   "slug": "qwen",
+   "name": "Qwen",
+   "url": "https://ai.manapick.app/tool/qwen/"
+  }
  ]
 }
