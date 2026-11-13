@@ -21,8 +21,15 @@ const levelOptions: { label: string; value: Level; note: string }[] = [
   { label: "はじめて", value: "初級", note: "入口の1本から" },
   { label: "少し慣れた", value: "中級", note: "応用・整理へ" },
   { label: "しっかり", value: "上級", note: "実務寄りに進む" },
-  { label: "こだわらない", value: "", note: "高スコア優先" }
+  { label: "こだわらない", value: "", note: "レベル帯ごとに高スコア" }
 ];
+
+// 選んだレベルがジャンル内に少ないとき、近いレベル帯から順に補うための近さ順。
+const levelProximity: Record<string, Level[]> = {
+  上級: ["上級", "中級", "初級"],
+  中級: ["中級", "上級", "初級"],
+  初級: ["初級", "中級", "上級"]
+};
 
 const timeOptions: { label: string; value: TimeKey; note: string }[] = [
   { label: "スキマ時間", value: "short", note: "15分まで" },
@@ -66,16 +73,57 @@ export default function StartQuiz() {
   const [time, setTime] = useState<TimeKey>("");
 
   const result = useMemo(() => {
-    if (!genre) return { items: [] as Video[], relaxed: false };
+    if (!genre) return { items: [] as Video[], note: "" };
 
     const base = videos.filter((video) => video.genre === genre);
-    const exact = base.filter((video) => (!level || video.level === level) && timeOk(video, time));
-    if (exact.length > 0) return { items: [...exact].sort(rankVideos).slice(0, 3), relaxed: false };
+    const byRank = (list: Video[]) => [...list].sort(rankVideos);
 
-    const sameLevel = base.filter((video) => !level || video.level === level);
-    if (sameLevel.length > 0) return { items: [...sameLevel].sort(rankVideos).slice(0, 3), relaxed: true };
+    // レベルを指定した場合： そのレベルを最優先し、3本に満たないときだけ
+    // 近いレベル帯から補う（いきなりジャンル全体の高スコア＝初級中心には落とさない）。
+    if (level) {
+      const order = levelProximity[level] ?? [level];
+      const picked: Video[] = [];
+      // レベルの近さを時間より優先する： バンド内では時間に合うものから取り、
+      // そのバンドで3本に満たないときだけ次のバンドへ進む。
+      for (const lv of order) {
+        const band = byRank(base.filter((v) => v.level === lv));
+        for (const video of band.filter((v) => timeOk(v, time))) {
+          if (picked.length < 3) picked.push(video);
+        }
+        for (const video of band) {
+          if (picked.length < 3 && !picked.includes(video)) picked.push(video);
+        }
+      }
+      const timeRelaxed = time !== "" && picked.some((v) => !timeOk(v, time));
+      const extraLevels = Array.from(new Set(picked.map((v) => v.level))).filter((lv) => lv !== level);
+      const notes: string[] = [];
+      if (extraLevels.length > 0) {
+        const levelLabel = levelOptions.find((o) => o.value === level)?.label ?? level;
+        notes.push(
+          `「${levelLabel}（${level}）」の動画はこのジャンルにはまだ少ないため、${extraLevels.join("・")}も含めて提案しています。`
+        );
+      }
+      if (timeRelaxed) notes.push("時間の条件は外して提案しています。");
+      return { items: picked, note: notes.join("") };
+    }
 
-    return { items: [...base].sort(rankVideos).slice(0, 3), relaxed: true };
+    // レベルが「こだわらない」の場合： スコア順だけだと初級に偏るため、
+    // 各レベル帯の高スコアを1本ずつ組み合わせ、残りをスコア順で埋める。
+    const timed = base.filter((v) => timeOk(v, time));
+    const pool = timed.length > 0 ? timed : base;
+    const picked: Video[] = [];
+    for (const lv of ["上級", "中級", "初級"] as Level[]) {
+      const best = byRank(pool.filter((v) => v.level === lv))[0];
+      if (best) picked.push(best);
+    }
+    for (const video of byRank(pool)) {
+      if (picked.length >= 3) break;
+      if (!picked.includes(video)) picked.push(video);
+    }
+    return {
+      items: byRank(picked).slice(0, 3),
+      note: timed.length === 0 ? "時間の条件に合う動画が少ないため、時間は問わず提案しています。" : ""
+    };
   }, [genre, level, time]);
 
   const selectedGenreName = genre ? genreDisplayName(genre) : "未選択";
@@ -207,8 +255,9 @@ export default function StartQuiz() {
           <div className="rounded-lg border border-leaf/30 bg-leaf/5 p-4">
             <p className="text-sm font-black text-leaf">あなたの“今日の1本”はこちら</p>
             <p className="mt-1 text-sm font-bold leading-7 text-muted">
-              {genreDisplayName(genre)}の動画から、Manapickスコア順で提案しています。
-              {result.relaxed ? "条件に完全一致する動画が少ないため、近い候補も含めています。" : ""}
+              {genreDisplayName(genre)}の動画から、
+              {level ? "Manapickスコア順で提案しています。" : "レベル帯ごとに高スコアの動画を組み合わせて提案しています。"}
+              {result.note}
             </p>
           </div>
 
