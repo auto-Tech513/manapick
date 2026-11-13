@@ -216,6 +216,8 @@ export function videoDescription(video: Video) {
   const lines = (video.review ?? []).map((line) => line.replace(/\s+/g, " ").trim()).filter(Boolean);
   let base = lines[0] ?? video.title.replace(/\s+/g, " ").trim();
   if (base.length < 70 && lines[1]) base = `${base}${lines[1]}`;
+  // それでも短い場合は3文目（向いている人・注意点）まで足す。Bing の推奨は150〜160字。
+  if (base.length < 100 && lines[2]) base = `${base}${lines[2]}`;
   return compactText(base, Math.max(40, 160 - suffix.length)) + suffix;
 }
 
