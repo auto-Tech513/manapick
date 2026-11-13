@@ -1498,5 +1498,37 @@
    "name": "TOEIC Listening & Reading Test",
    "url": "https://license.manapick.app/license/toeic-lr/"
   }
+ ],
+ "4NDb-X624gY": [
+  {
+   "site": "ai",
+   "slug": "claude",
+   "name": "Claude",
+   "url": "https://ai.manapick.app/tool/claude/"
+  }
+ ],
+ "k1qFX5zJwLk": [
+  {
+   "site": "ai",
+   "slug": "gemini",
+   "name": "Gemini",
+   "url": "https://ai.manapick.app/tool/gemini/"
+  }
+ ],
+ "Wok45BQMEV8": [
+  {
+   "site": "ai",
+   "slug": "gemini",
+   "name": "Gemini",
+   "url": "https://ai.manapick.app/tool/gemini/"
+  }
+ ],
+ "DTCwUOd08-I": [
+  {
+   "site": "ai",
+   "slug": "copilot",
+   "name": "Microsoft Copilot",
+   "url": "https://ai.manapick.app/tool/copilot/"
+  }
  ]
 }

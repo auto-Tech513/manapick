@@ -179,7 +179,7 @@
  },
  {
   "genre": "ai",
-  "sub": "自動化",
+  "sub": "Claude",
   "ytid": "4NDb-X624gY",
   "level": "初級",
   "minutes": 9,
@@ -1151,7 +1151,7 @@
  },
  {
   "genre": "ai",
-  "sub": "自動化",
+  "sub": "Gemini",
   "ytid": "k1qFX5zJwLk",
   "level": "初級",
   "minutes": 17,
@@ -2123,7 +2123,7 @@
   "genre": "video",
   "sub": "Premiere Pro",
   "ytid": "C9GymZxUrF4",
-  "level": "中級",
+  "level": "初級",
   "minutes": 21,
   "channel": "Mappy Photo",
   "score": 32,
@@ -2609,7 +2609,7 @@
  },
  {
   "genre": "data",
-  "sub": "Excel",
+  "sub": "BI",
   "ytid": "pzkyp1nsDTo",
   "level": "初級",
   "minutes": 37,
@@ -4327,7 +4327,7 @@
   "genre": "video",
   "sub": "CapCut",
   "ytid": "wtFv5rJmPh0",
-  "level": "中級",
+  "level": "初級",
   "minutes": 47,
   "channel": "Wataru Hayashi / トラベルビデオグラファー",
   "score": 30,
@@ -6278,7 +6278,7 @@
  },
  {
   "genre": "ai",
-  "sub": "自動化",
+  "sub": "Copilot",
   "ytid": "DTCwUOd08-I",
   "level": "初級",
   "minutes": 26,
@@ -13434,7 +13434,7 @@
  },
  {
   "genre": "ai",
-  "sub": "画像生成",
+  "sub": "Gemini",
   "ytid": "Wok45BQMEV8",
   "level": "初級",
   "minutes": 29,
@@ -16321,7 +16321,7 @@
   "genre": "prog",
   "sub": "Python",
   "ytid": "olqOGLymDbw",
-  "level": "中級",
+  "level": "初級",
   "minutes": 42,
   "channel": "キノコード / AI・プログラミング学習チャンネル",
   "score": 30,
@@ -22714,7 +22714,7 @@
   "genre": "biz",
   "sub": "プレゼン",
   "ytid": "TNlMd7PyDYo",
-  "level": "初級",
+  "level": "中級",
   "minutes": 21,
   "channel": "しごおもTV  by うねり",
   "score": 28,
@@ -50380,5 +50380,615 @@
   "ytid": "7YsTthxVuE0",
   "minutes": 17,
   "publishedAt": "2024-02-17T00:00:00Z"
+ },
+ {
+  "genre": "video",
+  "sub": "DaVinci",
+  "ytid": "rjwXam-veuw",
+  "level": "中級",
+  "minutes": 10,
+  "channel": "うすやの映像部屋",
+  "score": 30,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "グレーディングの練習方法と実演が示され、基礎の次の上達手順として使える"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2025年4月公開で、現在のDaVinci Resolveでのカラーグレーディングを扱っている"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "「ある程度できるようになったら」という前提を明示し、勉強法を時系列順に並べる構成"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "グレーディングの基礎の捉え直し、練習方法、実演、グレーディング以外に大切なことと、上達の段階がそろう"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "DaVinci Resolveの映像制作を扱うチャンネルによる、対象を中級者と明示した発信"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "10分で上達法の全体像を示す短い講座"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "発信者自身の解説動画で、YouTubeの公式埋め込みで視聴できる"
+   }
+  ],
+  "title": "【脱・基礎レベル】中級者向けカラーグレーディングの上達方法｜DaVinci Resolve",
+  "url": "https://www.youtube.com/watch?v=rjwXam-veuw",
+  "tags": [
+   "カラーグレーディング",
+   "DaVinci Resolve",
+   "上達法"
+  ],
+  "review": [
+   "カラーグレーディングをある程度触れるようになった人向けの、次の一歩を示す上達法の解説。",
+   "練習方法から実演、グレーディング以外に大切なことまで、勉強の進め方を時系列でたどれる。",
+   "基礎の入門ではなく、基礎を終えた人の伸ばし方に絞った中級内容。"
+  ],
+  "publishedAt": "2025-04-21T00:00:00Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-13"
+ },
+ {
+  "genre": "video",
+  "sub": "DaVinci",
+  "ytid": "8gPMjkw90Do",
+  "level": "上級",
+  "minutes": 7,
+  "channel": "Cinema Color Mastery",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "Depth Mapの適用と基本設定、被写体選択、マットフィネスまで、実際のグレーディング手順に直結する"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2025年11月公開で、現在のDaVinci Resolveの深度マップ機能を扱っている"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "肌が崩れる・ルックが濁るという、すでにグレーディングしている人の悩みから入る構成"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "輝度ベース調整の限界、Depth Mapの適用と設定、被写体選択、背景のグレーディングと章立てが順序だっている"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "カラーグレーディング専門チャンネルによる、技法に特化した解説"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "7分で一つの技法に集中する構成"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "発信者自身の解説動画で、YouTubeの公式埋め込みで視聴できる"
+   }
+  ],
+  "title": "カラーグレーディングがうまくいかないときは「深度マップ」を使う! #davinciresolve ",
+  "url": "https://www.youtube.com/watch?v=8gPMjkw90Do",
+  "tags": [
+   "カラーグレーディング",
+   "深度マップ",
+   "DaVinci Resolve"
+  ],
+  "review": [
+   "カラーグレーディングで肌が崩れる・ルックが濁る悩みに、深度マップ（Depth Map）で応える技法の解説。",
+   "輝度ベース調整の限界を踏まえ、Depth Mapの適用と基本設定、ファー／ニアリミットによる被写体選択、マットフィネス、背景（アウトサイドノード）のグレーディングまでを章立てでたどれる。",
+   "すでにカラグレをしている人の課題を前提とした、上級寄りの内容。"
+  ],
+  "publishedAt": "2025-11-07T00:00:00Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-13"
+ },
+ {
+  "genre": "video",
+  "sub": "DaVinci",
+  "ytid": "mddTNrmTdQo",
+  "level": "上級",
+  "minutes": 13,
+  "channel": "METALZOMBI　-カラーグレーディングスタジオ-",
+  "score": 30,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "Log素材の色を戻す方法の選択（LUTかカラースペース変換か）という、実務の判断に直結する"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 5,
+    "note": "2026年2月公開で、カラースペース変換（CST）という現在のカラーマネジメントの考え方を扱っている"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "「なぜLUTを使わずに色を戻すのか」という問いを軸に理由を解説する構成"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "カラースペースの理解を前提に、変換が必要な理由へ絞って進む"
+   },
+   {
+    "axis": "信頼性",
+    "score": 5,
+    "note": "DaVinci Resolve 20認定トレーナーのカラリストによる解説で、2011年からカラーグレーディングを実務としてきた経歴が明記されている"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "13分で一つの専門論点に集中する構成"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "発信者自身の解説動画で、YouTubeの公式埋め込みで視聴できる"
+   }
+  ],
+  "title": "【衝撃】なぜLUTを使わずに色を戻すのか？カラースペース変換が絶対に必要な理由｜DaVinci Resolve",
+  "url": "https://www.youtube.com/watch?v=mddTNrmTdQo",
+  "tags": [
+   "カラースペース変換",
+   "カラーグレーディング",
+   "DaVinci Resolve"
+  ],
+  "review": [
+   "LUTではなくカラースペース変換（CST）でLog素材の色を戻す理由を主題とする、専門的な解説。",
+   "カラースペースの理解を前提とした内容で、色を戻す方法の選択理由が論点になる。",
+   "講師はDaVinci Resolve 20認定トレーナーのカラリストで、実務経験に基づく上級内容。"
+  ],
+  "publishedAt": "2026-02-28T00:00:00Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-13"
+ },
+ {
+  "genre": "video",
+  "sub": "DaVinci",
+  "ytid": "RE8WxRvmn6Y",
+  "level": "中級",
+  "minutes": 11,
+  "channel": "Kazumu / DaVinci Resolve",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "プロジェクト設定と書き出し設定、プリセット保存まで、編集後の品質を守る手順がそのまま使える"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2026年3月公開で、DaVinci Resolve 20の現在の設定画面を前提にしている"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "画質が落ちた・色が変わったという経験者の失敗を出発点にする構成"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "プロジェクト設定、書き出し設定、プリセット保存方法と、品質工程の確認順がそろう"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "DaVinci Resolve専門チャンネルによる、プロを名乗る発信者の実務解説"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "11分で設定の確認観点を一巡できる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "発信者自身の解説動画で、YouTubeの公式埋め込みで視聴できる"
+   }
+  ],
+  "title": "【DaVinci Resolve20】プロが教える「失敗しない」書き出し設定方法！- ダビンチリゾルブ",
+  "url": "https://www.youtube.com/watch?v=RE8WxRvmn6Y",
+  "tags": [
+   "書き出し設定",
+   "DaVinci Resolve",
+   "画質"
+  ],
+  "review": [
+   "書き出したら画質が落ちた、アップしたら色が変わったという失敗を防ぐための、書き出し設定の解説。",
+   "プロジェクト設定と書き出し設定を間違えると素材の良さが台無しになるという前提から、プリセットの保存方法までをたどれる。",
+   "編集後の品質工程に絞った、経験者向けの中級内容。"
+  ],
+  "publishedAt": "2026-03-15T00:00:00Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-13"
+ },
+ {
+  "genre": "video",
+  "sub": "DaVinci",
+  "ytid": "mP2f7M98RVc",
+  "level": "中級",
+  "minutes": 48,
+  "channel": "実験的創造研究所【DaVInci Resolve Fusion 初心者の部屋】",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "Text+ノードだけで作る15種類のテキストアニメーションが、表現のレパートリーとしてそのまま使える"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2026年1月公開で、現在のDaVinci Resolve Fusionの操作を扱っている"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "回転、文字入れ替え、バラバラから集合、ランダム表示、ネオン表現と、作例ごとに区切る構成"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "追加ノードなしでText+のインスペクター操作のみで作るという制約のもと、15種を体系的に並べている"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "Fusion専門チャンネルによる、技法に特化したチュートリアル"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "48分で15種を作り分ける密度の高い構成"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "発信者自身の解説動画で、YouTubeの公式埋め込みで視聴できる"
+   }
+  ],
+  "title": "Davinci Resolve Fusionチュートリアル【50分・完全版】Text+ノードだけでつくるFusionテキストアニメーション15選",
+  "url": "https://www.youtube.com/watch?v=mP2f7M98RVc",
+  "tags": [
+   "Fusion",
+   "テキストアニメーション",
+   "DaVinci Resolve"
+  ],
+  "review": [
+   "DaVinci Resolve Fusionで、Text+ノードだけで15種類のテキストアニメーションを作るチュートリアル。",
+   "回転、文字入れ替え、バラバラから集合、ランダム表示、ネオン表現などを、追加ノードなしでText+のインスペクター操作のみで作る。",
+   "Fusionの応用的な表現の幅を広げる、中級向けの内容。"
+  ],
+  "publishedAt": "2026-01-19T00:00:00Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-13"
+ },
+ {
+  "genre": "biz",
+  "sub": "資料作成",
+  "ytid": "Xp48lPTmwvU",
+  "level": "中級",
+  "minutes": 45,
+  "channel": "PIVOT 公式チャンネル",
+  "score": 31,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "資料の構成設計に使う「キメヘン」「QAR」という型が示され、成果につなげる資料づくりに使える"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2025年1月公開で、AI時代の言語化・アウトプットの重要性という現在の文脈に置かれている"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "資料作成を「スキルの総合格闘技」と位置づけ、企画は「Why?」が大事という軸が言葉になる"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "構成、言語化、企画設計と、資料づくりの上流工程が目次としてそろう"
+   },
+   {
+    "axis": "信頼性",
+    "score": 5,
+    "note": "ビジネスメディアPIVOTの公式チャンネルによる、強い組織の資料作成を扱う発信"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "45分で資料設計の考え方を一通りたどれる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "発信者自身の解説動画で、YouTubeの公式埋め込みで視聴できる"
+   }
+  ],
+  "title": "【強い組織の資料作成はここが違う】ビジネスはアウトプットが9割 資料作成は「スキルの総合格闘技」だ／AI時代だからこそ言語化･アウトプットが重要／成果を生むパワポ術「キメヘン」「QAR」とは？",
+  "url": "https://www.youtube.com/watch?v=Xp48lPTmwvU",
+  "tags": [
+   "資料作成",
+   "パワポ術",
+   "言語化"
+  ],
+  "review": [
+   "成果を生む資料作成の設計を扱う、PIVOTの資料作成特集。",
+   "全ての資料に必要な「キメヘン」、資料をわかりやすくする「QAR」、企画の「Why?」など、構成・言語化・企画設計の型が示される。",
+   "パワポの基本操作ではなく、資料設計の応用に絞った中級内容。"
+  ],
+  "publishedAt": "2025-01-15T00:00:00Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-13"
+ },
+ {
+  "genre": "biz",
+  "sub": "Excel",
+  "ytid": "qlDx6mIUMJU",
+  "level": "中級",
+  "minutes": 10,
+  "channel": "業務効率化のちゃんりょう【作品配布】",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "変数に名前を付けて複雑なネスト数式を読みやすくし、処理の高速化も期待できるLET関数の活用例が示される"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2025年11月公開で、現在のExcelの関数仕様に沿った内容"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "「そもそもLET関数とは」から読みやすさ、高速化へと、利点の順に進む目次構成"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "関数の定義、読みやすさの改善、高速化と、一つの関数を多面から扱う"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "業務効率化を扱うチャンネルによる、作品配布も行う実務寄りの解説"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "10分で一つの関数に集中する構成"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "発信者自身の解説動画で、YouTubeの公式埋め込みで視聴できる"
+   }
+  ],
+  "title": "【Excel】夢のような関数『LET』！使い方と活用例！【解説】",
+  "url": "https://www.youtube.com/watch?v=qlDx6mIUMJU",
+  "tags": [
+   "Excel",
+   "LET関数",
+   "業務効率化"
+  ],
+  "review": [
+   "ExcelのLET関数の使い方と活用例を扱う、実務応用の解説。",
+   "変数に名前を付けて複雑なネスト数式を読みやすくし、処理の高速化も期待できるという利点が目次で示される。",
+   "基本関数を使える人が次に覚える、中級向けの内容。"
+  ],
+  "publishedAt": "2025-11-08T00:00:00Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-13"
+ },
+ {
+  "genre": "biz",
+  "sub": "プレゼン",
+  "ytid": "gfFYfEp7nbo",
+  "level": "中級",
+  "minutes": 10,
+  "channel": "RECODE - 知性OSの再定義 -",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "事前準備と根回し、観点マネジメント、リアルタイム議事録と、会議の生産性を上げる具体策が並ぶ"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2024年4月公開で、会議運営の事前設計という普遍的な実務論点を扱っている"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "「進行役が苦手」という悩みから入り、成功は会議前に決まるという軸が言葉になる"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "事前準備、論点の管理、議事録の活用と、会議運営の工程がそろう"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "知性・仕事術を扱うチャンネルによる、ファシリテーションに特化した発信"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "10分で会議運営の要点を一巡できる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "発信者自身の解説動画で、YouTubeの公式埋め込みで視聴できる"
+   }
+  ],
+  "title": "会議の成功は会議前に決まっている／最強ファシリテーションスキル／会議がうまい人になるための方法",
+  "url": "https://www.youtube.com/watch?v=gfFYfEp7nbo",
+  "tags": [
+   "ファシリテーション",
+   "会議",
+   "進行"
+  ],
+  "review": [
+   "会議の成功は会議前に決まっているという前提で、ファシリテーションの実践を扱う解説。",
+   "事前準備と根回しが成功を左右する理由、観点マネジメント、リアルタイム議事録の活用が目次に並ぶ。",
+   "進行の基本マナーではなく、事前設計と論点管理による運営の実践に絞った中級内容。"
+  ],
+  "publishedAt": "2024-04-12T00:00:00Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-13"
+ },
+ {
+  "genre": "prog",
+  "sub": "SQL",
+  "ytid": "8S-_SypyX_Q",
+  "level": "上級",
+  "minutes": 52,
+  "channel": "日本PostgreSQLユーザ会",
+  "score": 31,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "レポート集計や分析のクエリの書き方と、よくあるクエリチューニングが、実務の書き方として示される"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 5,
+    "note": "PostgreSQL Conference Japan 2021の講演で、書き方一つでパフォーマンスも読みやすさも変わるという普遍的な論点を扱っている"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "実際に使うSQLの書き方に絞り、集計・分析クエリとチューニングを題材にする構成"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "クエリの書き方、パフォーマンス、読みやすさと、実務SQLの評価観点がそろう"
+   },
+   {
+    "axis": "信頼性",
+    "score": 5,
+    "note": "日本PostgreSQLユーザ会の公式チャンネルが公開した、カンファレンス講演の記録"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "52分の講演で実務SQLの書き方を徹底解説する構成"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "発信者自身の解説動画で、YouTubeの公式埋め込みで視聴できる"
+   }
+  ],
+  "title": "【T2】実際に使うSQLの書き方 徹底解説",
+  "url": "https://www.youtube.com/watch?v=8S-_SypyX_Q",
+  "tags": [
+   "SQL",
+   "PostgreSQL",
+   "クエリチューニング"
+  ],
+  "review": [
+   "PostgreSQL Conference Japan 2021の講演で、実際に使うSQLの書き方を徹底解説する内容。",
+   "レポート集計や分析のクエリの書き方と、よくあるクエリチューニングが題材で、書き方一つでパフォーマンスも読みやすさも大きく変わるとされる。",
+   "基本構文ではなく、集計・分析とチューニングの実践に絞った上級内容。"
+  ],
+  "publishedAt": "2022-06-17T00:00:00Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-13"
+ },
+ {
+  "genre": "prog",
+  "sub": "SQL",
+  "ytid": "VKm6t_u3DAY",
+  "level": "中級",
+  "minutes": 17,
+  "channel": "ゆっくりITちゃんねる",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "結合前にSELECTする、高速化できる書き方、集計の使い方など、業務で書くSQLのノウハウが具体的に並ぶ"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2024年5月公開で、現在のデータベース実務で使う書き方を扱っている"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "「私が実際に業務で書くSQLの書き方」と前提を明示し、ノウハウごとに見出しが立つ構成"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "高速化、集計、本番障害やテスト工程での活用と、実務の場面ごとにノウハウが整理されている"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "実務で書く書き方であることを発信者自身が明示する、現場目線の解説"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "17分で複数のノウハウを確認できる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "発信者自身の解説動画で、YouTubeの公式埋め込みで視聴できる"
+   }
+  ],
+  "title": "【仕事で使える！SQLのノウハウ！】うぷ主がよく書くSQLのノウハウを解説！ 周りと差を付けろ！ 一見意味のない構文...そして高速化と集計を覚えるべき便利な理由！ No.126",
+  "url": "https://www.youtube.com/watch?v=VKm6t_u3DAY",
+  "tags": [
+   "SQL",
+   "高速化",
+   "集計"
+  ],
+  "review": [
+   "発信者が実際に業務で書くSQLの書き方を集めた、実務ノウハウの解説。",
+   "結合前にSELECTする書き方、高速化できる傾向がある書き方、集計を覚えるべき理由、本番障害やテスト工程での活用が並ぶ。",
+   "基本操作を前提とした、中級向けの実践内容。"
+  ],
+  "publishedAt": "2024-05-18T00:00:00Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-13"
  }
 ]

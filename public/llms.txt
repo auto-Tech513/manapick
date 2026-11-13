@@ -5,12 +5,12 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 
 ## 公開中の10ジャンル
 - 生成AI（179本）: https://manapick.app/genre/ai/
-- プログラミング・IT（69本）: https://manapick.app/genre/prog/
-- 動画編集・クリエイティブ（68本）: https://manapick.app/genre/video/
+- プログラミング・IT（71本）: https://manapick.app/genre/prog/
+- 動画編集・クリエイティブ（73本）: https://manapick.app/genre/video/
 - 語学・英語（61本）: https://manapick.app/genre/english/
 - データ分析・DX（37本）: https://manapick.app/genre/data/
 - Webマーケ・SNS運用（36本）: https://manapick.app/genre/marke/
-- Office・資料作成（41本）: https://manapick.app/genre/biz/
+- Office・資料作成（44本）: https://manapick.app/genre/biz/
 - 資格・検定（246本）: https://manapick.app/genre/shikaku/
 - 会計・経営系資格（62本）: https://manapick.app/genre/kaikei/
 - お金・投資（32本）: https://manapick.app/genre/money/
@@ -48,13 +48,13 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
   - STEP2（中級）: 無料版の応用機能・主要機能を業務に当てはめて使える。｜動画: 【保存版】ChatGPT 2025年最新入門～6つのステップでChatGPTの基礎～応用機能までマスター！ChatGPT無料版に対応！これから始める初心者も、多少使ったことがある中級者も / 【脱初心者】AIへの指示出しがうまくいくプロンプトの基礎徹底解説するで！ / 【初心者向け】APIとは何か、実際の使い方や注意点が全部分かる動画【AI自動化】
   - STEP3（中〜上級）: AIに作業を任せる自動化と、プロンプト設計の入口を理解して使い分けられる。｜動画: 【1本で全て分かる】初心者でも簡単に自動化！究極のAIエージェント「n8n」の使い方・入門講座。（活用事例：ChatGPT/Google/Slack連携） / 【40分でマスター】完全初心者でも”明日から実務で使える”Microsoft 365 Copilot完全攻略 / 【完全攻略】Googleの画像生成AI「Nano Banana Pro」の使い方を解説します
 - 代表動画:
-1. 【完全マスター】AI初心者が学ぶべきGeminiの基本的な使い方を徹底解説するで。（生成AI / 自動化 / 34/35 / 17分 / publishedAt=2025-07-31T10:01:20Z） https://manapick.app/video/k1qFX5zJwLk/
+1. 【完全マスター】AI初心者が学ぶべきGeminiの基本的な使い方を徹底解説するで。（生成AI / Gemini / 34/35 / 17分 / publishedAt=2025-07-31T10:01:20Z） https://manapick.app/video/k1qFX5zJwLk/
 2. 【完全マスター】AI初心者にオススメ「Gemini」の使い方・基礎を徹底解説！（生成AI / Gemini / 34/35 / 13分 / publishedAt=2025-12-18T11:21:32Z） https://manapick.app/video/fZMQwtRNI70/
 3. 【Claude Code超入門】超基本的なことをたった30分で学べます｜使い方からおすすめ設定、仕事の自動化まで全手順を解説（生成AI / Claude / 33/35 / 29分 / publishedAt=2026-04-02T09:00:26Z） https://manapick.app/video/EpUWXT0Fcic/
 4. 【初心者OK🔰】アンソロピック「Claude Cowork」使い方基礎講座！活用法まで分かりやすく解説！（生成AI / Claude / 33/35 / 23分 / publishedAt=2026-03-14T10:15:05Z） https://manapick.app/video/NTFIFwmrjiw/
 5. 【完全版】Googleの最強AIツールGeminiの使い方徹底解説【初心者必見】（生成AI / Gemini / 33/35 / 31分 / publishedAt=2026-03-11T11:15:03Z） https://manapick.app/video/SfCNwzANbUY/
 
-### プログラミング・IT（69本）
+### プログラミング・IT（71本）
 - ジャンルURL: https://manapick.app/genre/prog/
 - ガイドURL: https://manapick.app/guide/python/
 - 主なトピック: AWS認定 クラウドプラクティショナー / AWS認定 ソリューションアーキテクト / Git / JavaScript / Python / Python3エンジニア認定基礎試験 / SQL / Web開発 / アプリ / インフラ / 基本情報技術者 / 情報セキュリティマネジメント試験
@@ -69,7 +69,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 0から学ぶGit/GitHub！初心者でもこの動画でAI時代に必須なGit/GitHubを理解できます！（プログラミング・IT / Git / 31/35 / 33分 / publishedAt=2026-07-12T09:00:05Z） https://manapick.app/video/Zk-INRORkFo/
 5. 【2026年春最新】Claude Code(クロードコード)を使うなら知っておきたいGitHub超入門｜しくみ・導入・使い方をやさしく解説！（プログラミング・IT / Git / 31/35 / 23分 / publishedAt=2026-05-03T09:06:05Z） https://manapick.app/video/a_ETr9zrkQg/
 
-### 動画編集・クリエイティブ（68本）
+### 動画編集・クリエイティブ（73本）
 - ジャンルURL: https://manapick.app/genre/video/
 - ガイドURL: https://manapick.app/guide/video-editing/
 - 主なトピック: After Effects / CapCut / DaVinci / Premiere Pro / Webクリエイター能力認定試験 / デザイン / 色彩検定
@@ -109,7 +109,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
   - STEP3（上級）: パワークエリでデータ整形を自動化し、毎回の手作業をなくす。｜動画: 【一本でマスター】Excelパワークエリの基本をこの一本でマスター！パワークエリ超入門講座2025！ / 【Pythonプログラミング】scikit-learnで機械学習！〜 入門編・初心者向け 〜 / 36分でぜんぶ学ぶ 統計学・機械学習の基礎を一気に習得 最短コンパクト学習：ｔ検定、分散分析、カイ二乗検定、回帰分析、重回帰分析、Ｐ値と帰無仮説、正規分布、分散と標準偏差、確率分布
 - 代表動画:
 1. 【Excel講座】スタイリッシュなダッシュボードのかんたん作成★初心者でもサクッと作れる！（データ分析・DX / Excel / 32/35 / 31分 / publishedAt=2023-08-13T09:00:24Z） https://manapick.app/video/PJd_O3Iw7O4/
-2. 【初心者向け】Power BIでダッシュボード入門｜基本操作からレポート作成まで（データ分析・DX / Excel / 31/35 / 37分 / publishedAt=2025-03-07T11:45:06Z） https://manapick.app/video/pzkyp1nsDTo/
+2. 【初心者向け】Power BIでダッシュボード入門｜基本操作からレポート作成まで（データ分析・DX / BI / 31/35 / 37分 / publishedAt=2025-03-07T11:45:06Z） https://manapick.app/video/pzkyp1nsDTo/
 3. 【一本でマスター】Excelパワークエリの基本をこの一本でマスター！パワークエリ超入門講座2025！（データ分析・DX / Excel / 31/35 / 54分 / publishedAt=2025-06-07T10:09:52Z） https://manapick.app/video/_O656uOUmiE/
 4. 【エクセル初心者】VLOOKUP関数①(基本のしくみと使い方)（データ分析・DX / Excel / 30/35 / 15分 / publishedAt=2023-06-03T01:00:24Z） https://manapick.app/video/x1hpSd-vqYo/
 5. ＜リメイク＞【Power BI入門】30分で分かる！Power BIとは？基本的な使い方「５ステップ」（データ分析・DX / BI / 30/35 / 34分 / publishedAt=2024-03-04T10:00:44Z） https://manapick.app/video/yPjQiNob4Kk/
@@ -129,10 +129,10 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. GA4（Googleアナリティクス4）の見るべき指標や使い方を完全解説！（Webマーケ・SNS運用 / SEO / 31/35 / 13分 / publishedAt=2023-06-29T11:00:33Z） https://manapick.app/video/hWVqaNkmHzE/
 5. 【非エンジニア向けCursor入門】AIが文書作成をフルサポート！ プログラミングじゃない使い方教えます（Webマーケ・SNS運用 / SEO / 31/35 / 16分 / publishedAt=2025-04-05T11:39:00Z） https://manapick.app/video/VyC1QaEtNoc/
 
-### Office・資料作成（41本）
+### Office・資料作成（44本）
 - ジャンルURL: https://manapick.app/genre/biz/
 - ガイドURL: https://manapick.app/guide/office-skills/
-- 主なトピック: Excel / Word / プレゼン / 資料作成
+- 主なトピック: Excel / Word / プレゼン / 会議 / 資料作成
 - ロードマップ: Office・資料作成ロードマップ
   - STEP1（初級）: PowerPointの基本操作を押さえ、資料作成の不安を減らす。｜動画: 【初心者・自己流さん必見！】Word文書の基本（最適な作り方） / 【Wordの使い方】初心者のためのワード講座　Word文書作成の超入門 / 【2023年最新版】Excel初心者向け超入門講座！30分完全ガイド - 最も大事なエクセル基本知識を手に入れよう
   - STEP2（中級）: 伝わる資料の型と見やすくするコツを使い、実務資料を磨く。｜動画: 【資料の垢抜け】文字だけで見やすい！資料の作り方｜10分でわかる【パワポ】 / 【初心者脱却】キレイな資料の作り方！【パワポ】 / 【Excel基本】初心者が最初に覚える関数12選｜社会人の常識！
@@ -141,8 +141,8 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 1. 【初心者・自己流さん必見！】Word文書の基本（最適な作り方）（Office・資料作成 / 資料作成 / 31/35 / 27分 / publishedAt=2024-01-20T05:00:09Z） https://manapick.app/video/HAcJ4ldjdn4/
 2. 【20分で完全解説】今日からはじめる Claude Design。パワポを卒業して、専属デザインシステムを構築する方法。（Office・資料作成 / プレゼン / 31/35 / 21分 / publishedAt=2026-06-24T10:15:00Z） https://manapick.app/video/07JbFCoZgn4/
 3. 【Copilot×PowerPoint】社内資料を一瞬で量産する資料作成術（Office・資料作成 / 資料作成 / 31/35 / 14分 / publishedAt=2026-07-16T10:00:15Z） https://manapick.app/video/zjIsJ8LvCq0/
-4. 【2025年最新】Geminiでパワポ・スライド資料を爆速作成する裏ワザを解説します（Office・資料作成 / 資料作成 / 30/35 / 19分 / publishedAt=2025-09-07T10:01:24Z） https://manapick.app/video/vri3RfONGfM/
-5. 【神アプデ】最新版Geminiでパワポ・スライド資料作成が一瞬で終わる方法を解説します（Office・資料作成 / 資料作成 / 30/35 / 14分 / publishedAt=2025-07-21T11:30:32Z） https://manapick.app/video/VY82g_vQzEM/
+4. 【強い組織の資料作成はここが違う】ビジネスはアウトプットが9割 資料作成は「スキルの総合格闘技」だ／AI時代だからこそ言語化･アウトプットが重要／成果を生むパワポ術「キメヘン」「QAR」とは？（Office・資料作成 / 資料作成 / 31/35 / 45分 / publishedAt=2025-01-15T00:00:00Z） https://manapick.app/video/Xp48lPTmwvU/
+5. 【2025年最新】Geminiでパワポ・スライド資料を爆速作成する裏ワザを解説します（Office・資料作成 / 資料作成 / 30/35 / 19分 / publishedAt=2025-09-07T10:01:24Z） https://manapick.app/video/vri3RfONGfM/
 
 ### 資格・検定（246本）
 - ジャンルURL: https://manapick.app/genre/shikaku/
@@ -221,7 +221,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 ## 主要URL
 - トップ: https://manapick.app/
 - YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
-- YouTube学習動画831本の独自集計: https://manapick.app/research/youtube-learning-data/
+- YouTube学習動画841本の独自集計: https://manapick.app/research/youtube-learning-data/
 - 7日学習プラン: https://manapick.app/study-plan/
 - Manapick Network（学ぶ・AI・資格・仕事・企業）: https://manapick.app/network/
 - 学習ロードマップ一覧: https://manapick.app/guide/
