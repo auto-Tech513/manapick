@@ -61,16 +61,18 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
   if (!guide) return {};
 
   const pageUrl = absoluteUrl(guidePath(guide.slug));
+  // Bing の「説明が短すぎる」指摘への対応：ガイド自身の対象読者文を続けて長さと具体性を確保する。
+  const description = guide.audience ? `${guide.description}${guide.audience}` : guide.description;
 
   return {
     title: guide.title,
-    description: guide.description,
+    description,
     alternates: {
       canonical: pageUrl
     },
     openGraph: {
       title: guide.title,
-      description: guide.description,
+      description,
       url: pageUrl,
       type: "article",
       publishedTime: guide.publishedAt,
@@ -88,7 +90,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
       card: "summary_large_image",
       site: "@manapick_app",
       title: guide.title,
-      description: guide.description,
+      description,
       images: [guideOgImage(guide.slug)]
     }
   };

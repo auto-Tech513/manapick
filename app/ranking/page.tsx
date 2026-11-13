@@ -10,7 +10,7 @@ const rankingTitle = "人気の学習動画ランキング | Manapick";
 // 各ランキングで最初から表示する本数。4位以降は折りたたむ（ページ内リンクと掲載本数は変えない）。
 const RANKING_LEAD_COUNT = 3;
 const rankingDescription =
-  "Manapick掲載動画を、YouTube再生数ベースの総合人気、高スコア、新着の3つの見方で整理しました。";
+  "Manapick掲載動画を、YouTube再生数ベースの総合人気、高スコア、新着の3つの見方で整理しました。各ランキングはジャンルを横断して比較でき、気になる動画はそのまま詳細ページで7軸採点レビューを確認できます。";
 
 const rankingSections: { mode: RankingMode; id: string; title: string; note: string }[] = [
   { mode: "popular", id: "popular", title: "総合人気", note: "YouTube再生数と公開からの経過時間をもとにした参考順です。" },

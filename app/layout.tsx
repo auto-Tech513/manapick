@@ -52,7 +52,7 @@ const commonJsonLd = {
       "@id": absoluteUrl("/#website"),
       name: "Manapick",
       url: absoluteUrl("/"),
-      description: "社会人の学び直し・リスキリングに役立つ無料YouTube学習動画を、独自の7軸採点レビューとロードマップで整理するメディア。",
+      description: "社会人の学び直し・リスキリングに役立つ無料YouTube学習動画を、独自の7軸35点採点レビューとレベル別の見る順（ロードマップ）で整理するメディア。生成AI・プログラミング・資格・英語・お金など10ジャンルを、初級から上級まで登録不要・全部無料で案内します。",
       publisher: {
         "@id": absoluteUrl("/#organization")
       },
@@ -64,7 +64,7 @@ const commonJsonLd = {
 export const metadata: Metadata = {
   title: "Manapick | 学び直しを、最短ルートに。",
   description:
-    "社会人の学び直し・リスキリングに役立つ無料YouTube学習動画を、独自の7軸採点レビューとロードマップで整理するメディア。",
+    "社会人の学び直し・リスキリングに役立つ無料YouTube学習動画を、独自の7軸35点採点レビューとレベル別の見る順（ロードマップ）で整理するメディア。生成AI・プログラミング・資格・英語・お金など10ジャンルを、初級から上級まで登録不要・全部無料で案内します。",
   metadataBase: new URL(SITE_URL),
   // Google Discoverの大きな画像表示は max-image-preview:large で有効になる（Google検索セントラル）。
   // noindexが必要なページ（/my/ など）は各ページのrobots指定で上書きされる。

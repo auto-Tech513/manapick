@@ -270,10 +270,18 @@ export async function generateMetadata({ params }: GenrePageProps): Promise<Meta
   if (!publishedGenreKeys.includes(key)) return {};
 
   const label = genreDisplayName(key);
-  const count = genreVideos(key).length;
+  const list = genreVideos(key);
+  const count = list.length;
   const seo = genreSeoFor(key, label, count);
   const title = seo.title;
-  const description = seo.description;
+  // Bing の「説明が短すぎる」指摘への対応：レベル内訳と合計時間を足す（実データから算出）。
+  const levelMix = (["初級", "中級", "上級"] as const)
+    .map((lv) => ({ lv, n: list.filter((v) => v.level === lv).length }))
+    .filter((x) => x.n > 0)
+    .map((x) => `${x.lv}${x.n}本`)
+    .join("・");
+  const totalMinutes = list.reduce((sum, v) => sum + (v.minutes || 0), 0);
+  const description = `${seo.description}レベル内訳は${levelMix}、合計約${Math.round(totalMinutes / 60)}時間分。`;
   const url = absoluteUrl(`/genre/${key}/`);
 
   return {

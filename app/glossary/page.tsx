@@ -5,7 +5,7 @@ import { glossaryTerms } from "@/content/glossary";
 import { absoluteUrl } from "@/lib/manapick";
 
 const glossaryTitle = "用語集 | Manapick";
-const glossaryDescription = "生成AI、プログラミング、動画編集、英語、資格学習など、Manapickで使う学び直し用語を平易に整理しました。";
+const glossaryDescription = "生成AI、プログラミング、動画編集、英語、資格学習など、Manapickで使う学び直し用語を平易に整理しました。動画を見ていて分からない言葉が出てきたときに、その場で意味と関連する学び方を確認できる用語集です。";
 
 export const metadata: Metadata = {
   title: glossaryTitle,

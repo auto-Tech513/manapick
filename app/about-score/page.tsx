@@ -4,7 +4,7 @@ import BrandLogo, { BrandMark } from "@/components/BrandLogo";
 import { absoluteUrl } from "@/lib/manapick";
 
 const scorePageTitle = "採点方法 | Manapick";
-const scorePageDescription = "Manapickスコアの考え方、確認・採点の方法、除外方針を説明します。";
+const scorePageDescription = "Manapickスコア（7軸35点満点）の考え方を説明します。各動画を内容の充実度・正確さ・分かりやすさなど7つの観点で採点する基準、根拠の置き方と確認方法、広告色の強い動画や古くなった動画を除外する方針まで、採点の裏側を公開しています。";
 
 export const metadata: Metadata = {
   title: scorePageTitle,

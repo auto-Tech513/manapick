@@ -5,7 +5,7 @@ import { guidePath, guides } from "@/lib/guides";
 import { absoluteUrl, genreDisplayName } from "@/lib/manapick";
 
 const pageTitle = "学習ロードマップ一覧｜無料YouTube動画で学ぶ順番 | Manapick";
-const pageDescription = "生成AI、Python、動画編集、英語、データ分析、資格など10分野の無料YouTube学習ロードマップを一覧で比較できます。";
+const pageDescription = "生成AI、Python、動画編集、英語、データ分析、資格など10分野の無料YouTube学習ロードマップを一覧で比較できます。各ロードマップは独学のステップ、つまずきポイント、次に進む分野までを示し、登録不要・全部無料で読めます。";
 
 export const metadata: Metadata = {
   title: pageTitle,

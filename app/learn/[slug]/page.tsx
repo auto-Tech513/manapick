@@ -37,14 +37,16 @@ export async function generateMetadata({ params }: LearnPageProps): Promise<Meta
   const intent = findLearningIntent(slug);
   if (!intent) return {};
   const pageUrl = absoluteUrl(learningIntentPath(intent.slug));
+  // Bing の「説明が短すぎる」指摘への対応：対象読者（intent.audience）を足して具体性と長さを確保する。
+  const description = `${intent.description}対象は${intent.audience}です。`;
 
   return {
     title: intent.title,
-    description: intent.description,
+    description,
     alternates: { canonical: pageUrl },
     openGraph: {
       title: intent.title,
-      description: intent.description,
+      description,
       url: pageUrl,
       type: "article",
       images: [absoluteUrl("/brand/ogp-manapick.png")]
@@ -53,7 +55,7 @@ export async function generateMetadata({ params }: LearnPageProps): Promise<Meta
       card: "summary_large_image",
       site: "@manapick_app",
       title: intent.title,
-      description: intent.description,
+      description,
       images: [absoluteUrl("/brand/ogp-manapick.png")]
     }
   };
