@@ -3520,7 +3520,7 @@ function VideoCard({
                     <dt className="font-black text-ink">
                       {axis.axis} {axis.score}/5
                       {generic ? (
-                        <span className="ml-2 rounded-pill border border-line bg-bg px-2 py-0.5 text-[0.68rem] font-bold text-muted">一次評価</span>
+                        <span className="ml-2 rounded-pill border border-line bg-bg px-2 py-0.5 text-[0.72rem] font-bold text-muted">一次評価</span>
                       ) : null}
                     </dt>
                     {generic ? null : <dd className="leading-6 text-muted">{axis.note}</dd>}
