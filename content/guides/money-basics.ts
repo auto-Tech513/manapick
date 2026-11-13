@@ -14,9 +14,9 @@ const moneyBasicsGuide = {
   ],
   audience: "家計を整えたい人、新NISAやiDeCoを制度として理解したい人、投資判断を急がず基礎から学びたい人向けです。",
   conclusionBullets: [
-    { label: "STEP1（初級）", text: "家計管理の型と、新NISA・iDeCoの制度の仕組みがわかる" },
-    { label: "STEP2（中級）", text: "投資信託・インデックス投資の仕組みとリスクを理解する" },
-    { label: "STEP3（上級）", text: "自分の方針を立て、長期・積立・分散を続ける考え方を整理する" }
+    { label: "STEP1", text: "家計管理の型と、新NISA・iDeCoの制度の仕組みがわかる" },
+    { label: "STEP2", text: "投資信託・インデックス投資の仕組みとリスクを理解する" },
+    { label: "STEP3", text: "自分の方針を立て、長期・積立・分散を続ける考え方を整理する" }
   ],
   conclusionClosing:
     "個別銘柄の推奨ではなく、制度理解・家計管理・リスク理解を優先する構成です。",
@@ -27,7 +27,7 @@ const moneyBasicsGuide = {
   ],
   steps: [
     {
-      title: "STEP1：初級 — 家計と制度を知る",
+      title: "STEP1：家計と制度を知る",
       videos: [
         { ytid: "5AmpuQsZh1Q", why: "家計簿の型を学び、投資以前の土台である収支管理を整えられる" },
         { ytid: "NtyOvIPipak", why: "NISA制度の基本をまとめて確認でき、制度理解の入口になる" },
@@ -35,7 +35,7 @@ const moneyBasicsGuide = {
       ]
     },
     {
-      title: "STEP2：中級 — 投資信託の仕組みを理解する",
+      title: "STEP2：投資信託の仕組みを理解する",
       videos: [
         { ytid: "gM1QW-qvJDY", why: "投資信託とETFの違いを学び、商品構造の基礎が整理できる" },
         { ytid: "oVfnsBeS1XE", why: "代表的な投資信託の考え方を通じて、仕組みと注意点を確認できる" },
@@ -43,7 +43,7 @@ const moneyBasicsGuide = {
       ]
     },
     {
-      title: "STEP3：上級 — 方針を作る",
+      title: "STEP3：方針を作る",
       videos: [
         { ytid: "KKb1WNtrFmc", why: "NISAの制度内容を改めて整理し、自分の使い方を考える材料になる" },
         { ytid: "mxXZokjtVyo", why: "確定拠出年金の考え方を確認でき、老後資金制度の比較に役立つ" },

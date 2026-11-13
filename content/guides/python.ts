@@ -9,15 +9,15 @@ const pythonGuide = {
     "Pythonは難しいと感じやすい言語ですが、最初から文法を完璧に覚えようとしなければ進められます。つまずきやすいのは、環境構築、英語のエラー、何を作ればよいか分からない場面です。このページでは、初心者が無料動画で**「一周する → 固める → 作る」**の順に進み、Pythonの全体像から小さなWebアプリまで見通せるように整理しています。",
   conclusionBullets: [
     {
-      label: "STEP1（初級）",
+      label: "STEP1",
       text: "Pythonの環境構築と基本文法を一周し、学習の全体像をつかむ"
     },
     {
-      label: "STEP2（中級）",
+      label: "STEP2",
       text: "長尺の総集編で反復しながら、基礎を体系的に固める"
     },
     {
-      label: "STEP3（上級）",
+      label: "STEP3",
       text: "Webアプリ開発（Flask）の入口に進み、作れるものを広げる"
     }
   ],
@@ -31,7 +31,7 @@ const pythonGuide = {
   ],
   steps: [
     {
-      title: "STEP1：初級 — まず一周する",
+      title: "STEP1：まず一周する",
       videos: [
         {
           title: "【最新版】Python超入門講座（合併版）｜Pythonの超基本的な部分をたった1時間で学べます【プログラミング初心者向け入門講座】",
@@ -44,7 +44,7 @@ const pythonGuide = {
       ]
     },
     {
-      title: "STEP2：中級 — 反復して固める",
+      title: "STEP2：反復して固める",
       videos: [
         {
           title: "【総集編】Python入門講座｜Pythonの基礎を3時間でしっかり学べます！高校生・プログラミング初心者向け",
@@ -53,7 +53,7 @@ const pythonGuide = {
       ]
     },
     {
-      title: "STEP3：上級 — 作って広げる",
+      title: "STEP3：作って広げる",
       videos: [
         {
           title: "たった50分でFlaskの基礎を習得！PythonによるWebアプリ開発 ~Flask超入門 vol.1~",

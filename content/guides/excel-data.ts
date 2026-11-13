@@ -9,15 +9,15 @@ const excelDataGuide = {
     "エクセル統計の使い方は、関数名を暗記するよりも、まず手元の表を集計し、読み取り、同じ作業を自動化する順番で学ぶと理解しやすくなります。平均・割合・ピボット・グラフを使う目的が見えると、統計やデータ分析の入口も身近になります。このページでは、Excelだけで始める無料動画を**「体験する → 体系化する → 自動化する」**の順に整理しています。",
   conclusionBullets: [
     {
-      label: "STEP1（初級）",
+      label: "STEP1",
       text: "普段のExcelでデータ分析の入口を体験し、「分析の考え方」をつかむ"
     },
     {
-      label: "STEP2（中級）",
+      label: "STEP2",
       text: "長尺講義で分析手順を体系化し、実務に転用する土台を作る"
     },
     {
-      label: "STEP3（上級）",
+      label: "STEP3",
       text: "パワークエリでデータ整形を自動化し、毎回の手作業をなくす"
     }
   ],
@@ -31,7 +31,7 @@ const excelDataGuide = {
   ],
   steps: [
     {
-      title: "STEP1：初級 — まず体験する",
+      title: "STEP1：まず体験する",
       videos: [
         {
           title: "【40分で学習】Excel基本操作でこんなに分析できるって知ってた？｜Excelでデータ分析",
@@ -44,7 +44,7 @@ const excelDataGuide = {
       ]
     },
     {
-      title: "STEP2：中級 — 体系化する",
+      title: "STEP2：体系化する",
       videos: [
         {
           title: "初学者から2時間で習得！Excelデータ分析・完全講義",
@@ -53,7 +53,7 @@ const excelDataGuide = {
       ]
     },
     {
-      title: "STEP3：上級 — 自動化する",
+      title: "STEP3：自動化する",
       videos: [
         {
           title: "【一本でマスター】Excelパワークエリの基本をこの一本でマスター！パワークエリ超入門講座2025！",

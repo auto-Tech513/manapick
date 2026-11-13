@@ -14,9 +14,9 @@ const officeSkillsGuide = {
   ],
   audience: "事務職・営業・企画・転職準備で、資料作成に苦手意識がある社会人向けです。",
   conclusionBullets: [
-    { label: "STEP1（初級）", text: "Word/Excelの基本操作を押さえ、資料作成の不安を減らす" },
-    { label: "STEP2（中級）", text: "伝わる資料の型と見やすくするコツを使い、実務資料を磨く" },
-    { label: "STEP3（上級）", text: "CanvaやAIも使い、資料作成の選択肢と表現の幅を広げる" }
+    { label: "STEP1", text: "Word/Excelの基本操作を押さえ、資料作成の不安を減らす" },
+    { label: "STEP2", text: "伝わる資料の型と見やすくするコツを使い、実務資料を磨く" },
+    { label: "STEP3", text: "CanvaやAIも使い、資料作成の選択肢と表現の幅を広げる" }
   ],
   conclusionClosing:
     "ツールの派手さより、相手が読みやすい資料にするための基本を先に整えます。",
@@ -27,7 +27,7 @@ const officeSkillsGuide = {
   ],
   steps: [
     {
-      title: "STEP1：初級 — 基本操作を押さえる",
+      title: "STEP1：基本操作を押さえる",
       videos: [
         { ytid: "HAcJ4ldjdn4", why: "Word文書の基本構造を確認でき、自己流の崩れを直しやすい" },
         { ytid: "xLyflLmz5qI", why: "Wordの超入門として、初めての文書作成を一通り追える" },
@@ -35,7 +35,7 @@ const officeSkillsGuide = {
       ]
     },
     {
-      title: "STEP2：中級 — 伝わる資料に整える",
+      title: "STEP2：伝わる資料に整える",
       videos: [
         { ytid: "GkIDiXMEgUM", why: "文字中心の資料を見やすくするコツが学べ、すぐ仕事に転用しやすい" },
         { ytid: "hQRV4XOh4qM", why: "パワポ資料の見た目を改善する考え方を押さえられる" },
@@ -43,7 +43,7 @@ const officeSkillsGuide = {
       ]
     },
     {
-      title: "STEP3：上級 — AI/Canvaへ広げる",
+      title: "STEP3：AI/Canvaへ広げる",
       videos: [
         { ytid: "NR2OJBsF27w", why: "Canvaでプレゼン資料を作る流れを知り、PowerPoint以外の選択肢が持てる" },
         { ytid: "02GApICU6UE", why: "CanvaAIを含む新しい資料作成機能を確認できる" },

@@ -14,9 +14,9 @@ const certificationGuide = {
   ],
   audience: "社会人の資格取得、転職準備、社内評価につながる学習を始めたい人向けです。",
   conclusionBullets: [
-    { label: "STEP1（初級）", text: "宅建学習のスケジュールと独学の進め方を決める" },
-    { label: "STEP2（中級）", text: "ITパスポート・基本情報の全体像を押さえ、学習範囲を整理する" },
-    { label: "STEP3（上級）", text: "過去問・重点分野へ進み、合格に向けた実践演習へ移る" }
+    { label: "STEP1", text: "宅建学習のスケジュールと独学の進め方を決める" },
+    { label: "STEP2", text: "ITパスポート・基本情報の全体像を押さえ、学習範囲を整理する" },
+    { label: "STEP3", text: "過去問・重点分野へ進み、合格に向けた実践演習へ移る" }
   ],
   conclusionClosing:
     "資格の種類は違っても、合格までの型は「計画→範囲把握→演習」です。",
@@ -27,7 +27,7 @@ const certificationGuide = {
   ],
   steps: [
     {
-      title: "STEP1：初級 — 計画を決める",
+      title: "STEP1：計画を決める",
       videos: [
         { ytid: "AETcTrEOu9A", why: "宅建学習のスケジュールを確認でき、試験日から逆算する感覚が掴める" },
         { ytid: "_rIozAfVG3A", why: "合格までの全体戦略を見られ、独学の進め方を具体化しやすい" },
@@ -35,7 +35,7 @@ const certificationGuide = {
       ]
     },
     {
-      title: "STEP2：中級 — 範囲を整理する",
+      title: "STEP2：範囲を整理する",
       videos: [
         { ytid: "9H9oS26DWLY", why: "ITパスポートの勉強法をまとめて確認でき、範囲の広い試験への向き合い方がわかる" },
         { ytid: "2_2o2_E9WeM", why: "ITパスポート合格までのステップを整理でき、学習の見通しが立つ" },
@@ -43,7 +43,7 @@ const certificationGuide = {
       ]
     },
     {
-      title: "STEP3：上級 — 演習へ移る",
+      title: "STEP3：演習へ移る",
       videos: [
         { ytid: "q_sq-j7emo8", why: "宅建の重点分野に踏み込み、知識を得点へ変える準備ができる" },
         { ytid: "oDtA78nwQMM", why: "基本情報の科目Bを確認でき、演習型の学習へ進む入口になる" },

@@ -14,9 +14,9 @@ const webMarketingGuide = {
   ],
   audience: "広報・営業・個人発信・副業準備で、Web集客の基本を無料動画から学びたい人向けです。",
   conclusionBullets: [
-    { label: "STEP1（初級）", text: "Webマーケティングの全体像を短時間でつかみ、学ぶ順番を決める" },
-    { label: "STEP2（中級）", text: "SEOの基本と計測の見方を押さえ、改善の土台を作る" },
-    { label: "STEP3（中〜上級）", text: "SNS運用と広告の基本を組み合わせ、継続的に改善する型を作る" }
+    { label: "STEP1", text: "Webマーケティングの全体像を短時間でつかみ、学ぶ順番を決める" },
+    { label: "STEP2", text: "SEOの基本と計測の見方を押さえ、改善の土台を作る" },
+    { label: "STEP3", text: "SNS運用と広告の基本を組み合わせ、継続的に改善する型を作る" }
   ],
   conclusionClosing:
     "派手な裏技ではなく、全体像・検索・計測・SNSを順番に押さえる構成です。",
@@ -27,7 +27,7 @@ const webMarketingGuide = {
   ],
   steps: [
     {
-      title: "STEP1：初級 — 全体像をつかむ",
+      title: "STEP1：全体像をつかむ",
       videos: [
         { ytid: "kt5GIVHtCPM", why: "9分でWebマーケティングの全体像を見られ、最初の地図として使いやすい" },
         { ytid: "z9EUo-T5v6Q", why: "マーケティングの考え方を事例で理解でき、施策の前提が整う" },
@@ -35,7 +35,7 @@ const webMarketingGuide = {
       ]
     },
     {
-      title: "STEP2：中級 — SEOと計測を学ぶ",
+      title: "STEP2：SEOと計測を学ぶ",
       videos: [
         { ytid: "vn1BTbqlvY4", why: "AI時代のSEOを含めて基礎を整理でき、検索流入の考え方が掴める" },
         { ytid: "SOg2c8WrdT0", why: "SEOの基礎から具体策までを体系的に確認できる" },
@@ -43,7 +43,7 @@ const webMarketingGuide = {
       ]
     },
     {
-      title: "STEP3：中〜上級 — SNSと広告へ広げる",
+      title: "STEP3：SNSと広告へ広げる",
       videos: [
         { ytid: "HCTLLBpY3qQ", why: "Instagram運用の基本を押さえ、投稿設計を考えやすくなる" },
         { ytid: "Ju0w7JxgMc8", why: "Xの基本操作を確認でき、発信チャネルの比較に役立つ" },
