@@ -48,9 +48,15 @@ export async function generateMetadata({ params }: SubGenrePageProps): Promise<M
   const page = findEligibleSubPage(key, sub);
   if (!page) return {};
 
-  const stats = subStats(subPageVideos(key, sub));
+  const subVideos = subPageVideos(key, sub);
+  const stats = subStats(subVideos);
+  const levelMix = (["初級", "中級", "上級"] as const)
+    .map((lv) => ({ lv, n: subVideos.filter((v) => v.level === lv).length }))
+    .filter((x) => x.n > 0)
+    .map((x) => `${x.lv}${x.n}本`)
+    .join("・");
   const title = `${sub}の勉強におすすめ無料YouTube動画${page.count}本｜見る順｜Manapick`;
-  const description = `${genreDisplayName(key)}の「${sub}」の無料YouTube学習動画${page.count}本を7軸35点で採点し、見る順に整理。合計${formatTotal(stats.totalMinutes)}、15分以内は${stats.shortCount}本。登録不要・全部無料。`;
+  const description = `${genreDisplayName(key)}の「${sub}」の無料YouTube学習動画${page.count}本を7軸35点で採点し、見る順に整理。合計${formatTotal(stats.totalMinutes)}、15分以内は${stats.shortCount}本。レベル内訳は${levelMix}。登録不要・全部無料。`;
   const url = absoluteUrl(subGenrePath(key, sub));
 
   return {

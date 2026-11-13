@@ -58,6 +58,17 @@ jobs:
           git add content/news.json public/og/news public/news-feed.xml public/llms.txt
           git commit -m "content: publish verified daily learning news"
           git push
+      - name: Submit new article to IndexNow
+        if: success()
+        run: |
+          # bot のコミットが実際に作られた場合のみ、差分 URL を IndexNow へ通知する。
+          # （GITHUB_TOKEN の push では indexnow.yml 側の push トリガーが発火しないため、ここで送る）
+          if [ "$(git rev-parse HEAD)" = "${{ github.sha }}" ]; then
+            echo "No bot commit; skip IndexNow."
+            exit 0
+          fi
+          sleep 120
+          node scripts/indexnow-diff.mjs "${{ github.sha }}" HEAD | node scripts/indexnow-submit.mjs
       - name: Report an unavailable article generator once
         if: steps.publish.outcome == 'failure'
         env:

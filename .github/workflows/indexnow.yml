@@ -1,0 +1,29 @@
+name: IndexNow submit
+
+# コンテンツ変更の push を検知し、変更のあった公開 URL を IndexNow へ通知する（Bing 等の即時インデックス用）。
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Wait for the Pages deployment to propagate
+        run: sleep 180
+      - name: Build changed URL list
+        id: diff
+        run: |
+          node scripts/indexnow-diff.mjs "${{ github.event.before }}" "${{ github.sha }}" > /tmp/urls.json
+          cat /tmp/urls.json
+      - name: Submit to IndexNow
+        run: node scripts/indexnow-submit.mjs < /tmp/urls.json

@@ -204,6 +204,8 @@ export function displayChannel(video: Video) {
 
 export function videoDescription(video: Video) {
   // レビュー1文目だけでは短く重複もあるため、掲載データ（ジャンル・レベル・長さ・確定スコア）を添えて一意で具体的な説明にする。
+  // 2026-11-13: Bing Webmaster の「meta description が短すぎる」指摘（実測で動画ページの64%が80字未満）への対応として、
+  // 1文目が短い場合は2文目（扱う内容）も足し、全体の上限も150字から160字へ広げる。
   const facts = [
     video.sub && video.sub !== genreLabel(video.genre) ? `${genreLabel(video.genre)}「${video.sub}」` : genreLabel(video.genre),
     video.level,
@@ -211,8 +213,10 @@ export function videoDescription(video: Video) {
     typeof video.score === "number" ? `Manapickスコア${video.score}/35` : null
   ].filter(Boolean).join("・");
   const suffix = `（${facts}）`;
-  const base = (video.review[0] ?? video.title).replace(/\s+/g, " ").trim();
-  return compactText(base, Math.max(40, 150 - suffix.length)) + suffix;
+  const lines = (video.review ?? []).map((line) => line.replace(/\s+/g, " ").trim()).filter(Boolean);
+  let base = lines[0] ?? video.title.replace(/\s+/g, " ").trim();
+  if (base.length < 70 && lines[1]) base = `${base}${lines[1]}`;
+  return compactText(base, Math.max(40, 160 - suffix.length)) + suffix;
 }
 
 function compactText(value: string, maxLength: number) {
