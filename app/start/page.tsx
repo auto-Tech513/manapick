@@ -13,13 +13,13 @@ export const metadata: Metadata = {
 export default function StartPage() {
   return (
     <main className="static-page bg-paper">
-      <section className="mx-auto max-w-5xl px-4 py-7 pb-20 leading-8 min-[760px]:px-6 min-[760px]:py-10">
-        <div className="rounded-2xl border border-line bg-[linear-gradient(135deg,#f8fbff_0%,#eff8f4_100%)] p-5 shadow-card min-[760px]:p-8">
+      <section className="mx-auto max-w-5xl px-4 py-7 pb-20 leading-8 sm:px-6 sm:py-10">
+        <div className="rounded-2xl border border-line bg-[linear-gradient(135deg,#f8fbff_0%,#eff8f4_100%)] p-5 shadow-card sm:p-8">
           <p className="text-sm font-black text-leaf">3問で決める</p>
-          <h1 className="mt-2 max-w-3xl text-3xl font-black leading-tight text-ink min-[760px]:text-5xl">
+          <h1 className="mt-2 max-w-3xl text-3xl font-black leading-tight text-ink sm:text-5xl">
             “今日の1本”を、迷わず選ぶ。
           </h1>
-          <p className="mt-4 max-w-3xl text-base font-bold leading-8 text-muted min-[760px]:text-lg">
+          <p className="mt-4 max-w-3xl text-base font-bold leading-8 text-muted sm:text-lg">
             ジャンル・レベル・使える時間に答えるだけで、運営者が7軸35点で採点した学習動画から、
             <strong className="text-primaryInk">今日まず見るべき1本</strong>を提案します。登録不要・全部無料です。
           </p>
