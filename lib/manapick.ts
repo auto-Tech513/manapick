@@ -174,6 +174,14 @@ export function scoreConfirmationDate(video: Video) {
   return video.scoreConfirmedAt.replace(/-/g, "/");
 }
 
+/** YouTube の公開日（日本時間の日付、YYYY/MM/DD）。保持している publishedAt をそのまま表示に使う（2026-11-13、所有者承認 2026-11-11）。 */
+export function youtubePublishedDate(video: Video) {
+  if (!video.publishedAt) return null;
+  const time = new Date(video.publishedAt);
+  if (Number.isNaN(time.getTime())) return null;
+  return new Intl.DateTimeFormat("ja-JP", { timeZone: "Asia/Tokyo", year: "numeric", month: "2-digit", day: "2-digit" }).format(time);
+}
+
 export function videoFreshness(video: Video): { label: string; tone: "new" | "evergreen"; note: string } | null {
   if (!video.publishedAt) return null;
   const publishedTime = new Date(video.publishedAt).getTime();
