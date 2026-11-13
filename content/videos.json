@@ -51051,5 +51051,249 @@
   "publishedAt": "2025-10-21T00:00:00Z",
   "scoreStatus": "confirmed",
   "scoreConfirmedAt": "2026-11-13"
+ },
+ {
+  "genre": "data",
+  "sub": "BI",
+  "ytid": "rDRtQq8OQ0g",
+  "level": "上級",
+  "minutes": 18,
+  "channel": "DX塾 – Power BIで始めるデータ活用",
+  "score": 30,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "Financial Sampleを使い、正規化の理解からPower Queryによるディメンションテーブルの分割、モデルビューでのリレーション設定まで、設計の実践手順が示される"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2025年8月公開で、現在のPower BIのモデリング機能を前提にしている"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "データモデリングの基本である正規化やスタースキーマの理解から実践へ進む構成"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "正規化、ファクト／ディメンション分離、リレーション設定と、モデリング設計の判断要素がそろう"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "Power BI専門チャンネルによる、データ活用の実践に特化した発信"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "18分でサンプルデータのモデリングを一通り実践できる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "発信者自身の解説動画で、YouTubeの公式埋め込みで視聴できる"
+   }
+  ],
+  "title": "Power BIで学ぶスタースキーマ設計｜Financial Sampleで実践モデリング",
+  "url": "https://www.youtube.com/watch?v=rDRtQq8OQ0g",
+  "tags": [
+   "Power BI",
+   "スタースキーマ",
+   "データモデリング"
+  ],
+  "review": [
+   "Power BIのサンプルデータFinancial Sampleを使い、スタースキーマ設計を実践するモデリングの解説。",
+   "正規化やスタースキーマの理解から、Power Queryによるディメンションテーブルの分割、モデルビューでのリレーション設定までをたどれる。",
+   "基本操作を前提に、設計判断を扱う上級の内容。"
+  ],
+  "publishedAt": "2025-08-17T00:00:00Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-13"
+ },
+ {
+  "genre": "data",
+  "sub": "BI",
+  "ytid": "kBbywyeSOnA",
+  "level": "上級",
+  "minutes": 14,
+  "channel": "業務効率化・データ活用ちゃんねる",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "DAXクエリビューで必要なデータを自動取得し、Power AutomateからDAXクエリを実行する連携まで、実務の自動化に直結する"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2025年8月公開で、現在のPower BIのDAXクエリビュー機能を扱っている"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "DAXクエリの意味からビューの使い方、自動実行へと、応用の順に進む構成"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "DAXクエリの定義、クエリビューの操作、Power Automate連携と、取得から自動化までの流れがそろう"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "業務効率化とデータ活用を扱うチャンネルによる、Power BI応用に特化した解説"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "14分でDAXクエリの応用を確認できる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "発信者自身の解説動画で、YouTubeの公式埋め込みで視聴できる"
+   }
+  ],
+  "title": "【Power BI応用】DAXクエリとは？自動で必要なデータを取得する方法！",
+  "url": "https://www.youtube.com/watch?v=kBbywyeSOnA",
+  "tags": [
+   "Power BI",
+   "DAXクエリ",
+   "自動化"
+  ],
+  "review": [
+   "Power BIのDAXクエリで、必要なデータを自動で取得する方法を扱う応用の解説。",
+   "DAXクエリの意味、DAXクエリビューの使い方、Power AutomateからDAXクエリを実行する方法が説明される。",
+   "DAXをすでに使う人を前提とした、上級の実践内容。"
+  ],
+  "publishedAt": "2025-08-29T00:00:00Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-13"
+ },
+ {
+  "genre": "marke",
+  "sub": "SEO",
+  "ytid": "ppsGy2jJsSU",
+  "level": "中級",
+  "minutes": 9,
+  "channel": "SEO・AI検索対策ならミエルカチャンネル",
+  "score": 30,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "表示されない原因の切り分けという実務視点で、クロールからレンダリングまでの確認観点が示される"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2026年7月公開で、AI検索時代という現在の文脈にテクニカルSEOを置いている"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "Google検索の基本的な仕組みをもとに、URL発見、クロール、インデックス、レンダリングの順で進む構成"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "クロール、インデックス、レンダリング、JavaScriptで注意すべきポイントと、テクニカルSEOの全体像がそろう"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "SEO・AI検索対策を掲げるミエルカのチャンネルによる、担当者向けの対談形式の発信"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "9分でテクニカルSEOの全体像を一巡できる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "発信者自身の解説動画で、YouTubeの公式埋め込みで視聴できる"
+   }
+  ],
+  "title": "【テクニカルSEOとは】AI検索時代にも重要なクロール・インデックス・レンダリングの基本",
+  "url": "https://www.youtube.com/watch?v=ppsGy2jJsSU",
+  "tags": [
+   "テクニカルSEO",
+   "クロール",
+   "インデックス"
+  ],
+  "review": [
+   "AI検索時代にも重要とされる、テクニカルSEOの全体像を扱う解説。",
+   "Google検索の仕組みをもとに、URL発見、クロール、インデックス、レンダリング、JavaScriptで注意すべきポイントまでをたどれる。",
+   "対象をSEO担当者・Webマーケターと明記した、実務の切り分け視点の中級内容。"
+  ],
+  "publishedAt": "2026-07-14T00:00:00Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-13"
+ },
+ {
+  "genre": "marke",
+  "sub": "Webマーケ",
+  "ytid": "ooLjRPEZqF0",
+  "level": "中級",
+  "minutes": 11,
+  "channel": "Amazon Ads Japan",
+  "score": 30,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "広告戦略のプランニング、クリエイティブ制作、パフォーマンスのモニタリングから原因分析・改善・レポートまで、運用の実践フローが示される"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2026年11月公開で、AI活用による広告運用という現在の手法を扱っている"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "戦略、クリエイティブ、分析の3つの活用術に分けて進む構成"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "現状分析と戦略仮説の構築、最適化アクションの提案、常時モニタリングと改善まで、運用の工程がそろう"
+   },
+   {
+    "axis": "信頼性",
+    "score": 5,
+    "note": "Amazon Ads Japanの公式チャンネルによる、公式パートナーXnurtaの実践例の紹介"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "11分でAI活用の3領域を一巡できる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "発信者自身の解説動画で、YouTubeの公式埋め込みで視聴できる"
+   }
+  ],
+  "title": "[プロから学ぼう] AI活用による広告運用「戦略・クリエイティブ・分析」3つの活用術 by Xnurta - Amazon Ads",
+  "url": "https://www.youtube.com/watch?v=ooLjRPEZqF0",
+  "tags": [
+   "広告運用",
+   "Amazon Ads",
+   "AI活用"
+  ],
+  "review": [
+   "Amazonのスポンサー広告を題材に、AI活用による広告運用の3つの活用術を扱う解説。",
+   "広告戦略のプランニング（現状分析、戦略仮説の構築、最適化アクションの提案）、クリエイティブ制作、パフォーマンスのモニタリングから原因分析・改善アクション・レポート作成までが、公式パートナーの実践例で示される。",
+   "対象を広告主・運用担当者とする、運用の分析と設計の中級内容。"
+  ],
+  "publishedAt": "2026-11-12T00:00:00Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-13"
  }
 ]

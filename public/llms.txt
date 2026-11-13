@@ -8,8 +8,8 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - プログラミング・IT（71本）: https://manapick.app/genre/prog/
 - 動画編集・クリエイティブ（73本）: https://manapick.app/genre/video/
 - 語学・英語（62本）: https://manapick.app/genre/english/
-- データ分析・DX（37本）: https://manapick.app/genre/data/
-- Webマーケ・SNS運用（36本）: https://manapick.app/genre/marke/
+- データ分析・DX（39本）: https://manapick.app/genre/data/
+- Webマーケ・SNS運用（38本）: https://manapick.app/genre/marke/
 - Office・資料作成（44本）: https://manapick.app/genre/biz/
 - 資格・検定（246本）: https://manapick.app/genre/shikaku/
 - 会計・経営系資格（62本）: https://manapick.app/genre/kaikei/
@@ -99,7 +99,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. TOEIC完全初心者が2ヶ月で600点を取るための勉強ロードマップ【2024最新版】（語学・英語 / TOEIC / 32/35 / 23分 / publishedAt=2024-02-28T11:00:02Z） https://manapick.app/video/aRKYpz19vPE/
 5. 【TOEIC完全ロードマップ】これで伸びなかったら諦めてください。推奨教材と勉強方法を全て解説します（語学・英語 / TOEIC / 32/35 / 21分 / publishedAt=2026-04-28T09:31:55Z） https://manapick.app/video/yZBvdoTDjBE/
 
-### データ分析・DX（37本）
+### データ分析・DX（39本）
 - ジャンルURL: https://manapick.app/genre/data/
 - ガイドURL: https://manapick.app/guide/excel-data/
 - 主なトピック: BI / Excel / データサイエンス / 統計
@@ -114,7 +114,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【エクセル初心者】VLOOKUP関数①(基本のしくみと使い方)（データ分析・DX / Excel / 30/35 / 15分 / publishedAt=2023-06-03T01:00:24Z） https://manapick.app/video/x1hpSd-vqYo/
 5. ＜リメイク＞【Power BI入門】30分で分かる！Power BIとは？基本的な使い方「５ステップ」（データ分析・DX / BI / 30/35 / 34分 / publishedAt=2024-03-04T10:00:44Z） https://manapick.app/video/yPjQiNob4Kk/
 
-### Webマーケ・SNS運用（36本）
+### Webマーケ・SNS運用（38本）
 - ジャンルURL: https://manapick.app/genre/marke/
 - ガイドURL: https://manapick.app/guide/web-marketing/
 - 主なトピック: SEO / SNS / Webマーケ
@@ -221,7 +221,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 ## 主要URL
 - トップ: https://manapick.app/
 - YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
-- YouTube学習動画842本の独自集計: https://manapick.app/research/youtube-learning-data/
+- YouTube学習動画846本の独自集計: https://manapick.app/research/youtube-learning-data/
 - 7日学習プラン: https://manapick.app/study-plan/
 - Manapick Network（学ぶ・AI・資格・仕事・企業）: https://manapick.app/network/
 - 学習ロードマップ一覧: https://manapick.app/guide/
