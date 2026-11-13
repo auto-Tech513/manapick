@@ -7,7 +7,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 生成AI（179本）: https://manapick.app/genre/ai/
 - プログラミング・IT（71本）: https://manapick.app/genre/prog/
 - 動画編集・クリエイティブ（73本）: https://manapick.app/genre/video/
-- 語学・英語（61本）: https://manapick.app/genre/english/
+- 語学・英語（62本）: https://manapick.app/genre/english/
 - データ分析・DX（37本）: https://manapick.app/genre/data/
 - Webマーケ・SNS運用（36本）: https://manapick.app/genre/marke/
 - Office・資料作成（44本）: https://manapick.app/genre/biz/
@@ -57,7 +57,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 ### プログラミング・IT（71本）
 - ジャンルURL: https://manapick.app/genre/prog/
 - ガイドURL: https://manapick.app/guide/python/
-- 主なトピック: AWS認定 クラウドプラクティショナー / AWS認定 ソリューションアーキテクト / Git / JavaScript / Python / Python3エンジニア認定基礎試験 / SQL / Web開発 / アプリ / インフラ / 基本情報技術者 / 情報セキュリティマネジメント試験
+- 主なトピック: AWS認定 クラウドプラクティショナー / AWS認定 ソリューションアーキテクト / Git / Java / JavaScript / Python / Python3エンジニア認定基礎試験 / SQL / Web開発 / アプリ / インフラ / 基本情報技術者 / 情報セキュリティマネジメント試験
 - ロードマップ: プログラミングロードマップ
   - STEP1（初級）: Pythonの環境と基本文法を一周し、学習の全体像をつかむ。｜動画: 【最新版】Python超入門講座（合併版）｜Pythonの超基本的な部分をたった1時間で学べます【プログラミング初心者向け入門講座】 / 【Python入門】8分で挫折知らず！プログラミングの基礎を完全攻略 / 【初心者でもわかる！】Gitの使い方講座
   - STEP2（中級）: 長尺で反復しながら、基礎を体系的に固める。｜動画: Python学習ロードマップを40分で徹底解説｜作りたいもの別のおすすめ学習方法、学習時間を初心者向けに解説 / 【プログラミング入門】SQLの基本を解説！データベース操作の学ぼう！〜VTuberと学習〜【初心者向け】 / 【Git入門講座 合併版】この動画1本でGitとGitHubの基礎をゼロからマスター！【初心者向け】
@@ -84,7 +84,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【Premiere Pro初心者講座】自動文字起こし機能の使い方徹底解説「フルテロップも簡単！」（動画編集・クリエイティブ / Premiere Pro / 32/35 / 21分 / publishedAt=2025-06-18T11:00:33Z） https://manapick.app/video/C9GymZxUrF4/
 5. 【完全無料】はじめてのDavinci Resolve！無料版を使った動画編集初心者向け編集チュートリアル！超入門20分解説。【2025年最新版ダビンチリゾルブの使い方】（動画編集・クリエイティブ / DaVinci / 32/35 / 28分 / publishedAt=2025-10-30T10:45:07Z） https://manapick.app/video/vjFZXXPA888/
 
-### 語学・英語（61本）
+### 語学・英語（62本）
 - ジャンルURL: https://manapick.app/genre/english/
 - ガイドURL: https://manapick.app/guide/english/
 - 主なトピック: TOEIC / 「ハングル」能力検定 / ビジネス英語 / 発音 / 英会話 / 英検
@@ -132,7 +132,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 ### Office・資料作成（44本）
 - ジャンルURL: https://manapick.app/genre/biz/
 - ガイドURL: https://manapick.app/guide/office-skills/
-- 主なトピック: Excel / Word / プレゼン / 会議 / 資料作成
+- 主なトピック: Excel / Word / プレゼン / 資料作成
 - ロードマップ: Office・資料作成ロードマップ
   - STEP1（初級）: PowerPointの基本操作を押さえ、資料作成の不安を減らす。｜動画: 【初心者・自己流さん必見！】Word文書の基本（最適な作り方） / 【Wordの使い方】初心者のためのワード講座　Word文書作成の超入門 / 【2023年最新版】Excel初心者向け超入門講座！30分完全ガイド - 最も大事なエクセル基本知識を手に入れよう
   - STEP2（中級）: 伝わる資料の型と見やすくするコツを使い、実務資料を磨く。｜動画: 【資料の垢抜け】文字だけで見やすい！資料の作り方｜10分でわかる【パワポ】 / 【初心者脱却】キレイな資料の作り方！【パワポ】 / 【Excel基本】初心者が最初に覚える関数12選｜社会人の常識！
@@ -221,7 +221,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 ## 主要URL
 - トップ: https://manapick.app/
 - YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
-- YouTube学習動画841本の独自集計: https://manapick.app/research/youtube-learning-data/
+- YouTube学習動画842本の独自集計: https://manapick.app/research/youtube-learning-data/
 - 7日学習プラン: https://manapick.app/study-plan/
 - Manapick Network（学ぶ・AI・資格・仕事・企業）: https://manapick.app/network/
 - 学習ロードマップ一覧: https://manapick.app/guide/
