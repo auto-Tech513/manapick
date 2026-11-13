@@ -4,16 +4,16 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 動画はYouTube上で公開されているものを掲載し、YouTubeへのリンクまたはYouTube公式プレーヤーで紹介します。ダウンロードや再配布は扱いません。
 
 ## 公開中の10ジャンル
-- 生成AI（173本）: https://manapick.app/genre/ai/
+- 生成AI（174本）: https://manapick.app/genre/ai/
 - プログラミング・IT（65本）: https://manapick.app/genre/prog/
 - 動画編集・クリエイティブ（68本）: https://manapick.app/genre/video/
 - 語学・英語（58本）: https://manapick.app/genre/english/
 - データ分析・DX（35本）: https://manapick.app/genre/data/
-- Webマーケ・SNS運用（31本）: https://manapick.app/genre/marke/
-- Office・資料作成（40本）: https://manapick.app/genre/biz/
+- Webマーケ・SNS運用（32本）: https://manapick.app/genre/marke/
+- Office・資料作成（41本）: https://manapick.app/genre/biz/
 - 資格・検定（246本）: https://manapick.app/genre/shikaku/
 - 会計・経営系資格（62本）: https://manapick.app/genre/kaikei/
-- お金・投資（27本）: https://manapick.app/genre/money/
+- お金・投資（28本）: https://manapick.app/genre/money/
 
 ## 採点方法
 - Manapickスコアは7軸×5点=35点満点です。
@@ -39,7 +39,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 2026-10-19 iPhoneのGoogle SheetsでもGeminiが使えるように、外出先で表を分析: https://manapick.app/news/2026-10-19-gemini-in-google-sheets-ios/ | 出典 Google Workspace Updates
 
 ## ジャンル別AEOインデックス
-### 生成AI（173本）
+### 生成AI（174本）
 - ジャンルURL: https://manapick.app/genre/ai/
 - ガイドURL: https://manapick.app/guide/generative-ai/
 - 主なトピック: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Cline / Copilot / DeepL / DeepSeek / ElevenLabs / Figma(Figma AI) / Gamma / Gemini / Gemma / GitHub Copilot / Google AI Mode / Google Veo / Google翻訳 / Grok / Hailuo AI / HeyGen / Kling AI / Manus / Midjourney / Notion AI / Notta / Ollama / OpenAI Codex / OpenClaw / Perplexity / PixVerse / Replit Agent / Runway / Siri AI / Stable Diffusion / Suno / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
@@ -114,7 +114,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【エクセル初心者】VLOOKUP関数①(基本のしくみと使い方)（データ分析・DX / Excel / 30/35 / 15分 / publishedAt=2023-06-03T01:00:24Z） https://manapick.app/video/x1hpSd-vqYo/
 5. ＜リメイク＞【Power BI入門】30分で分かる！Power BIとは？基本的な使い方「５ステップ」（データ分析・DX / BI / 30/35 / 34分 / publishedAt=2024-03-04T10:00:44Z） https://manapick.app/video/yPjQiNob4Kk/
 
-### Webマーケ・SNS運用（31本）
+### Webマーケ・SNS運用（32本）
 - ジャンルURL: https://manapick.app/genre/marke/
 - ガイドURL: https://manapick.app/guide/web-marketing/
 - 主なトピック: SEO / SNS / Webマーケ
@@ -129,7 +129,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. GA4（Googleアナリティクス4）の見るべき指標や使い方を完全解説！（Webマーケ・SNS運用 / SEO / 31/35 / 13分 / publishedAt=2023-06-29T11:00:33Z） https://manapick.app/video/hWVqaNkmHzE/
 5. 【非エンジニア向けCursor入門】AIが文書作成をフルサポート！ プログラミングじゃない使い方教えます（Webマーケ・SNS運用 / SEO / 31/35 / 16分 / publishedAt=2025-04-05T11:39:00Z） https://manapick.app/video/VyC1QaEtNoc/
 
-### Office・資料作成（40本）
+### Office・資料作成（41本）
 - ジャンルURL: https://manapick.app/genre/biz/
 - ガイドURL: https://manapick.app/guide/office-skills/
 - 主なトピック: Excel / Word / プレゼン / 資料作成
@@ -174,7 +174,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【2025.5｜3級学科】CBT公表分　読み上げと解答動画です。聞き流しもOK！2級勉強中の方にも基礎のおさらいにオススメ！　FP技能士3級　ファイナンシャルプランナー　過去問実践（会計・経営系資格 / FP / 30/35 / 31分 / publishedAt=2025-06-20T14:22:27Z） https://manapick.app/video/5SUv1DVJzdc/
 5. 【超入門】簿記の基本を25分で完全理解！初心者でも全体の流れと基礎がスッキリ理解できる【日商簿記3級対策】（会計・経営系資格 / 簿記 / 30/35 / 26分 / publishedAt=2025-09-01T09:01:17Z） https://manapick.app/video/reHqDGh4r2Y/
 
-### お金・投資（27本）
+### お金・投資（28本）
 - ジャンルURL: https://manapick.app/genre/money/
 - ガイドURL: https://manapick.app/guide/money-basics/
 - 主なトピック: NISA / 家計 / 投資
@@ -221,7 +221,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 ## 主要URL
 - トップ: https://manapick.app/
 - YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
-- YouTube学習動画805本の独自集計: https://manapick.app/research/youtube-learning-data/
+- YouTube学習動画809本の独自集計: https://manapick.app/research/youtube-learning-data/
 - 7日学習プラン: https://manapick.app/study-plan/
 - Manapick Network（学ぶ・AI・資格・仕事・企業）: https://manapick.app/network/
 - 学習ロードマップ一覧: https://manapick.app/guide/
