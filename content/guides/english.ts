@@ -9,15 +9,15 @@ const englishGuide = {
     "英語の独学は、**「順番を知る → 続ける仕組みを作る → 数字で測る」の3ステップ**で進めるのが最短ルートです。",
   conclusionBullets: [
     {
-      label: "STEP1（初級）",
+      label: "STEP1",
       text: "英語学習の全体像と「やる順番」を知り、遠回りを避ける"
     },
     {
-      label: "STEP2（初級）",
+      label: "STEP2",
       text: "毎日続けられる学習サイクルを作り、話す練習を始める"
     },
     {
-      label: "STEP3（初級〜中級）",
+      label: "STEP3",
       text: "TOEICで伸びを数字で測り、学習を軌道に乗せる"
     }
   ],
@@ -31,7 +31,7 @@ const englishGuide = {
   ],
   steps: [
     {
-      title: "STEP1：初級 — 順番を知る",
+      title: "STEP1：順番を知る",
       videos: [
         {
           ytid: "DBUpkM6X-JM",
@@ -46,7 +46,7 @@ const englishGuide = {
       ]
     },
     {
-      title: "STEP2：初級 — 続ける仕組みを作る",
+      title: "STEP2：続ける仕組みを作る",
       videos: [
         {
           ytid: "3fk1LsjHZnk",
@@ -56,7 +56,7 @@ const englishGuide = {
       ]
     },
     {
-      title: "STEP3：初級〜中級 — 数字で測る",
+      title: "STEP3：数字で測る",
       videos: [
         {
           ytid: "aRKYpz19vPE",

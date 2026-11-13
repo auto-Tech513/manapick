@@ -11,7 +11,8 @@
           "J9QdxiZb8P4",
           "k1qFX5zJwLk",
           "UdEIgP4B0Bs"
-        ]
+        ],
+        "stage": "まず触る"
       },
       {
         "label": "STEP2",
@@ -21,7 +22,8 @@
           "UIyokWUJHck",
           "3ZJJF_7UNSM",
           "M_F04xonPOA"
-        ]
+        ],
+        "stage": "業務で使う"
       },
       {
         "label": "STEP3",
@@ -31,7 +33,8 @@
           "QvEdfnr4ge4",
           "9dUkUyHo8Hw",
           "Pl-IaM0ftAk"
-        ]
+        ],
+        "stage": "任せる"
       }
     ]
   },
@@ -47,7 +50,8 @@
           "HCZNs3AyFM8",
           "-LY25_7ZFpg",
           "cyOTQzI2AFU"
-        ]
+        ],
+        "stage": "まず一周する"
       },
       {
         "label": "STEP2",
@@ -57,7 +61,8 @@
           "olqOGLymDbw",
           "WSYFuq6jbzo",
           "WHwuNP4kalU"
-        ]
+        ],
+        "stage": "反復して固める"
       },
       {
         "label": "STEP3",
@@ -67,7 +72,8 @@
           "bzbrpkbjWe8",
           "IcTHcOYsrwo",
           "rAsovLKXCXo"
-        ]
+        ],
+        "stage": "作って広げる"
       }
     ]
   },
@@ -83,7 +89,8 @@
           "jSNPN5NnB_E",
           "FuTxs7Oa1wY",
           "Fb60hQ7S2j4"
-        ]
+        ],
+        "stage": "編集の流れを知る"
       },
       {
         "label": "STEP2",
@@ -93,7 +100,8 @@
           "C9GymZxUrF4",
           "pDVgzHN0K5A",
           "zxM1wqaNGM8"
-        ]
+        ],
+        "stage": "基本操作を固める"
       },
       {
         "label": "STEP3",
@@ -103,7 +111,8 @@
           "WP31TWXtvlU",
           "XozGuvi2gLQ",
           "P3uuxoN35V8"
-        ]
+        ],
+        "stage": "表現を広げる"
       }
     ]
   },
@@ -118,7 +127,8 @@
         "videos": [
           "DBUpkM6X-JM",
           "MYBhnoRnj8E"
-        ]
+        ],
+        "stage": "順番を知る"
       },
       {
         "label": "STEP2",
@@ -128,7 +138,8 @@
           "3fk1LsjHZnk",
           "nEpewJsEgUg",
           "o6ARRGrW3BA"
-        ]
+        ],
+        "stage": "続ける仕組みを作る"
       },
       {
         "label": "STEP3",
@@ -138,7 +149,8 @@
           "aRKYpz19vPE",
           "yZBvdoTDjBE",
           "Qe3EmiFWgGM"
-        ]
+        ],
+        "stage": "数字で測る"
       }
     ]
   },
@@ -154,7 +166,8 @@
           "ok8-ekot_dc",
           "M4UjGiUrGaM",
           "PJd_O3Iw7O4"
-        ]
+        ],
+        "stage": "まず体験する"
       },
       {
         "label": "STEP2",
@@ -164,7 +177,8 @@
           "pzkyp1nsDTo",
           "yPjQiNob4Kk",
           "e3alvLCbBtY"
-        ]
+        ],
+        "stage": "体系化する"
       },
       {
         "label": "STEP3",
@@ -174,7 +188,8 @@
           "_O656uOUmiE",
           "oJdG7srNDKU",
           "EVajWVs8CIs"
-        ]
+        ],
+        "stage": "自動化する"
       }
     ]
   },
@@ -190,7 +205,8 @@
           "kt5GIVHtCPM",
           "z9EUo-T5v6Q",
           "nhrxZ-v-8ro"
-        ]
+        ],
+        "stage": "全体像をつかむ"
       },
       {
         "label": "STEP2",
@@ -200,7 +216,8 @@
           "vn1BTbqlvY4",
           "SOg2c8WrdT0",
           "hWVqaNkmHzE"
-        ]
+        ],
+        "stage": "SEOと計測を学ぶ"
       },
       {
         "label": "STEP3",
@@ -210,7 +227,8 @@
           "HCTLLBpY3qQ",
           "Ju0w7JxgMc8",
           "Y8pKDHVuc0U"
-        ]
+        ],
+        "stage": "SNSと広告へ広げる"
       }
     ]
   },
@@ -226,7 +244,8 @@
           "HAcJ4ldjdn4",
           "xLyflLmz5qI",
           "H6UK3gM2RgE"
-        ]
+        ],
+        "stage": "基本操作を押さえる"
       },
       {
         "label": "STEP2",
@@ -236,7 +255,8 @@
           "GkIDiXMEgUM",
           "hQRV4XOh4qM",
           "cfGKFhSE6uA"
-        ]
+        ],
+        "stage": "伝わる資料に整える"
       },
       {
         "label": "STEP3",
@@ -246,7 +266,8 @@
           "NR2OJBsF27w",
           "02GApICU6UE",
           "X4QcKrHsci0"
-        ]
+        ],
+        "stage": "AI/Canvaへ広げる"
       }
     ]
   },
@@ -262,7 +283,8 @@
           "AETcTrEOu9A",
           "_rIozAfVG3A",
           "Uro2W4fsAIA"
-        ]
+        ],
+        "stage": "計画を決める"
       },
       {
         "label": "STEP2",
@@ -272,7 +294,8 @@
           "9H9oS26DWLY",
           "2_2o2_E9WeM",
           "A11m1lWiUrs"
-        ]
+        ],
+        "stage": "範囲を整理する"
       },
       {
         "label": "STEP3",
@@ -282,7 +305,8 @@
           "q_sq-j7emo8",
           "oDtA78nwQMM",
           "fhJsHbep3TM"
-        ]
+        ],
+        "stage": "演習へ移る"
       }
     ]
   },
@@ -298,7 +322,8 @@
           "JpwV_NNn7aI",
           "ZMwlUpXMZLQ",
           "bpo-eZZxDVc"
-        ]
+        ],
+        "stage": "簿記3級の入口"
       },
       {
         "label": "STEP2",
@@ -308,7 +333,8 @@
           "UDLDRi88QP0",
           "n3STyxX_Ixg",
           "9KWoXenAfhc"
-        ]
+        ],
+        "stage": "FP/簿記2級へ広げる"
       },
       {
         "label": "STEP3",
@@ -318,7 +344,8 @@
           "2s4LHNuVhaU",
           "5SUv1DVJzdc",
           "WqI3CPrUeVE"
-        ]
+        ],
+        "stage": "実務・上位資格へ"
       }
     ]
   },
@@ -334,7 +361,8 @@
           "5AmpuQsZh1Q",
           "NtyOvIPipak",
           "-imMwJqBKm4"
-        ]
+        ],
+        "stage": "家計と制度を知る"
       },
       {
         "label": "STEP2",
@@ -344,7 +372,8 @@
           "gM1QW-qvJDY",
           "oVfnsBeS1XE",
           "fSgqgvjHYoI"
-        ]
+        ],
+        "stage": "投資信託の仕組みを理解する"
       },
       {
         "label": "STEP3",
@@ -354,7 +383,8 @@
           "KKb1WNtrFmc",
           "mxXZokjtVyo",
           "UK27sXFc-3A"
-        ]
+        ],
+        "stage": "方針を作る"
       }
     ]
   }

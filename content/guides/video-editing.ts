@@ -14,9 +14,9 @@ const videoEditingGuide = {
   ],
   audience: "YouTube編集・SNS動画・社内動画を、無料動画で基礎から始めたい社会人向けです。",
   conclusionBullets: [
-    { label: "STEP1（初級）", text: "編集ソフトの流れと初期設定を把握し、1本目の編集に着手できる" },
-    { label: "STEP2（中級）", text: "カット・テロップ・基本操作を安定させ、編集の手戻りを減らす" },
-    { label: "STEP3（上級）", text: "After Effectsやサムネイル制作へ広げ、表現の選択肢を増やす" }
+    { label: "STEP1", text: "編集ソフトの流れと初期設定を把握し、1本目の編集に着手できる" },
+    { label: "STEP2", text: "カット・テロップ・基本操作を安定させ、編集の手戻りを減らす" },
+    { label: "STEP3", text: "After Effectsやサムネイル制作へ広げ、表現の選択肢を増やす" }
   ],
   conclusionClosing:
     "まずは無料ソフトや体験版で1本完成させ、必要に応じて有料ツールへ進む順番です。",
@@ -27,7 +27,7 @@ const videoEditingGuide = {
   ],
   steps: [
     {
-      title: "STEP1：初級 — 編集の流れを知る",
+      title: "STEP1：編集の流れを知る",
       videos: [
         { ytid: "jSNPN5NnB_E", why: "Premiere Proで編集全体の流れを見渡せるため、最初の地図として使いやすい" },
         { ytid: "FuTxs7Oa1wY", why: "新規プロジェクトと素材取り込みを丁寧に追えるので、操作の入口で止まりにくい" },
@@ -35,7 +35,7 @@ const videoEditingGuide = {
       ]
     },
     {
-      title: "STEP2：中級 — 基本操作を固める",
+      title: "STEP2：基本操作を固める",
       videos: [
         { ytid: "C9GymZxUrF4", why: "自動文字起こしとテロップ作成を押さえることで、実務で使う頻度の高い作業が安定する" },
         { ytid: "pDVgzHN0K5A", why: "CapCutの編集手順を確認し、短尺動画の反復練習に移りやすい" },
@@ -43,7 +43,7 @@ const videoEditingGuide = {
       ]
     },
     {
-      title: "STEP3：上級 — 表現を広げる",
+      title: "STEP3：表現を広げる",
       videos: [
         { ytid: "WP31TWXtvlU", why: "DaVinci Resolveの入口を短時間で確認でき、別ソフトの選択肢を増やせる" },
         { ytid: "XozGuvi2gLQ", why: "動画の入口になるサムネイル制作を学び、編集後の見せ方まで考えられる" },

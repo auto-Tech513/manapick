@@ -203,7 +203,7 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
               <section key={step.label + step.level} className="sub-topic-step">
                 <div className="sub-topic-step-head">
                   <span>{step.label}</span>
-                  <strong>{step.level}</strong>
+                  <strong>{step.stage}</strong>
                 </div>
                 <h3>{step.goal}</h3>
                 <div className="sub-topic-step-videos">

@@ -9,15 +9,15 @@ const generativeAiGuide = {
     "AIプロンプトのコツやCopilot活用事例を探す前に、まずChatGPT・Gemini・Claudeを触り、次に仕事の文章作成や資料整理へ当てはめる順番がおすすめです。プロンプトは魔法の文章ではなく、目的・前提・出力形式をAIに伝えるための設計です。このページでは、無料動画7本で**「触る → 業務で使う → 任せる」**へ進めるよう整理しています。",
   conclusionBullets: [
     {
-      label: "STEP1（初級）",
+      label: "STEP1",
       text: "アカウントを作り、AIに指示して回答を得られる。ChatGPT/Gemini/Claudeの違いが分かる"
     },
     {
-      label: "STEP2（中級）",
+      label: "STEP2",
       text: "無料版の応用機能・主要機能を、自分の業務に当てはめて使える"
     },
     {
-      label: "STEP3（中〜上級）",
+      label: "STEP3",
       text: "AIに作業を任せる「自動化」と、プロンプト設計の入口を理解して使い分けられる"
     }
   ],
@@ -30,7 +30,7 @@ const generativeAiGuide = {
   ],
   steps: [
     {
-      title: "STEP1：初級 — まず触る",
+      title: "STEP1：まず触る",
       videos: [
         {
           title: "【最新版】超初心者OK！ChatGPTの使い方・基礎をわかりやすく解説！(資料付き)",
@@ -47,7 +47,7 @@ const generativeAiGuide = {
       ]
     },
     {
-      title: "STEP2：中級 — 業務で使う",
+      title: "STEP2：業務で使う",
       videos: [
         {
           title: "【保存版】ChatGPT 2025年最新入門～6つのステップでChatGPTの基礎～応用機能までマスター！ChatGPT無料版に対応！これから始める初心者も、多少使ったことがある中級者も",
@@ -60,7 +60,7 @@ const generativeAiGuide = {
       ]
     },
     {
-      title: "STEP3：中〜上級 — 任せる",
+      title: "STEP3：任せる",
       videos: [
         {
           title: "【初心者】Claude Codeの全体像がたった9分で丸分かり！始め方～活用法まで解説",

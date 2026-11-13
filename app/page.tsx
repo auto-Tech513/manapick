@@ -66,6 +66,7 @@ const professionRoutes = professionRoutesData as readonly ProfessionRoute[];
 type RoadmapStep = {
   label: string;
   level: string;
+  stage?: string;
   goal: string;
   videos: string[];
 };
@@ -114,7 +115,7 @@ function roadmapHowToNodes() {
         return {
           "@type": "HowToStep",
           position: index + 1,
-          name: `${step.label} ${step.level}: ${step.goal}`,
+          name: `${step.label} ${step.stage ?? step.level}: ${step.goal}`,
           text: stepVideos.length > 0
             ? `${step.goal} 視聴する動画: ${stepVideos.map((video) => video.title).join(" / ")}`
             : step.goal,

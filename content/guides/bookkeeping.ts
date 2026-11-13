@@ -14,9 +14,9 @@ const bookkeepingGuide = {
   ],
   audience: "経理未経験、管理職候補、個人事業、資格学習の入口として会計を学びたい社会人向けです。",
   conclusionBullets: [
-    { label: "STEP1（初級）", text: "簿記3級の範囲で、仕訳と決算書の基本構造がわかる" },
-    { label: "STEP2（中級）", text: "簿記2級・FP3級へ進み、ビジネスとお金の知識を体系化する" },
-    { label: "STEP3（上級）", text: "FP2級や上位資格を視野に、実務・キャリアへ応用する" }
+    { label: "STEP1", text: "簿記3級の範囲で、仕訳と決算書の基本構造がわかる" },
+    { label: "STEP2", text: "簿記2級・FP3級へ進み、ビジネスとお金の知識を体系化する" },
+    { label: "STEP3", text: "FP2級や上位資格を視野に、実務・キャリアへ応用する" }
   ],
   conclusionClosing:
     "会計は暗記だけではなく、会社や家計の数字を読むための共通言語として学びます。",
@@ -27,7 +27,7 @@ const bookkeepingGuide = {
   ],
   steps: [
     {
-      title: "STEP1：初級 — 簿記3級の入口",
+      title: "STEP1：簿記3級の入口",
       videos: [
         { ytid: "JpwV_NNn7aI", why: "簿記とは何かを短時間で確認でき、最初の心理的ハードルを下げられる" },
         { ytid: "ZMwlUpXMZLQ", why: "決算書と5要素の考え方を押さえ、数字の全体像が見える" },
@@ -35,7 +35,7 @@ const bookkeepingGuide = {
       ]
     },
     {
-      title: "STEP2：中級 — FP/簿記2級へ広げる",
+      title: "STEP2：FP/簿記2級へ広げる",
       videos: [
         { ytid: "UDLDRi88QP0", why: "簿記3級の次に2級以上を学ぶ意味が分かり、学習継続の判断材料になる" },
         { ytid: "n3STyxX_Ixg", why: "FP3級の年金分野を通じて、個人のお金の基礎も押さえられる" },
@@ -43,7 +43,7 @@ const bookkeepingGuide = {
       ]
     },
     {
-      title: "STEP3：上級 — 実務・上位資格へ",
+      title: "STEP3：実務・上位資格へ",
       videos: [
         { ytid: "2s4LHNuVhaU", why: "FP3級のライフ分野を長めに確認でき、家計・保険・年金の理解が深まる" },
         { ytid: "5SUv1DVJzdc", why: "過去問形式に触れ、知識を得点へ変える練習に移りやすい" },

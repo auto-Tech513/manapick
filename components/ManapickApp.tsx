@@ -65,6 +65,8 @@ type Video = {
 type RoadmapStep = {
   label: string;
   level: string;
+  /** 表示する段階名（2026-11-13: レベルのバッジをやめ段階名で示す、所有者承認 2026-11-11） */
+  stage?: string;
   goal: string;
   videos: string[];
 };
@@ -3735,13 +3737,13 @@ function RoadmapTimeline({ roadmap, watched, subMode = false }: { roadmap: Roadm
             key={roadmap.genre + "-" + step.label + "-" + index}
             className={step.isPlaceholder ? "roadmap-step is-placeholder" : "roadmap-step"}
           >
-            <div className="roadmap-node" aria-label={step.label + " " + step.level}>
+            <div className="roadmap-node" aria-label={step.label + " " + (step.stage ?? step.level)}>
               {index + 1}
             </div>
             <div className="roadmap-step-card">
               <div className="roadmap-step-meta">
                 <span className="roadmap-step-label">{step.label}</span>
-                <span className="roadmap-level">{step.level}</span>
+                <span className="roadmap-stage">{step.stage ?? step.level}</span>
               </div>
               <h4>
                 <strong>{step.goal}</strong>

@@ -14815,3 +14815,20 @@ nav[aria-label="パンくず"] a,
     padding-inline: 0;
   }
 }
+
+/* 2026-11-13: ロードマップの各 STEP は「初級／中級／上級」のバッジをやめ、段階名を文字で示す（所有者承認 2026-11-11、A案）。
+   段階名はバッジにしない。ガイド・ジャンル別ロードマップも同じ */
+.roadmap-stage {
+  color: var(--color-ink);
+  font-size: 0.85rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+.sub-topic-step-head strong {
+  border-radius: 0;
+  padding: 0;
+  background: none;
+  color: var(--color-ink);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
