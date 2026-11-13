@@ -4,9 +4,9 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 動画はYouTube上で公開されているものを掲載し、YouTubeへのリンクまたはYouTube公式プレーヤーで紹介します。ダウンロードや再配布は扱いません。
 
 ## 公開中の10ジャンル
-- 生成AI（174本）: https://manapick.app/genre/ai/
+- 生成AI（173本）: https://manapick.app/genre/ai/
 - プログラミング・IT（65本）: https://manapick.app/genre/prog/
-- 動画編集・クリエイティブ（72本）: https://manapick.app/genre/video/
+- 動画編集・クリエイティブ（68本）: https://manapick.app/genre/video/
 - 語学・英語（58本）: https://manapick.app/genre/english/
 - データ分析・DX（35本）: https://manapick.app/genre/data/
 - Webマーケ・SNS運用（31本）: https://manapick.app/genre/marke/
@@ -39,7 +39,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 2026-10-19 iPhoneのGoogle SheetsでもGeminiが使えるように、外出先で表を分析: https://manapick.app/news/2026-10-19-gemini-in-google-sheets-ios/ | 出典 Google Workspace Updates
 
 ## ジャンル別AEOインデックス
-### 生成AI（174本）
+### 生成AI（173本）
 - ジャンルURL: https://manapick.app/genre/ai/
 - ガイドURL: https://manapick.app/guide/generative-ai/
 - 主なトピック: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Cline / Copilot / DeepL / DeepSeek / ElevenLabs / Figma(Figma AI) / Gamma / Gemini / Gemma / GitHub Copilot / Google AI Mode / Google Veo / Google翻訳 / Grok / Hailuo AI / HeyGen / Kling AI / Manus / Midjourney / Notion AI / Notta / Ollama / OpenAI Codex / OpenClaw / Perplexity / PixVerse / Replit Agent / Runway / Siri AI / Stable Diffusion / Suno / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
@@ -69,13 +69,13 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 0から学ぶGit/GitHub！初心者でもこの動画でAI時代に必須なGit/GitHubを理解できます！（プログラミング・IT / Git / 31/35 / 33分 / publishedAt=2026-07-12T09:00:05Z） https://manapick.app/video/Zk-INRORkFo/
 5. 【2026年春最新】Claude Code(クロードコード)を使うなら知っておきたいGitHub超入門｜しくみ・導入・使い方をやさしく解説！（プログラミング・IT / Git / 31/35 / 23分 / publishedAt=2026-05-03T09:06:05Z） https://manapick.app/video/a_ETr9zrkQg/
 
-### 動画編集・クリエイティブ（72本）
+### 動画編集・クリエイティブ（68本）
 - ジャンルURL: https://manapick.app/genre/video/
 - ガイドURL: https://manapick.app/guide/video-editing/
 - 主なトピック: After Effects / CapCut / DaVinci / Premiere Pro / Webクリエイター能力認定試験 / デザイン / 色彩検定
 - ロードマップ: 動画編集ロードマップ
   - STEP1（初級）: 編集の流れと初期設定を把握し、1本目の編集に着手できる。｜動画: 【2025年最新】1本で丸わかり！初心者にも優しいYouTube動画編集のやり方を徹底解説！【Premiere Pro】 / 【PremierePro入門講座#1】超初心者向けプレミアプロの始め方「新規プロジェクト・シーケンス・素材取り込み方法」 / 【2026年最新版】CapCutの使い方&編集方法を0から完全解説！動画編集初心者でも大丈夫！#CapCut使い方 #キャップカット使い方#capcut操作方法#cupcut無料#
-  - STEP2（中級）: 公式の基本操作を確認し、カット編集を安定して行える。｜動画: 【Premiere Pro初心者講座】自動文字起こし機能の使い方徹底解説「フルテロップも簡単！」 / 【保存版】初心者のためのCapCut基本操作方法 | おすすめの編集手順で解説します！これだけ見れば完全攻略 | スマホ動画編集 / 【2025年最新】アフターエフェクト初心者が最初に覚える２０の基本！After Effects基本操作〜応用まで幅広く完全攻略！【永久保存版】
+  - STEP2（中級）: 公式の基本操作を確認し、カット編集を安定して行える。｜動画: 【Premiere Pro初心者講座】自動文字起こし機能の使い方徹底解説「フルテロップも簡単！」 / 【2024年保存版】初心者のためのCapCut基本操作方法 | おすすめの編集手順で解説します！これだけ見れば完全攻略 | 動画編集アプリCapCut / 【2025年最新】アフターエフェクト初心者が最初に覚える２０の基本！After Effects基本操作〜応用まで幅広く完全攻略！【永久保存版】
   - STEP3（上級）: After Effectsとモーショングラフィックスで表現の幅を広げる。｜動画: 【DaVinci Resolve】15分間で完全攻略！改｜超初心者向け / 2025年のYouTubeが爆発的に伸びるサムネイルの作り方完全攻略 / 【After Effects】仕事の幅が広がる！After Effects入門講座 | アドビ公式
 - 代表動画:
 1. 【2026年最新版】CapCutの使い方&編集方法を0から完全解説！動画編集初心者でも大丈夫！#CapCut使い方 #キャップカット使い方#capcut操作方法#cupcut無料#（動画編集・クリエイティブ / CapCut / 33/35 / 22分 / publishedAt=2025-06-23T12:00:34Z） https://manapick.app/video/Fb60hQ7S2j4/
@@ -221,7 +221,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 ## 主要URL
 - トップ: https://manapick.app/
 - YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
-- YouTube学習動画810本の独自集計: https://manapick.app/research/youtube-learning-data/
+- YouTube学習動画805本の独自集計: https://manapick.app/research/youtube-learning-data/
 - 7日学習プラン: https://manapick.app/study-plan/
 - Manapick Network（学ぶ・AI・資格・仕事・企業）: https://manapick.app/network/
 - 学習ロードマップ一覧: https://manapick.app/guide/

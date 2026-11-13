@@ -38,7 +38,7 @@ const videoEditingGuide = {
       title: "STEP2：中級 — 基本操作を固める",
       videos: [
         { ytid: "C9GymZxUrF4", why: "自動文字起こしとテロップ作成を押さえることで、実務で使う頻度の高い作業が安定する" },
-        { ytid: "iJSRJBUz0Mo", why: "CapCutの編集手順を確認し、短尺動画の反復練習に移りやすい" },
+        { ytid: "pDVgzHN0K5A", why: "CapCutの編集手順を確認し、短尺動画の反復練習に移りやすい" },
         { ytid: "zxM1wqaNGM8", why: "After Effectsの基本操作を広く把握し、表現を広げる前の準備ができる" }
       ]
     },

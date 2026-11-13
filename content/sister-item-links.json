@@ -215,14 +215,6 @@
    "url": "https://ai.manapick.app/tool/bolt/"
   }
  ],
- "753GrQJfd6I": [
-  {
-   "site": "ai",
-   "slug": "deepl",
-   "name": "DeepL",
-   "url": "https://ai.manapick.app/tool/deepl/"
-  }
- ],
  "ujQrgXxVrmE": [
   {
    "site": "ai",
@@ -561,20 +553,6 @@
    "url": "https://license.manapick.app/license/kaigo-fukushi/"
   }
  ],
- "w2rfGtA9X6M": [
-  {
-   "site": "license",
-   "slug": "biz-law-3",
-   "name": "ビジネス実務法務検定試験 3級",
-   "url": "https://license.manapick.app/license/biz-law-3/"
-  },
-  {
-   "site": "license",
-   "slug": "biz-law-2",
-   "name": "ビジネス実務法務検定試験 2級",
-   "url": "https://license.manapick.app/license/biz-law-2/"
-  }
- ],
  "FPGrGERcN6w": [
   {
    "site": "license",
@@ -613,14 +591,6 @@
    "slug": "kanken-2",
    "name": "日本漢字能力検定（漢検）2級",
    "url": "https://license.manapick.app/license/kanken-2/"
-  }
- ],
- "ktAO46RIePk": [
-  {
-   "site": "license",
-   "slug": "shokuseikatsu-3",
-   "name": "食生活アドバイザー 3級",
-   "url": "https://license.manapick.app/license/shokuseikatsu-3/"
   }
  ],
  "oVNov_xQzL4": [
@@ -1161,22 +1131,6 @@
    "url": "https://license.manapick.app/license/eisei-kanri-1/"
   }
  ],
- "wefvhJWEsdE": [
-  {
-   "name": "宅地建物取引士（宅建）",
-   "site": "license",
-   "slug": "takken",
-   "url": "https://license.manapick.app/license/takken/"
-  }
- ],
- "8Ph_ILC94X0": [
-  {
-   "name": "管理業務主任者",
-   "site": "license",
-   "slug": "kanri-gyomu",
-   "url": "https://license.manapick.app/license/kanri-gyomu/"
-  }
- ],
  "_RvytXBYJY0": [
   {
    "name": "ビジネス実務法務検定 3級",
@@ -1247,14 +1201,6 @@
    "site": "ai",
    "slug": "bolt",
    "url": "https://ai.manapick.app/tool/bolt/"
-  }
- ],
- "eJHofUOWpG0": [
-  {
-   "name": "Google翻訳",
-   "site": "ai",
-   "slug": "google-translate",
-   "url": "https://ai.manapick.app/tool/google-translate/"
   }
  ],
  "pHTKrBcLBb0": [
@@ -1345,14 +1291,6 @@
    "url": "https://license.manapick.app/license/fe/"
   }
  ],
- "_RatwLpCMhM": [
-  {
-   "name": "管理業務主任者",
-   "site": "license",
-   "slug": "kanri-gyomu",
-   "url": "https://license.manapick.app/license/kanri-gyomu/"
-  }
- ],
  "ahdSvdkCO8M": [
   {
    "name": "ビジネス会計検定 3級",
@@ -1425,7 +1363,15 @@
    "url": "https://license.manapick.app/license/biz-law-3/"
   }
  ],
- "oszZEMGRbdQ": [
+ "SN2ilrxQ-N4": [
+  {
+   "site": "ai",
+   "slug": "chatgpt",
+   "name": "ChatGPT",
+   "url": "https://ai.manapick.app/tool/chatgpt/"
+  }
+ ],
+ "CDQpPPsDeIw": [
   {
    "name": "AWS認定 ソリューションアーキテクト アソシエイト",
    "site": "license",
@@ -1433,12 +1379,68 @@
    "url": "https://license.manapick.app/license/aws-saa/"
   }
  ],
- "SN2ilrxQ-N4": [
+ "_52_OC7Z9wQ": [
   {
+   "name": "DeepL",
+   "site": "ai",
+   "slug": "deepl",
+   "url": "https://ai.manapick.app/tool/deepl/"
+  }
+ ],
+ "KUNQa-MihNo": [
+  {
+   "name": "ChatGPT",
    "site": "ai",
    "slug": "chatgpt",
-   "name": "ChatGPT",
    "url": "https://ai.manapick.app/tool/chatgpt/"
+  }
+ ],
+ "-ErJ0U9PCxw": [
+  {
+   "name": "Stable Diffusion",
+   "site": "ai",
+   "slug": "stable-diffusion",
+   "url": "https://ai.manapick.app/tool/stable-diffusion/"
+  }
+ ],
+ "MNNB2bwFWiQ": [
+  {
+   "name": "宅地建物取引士（宅建）",
+   "site": "license",
+   "slug": "takken",
+   "url": "https://license.manapick.app/license/takken/"
+  }
+ ],
+ "Zw_t7DFXpWw": [
+  {
+   "name": "ビジネス実務法務検定試験 2級",
+   "site": "license",
+   "slug": "biz-law-2",
+   "url": "https://license.manapick.app/license/biz-law-2/"
+  }
+ ],
+ "roWiFeLUVkE": [
+  {
+   "name": "管理業務主任者",
+   "site": "license",
+   "slug": "kanri-gyomu",
+   "url": "https://license.manapick.app/license/kanri-gyomu/"
+  }
+ ],
+ "ev5n-rWi8kg": [
+  {
+   "name": "管理業務主任者",
+   "site": "license",
+   "slug": "kanri-gyomu",
+   "url": "https://license.manapick.app/license/kanri-gyomu/"
+  }
+ ],
+ "8sd5s7XCsdU": [
+  {
+   "name": "食生活アドバイザー 3級",
+   "site": "license",
+   "slug": "shokuseikatsu-3",
+   "url": "https://license.manapick.app/license/shokuseikatsu-3/"
   }
  ]
 }
