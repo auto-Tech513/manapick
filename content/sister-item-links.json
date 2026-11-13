@@ -1466,5 +1466,37 @@
    "name": "Qwen",
    "url": "https://ai.manapick.app/tool/qwen/"
   }
+ ],
+ "BORAq995Ye4": [
+  {
+   "site": "ai",
+   "slug": "claude",
+   "name": "Claude",
+   "url": "https://ai.manapick.app/tool/claude/"
+  }
+ ],
+ "4AMjoQsOLOg": [
+  {
+   "site": "ai",
+   "slug": "claude",
+   "name": "Claude",
+   "url": "https://ai.manapick.app/tool/claude/"
+  }
+ ],
+ "P7jvV9ZQT6w": [
+  {
+   "site": "ai",
+   "slug": "claude",
+   "name": "Claude",
+   "url": "https://ai.manapick.app/tool/claude/"
+  }
+ ],
+ "FcKbNbxKXH0": [
+  {
+   "site": "license",
+   "slug": "toeic-lr",
+   "name": "TOEIC Listening & Reading Test",
+   "url": "https://license.manapick.app/license/toeic-lr/"
+  }
  ]
 }
