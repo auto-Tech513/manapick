@@ -2003,6 +2003,7 @@ function LiveSearchPanel({
               <button
                 type="button"
                 className={index === activeIndex ? "is-active" : ""}
+                onPointerDown={(event) => event.preventDefault()}
                 onMouseDown={(event) => event.preventDefault()}
                 onClick={() => onSelect(video)}
                 role="option"
@@ -2026,12 +2027,14 @@ function LiveSearchPanel({
           <p>最近の検索</p>
           <div>
             {recentSearches.items.slice(0, 5).map((term) => (
-              <button key={term} type="button" onMouseDown={(event) => event.preventDefault()} onClick={() => onRecentSearchSelect(term)}>
+              <button key={term} type="button" onPointerDown={(event) => event.preventDefault()}
+                onMouseDown={(event) => event.preventDefault()} onClick={() => onRecentSearchSelect(term)}>
                 {term}
               </button>
             ))}
           </div>
-          <button type="button" className="recent-searches-clear" onMouseDown={(event) => event.preventDefault()} onClick={() => recentSearches.clear()}>
+          <button type="button" className="recent-searches-clear" onPointerDown={(event) => event.preventDefault()}
+                onMouseDown={(event) => event.preventDefault()} onClick={() => recentSearches.clear()}>
             履歴を消す
           </button>
         </div>
@@ -2041,7 +2044,8 @@ function LiveSearchPanel({
           <p>条件を少し広げるか、人気の動画から始められます。</p>
           <div>
             {fallbackVideos.map((video) => (
-              <button key={video.ytid} type="button" onMouseDown={(event) => event.preventDefault()} onClick={() => onSelect(video)}>
+              <button key={video.ytid} type="button" onPointerDown={(event) => event.preventDefault()}
+                onMouseDown={(event) => event.preventDefault()} onClick={() => onSelect(video)}>
                 {video.title}
               </button>
             ))}
