@@ -20,7 +20,7 @@ import {
   type Video
 } from "@/lib/manapick";
 import { buildSubRoadmap } from "@/lib/sub-roadmap";
-import type { GuidePrLink } from "@/lib/pr-links";
+import { prItemsForSub, type GuidePrLink } from "@/lib/pr-links";
 import {
   eligibleSubPagePath,
   eligibleSubPages,
@@ -254,7 +254,7 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
           </div>
         </section>
 
-        {prItems.length > 0 ? <SubTopicPrSection items={prItems} genreName={genreName} /> : null}
+        {prItems.length > 0 ? <SubTopicPrSection items={prItems} genreName={genreName} sub={sub} /> : null}
 
         <section className="sub-topic-section sub-topic-related" aria-labelledby="sub-related-title">
           <div className="sub-topic-heading">
@@ -303,19 +303,26 @@ function SubTopicVideoCard({ video, priority }: { video: Video; priority?: boole
   );
 }
 
-function SubTopicPrSection({ items, genreName }: { items: GuidePrLink[]; genreName: string }) {
+function SubTopicPrSection({ items, genreName, sub }: { items: GuidePrLink[]; genreName: string; sub: string }) {
+  const { matched, ordered } = prItemsForSub(items, sub);
+  const hasMatch = matched.length > 0;
   return (
     <section className="sub-topic-section guide-pr-section" aria-labelledby="sub-pr-title">
       <div className="guide-pr-heading">
         <div>
           <p className="section-eyebrow">【PR】広告</p>
-          <h2 id="sub-pr-title">{genreName}の学習にあわせて使いたい教材・講座(PR)</h2>
+          <h2 id="sub-pr-title">{hasMatch ? `${sub}の対策に直結する講座・教材(PR)` : `${genreName}の学習にあわせて使いたい教材・講座(PR)`}</h2>
           <p className="guide-pr-disclosure">本ページにはアフィリエイト広告（PR）を含みます。</p>
+          <p className="guide-pr-lead">
+            {hasMatch
+              ? `動画で${sub}の全体像を掴んだら、次は問題演習と体系的な学習で仕上げる段階です。この分野に直結する講座を先に並べました。`
+              : `動画で全体像を掴んだら、次は教材と講座で体系的に仕上げる段階です。${genreName}の学習に関連するものだけを集めました。`}
+          </p>
         </div>
         <span className="guide-pr-badge">PR</span>
       </div>
       <div className="guide-pr-grid">
-        {items.map((item) => (
+        {ordered.map((item) => (
           <GuidePrCard key={item.url} genre={genreName} item={item} placement="sub-topic" />
         ))}
       </div>

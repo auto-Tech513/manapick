@@ -41,7 +41,7 @@
     {
       "label": "Notta（AI文字起こし）",
       "url": "https://px.a8.net/svt/ejp?a8mat=4B66KD+G9UK1E+5988+5ZEMQ",
-      "note": "会議や動画の音声を自動でテキスト化するAI文字起こしサービス",
+      "note": "会議やセミナーの録音、聞き返すだけで時間が溶けていませんか。音声を自動で文字起こしして、議事録づくりを速くするAIサービスです",
       "kind": "course",
       "store": "course"
     }
@@ -88,16 +88,25 @@
     {
       "label": "Winスクール（無料カウンセリング）",
       "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+ALMVJM+529E+5YJRM",
-      "note": "資格と仕事に強い個人レッスン制スクール（まず無料相談）",
+      "note": "プログラミングは、つまずいた所をすぐ聞ける環境で伸びます。個人レッスン制のWinスクールは、まず無料カウンセリングで学び方を相談できます",
       "kind": "course",
-      "store": "course"
+      "store": "course",
+      "subs": [
+        "Python",
+        "Web開発",
+        "JavaScript",
+        "Java"
+      ]
     },
     {
       "label": "Python Winner（Python専門スクール）",
       "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+AO0LYQ+529E+HV7V6",
-      "note": "マンツーマンレッスンで学ぶPythonプログラミング（Winスクール）",
+      "note": "Pythonを仕事に変えるなら、独学の次の一手に。マンツーマンレッスンで、つまずいた場所をその場で解消しながら進められます",
       "kind": "course",
-      "store": "course"
+      "store": "course",
+      "subs": [
+        "Python"
+      ]
     }
   ],
   "data": [
@@ -241,23 +250,33 @@
     {
       "label": "ネイティブキャンプ",
       "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+B7NWXE+35VG+64JTE",
-      "note": "24時間レッスン受け放題（無料体験あり）",
+      "note": "英語は話す量で決まります。予約なしで24時間レッスンし放題。まず無料体験で、話す感覚を取り戻すところから",
       "kind": "course",
-      "store": "course"
+      "store": "course",
+      "subs": [
+        "英会話",
+        "ビジネス英語"
+      ]
     },
     {
       "label": "QQEnglish（無料体験あり）",
       "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+B43BAQ+4HHM+60H7M",
-      "note": "講師の質にこだわったオンライン英会話（無料体験）",
+      "note": "講師の質にこだわったオンライン英会話。無料体験で実際のレッスンの進め方を試してから決められます",
       "kind": "course",
-      "store": "course"
+      "store": "course",
+      "subs": [
+        "英会話"
+      ]
     },
     {
       "label": "クラウティ（家族で使える/無料体験）",
       "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+9FD3LE+46SW+5YJRM",
-      "note": "1アカウントを家族で共有できるオンライン英会話（無料体験）",
+      "note": "1アカウントを家族で分けあえるオンライン英会話。子どもの英語にも、自分の学び直しにも使えます（無料体験あり）",
       "kind": "course",
-      "store": "course"
+      "store": "course",
+      "subs": [
+        "英会話"
+      ]
     }
   ],
   "marke": [
@@ -302,9 +321,12 @@
     {
       "label": "Wannabeアカデミー（無料個別相談）",
       "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+CEJ4HE+4NJO+614CY",
-      "note": "3ヶ月でWebマーケターを目指す（まず無料相談）",
+      "note": "未経験からWebマーケターを目指す実践型スクール。無料の個別相談で、自分の進め方を聞くところから始められます",
       "kind": "course",
-      "store": "course"
+      "store": "course",
+      "subs": [
+        "Webマーケ"
+      ]
     }
   ],
   "biz": [
@@ -389,37 +411,58 @@
     {
       "label": "LECオンライン",
       "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+BUVTIQ+1G62+631SY",
-      "note": "資格・通信講座（無料の資料請求・お試し講義あり）",
+      "note": "動画で全体像が見えたら、次は合格までの道筋を。法律系資格に強いLECは、無料の資料請求とお試し講義で相性を確かめられます",
       "kind": "course",
-      "store": "course"
+      "store": "course",
+      "subs": [
+        "宅建",
+        "行政書士",
+        "社労士",
+        "ビジネス実務法務検定試験"
+      ]
     },
     {
       "label": "通信講座 資料請求特集",
       "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+BQ4COI+22BU+HV7V6",
-      "note": "複数スクールをまとめて無料で資料請求",
+      "note": "どの講座が合うか迷ったら、複数スクールの資料をまとめて無料請求。費用と進め方を比べてから決められます",
       "kind": "course",
       "store": "course"
     },
     {
       "label": "四谷学院通信講座",
       "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+BPIX2Q+5IEI+5YJRM",
-      "note": "保育士・宅建・行政書士などの資格取得通信講座",
+      "note": "保育士・宅建・行政書士などを自宅で学べる通信講座。動画学習と並行して、テキスト中心の対策を固めたい人に",
       "kind": "course",
-      "store": "course"
+      "store": "course",
+      "subs": [
+        "保育士",
+        "宅建",
+        "行政書士"
+      ]
     },
     {
       "label": "SAT（現場系・国家資格eラーニング）",
       "url": "https://px.a8.net/svt/ejp?a8mat=4BGLS2+3QJZHU+5TRO+5YJRM",
-      "note": "危険物・電気工事士・ボイラーなど現場系資格の通信講座",
+      "note": "危険物や電気工事士など、現場系の国家資格に特化したeラーニング。動画で掴んだイメージを、体系的な学習で合格力に変える段階に",
       "kind": "course",
-      "store": "course"
+      "store": "course",
+      "subs": [
+        "危険物乙4",
+        "第二種電気工事士",
+        "電験三種",
+        "二級ボイラー技士",
+        "衛生管理者"
+      ]
     },
     {
       "label": "三幸医療カレッジ（登録販売者講座）",
       "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+BVH94I+4N9Y+5YRHE",
-      "note": "登録販売者の受験対策に特化した通信講座",
+      "note": "登録販売者は範囲の広さで独学が止まりがち。登録販売者対策に特化した通信講座で、出題範囲に沿って進める選択肢です",
       "kind": "course",
-      "store": "course"
+      "store": "course",
+      "subs": [
+        "登録販売者"
+      ]
     }
   ],
   "kaikei": [
@@ -464,9 +507,13 @@
     {
       "label": "LECオンライン（簿記・会計・税理士）",
       "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+BUVTIQ+1G62+631SY",
-      "note": "会計・税務系の通信講座（無料の資料請求・お試し講義あり）",
+      "note": "簿記・会計・税理士の対策は、資格の大手LECで。まず無料の資料請求で、講座の進め方と費用感を確認できます",
       "kind": "course",
-      "store": "course"
+      "store": "course",
+      "subs": [
+        "簿記",
+        "税理士"
+      ]
     }
   ],
   "money": [

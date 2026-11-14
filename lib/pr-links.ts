@@ -14,7 +14,14 @@ export type GuidePrLink = {
   kind?: PrLinkKind;
   store?: PrLinkStore;
   links?: PrLinkAction[];
+  subs?: string[];
 };
+
+export function prItemsForSub(items: GuidePrLink[], sub: string) {
+  const matched = items.filter((item) => item.subs?.includes(sub));
+  const rest = items.filter((item) => !item.subs?.includes(sub));
+  return { matched, ordered: [...matched, ...rest] };
+}
 
 export function prKindOf(item: GuidePrLink): PrLinkKind {
   return item.kind === "course" ? "course" : "book";

@@ -9425,6 +9425,13 @@ ins.adsbygoogle:not(.ad-slot),
   line-height: 1.6 !important;
 }
 
+.guide-pr-lead {
+  margin: 8px 0 0 !important;
+  font-size: 0.85rem;
+  line-height: 1.7 !important;
+  max-width: 44em;
+}
+
 .guide-pr-badge {
   display: inline-flex;
   min-height: 30px;

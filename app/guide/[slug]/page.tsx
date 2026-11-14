@@ -433,6 +433,7 @@ function GuidePrSection({ guide }: { guide: Guide }) {
             <p className="section-eyebrow">【PR】広告</p>
             <h2 id="guide-pr-title">あわせて使いたい教材・講座(PR)</h2>
             <p className="guide-pr-disclosure">本ページにはアフィリエイト広告（PR）を含みます。</p>
+            <p className="guide-pr-lead">ガイドで進め方が見えたら、あとは実践あるのみです。内容に関連する講座と教材を集めました。</p>
           </div>
           <span className="guide-pr-badge">PR</span>
         </div>

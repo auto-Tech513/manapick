@@ -549,6 +549,7 @@ export default async function GenrePage({ params }: GenrePageProps) {
               <p className="section-eyebrow">【PR】広告</p>
               <h2 id="genre-hub-pr-title">{label}を本格的に学べる講座・スクール（PR）</h2>
               <p className="guide-pr-disclosure">本ページにはアフィリエイト広告（PR）を含みます。</p>
+              <p className="guide-pr-lead">動画で「面白そう」が見えたら、次は体系立てて学ぶ番です。{label}の学習を本格化するための講座・スクールを、関連するものだけ集めました。まずは無料体験や資料請求で、進め方が自分に合うか確かめるのがおすすめです。</p>
             </div>
             <span className="guide-pr-badge">PR</span>
           </div>
