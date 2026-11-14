@@ -585,14 +585,6 @@
    "url": "https://license.manapick.app/license/hangul-3/"
   }
  ],
- "nCV-QVhcPqQ": [
-  {
-   "site": "license",
-   "slug": "kanken-2",
-   "name": "日本漢字能力検定（漢検）2級",
-   "url": "https://license.manapick.app/license/kanken-2/"
-  }
- ],
  "oVNov_xQzL4": [
   {
    "site": "license",
@@ -1147,14 +1139,6 @@
    "url": "https://ai.manapick.app/tool/runway/"
   }
  ],
- "8FcHpCeHJ4w": [
-  {
-   "name": "Perplexity",
-   "site": "ai",
-   "slug": "perplexity",
-   "url": "https://ai.manapick.app/tool/perplexity/"
-  }
- ],
  "A6Dx8xXUcaA": [
   {
    "name": "GitHub Copilot",
@@ -1209,14 +1193,6 @@
    "site": "ai",
    "slug": "voicevox",
    "url": "https://ai.manapick.app/tool/voicevox/"
-  }
- ],
- "vIA0Ey8RzSA": [
-  {
-   "name": "Kling AI",
-   "site": "ai",
-   "slug": "kling",
-   "url": "https://ai.manapick.app/tool/kling/"
   }
  ],
  "7jrOqwBAWKY": [
