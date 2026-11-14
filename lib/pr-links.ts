@@ -15,6 +15,7 @@ export type GuidePrLink = {
   store?: PrLinkStore;
   links?: PrLinkAction[];
   subs?: string[];
+  cta?: string;
 };
 
 export function prItemsForSub(items: GuidePrLink[], sub: string) {
@@ -33,7 +34,8 @@ export function prActionsFor(item: GuidePrLink): PrLinkAction[] {
   return [
     {
       store: item.store ?? (item.kind === "course" ? "course" : "rakuten"),
-      url: item.url
+      url: item.url,
+      label: item.cta
     }
   ];
 }

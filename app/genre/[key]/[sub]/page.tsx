@@ -223,6 +223,8 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
           </div>
         </section>
 
+        <SubTopicEarlyPr items={prItems} genreName={genreName} sub={sub} />
+
         <div id="sub-video-list" className="sub-video-list-scope">
         <DurationFilter scopeId="sub-video-list" pagePath={`/genre/${key}/${sub}/`} />
         <FoldSection className="sub-topic-section" titleId="sub-video-list-title" eyebrow="全動画一覧" title={`${sub}の無料YouTube動画一覧（${list.length}本）`} hint="スコア順・タイトルと採点コメント">
@@ -300,6 +302,29 @@ function SubTopicVideoCard({ video, priority }: { video: Video; priority?: boole
         <em>{video.review[0] ?? "学習の入口として確認しやすい動画です。"}</em>
       </span>
     </Link>
+  );
+}
+
+function SubTopicEarlyPr({ items, genreName, sub }: { items: GuidePrLink[]; genreName: string; sub: string }) {
+  const matchedCourses = items.filter((item) => item.kind === "course" && item.subs?.includes(sub)).slice(0, 2);
+  if (matchedCourses.length === 0) return null;
+  return (
+    <section className="sub-topic-section guide-pr-section" aria-labelledby="sub-early-pr-title">
+      <div className="guide-pr-heading">
+        <div>
+          <p className="section-eyebrow">【PR】広告</p>
+          <h2 id="sub-early-pr-title">{sub}を本格対策するなら（PR）</h2>
+          <p className="guide-pr-disclosure">本ページにはアフィリエイト広告（PR）を含みます。</p>
+          <p className="guide-pr-lead">独学で一番つらいのは、「この進め方で合っているのか」が見えないことです。ロードマップで全体像が見えた今が、問題演習と体系学習で対策を固めるタイミング。この分野に直結する講座です。</p>
+        </div>
+        <span className="guide-pr-badge">PR</span>
+      </div>
+      <div className="guide-pr-grid">
+        {matchedCourses.map((item) => (
+          <GuidePrCard key={item.url} genre={genreName} item={item} placement="sub-topic-early" />
+        ))}
+      </div>
+    </section>
   );
 }
 
