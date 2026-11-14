@@ -1530,5 +1530,29 @@
    "name": "Microsoft Copilot",
    "url": "https://ai.manapick.app/tool/copilot/"
   }
+ ],
+ "LCQoxxefeUg": [
+  {
+   "site": "ai",
+   "slug": "perplexity",
+   "name": "Perplexity",
+   "url": "https://ai.manapick.app/tool/perplexity/"
+  }
+ ],
+ "7fhhk2Dawoc": [
+  {
+   "site": "ai",
+   "slug": "suno",
+   "name": "Suno",
+   "url": "https://ai.manapick.app/tool/suno/"
+  }
+ ],
+ "f2QupJ2XFbc": [
+  {
+   "site": "ai",
+   "slug": "supabase",
+   "name": "Supabase",
+   "url": "https://ai.manapick.app/tool/supabase/"
+  }
  ]
 }

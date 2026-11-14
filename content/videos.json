@@ -51295,5 +51295,188 @@
   "publishedAt": "2026-11-12T00:00:00Z",
   "scoreStatus": "confirmed",
   "scoreConfirmedAt": "2026-11-13"
+ },
+ {
+  "genre": "ai",
+  "sub": "Perplexity",
+  "ytid": "LCQoxxefeUg",
+  "level": "初級",
+  "minutes": 14,
+  "channel": "ウェブマニア",
+  "score": 32,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "Cometの機能・使い方・活用法まで具体的に解説している"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2025年8月公開、Cometの基本解説として現行でも有効"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "章立てが細かくゆっくり解説で追いやすい"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "Cometとは・基本操作・機能・活用法の順に進む"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "公式サイトへのリンクあり、過度な誘導はない"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "14分で要点を追える"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "公式埋め込みで視聴できる通常の解説動画"
+   }
+  ],
+  "title": "【大注目】AI搭載の次世代ブラウザ！あのPerplexityが作ったブラウザ『Comet』がヤバすぎた。おすすめ機能・使い方・活用方法まで徹底解説します！",
+  "url": "https://www.youtube.com/watch?v=LCQoxxefeUg",
+  "tags": [
+   "Comet",
+   "ブラウザ",
+   "AIアシスタント"
+  ],
+  "review": [
+   "Perplexity製AIブラウザ「Comet」の機能・使い方・活用法を14分で解説した入門動画。",
+   "AIアシスタント、ボイスモード、ワンクリック要約、広告ブロックまで章立てで追える。",
+   "誤字脱字チェックや複数ソースの情報整理など、日常の調べものに使える活用法も紹介している。"
+  ],
+  "publishedAt": "2025-08-16T09:00:06Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-14"
+ },
+ {
+  "genre": "ai",
+  "sub": "Suno",
+  "ytid": "7fhhk2Dawoc",
+  "level": "上級",
+  "minutes": 49,
+  "channel": "AI音楽部",
+  "score": 32,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "日本語歌詞の読み間違い対策プロンプトなどすぐ使える具体策がある"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 5,
+    "note": "2025年12月公開の2026年最新版"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "49分と長いが章立てがあり区切って追える"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "使い方・MV制作編・おまけの構成で進む"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "メンバーシップ・紹介リンクはあるが内容説明が中心"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "章立てで区切って追える"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "公式埋め込みで視聴できる通常の解説動画"
+   }
+  ],
+  "title": "【2026年最新】今から始めるSunoAiの使い方 完全攻略ガイド",
+  "url": "https://www.youtube.com/watch?v=7fhhk2Dawoc",
+  "tags": [
+   "作曲",
+   "MV制作",
+   "歌詞"
+  ],
+  "review": [
+   "Suno AIの使い方からMV制作までを49分で解説する2026年最新版の完全ガイド。",
+   "日本語歌詞の読み間違いを減らす変換プロンプトが概要欄にそのまま載っている。",
+   "音楽初心者でも曲作りを始められるよう、ゼロからの手順を順に説明している。"
+  ],
+  "publishedAt": "2025-12-13T12:30:20Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-14"
+ },
+ {
+  "genre": "ai",
+  "sub": "Supabase",
+  "ytid": "f2QupJ2XFbc",
+  "level": "上級",
+  "minutes": 61,
+  "channel": "いけともch",
+  "score": 32,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "登録からClaude連携・Xデータ自動収集まで実践デモがある"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2026年4月公開で新しいがコネクタ仕様は変わりうる"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "非エンジニア向けに章立てで丁寧に解説している"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "課題・概要・登録・連携・実践・セキュリティ・まとめの流れ"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "書籍・研修リンクは多いが内容説明が中心"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "61分と長いが章立てで追える"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "公式埋め込みで視聴できる通常の解説動画"
+   }
+  ],
+  "title": "Claude時代に\"非エンジニアが知るべき\"最強データ基盤Supabase完全入門～登録から実践まで完全解説",
+  "url": "https://www.youtube.com/watch?v=f2QupJ2XFbc",
+  "tags": [
+   "データベース",
+   "Claude",
+   "非エンジニア"
+  ],
+  "review": [
+   "非エンジニア向けに、無料のクラウドデータベースSupabaseをClaudeと連携させる入門解説。",
+   "登録からテーブル作成、データ保存・取り出し、Xのフォロワー数自動収集までデモで示す。",
+   "セキュリティ（RLS設定）の注意点まで触れており、実践の最初の一本として使いやすい。"
+  ],
+  "publishedAt": "2026-04-08T11:01:09Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-14"
  }
 ]
