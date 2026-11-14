@@ -1514,5 +1514,13 @@
    "name": "Supabase",
    "url": "https://ai.manapick.app/tool/supabase/"
   }
+ ],
+ "4oNv3OW_Q9s": [
+  {
+   "site": "ai",
+   "slug": "notion-ai",
+   "name": "Notion AI",
+   "url": "https://ai.manapick.app/tool/notion-ai/"
+  }
  ]
 }
