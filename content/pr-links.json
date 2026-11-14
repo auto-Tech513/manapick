@@ -37,6 +37,13 @@
           "label": "Amazonで見る"
         }
       ]
+    },
+    {
+      "label": "Notta（AI文字起こし）",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4B66KD+G9UK1E+5988+5ZEMQ",
+      "note": "会議や動画の音声を自動でテキスト化するAI文字起こしサービス",
+      "kind": "course",
+      "store": "course"
     }
   ],
   "prog": [
@@ -82,6 +89,13 @@
       "label": "Winスクール（無料カウンセリング）",
       "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+ALMVJM+529E+5YJRM",
       "note": "資格と仕事に強い個人レッスン制スクール（まず無料相談）",
+      "kind": "course",
+      "store": "course"
+    },
+    {
+      "label": "Python Winner（Python専門スクール）",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+AO0LYQ+529E+HV7V6",
+      "note": "マンツーマンレッスンで学ぶPythonプログラミング（Winスクール）",
       "kind": "course",
       "store": "course"
     }
@@ -383,6 +397,27 @@
       "label": "通信講座 資料請求特集",
       "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+BQ4COI+22BU+HV7V6",
       "note": "複数スクールをまとめて無料で資料請求",
+      "kind": "course",
+      "store": "course"
+    },
+    {
+      "label": "四谷学院通信講座",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+BPIX2Q+5IEI+5YJRM",
+      "note": "保育士・宅建・行政書士などの資格取得通信講座",
+      "kind": "course",
+      "store": "course"
+    },
+    {
+      "label": "SAT（現場系・国家資格eラーニング）",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4BGLS2+3QJZHU+5TRO+5YJRM",
+      "note": "危険物・電気工事士・ボイラーなど現場系資格の通信講座",
+      "kind": "course",
+      "store": "course"
+    },
+    {
+      "label": "三幸医療カレッジ（登録販売者講座）",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4B5VOA+BVH94I+4N9Y+5YRHE",
+      "note": "登録販売者の受験対策に特化した通信講座",
       "kind": "course",
       "store": "course"
     }
