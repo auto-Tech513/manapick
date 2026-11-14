@@ -31,7 +31,7 @@ const certificationGuide = {
       videos: [
         { ytid: "AETcTrEOu9A", why: "宅建学習のスケジュールを確認でき、試験日から逆算する感覚が掴める" },
         { ytid: "_rIozAfVG3A", why: "合格までの全体戦略を見られ、独学の進め方を具体化しやすい" },
-        { ytid: "Uro2W4fsAIA", why: "初心者向けのスケジュール整理として、最初の計画づくりに使いやすい" }
+        { ytid: "MpVoaibTNGk", why: "スケジュール表の無料配布もあり、合格までのロードマップを具体的な計画に落とし込める" }
       ]
     },
     {
