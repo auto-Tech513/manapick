@@ -1,7 +1,7 @@
 const officeSkillsGuide = {
   slug: "office-skills",
   genre: "biz",
-  title: "Word・PowerPoint資料作成を独学する完全ロードマップ【YouTube無料・2026年版】",
+  title: "「資料が伝わらない」から卒業する。Word・PowerPoint独学ロードマップ、AI・Canva活用まで【無料YouTube動画9本】",
   description:
     "Office・資料作成の独学は「Word/Excelの基礎 → 伝わる資料 → AI/Canva活用」の3ステップ。無料YouTube動画9本で、2026年版の学習順を整理します。",
   publishedAt: "2026-06-10",

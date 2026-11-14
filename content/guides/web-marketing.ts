@@ -1,7 +1,7 @@
 const webMarketingGuide = {
   slug: "web-marketing",
   genre: "marke",
-  title: "マーケティングYouTubeおすすめ動画で学ぶ完全ロードマップ【YouTube無料・2026年版】",
+  title: "マーケティング独学、何から見る？SEO・SNS・広告を順番に学ぶロードマップ【おすすめ無料動画9本】",
   description:
     "マーケティングをYouTubeで学びたい初心者向けに、Webマーケ・SEO・SNS・広告のおすすめ無料動画9本を順番に整理します。",
   publishedAt: "2026-06-10",

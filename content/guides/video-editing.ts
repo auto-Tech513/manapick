@@ -1,7 +1,7 @@
 const videoEditingGuide = {
   slug: "video-editing",
   genre: "video",
-  title: "YouTubeサムネイルの作り方・動画編集を独学する完全ロードマップ【YouTube無料・2026年版】",
+  title: "サムネイル作りで迷子にならない。動画編集の独学ロードマップ、ソフト選びからデザインまで【無料動画9本】",
   description:
     "YouTubeサムネイルの作り方と動画編集を、無料動画9本で見る順に整理。初心者が編集ソフト選びで迷わず、デザインまで学べます。",
   publishedAt: "2026-06-10",

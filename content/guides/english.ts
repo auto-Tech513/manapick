@@ -1,7 +1,7 @@
 const englishGuide = {
   slug: "english",
   genre: "english",
-  title: "英語を独学する完全ロードマップ【YouTube無料・2026年版】",
+  title: "英語の独学は「やる順番」で決まる。続ける仕組みまで設計した学習ロードマップ【無料YouTube動画4本】",
   description:
     "英語の独学は「順番を知る → 続ける仕組みを作る → 数字で測る」の3ステップ。無料YouTube動画4本で、2026年版の学習順を整理します。",
   publishedAt: "2026-06-07",

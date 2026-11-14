@@ -1,7 +1,7 @@
 const moneyBasicsGuide = {
   slug: "money-basics",
   genre: "money",
-  title: "NISA・家計管理の基本を学ぶロードマップ【YouTube無料・2026年版】",
+  title: "投資の前に、家計と制度を固める。NISA・お金の基本を学ぶ独学ロードマップ【無料YouTube動画9本】",
   description:
     "お金・投資の独学は「家計管理と制度 → 投資信託の仕組み → 方針づくり」の3ステップ。無料YouTube動画9本で、2026年版の学習順を整理します。",
   publishedAt: "2026-06-10",

@@ -1,7 +1,7 @@
 const generativeAiGuide = {
   slug: "generative-ai",
   genre: "ai",
-  title: "AIプロンプトのコツとCopilot活用を学ぶ完全ロードマップ【YouTube無料・2026年版】",
+  title: "ChatGPT・Gemini・Claude、何が違う？プロンプトのコツからCopilot活用まで、仕事に使う順番で学ぶ【無料動画7本】",
   description:
     "AIプロンプトのコツ、Copilot活用事例、ChatGPT/Gemini/Claudeの違いを無料動画7本で整理。仕事に使う順番がわかります。",
   publishedAt: "2026-06-07",

@@ -1,7 +1,7 @@
 const pythonGuide = {
   slug: "python",
   genre: "prog",
-  title: "Pythonは難しい？初心者が独学する完全ロードマップ【YouTube無料・2026年版】",
+  title: "Pythonは難しい？挫折ポイントを先回りする初心者ロードマップ【無料YouTube動画4本で環境構築からWebアプリまで】",
   description:
     "Pythonは難しいと感じる初心者向けに、環境構築・文法・Flaskまで無料動画4本を順番に整理。挫折しやすい点も解説します。",
   publishedAt: "2026-06-07",

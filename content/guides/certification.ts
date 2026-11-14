@@ -1,7 +1,7 @@
 const certificationGuide = {
   slug: "certification",
   genre: "shikaku",
-  title: "社労士試験・資格勉強の始め方完全ロードマップ【YouTube無料・2026年版】",
+  title: "社労士・宅建・ITパスポート、資格勉強は何から始める？計画→範囲→過去問の順で進めるロードマップ【無料YouTube動画】",
   description:
     "社労士試験、宅建、ITパスポートなど資格勉強の始め方を無料動画で整理。計画・範囲把握・過去問演習の順に学べます。",
   publishedAt: "2026-06-10",

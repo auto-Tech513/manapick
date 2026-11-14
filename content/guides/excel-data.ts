@@ -1,7 +1,7 @@
 const excelDataGuide = {
   slug: "excel-data",
   genre: "data",
-  title: "エクセル統計の使い方を学ぶ完全ロードマップ【YouTube無料・2026年版】",
+  title: "エクセル統計、関数を覚える前に「使い方」を学ぶ。集計→分析→自動化まで進むロードマップ【無料YouTube動画4本】",
   description:
     "エクセル統計の使い方とデータ分析を、無料YouTube動画4本で整理。集計・分析・パワークエリ自動化まで見る順に学べます。",
   publishedAt: "2026-06-07",

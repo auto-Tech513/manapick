@@ -1,7 +1,7 @@
 const bookkeepingGuide = {
   slug: "bookkeeping",
   genre: "kaikei",
-  title: "簿記3級から始める会計の独学ロードマップ【YouTube無料・2026年版】",
+  title: "簿記3級で止まらない。FP・簿記2級まで一気に進む会計独学ロードマップ【無料YouTube動画9本】",
   description:
     "会計・経営系資格の独学は「簿記3級の入口 → FP/簿記2級へ広げる → 実務・上位資格へ」の3ステップ。無料YouTube動画9本で学習順を整理します。",
   publishedAt: "2026-06-10",
