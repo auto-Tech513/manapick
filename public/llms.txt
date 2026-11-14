@@ -28,6 +28,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 一覧: https://manapick.app/news/
 - Google Workspaceや生成AIなど、社会人の学びと仕事に関係する公式一次情報を確認し、変更点と実務への影響を整理します。
 - 2026-11-11 Google、Sheets canvasを単独リンクで共有・公開できる新機能を発表: https://manapick.app/news/2026-11-11-publish-a-sheets-canvas-as-a-standalone-link-d58ce595ea/ | 出典 Google Workspace Updates
+- 2026-11-11 Google Chatで番号付きリストと最大5階層のネスト表示に対応。Web版で作成可能: https://manapick.app/news/2026-11-11-organize-and-communicate-complex-information-with-numb-306142d7c7/ | 出典 Google Workspace Updates
 - 2026-11-05 Google VidsでGemini Omni 1.2 Flashが利用可能に、最大15秒の動画生成と品質向上を実現: https://manapick.app/news/2026-11-05-gemini-omni-1-2-flash-now-in-vids-with-15-second-gener-6aa8935159/ | 出典 Google Workspace Updates
 - 2026-10-23 GeminiアプリからGemini Notebookを操作、チャットでノートブック作成や資料追加: https://manapick.app/news/2026-10-23-gemini-notebook-connected-app-gemini-app/ | 出典 Google Workspace Updates
 - 2026-10-22 Google Sheetsで箱ひげ図を標準作成、四分位や外れ値を自動計算: https://manapick.app/news/2026-10-22-google-sheets-box-and-whisker-charts/ | 出典 Google Workspace Updates
@@ -36,7 +37,6 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 2026-10-21 Gemini Notebookのスライドと動画の概要、構成を確認しながら段階的に作成: https://manapick.app/news/2026-10-21-gemini-notebook-slide-deck-video-review/ | 出典 Google Workspace Updates
 - 2026-10-21 Geminiアプリに「カスタマイズ」画面、スキルと連携アプリを1か所で管理: https://manapick.app/news/2026-10-21-gemini-app-customize-hub/ | 出典 Google Workspace Updates
 - 2026-10-19 Google Chatに会議のまとめが自動投稿、決定事項と担当者付きのやることを確認: https://manapick.app/news/2026-10-19-google-chat-meeting-recaps/ | 出典 Google Workspace Updates
-- 2026-10-19 Google SheetsのGeminiでBigQueryのデータを会話で分析、ダッシュボードも作成: https://manapick.app/news/2026-10-19-gemini-sheets-bigquery-natural-language/ | 出典 Google Workspace Updates
 
 ## ジャンル別AEOインデックス
 ### 生成AI（179本）
