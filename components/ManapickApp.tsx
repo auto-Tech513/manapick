@@ -18,7 +18,7 @@ import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_URL, MANAPICK_LI
 import { RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY, jstDateKey, selectTodayVideo, sendGaEvent } from "@/lib/retention";
 import { genericAxisNoteCount, isGenericAxisNote, youtubeThumbnail } from "@/lib/manapick";
 import sisterItemLinks from "@/content/sister-item-links.json";
-import { XFER_AI_FALLBACK, XFER_CAREER_BY_GENRE, XFER_COMPANY_BY_GENRE, XFER_LICENSE_BY_GENRE, XFER_ORDER, XFER_ORDER_DEFAULT, XFER_POLITICS_BY_GENRE } from "@/lib/xfer-links";
+import { XFER_AI_FALLBACK, XFER_CAREER_BY_GENRE, XFER_COMPANY_BY_GENRE, XFER_CTA, XFER_LICENSE_BY_GENRE, XFER_ORDER, XFER_ORDER_DEFAULT, XFER_POLITICS_BY_GENRE } from "@/lib/xfer-links";
 import { averageScoreOf, medianOf, siteStats } from "@/lib/site-stats";
 import { buildSubRoadmap } from "@/lib/sub-roadmap";
 import { useLocalList } from "@/lib/useLocalList";
@@ -143,6 +143,9 @@ type HeroCarouselSlide = {
 
 type LocalListState = ReturnType<typeof useLocalList>;
 type LikeCounts = Record<string, number>;
+
+// ジャンル索引の並びはデザインモックの編集順（件数順ではない）。
+const GENRE_INDEX_ORDER = ["shikaku", "ai", "video", "prog", "english", "data", "marke", "biz", "kaikei", "money"];
 
 const purposeLinks = [
   { number: "01", title: "なりたい職業から選ぶ", label: "職業ゴールから最短ルート", genre: "profession", icon: "target" },
@@ -1314,7 +1317,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
   const selectedGenreCount = selectedGenreData ? genreVideoCounts[selectedGenreData.key] ?? 0 : publishedVideos.length;
 
   return (
-    <main>
+    <main className="lb-main">
       <header className="site-header border-b border-line bg-surface/92 backdrop-blur">
         <div className="site-header-inner mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <a href="#top" className="lb-wordmark min-w-0 shrink-0" aria-label="Manapick トップ">
@@ -1562,7 +1565,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
             </div>
             <p>スコア上位から選んだ、いま注目の12本。</p>
             <a className="lb-more" href="/ranking/">
-              ランキングで見る
+              12本すべて見る
             </a>
           </div>
           <div className="lb-reel">
@@ -1606,7 +1609,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
         </div>
         <div className="lb-idx">
           {[...publishedGenres]
-            .sort((a, b) => (genreVideoCounts[b.key] ?? 0) - (genreVideoCounts[a.key] ?? 0))
+            .sort((a, b) => GENRE_INDEX_ORDER.indexOf(a.key) - GENRE_INDEX_ORDER.indexOf(b.key))
             .map((genre, index) => {
               const count = genreVideoCounts[genre.key] ?? 0;
               const max = Math.max(1, ...Object.values(genreVideoCounts));
@@ -2110,18 +2113,15 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
                   rel="noopener noreferrer"
                   onClick={() => sendGaEvent(card.event, { placement: "xfer", target: card.url })}
                 >
-                  <span className="lb-xfer-top">
-                    <span className="nw-stn" style={{ "--stc": card.color } as CSSProperties}>
-                      {card.code}
-                    </span>
-                    {card.siteName}
-                    <span className="lb-xfer-arr" aria-hidden="true">
-                      ↗
-                    </span>
+                  <span className="nw-stn" style={{ "--stc": card.color } as CSSProperties}>
+                    {card.code}
                   </span>
-                  <span className="lb-xfer-title">{card.title}</span>
-                  <span className="lb-xfer-desc">{card.desc}</span>
-                  <span className="lb-xfer-meta">{card.meta}</span>
+                  <span className="lb-xfer-body">
+                    <span className="lb-xfer-k">TRANSFER → {card.siteName}</span>
+                    <span className="lb-xfer-title">{card.title}</span>
+                    <span className="lb-xfer-desc">{card.desc}</span>
+                  </span>
+                  <span className="lb-xfer-go">{XFER_CTA[card.site]}</span>
                 </a>
               ));
             })()}
