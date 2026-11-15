@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from "react";
 import PwaInstallButton from "@/components/PwaInstallButton";
+import TransferNavItem from "@/components/TransferSheet";
 import SiteSearchForm from "@/components/SiteSearchForm";
 import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
 
@@ -81,6 +82,7 @@ export default function SiteMobileNav({ genres }: { genres: MenuGenre[] }) {
           </svg>
           <span>あとで見る</span>
         </Link>
+        <TransferNavItem />
         <button
           ref={buttonRef}
           type="button"
