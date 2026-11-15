@@ -1514,5 +1514,29 @@
    "name": "Notion AI",
    "url": "https://ai.manapick.app/tool/notion-ai/"
   }
+ ],
+ "4rpNZ1qbZco": [
+  {
+   "name": "Notion AI",
+   "site": "ai",
+   "slug": "notion-ai",
+   "url": "https://ai.manapick.app/tool/notion-ai/"
+  }
+ ],
+ "DHSMawXCkpY": [
+  {
+   "name": "Qwen",
+   "site": "ai",
+   "slug": "qwen",
+   "url": "https://ai.manapick.app/tool/qwen/"
+  }
+ ],
+ "RNJSErtgXm8": [
+  {
+   "name": "Kling AI",
+   "site": "ai",
+   "slug": "kling",
+   "url": "https://ai.manapick.app/tool/kling/"
+  }
  ]
 }
