@@ -1115,6 +1115,10 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
   }
 
   function scrollToElement(elementId: string) {
+    // 検索入力にフォーカスしたまま（候補表示中）だと、モバイルブラウザの
+    // フォーカス追従スクロールと競合して移動が打ち消されるため、先に外す。
+    if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
+    setSuggestionsOpen(false);
     window.requestAnimationFrame(() => {
       window.requestAnimationFrame(() => {
         window.requestAnimationFrame(() => {
@@ -1505,33 +1509,44 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
         </div>
         <div className="lb-mosaic">
           {mosaicVideos.map((video, index) => (
-            <a
-              key={video.ytid}
-              className={index === 0 ? "lb-tile is-big" : "lb-tile"}
-              href={videoDetailHref(video)}
-              aria-label={`${video.title}（${scoreText(video)}）`}
-            >
-              <Image
-                src={youtubeThumbnail(video.ytid)}
-                alt=""
-                fill
-                sizes={index === 0 ? "(max-width: 640px) 100vw, 34vw" : "(max-width: 640px) 50vw, 17vw"}
-                className="lb-tile-img"
-                priority={index === 0}
-              />
-              <span className="lb-tile-shade" aria-hidden="true" />
-              <span className="lb-tile-score">
-                {video.score ?? "–"}
-                <small>/35</small>
-              </span>
-              {index === 0 ? <span className="lb-tile-pick">今週のイチオシ</span> : null}
-              <span className="lb-tile-title">{video.title}</span>
-              <span className="lb-tile-no">{String(index + 1).padStart(2, "0")}</span>
-              <span className="lb-tile-gen">{genreEnglishLabel(video.genre)}</span>
-              <span className="lb-tile-plus" aria-hidden="true">
-                +
-              </span>
-            </a>
+            <div key={video.ytid} className={index === 0 ? "lb-tile is-big" : "lb-tile"}>
+              <a
+                className="lb-tile-link"
+                href={videoDetailHref(video)}
+                aria-label={`${video.title}（${scoreText(video)}）`}
+              >
+                <Image
+                  src={youtubeThumbnail(video.ytid)}
+                  alt=""
+                  fill
+                  sizes={index === 0 ? "(max-width: 640px) 100vw, 34vw" : "(max-width: 640px) 50vw, 17vw"}
+                  className="lb-tile-img"
+                  priority={index === 0}
+                />
+                <span className="lb-tile-shade" aria-hidden="true" />
+                <span className="lb-tile-score">
+                  {video.score ?? "–"}
+                  <small>/35</small>
+                </span>
+                {index === 0 ? <span className="lb-tile-pick">今週のイチオシ</span> : null}
+                <span className="lb-tile-title">{video.title}</span>
+                <span className="lb-tile-no">{String(index + 1).padStart(2, "0")}</span>
+                <span className="lb-tile-gen">{genreEnglishLabel(video.genre)}</span>
+              </a>
+              <button
+                type="button"
+                className={watchlist.has(video.ytid) ? "lb-tile-plus is-saved" : "lb-tile-plus"}
+                aria-pressed={watchlist.has(video.ytid)}
+                aria-label={
+                  watchlist.has(video.ytid)
+                    ? `「${video.title}」をあとで見るから外す`
+                    : `「${video.title}」をあとで見るに保存`
+                }
+                onClick={() => watchlist.toggle(video.ytid)}
+              >
+                <span aria-hidden="true">{watchlist.has(video.ytid) ? "✓" : "+"}</span>
+              </button>
+            </div>
           ))}
         </div>
       </section>
@@ -1647,7 +1662,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
             <div className="genre-state-legend flex flex-wrap gap-2 text-xs font-bold text-muted">
               <span className="rounded-full bg-leaf px-3 py-1 text-white">公開中</span>
               <span className="rounded-full bg-mist px-3 py-1">近日公開</span>
-              <span className="rounded-full bg-amberSoft px-3 py-1">確認中（注記）</span>
+              <span className="rounded-full bg-amberSoft px-3 py-1 text-[#422006]">確認中（注記）</span>
             </div>
           </div>
 

@@ -12804,7 +12804,7 @@ ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; height: 0
 }
 
 .latest-news-card.is-ai,
-.news-index-card.is-ai { --news-accent: #cf493b; }
+.news-index-card.is-ai { --news-accent: #c53f30; }
 .latest-news-card.is-data,
 .news-index-card.is-data { --news-accent: #0f766e; }
 .latest-news-card.is-work,
@@ -12990,7 +12990,7 @@ ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; height: 0
   box-shadow: 0 10px 28px rgba(19, 35, 65, 0.06);
 }
 
-.news-article-hero.is-ai { --news-accent: #cf493b; }
+.news-article-hero.is-ai { --news-accent: #c53f30; }
 .news-article-hero.is-data { --news-accent: #0f766e; }
 .news-article-hero.is-work { --news-accent: #a45a16; }
 
@@ -14335,6 +14335,11 @@ details.fold-group[hidden] {
 
 .site-footer-search .site-search-form {
   max-width: 560px;
+}
+
+/* フッターは暗背景のため、ラベルは明色にする（実測 1.87:1 → 約11:1） */
+.site-footer-search .site-search-form label {
+  color: #c9d5f2;
 }
 
 .study-plan-done-button {

@@ -190,6 +190,43 @@ a.nw-rail-station {
   padding: 6px 2px;
 }
 
+/* 中幅では段階的に間引く（実測: 1024で右端1205pxはみ出し、768でも駅名が溢れた） */
+@media (max-width: 1240px) {
+  .nw-rail-side {
+    display: none;
+  }
+}
+
+@media (max-width: 1080px) {
+  .nw-rail-label {
+    display: none;
+  }
+}
+
+@media (max-width: 840px) {
+  .nw-rail {
+    overflow: hidden;
+  }
+
+  .nw-rail-station {
+    margin-right: 2px;
+    padding-right: 6px;
+  }
+
+  .nw-rail-station .nw-rail-name {
+    display: none;
+  }
+
+  .nw-rail-station.is-current .nw-rail-name {
+    display: inline;
+    font-size: 11px;
+  }
+
+  .nw-rail-station.is-current b {
+    display: none;
+  }
+}
+
 @media (max-width: 640px) {
   .nw-rail {
     min-height: 34px;
@@ -755,10 +792,17 @@ a.nw-rail-station {
   object-fit: cover;
 }
 
+.lb-tile-link {
+  position: absolute;
+  inset: 0;
+  display: block;
+  color: #fff;
+}
+
 .lb-tile-shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10, 16, 40, 0) 40%, rgba(10, 16, 40, 0.78));
+  background: linear-gradient(180deg, rgba(10, 16, 40, 0) 40%, rgba(10, 16, 40, 0.85));
   z-index: 2;
 }
 
@@ -846,12 +890,45 @@ a.nw-rail-station {
 
 .lb-tile-plus {
   position: absolute;
-  right: 12px;
-  top: 8px;
-  z-index: 3;
-  font-size: 22px;
+  right: 6px;
+  top: 2px;
+  z-index: 4;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
   font-weight: 300;
   line-height: 1;
+}
+
+.lb-tile-plus::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(10, 16, 40, 0.45);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+}
+
+.lb-tile-plus span {
+  position: relative;
+  z-index: 1;
+}
+
+.lb-tile-plus.is-saved::before {
+  background: var(--nw-mp);
+  border-color: var(--nw-mp);
+}
+
+.lb-tile.is-big .lb-tile-pick {
+  top: 56px;
 }
 
 /* ---------- フィルム帯（注目の12本） ---------- */
@@ -1264,6 +1341,9 @@ a.nw-rail-station {
   letter-spacing: 0.14em;
   color: var(--nw-ink-2);
   font-weight: 600;
+  /* globals のピル背景（紺地）が残ると灰文字が沈むため、素のテキストに戻す */
+  background: transparent;
+  padding: 0;
 }
 
 .lb-road-sec .roadmap-stage-name {
@@ -1413,6 +1493,8 @@ a.nw-rail-station {
 }
 
 .purpose-number {
+  /* globals の position:absolute（右上固定）が残ると矢印と重なるため打ち消す */
+  position: static;
   grid-row: span 2;
   font-family: var(--font-num);
   font-weight: 600;
@@ -1422,6 +1504,7 @@ a.nw-rail-station {
 }
 
 .purpose-title {
+  margin: 0;
   font-family: var(--font-mincho);
   font-weight: 700;
   font-size: 20px;
