@@ -2836,10 +2836,15 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .weekly-pick-section {
-  border-bottom: 1px solid var(--color-line);
-  background:
-    radial-gradient(circle at 82% 0%, rgba(15, 169, 139, 0.06), transparent 22rem),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(246, 248, 251, 0.88));
+  background: var(--color-primary);
+}
+
+.weekly-pick-heading .section-eyebrow {
+  color: var(--color-spark);
+}
+
+.weekly-pick-heading .section-title {
+  color: #fff;
 }
 
 .weekly-pick-shell {
@@ -9934,19 +9939,33 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .rank-1 {
-  background: linear-gradient(135deg, #f5b62d, #a96900);
+  background: #a96900;
 }
 
 .rank-2 {
-  background: linear-gradient(135deg, #d8dee8, #6b7280);
+  background: #697386;
 }
 
 .rank-3 {
-  background: linear-gradient(135deg, #d08b52, #8a4d24);
+  background: #8a4d24;
+}
+
+.ranking-video-card .rank-badge {
+  z-index: 2;
+  min-width: 46px;
+  min-height: 46px;
+  border-radius: 14px;
+  font-size: 1.35rem;
+}
+
+.ranking-video-card .rank-badge.rank-1 {
+  min-width: 54px;
+  min-height: 54px;
+  font-size: 1.7rem;
 }
 
 .rank-4 {
-  background: linear-gradient(135deg, #7b8798, #4b5563);
+  background: #4b5563;
 }
 
 .ranked-body {
@@ -12844,6 +12863,19 @@ ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; height: 0
   overflow-wrap: anywhere;
   text-wrap: balance;
   word-break: auto-phrase;
+}
+
+/* The newest article leads its month group as a wide feature card,
+   so the index reads as feature + grid instead of a uniform card wall. */
+@media (min-width: 1024px) {
+  .news-index-grid > .news-index-card:first-child {
+    grid-column: span 2;
+  }
+
+  .news-index-grid > .news-index-card:first-child h3 {
+    font-size: 1.45rem;
+    line-height: 1.45;
+  }
 }
 
 .latest-news-summary,
