@@ -4394,6 +4394,7 @@ ins.adsbygoogle:not(.ad-slot),
   }
 
   .recent-updates-head {
+    flex-direction: column;
     align-items: start;
   }
 
