@@ -955,6 +955,10 @@
   --color-company-pink-dark: #831843;
   --color-company-pink-soft: #fce7f3;
   --color-company-pink-line: #f9a8d4;
+  --color-politics-violet: #6d28d9;
+  --color-politics-violet-dark: #4c1d95;
+  --color-politics-violet-soft: #ede9fe;
+  --color-politics-violet-line: #c4b5fd;
   --color-spark: #f59e0b;
   --color-coral: #d95b48;
   --color-ink: #161b22;
@@ -1068,7 +1072,7 @@ ins.adsbygoogle:not(.ad-slot),
 
 .site-header .top-search-wrap {
   max-width: 280px;
-  min-width: 200px;
+  min-width: 150px;
   flex: 0 1 240px;
 }
 
@@ -1083,6 +1087,22 @@ ins.adsbygoogle:not(.ad-slot),
 
 .site-nav {
   min-width: 0;
+  align-items: center;
+}
+
+/* Text destinations share the chips' 34px height and pill geometry so the
+   header row reads as one control group instead of bare text floating high. */
+.site-nav-link {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.site-nav-link:hover {
+  background: var(--color-bg-soft);
 }
 
 /* Secondary destinations live in the drawer; keeping the header concise prevents overflow. */
@@ -1093,7 +1113,8 @@ ins.adsbygoogle:not(.ad-slot),
 .header-ai-link,
 .header-license-link,
 .header-career-link,
-.header-company-link {
+.header-company-link,
+.header-politics-link {
   position: relative;
   display: inline-flex;
   min-height: 34px;
@@ -1105,7 +1126,7 @@ ins.adsbygoogle:not(.ad-slot),
     radial-gradient(circle at 16% 10%, rgba(255, 176, 0, 0.18), transparent 1.7rem),
     linear-gradient(135deg, #fff, var(--color-ai-red-soft));
   color: var(--color-ai-red-dark);
-  padding: 5px 10px;
+  padding: 5px 8px;
   text-decoration: none;
   box-shadow: 0 1px 0 rgba(240, 68, 56, 0.08), 0 8px 18px rgba(240, 68, 56, 0.08);
   transition: background-color 160ms var(--ease-standard), border-color 160ms var(--ease-standard), transform 160ms var(--ease-standard);
@@ -1114,7 +1135,8 @@ ins.adsbygoogle:not(.ad-slot),
 .header-ai-link::before,
 .header-license-link::before,
 .header-career-link::before,
-.header-company-link::before {
+.header-company-link::before,
+.header-politics-link::before {
   display: inline-grid;
   width: 17px;
   height: 17px;
@@ -1167,10 +1189,31 @@ ins.adsbygoogle:not(.ad-slot),
   background: linear-gradient(135deg, var(--color-company-pink), #db2777);
 }
 
+/* politics chip styling is ready ahead of the site launch; the markup is
+   added only once politics.manapick.app is live and verified. */
+.header-politics-link {
+  border-color: var(--color-politics-violet-line);
+  background: linear-gradient(135deg, #fff, var(--color-politics-violet-soft));
+  color: var(--color-politics-violet-dark);
+  box-shadow: 0 1px 0 rgba(109, 40, 217, 0.08), 0 8px 18px rgba(109, 40, 217, 0.08);
+}
+
+.header-politics-link::before {
+  background: linear-gradient(135deg, var(--color-politics-violet), #7c3aed);
+}
+
+.header-politics-link:hover {
+  border-color: color-mix(in srgb, var(--color-politics-violet) 54%, var(--color-politics-violet-line));
+  background: linear-gradient(135deg, #fff, color-mix(in srgb, var(--color-politics-violet) 10%, white));
+  color: var(--color-politics-violet-dark);
+  transform: translateY(-1px);
+}
+
 .header-ai-link span,
 .header-license-link span,
 .header-career-link span,
-.header-company-link span {
+.header-company-link span,
+.header-politics-link span {
   font-weight: 900;
   line-height: 1.1;
   white-space: nowrap;
@@ -1178,11 +1221,16 @@ ins.adsbygoogle:not(.ad-slot),
 
 .header-ai-link small,
 .header-license-link small,
-.header-career-link small {
+.header-career-link small,
+.header-politics-link small {
   color: color-mix(in srgb, var(--color-ai-red-dark) 72%, var(--color-muted));
   font-size: 0.72rem;
   font-weight: 700;
   line-height: 1.1;
+}
+
+.header-politics-link small {
+  color: color-mix(in srgb, var(--color-politics-violet-dark) 76%, var(--color-muted));
 }
 
 .header-license-link small {
@@ -1201,7 +1249,8 @@ ins.adsbygoogle:not(.ad-slot),
 .site-header .header-ai-link small,
 .site-header .header-license-link small,
 .site-header .header-career-link small,
-.site-header .header-company-link small {
+.site-header .header-company-link small,
+.site-header .header-politics-link small {
   display: none;
 }
 
@@ -2029,25 +2078,21 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
-  .site-nav > a:not(.header-ai-link):not(.header-license-link):not(.header-career-link) {
+  .site-nav > a:not(.header-ai-link):not(.header-license-link):not(.header-career-link):not(.header-company-link) {
     display: none;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .header-license-link,
-  .header-career-link,
-  .header-company-link {
+  .header-career-link {
     display: none;
   }
 }
 
-/* 2026-11-13 BP統合: 元は 900〜1439px で非表示。1280px 以上で出すと右端があふれるため、1024px 以上では常に非表示（企業サイトへはメニューとフッターから） */
-@media (min-width: 1024px) {
-  .header-company-link {
-    display: none;
-  }
-}
+/* 2026-11-15: company chip is part of the global menu at every PC width
+   (owner instruction). Space is managed by the flexible search field and
+   chip gaps, not by hiding a sister site. */
 
 @media (max-width: 767px) {
   .site-header-inner {

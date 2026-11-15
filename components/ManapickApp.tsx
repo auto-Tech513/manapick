@@ -1308,33 +1308,33 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
           </div>
           <div className="header-actions">
             <nav className="site-nav flex flex-wrap gap-3 text-sm font-bold text-muted" aria-label="サイト内リンク">
-              <a className="transition hover:text-accent" href="#search">
+              <a className="site-nav-link transition hover:text-accent" href="#search">
                 探す
               </a>
-              <a className="transition hover:text-accent" href="#roadmap">
+              <a className="site-nav-link transition hover:text-accent" href="#roadmap">
                 ロードマップ
               </a>
-              <a className="transition hover:text-accent" href="/ranking/">
+              <a className="site-nav-link transition hover:text-accent" href="/ranking/">
                 ランキング
               </a>
-              <a className="site-nav-optional transition hover:text-accent" href="/new/">
+              <a className="site-nav-link site-nav-optional transition hover:text-accent" href="/new/">
                 新着
               </a>
-              <Link className="site-nav-optional transition hover:text-accent" href="/news/">
+              <Link className="site-nav-link site-nav-optional transition hover:text-accent" href="/news/">
                 ニュース
               </Link>
-              <a className="site-nav-optional transition hover:text-accent" href="/glossary/">
+              <a className="site-nav-link site-nav-optional transition hover:text-accent" href="/glossary/">
                 用語集
               </a>
-              <a className="transition hover:text-accent" href="/my/">
+              <a className="site-nav-link transition hover:text-accent" href="/my/">
                 マイページ
               </a>
               {SHOW_TOP_PR_SECTION ? (
-                <a className="transition hover:text-accent" href="#pr">
+                <a className="site-nav-link transition hover:text-accent" href="#pr">
                   PR
                 </a>
               ) : null}
-              <a className="site-nav-optional transition hover:text-accent" href="/contact/">
+              <a className="site-nav-link site-nav-optional transition hover:text-accent" href="/contact/">
                 お問い合わせ
               </a>
               <a
@@ -1344,7 +1344,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
                 rel="noopener"
                 onClick={() => sendGaEvent("ai_crosslink_click", { placement: "header", target: "manapick_ai" })}
               >
-                <span>manapick AI ↗</span>
+                <span>manapick AI</span>
                 <small>公式AI版</small>
               </a>
               <a
@@ -1355,7 +1355,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
                 onClick={() => sendGaEvent("license_crosslink_click", { placement: "header", target: "manapick_license" })}
                 aria-label="manapick licenseへ。資格・検定を比較"
               >
-                <span>license ↗</span>
+                <span>license</span>
                 <small>資格・検定</small>
               </a>
               <a
@@ -1366,7 +1366,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
                 onClick={() => sendGaEvent("career_crosslink_click", { placement: "header", target: "manapick_career" })}
                 aria-label="manapick careerへ。仕事内容と学ぶ順番を確認"
               >
-                <span>career ↗</span>
+                <span>career</span>
                 <small>仕事を知る</small>
               </a>
               <a
@@ -1377,7 +1377,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
                 onClick={() => sendGaEvent("company_crosslink_click", { placement: "header", target: "manapick_company" })}
                 aria-label="manapick companyへ。企業の業績・年収を一次情報で確認"
               >
-                <span>company ↗</span>
+                <span>company</span>
                 <small>企業を読む</small>
               </a>
             </nav>
