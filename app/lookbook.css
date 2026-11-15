@@ -84,6 +84,10 @@ body {
 }
 
 /* ---------- トップページ全体の地（デザインモックの paper） ---------- */
+body:has(.lb-main) {
+  background: var(--nw-paper);
+}
+
 .lb-main {
   background: var(--nw-paper);
 }
@@ -243,6 +247,11 @@ a.nw-rail-station {
     padding: 2px 12px;
     gap: 10px;
     overflow: hidden;
+  }
+
+  /* 6駅版の仕様: SPのレールは表示のみ。乗り換えのタップは下部バーのシートで受ける */
+  a.nw-rail-station {
+    pointer-events: none;
   }
 
   .nw-rail-label,
@@ -564,6 +573,76 @@ a.nw-rail-station {
 .top-search-input {
   font-size: 16px;
   color: var(--nw-ink);
+}
+
+/* ヘッダーはモック .hd の構成そのもの（ワードマーク／ナビ／検索ピル／マイページ） */
+.lb-hd-inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  height: 72px;
+  padding: 0 40px;
+}
+
+.lb-hd-nav {
+  display: flex;
+  gap: 22px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.lb-hd-nav a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 2px;
+  color: var(--nw-ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.lb-hd .top-search-wrap {
+  margin-left: auto;
+}
+
+.lb-me {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--nw-ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .lb-hd-inner {
+    height: 58px;
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  .lb-hd-nav,
+  .lb-me {
+    display: none;
+  }
+
+  .lb-hd .top-search {
+    width: auto;
+    max-width: 46vw;
+    height: 38px;
+    padding: 0 12px;
+  }
+
+  .lb-hd .top-search-key {
+    display: none;
+  }
+
+  .lb-hd .top-search-input {
+    min-width: 0;
+  }
 }
 
 /* ---------- セクション共通 ---------- */
@@ -1424,9 +1503,9 @@ a.nw-rail-station {
 
 .lb-xfer {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr;
   gap: 14px;
-  align-items: center;
+  align-items: start;
   padding: 14px 16px;
   border: 1.5px solid var(--nw-ink);
   border-radius: 12px;
@@ -1448,6 +1527,7 @@ a.nw-rail-station {
   letter-spacing: 0.18em;
   color: var(--nw-ink-2);
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .lb-xfer-title {
@@ -1464,6 +1544,11 @@ a.nw-rail-station {
 }
 
 .lb-xfer-go {
+  grid-column: 1 / 3;
+  justify-content: space-between;
+  border-top: 1px dashed var(--nw-rule);
+  padding-top: 10px;
+  margin-top: 2px;
   font-family: var(--font-num);
   font-weight: 700;
   font-size: 13px;

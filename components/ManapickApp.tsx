@@ -7,7 +7,6 @@ import { type CSSProperties, type KeyboardEvent as ReactKeyboardEvent, type RefO
 import BrandLogo, { BrandMark } from "@/components/BrandLogo";
 import AdSlot from "@/components/AdSlot";
 import LikeButton from "@/components/LikeButton";
-import RetentionBand from "@/components/RetentionBand";
 import TransferNavItem from "@/components/TransferSheet";
 import genresData from "@/content/genres.json";
 import professionRoutesData from "@/content/professions.json";
@@ -15,7 +14,7 @@ import roadmapsData from "@/content/roadmaps.json";
 import videosData from "@/content/videos.json";
 import PwaInstallButton from "@/components/PwaInstallButton";
 import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
-import { RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY, jstDateKey, selectTodayVideo, sendGaEvent } from "@/lib/retention";
+import { RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY, sendGaEvent } from "@/lib/retention";
 import { genericAxisNoteCount, isGenericAxisNote, youtubeThumbnail } from "@/lib/manapick";
 import sisterItemLinks from "@/content/sister-item-links.json";
 import { XFER_AI_FALLBACK, XFER_CAREER_BY_GENRE, XFER_COMPANY_BY_GENRE, XFER_CTA, XFER_LICENSE_BY_GENRE, XFER_ORDER, XFER_ORDER_DEFAULT, XFER_POLITICS_BY_GENRE } from "@/lib/xfer-links";
@@ -583,12 +582,10 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
   const [mobileGenreDropdownOpen, setMobileGenreDropdownOpen] = useState(false);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [watchlistOnly, setWatchlistOnly] = useState(false);
-  const [todayKey, setTodayKey] = useState("");
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [popularLikeCounts, setPopularLikeCounts] = useState<LikeCounts>({});
   const searchInputRef = useRef<HTMLInputElement>(null);
   const mobileGenreDropdownRef = useRef<HTMLDivElement>(null);
-  const menuButtonRef = useRef<HTMLButtonElement>(null);
   const menuDrawerRef = useRef<HTMLElement>(null!);
   const filtersMountedRef = useRef(false);
   const skipNextFilterResetRef = useRef(false);
@@ -723,7 +720,6 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
     () => rankedVideosByTab("popular", 12, referenceTime, popularLikeCounts),
     [popularLikeCounts, referenceTime]
   );
-  const recentUpdateVideos = useMemo(() => rankedVideosByTab("new", 6, referenceTime), [referenceTime]);
   const recentVideos = useMemo(() => {
     const byId = new Map(videos.map((video) => [video.ytid, video]));
     return recent.items
@@ -731,19 +727,6 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
       .filter((video): video is Video => video !== undefined && publishedGenreKeys.includes(video.genre))
       .slice(0, 8);
   }, [recent.items]);
-
-  // 「続きから」と今日の1本は視聴済みを除外する。見終わった動画が
-  // 続きとして残る看板と中身の不一致をなくす（UX改善 P1-3）。
-  const watchedIdSet = useMemo(() => new Set(watched.items), [watched.items]);
-  const continueVideo = useMemo(
-    () => recentVideos.find((video) => !watchedIdSet.has(video.ytid)) ?? null,
-    [recentVideos, watchedIdSet]
-  );
-  const todayVideo = useMemo(() => {
-    if (!todayKey) return null;
-    const unwatched = publishedVideos.filter((video) => !watchedIdSet.has(video.ytid));
-    return selectTodayVideo(unwatched.length > 0 ? unwatched : publishedVideos, todayKey);
-  }, [publishedVideos, todayKey, watchedIdSet]);
 
   const searchSuggestions = useMemo(() => (searchActive ? filteredVideos.slice(0, 5) : []), [filteredVideos, searchActive]);
   const liveSearchTotal = searchActive ? filteredVideos.length : videos.length;
@@ -839,11 +822,6 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
         }, 400);
       }
     }, 0);
-    return () => window.clearTimeout(timeout);
-  }, []);
-
-  useEffect(() => {
-    const timeout = window.setTimeout(() => setTodayKey(jstDateKey()), 0);
     return () => window.clearTimeout(timeout);
   }, []);
 
@@ -966,7 +944,6 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
     if (!menuOpen) return;
     const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     const previousOverflow = document.body.style.overflow;
-    const menuButton = menuButtonRef.current;
 
     function handleKeydown(event: KeyboardEvent) {
       if (event.key === "Escape") setMenuOpen(false);
@@ -982,9 +959,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
     return () => {
       document.body.style.overflow = previousOverflow;
       document.removeEventListener("keydown", handleKeydown);
-      if (menuButton) {
-        menuButton.focus();
-      } else if (previousFocus && document.contains(previousFocus)) {
+      if (previousFocus && document.contains(previousFocus)) {
         previousFocus.focus();
       }
     };
@@ -1136,30 +1111,6 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
     });
   }
 
-  function scrollToProfessionCard(routeId: string) {
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        const card = document.getElementById("profession-" + routeId);
-        const track = card?.closest<HTMLElement>(".profession-track");
-        if (!card) return;
-        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        const horizontallyScrollable = !!track && track.scrollWidth > track.clientWidth + 4;
-        if (horizontallyScrollable && track) {
-          scrollToElement("profession-routes");
-          const cardRect = card.getBoundingClientRect();
-          const trackRect = track.getBoundingClientRect();
-          const delta = (cardRect.left - trackRect.left) - (track.clientWidth - card.clientWidth) / 2;
-          track.scrollTo({ left: track.scrollLeft + delta, behavior: reducedMotion ? "auto" : "smooth" });
-        } else {
-          scrollToElement("profession-" + routeId);
-        }
-        document.querySelectorAll(".profession-card.is-active").forEach((el) => el.classList.remove("is-active"));
-        card.classList.add("is-active");
-        window.setTimeout(() => card.classList.remove("is-active"), 1600);
-      });
-    });
-  }
-
   function handleGenreChange(nextGenre: string, scrollTarget: "results" | "topics" | "none" = "results") {
     setWatchlistOnly(false);
     setSelectedGenre(nextGenre);
@@ -1180,47 +1131,6 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
       return;
     }
     scrollToResults();
-  }
-
-  function handleProfessionDestination(destination: ProfessionDestination) {
-    const nextGenre = destination.genre;
-    const nextSub = availableSubForGenre(nextGenre, destination.sub, destination.fallbackSub);
-    setWatchlistOnly(false);
-    setSelectedGenre(nextGenre);
-    setSelectedSub(nextSub);
-    setSelectedLevel("すべて");
-    setSelectedTime("all");
-    setSearchDraft("");
-    setKeyword("");
-    setSuggestionsOpen(false);
-    setActiveSuggestionIndex(0);
-    if (roadmapTabs.some((roadmap) => roadmap.genre === nextGenre)) {
-      setActiveRoadmapGenre(nextGenre);
-    }
-    resetPageParam();
-    scrollToElement(nextGenre === "all" ? "results-anchor" : "topic-filter-anchor");
-  }
-
-  function handleProfessionRoute(route: ProfessionRoute) {
-    const primary = route.destinations.find((destination) => destination.href === route.href) ?? route.destinations[0];
-    const nextGenre = primary?.genre ?? "all";
-    if (nextGenre !== "all") {
-      const nextSub = availableSubForGenre(nextGenre, primary?.sub, primary?.fallbackSub);
-      setWatchlistOnly(false);
-      setSelectedGenre(nextGenre);
-      setSelectedSub(nextSub);
-      setSelectedLevel("すべて");
-      setSelectedTime("all");
-      setSearchDraft("");
-      setKeyword("");
-      setSuggestionsOpen(false);
-      setActiveSuggestionIndex(0);
-      if (roadmapTabs.some((roadmap) => roadmap.genre === nextGenre)) {
-        setActiveRoadmapGenre(nextGenre);
-      }
-      resetPageParam();
-    }
-    scrollToElement("roadmap");
   }
 
   function handleRoadmapGenreSelect(genre: string) {
@@ -1263,10 +1173,6 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
     scrollToResults();
   }
 
-  function jumpToGenre(genreKey: string) {
-    handleGenreChange(genreKey, "topics");
-  }
-
   function showGenrePicker() {
     setWatchlistOnly(false);
     setSelectedGenre("all");
@@ -1279,22 +1185,6 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
     setActiveSuggestionIndex(0);
     resetPageParam();
     scrollToElement("genre-picker");
-  }
-
-  function handlePurposeSelect(target: string) {
-    if (target === "profession") {
-      scrollToElement("profession-routes");
-      return;
-    }
-    if (target === "roadmap") {
-      scrollToElement("roadmap");
-      return;
-    }
-    if (target === "all") {
-      showGenrePicker();
-      return;
-    }
-    handleGenreChange(target);
   }
 
   function handleMenuKeyDown(event: ReactKeyboardEvent<HTMLElement>) {
@@ -1318,11 +1208,21 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
 
   return (
     <main className="lb-main">
-      <header className="site-header border-b border-line bg-surface/92 backdrop-blur">
-        <div className="site-header-inner mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+      <header className="site-header lb-hd">
+        <div className="lb-hd-inner">
           <a href="#top" className="lb-wordmark min-w-0 shrink-0" aria-label="Manapick トップ">
             manapick
           </a>
+          <nav className="lb-hd-nav" aria-label="サイト内リンク">
+            <a className="lb-nav-current" href="#search">
+              さがす
+            </a>
+            <a href="#roadmap">ロードマップ</a>
+            <a href="/ranking/">ランキング</a>
+            <a href="/new/">新着</a>
+            <Link href="/news/">ニュース</Link>
+            <a href="/glossary/">用語集</a>
+          </nav>
           <div className="top-search-wrap">
             <label className="top-search" aria-label="動画を検索">
               <span className="sr-only">動画を検索</span>
@@ -1364,63 +1264,9 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
               onClose={() => setSuggestionsOpen(false)}
             />
           </div>
-          <div className="header-actions">
-            <nav className="site-nav flex flex-wrap gap-3 text-sm font-bold text-muted" aria-label="サイト内リンク">
-              <a className="site-nav-link lb-nav-current transition hover:text-accent" href="#search">
-                探す
-              </a>
-              <a className="site-nav-link transition hover:text-accent" href="#roadmap">
-                ロードマップ
-              </a>
-              <a className="site-nav-link transition hover:text-accent" href="/ranking/">
-                ランキング
-              </a>
-              <a className="site-nav-link site-nav-optional transition hover:text-accent" href="/new/">
-                新着
-              </a>
-              <Link className="site-nav-link site-nav-optional transition hover:text-accent" href="/news/">
-                ニュース
-              </Link>
-              <a className="site-nav-link site-nav-optional transition hover:text-accent" href="/glossary/">
-                用語集
-              </a>
-              <a className="site-nav-link transition hover:text-accent" href="/my/">
-                マイページ
-              </a>
-              {SHOW_TOP_PR_SECTION ? (
-                <a className="site-nav-link transition hover:text-accent" href="#pr">
-                  PR
-                </a>
-              ) : null}
-              <a className="site-nav-link site-nav-optional transition hover:text-accent" href="/contact/">
-                お問い合わせ
-              </a>
-            </nav>
-            <button
-              ref={menuButtonRef}
-              type="button"
-              className="menu-toggle"
-              aria-label={menuOpen ? "メニューを閉じる" : "メニューを開く"}
-              aria-controls="site-menu"
-              aria-expanded={menuOpen}
-              onClick={() => setMenuOpen((open) => !open)}
-            >
-              <svg className="menu-toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
-                {menuOpen ? (
-                  <>
-                    <path d="M6.5 6.5 17.5 17.5" />
-                    <path d="M17.5 6.5 6.5 17.5" />
-                  </>
-                ) : (
-                  <>
-                    <path d="M5 7h14" />
-                    <path d="M5 12h14" />
-                    <path d="M5 17h14" />
-                  </>
-                )}
-              </svg>
-            </button>
-          </div>
+          <a className="lb-me" href="/my/">
+            マイページ
+          </a>
         </div>
       </header>
       {menuOpen ? (
@@ -1433,10 +1279,11 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
           onProfessionSelect={(routeId) => {
             setMenuOpen(false);
             if (!routeId) {
-              scrollToElement("profession-routes");
+              window.location.href = "/guide/";
               return;
             }
-            scrollToProfessionCard(routeId);
+            const route = professionRoutes.find((item) => item.id === routeId);
+            window.location.href = route ? route.href : "/guide/";
           }}
           onGenreSelect={(genreKey) => {
             setMenuOpen(false);
@@ -1453,21 +1300,6 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
         />
       ) : null}
 
-      <CategoryTabNav
-        genres={publishedGenres}
-        activeGenre={selectedGenre}
-        onSelect={jumpToGenre}
-      />
-
-      <RetentionBand
-        todayVideo={todayVideo}
-        continueVideo={continueVideo}
-        streak={streak.state}
-        ready={streak.ready}
-        watchedCount={watched.ready ? watched.items.length : 0}
-        watchlistCount={watchlist.ready ? watchlist.items.length : 0}
-      />
-
       <section id="top" className="lb-hero">
         <div className="lb-hero-panel">
           <span className="lb-hero-ring" aria-hidden="true" />
@@ -1483,9 +1315,6 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
             <br />
             <em>迷わせない。</em>
           </h1>
-          <p className="lb-hero-lead">
-            AI・IT・英語・動画編集など、キャリアに効く学習動画を“Manapickスコア（35点満点）”で厳選。初級→上級のロードマップで、何から見るかもう迷わない。会員登録は不要。通勤の15分など、スキマ時間から始められます。
-          </p>
           <p className="lb-hero-en" aria-hidden="true">
             Only the one worth your evening.
           </p>
@@ -1554,7 +1383,6 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
         </div>
       </section>
 
-      <PurposeNav onSelect={handlePurposeSelect} />
 
       {stripVideos.length > 0 ? (
         <section id="weekly-pick" className="lb-strip" aria-labelledby="weekly-pick-title">
@@ -1633,29 +1461,11 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
         </div>
       </section>
 
-      <WhyManapickSection />
-
       <LearningDataSection />
-
-      <LearningLoopSection />
-
-      <RecentUpdatesSection videos={recentUpdateVideos} />
 
       <AdSlot slot="1438236565" />
 
-      <SearchIntentShortcutSection />
-
-      <StudyPlanPromoSection />
-
-      <ProfessionRouteSection
-        routes={professionRoutes}
-        onRouteSelect={handleProfessionRoute}
-        onDestinationSelect={handleProfessionDestination}
-      />
-
-      {recent.ready && recentVideos.length > 0 ? <RecentStrip videos={recentVideos} /> : null}
-
-      <section id="search" className="border-b border-line bg-white/64">
+      <section id="search" className="border-b border-line">
         <div className="mx-auto max-w-7xl px-4 py-7 sm:px-6">
           <div id="genre-picker" className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -2131,8 +1941,8 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
 
       <MobileBottomNav
         watchlistOnly={watchlistOnly}
+        onHome={scrollToTop}
         onExplore={showGenrePicker}
-        onRoadmap={() => scrollToElement("roadmap")}
         onWatchlist={() => {
           setWatchlistOnly(true);
           resetPageParam();
@@ -2277,48 +2087,6 @@ function PopularKeywordChips({ compact = false, onSelect }: { compact?: boolean;
   );
 }
 
-function WhyManapickSection() {
-  return (
-    <section className="why-section" aria-labelledby="why-title">
-      <p className="section-eyebrow">なぜManapick？</p>
-      <h2 id="why-title" className="section-title">YouTubeで直接探すのと、何が違う？</h2>
-      <div className="why-grid">
-        <div className="why-card">
-          <span className="why-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" focusable="false">
-              <path d="m5 12 4 4L19 6" />
-              <circle cx="12" cy="12" r="10" />
-            </svg>
-          </span>
-          <p className="why-pain">おすすめ欄は「視聴時間」を最適化する</p>
-          <p className="why-answer">Manapickは「学べるか」だけを7軸35点で採点。広告収益と無関係に選びます。</p>
-        </div>
-        <div className="why-card">
-          <span className="why-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" focusable="false">
-              <path d="M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6z" />
-              <path d="m9 12 2 2 4-5" />
-            </svg>
-          </span>
-          <p className="why-pain">釣りサムネや「誰でも稼げる」系が混ざる</p>
-          <p className="why-answer">煽り・効果保証系の動画は、採点する前に不採用。YouTube上で公開されている動画を、学習用途に沿って確認して掲載します。</p>
-        </div>
-        <div className="why-card">
-          <span className="why-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" focusable="false">
-              <path d="M5 18c4-9 9 0 14-9" />
-              <path d="M16 7h4v4" />
-            </svg>
-          </span>
-          <p className="why-pain">「次に何を見るか」で迷子になる</p>
-          <p className="why-answer">初級→中級→上級のロードマップで順番まで設計。視聴済みチェックで進捗も見えます。</p>
-        </div>
-      </div>
-      <p className="why-tagline">Manapickは、動画を見るサイトではなく「次に見る一本」を最短で決めるためのサイトです。</p>
-    </section>
-  );
-}
-
 function LearningDataSection() {
   // 中央値・平均の定義は lib/site-stats.ts に集約（research ページと定義を一致させる）。
   const durations = videos.map((video) => video.minutes);
@@ -2338,10 +2106,6 @@ function LearningDataSection() {
           <span className="lb-code">MP-04 · EVIDENCE</span>
           <h2 id="learning-data-title">{videos.length}本を見て分かった、選びやすい1本の目安</h2>
         </div>
-        <p>掲載動画の実測値を集計し、都合の良い数字だけを切り取らず、対象と限界も公開しています。</p>
-        <Link className="lb-more" href="/research/youtube-learning-data/">
-          集計方法と全データを見る
-        </Link>
       </div>
       <div className="lb-evi">
         <div>
@@ -2377,354 +2141,6 @@ function LearningDataSection() {
           </div>
           <p className="lb-evi-d">7軸×5点で採点。採点方法はすべて公開しています。</p>
         </div>
-      </div>
-    </section>
-  );
-}
-
-function LearningLoopSection() {
-  const steps = [
-    {
-      number: "01",
-      site: "video",
-      eyebrow: "一本を選ぶ",
-      title: "Manapick",
-      description: `${siteStats.totalVideos}本の採点済み動画から、目的と時間に合う一本を決める`,
-      href: "/start/",
-      external: false
-    },
-    {
-      number: "02",
-      site: "ai",
-      eyebrow: "道具を選ぶ",
-      title: "manapick AI",
-      description: "動画で知ったAIの料金・無料枠・使い方を比較する",
-      href: MANAPICK_AI_URL,
-      external: true
-    },
-    {
-      number: "03",
-      site: "license",
-      eyebrow: "学びを証明する",
-      title: "manapick license",
-      description: "関連資格の要件・費用・申込方法を公式情報で確認する",
-      href: MANAPICK_LICENSE_URL,
-      external: true
-    },
-    {
-      number: "04",
-      site: "career",
-      eyebrow: "仕事につなぐ",
-      title: "manapick career",
-      description: "学んだ内容を生かせる仕事と、次に必要なスキルを知る",
-      href: MANAPICK_CAREER_URL,
-      external: true
-    }
-  ] as const;
-
-  return (
-    <section className="learning-loop-section" aria-labelledby="learning-loop-title">
-      <div className="learning-loop-heading">
-        <p className="section-eyebrow">MANAPICK NETWORK</p>
-        <h2 id="learning-loop-title" className="section-title">動画を起点に、学びを次の行動へ</h2>
-        <p>一本を選んで終わりにせず、道具・資格・仕事まで、必要な情報だけを順番に確認できます。</p>
-      </div>
-      <div className="learning-loop-grid">
-        {steps.map((step) => (
-          <a
-            key={step.site}
-            className={`learning-loop-card is-${step.site}`}
-            href={step.href}
-            target={step.external ? "_blank" : undefined}
-            rel={step.external ? "noopener noreferrer" : undefined}
-            onClick={() => sendGaEvent("learning_loop_click", { placement: "home", target: step.site })}
-          >
-            <span className="learning-loop-number">{step.number}</span>
-            <span className="learning-loop-eyebrow">{step.eyebrow}</span>
-            <strong>{step.title}{step.external ? <span aria-hidden="true"> ↗</span> : null}</strong>
-            <small>{step.description}</small>
-          </a>
-        ))}
-      </div>
-      <a className="learning-loop-overview" href="/network/">
-        5サイトの役割と使い分けを見る <span aria-hidden="true">→</span>
-      </a>
-    </section>
-  );
-}
-
-function RecentUpdatesSection({ videos }: { videos: Video[] }) {
-  if (videos.length === 0) return null;
-
-  return (
-    <section className="recent-updates-section" aria-labelledby="recent-updates-title">
-      <div className="recent-updates-head">
-        <div>
-          <p className="section-eyebrow">最近追加・更新</p>
-          <h2 id="recent-updates-title" className="section-title">新しく選びやすくなった動画</h2>
-        </div>
-        <a href="/new/">すべて見る</a>
-      </div>
-      <div className="recent-updates-grid">
-        {videos.map((video) => (
-          <a key={video.ytid} className="recent-update-card" href={videoDetailHref(video)}>
-            <span className="recent-update-thumb">
-              <Image
-                src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"}
-                alt={thumbnailAlt(video)}
-                width={480}
-                height={270}
-                sizes="(min-width: 1180px) 180px, (min-width: 760px) 28vw, 38vw"
-                loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            </span>
-            <span className="recent-update-body">
-              <span>{genreLabel(video.genre)} / {scoreText(video)} / {video.minutes}分</span>
-              <strong>{video.title}</strong>
-            </span>
-          </a>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function SearchIntentShortcutSection() {
-  return (
-    <section className="search-intent-section" aria-labelledby="search-intent-title">
-      <div className="search-intent-head">
-        <div>
-          <p className="section-eyebrow">よく検索されるテーマ</p>
-          <h2 id="search-intent-title" className="section-title">今ある悩みから、直接探す</h2>
-        </div>
-        <div className="search-intent-head-actions">
-          <p>検索で実際に見つけられているテーマを、対応する動画一覧・ロードマップへつなげました。</p>
-          <Link href="/learn/">学習テーマをすべて見る <span aria-hidden="true">→</span></Link>
-        </div>
-      </div>
-      <div className="search-intent-grid" aria-label="検索で多い学習テーマ">
-        {searchIntentLinks.map((item) => (
-          <a key={item.href + item.label} href={item.href}>
-            <span>{item.label}</span>
-            <small>{item.note}</small>
-          </a>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function StudyPlanPromoSection() {
-  return (
-    <section className="study-plan-promo" aria-labelledby="study-plan-promo-title">
-      <div>
-        <p className="section-eyebrow">見る順を、予定に変える</p>
-        <h2 id="study-plan-promo-title" className="section-title">今週の7日学習プランを作る</h2>
-        <p>ジャンル・1日の時間・週の学習日数を選ぶだけ。休む日も含め、採点済み動画を無理のない順番に並べます。</p>
-        <div className="lb-plan-week" aria-hidden="true">
-          {["月", "火", "水", "木", "金", "土", "日"].map((day, index) => (
-            <span key={day} className={index === 3 ? "lb-plan-cell is-rest" : "lb-plan-cell"}>
-              <small>{day}</small>
-              <b>{index + 1}</b>
-              <i>{index === 3 ? "休む" : "見る"}</i>
-            </span>
-          ))}
-        </div>
-      </div>
-      <a href="/study-plan/">
-        7日プランを作る <span aria-hidden="true">→</span>
-      </a>
-    </section>
-  );
-}
-
-function ProfessionRouteSection({
-  routes,
-  onRouteSelect,
-  onDestinationSelect
-}: {
-  routes: ProfessionRoute[];
-  onRouteSelect: (route: ProfessionRoute) => void;
-  onDestinationSelect: (destination: ProfessionDestination) => void;
-}) {
-  const trackRef = useRef<HTMLDivElement>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  function updateActiveCard() {
-    const track = trackRef.current;
-    if (!track) return;
-    const cards = Array.from(track.querySelectorAll<HTMLElement>(".profession-card"));
-    if (cards.length === 0) return;
-    const trackLeft = track.getBoundingClientRect().left;
-    const nearest = cards.reduce(
-      (best, card, index) => {
-        const distance = Math.abs(card.getBoundingClientRect().left - trackLeft);
-        return distance < best.distance ? { index, distance } : best;
-      },
-      { index: 0, distance: Number.POSITIVE_INFINITY }
-    );
-    setActiveIndex(nearest.index);
-  }
-
-  function scrollToCard(index: number) {
-    const card = trackRef.current?.querySelectorAll<HTMLElement>(".profession-card")[index];
-    if (!card) return;
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    card.scrollIntoView({ block: "nearest", inline: "start", behavior: reducedMotion ? "auto" : "smooth" });
-  }
-
-  return (
-    <section id="profession-routes" className="profession-section" aria-labelledby="profession-title">
-      <div className="profession-heading">
-        <p className="section-eyebrow">なりたい職業から選ぶ</p>
-        <h2 id="profession-title" className="section-title">職業ゴールから、見るべき順番を決める</h2>
-        <p>
-          「何を学ぶか」から迷う人のために、職業ゴールごとにジャンル・資格・ロードマップを束ねました。
-        </p>
-      </div>
-      <aside className="career-bridge" aria-label="公式職業情報サイト manapick career">
-        <div className="career-bridge-copy">
-          <p>manapick career</p>
-          <h3>仕事の中身を知ってから、学ぶ順番を決める</h3>
-          <span>仕事内容・必要スキル・注意点を公式情報から確認できます。職業の順位付けや適性の断定はしません。</span>
-        </div>
-        <div className="career-bridge-actions">
-          <a
-            href={`${MANAPICK_CAREER_URL}/route/`}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => sendGaEvent("career_crosslink_click", { placement: "profession_bridge", target: "career_route" })}
-          >
-            3問で入口案内 <span aria-hidden="true">↗</span>
-          </a>
-          <a
-            href={`${MANAPICK_CAREER_URL}/all/`}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => sendGaEvent("career_crosslink_click", { placement: "profession_bridge", target: "career_all" })}
-          >
-            公開中の職業を見る <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </aside>
-      <div ref={trackRef} className="profession-track" role="list" onScroll={updateActiveCard}>
-        {routes.map((route, index) => {
-          const firstVideo = professionTopVideo(route);
-          const routeVideoCount = professionVideos(route).length;
-          const stepCount = professionStepCount(route);
-          return (
-          <article
-            key={route.id}
-            id={"profession-" + route.id}
-            className="profession-card"
-            role="listitem"
-            onClick={(event) => {
-              if (event.target instanceof Element && event.target.closest("a, button")) return;
-              onRouteSelect(route);
-            }}
-          >
-            <div className="profession-card-band" aria-hidden="true">
-              <span className="profession-number">{String(index + 1).padStart(2, "0")}</span>
-              <ProfessionIcon icon={route.icon} />
-            </div>
-            <a
-              className="profession-main-link"
-              href={route.href}
-              onClick={(event) => {
-                event.preventDefault();
-                onRouteSelect(route);
-              }}
-            >
-              <span className="profession-title">{route.title}</span>
-              <span className="profession-skill">{route.skill}</span>
-            </a>
-            <div className="profession-meta-line">
-              <span>目安：{routeVideoCount}本</span>
-              <span>ロードマップ{stepCount || 3}STEP</span>
-            </div>
-            {firstVideo ? (
-              <a className="profession-feature-video" href={videoDetailHref(firstVideo)} aria-label={firstVideo.title + "の詳細ページを開く"}>
-                <span className="profession-feature-thumb">
-                  <Image
-                    src={"https://i.ytimg.com/vi/" + firstVideo.ytid + "/hqdefault.jpg"}
-                    alt={thumbnailAlt(firstVideo)}
-                    width={480}
-                    height={270}
-                    sizes="(min-width: 1180px) 360px, (min-width: 768px) 44vw, 78vw"
-                    loading="lazy"
-                  />
-                  <span className="profession-score-badge is-confirmed">
-                    {scoreText(firstVideo)}
-                  </span>
-                </span>
-                <span className="profession-feature-body">
-                  <span className="profession-feature-label">この職業の最初の1本</span>
-                  <span className="profession-feature-title">{firstVideo.title}</span>
-                </span>
-              </a>
-            ) : null}
-            <p className="profession-related">{route.relatedText}</p>
-            {route.note ? <p className="profession-note">{route.note}</p> : null}
-            <div className="profession-destination-row" aria-label={route.title + "の関連ジャンル"}>
-              {route.destinations.filter(destinationHasVideos).map((destination) => (
-                <a
-                  key={route.id + "-" + destination.label}
-                  href={destination.href}
-                  onClick={(event) => {
-                    event.preventDefault();
-                    onDestinationSelect(destination);
-                  }}
-                >
-                  {destination.label}
-                </a>
-              ))}
-            </div>
-            <div className="profession-career-links" aria-label={route.title + "に関連する職業情報"}>
-              <span>仕事を知る</span>
-              {route.careerLinks.map((careerLink) => (
-                <a
-                  key={careerLink.href}
-                  href={careerLink.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => sendGaEvent("career_crosslink_click", {
-                    placement: "profession_card",
-                    route_id: route.id,
-                    target: careerLink.href
-                  })}
-                >
-                  {careerLink.label} <span aria-hidden="true">↗</span>
-                </a>
-              ))}
-            </div>
-            <a
-              className="profession-cta"
-              href={route.href}
-              onClick={(event) => {
-                event.preventDefault();
-                onRouteSelect(route);
-              }}
-            >
-              この道で学ぶ →
-            </a>
-            <a className="profession-guide-link" href={route.guideHref}>
-              文章ロードマップを見る
-            </a>
-          </article>
-          );
-        })}
-      </div>
-      <div className="profession-dots" aria-label="職業カードの位置">
-        {routes.map((route, index) => (
-          <button
-            key={"profession-dot-" + route.id}
-            type="button"
-            className={index === activeIndex ? "is-active" : ""}
-            aria-label={route.title + "を表示"}
-            onClick={() => scrollToCard(index)}
-          />
-        ))}
       </div>
     </section>
   );
@@ -2827,70 +2243,37 @@ function ProfessionIcon({ icon }: { icon: string }) {
   );
 }
 
-function RecentStrip({ videos }: { videos: Video[] }) {
-  return (
-    <section className="recent-strip" aria-labelledby="recent-strip-title">
-      <div className="recent-strip-inner">
-        <div className="recent-strip-heading">
-          <p className="section-eyebrow">続きから</p>
-          <h2 id="recent-strip-title">最近見た動画</h2>
-        </div>
-        <div className="recent-strip-track" role="list">
-          {videos.map((video) => (
-            <a key={video.ytid} href={videoDetailHref(video)} className="recent-video-card" role="listitem">
-              <span className="recent-video-thumb">
-                <Image
-                  src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"}
-                  alt={thumbnailAlt(video)}
-                  width={240}
-                  height={135}
-                  sizes="(min-width: 760px) 220px, 58vw"
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-              </span>
-              <span className="recent-video-title">{video.title}</span>
-              <span className="recent-video-meta">{genreLabel(video.genre)} / {scoreText(video)} / {video.minutes}分</span>
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function MobileBottomNav({
   watchlistOnly,
+  onHome,
   onExplore,
-  onRoadmap,
   onWatchlist,
   onMenu
 }: {
   watchlistOnly: boolean;
+  onHome: () => void;
   onExplore: () => void;
-  onRoadmap: () => void;
   onWatchlist: () => void;
   onMenu: () => void;
 }) {
   return (
     <nav className="mobile-bottom-nav" aria-label="クイックナビ">
+      <button type="button" onClick={onHome}>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4 11l8-7 8 7v9H4z" />
+        </svg>
+        <span>ホーム</span>
+      </button>
       <button type="button" onClick={onExplore}>
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <circle cx="11" cy="11" r="7" />
-          <path d="m20 20-3.8-3.8" />
+          <circle cx="11" cy="11" r="6" />
+          <path d="M16 16l4 4" />
         </svg>
-        <span>探す</span>
-      </button>
-      <button type="button" onClick={onRoadmap}>
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M5 19c4-9 10 1 14-9" />
-          <path d="M15 9h4v4" />
-          <circle cx="5" cy="19" r="1.4" />
-        </svg>
-        <span>ロードマップ</span>
+        <span>さがす</span>
       </button>
       <button type="button" aria-pressed={watchlistOnly} onClick={onWatchlist}>
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M7 4h10v16l-5-3.5L7 20z" />
+          <path d="M6 4h12v16l-6-4-6 4z" />
         </svg>
         <span>あとで見る</span>
       </button>
@@ -3098,57 +2481,6 @@ function SiteMenuDrawer({
   );
 }
 
-function CategoryTabNav({
-  genres,
-  activeGenre,
-  onSelect
-}: {
-  genres: Genre[];
-  activeGenre: string;
-  onSelect: (genreKey: string) => void;
-}) {
-  const tabRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
-
-  useEffect(() => {
-    const activeTab = tabRefs.current[activeGenre];
-    if (!activeTab) return;
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    activeTab.scrollIntoView({
-      inline: "center",
-      block: "nearest",
-      behavior: reducedMotion ? "auto" : "smooth"
-    });
-  }, [activeGenre]);
-
-  return (
-    <nav className="category-tab-nav" aria-label="公開中ジャンル">
-      <div className="category-tab-track">
-        {genres.map((genre) => (
-          <a
-            key={genre.key}
-            ref={(node) => {
-              tabRefs.current[genre.key] = node;
-            }}
-            href={`/genre/${genre.key}/`}
-            className={activeGenre === genre.key ? "category-tab is-active" : "category-tab"}
-            onClick={(event) => {
-              event.preventDefault();
-              onSelect(genre.key);
-            }}
-            aria-current={activeGenre === genre.key ? "page" : undefined}
-          >
-            <GenreIcon genreKey={genre.key} className="category-tab-icon" />
-            <span className="category-tab-text">
-              <span>{genreLabel(genre.key)}</span>
-              <small>{genreEnglishLabel(genre.key)}</small>
-            </span>
-          </a>
-        ))}
-      </div>
-    </nav>
-  );
-}
-
 function HeroVideoCarousel({ slides }: { slides: HeroCarouselSlide[] }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -3334,36 +2666,6 @@ function HeroTrustStats({ totalVideos, confirmedCount }: { totalVideos: number; 
         </span>
       ))}
       <a className="hero-score-link" href="/about-score/">採点方法を見る</a>
-    </div>
-  );
-}
-
-function PurposeNav({ onSelect }: { onSelect: (genreKey: string) => void }) {
-  return (
-    <div className="purpose-nav" aria-label="目的から選ぶ">
-      <div>
-        {purposeLinks.map((item) => {
-          const href = item.genre === "roadmap" ? "#roadmap" : item.genre === "all" ? "#genre-picker" : "#search";
-          return (
-            <a
-              key={item.number}
-              href={href}
-              onClick={(event) => {
-                event.preventDefault();
-                onSelect(item.genre);
-              }}
-              className="purpose-block"
-            >
-              <span className="purpose-number">{item.number}</span>
-              <span className="purpose-title">{item.title}</span>
-              <span className="purpose-label">{item.label}</span>
-              <span className="purpose-arrow" aria-hidden="true">
-                →
-              </span>
-            </a>
-          );
-        })}
-      </div>
     </div>
   );
 }
@@ -3968,10 +3270,6 @@ function roadmapTitle(roadmap: Roadmap) {
 function RoadmapTimeline({ roadmap, watched, subMode = false }: { roadmap: Roadmap; watched: LocalListState; subMode?: boolean }) {
   const steps = subMode ? (roadmap.steps as DisplayRoadmapStep[]) : buildRoadmapSteps(roadmap);
   const watchedSet = new Set(watched.items);
-  const roadmapVideoIds = steps.flatMap((step) => step.videos);
-  const roadmapTotal = roadmapVideoIds.length;
-  const roadmapWatchedCount = watched.ready ? roadmapVideoIds.filter((ytid) => watchedSet.has(ytid)).length : 0;
-  const roadmapProgress = roadmapTotal > 0 ? Math.round((roadmapWatchedCount / roadmapTotal) * 100) : 0;
   // 「現在の駅」は、まだ見終わっていない最初の段階。未読込時は先頭の駅。
   const currentStepIndex = (() => {
     if (!watched.ready) return 0;
@@ -3985,17 +3283,6 @@ function RoadmapTimeline({ roadmap, watched, subMode = false }: { roadmap: Roadm
         <h3>{subMode ? roadmap.title : roadmapTitle(roadmap)}</h3>
         <span aria-hidden="true" className="roadmap-star">★</span>
       </div>
-      {watched.ready && roadmapTotal > 0 ? (
-        <div className="roadmap-progress" aria-label={"ロードマップ進捗 視聴済み " + roadmapWatchedCount + "/" + roadmapTotal}>
-          <div className="roadmap-progress-topline">
-            <span>視聴済み {roadmapWatchedCount}/{roadmapTotal}</span>
-            <strong>{roadmapProgress}%</strong>
-          </div>
-          <div className="roadmap-progress-track" aria-hidden="true">
-            <span style={{ width: roadmapProgress + "%" }} />
-          </div>
-        </div>
-      ) : null}
       <ol className="roadmap-timeline">
         {steps.map((step, index) => (
           <li
@@ -4016,11 +3303,6 @@ function RoadmapTimeline({ roadmap, watched, subMode = false }: { roadmap: Roadm
               </div>
               <h4 className="roadmap-stage-name">{step.stage ?? step.level}</h4>
               <p className="roadmap-step-goal">{step.goal}</p>
-              {watched.ready && step.videos.length > 0 ? (
-                <p className="roadmap-step-progress">
-                  視聴済み {step.videos.filter((ytid) => watchedSet.has(ytid)).length}/{step.videos.length}
-                </p>
-              ) : null}
               {step.isPlaceholder ? (
                 <p className="roadmap-placeholder-copy">
                   上級動画を選定中です。追加後にここへ公式サムネ付きで表示します。
