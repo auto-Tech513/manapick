@@ -2230,31 +2230,7 @@ ins.adsbygoogle:not(.ad-slot),
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  border-bottom: 1px solid color-mix(in srgb, var(--color-primary) 10%, transparent);
-  background: var(--color-bg);
-}
-
-.hero-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -20;
-  background:
-    radial-gradient(circle at 82% 18%, rgba(15, 169, 139, 0.12), transparent 18rem),
-    radial-gradient(circle at 52% 78%, rgba(245, 158, 11, 0.1), transparent 16rem),
-    linear-gradient(90deg, rgba(246, 248, 251, 0.99) 0%, rgba(246, 248, 251, 0.95) 42%, rgba(246, 248, 251, 0.78) 100%),
-    linear-gradient(135deg, #f8fafc 0%, #eef4ff 52%, #e7f8f4 100%);
-}
-
-.hero-section::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -15;
-  background:
-    radial-gradient(circle at 14% 28%, rgba(255, 255, 255, 0.72), transparent 24rem),
-    linear-gradient(135deg, rgba(247, 248, 250, 0.52) 0%, rgba(238, 244, 255, 0.34) 46%, rgba(231, 248, 244, 0.28) 100%);
-  pointer-events: none;
+  background: var(--color-primary);
 }
 
 .hero-container {
@@ -2273,9 +2249,9 @@ ins.adsbygoogle:not(.ad-slot),
 .hero-eyebrow {
   display: inline-flex;
   margin: 0 0 10px;
-  border-left: 4px solid var(--color-accent);
+  border-left: 4px solid var(--color-spark);
   padding-left: 10px;
-  color: var(--color-primary);
+  color: #fff;
   font-size: 1rem;
   font-weight: 800;
   line-height: 1.6;
@@ -2285,7 +2261,7 @@ ins.adsbygoogle:not(.ad-slot),
   max-width: 17ch;
   margin: 0;
   animation: hero-title-enter 640ms var(--ease-standard) both;
-  color: var(--color-ink);
+  color: #fff;
   font-feature-settings: "palt" 1;
   font-size: clamp(2rem, 4.6vw, 3.4rem);
   font-weight: 800;
@@ -2315,7 +2291,7 @@ ins.adsbygoogle:not(.ad-slot),
 .hero-title-highlight {
   position: relative;
   display: inline-block;
-  color: var(--color-primary);
+  color: #fff;
   font-weight: 900;
 }
 
@@ -2328,14 +2304,14 @@ ins.adsbygoogle:not(.ad-slot),
   z-index: -1;
   height: 0.24em;
   border-radius: 999px;
-  background: rgba(245, 158, 11, 0.3);
+  background: rgba(245, 158, 11, 0.55);
   transform: rotate(-1deg);
 }
 
 .hero-lead {
   max-width: 32ch;
   margin: 18px 0 0;
-  color: var(--color-muted);
+  color: #d7e0f2;
   font-size: 1rem;
   line-height: 1.85;
   line-break: strict;
@@ -2363,7 +2339,7 @@ ins.adsbygoogle:not(.ad-slot),
   align-items: center;
   gap: 7px;
   padding: 6px 14px 6px 0;
-  color: var(--color-primary-ink);
+  color: #fff;
   font-size: 0.78rem;
   font-weight: 900;
   line-height: 1.25;
@@ -2375,7 +2351,7 @@ ins.adsbygoogle:not(.ad-slot),
   height: 18px;
   flex: 0 0 auto;
   place-items: center;
-  color: var(--color-accent-ink);
+  color: var(--color-spark);
 }
 
 .hero-trust-icon svg {
@@ -2391,7 +2367,7 @@ ins.adsbygoogle:not(.ad-slot),
 .hero-benefit-line {
   max-width: 46rem;
   margin: 10px 0 0;
-  color: var(--color-primary-ink);
+  color: #fff;
   font-size: 1rem;
   font-weight: 900;
   line-height: 1.65;
@@ -2412,7 +2388,7 @@ ins.adsbygoogle:not(.ad-slot),
 
 .hero-proof {
   margin: 14px 0 0;
-  color: var(--color-muted);
+  color: #bfcdec;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.7;
@@ -2836,15 +2812,8 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .weekly-pick-section {
-  background: var(--color-primary);
-}
-
-.weekly-pick-heading .section-eyebrow {
-  color: var(--color-spark);
-}
-
-.weekly-pick-heading .section-title {
-  color: #fff;
+  border-bottom: 1px solid var(--color-line);
+  background: var(--color-bg-soft);
 }
 
 .weekly-pick-shell {
@@ -3837,7 +3806,7 @@ ins.adsbygoogle:not(.ad-slot),
   display: inline-flex;
   min-height: 34px;
   align-items: center;
-  color: var(--color-primary);
+  color: #fff;
   padding: 6px 10px 6px 0;
   font-size: 0.78rem;
   font-weight: 900;
@@ -3847,7 +3816,7 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .hero-score-link:hover {
-  color: var(--color-primary-ink);
+  color: var(--color-spark);
 }
 
 .why-section {
@@ -11949,7 +11918,7 @@ ins.adsbygoogle:not(.ad-slot),
     display: block;
     max-width: 28rem;
     margin: 12px 0 0;
-    color: var(--color-muted);
+    color: #d7e0f2;
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.7;
@@ -12193,8 +12162,8 @@ ins.adsbygoogle:not(.ad-slot),
     justify-content: center;
     margin-top: 12px;
     border-radius: var(--radius-md);
-    background: var(--color-primary);
-    color: #fff;
+    background: var(--color-spark);
+    color: var(--color-primary-ink);
     padding: 11px 15px;
     font-size: 1rem;
     font-weight: 900;

@@ -1454,8 +1454,6 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
       />
 
       <section id="top" className="hero-section">
-        <div className="pointer-events-none absolute -left-24 top-14 -z-10 h-72 w-[32rem] rotate-[-18deg] rounded-[38%_62%_58%_42%] bg-[#1F3A8A]/[0.07] blur-2xl" aria-hidden="true" />
-        <div className="pointer-events-none absolute -right-24 bottom-4 -z-10 h-80 w-[34rem] rotate-12 rounded-[62%_38%_42%_58%] bg-[#0FA98B]/[0.08] blur-2xl" aria-hidden="true" />
         <svg
           className="pointer-events-none absolute inset-x-0 top-10 -z-10 h-full w-full opacity-[0.07]"
           viewBox="0 0 1200 520"
