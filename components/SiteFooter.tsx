@@ -3,6 +3,7 @@ import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_URL, MANAPICK_LI
 import { siteStats } from "@/lib/site-stats";
 import SiteSearchForm from "@/components/SiteSearchForm";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import NetworkRoute from "@/components/NetworkRoute";
 
 type FooterLink = {
   label: string;
@@ -104,6 +105,7 @@ const networkLinks = [
 export default function SiteFooter() {
   return (
     <footer className="site-footer-main">
+      <NetworkRoute />
       <div className="site-footer-search">
         <SiteSearchForm id="site-footer-search" />
       </div>
@@ -140,7 +142,7 @@ export default function SiteFooter() {
         </nav>
       </div>
 
-      <div className="site-footer-newsletter">
+      <div className="site-footer-newsletter" id="footer-newsletter">
         <NewsletterSignup placement="footer" dark />
       </div>
 

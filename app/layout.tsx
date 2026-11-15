@@ -5,8 +5,10 @@ import PwaSetup from "@/components/PwaSetup";
 import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_ORIGIN, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
 import SiteFooter from "@/components/SiteFooter";
 import SiteBottomNav from "@/components/SiteBottomNav";
+import NetworkRail from "@/components/NetworkRail";
 import { absoluteUrl, SITE_URL } from "@/lib/manapick";
 import "./globals.css";
+import "./lookbook.css";
 
 const gaId = process.env.NEXT_PUBLIC_GA_ID?.trim() || "G-13BNL4Q41Z";
 const adsenseId = process.env.NEXT_PUBLIC_ADSENSE_ID?.trim() || "ca-pub-4108900975353940";
@@ -130,6 +132,12 @@ export default function RootLayout({
     <html lang="ja">
       <head>
         {adsenseId ? <meta name="google-adsense-account" content={adsenseId} /> : null}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@500;700;900&display=swap"
+          rel="stylesheet"
+        />
         <link rel="preconnect" href="https://i.ytimg.com" />
         <link rel="alternate" type="application/rss+xml" title="Manapick 学びニュース" href="/news-feed.xml" />
       </head>
@@ -157,6 +165,7 @@ export default function RootLayout({
         ) : null}
         {adsenseId ? <AdSenseScript client={adsenseId} /> : null}
         <PwaSetup />
+        <NetworkRail />
         {children}
         <SiteFooter />
         <SiteBottomNav />
