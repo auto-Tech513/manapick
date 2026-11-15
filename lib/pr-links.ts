@@ -20,8 +20,10 @@ export type GuidePrLink = {
 
 export function prItemsForSub(items: GuidePrLink[], sub: string) {
   const matched = items.filter((item) => item.subs?.includes(sub));
-  const rest = items.filter((item) => !item.subs?.includes(sub));
-  return { matched, ordered: [...matched, ...rest] };
+  // Items scoped to other topics must not leak onto this sub page
+  // (e.g. 宅建 textbooks on the G検定 page). Unscoped items are genre-wide.
+  const generic = items.filter((item) => !item.subs);
+  return { matched, ordered: [...matched, ...generic] };
 }
 
 export function prKindOf(item: GuidePrLink): PrLinkKind {

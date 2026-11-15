@@ -9529,14 +9529,17 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .guide-pr-card-pr {
+  display: inline-flex;
   width: fit-content;
+  min-height: 22px;
+  align-items: center;
   border-radius: 999px;
   background: color-mix(in srgb, var(--color-coral) 12%, white);
   color: var(--color-coral);
-  padding: 3px 8px;
+  padding: 2px 8px;
   font-size: 0.72rem;
   font-weight: 900;
-  line-height: 1.35;
+  line-height: 1;
 }
 
 .guide-pr-card strong {
@@ -11227,7 +11230,7 @@ ins.adsbygoogle:not(.ad-slot),
 
 .sub-topic-article {
   display: grid;
-  gap: 18px;
+  gap: 22px;
 }
 
 .sub-topic-hero,
@@ -11239,7 +11242,47 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .sub-topic-hero {
+  position: relative;
+  overflow: hidden;
   padding: clamp(22px, 4vw, 34px);
+}
+
+.sub-topic-hero::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 5px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  content: "";
+}
+
+.sub-topic-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.sub-topic-stat {
+  display: grid;
+  gap: 2px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--color-bg-soft) 55%, white);
+  padding: 10px 12px;
+}
+
+.sub-topic-stat strong {
+  color: var(--color-ink);
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.sub-topic-stat span {
+  color: var(--color-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.35;
 }
 
 .sub-topic-hero h1 {
@@ -11287,10 +11330,12 @@ ins.adsbygoogle:not(.ad-slot),
 
 .sub-topic-heading h2 {
   margin: 0;
+  border-left: 4px solid var(--color-accent);
   color: var(--color-ink);
   font-size: clamp(1.25rem, 2vw, 1.55rem);
   font-weight: 900;
   line-height: 1.35;
+  padding-left: 10px;
 }
 
 .sub-topic-roadmap {
@@ -11340,7 +11385,9 @@ ins.adsbygoogle:not(.ad-slot),
 
 .sub-topic-step-videos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  /* auto-fill keeps empty tracks, so a lone video stays one track wide
+     instead of stretching across the whole step. */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 12px;
 }
 
@@ -11398,13 +11445,45 @@ ins.adsbygoogle:not(.ad-slot),
 
 .sub-topic-list-card {
   display: grid;
-  gap: 5px;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
   border: 1px solid var(--color-line);
   border-radius: var(--radius-md);
   background: #fff;
   color: inherit;
   padding: 13px;
   text-decoration: none;
+  transition: transform 160ms var(--ease-standard), border-color 160ms var(--ease-standard), box-shadow 160ms var(--ease-standard);
+}
+
+.sub-topic-list-score {
+  display: grid;
+  min-width: 52px;
+  justify-items: center;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--color-primary) 9%, white);
+  color: var(--color-primary-ink);
+  padding: 7px 6px 6px;
+  line-height: 1;
+}
+
+.sub-topic-list-score strong {
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.sub-topic-list-score small {
+  color: var(--color-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.sub-topic-list-main {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
 }
 
 .sub-topic-video-card:hover,
@@ -11419,20 +11498,39 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .sub-topic-related-links {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(158px, 1fr));
   gap: 8px;
 }
 
 .sub-topic-related-links a {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   border: 1px solid var(--color-line);
-  border-radius: 999px;
+  border-radius: 12px;
   background: #fff;
   color: var(--color-primary);
-  padding: 8px 11px;
+  padding: 8px 12px;
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 900;
+  transition: border-color 160ms var(--ease-standard), box-shadow 160ms var(--ease-standard);
+}
+
+.sub-topic-related-links a:hover,
+.sub-topic-related-links a:focus-visible {
+  border-color: color-mix(in srgb, var(--color-accent) 36%, var(--color-line));
+  box-shadow: var(--shadow-line);
+}
+
+.sub-topic-related-count {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 @media (min-width: 640px) {

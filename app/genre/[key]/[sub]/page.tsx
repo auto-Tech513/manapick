@@ -188,12 +188,29 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
           <p className="section-eyebrow"><span className="eyebrow-chunk">{genreName}</span> / <span className="eyebrow-chunk">無料YouTubeロードマップ</span></p>
           <h1>{title}</h1>
           <p>{description}</p>
-          <div className="sub-topic-trust-row" aria-label="ページの信頼情報">
-            <span>{list.length}本を掲載</span>
-            <span>合計{formatTotal(stats.totalMinutes)}</span>
-            <span>15分以内 {stats.shortCount}本</span>
-            {stats.latestPublished ? <span>最新 {stats.latestPublished.replace(/-/g, "/")}公開</span> : null}
-            <span>7軸35点で採点</span>
+          <div className="sub-topic-stats" aria-label="ページの信頼情報">
+            <div className="sub-topic-stat">
+              <strong>{list.length}本</strong>
+              <span>掲載動画</span>
+            </div>
+            <div className="sub-topic-stat">
+              <strong>{formatTotal(stats.totalMinutes)}</strong>
+              <span>合計時間</span>
+            </div>
+            <div className="sub-topic-stat">
+              <strong>{stats.shortCount}本</strong>
+              <span>15分以内で見られる</span>
+            </div>
+            <div className="sub-topic-stat">
+              <strong>35点満点</strong>
+              <span>7軸で採点</span>
+            </div>
+            {stats.latestPublished ? (
+              <div className="sub-topic-stat">
+                <strong>{stats.latestPublished.replace(/-/g, "/")}</strong>
+                <span>最新の動画</span>
+              </div>
+            ) : null}
           </div>
         </header>
 
@@ -231,9 +248,15 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
           <div className="sub-topic-list">
             {list.map((video) => (
               <Link key={video.ytid} href={videoPath(video.ytid)} className="sub-topic-list-card" data-minutes={video.minutes} data-ytid={video.ytid}>
-                <span className="sub-topic-list-title">{video.title}</span>
-                <span className="sub-topic-list-meta">{scoreText(video)}・{video.minutes}分</span>
-                <span className="sub-topic-list-review">{video.review[0] ?? "学習の入口として確認しやすい動画です。"}</span>
+                <span className="sub-topic-list-score" aria-label={scoreText(video)}>
+                  <strong>{video.score ?? "—"}</strong>
+                  <small>/35</small>
+                </span>
+                <span className="sub-topic-list-main">
+                  <span className="sub-topic-list-title">{video.title}</span>
+                  <span className="sub-topic-list-meta">{video.level}・{video.minutes}分・{video.channel}</span>
+                  <span className="sub-topic-list-review">{video.review[0] ?? "学習の入口として確認しやすい動画です。"}</span>
+                </span>
               </Link>
             ))}
           </div>
@@ -266,11 +289,20 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
           <div className="sub-topic-related-links">
             {relatedPages.map((item) => (
               <Link key={item.key + item.sub} href={eligibleSubPagePath(item)}>
-                {item.sub}（{item.count}本）
+                <span>{item.sub}</span>
+                <span className="sub-topic-related-count">{item.count}本</span>
               </Link>
             ))}
-            <Link href={`/genre/${key}/`}>{genreName}の動画一覧へ</Link>
-            {guide ? <Link href={guidePath(guide.slug)}>{genreName}ロードマップを読む</Link> : null}
+            <Link href={`/genre/${key}/`}>
+              <span>{genreName}の動画一覧へ</span>
+              <span className="sub-topic-related-count" aria-hidden="true">→</span>
+            </Link>
+            {guide ? (
+              <Link href={guidePath(guide.slug)}>
+                <span>{genreName}ロードマップを読む</span>
+                <span className="sub-topic-related-count" aria-hidden="true">→</span>
+              </Link>
+            ) : null}
           </div>
         </section>
       </article>
