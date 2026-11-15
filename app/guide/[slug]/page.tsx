@@ -209,7 +209,6 @@ export default async function GuidePage({ params }: GuidePageProps) {
 
       <article className="guide-article">
         <header className="guide-hero">
-          <GuideGenreIcon genre={guide.genre} className="guide-hero-icon" />
           <p className="section-eyebrow">{genreDisplayName(guide.genre)}ロードマップ</p>
           <h1>{guideTitle(guide.title)}</h1>
           <p>{strongText(guide.intro)}</p>

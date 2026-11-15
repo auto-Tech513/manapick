@@ -1010,9 +1010,7 @@ body {
   margin: 0;
   min-width: 320px;
   overflow-x: clip;
-  background:
-    linear-gradient(180deg, rgba(238, 244, 255, 0.78), rgba(246, 248, 251, 0.94) 42rem),
-    var(--color-bg);
+  background: var(--color-bg);
   color: var(--color-ink);
   font-family: "Noto Sans JP", "Noto Sans CJK JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Yu Gothic UI", "Meiryo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.7;
@@ -2275,14 +2273,12 @@ ins.adsbygoogle:not(.ad-slot),
 .hero-eyebrow {
   display: inline-flex;
   margin: 0 0 10px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.82);
-  padding: 4px 12px;
+  border-left: 4px solid var(--color-accent);
+  padding-left: 10px;
   color: var(--color-primary);
   font-size: 1rem;
   font-weight: 800;
   line-height: 1.6;
-  box-shadow: var(--shadow-line);
 }
 
 .hero-title {
@@ -2319,10 +2315,7 @@ ins.adsbygoogle:not(.ad-slot),
 .hero-title-highlight {
   position: relative;
   display: inline-block;
-  background: linear-gradient(100deg, var(--color-primary) 0%, var(--color-accent) 92%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--color-primary);
   font-weight: 900;
 }
 
@@ -2335,7 +2328,7 @@ ins.adsbygoogle:not(.ad-slot),
   z-index: -1;
   height: 0.24em;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(245, 158, 11, 0.32), rgba(245, 158, 11, 0.1));
+  background: rgba(245, 158, 11, 0.3);
   transform: rotate(-1deg);
 }
 
@@ -2369,15 +2362,11 @@ ins.adsbygoogle:not(.ad-slot),
   min-height: 34px;
   align-items: center;
   gap: 7px;
-  border: 1px solid rgba(31, 58, 138, 0.1);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.86);
-  padding: 6px 10px;
+  padding: 6px 14px 6px 0;
   color: var(--color-primary-ink);
   font-size: 0.78rem;
   font-weight: 900;
   line-height: 1.25;
-  box-shadow: var(--shadow-line);
 }
 
 .hero-trust-icon {
@@ -2386,8 +2375,6 @@ ins.adsbygoogle:not(.ad-slot),
   height: 18px;
   flex: 0 0 auto;
   place-items: center;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--color-accent) 12%, white);
   color: var(--color-accent-ink);
 }
 
@@ -3845,20 +3832,16 @@ ins.adsbygoogle:not(.ad-slot),
   display: inline-flex;
   min-height: 34px;
   align-items: center;
-  border: 1px solid rgba(31, 58, 138, 0.16);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
   color: var(--color-primary);
-  padding: 6px 10px;
+  padding: 6px 10px 6px 0;
   font-size: 0.78rem;
   font-weight: 900;
   line-height: 1.25;
-  text-decoration: none;
-  box-shadow: var(--shadow-line);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .hero-score-link:hover {
-  background: var(--color-bg-soft);
   color: var(--color-primary-ink);
 }
 
@@ -7750,11 +7733,18 @@ ins.adsbygoogle:not(.ad-slot),
 }
 
 .knowledge-hero {
+  position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 86% 12%, rgba(245, 158, 11, 0.14), transparent 10rem),
-    linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 7%, white), color-mix(in srgb, var(--color-leaf) 8%, white));
+  background: #fff;
   padding: clamp(22px, 5vw, 42px);
+}
+
+.knowledge-hero::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 5px;
+  background: var(--color-primary);
+  content: "";
 }
 
 .knowledge-hero h1,
@@ -8440,11 +8430,9 @@ ins.adsbygoogle:not(.ad-slot),
   display: inline-flex;
   min-height: 40px;
   align-items: center;
-  border: 1px solid color-mix(in srgb, var(--color-primary) 18%, var(--color-line));
-  border-radius: 999px;
-  background: #fff;
+  border-bottom: 2px solid var(--color-line);
   color: var(--color-primary-ink);
-  padding: 8px 14px;
+  padding: 8px 10px;
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 900;
@@ -8862,39 +8850,22 @@ ins.adsbygoogle:not(.ad-slot),
 
 .guide-hero {
   position: relative;
-  isolation: isolate;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 88% 12%, rgba(245, 158, 11, 0.16), transparent 10rem),
-    linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 7%, white), color-mix(in srgb, var(--color-leaf) 8%, white));
+  background: #fff;
   padding: clamp(22px, 5vw, 42px);
-  text-align: center;
 }
 
 .guide-hero::before {
   position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    linear-gradient(120deg, rgba(255, 255, 255, 0.8), transparent 56%),
-    radial-gradient(circle at 12% 86%, rgba(31, 58, 138, 0.08), transparent 12rem);
+  inset: 0 0 auto;
+  height: 5px;
+  background: var(--color-primary);
   content: "";
-}
-
-.guide-hero-icon {
-  position: absolute;
-  top: clamp(14px, 3vw, 28px);
-  right: clamp(14px, 3vw, 28px);
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  box-shadow: var(--shadow-line);
 }
 
 .guide-hero h1 {
   max-width: min(100%, 920px);
   margin: 6px 0 0;
-  margin-inline: auto;
   color: var(--color-ink);
   font-size: clamp(1.9rem, 5vw, 3.25rem);
   font-weight: 900;
@@ -8920,16 +8891,17 @@ ins.adsbygoogle:not(.ad-slot),
 
 .guide-hero p:not(.section-eyebrow) {
   max-width: 720px;
-  margin: 16px auto 0;
+  margin: 16px 0 0;
   font-size: 1rem;
 }
 
 .guide-trust-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
+  gap: 6px 20px;
   margin-top: 18px;
+  border-top: 1px solid var(--color-line);
+  padding-top: 14px;
 }
 
 .guide-trust-row span,
@@ -8937,11 +8909,7 @@ ins.adsbygoogle:not(.ad-slot),
   display: inline-flex;
   min-height: 34px;
   align-items: center;
-  border: 1px solid var(--color-line);
-  border-radius: 999px;
-  background: var(--color-bg);
   color: var(--color-primary-ink);
-  padding: 6px 10px;
   font-size: 0.78rem;
   font-weight: 900;
   line-height: 1.25;
@@ -11215,9 +11183,7 @@ ins.adsbygoogle:not(.ad-slot),
 
 .sub-topic-page {
   min-height: 100vh;
-  background:
-    radial-gradient(circle at 86% 8%, rgba(15, 169, 139, 0.1), transparent 22rem),
-    linear-gradient(180deg, #f8fbff 0%, #f6f8fb 36%, #fff 100%);
+  background: var(--color-bg);
   color: var(--color-ink);
   padding: 24px 16px 56px;
 }
@@ -11251,7 +11217,7 @@ ins.adsbygoogle:not(.ad-slot),
   position: absolute;
   inset: 0 0 auto;
   height: 5px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  background: var(--color-primary);
   content: "";
 }
 
@@ -11980,7 +11946,7 @@ ins.adsbygoogle:not(.ad-slot),
   .hero-trust-pill {
     min-height: 30px;
     gap: 5px;
-    padding: 5px 8px;
+    padding: 5px 10px 5px 0;
     font-size: 0.72rem;
   }
 
@@ -12790,11 +12756,8 @@ ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; height: 0
   display: inline-flex;
   min-height: 34px;
   align-items: center;
-  border: 1px solid #d9e3ed;
-  border-radius: 999px;
-  background: #f7fafc;
   color: #445064;
-  padding: 6px 11px;
+  padding: 6px 14px 6px 0;
   font-size: 0.78rem;
   font-weight: 800;
 }
