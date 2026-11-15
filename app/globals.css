@@ -9921,16 +9921,6 @@ ins.adsbygoogle:not(.ad-slot),
 
 .ranking-video-card .rank-badge {
   z-index: 2;
-  min-width: 46px;
-  min-height: 46px;
-  border-radius: 14px;
-  font-size: 1.35rem;
-}
-
-.ranking-video-card .rank-badge.rank-1 {
-  min-width: 54px;
-  min-height: 54px;
-  font-size: 1.7rem;
 }
 
 .rank-4 {
@@ -12835,15 +12825,11 @@ ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; height: 0
 }
 
 /* The newest article leads its month group as a wide feature card,
-   so the index reads as feature + grid instead of a uniform card wall. */
+   so the index reads as feature + grid instead of a uniform card wall.
+   The card is shown by its width alone; the title keeps the shared scale. */
 @media (min-width: 1024px) {
   .news-index-grid > .news-index-card:first-child {
     grid-column: span 2;
-  }
-
-  .news-index-grid > .news-index-card:first-child h3 {
-    font-size: 1.45rem;
-    line-height: 1.45;
   }
 }
 
