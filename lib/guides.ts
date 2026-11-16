@@ -8,6 +8,9 @@ import pythonGuide from "@/content/guides/python";
 import certificationGuide from "@/content/guides/certification";
 import bookkeepingGuide from "@/content/guides/bookkeeping";
 import moneyBasicsGuide from "@/content/guides/money-basics";
+import takkenGuide from "@/content/guides/takken";
+import fp3Guide from "@/content/guides/fp3";
+import claudeGuide from "@/content/guides/claude";
 import { videos, type Video } from "@/lib/manapick";
 
 export type Guide = {
@@ -62,6 +65,9 @@ export type GuideStep = Guide["steps"][number];
 export type GuideStepVideo = GuideStep["videos"][number];
 
 export const guides: readonly Guide[] = [
+  takkenGuide,
+  fp3Guide,
+  claudeGuide,
   generativeAiGuide,
   pythonGuide,
   videoEditingGuide,
