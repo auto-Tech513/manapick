@@ -69,7 +69,7 @@ body {
 
 .nw-stn small {
   display: block;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 600;
   margin-top: 1px;
   color: var(--nw-ink-2);
@@ -238,7 +238,7 @@ a.nw-rail-station {
 
   .nw-rail-station.is-current .nw-rail-name {
     display: inline;
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .nw-rail-station.is-current b {
@@ -275,7 +275,7 @@ a.nw-rail-station {
 
   .nw-rail-station.is-current .nw-rail-name {
     display: inline;
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .nw-rail-station.is-current b {
@@ -1254,7 +1254,7 @@ a.nw-rail-station {
   margin-top: 22px;
   padding-top: 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
-  font-size: 11px;
+  font-size: 12px;
   opacity: 0.95;
   position: relative;
   z-index: 1;
@@ -1362,7 +1362,7 @@ a.nw-rail-station {
 }
 
 .lb-tile-score small {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--nw-ink-2);
 }
 
@@ -1561,7 +1561,7 @@ a.nw-rail-station {
   display: flex;
   gap: 8px;
   align-items: center;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--nw-ink-2);
   margin-bottom: 4px;
 }
@@ -1589,7 +1589,7 @@ a.nw-rail-station {
   margin-top: auto;
   padding-top: 10px;
   border-top: 1px dashed var(--nw-rule);
-  font-size: 11px;
+  font-size: 12px;
   color: var(--nw-ink-2);
 }
 
@@ -1601,7 +1601,7 @@ a.nw-rail-station {
 }
 
 .lb-film-foot b small {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--nw-ink-2);
 }
 
@@ -1669,7 +1669,7 @@ a.nw-rail-station {
 
 .lb-idx-count span {
   display: block;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--nw-ink-2);
 }
 
@@ -2523,7 +2523,7 @@ a.nw-rail-station {
     color: rgba(255, 255, 255, 0.75);
     background: none;
     min-height: 48px;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .mobile-bottom-nav button[aria-pressed="true"] {
@@ -2772,7 +2772,7 @@ a.nw-rail-station {
 }
 
 .lb-plan-cell small {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--nw-ink-2);
 }
 
@@ -2786,7 +2786,7 @@ a.nw-rail-station {
 
 .lb-plan-cell i {
   font-style: normal;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   color: var(--nw-ink);
 }
@@ -3390,7 +3390,7 @@ a.nw-rail-station {
 
 .lb-frow {
   display: grid;
-  grid-template-columns: 1.1fr 1fr 1.15fr 1.4fr auto;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, 1.15fr) minmax(0, 1.4fr) auto;
   gap: 14px;
   align-items: start;
 }
@@ -4026,4 +4026,15 @@ a.nw-rail-station {
     padding: 0 8px;
     font-size: 13px;
   }
+}
+
+/* ===== 本番監査（2026-11-16）の修正 ===== */
+/* 1024px でキーワード欄がはみ出す：並びの各欄が中身の幅より縮めるように */
+.lb-frow > * { min-width: 0; }
+/* 和文 12px 未満をなくす（レールの「現在地」） */
+.nw-rail-station b { font-size: 12px; }
+/* SP：レールの駅は見た目を変えずに押せる範囲を 44px 以上に */
+@media (max-width: 640px) {
+  .nw-rail-station { position: relative; }
+  .nw-rail-station::after { content: ""; position: absolute; inset: -6px -10px; }
 }

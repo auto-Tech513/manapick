@@ -50,7 +50,7 @@ export default function BrandLogo({ compact = false, className = "" }: BrandLogo
           Manapick
         </span>
         {!compact ? (
-          <span className="mt-1 block text-[0.72rem] font-bold leading-tight text-ink/62 sm:text-xs">
+          <span className="mt-1 block text-xs font-bold leading-tight text-ink/62 sm:text-xs">
             学び直しを、最短ルートに。
           </span>
         ) : null}
