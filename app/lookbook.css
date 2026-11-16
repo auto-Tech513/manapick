@@ -4038,3 +4038,60 @@ a.nw-rail-station {
   .nw-rail-station { position: relative; }
   .nw-rail-station::after { content: ""; position: absolute; inset: -6px -10px; }
 }
+
+/* =====================================================================
+   本家 下層ページを駅のデザイン（共通テンプレート T1〜T5・トップのルック）にそろえる
+   - ロゴ：トップと同じ文字のワードマーク（components/BrandLogo）
+   - 地：紙色、題名・見出し：明朝 700（文字の大きさは変えない）
+   - ヒーロー：白い箱と上の青い帯をやめ、紙の上に置いて下に 2px 黒線
+   - セクション：白地＋1px 黒枠＋角丸 18px、影をやめる。見出しに番号（Barlow）
+   - ヘッダーのリンク：黒い丸い札（44px）
+   ===================================================================== */
+.brand-wordmark { display: inline-flex; align-items: baseline; gap: 10px; min-width: 0; }
+.brand-wordmark .lb-wordmark { white-space: nowrap; }
+.brand-wordmark-sub { font-size: 12px; font-weight: 700; color: var(--nw-ink-2); white-space: nowrap; }
+
+.knowledge-page, .score-page, .guide-page, .guide-index-page, .study-plan-page, .network-page,
+.sub-topic-page, .genre-hub, .static-page, .mp-shop-page, .video-page, main.bg-paper {
+  background: var(--nw-paper);
+  color: var(--nw-ink);
+}
+.knowledge-header, .score-page-header, .guide-page-header { min-height: 72px; }
+.knowledge-header-link {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px;
+  background: var(--nw-ink); color: #fff !important; font-size: 13px; font-weight: 700; text-decoration: none !important; white-space: nowrap;
+}
+.knowledge-header-link:hover { background: var(--nw-mp); }
+.knowledge-breadcrumb { color: var(--nw-ink-2); }
+
+.knowledge-hero {
+  background: transparent; border: 0; border-bottom: 2px solid var(--nw-ink); border-radius: 0; box-shadow: none;
+  padding: 26px 0 24px; overflow: visible;
+}
+.knowledge-hero::before { content: none; }
+.knowledge-hero h1, .knowledge-section h2,
+.score-page h1, .guide-page h1, .guide-index-page h1, .study-plan-page h1, .network-page h1,
+.sub-topic-page h1, .genre-hub h1, .static-page h1, .mp-shop-page h1, main.bg-paper h1 {
+  font-family: var(--font-mincho); font-weight: 700; letter-spacing: .02em;
+}
+.score-page h2, .guide-page h2, .guide-index-page h2, .study-plan-page h2, .network-page h2,
+.sub-topic-page h2, .genre-hub h2, .static-page h2, .mp-shop-page h2, main.bg-paper h2 {
+  font-family: var(--font-mincho); font-weight: 700; letter-spacing: .02em;
+}
+.knowledge-page { counter-reset: mpsec; }
+.knowledge-section, .knowledge-link-grid {
+  background: #fff; border: 1px solid var(--nw-ink); border-radius: 18px; box-shadow: none;
+}
+.knowledge-section > h2 { display: flex; align-items: baseline; gap: 12px; }
+.knowledge-section > h2::before {
+  counter-increment: mpsec; content: counter(mpsec, decimal-leading-zero); flex: none;
+  font-family: var(--font-num); font-weight: 600; font-size: 15px; letter-spacing: .06em; color: var(--nw-mp);
+}
+main .knowledge-hero { border-radius: 0 !important; }
+/* 動画名が1行で切れて読めない（…で見切れ）→ 2行まで表示して、それ以上は…で畳む */
+.youtube-popular-list strong, .genre-ranking-card li strong {
+  white-space: normal; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;
+}
+/* 見出しは flex にしない（括弧つきの語や長い語が折り返せずはみ出すのを防ぐ）。番号は行頭の inline-block */
+.knowledge-section > h2 { display: block; }
+.knowledge-section > h2::before { display: inline-block; margin-right: 12px; }
