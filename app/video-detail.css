@@ -1,0 +1,1074 @@
+/* 動画詳細（D-MP）— デザイン採用（2026-11-16）
+   トークンとフォント変数は lookbook.css の --nw-* / --font-* を共用する。
+   既存コンポーネント（VideoEmbed / VideoActions / LearningNote / NetworkContextBand /
+   FoldSection）の見た目は .video-page 配下の上書きで合わせ、機能と計測は現行のまま。 */
+
+.video-page {
+  background: var(--nw-paper);
+}
+
+.video-page .video-page-header,
+.video-page .video-breadcrumb {
+  width: auto;
+  margin: 0;
+  padding-inline: 64px;
+}
+
+.video-page .video-breadcrumb {
+  padding-bottom: 14px;
+  font-size: 12.5px;
+}
+
+/* ---------- ヘッダー（左=動画／右360px=スコアカード） ---------- */
+.vd-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 28px;
+  padding: 6px 64px 0;
+}
+
+.vd-head .video-detail-media {
+  width: 100%;
+}
+
+.video-page .video-embed-facade .video-detail-thumb,
+.video-page .video-detail-thumb {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.video-page .video-embed-frame {
+  border-radius: 10px;
+}
+
+.video-page .video-embed-play {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--nw-mp);
+  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.25);
+}
+
+.video-page .video-embed-play svg {
+  width: 34px;
+  height: 34px;
+}
+
+.video-page .video-embed-facade:hover .video-embed-play,
+.video-page .video-embed-facade:focus-visible .video-embed-play {
+  background: #fff;
+  transform: scale(1.06);
+}
+
+.video-page .video-embed-hint {
+  right: auto;
+  left: 14px;
+  bottom: 14px;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--nw-ink);
+  font-weight: 700;
+}
+
+.vd-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.vd-genre-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--nw-mp);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.vd-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 6px 13px;
+  border: 1px solid var(--nw-ink-2);
+  border-radius: 999px;
+  font-size: 12.5px;
+  color: var(--nw-ink);
+  background: transparent;
+}
+
+.vd-title {
+  font-family: var(--font-mincho);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.4;
+  margin: 16px 0 10px;
+  color: var(--nw-ink);
+}
+
+.vd-meta {
+  font-size: 13.5px;
+  color: var(--nw-ink-2);
+  margin: 0;
+}
+
+.vd-meta > span + span::before {
+  content: "・";
+  margin: 0 8px;
+}
+
+.vd-meta b {
+  font-family: var(--font-num);
+  font-weight: 600;
+  color: var(--nw-ink);
+}
+
+.vd-meta .vd-meta-sub::before {
+  content: none;
+}
+
+/* ---------- スコアカード ---------- */
+.vd-score {
+  background: var(--nw-mp);
+  color: #fff;
+  border-radius: 18px;
+  padding: 22px 22px 18px;
+  align-self: start;
+}
+
+.vd-score-k {
+  font-family: var(--font-num);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+.vd-score-total {
+  font-family: var(--font-num);
+  font-weight: 600;
+  font-size: 76px;
+  line-height: 1.05;
+  margin: 6px 0 2px;
+}
+
+.vd-score-total small {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 4px;
+}
+
+.vd-score-by {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 12.5px;
+  margin: 0;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.vd-pos {
+  margin-top: 14px;
+}
+
+.vd-pos-k {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 4px;
+}
+
+.vd-plot {
+  position: relative;
+  height: 46px;
+  margin-top: 2px;
+}
+
+.vd-plot-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 26px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.vd-plot-median {
+  position: absolute;
+  top: 26px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  outline: 2px dashed rgba(255, 255, 255, 0.85);
+  outline-offset: 0;
+  transform: translate(-50%, -50%);
+}
+
+.vd-plot-dot {
+  position: absolute;
+  top: 26px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+}
+
+.vd-plot-label {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.vd-pos-note {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 2px 0 0;
+  line-height: 1.6;
+}
+
+.vd-pos-link {
+  margin: 8px 0 0;
+}
+
+.vd-pos-link a {
+  color: #fff;
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* スコアカード内の操作ボタン（VideoActions） */
+.vd-score .video-action-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.vd-score .video-action-row > * {
+  width: 100%;
+}
+
+.vd-score .video-action-toggle,
+.vd-score .like-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.vd-score .video-action-row > *:first-child .video-action-toggle,
+.vd-score .video-action-toggle:first-child {
+  background: #fff;
+  border-color: #fff;
+  color: var(--nw-mp);
+  min-height: 48px;
+}
+
+.vd-score .video-action-toggle.is-active {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.vd-score .video-action-row > *:first-child .video-action-toggle.is-active {
+  background: #dbe4fb;
+}
+
+.vd-score .video-actions-next {
+  color: #fff;
+  font-size: 13px;
+  margin: 12px 0 0;
+  line-height: 1.7;
+}
+
+.vd-score .video-actions-next a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.vd-score-note {
+  padding: 10px 64px 0;
+  margin: 0;
+  font-size: 12px;
+  color: var(--nw-ink-2);
+  text-align: right;
+}
+
+/* ---------- 本文（左220px=目次／右=本文） ---------- */
+.vd-body {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 56px;
+  padding: 40px 64px 0;
+}
+
+.vd-toc {
+  position: sticky;
+  top: 20px;
+  align-self: start;
+  font-size: 13px;
+}
+
+.vd-toc-k {
+  font-family: var(--font-num);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--nw-ink-2);
+  margin: 0 0 10px;
+}
+
+.vd-toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vd-toc li {
+  border-top: 1px solid var(--nw-rule);
+}
+
+.vd-toc a {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  padding: 11px 2px;
+  color: var(--nw-ink);
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.vd-toc a span {
+  font-family: var(--font-num);
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--nw-mp);
+}
+
+.vd-toc a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.vd-sec {
+  margin-top: 56px;
+}
+
+.vd-content > .vd-sec:first-child,
+.vd-content > .vd-anchor:first-child .vd-sec {
+  margin-top: 0;
+}
+
+.vd-sec-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  border-top: 1.5px solid var(--nw-ink);
+  padding-top: 22px;
+  margin-bottom: 20px;
+}
+
+.vd-sec-no {
+  font-family: var(--font-num);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--nw-mp);
+}
+
+.vd-sec-head h2 {
+  font-family: var(--font-mincho);
+  font-weight: 700;
+  font-size: 26px;
+  margin: 0;
+  color: var(--nw-ink);
+}
+
+.vd-sec-more {
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--nw-ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  white-space: nowrap;
+}
+
+/* 要約 */
+.vd-review {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vd-review li {
+  display: flex;
+  gap: 18px;
+  padding: 10px 0;
+}
+
+.vd-review-no {
+  font-family: var(--font-num);
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.3;
+  color: var(--nw-mp);
+  min-width: 30px;
+}
+
+.vd-review p {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.85;
+  padding-top: 4px;
+}
+
+.vd-watch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  padding: 11px 22px;
+  min-height: 44px;
+  border: 1.5px solid var(--nw-ink);
+  border-radius: 999px;
+  color: var(--nw-ink);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  background: #fff;
+}
+
+/* 学びメモ（LearningNote） */
+.video-page .learning-note-panel {
+  width: 100%;
+  border: 1.5px solid var(--nw-ink);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: none;
+  padding: 22px;
+}
+
+.video-page .learning-note-panel form {
+  display: grid;
+  gap: 16px;
+}
+
+.video-page .learning-note-panel label {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--nw-ink);
+}
+
+.video-page .learning-note-panel label > span {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  font-size: 11.5px;
+  font-weight: 400;
+  color: var(--nw-ink-2);
+  font-family: var(--font-num);
+}
+
+.video-page .learning-note-panel textarea {
+  width: 100%;
+  border: 1px solid var(--nw-rule);
+  border-radius: 10px;
+  background: var(--nw-paper-2);
+  padding: 12px 14px;
+  font-size: 16px;
+  line-height: 1.7;
+  resize: vertical;
+}
+
+.video-page .learning-note-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.vd-memo-days {
+  display: flex;
+  gap: 8px;
+}
+
+.vd-memo-day {
+  min-height: 44px;
+  padding: 9px 18px;
+  border: 1.5px solid var(--nw-ink);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--nw-ink);
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.vd-memo-day.is-on {
+  background: var(--nw-ink);
+  color: #fff;
+}
+
+.vd-memo-save {
+  min-height: 48px;
+  padding: 12px 26px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--nw-mp);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.video-page .learning-note-actions .is-delete {
+  background: none;
+  border: 0;
+  color: var(--nw-ink-2);
+  font-size: 13px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.video-page .learning-note-panel > form > p {
+  font-size: 12px;
+  color: var(--nw-ink-2);
+  margin: 0;
+  line-height: 1.7;
+}
+
+.video-page .learning-note-mypage-link {
+  font-size: 13px;
+}
+
+.video-page .learning-note-mypage-link a {
+  color: var(--nw-mp);
+  font-weight: 700;
+}
+
+/* 折りたたみ節（FoldSection）の番号つき見出し */
+.vd-fold .fold-section-summary {
+  border-top: 1.5px solid var(--nw-ink);
+  padding: 22px 0 18px;
+}
+
+.vd-fold .fold-section-eyebrow {
+  font-family: var(--font-num);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--nw-mp);
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0 0 6px;
+  text-transform: none;
+}
+
+.vd-fold-title {
+  font-family: var(--font-mincho);
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--nw-ink);
+  margin: 0;
+}
+
+.vd-fold {
+  margin-top: 56px;
+}
+
+/* どう使うか（4マス） */
+.video-page .video-editorial-body {
+  font-size: 15.5px;
+  line-height: 1.9;
+  margin: 0 0 18px;
+}
+
+.video-page .video-learning-loop {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1.5px solid var(--nw-ink);
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.video-page .video-learning-loop li {
+  padding: 18px;
+  display: grid;
+  gap: 4px;
+  align-content: start;
+}
+
+.video-page .video-learning-loop li + li {
+  border-left: 1px dashed var(--nw-rule);
+}
+
+.video-page .video-learning-loop li > span {
+  font-family: var(--font-num);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--nw-mp);
+}
+
+.video-page .video-learning-loop li > strong {
+  font-family: var(--font-mincho);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.video-page .video-learning-loop li > small {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--nw-ink-2);
+}
+
+/* 視聴前ガイド */
+.vd-guide section + section {
+  margin-top: 20px;
+}
+
+.vd-guide h3 {
+  font-family: var(--font-mincho);
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--nw-ink);
+}
+
+.vd-guide p,
+.vd-guide li {
+  font-size: 15.5px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+.vd-guide ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* 7軸 */
+.video-page .video-axis-note-disclosure {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--nw-ink-2);
+  background: var(--nw-paper-2);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin: 0 0 16px;
+}
+
+.video-page .video-axis-commentary p {
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 0 0 10px;
+}
+
+.vd-axes-list {
+  border-top: 1.5px solid var(--nw-ink);
+  margin-top: 16px;
+}
+
+.vd-axis {
+  border-bottom: 1px solid var(--nw-rule);
+  padding: 14px 0;
+}
+
+.vd-axis-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 18px;
+}
+
+.vd-axis-name {
+  font-size: 15px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.vd-axis-tag {
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 400;
+  background: #edeae0;
+  color: var(--nw-ink-2);
+  border-radius: 4px;
+  padding: 2px 7px;
+}
+
+.vd-dots {
+  display: inline-flex;
+  gap: 5px;
+}
+
+.vd-dots i {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 1.5px solid var(--nw-mp);
+  display: block;
+}
+
+.vd-dots i.is-on {
+  background: var(--nw-mp);
+}
+
+.vd-axis-score {
+  font-family: var(--font-num);
+  font-weight: 600;
+  font-size: 22px;
+  min-width: 52px;
+  text-align: right;
+}
+
+.vd-axis-score small {
+  font-size: 12px;
+  color: var(--nw-ink-2);
+}
+
+.vd-axis-note {
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: var(--nw-ink-2);
+  margin: 8px 0 0;
+}
+
+.vd-method {
+  font-size: 13px;
+  color: var(--nw-ink-2);
+  margin: 14px 0 0;
+}
+
+.vd-method a {
+  color: var(--nw-mp);
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 8px;
+}
+
+/* ---------- 全幅エリア（乗り換え・次に見る） ---------- */
+.vd-wide {
+  padding: 0 64px;
+}
+
+.video-page .network-context-band {
+  width: auto;
+  max-width: none;
+  margin: 56px 0 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.video-page .network-context-heading .section-eyebrow {
+  font-family: var(--font-num);
+  letter-spacing: 0.18em;
+  color: var(--nw-mp);
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: 11px;
+}
+
+.video-page .network-context-heading h2 {
+  font-family: var(--font-mincho);
+  font-weight: 700;
+  font-size: 26px;
+  margin: 6px 0 8px;
+}
+
+.video-page .network-context-heading p {
+  font-size: 13.5px;
+  color: var(--nw-ink-2);
+}
+
+.video-page .network-context-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.video-page .network-context-link {
+  background: #fff;
+  border: 1.5px solid var(--nw-ink);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.video-page .network-context-items a {
+  min-height: 32px;
+}
+
+.video-page .network-context-more {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px dashed var(--nw-rule);
+  font-weight: 700;
+  font-size: 13.5px;
+}
+
+.video-page .network-context-overview {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--nw-mp);
+}
+
+.video-page .vd-sister {
+  width: auto;
+  margin: 48px 0 0;
+}
+
+/* 次に見るカード */
+.vd-next-card {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 0;
+  background: #fff;
+  border: 1.5px solid var(--nw-ink);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--nw-ink);
+}
+
+.vd-card-thumb {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--nw-paper-2);
+}
+
+.vd-card-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vd-next-body {
+  display: grid;
+  gap: 8px;
+  align-content: center;
+  padding: 20px 22px;
+}
+
+.vd-next-body strong {
+  font-size: 19px;
+  line-height: 1.5;
+  font-weight: 800;
+}
+
+.vd-card-genre {
+  font-family: var(--font-num);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--nw-mp);
+  text-transform: uppercase;
+}
+
+.vd-card-meta {
+  font-size: 13px;
+  color: var(--nw-ink-2);
+  font-family: var(--font-num);
+}
+
+.vd-next-reason {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--nw-ink-2);
+}
+
+.vd-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.vd-rel-card {
+  display: block;
+  background: #fff;
+  border: 1.5px solid var(--nw-ink);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--nw-ink);
+}
+
+.vd-rel-body {
+  display: grid;
+  gap: 6px;
+  padding: 14px 16px 16px;
+}
+
+.vd-rel-title {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+/* ---------- レスポンシブ ---------- */
+@media (max-width: 1023px) {
+  .vd-head {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .vd-body {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .vd-toc {
+    position: static;
+    border: 1.5px solid var(--nw-ink);
+    border-radius: 12px;
+    background: #fff;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+  }
+
+  .video-page .network-context-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vd-related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .video-page .video-learning-loop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .video-page .video-learning-loop li:nth-child(3) {
+    border-left: 0;
+    border-top: 1px dashed var(--nw-rule);
+  }
+
+  .video-page .video-learning-loop li:nth-child(4) {
+    border-top: 1px dashed var(--nw-rule);
+  }
+}
+
+@media (max-width: 640px) {
+  .video-page .video-page-header,
+  .video-page .video-breadcrumb {
+    padding-inline: 20px;
+  }
+
+  .vd-head {
+    padding: 0 20px;
+    gap: 20px;
+  }
+
+  .vd-head .video-detail-media {
+    margin-inline: -20px;
+    width: calc(100% + 40px);
+  }
+
+  .video-page .video-embed-facade .video-detail-thumb,
+  .video-page .video-detail-thumb,
+  .video-page .video-embed-frame {
+    border-radius: 0;
+  }
+
+  .vd-title {
+    font-size: 23px;
+  }
+
+  .vd-score {
+    padding: 20px 18px 16px;
+  }
+
+  .vd-score-total {
+    font-size: 64px;
+  }
+
+  .vd-score-note {
+    padding: 10px 20px 0;
+    text-align: left;
+  }
+
+  .vd-body {
+    padding: 32px 20px 0;
+  }
+
+  .vd-wide {
+    padding: 0 20px;
+  }
+
+  .vd-sec-head h2,
+  .vd-fold-title {
+    font-size: 22px;
+  }
+
+  .vd-next-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .vd-related-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .video-page .network-context-links {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .vd-axis-row {
+    gap: 10px;
+  }
+
+  .vd-dots i {
+    width: 11px;
+    height: 11px;
+  }
+}

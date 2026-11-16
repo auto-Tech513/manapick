@@ -124,7 +124,9 @@ export default function LikeButton({ ytid, initialCount = 0, className = "" }: L
       disabled={liked || pending}
       onClick={handleClick}
     >
-      <span aria-hidden="true">👍</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M7 11v8H4v-8zM7 11l4-7c1.5 0 2.5 1 2 3l-.7 3H18c1.2 0 2 1 1.8 2.2l-1.2 5.6c-.2 1-1 1.7-2 1.7H7" />
+      </svg>
       <span>役に立った</span>
       <span className="like-count">（{count}）</span>
     </button>
