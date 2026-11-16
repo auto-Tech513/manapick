@@ -22,9 +22,20 @@ export function wrapJapanese(value, limit) {
   const lines = [];
   let current = "";
   for (const token of tokens) {
+    // 行頭禁則：閉じ括弧・句読点は前の行に残す（わずかなはみ出しは許容）
+    if (current && visualLength(current + token) > limit && /^[、。，．」』】）〉》!?！？]/.test(token)) {
+      current += token;
+      continue;
+    }
     if (current && visualLength(current + token) > limit) {
+      // 行末禁則：開き括弧で行を終えない
+      let carry = "";
+      while (current && /[「『【（〈《]$/.test(current)) {
+        carry = current.slice(-1) + carry;
+        current = current.slice(0, -1);
+      }
       lines.push(current.trim());
-      current = token;
+      current = carry + token;
     } else {
       current += token;
     }
