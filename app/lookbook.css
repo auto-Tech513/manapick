@@ -4101,3 +4101,7 @@ main .knowledge-hero { border-radius: 0 !important; }
 @media (min-width: 641px) and (max-width: 900px) { .brand-wordmark-sub { white-space: normal; } }
 main .knowledge-header .knowledge-header-link { padding: 0 18px; width: auto; max-width: none; min-width: 0; }
 main .knowledge-header .knowledge-header-link { margin-block: 0; }
+/* iPhone の Safari（WebKit）で入力欄が既定の幅より縮まず、フッターの検索欄が画面から 20〜60px はみ出していた → 縮められるように */
+input, select, textarea { min-width: 0; max-width: 100%; }
+.site-search-row { min-width: 0; max-width: 100%; }
+.site-search-row input { width: 100%; box-sizing: border-box; }
