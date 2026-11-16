@@ -70,3 +70,12 @@ export const XFER_ORDER: Record<string, XferSite[]> = {
 };
 
 export const XFER_ORDER_DEFAULT: XferSite[] = ["ai", "license", "career", "company"];
+
+// カード右端のCTA文言（デザインモックの go ラベル。politics のみモック未収録のため同型で作成）。
+export const XFER_CTA: Record<XferSite, string> = {
+  ai: "ツールを比べる",
+  license: "資格ページへ",
+  career: "職業ページへ",
+  company: "企業を読む",
+  politics: "しくみを読む"
+};

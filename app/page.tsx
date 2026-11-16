@@ -208,23 +208,39 @@ export default function Home() {
       />
       <ManapickApp referenceTime={buildReferenceTime} />
       <LatestNewsBand />
-      <section className="home-faq-section" aria-labelledby="home-faq-title">
-        <div className="home-faq-heading">
-          <p className="section-eyebrow">初めての方へ</p>
-          <h2 id="home-faq-title" className="section-title">Manapickのよくある質問</h2>
-          <p>無料動画の選び方と、学び始める順番を短くまとめました。</p>
-        </div>
-        <div className="guide-faq-list">
-          {homeFaq.map((item) => (
-            <details key={item.name}>
-              <summary>{item.name}</summary>
-              <p>{item.acceptedAnswer.text}</p>
-            </details>
-          ))}
-        </div>
-        <div className="home-faq-links">
-          <a href="/faq/">FAQをすべて見る</a>
-          <a href="/start/">3つの質問で今日の1本を選ぶ</a>
+      <section className="lb-sec" aria-labelledby="home-faq-title">
+        <div className="lb-faq">
+          <div className="lb-faq-side">
+            <div className="lb-eh-stack">
+              <span className="lb-code-jp">初めての方へ</span>
+              <h2 id="home-faq-title">
+                <span>Manapickのよくある質問</span>
+              </h2>
+              <p>無料動画の選び方と、学び始める順番を短くまとめました。</p>
+            </div>
+            <div className="lb-faq-acts">
+              <a className="lb-btn-line" href="/faq/">
+                FAQをすべて見る
+                <i aria-hidden="true">→</i>
+              </a>
+              <a className="lb-btn-ink" href="/start/">
+                3つの質問で今日の1本を選ぶ
+                <i aria-hidden="true">→</i>
+              </a>
+            </div>
+          </div>
+          <div className="lb-qa">
+            {homeFaq.map((item, index) => (
+              <details key={item.name} open={index === 0}>
+                <summary>
+                  <em>Q.</em>
+                  {item.name}
+                  <i aria-hidden="true" />
+                </summary>
+                <p className="lb-ans">{item.acceptedAnswer.text}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
     </>

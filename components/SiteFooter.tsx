@@ -1,5 +1,5 @@
 import { publishedGenreKeys } from "@/lib/manapick";
-import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
+import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_URL, MANAPICK_LICENSE_URL, MANAPICK_POLITICS_URL } from "@/lib/brand-links";
 import { siteStats } from "@/lib/site-stats";
 import SiteSearchForm from "@/components/SiteSearchForm";
 import NewsletterSignup from "@/components/NewsletterSignup";
@@ -22,7 +22,7 @@ const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
       { label: "YouTube学習動画おすすめ", href: "/youtube-learning/" },
       { label: `${siteStats.totalVideos}本の学習動画データ`, href: "/research/youtube-learning-data/" },
       { label: "検索で多い学習テーマ", href: "/learn/" },
-      { label: "なりたい職業から選ぶ", href: "/#profession-routes" },
+      { label: "なりたい職業から選ぶ", href: "/guide/" },
       { label: `${genreCount}ジャンル一覧`, href: "/#genre-picker" },
       { label: "ランキング", href: "/ranking/" },
       { label: "新着動画", href: "/new/" },
@@ -98,6 +98,13 @@ const networkLinks = [
     description: "企業を読む",
     href: MANAPICK_COMPANY_URL,
     className: "is-company",
+    external: true
+  },
+  {
+    label: "manapick politics",
+    description: "政治と法律を易しく",
+    href: MANAPICK_POLITICS_URL,
+    className: "is-politics",
     external: true
   }
 ];

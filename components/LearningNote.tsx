@@ -11,6 +11,12 @@ function formatReviewDate(iso: string) {
   return `${date.getMonth() + 1}月${date.getDate()}日`;
 }
 
+const REVIEW_DAY_OPTIONS = [
+  { days: 1, label: "明日" },
+  { days: 3, label: "3日後" },
+  { days: 7, label: "7日後" }
+] as const;
+
 export default function LearningNote({ ytid }: { ytid: string }) {
   const { notes, ready, upsert, remove } = useLearningNotes();
   const stored = notes.find((note) => note.ytid === ytid);
@@ -46,14 +52,7 @@ export default function LearningNote({ ytid }: { ytid: string }) {
   }
 
   return (
-    <details className="learning-note-panel">
-      <summary>
-        <span aria-hidden="true">✎</span>
-        <span>
-          <strong>{saved ? "学びメモを見直す" : "1分で学びメモを残す"}</strong>
-          <small>見た直後に1行残すと、次の復習で迷いません</small>
-        </span>
-      </summary>
+    <div className="learning-note-panel">
       <form onSubmit={submit}>
         <label>
           今日わかったこと <span>{learned.length}/160</span>
@@ -83,21 +82,25 @@ export default function LearningNote({ ytid }: { ytid: string }) {
           />
         </label>
         <div className="learning-note-actions">
-          <label>
-            見返す日
-            <select
-              value={reviewDays}
-              onChange={(event) => {
-                setReviewDays(Number(event.target.value));
-                setSaved(false);
-              }}
-            >
-              <option value={1}>明日</option>
-              <option value={3}>3日後</option>
-              <option value={7}>7日後</option>
-            </select>
-          </label>
-          <button type="submit">{saved ? "更新する" : "この端末に保存"}</button>
+          <div className="vd-memo-days" role="group" aria-label="見返す日">
+            {REVIEW_DAY_OPTIONS.map((option) => (
+              <button
+                key={option.days}
+                type="button"
+                className={reviewDays === option.days ? "vd-memo-day is-on" : "vd-memo-day"}
+                aria-pressed={reviewDays === option.days}
+                onClick={() => {
+                  setReviewDays(option.days);
+                  setSaved(false);
+                }}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
+          <button type="submit" className="vd-memo-save">
+            {saved ? "更新する" : "この端末に保存"}
+          </button>
           {stored ? (
             <button
               type="button"
@@ -122,6 +125,6 @@ export default function LearningNote({ ytid }: { ytid: string }) {
           </p>
         ) : null}
       </form>
-    </details>
+    </div>
   );
 }

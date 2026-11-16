@@ -17,36 +17,47 @@ export default function LatestNewsBand() {
   const checkedAt = latest[0]?.lastChecked;
 
   return (
-    <section className="latest-news-band" aria-labelledby="latest-news-title">
-      <header className="latest-news-heading">
-        <div>
-          <p className="section-eyebrow">Learning News</p>
-          <h2 id="latest-news-title" className="section-title">学びに関係する更新を、使い方まで</h2>
+    <section className="lb-sec" aria-labelledby="latest-news-title">
+      <div className="lb-news-hd">
+        <div className="lb-eh-stack">
+          <span className="lb-news-code">Learning News</span>
+          <h2 id="latest-news-title" className="lb-news-title">
+            <span>学びに関係する更新を、</span>
+            <span>使い方まで</span>
+          </h2>
           <p>公式発表の事実と、学習や仕事で確認する順番を分けて整理しています。</p>
         </div>
-        <div className="latest-news-status">
-          {checkedAt ? <span>{formatDate(checkedAt)} 確認</span> : null}
-          <Link href="/news/">学びニュース一覧</Link>
+        <div className="lb-news-meta">
+          {checkedAt ? <span className="lb-news-chk">{formatDate(checkedAt)} 確認</span> : null}
+          <Link className="lb-more" href="/news/">
+            学びニュース一覧 →
+          </Link>
         </div>
-      </header>
+      </div>
 
-      <div className="latest-news-grid">
+      <div className="lb-nlist">
         {latest.map((item) => (
-          <Link key={item.id} className={`latest-news-card is-${item.category}`} href={newsPath(item.id)}>
-            <span className="latest-news-meta">
-              <span>{item.categoryLabel}</span>
-              <time dateTime={item.publishedAt}>{formatDate(item.publishedAt)}</time>
+          <Link key={item.id} className="lb-ni" href={newsPath(item.id)}>
+            <span className="lb-ni-top">
+              <span className="lb-ni-g">{item.categoryLabel}</span>
+              <time className="lb-ni-dt" dateTime={item.publishedAt}>
+                {formatDate(item.publishedAt)}
+              </time>
             </span>
-            <strong>{item.headline}</strong>
-            <span className="latest-news-summary">{item.description}</span>
-            <span className="latest-news-read">約{newsReadingMinutes(item)}分で読む <span aria-hidden="true">→</span></span>
+            <h3>{item.headline}</h3>
+            <p>{item.description}</p>
+            <span className="lb-ni-rd">約{newsReadingMinutes(item)}分で読む →</span>
           </Link>
         ))}
       </div>
 
-      <nav className="search-demand-links" aria-label="検索の多い学習テーマ">
-        <strong>検索の多いテーマ</strong>
-        {intentLinks.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
+      <nav className="lb-themes" aria-label="検索の多い学習テーマ">
+        <span>検索の多いテーマ</span>
+        {intentLinks.map((item) => (
+          <Link key={item.href} className="lb-chip" href={item.href}>
+            {item.label}
+          </Link>
+        ))}
       </nav>
     </section>
   );

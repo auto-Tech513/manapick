@@ -1982,6 +1982,12 @@ ins.adsbygoogle:not(.ad-slot),
   color: #fbcfe8;
 }
 
+.site-footer-network a.is-politics {
+  border-color: rgba(167, 139, 250, 0.5);
+  background: rgba(109, 40, 217, 0.25);
+  color: #ddd6fe;
+}
+
 .site-footer-lower > p {
   color: rgba(255, 255, 255, 0.48);
   font-size: 0.72rem;
