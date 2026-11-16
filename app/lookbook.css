@@ -597,6 +597,29 @@ a.nw-rail-station {
   flex: 1;
 }
 
+/* ヘッダーのピル内では入力欄自身の箱（globals の padding／min-height／角丸と
+   input:focus-visible の輪郭線）を完全に消し、枠はピルの1.5pxだけにする。
+   globals の input:focus-visible（0-1-1）より強い指定にすること */
+.lb-hd .top-search-input,
+.lb-hd .top-search-input:focus,
+.lb-hd .top-search-input:focus-visible {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  min-height: 0;
+  /* globals の全要素 :focus-visible 輪郭線は !important 指定のため、こちらも合わせる */
+  outline: none !important;
+  outline-offset: 0 !important;
+}
+
+/* フォーカスの手がかりはピル側に移す（入力欄の箱には付けない） */
+.lb-hd .top-search:focus-within {
+  outline: 2px solid rgba(31, 58, 138, 0.45);
+  outline-offset: 1px;
+}
+
 .lb-hd .top-search-input::placeholder {
   font-size: 13.5px;
   color: var(--nw-ink-2);
