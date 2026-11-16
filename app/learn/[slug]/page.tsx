@@ -252,6 +252,7 @@ function buildStructuredData(intent: LearningIntent, pageUrl: string, selectedVi
         author: { "@id": absoluteUrl("/#organization") },
         publisher: { "@id": absoluteUrl("/#organization") },
         about: intent.query,
+        image: [absoluteUrl("/brand/ogp-manapick.png")],
         ...(intent.lastReviewed ? { dateModified: intent.lastReviewed } : {}),
         ...(intent.officialSources?.length
           ? { citation: intent.officialSources.map((source) => source.href) }
