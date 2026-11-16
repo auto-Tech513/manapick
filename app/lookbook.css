@@ -90,6 +90,7 @@ html {
 
 body:has(.lb-main) {
   background: var(--nw-paper);
+  overflow-x: clip;
 }
 
 .lb-main {
@@ -601,6 +602,16 @@ a.nw-rail-station {
   color: var(--nw-ink-2);
 }
 
+/* 候補パネルの見出し行: 閉じるボタンが縦に割れないようにする */
+.live-search-status > span {
+  min-width: 0;
+}
+
+.live-search-status > button {
+  flex: none;
+  white-space: nowrap;
+}
+
 /* ヘッダーはモック .hd の構成そのもの（ワードマーク／ナビ／検索ピル／マイページ） */
 .lb-hd-inner {
   display: flex;
@@ -715,8 +726,13 @@ a.nw-rail-station {
     padding: 0;
   }
 
+  /* 検索にフォーカス中はワードマークを畳み、ピルが画面幅を超えないようにする */
+  .lb-hd-inner:focus-within .lb-wordmark {
+    display: none;
+  }
+
   .lb-hd .top-search:focus-within {
-    width: min(260px, 62vw);
+    width: min(300px, calc(100vw - 32px));
     padding: 0 8px 0 12px;
     justify-content: flex-start;
   }
