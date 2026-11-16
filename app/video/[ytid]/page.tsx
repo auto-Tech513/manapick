@@ -43,7 +43,7 @@ import {
 import { nextWatchVideo } from "@/lib/rankings";
 import { genrePosition } from "@/lib/site-stats";
 import AdSlot from "@/components/AdSlot";
-import "../video-detail.css";
+import "../../video-detail.css";
 
 type VideoPageProps = {
   params: Promise<{ ytid: string }>;
