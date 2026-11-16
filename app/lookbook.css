@@ -4105,3 +4105,6 @@ main .knowledge-header .knowledge-header-link { margin-block: 0; }
 input, select, textarea { min-width: 0; max-width: 100%; }
 .site-search-row { min-width: 0; max-width: 100%; }
 .site-search-row input { width: 100%; box-sizing: border-box; }
+/* フッターのロゴ：旧ロゴ（✓＋Manapick）をトップと同じワードマークに */
+.site-footer-brand .site-footer-wordmark { color: #fff; font-size: 26px; margin: 0 0 4px; }
+.site-footer-brand { grid-template-columns: minmax(0, 1fr); } .site-footer-brand small { grid-column: 1 / -1; }

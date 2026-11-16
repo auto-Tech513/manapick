@@ -118,9 +118,8 @@ export default function SiteFooter() {
       </div>
       <div className="site-footer-inner">
         <div className="site-footer-brand">
-          <div className="site-footer-brand-mark" aria-hidden="true">✓</div>
           <div>
-            <p>Manapick</p>
+            <p className="lb-wordmark site-footer-wordmark">manapick</p>
             <span>学び直しを、最短ルートに。</span>
           </div>
           <small>
