@@ -40,21 +40,11 @@ export function BrandMark({ className = "" }: { className?: string }) {
 }
 
 export default function BrandLogo({ compact = false, className = "" }: BrandLogoProps) {
+  // 駅のデザイン（トップの .lb-wordmark）にそろえた文字のロゴ。下層ページのヘッダーと共通
   return (
-    <span className={`inline-flex items-center gap-2 ${className}`}>
-      <span className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white shadow-line">
-        <BrandMark className="h-8 w-8" />
-      </span>
-      <span className="leading-none">
-        <span className="block text-[1.35rem] font-black tracking-normal text-[#1F3A8A] sm:text-2xl">
-          Manapick
-        </span>
-        {!compact ? (
-          <span className="mt-1 block text-[0.72rem] font-bold leading-tight text-ink/62 sm:text-xs">
-            学び直しを、最短ルートに。
-          </span>
-        ) : null}
-      </span>
+    <span className={`brand-wordmark ${className}`}>
+      <span className="lb-wordmark">manapick</span>
+      {!compact ? <span className="brand-wordmark-sub">学び直しを、最短ルートに。</span> : null}
     </span>
   );
 }
