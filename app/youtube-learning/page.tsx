@@ -133,6 +133,7 @@ export default function YoutubeLearningPage() {
         description: pageDescription,
         inLanguage: "ja",
         mainEntityOfPage: pageUrl,
+        image: [absoluteUrl("/brand/ogp-manapick.png")],
         author: { "@id": absoluteUrl("/#organization") },
         publisher: { "@id": absoluteUrl("/#organization") }
       },

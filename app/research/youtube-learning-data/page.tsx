@@ -80,6 +80,7 @@ export default function YoutubeLearningDataPage() {
         dateModified: REVIEWED_AT,
         inLanguage: "ja",
         mainEntityOfPage: pageUrl,
+        image: [absoluteUrl("/brand/ogp-manapick.png")],
         author: { "@id": absoluteUrl("/#organization") },
         publisher: { "@id": absoluteUrl("/#organization") }
       },
