@@ -1513,7 +1513,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
                 className={selectedGenre === genre.key ? "lb-gp is-on" : "lb-gp"}
                 aria-pressed={selectedGenre === genre.key}
               >
-                <b>{genreName(genre.key)}</b>
+                <b>{genreName(genre.key).replace(/・/g, "・\u200b")}</b>
                 <span className="lb-gp-ct">
                   {genreVideoCounts[genre.key] ?? 0}
                   <small> 本</small>

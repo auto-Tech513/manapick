@@ -4108,3 +4108,38 @@ input, select, textarea { min-width: 0; max-width: 100%; }
 /* フッターのロゴ：旧ロゴ（✓＋Manapick）をトップと同じワードマークに */
 .site-footer-brand .site-footer-wordmark { color: #fff; font-size: 26px; margin: 0 0 4px; }
 .site-footer-brand { grid-template-columns: minmax(0, 1fr); } .site-footer-brand small { grid-column: 1 / -1; }
+
+/* iPhone 表示の是正（2026-11-17） */
+/* ジャンル選択：「動画編集・ク／リエイティブ」のような語の途中の改行を避け、「・」の後で折り返す */
+.lb-gp b {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 767px) {
+  /* ヒーローの縦書き見出し：「を、」が区切り線と数字の行まで伸びていたので、線より上に収める */
+  .lb-hero-title {
+    font-size: 33px;
+    letter-spacing: 0.03em;
+  }
+
+  /* モザイクの小タイル：サムネイルの文字と見出しが重なって読めないため、下側の陰影を濃くし、見出しを2行に収める */
+  .lb-tile-shade {
+    background: linear-gradient(180deg, rgba(10, 16, 40, 0.12) 0%, rgba(10, 16, 40, 0.5) 40%, rgba(10, 16, 40, 0.92) 74%);
+  }
+
+  .lb-tile:not(.is-big) .lb-tile-title {
+    left: 12px;
+    right: 12px;
+    font-size: 13px;
+    -webkit-line-clamp: 2;
+  }
+}
+
+/* 文節単位の改行（auto-phrase）に未対応の Safari では、keep-all と anywhere の組み合わせで
+   「20／26年版」のように数字や語の途中で折り返すため、通常の日本語改行に戻す */
+@supports not (word-break: auto-phrase) {
+  .guide-hero h1 {
+    word-break: normal;
+  }
+}
