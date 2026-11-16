@@ -51485,5 +51485,188 @@
   "publishedAt": "2026-05-01T09:00:18Z",
   "scoreStatus": "confirmed",
   "scoreConfirmedAt": "2026-11-15"
+ },
+ {
+  "genre": "ai",
+  "sub": "Midjourney",
+  "ytid": "wFHlG7wcRUQ",
+  "level": "初級",
+  "minutes": 37,
+  "channel": "AI たろう",
+  "score": 28,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "章立てタイムスタンプでV7の使い方とドラフトモード・日本語音声入力まで手順を追える"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2025-04-04公開でV7発表直後の内容。約1年7か月経過し細部は変わりうるが、V7の基礎として扱いやすい"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "はじめに→アップデート内容→使い方の流れと章立てがあり、入門向けの構成"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "アップデート内容・使い方・ドラフトモード・音声入力の5章でV7を一通り追える"
+   },
+   {
+    "axis": "信頼性",
+    "score": 3,
+    "note": "概要欄の大半がLINE特典7個とスクール誘導で、内容の裏付けは章立てのみ。公式ソースへのリンクがない"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "37分と長めだが章立てタイムスタンプ付きで分割視聴しやすい"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "Midjourney公式への言及があり、YouTube標準リンクで紹介可能。動画自体の権利問題はない"
+   }
+  ],
+  "title": "MidjourneyがV7にアップデート！使い方から新機能まで完全解説します！日本語音声入力も可能に。",
+  "url": "https://www.youtube.com/watch?v=wFHlG7wcRUQ",
+  "tags": [
+   "Midjourney",
+   "使い方",
+   "画像生成"
+  ],
+  "review": [
+   "Midjourney V7の新機能を、アップデート内容から使い方、ドラフトモード、日本語音声入力まで章立てで追える。",
+   "4:30からの使い方解説が中心で、V7を初めて触る人の入口として使いやすい。",
+   "章立てタイムスタンプ付きで、気になる機能だけ拾い見できる構成。"
+  ],
+  "publishedAt": "2025-04-04T12:00:56Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-16"
+ },
+ {
+  "genre": "ai",
+  "sub": "Grok",
+  "ytid": "0cYPwxg8le8",
+  "level": "初級",
+  "minutes": 11,
+  "channel": "AI大学【AI&ChatGPT最新情報】",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "概要→使い方の二章構成で、Grokとfalでの作り方まで手順を示す。参考サイト grok.com / fal.ai へのリンク付き"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2026-02-13公開でGrok Imagine 1.0発表直後の内容。約9か月経過しモデルは進化しうるが基礎として扱いやすい"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "もくじ・二章構成・詳細タイムスタンプ付きで、初心者向けの構成"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "概要→使い方の二章構成にベンチマークと比較対象（Veo 3 / Sora 2 / Runway）を組み込む"
+   },
+   {
+    "axis": "信頼性",
+    "score": 3,
+    "note": "参考サイトの明示と「ソースを基に制作」の記載はあるが、「性能ランキング世界1位」の主張の出典が概要欄にない"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 5,
+    "note": "11分と短く、章立てタイムスタンプ付きで見切りやすい"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "公式サイト grok.com / fal.ai へのリンクのみで、YouTube標準リンクで紹介可能"
+   }
+  ],
+  "title": "【性能ランキング世界1位】xAIの動画生成AI「Grok Imagine」徹底解説！ Sora/Veo級の映像を無料で作る方法！",
+  "url": "https://www.youtube.com/watch?v=0cYPwxg8le8",
+  "tags": [
+   "Grok",
+   "使い方",
+   "動画生成"
+  ],
+  "review": [
+   "Grok Imagineの概要から使い方まで、二章構成で無料で動画を作る手順を追える。",
+   "Grokとfalでの作り方を分け、ベンチマークや他モデルとの比較も章立てで示す。",
+   "11分と短く、もくじ付きで気になる章だけ拾い見できる構成。"
+  ],
+  "publishedAt": "2026-02-13T09:05:51Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-16"
+ },
+ {
+  "genre": "ai",
+  "sub": "HeyGen",
+  "ytid": "zDV9yXyYvlo",
+  "level": "初級",
+  "minutes": 33,
+  "channel": "動画編集の中の人",
+  "score": 28,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "作り方→ツール比較→ジャンル別活用術7選と実践に直結する構成。DomoAI・HeyGen・KlingAIの3ツール比較付き"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2026-02-14公開で約9か月前。3ツールの比較と活用術の基礎として扱いやすい"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "詳細な目次・タイムスタンプ付きで、7つの活用術をジャンル分けして示す"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "作り方→比較→活用術7選→まとめの流れがあり、体系的に追える"
+   },
+   {
+    "axis": "信頼性",
+    "score": 3,
+    "note": "概要欄の冒頭がクーポン・LINE特典の誘導で、ツール比較の根拠となる出典の明示がない"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "33分と長めだが目次・タイムスタンプ付きで分割視聴しやすい"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "YouTube標準リンクで紹介可能。楽曲提供の明記あり"
+   }
+  ],
+  "title": "【2026年最新版】AIアバターの作り方とジャンル別活用術7選を完全解説します【DomoAI vs Heygen vs KlingAI】",
+  "url": "https://www.youtube.com/watch?v=zDV9yXyYvlo",
+  "tags": [
+   "HeyGen",
+   "使い方",
+   "AIアバター"
+  ],
+  "review": [
+   "AIアバターの作り方から、DomoAI・HeyGen・KlingAIの比較まで一本で追える。",
+   "ニュース番組からアニメ動画まで、ジャンル別に7つの活用術を章立てで紹介する。",
+   "目次とタイムスタンプ付きで、気になる活用例だけ拾い見できる構成。"
+  ],
+  "publishedAt": "2026-02-14T09:00:00Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-16"
  }
 ]
