@@ -728,6 +728,38 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
   const searchSuggestions = useMemo(() => (searchActive ? filteredVideos.slice(0, 5) : []), [filteredVideos, searchActive]);
   const liveSearchTotal = searchActive ? filteredVideos.length : videos.length;
 
+  // 候補パネル（design-extra-2 01）：ジャンル・キーワードの候補。2文字から出す。
+  const [suggestionsAnchor, setSuggestionsAnchor] = useState<"header" | "section">("header");
+  const genreMatches = useMemo(() => {
+    const q = keyword.trim().toLowerCase();
+    if (q.length < 2) return [];
+    return publishedGenres
+      .filter((genre) => genre.label.toLowerCase().includes(q) || genreEnglishTitle(genre.key).toLowerCase().includes(q))
+      .map((genre) => ({
+        key: genre.key as string,
+        name: genre.label as string,
+        initial: (genreEnglishTitle(genre.key).charAt(0) || "G").toUpperCase(),
+        count: publishedVideos.filter((video) => video.genre === genre.key).length
+      }))
+      .slice(0, 3);
+  }, [keyword, publishedGenres, publishedVideos]);
+  const keywordMatches = useMemo(() => {
+    const q = keyword.trim().toLowerCase();
+    if (q.length < 2) return [];
+    return popularSearchKeywords.filter((term) => term.toLowerCase().includes(q)).slice(0, 3);
+  }, [keyword]);
+
+  // SP で候補パネルが開いている間は背後のスクロールを止める（全画面表示のため）。
+  useEffect(() => {
+    if (!suggestionsOpen) return;
+    if (!window.matchMedia("(max-width: 640px)").matches) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [suggestionsOpen]);
+
   const weeklyPick = useMemo(() => {
     return publishedVideos.reduce<Video | null>((best, video) => {
       if (video.score === null) return best;
@@ -1177,7 +1209,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
             <Link href="/news/">ニュース</Link>
             <a href="/glossary/">用語集</a>
           </nav>
-          <div className="top-search-wrap">
+          <div className={suggestionsOpen && suggestionsAnchor === "header" ? "top-search-wrap is-panel-open" : "top-search-wrap"}>
             <label className="top-search" aria-label="動画を検索">
               <span className="sr-only">動画を検索</span>
               <input
@@ -1188,7 +1220,10 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
                   setSearchDraft(event.target.value);
                   setSuggestionsOpen(true);
                 }}
-                onFocus={() => setSuggestionsOpen(true)}
+                onFocus={() => {
+                  setSuggestionsAnchor("header");
+                  setSuggestionsOpen(true);
+                }}
                 onKeyDown={handleSearchKeyDown}
                 placeholder="動画・ジャンル・資格名で検索"
                 className="top-search-input"
@@ -1206,10 +1241,23 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
               total={liveSearchTotal}
               suggestions={searchSuggestions}
               activeIndex={activeSuggestionIndex}
-              open={suggestionsOpen}
-              popularVideos={popularFallbackVideos}
+              open={suggestionsOpen && suggestionsAnchor === "header"}
               recentSearches={recentSearches}
+              genreMatches={genreMatches}
+              keywordMatches={keywordMatches}
               onSelect={openVideoPage}
+              onGenreSelect={(genreKey) => {
+                setSuggestionsOpen(false);
+                handleGenreChange(genreKey);
+              }}
+              onKeywordSelect={(term) => {
+                applySearchKeyword(term);
+                setSuggestionsOpen(false);
+              }}
+              onShowAll={() => {
+                saveRecentSearch();
+                scrollToResults();
+              }}
               onRecentSearchSelect={(term) => {
                 setSearchDraft(term);
                 setKeyword(term);
@@ -1534,23 +1582,58 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
               </div>
               <div className="lb-fld">
                 <label htmlFor="lb-keyword-input">キーワード</label>
-                <div className="lb-in">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <circle cx="11" cy="11" r="6.5" />
-                    <path d="M16 16l4.5 4.5" />
-                  </svg>
-                  <input
-                    id="lb-keyword-input"
-                    value={searchDraft}
-                    onChange={(event) => {
-                      setWatchlistOnly(false);
-                      setSearchDraft(event.target.value);
+                <div className={suggestionsOpen && suggestionsAnchor === "section" ? "lb-kw-wrap is-panel-open" : "lb-kw-wrap"}>
+                  <div className="lb-in">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <circle cx="11" cy="11" r="6.5" />
+                      <path d="M16 16l4.5 4.5" />
+                    </svg>
+                    <input
+                      id="lb-keyword-input"
+                      value={searchDraft}
+                      onChange={(event) => {
+                        setWatchlistOnly(false);
+                        setSearchDraft(event.target.value);
+                        setSuggestionsOpen(true);
+                      }}
+                      onFocus={() => {
+                        setSuggestionsAnchor("section");
+                        setSuggestionsOpen(true);
+                      }}
+                      onKeyDown={handleSearchKeyDown}
+                      placeholder="動画・ジャンル・資格名"
+                      autoComplete="off"
+                    />
+                  </div>
+                  <LiveSearchPanel
+                    id="search-suggestions-section"
+                    query={keyword}
+                    total={liveSearchTotal}
+                    suggestions={searchSuggestions}
+                    activeIndex={activeSuggestionIndex}
+                    open={suggestionsOpen && suggestionsAnchor === "section"}
+                    recentSearches={recentSearches}
+                    genreMatches={genreMatches}
+                    keywordMatches={keywordMatches}
+                    onSelect={openVideoPage}
+                    onGenreSelect={(genreKey) => {
+                      setSuggestionsOpen(false);
+                      handleGenreChange(genreKey);
+                    }}
+                    onKeywordSelect={(term) => {
+                      applySearchKeyword(term);
+                      setSuggestionsOpen(false);
+                    }}
+                    onShowAll={() => {
+                      saveRecentSearch();
+                      scrollToResults();
+                    }}
+                    onRecentSearchSelect={(term) => {
+                      setSearchDraft(term);
+                      setKeyword(term);
                       setSuggestionsOpen(true);
                     }}
-                    onFocus={() => setSuggestionsOpen(true)}
-                    onKeyDown={handleSearchKeyDown}
-                    placeholder="動画・ジャンル・資格名"
-                    autoComplete="off"
+                    onClose={() => setSuggestionsOpen(false)}
                   />
                 </div>
                 <small>⌘Kでも検索できます</small>
@@ -1859,6 +1942,22 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
 }
 
 
+function highlightMatch(text: string, query: string) {
+  const q = query.trim();
+  if (q.length < 2) return text;
+  const idx = text.toLowerCase().indexOf(q.toLowerCase());
+  if (idx < 0) return text;
+  return (
+    <>
+      {text.slice(0, idx)}
+      <mark>{text.slice(idx, idx + q.length)}</mark>
+      {text.slice(idx + q.length)}
+    </>
+  );
+}
+
+// 候補パネル（design-extra-2 01）：2文字目から、動画（最大5件・スコア順）→
+// ジャンル・キーワード → すべて見る。SP は入力欄を上端に固定した全画面。
 function LiveSearchPanel({
   id,
   query,
@@ -1866,9 +1965,13 @@ function LiveSearchPanel({
   suggestions,
   activeIndex,
   open,
-  popularVideos,
   recentSearches,
+  genreMatches,
+  keywordMatches,
   onSelect,
+  onGenreSelect,
+  onKeywordSelect,
+  onShowAll,
   onRecentSearchSelect,
   onClose
 }: {
@@ -1878,87 +1981,129 @@ function LiveSearchPanel({
   suggestions: Video[];
   activeIndex: number;
   open: boolean;
-  popularVideos: Video[];
   recentSearches: LocalListState;
+  genreMatches: { key: string; name: string; initial: string; count: number }[];
+  keywordMatches: string[];
   onSelect: (video: Video) => void;
+  onGenreSelect: (genreKey: string) => void;
+  onKeywordSelect: (term: string) => void;
+  onShowAll: () => void;
   onRecentSearchSelect: (term: string) => void;
   onClose: () => void;
 }) {
-  const hasQuery = query.trim().length > 0;
-  const fallbackVideos = popularVideos.slice(0, 3);
-  const panelClassName = [
-    "live-search-panel",
-    open ? "is-open" : "",
-    hasQuery ? "has-query" : "is-empty-query",
-    !hasQuery && recentSearches.ready && recentSearches.items.length > 0 ? "has-recent-searches" : ""
-  ].filter(Boolean).join(" ");
+  const trimmed = query.trim();
+  const showGroups = trimmed.length >= 2;
+  const noCandidates = showGroups && suggestions.length === 0 && genreMatches.length === 0 && keywordMatches.length === 0;
+  const keepFocus = {
+    onPointerDown: (event: { preventDefault: () => void }) => event.preventDefault(),
+    onMouseDown: (event: { preventDefault: () => void }) => event.preventDefault()
+  };
 
   return (
-    <div id={id} className={panelClassName} role="status" aria-live="polite">
-      <div className="live-search-status">
-        {hasQuery ? (
-          total > 0 ? <span>{total}件ヒット</span> : <span>見つかりませんでした</span>
-        ) : (
-          <span>キーワードで全動画を検索できます</span>
-        )}
+    <div id={id} className={open ? "lb-ls is-open" : "lb-ls"} role="listbox" aria-label="検索候補">
+      <div className="lb-ls-status">
+        <span>{showGroups ? `${total}件ヒット` : "キーワードで全動画を検索できます"}</span>
         <button type="button" onClick={onClose} aria-label="候補を閉じる">閉じる</button>
       </div>
-      {hasQuery && suggestions.length > 0 ? (
-        <ol className="live-suggestion-list" role="listbox" aria-label="検索候補">
-          {suggestions.map((video, index) => (
-            <li key={video.ytid}>
-              <button
-                type="button"
-                className={index === activeIndex ? "is-active" : ""}
-                onPointerDown={(event) => event.preventDefault()}
-                onMouseDown={(event) => event.preventDefault()}
-                onClick={() => onSelect(video)}
-                role="option"
-                aria-selected={index === activeIndex}
-              >
-                <span className="live-suggestion-title">{video.title}</span>
-                <span className="live-suggestion-meta">
-                  <LevelBadge level={video.level} />
-                  <span>{genreLabel(video.genre)}</span>
-                  <span>{scoreText(video)}</span>
-                  <span className={`score-badge-status is-${scoreStatus(video)}`}>{scoreStatusText(video)}</span>
-                  <span>{video.minutes}分</span>
-                </span>
-              </button>
-            </li>
-          ))}
-        </ol>
+      {showGroups && suggestions.length > 0 ? (
+        <div className="lb-ls-g">
+          <h5>動画 <small>候補 {total}件</small></h5>
+          <ul>
+            {suggestions.map((video, index) => (
+              <li key={video.ytid}>
+                <button
+                  type="button"
+                  className={index === activeIndex ? "lb-ls-row is-on" : "lb-ls-row"}
+                  {...keepFocus}
+                  onClick={() => onSelect(video)}
+                  role="option"
+                  aria-selected={index === activeIndex}
+                >
+                  <img className="lb-ls-th" src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"} alt="" loading="lazy" />
+                  <span className="lb-ls-t">
+                    <b>{highlightMatch(video.title, trimmed)}</b>
+                    <small>
+                      <span>{video.minutes}分</span>・
+                      <span className={"lb-ls-lv " + (video.level === "初級" ? "is-beg" : video.level === "中級" ? "is-mid" : "is-high")}>
+                        <i aria-hidden="true" />
+                        {video.level}
+                      </span>
+                    </small>
+                  </span>
+                  <span className="lb-ls-s">{video.score ?? "–"}<small>/35</small></span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
       ) : null}
-      {!hasQuery && recentSearches.ready && recentSearches.items.length > 0 ? (
-        <div className="recent-searches" aria-label="最近の検索">
-          <p>最近の検索</p>
+      {showGroups && (genreMatches.length > 0 || keywordMatches.length > 0) ? (
+        <div className="lb-ls-g">
+          <h5>ジャンル・キーワード</h5>
+          <ul>
+            {genreMatches.map((genre) => (
+              <li key={genre.key}>
+                <button type="button" className="lb-ls-row" {...keepFocus} onClick={() => onGenreSelect(genre.key)} role="option" aria-selected={false}>
+                  <span className="lb-ls-gk" aria-hidden="true">{genre.initial}</span>
+                  <span className="lb-ls-t">
+                    <b>{genre.name}</b>
+                    <small>ジャンル ・ {genre.count}本</small>
+                  </span>
+                </button>
+              </li>
+            ))}
+            {keywordMatches.map((term) => (
+              <li key={term}>
+                <button type="button" className="lb-ls-row" {...keepFocus} onClick={() => onKeywordSelect(term)} role="option" aria-selected={false}>
+                  <span className="lb-ls-gk" aria-hidden="true">#</span>
+                  <span className="lb-ls-t">
+                    <b>{highlightMatch(term, trimmed)}</b>
+                    <small>人気キーワード</small>
+                  </span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+      {noCandidates ? (
+        <div className="lb-ls-none">
+          <p>見つかりませんでした</p>
           <div>
-            {recentSearches.items.slice(0, 5).map((term) => (
-              <button key={term} type="button" onPointerDown={(event) => event.preventDefault()}
-                onMouseDown={(event) => event.preventDefault()} onClick={() => onRecentSearchSelect(term)}>
+            {popularSearchKeywords.slice(0, 3).map((term) => (
+              <button key={term} type="button" {...keepFocus} onClick={() => onKeywordSelect(term)}>
                 {term}
               </button>
             ))}
           </div>
-          <button type="button" className="recent-searches-clear" onPointerDown={(event) => event.preventDefault()}
-                onMouseDown={(event) => event.preventDefault()} onClick={() => recentSearches.clear()}>
+        </div>
+      ) : null}
+      {showGroups && total > 0 ? (
+        <button type="button" className="lb-ls-all" {...keepFocus} onClick={onShowAll}>
+          <span>「{trimmed}」の検索結果をすべて見る（{total}件）</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      ) : null}
+      {!showGroups && recentSearches.ready && recentSearches.items.length > 0 ? (
+        <div className="lb-ls-recent" aria-label="最近の検索">
+          <p>最近の検索</p>
+          <div>
+            {recentSearches.items.slice(0, 5).map((term) => (
+              <button key={term} type="button" {...keepFocus} onClick={() => onRecentSearchSelect(term)}>
+                {term}
+              </button>
+            ))}
+          </div>
+          <button type="button" className="lb-ls-clear" {...keepFocus} onClick={() => recentSearches.clear()}>
             履歴を消す
           </button>
         </div>
       ) : null}
-      {hasQuery && total === 0 ? (
-        <div className="live-search-empty">
-          <p>条件を少し広げるか、人気の動画から始められます。</p>
-          <div>
-            {fallbackVideos.map((video) => (
-              <button key={video.ytid} type="button" onPointerDown={(event) => event.preventDefault()}
-                onMouseDown={(event) => event.preventDefault()} onClick={() => onSelect(video)}>
-                {video.title}
-              </button>
-            ))}
-          </div>
-        </div>
-      ) : null}
+      <div className="lb-ls-keys" aria-hidden="true">
+        <span>↑↓ 選ぶ</span>
+        <span>Enter 開く</span>
+        <span>Esc 閉じる</span>
+      </div>
     </div>
   );
 }
