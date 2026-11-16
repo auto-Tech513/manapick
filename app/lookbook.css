@@ -4095,3 +4095,9 @@ main .knowledge-hero { border-radius: 0 !important; }
 /* 見出しは flex にしない（括弧つきの語や長い語が折り返せずはみ出すのを防ぐ）。番号は行頭の inline-block */
 .knowledge-section > h2 { display: block; }
 .knowledge-section > h2::before { display: inline-block; margin-right: 12px; }
+/* SP：ロゴの添え書きが1行のまま右のボタンを画面外へ押し出していた → SP では添え書きを畳む */
+.knowledge-header-link { flex: none; }
+@media (max-width: 640px) { .brand-wordmark-sub { display: none; } }
+@media (min-width: 641px) and (max-width: 900px) { .brand-wordmark-sub { white-space: normal; } }
+main .knowledge-header .knowledge-header-link { padding: 0 18px; width: auto; max-width: none; min-width: 0; }
+main .knowledge-header .knowledge-header-link { margin-block: 0; }
