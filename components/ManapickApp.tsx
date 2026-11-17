@@ -3,7 +3,8 @@
 import Fuse from "fuse.js";
 import Image from "next/image";
 import Link from "next/link";
-import { type CSSProperties, type KeyboardEvent as ReactKeyboardEvent, type RefObject, useEffect, useMemo, useRef, useState } from "react";
+import { createContext, type CSSProperties, type KeyboardEvent as ReactKeyboardEvent, type RefObject, useContext, useEffect, useMemo, useRef, useState } from "react";
+import BreakText from "@/components/BreakText";
 import BrandLogo, { BrandMark } from "@/components/BrandLogo";
 import AdSlot from "@/components/AdSlot";
 import LikeButton from "@/components/LikeButton";
@@ -111,6 +112,15 @@ type ProfessionRoute = {
 
 const genres = genresData as Genre[];
 const videos = videosData as Video[];
+
+// 動画タイトルの文節境界（app/page.tsx がビルド時に BudouX で計算して渡す）。iPhone Safari は
+// word-break: auto-phrase に対応しないため、<wbr> を入れて語の途中で折れないようにする。
+const TitleBreaksContext = createContext<Record<string, number[]>>({});
+
+function VideoTitle({ video }: { video: Pick<Video, "ytid" | "title"> }) {
+  const breaks = useContext(TitleBreaksContext);
+  return <BreakText text={video.title} breaks={breaks[video.ytid]} />;
+}
 const roadmaps = roadmapsData as Roadmap[];
 const professionRoutes = professionRoutesData as ProfessionRoute[];
 
@@ -565,7 +575,15 @@ const roadmapGuideLinks: Record<string, { href: string }> = {
   money: { href: "/guide/money-basics/" }
 };
 
-export default function ManapickApp({ referenceTime }: { referenceTime: number }) {
+export default function ManapickApp({ referenceTime, titleBreaks }: { referenceTime: number; titleBreaks: Record<string, number[]> }) {
+  return (
+    <TitleBreaksContext.Provider value={titleBreaks}>
+      <ManapickAppMain referenceTime={referenceTime} />
+    </TitleBreaksContext.Provider>
+  );
+}
+
+function ManapickAppMain({ referenceTime }: { referenceTime: number }) {
   const [selectedGenre, setSelectedGenre] = useState("all");
   const [selectedSub, setSelectedSub] = useState("all");
   const [selectedLevel, setSelectedLevel] = useState<(typeof levels)[number]>("すべて");
@@ -1363,7 +1381,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
                   <small>/35</small>
                 </span>
                 {index === 0 ? <span className="lb-tile-pick">今週のイチオシ</span> : null}
-                <span className="lb-tile-title">{video.title}</span>
+                <span className="lb-tile-title"><VideoTitle video={video} /></span>
                 <span className="lb-tile-no">{String(index + 1).padStart(2, "0")}</span>
                 <span className="lb-tile-gen">{genreEnglishLabel(video.genre)}</span>
               </a>
@@ -1409,7 +1427,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
                     <span className="lb-film-genre">{genreDisplayName(video.genre)}</span>
                     {video.minutes}分
                   </span>
-                  <span className="lb-film-title">{video.title}</span>
+                  <span className="lb-film-title"><VideoTitle video={video} /></span>
                   <span className="lb-film-foot">
                     採点
                     <b>
@@ -1816,7 +1834,7 @@ export default function ManapickApp({ referenceTime }: { referenceTime: number }
           <div className="lb-eh">
             <div className="lb-eh-stack">
               <span className="lb-code">MP-06 · TRANSFER</span>
-              <h2 id="xfer-title">見たあとは、乗り換えて次へ。</h2>
+              <h2 id="xfer-title"><span className="bx">見たあとは、<wbr />乗り換えて<wbr />次へ。</span></h2>
             </div>
             <p>動画で学んだ内容を、道具・資格・仕事・企業の情報へつなぎます。</p>
           </div>
@@ -2833,7 +2851,7 @@ function AllGenreHighlights({ onGenreSelect }: { onGenreSelect: (genreKey: strin
         {highlights.map(({ genreKey, video }) => (
           <button key={genreKey} type="button" className="highlight-card" onClick={() => onGenreSelect(genreKey)}>
             <span className="highlight-genre">{genreLabel(genreKey)}</span>
-            <span className="highlight-title">{video.title}</span>
+            <span className="highlight-title"><VideoTitle video={video} /></span>
             <span className="highlight-meta">
               <span>{scoreText(video)}</span>
               <span className={`score-badge-status is-${scoreStatus(video)}`}>{scoreStatusText(video)}</span>
@@ -2902,7 +2920,7 @@ function FeaturedVideoCard({ video, likeCounts }: { video: Video; likeCounts: Li
       </div>
       <div>
         <p className="featured-video-eyebrow">まず見るべき1本</p>
-        <h3><a href={videoDetailHref(video)}>{video.title}</a></h3>
+        <h3><a href={videoDetailHref(video)}><VideoTitle video={video} /></a></h3>
         <p>{video.review[0]}</p>
         <LikeButton ytid={video.ytid} initialCount={likeCounts[video.ytid] ?? 0} className="is-card-action" />
         <a href={videoDetailHref(video)}>詳細を見る</a>
@@ -2955,7 +2973,7 @@ function WeeklyPickCard({
       </div>
       <div className="weekly-pick-body">
         <p className="weekly-pick-eyebrow">今週のイチオシ</p>
-        <h2><a href={videoDetailHref(video)}>{video.title}</a></h2>
+        <h2><a href={videoDetailHref(video)}><VideoTitle video={video} /></a></h2>
         <p>{reviewLine}</p>
         {video.editorNote ? <p className="editor-note">編集メモ: {video.editorNote}</p> : null}
         <div className="weekly-pick-meta">
@@ -3081,7 +3099,7 @@ function VideoCard({
           {ageLabel ? <span className="lb-vc-pub">{ageLabel}</span> : null}
         </div>
         <h3>
-          <a href={videoDetailHref(video)}>{video.title}</a>
+          <a href={videoDetailHref(video)}><VideoTitle video={video} /></a>
         </h3>
         {channel ? <p className="lb-vc-ch">チャンネル: {channel}</p> : null}
         <ol>
@@ -3386,7 +3404,7 @@ function RoadmapMiniVideo({ video, watched }: { video: Video; watched: boolean }
         {watched ? <span className="roadmap-mini-watched">✓</span> : null}
       </span>
       <span className="roadmap-mini-body">
-        <span className="roadmap-mini-title">{video.title}</span>
+        <span className="roadmap-mini-title"><VideoTitle video={video} /></span>
         <span className="roadmap-mini-meta">
           <span>{video.minutes}分</span>
         </span>

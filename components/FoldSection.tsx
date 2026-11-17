@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Phrase from "@/components/Phrase";
 
 type FoldSectionProps = {
   /** 外側の section に付けるクラス（既存のセクション装飾を引き継ぐ） */
@@ -23,7 +24,7 @@ export default function FoldSection({ className, titleId, title, eyebrow, hint, 
         <summary className="fold-section-summary">
           <span className="fold-section-heading">
             {eyebrow ? <span className="section-eyebrow fold-section-eyebrow">{eyebrow}</span> : null}
-            <h2 id={titleId} className={["fold-section-title", titleClassName].filter(Boolean).join(" ")}>{title}</h2>
+            <h2 id={titleId} className={["fold-section-title", titleClassName].filter(Boolean).join(" ")}><Phrase>{title}</Phrase></h2>
             {hint ? <span className="fold-section-hint">{hint}</span> : null}
           </span>
           <span className="fold-section-toggle" aria-hidden="true" />

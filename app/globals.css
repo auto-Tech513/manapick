@@ -14861,3 +14861,15 @@ nav[aria-label="パンくず"] a,
 article li .text-sm {
   font-size: 0.85rem;
 }
+
+/* 見出し・カード題名の文節改行（2026-11-17）
+   iPhone Safari は word-break: auto-phrase に対応しないため、ビルド時に BudouX で求めた文節境界へ
+   <wbr> を入れ（components/BreakText.tsx・components/Phrase.tsx）、ここで <wbr> と空白以外の改行を止める。
+   keep-all と overflow-wrap: anywhere を同時に使うと Safari で数字の途中で折れるため、1文節が行幅を
+   超えるときの保険は break-word にする。all: unset で周囲の span 向けスタイルの影響を受けず、見た目は親のまま。 */
+.bx {
+  all: unset !important;
+  display: inline !important;
+  word-break: keep-all !important;
+  overflow-wrap: break-word !important;
+}
