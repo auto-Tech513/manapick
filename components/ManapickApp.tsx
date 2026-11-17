@@ -5,6 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { createContext, type CSSProperties, type KeyboardEvent as ReactKeyboardEvent, type RefObject, useContext, useEffect, useMemo, useRef, useState } from "react";
 import BreakText from "@/components/BreakText";
+import LiveSearchPanel from "@/components/LiveSearchPanel";
+import SiteMenu from "@/components/SiteMenu";
+import { popularSearchKeywords } from "@/lib/search-keywords";
 import BrandLogo, { BrandMark } from "@/components/BrandLogo";
 import AdSlot from "@/components/AdSlot";
 import LikeButton from "@/components/LikeButton";
@@ -13,8 +16,6 @@ import genresData from "@/content/genres.json";
 import professionRoutesData from "@/content/professions.json";
 import roadmapsData from "@/content/roadmaps.json";
 import videosData from "@/content/videos.json";
-import PwaInstallButton from "@/components/PwaInstallButton";
-import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
 import { RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY, sendGaEvent } from "@/lib/retention";
 import { genericAxisNoteCount, isGenericAxisNote, youtubeThumbnail } from "@/lib/manapick";
 import sisterItemLinks from "@/content/sister-item-links.json";
@@ -245,21 +246,6 @@ const searchIntentLinks = [
   }
 ];
 
-const popularSearchKeywords = [
-  "エクセル統計",
-  "マーケティング",
-  "Python 難しい",
-  "Python 入門 本",
-  "資産運用",
-  "FP3級 過去問",
-  "ビジネス会計検定 3級",
-  "社労士",
-  "Power BI",
-  "YouTubeサムネイル",
-  "AIプロンプト",
-  "Copilot 活用",
-  "秘書検定 2級"
-];
 
 // footer markup moved to components/SiteFooter.tsx (rendered globally in app/layout.tsx)
 
@@ -575,15 +561,23 @@ const roadmapGuideLinks: Record<string, { href: string }> = {
   money: { href: "/guide/money-basics/" }
 };
 
-export default function ManapickApp({ referenceTime, titleBreaks }: { referenceTime: number; titleBreaks: Record<string, number[]> }) {
+export default function ManapickApp({
+  referenceTime,
+  titleBreaks,
+  menuBreaks
+}: {
+  referenceTime: number;
+  titleBreaks: Record<string, number[]>;
+  menuBreaks: Record<string, number[]>;
+}) {
   return (
     <TitleBreaksContext.Provider value={titleBreaks}>
-      <ManapickAppMain referenceTime={referenceTime} />
+      <ManapickAppMain referenceTime={referenceTime} menuBreaks={menuBreaks} />
     </TitleBreaksContext.Provider>
   );
 }
 
-function ManapickAppMain({ referenceTime }: { referenceTime: number }) {
+function ManapickAppMain({ referenceTime, menuBreaks }: { referenceTime: number; menuBreaks: Record<string, number[]> }) {
   const [selectedGenre, setSelectedGenre] = useState("all");
   const [selectedSub, setSelectedSub] = useState("all");
   const [selectedLevel, setSelectedLevel] = useState<(typeof levels)[number]>("すべて");
@@ -963,7 +957,7 @@ function ManapickAppMain({ referenceTime }: { referenceTime: number }) {
     document.body.style.overflow = "hidden";
     document.addEventListener("keydown", handleKeydown);
     window.setTimeout(() => {
-      const firstFocusable = menuDrawerRef.current?.querySelector<HTMLElement>("button, a, summary");
+      const firstFocusable = menuDrawerRef.current?.querySelector<HTMLElement>(".mp-menu-close");
       firstFocusable?.focus();
     }, 0);
 
@@ -1195,7 +1189,7 @@ function ManapickAppMain({ referenceTime }: { referenceTime: number }) {
 
   function handleMenuKeyDown(event: ReactKeyboardEvent<HTMLElement>) {
     if (event.key !== "Tab") return;
-    const focusable = Array.from(menuDrawerRef.current?.querySelectorAll<HTMLElement>("button, a, summary") ?? [])
+    const focusable = Array.from(menuDrawerRef.current?.querySelectorAll<HTMLElement>("button, a, summary, input") ?? [])
       .filter((item) => !item.hasAttribute("disabled") && item.getClientRects().length > 0);
     if (focusable.length === 0) return;
     const first = focusable[0];
@@ -1263,7 +1257,7 @@ function ManapickAppMain({ referenceTime }: { referenceTime: number }) {
               recentSearches={recentSearches}
               genreMatches={genreMatches}
               keywordMatches={keywordMatches}
-              onSelect={openVideoPage}
+              onSelect={(video) => openVideoPage(video as Video)}
               onGenreSelect={(genreKey) => {
                 setSuggestionsOpen(false);
                 handleGenreChange(genreKey);
@@ -1290,33 +1284,14 @@ function ManapickAppMain({ referenceTime }: { referenceTime: number }) {
         </div>
       </header>
       {menuOpen ? (
-        <SiteMenuDrawer
-          genres={publishedGenres}
-          routes={professionRoutes}
+        <SiteMenu
+          id="site-menu"
           drawerRef={menuDrawerRef}
+          genres={publishedGenres.map((genre) => ({ key: genre.key, label: genreLabel(genre.key), count: genreVideoCounts[genre.key] ?? 0 }))}
+          professions={professionRoutes.map((route) => ({ id: route.id, title: route.title, href: route.href }))}
+          breaks={menuBreaks}
           onKeyDown={handleMenuKeyDown}
           onClose={() => setMenuOpen(false)}
-          onProfessionSelect={(routeId) => {
-            setMenuOpen(false);
-            if (!routeId) {
-              window.location.href = "/guide/";
-              return;
-            }
-            const route = professionRoutes.find((item) => item.id === routeId);
-            window.location.href = route ? route.href : "/guide/";
-          }}
-          onGenreSelect={(genreKey) => {
-            setMenuOpen(false);
-            handleGenreChange(genreKey);
-          }}
-          onGenreList={() => {
-            setMenuOpen(false);
-            showGenrePicker();
-          }}
-          onSectionSelect={(sectionId) => {
-            setMenuOpen(false);
-            scrollToElement(sectionId);
-          }}
         />
       ) : null}
 
@@ -1633,7 +1608,7 @@ function ManapickAppMain({ referenceTime }: { referenceTime: number }) {
                     recentSearches={recentSearches}
                     genreMatches={genreMatches}
                     keywordMatches={keywordMatches}
-                    onSelect={openVideoPage}
+                    onSelect={(video) => openVideoPage(video as Video)}
                     onGenreSelect={(genreKey) => {
                       setSuggestionsOpen(false);
                       handleGenreChange(genreKey);
@@ -1960,172 +1935,6 @@ function ManapickAppMain({ referenceTime }: { referenceTime: number }) {
 }
 
 
-function highlightMatch(text: string, query: string) {
-  const q = query.trim();
-  if (q.length < 2) return text;
-  const idx = text.toLowerCase().indexOf(q.toLowerCase());
-  if (idx < 0) return text;
-  return (
-    <>
-      {text.slice(0, idx)}
-      <mark>{text.slice(idx, idx + q.length)}</mark>
-      {text.slice(idx + q.length)}
-    </>
-  );
-}
-
-// 候補パネル（design-extra-2 01）：2文字目から、動画（最大5件・スコア順）→
-// ジャンル・キーワード → すべて見る。SP は入力欄を上端に固定した全画面。
-function LiveSearchPanel({
-  id,
-  query,
-  total,
-  suggestions,
-  activeIndex,
-  open,
-  recentSearches,
-  genreMatches,
-  keywordMatches,
-  onSelect,
-  onGenreSelect,
-  onKeywordSelect,
-  onShowAll,
-  onRecentSearchSelect,
-  onClose
-}: {
-  id: string;
-  query: string;
-  total: number;
-  suggestions: Video[];
-  activeIndex: number;
-  open: boolean;
-  recentSearches: LocalListState;
-  genreMatches: { key: string; name: string; initial: string; count: number }[];
-  keywordMatches: string[];
-  onSelect: (video: Video) => void;
-  onGenreSelect: (genreKey: string) => void;
-  onKeywordSelect: (term: string) => void;
-  onShowAll: () => void;
-  onRecentSearchSelect: (term: string) => void;
-  onClose: () => void;
-}) {
-  const trimmed = query.trim();
-  const showGroups = trimmed.length >= 2;
-  const noCandidates = showGroups && suggestions.length === 0 && genreMatches.length === 0 && keywordMatches.length === 0;
-  const keepFocus = {
-    onPointerDown: (event: { preventDefault: () => void }) => event.preventDefault(),
-    onMouseDown: (event: { preventDefault: () => void }) => event.preventDefault()
-  };
-
-  return (
-    <div id={id} className={open ? "lb-ls is-open" : "lb-ls"} role="listbox" aria-label="検索候補">
-      <div className="lb-ls-status">
-        <span>{showGroups ? `${total}件ヒット` : "キーワードで全動画を検索できます"}</span>
-        <button type="button" onClick={onClose} aria-label="候補を閉じる">閉じる</button>
-      </div>
-      {showGroups && suggestions.length > 0 ? (
-        <div className="lb-ls-g">
-          <h5>動画 <small>候補 {total}件</small></h5>
-          <ul>
-            {suggestions.map((video, index) => (
-              <li key={video.ytid}>
-                <button
-                  type="button"
-                  className={index === activeIndex ? "lb-ls-row is-on" : "lb-ls-row"}
-                  {...keepFocus}
-                  onClick={() => onSelect(video)}
-                  role="option"
-                  aria-selected={index === activeIndex}
-                >
-                  <img className="lb-ls-th" src={"https://i.ytimg.com/vi/" + video.ytid + "/hqdefault.jpg"} alt="" loading="lazy" />
-                  <span className="lb-ls-t">
-                    <b>{highlightMatch(video.title, trimmed)}</b>
-                    <small>
-                      <span>{video.minutes}分</span>・
-                      <span className={"lb-ls-lv " + (video.level === "初級" ? "is-beg" : video.level === "中級" ? "is-mid" : "is-high")}>
-                        <i aria-hidden="true" />
-                        {video.level}
-                      </span>
-                    </small>
-                  </span>
-                  <span className="lb-ls-s">{video.score ?? "–"}<small>/35</small></span>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ) : null}
-      {showGroups && (genreMatches.length > 0 || keywordMatches.length > 0) ? (
-        <div className="lb-ls-g">
-          <h5>ジャンル・キーワード</h5>
-          <ul>
-            {genreMatches.map((genre) => (
-              <li key={genre.key}>
-                <button type="button" className="lb-ls-row" {...keepFocus} onClick={() => onGenreSelect(genre.key)} role="option" aria-selected={false}>
-                  <span className="lb-ls-gk" aria-hidden="true">{genre.initial}</span>
-                  <span className="lb-ls-t">
-                    <b>{genre.name}</b>
-                    <small>ジャンル ・ {genre.count}本</small>
-                  </span>
-                </button>
-              </li>
-            ))}
-            {keywordMatches.map((term) => (
-              <li key={term}>
-                <button type="button" className="lb-ls-row" {...keepFocus} onClick={() => onKeywordSelect(term)} role="option" aria-selected={false}>
-                  <span className="lb-ls-gk" aria-hidden="true">#</span>
-                  <span className="lb-ls-t">
-                    <b>{highlightMatch(term, trimmed)}</b>
-                    <small>人気キーワード</small>
-                  </span>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ) : null}
-      {noCandidates ? (
-        <div className="lb-ls-none">
-          <p>見つかりませんでした</p>
-          <div>
-            {popularSearchKeywords.slice(0, 3).map((term) => (
-              <button key={term} type="button" {...keepFocus} onClick={() => onKeywordSelect(term)}>
-                {term}
-              </button>
-            ))}
-          </div>
-        </div>
-      ) : null}
-      {showGroups && total > 0 ? (
-        <button type="button" className="lb-ls-all" {...keepFocus} onClick={onShowAll}>
-          <span>「{trimmed}」の検索結果をすべて見る（{total}件）</span>
-          <span aria-hidden="true">→</span>
-        </button>
-      ) : null}
-      {!showGroups && recentSearches.ready && recentSearches.items.length > 0 ? (
-        <div className="lb-ls-recent" aria-label="最近の検索">
-          <p>最近の検索</p>
-          <div>
-            {recentSearches.items.slice(0, 5).map((term) => (
-              <button key={term} type="button" {...keepFocus} onClick={() => onRecentSearchSelect(term)}>
-                {term}
-              </button>
-            ))}
-          </div>
-          <button type="button" className="lb-ls-clear" {...keepFocus} onClick={() => recentSearches.clear()}>
-            履歴を消す
-          </button>
-        </div>
-      ) : null}
-      <div className="lb-ls-keys" aria-hidden="true">
-        <span>↑↓ 選ぶ</span>
-        <span>Enter 開く</span>
-        <span>Esc 閉じる</span>
-      </div>
-    </div>
-  );
-}
-
 function PopularKeywordChips({ compact = false, onSelect }: { compact?: boolean; onSelect: (term: string) => void }) {
   return (
     <div className={compact ? "popular-keyword-chips is-compact" : "popular-keyword-chips"} aria-label="よく検索されるキーワード">
@@ -2205,103 +2014,6 @@ function LearningDataSection() {
   );
 }
 
-function ProfessionIcon({ icon }: { icon: string }) {
-  const commonProps = { viewBox: "0 0 24 24", role: "presentation", focusable: "false" } as const;
-  if (icon === "office") {
-    return (
-      <span className="profession-icon" aria-hidden="true">
-        <svg {...commonProps}>
-          <path d="M5 5h14v14H5z" />
-          <path d="M8 9h8" />
-          <path d="M8 13h5" />
-          <path d="M8 17h7" />
-        </svg>
-      </span>
-    );
-  }
-  if (icon === "creative") {
-    return (
-      <span className="profession-icon" aria-hidden="true">
-        <svg {...commonProps}>
-          <path d="M5 7h14v10H5z" />
-          <path d="m10 10 4 2-4 2z" />
-          <path d="M7 4h3" />
-          <path d="M14 4h3" />
-        </svg>
-      </span>
-    );
-  }
-  if (icon === "globe") {
-    return (
-      <span className="profession-icon" aria-hidden="true">
-        <svg {...commonProps}>
-          <circle cx="12" cy="12" r="8" />
-          <path d="M4 12h16" />
-          <path d="M12 4c2 2.2 3 4.8 3 8s-1 5.8-3 8" />
-          <path d="M12 4c-2 2.2-3 4.8-3 8s1 5.8 3 8" />
-        </svg>
-      </span>
-    );
-  }
-  if (icon === "certificate") {
-    return (
-      <span className="profession-icon" aria-hidden="true">
-        <svg {...commonProps}>
-          <path d="M7 4h10v12H7z" />
-          <path d="M9 8h6" />
-          <path d="M9 11h6" />
-          <path d="M10 16v4l2-1.3L14 20v-4" />
-        </svg>
-      </span>
-    );
-  }
-  if (icon === "chart") {
-    return (
-      <span className="profession-icon" aria-hidden="true">
-        <svg {...commonProps}>
-          <path d="M5 19V9" />
-          <path d="M12 19V5" />
-          <path d="M19 19v-7" />
-          <path d="M4 19h17" />
-        </svg>
-      </span>
-    );
-  }
-  if (icon === "trend") {
-    return (
-      <span className="profession-icon" aria-hidden="true">
-        <svg {...commonProps}>
-          <path d="m4 16 5-5 4 4 7-8" />
-          <path d="M15 7h5v5" />
-          <path d="M4 20h17" />
-        </svg>
-      </span>
-    );
-  }
-  if (icon === "money") {
-    return (
-      <span className="profession-icon" aria-hidden="true">
-        <svg {...commonProps}>
-          <circle cx="12" cy="12" r="8" />
-          <path d="M8.5 8.5 12 12l3.5-3.5" />
-          <path d="M12 12v5" />
-          <path d="M9 14h6" />
-          <path d="M9 16.5h6" />
-        </svg>
-      </span>
-    );
-  }
-  return (
-    <span className="profession-icon" aria-hidden="true">
-      <svg {...commonProps}>
-        <path d="M6 18 18 6" />
-        <path d="M8 6h10v10" />
-        <path d="M5 19h14" />
-      </svg>
-    </span>
-  );
-}
-
 function MobileBottomNav({
   watchlistOnly,
   onHome,
@@ -2346,197 +2058,6 @@ function MobileBottomNav({
         <span>メニュー</span>
       </button>
     </nav>
-  );
-}
-
-function SiteMenuDrawer({
-  genres,
-  routes,
-  drawerRef,
-  onKeyDown,
-  onClose,
-  onProfessionSelect,
-  onGenreSelect,
-  onGenreList,
-  onSectionSelect
-}: {
-  genres: Genre[];
-  routes: ProfessionRoute[];
-  drawerRef: RefObject<HTMLElement>;
-  onKeyDown: (event: ReactKeyboardEvent<HTMLElement>) => void;
-  onClose: () => void;
-  onProfessionSelect: (routeId?: string) => void;
-  onGenreSelect: (genreKey: string) => void;
-  onGenreList: () => void;
-  onSectionSelect: (sectionId: string) => void;
-}) {
-  return (
-    <div className="site-menu-layer">
-      <button type="button" className="site-menu-backdrop" aria-label="メニューを閉じる" onClick={onClose} />
-      <aside
-        id="site-menu"
-        ref={drawerRef}
-        className="site-menu-drawer"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="site-menu-title"
-        onKeyDown={onKeyDown}
-      >
-        <div className="site-menu-head">
-          <div className="site-menu-brand">
-            <span className="site-menu-brand-mark" aria-hidden="true">✓</span>
-            <div>
-              <h2 id="site-menu-title">Manapick</h2>
-              <p>学び直しを、最短ルートに。</p>
-            </div>
-          </div>
-          <button type="button" className="site-menu-close" onClick={onClose} aria-label="メニューを閉じる">
-            ×
-          </button>
-        </div>
-        <nav className="site-menu-links" aria-label="メニューリンク">
-          <p className="site-menu-section-label">まず選ぶ</p>
-          <div className="site-menu-primary-grid">
-            <a className="site-menu-action-card is-primary" href="/start/" onClick={onClose}>
-              <span aria-hidden="true">◎</span>
-              <strong>今日の1本診断</strong>
-              <small>3つの質問から選ぶ</small>
-            </a>
-            <button type="button" className="site-menu-action-card" onClick={() => onProfessionSelect()}>
-              <span aria-hidden="true">↗</span>
-              <strong>職業から選ぶ</strong>
-              <small>なりたい姿から逆引き</small>
-            </button>
-            <button type="button" className="site-menu-action-card" onClick={onGenreList}>
-              <span aria-hidden="true">▦</span>
-              <strong>{genres.length}ジャンル</strong>
-              <small>学びたい分野から探す</small>
-            </button>
-            <button type="button" className="site-menu-action-card" onClick={() => onSectionSelect("roadmap")}>
-              <span aria-hidden="true">⌁</span>
-              <strong>ロードマップ</strong>
-              <small>見る順番で進める</small>
-            </button>
-          </div>
-
-          <p className="site-menu-section-label">探す・続ける</p>
-          <div className="site-menu-compact-grid">
-            <a href="/youtube-learning/" onClick={onClose}>おすすめ動画</a>
-            <a href="/study-plan/" onClick={onClose}>7日学習プラン</a>
-            <a href="/ranking/" onClick={onClose}>ランキング</a>
-            <a href="/new/" onClick={onClose}>新着動画</a>
-            <Link href="/news/" onClick={onClose}>学びニュース</Link>
-            <a href="/my/" onClick={onClose}>マイページ</a>
-            <a href="/glossary/" onClick={onClose}>用語集</a>
-            <a href="/faq/" onClick={onClose}>よくある質問</a>
-            <a href="/network/" onClick={onClose}>5サイト案内</a>
-            <a href="/shop/" onClick={onClose}>manapi商店</a>
-            <a href="/contact/" onClick={onClose}>お問い合わせ</a>
-          </div>
-
-          <details className="site-menu-expandable">
-            <summary>なりたい職業から選ぶ <span aria-hidden="true">⌄</span></summary>
-            <div className="site-menu-profession-list" role="group" aria-label="職業別の入口">
-              {routes.map((route) => (
-                <button key={route.id} type="button" onClick={() => onProfessionSelect(route.id)}>
-                  <ProfessionIcon icon={route.icon} />
-                  <span>{route.title}</span>
-                </button>
-              ))}
-            </div>
-          </details>
-
-          <details className="site-menu-expandable">
-            <summary>{genres.length}ジャンル一覧 <span aria-hidden="true">⌄</span></summary>
-            <div className="site-menu-genre-grid" role="group" aria-label="ジャンル一覧">
-              {genres.map((genre) => (
-                <a
-                  key={genre.key}
-                  href={`/genre/${genre.key}/`}
-                  onClick={(event) => {
-                    event.preventDefault();
-                    onGenreSelect(genre.key);
-                  }}
-                >
-                  <GenreIcon genreKey={genre.key} className="site-menu-genre-icon" />
-                  <span>{genreLabel(genre.key)}</span>
-                </a>
-              ))}
-            </div>
-          </details>
-
-          <details className="site-menu-expandable is-support">
-            <summary>サイト情報・サポート <span aria-hidden="true">⌄</span></summary>
-            <div className="site-menu-support-links">
-              <a href="/about-score/" onClick={onClose}>採点方法</a>
-              <a href="/all/" onClick={onClose}>サイトマップ</a>
-              <a href="/operator/" onClick={onClose}>運営者情報</a>
-              <a href="/affiliate/" onClick={onClose}>広告・アフィリエイト</a>
-              <a href="/privacy/" onClick={onClose}>プライバシー</a>
-              <a href="/contact/" onClick={onClose}>お問い合わせ</a>
-            </div>
-          </details>
-
-          <div className="site-menu-install">
-            <PwaInstallButton />
-          </div>
-
-          <p className="site-menu-section-label">姉妹サイト</p>
-          <a
-            className="site-menu-link site-menu-ai-link"
-            href={MANAPICK_AI_URL}
-            target="_blank"
-            rel="noopener"
-            onClick={() => {
-              sendGaEvent("ai_crosslink_click", { placement: "menu", target: "manapick_ai" });
-              onClose();
-            }}
-          >
-            <span>manapick AI ↗</span>
-            <small>公式AI版・AIツールを選ぶ</small>
-          </a>
-          <a
-            className="site-menu-link site-menu-license-link"
-            href={MANAPICK_LICENSE_URL}
-            target="_blank"
-            rel="noopener"
-            onClick={() => {
-              sendGaEvent("license_crosslink_click", { placement: "menu", target: "manapick_license" });
-              onClose();
-            }}
-          >
-            <span>manapick license ↗</span>
-            <small>資格・検定を比較</small>
-          </a>
-          <a
-            className="site-menu-link site-menu-career-link"
-            href={MANAPICK_CAREER_URL}
-            target="_blank"
-            rel="noopener"
-            onClick={() => {
-              sendGaEvent("career_crosslink_click", { placement: "menu", target: "manapick_career" });
-              onClose();
-            }}
-          >
-            <span>manapick career ↗</span>
-            <small>仕事内容と学ぶ順番を確認</small>
-          </a>
-          <a
-            className="site-menu-link site-menu-company-link"
-            href={MANAPICK_COMPANY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => {
-              sendGaEvent("company_crosslink_click", { placement: "menu", target: "manapick_company" });
-              onClose();
-            }}
-          >
-            <span>manapick company ↗</span>
-            <small>企業の業績・年収を読む</small>
-          </a>
-        </nav>
-      </aside>
-    </div>
   );
 }
 

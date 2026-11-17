@@ -1,3 +1,4 @@
+import RailMenuButton from "@/components/RailMenuButton";
 import { NETWORK_STATIONS } from "@/lib/network-stations";
 
 // 全ページ最上部のネットワークレール（manapick network 共通部品）。
@@ -39,6 +40,7 @@ export default function NetworkRail() {
           X @manapick_app
         </a>
       </div>
+      <RailMenuButton />
     </div>
   );
 }

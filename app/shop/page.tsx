@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BrandLogo from "@/components/BrandLogo";
 import { absoluteUrl } from "@/lib/manapick";
+import Phrase from "@/components/Phrase";
 
 const title = "manapi商店 | 学びとAI作業を続けやすくする6つの定番";
 const description = "学習動画やAI作業を続けやすくする実在商品を、姿勢・画面・操作・ローカルAIの用途別に1商品ずつ紹介します。";
@@ -50,7 +51,7 @@ export default function ShopPage() {
       <nav className="mp-shop-breadcrumbs" aria-label="パンくず"><Link href="/">トップ</Link><span>/</span><span>manapi商店</span></nav>
       <header className="mp-shop-hero">
         <span aria-hidden="true">MP</span>
-        <div><p>PR / MANAPI SHOP</p><h1>manapi商店</h1><strong>学ぶ前に買うのではなく、続かない理由が道具にあるときだけ。</strong><p>6商品だけに絞り、学習とAI作業のどこで役立つか、買う前に何を見るかを整理しました。</p></div>
+        <div><p>PR / MANAPI SHOP</p><h1><Phrase>manapi商店</Phrase></h1><strong>学ぶ前に買うのではなく、続かない理由が道具にあるときだけ。</strong><p>6商品だけに絞り、学習とAI作業のどこで役立つか、買う前に何を見るかを整理しました。</p></div>
       </header>
 
       <nav className="mp-shop-network" aria-label="3サイトのmanapi商店">

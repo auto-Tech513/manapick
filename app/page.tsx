@@ -7,6 +7,7 @@ import { absoluteUrl, genreDisplayName, isoDuration, videoPath, videos } from "@
 import { rankedVideos } from "@/lib/rankings";
 import { siteStats } from "@/lib/site-stats";
 import { phraseBreaks } from "@/lib/phrase-breaks";
+import { siteMenuBreaks } from "@/lib/site-menu-breaks";
 
 const buildReferenceTime = Date.now();
 // 動画タイトルの文節境界（BudouX、ビルド時）。クライアント部品 ManapickApp へオフセットだけ渡す。
@@ -211,7 +212,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
-      <ManapickApp referenceTime={buildReferenceTime} titleBreaks={videoTitleBreaks} />
+      <ManapickApp referenceTime={buildReferenceTime} titleBreaks={videoTitleBreaks} menuBreaks={siteMenuBreaks()} />
       <LatestNewsBand />
       <section className="lb-sec" aria-labelledby="home-faq-title">
         <div className="lb-faq">

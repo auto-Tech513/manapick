@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import BrandLogo from "@/components/BrandLogo";
+import Phrase from "@/components/Phrase";
 
 type PolicyPageProps = {
   title: string;
@@ -27,7 +28,7 @@ export default function PolicyPage({ title, lead, sections, children }: PolicyPa
       </header>
       <article className="mx-auto max-w-4xl px-4 py-10">
         <p className="text-sm font-bold text-leaf">Manapick公式情報</p>
-        <h1 className="mt-2 text-3xl font-black">{title}</h1>
+        <h1 className="mt-2 text-3xl font-black"><Phrase>{title}</Phrase></h1>
         <p className="mt-4 max-w-3xl leading-8 text-ink/76">{lead}</p>
         <div className="mt-8 grid gap-6">
           {sections.map((section) => (

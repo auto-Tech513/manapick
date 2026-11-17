@@ -15,6 +15,7 @@ import {
   type Video
 } from "@/lib/manapick";
 import { recentVideos } from "@/lib/rankings";
+import Phrase from "@/components/Phrase";
 
 const newTitle = "最新の無料学習動画｜YouTube公開日順 | Manapick";
 const newDescription = "生成AI、プログラミング、英語、資格など10ジャンルの無料YouTube学習動画を、公開日の新しい順に確認できます。";
@@ -103,8 +104,10 @@ export default function NewPage() {
       <section className="knowledge-hero">
         <p className="section-eyebrow">New Videos</p>
         <h1>
+          <Phrase>
           <span className="knowledge-title-phrase">最近追加・更新した</span>
           <span className="knowledge-title-phrase">動画</span>
+          </Phrase>
         </h1>
         <p>{newDescription}</p>
         <dl className="new-freshness-summary" aria-label="掲載動画の鮮度">

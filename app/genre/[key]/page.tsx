@@ -23,6 +23,7 @@ import { MIN_SUB_PAGE_VIDEOS, eligibleSubPagePath, eligibleSubPagesForGenre } fr
 import GuidePrCard from "@/components/GuidePrCard";
 import prLinksData from "@/content/pr-links.json";
 import type { GuidePrLink } from "@/lib/pr-links";
+import Phrase from "@/components/Phrase";
 
 const guidePrLinks = prLinksData as Record<string, GuidePrLink[]>;
 
@@ -401,7 +402,7 @@ export default async function GenrePage({ params }: GenrePageProps) {
         <span>{label}</span>
       </nav>
 
-      <h1 className="genre-hub-title">{seo.h1}</h1>
+      <h1 className="genre-hub-title"><Phrase>{seo.h1}</Phrase></h1>
       <p className="genre-hub-lead">
         {seo.lead}
       </p>

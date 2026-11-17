@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import StartQuiz from "@/components/StartQuiz";
+import Phrase from "@/components/Phrase";
 
 export const dynamic = "force-static";
 
@@ -17,7 +18,7 @@ export default function StartPage() {
         <div className="rounded-2xl border border-line bg-[linear-gradient(135deg,#f8fbff_0%,#eff8f4_100%)] p-5 shadow-card sm:p-8">
           <p className="text-sm font-black text-leaf">3問で決める</p>
           <h1 className="mt-2 max-w-3xl text-3xl font-black leading-tight text-ink sm:text-5xl">
-            “今日の1本”を、迷わず選ぶ。
+            <Phrase>“今日の1本”を、迷わず選ぶ。</Phrase>
           </h1>
           <p className="mt-4 max-w-3xl text-base font-bold leading-8 text-muted sm:text-lg">
             ジャンル・レベル・使える時間に答えるだけで、運営者が7軸35点で採点した学習動画から、

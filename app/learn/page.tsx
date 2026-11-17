@@ -3,6 +3,7 @@ import Link from "next/link";
 import BrandLogo from "@/components/BrandLogo";
 import { absoluteUrl } from "@/lib/manapick";
 import { learningIntentPath, learningIntents } from "@/lib/learning-intents";
+import Phrase from "@/components/Phrase";
 
 const pageTitle = "検索で多い学習テーマ別入口｜無料YouTube動画の見る順 | Manapick";
 const pageDescription = "検索でよく探される学習テーマを、無料YouTube動画の見る順に整理。Excel統計、Python、Power BI、FP3級過去問、社労士、AIプロンプトなどの入口です。各テーマで最初に見る動画、対象読者、公式の一次情報への導線まで確認できます。";
@@ -79,7 +80,7 @@ export default function LearnIndexPage() {
       </nav>
       <section className="knowledge-hero learning-intent-hero">
         <p className="section-eyebrow">検索から来た人へ</p>
-        <h1>検索で多い学習テーマを、見る順で選ぶ。</h1>
+        <h1><Phrase>検索で多い学習テーマを、見る順で選ぶ。</Phrase></h1>
         <p>
           検索で実際に見つけられているテーマを、無料YouTube動画・ロードマップ・公式情報・FAQにまとめました。まず1ページで答えと見る順をつかみ、必要な動画だけを比較できます。
         </p>

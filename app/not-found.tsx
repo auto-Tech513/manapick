@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BrandLogo from "@/components/BrandLogo";
+import Phrase from "@/components/Phrase";
 
 // レイアウトの robots(index) と Next.js の既定 noindex が重複しないよう、404は明示的に noindex にする。
 export const metadata: Metadata = {
@@ -24,7 +25,7 @@ export default function NotFound() {
       <section className="mx-auto grid min-h-[70vh] max-w-4xl place-items-center px-4 py-12">
         <div className="w-full rounded-2xl border border-ink/10 bg-white p-6 shadow-card sm:p-10">
           <p className="text-sm font-bold text-leaf">404</p>
-          <h1 className="mt-2 text-3xl font-black leading-tight sm:text-5xl">ページが見つかりません</h1>
+          <h1 className="mt-2 text-3xl font-black leading-tight sm:text-5xl"><Phrase>ページが見つかりません</Phrase></h1>
           <p className="mt-4 max-w-2xl leading-8 text-ink/76">
             URLが変更されたか、ページが削除された可能性があります。トップページ、ロードマップ、ガイド記事から目的の学習動画を探せます。
           </p>

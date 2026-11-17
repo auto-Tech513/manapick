@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import BrandLogo, { BrandMark } from "@/components/BrandLogo";
+import BrandLogo from "@/components/BrandLogo";
 import { absoluteUrl } from "@/lib/manapick";
+import Phrase from "@/components/Phrase";
 
 const scorePageTitle = "採点方法 | Manapick";
 const scorePageDescription = "Manapickスコア（7軸35点満点）の考え方を説明します。各動画を内容の充実度・正確さ・分かりやすさなど7つの観点で採点する基準、根拠の置き方と確認方法、広告色の強い動画や古くなった動画を除外する方針まで、採点の裏側を公開しています。";
@@ -100,7 +101,7 @@ export default function AboutScorePage() {
 
       <section className="score-hero">
         <p className="section-eyebrow">Manapickスコア</p>
-        <h1>採点方法</h1>
+        <h1><Phrase>採点方法</Phrase></h1>
         <p>
           Manapickは、運営者の視聴、またはYouTube上の公開情報の確認にもとづき、掲載動画を7軸35点で採点しています。学習動画を過度に大きく見せず、選定理由とスコアの根拠を分かりやすく表示します。
         </p>
@@ -164,10 +165,7 @@ export default function AboutScorePage() {
       </section>
 
         <footer className="score-page-footer">
-          <p>
-            <BrandMark className="h-7 w-7" />
-            <span>Manapick</span>
-          </p>
+          <p className="lb-wordmark mp-foot-wordmark">manapick</p>
           <Link href="/">トップへ戻る</Link>
           <Link href="/guide/generative-ai/">ガイド記事を読む</Link>
           <Link href="/contact/">お問い合わせ</Link>

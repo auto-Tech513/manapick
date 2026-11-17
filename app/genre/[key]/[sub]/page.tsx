@@ -28,6 +28,7 @@ import {
   findEligibleSubPage,
   subPageVideos
 } from "@/lib/sub-pages";
+import Phrase from "@/components/Phrase";
 
 type SubGenrePageProps = {
   params: Promise<{ key: string; sub: string }>;
@@ -186,7 +187,7 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
       <article className="sub-topic-article">
         <header className="sub-topic-hero">
           <p className="section-eyebrow"><span className="eyebrow-chunk">{genreName}</span> / <span className="eyebrow-chunk">無料YouTubeロードマップ</span></p>
-          <h1>{title}</h1>
+          <h1><Phrase>{title}</Phrase></h1>
           <p>{description}</p>
           <div className="sub-topic-stats" aria-label="ページの信頼情報">
             <div className="sub-topic-stat">

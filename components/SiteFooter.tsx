@@ -22,7 +22,7 @@ const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
       { label: "YouTube学習動画おすすめ", href: "/youtube-learning/" },
       { label: `${siteStats.totalVideos}本の学習動画データ`, href: "/research/youtube-learning-data/" },
       { label: "検索で多い学習テーマ", href: "/learn/" },
-      { label: "なりたい職業から選ぶ", href: "/guide/" },
+      { label: "学ぶ順番（ロードマップ）から選ぶ", href: "/guide/" },
       { label: `${genreCount}ジャンル一覧`, href: "/#genre-picker" },
       { label: "ランキング", href: "/ranking/" },
       { label: "新着動画", href: "/new/" },

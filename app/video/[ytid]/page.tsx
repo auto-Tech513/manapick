@@ -44,6 +44,7 @@ import { nextWatchVideo } from "@/lib/rankings";
 import { genrePosition } from "@/lib/site-stats";
 import AdSlot from "@/components/AdSlot";
 import "../../video-detail.css";
+import Phrase from "@/components/Phrase";
 
 type VideoPageProps = {
   params: Promise<{ ytid: string }>;
@@ -249,7 +250,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
               </span>
             ) : null}
           </div>
-          <h1 className="vd-title">{video.title}</h1>
+          <h1 className="vd-title"><Phrase>{video.title}</Phrase></h1>
           <p className="vd-meta">
             {channel ? <span>{channel}</span> : null}
             {publishedDate ? (
@@ -292,7 +293,9 @@ export default async function VideoPage({ params }: VideoPageProps) {
                   aria-hidden="true"
                 />
                 <span
-                  className="vd-plot-label"
+                  className={
+                    positionPercent >= 70 ? "vd-plot-label is-end" : positionPercent <= 30 ? "vd-plot-label is-start" : "vd-plot-label"
+                  }
                   style={{ left: `${positionPercent}%` } as CSSProperties}
                   aria-hidden="true"
                 >
@@ -395,6 +398,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
               ))}
             </ol>
             {video.editorNote ? <p className="editor-note">編集メモ: {video.editorNote}</p> : null}
+            <div className="vd-watch-row">
             <TrackedGaLink
               className="vd-watch"
               href={video.url}
@@ -406,6 +410,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
               YouTubeで視聴 <span aria-hidden="true">↗</span>
             </TrackedGaLink>
             <p className="video-embed-note">※埋め込み再生できない動画はYouTubeでご覧ください。</p>
+            </div>
           </section>
 
           <section id="vd-memo" className="vd-sec" aria-labelledby="vd-memo-title">
@@ -640,7 +645,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
             <header className="vd-sec-head">
               <span className="vd-sec-no">NEXT</span>
               <h2 id="related-title">次に見る6本</h2>
-              <Link className="vd-sec-more" href="/#search">一覧へ戻る</Link>
+              <Link className="vd-sec-more" href={`/genre/${video.genre}/`}>{genreDisplayName(video.genre)}の動画一覧へ</Link>
             </header>
             <div className="vd-related-grid">
               {related.map((item) => (

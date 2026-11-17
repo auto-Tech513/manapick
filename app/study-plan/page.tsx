@@ -12,6 +12,7 @@ import {
   videos,
   youtubeThumbnail
 } from "@/lib/manapick";
+import Phrase from "@/components/Phrase";
 
 type Roadmap = {
   genre: string;
@@ -134,7 +135,7 @@ export default function StudyPlanPage() {
       </nav>
       <section className="study-plan-hero">
         <p className="section-eyebrow">見るだけで終わらせない</p>
-        <h1>無料動画を、今週の予定に変える。</h1>
+        <h1><Phrase>無料動画を、今週の予定に変える。</Phrase></h1>
         <p>
           ジャンル・1回の学習時間・週の学習日数を選ぶと、採点済み動画を学習日ごとに組み合わせて1週間の予定を作ります。お休みの日も含めて無理なく続けられ、Googleカレンダーやスマホのカレンダーにも入れられます。
         </p>
