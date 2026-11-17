@@ -4,7 +4,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 動画はYouTube上で公開されているものを掲載し、YouTubeへのリンクまたはYouTube公式プレーヤーで紹介します。ダウンロードや再配布は扱いません。
 
 ## 公開中の10ジャンル
-- 生成AI（181本）: https://manapick.app/genre/ai/
+- 生成AI（183本）: https://manapick.app/genre/ai/
 - プログラミング・IT（71本）: https://manapick.app/genre/prog/
 - 動画編集・クリエイティブ（73本）: https://manapick.app/genre/video/
 - 語学・英語（61本）: https://manapick.app/genre/english/
@@ -12,7 +12,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - Webマーケ・SNS運用（38本）: https://manapick.app/genre/marke/
 - Office・資料作成（43本）: https://manapick.app/genre/biz/
 - 資格・検定（243本）: https://manapick.app/genre/shikaku/
-- 会計・経営系資格（62本）: https://manapick.app/genre/kaikei/
+- 会計・経営系資格（63本）: https://manapick.app/genre/kaikei/
 - お金・投資（32本）: https://manapick.app/genre/money/
 
 ## 採点方法
@@ -39,7 +39,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 2026-10-19 会議が終わるとChatにまとめが自動投稿。決定事項と担当者までセットで: https://manapick.app/news/2026-10-19-google-chat-meeting-recaps/ | 出典 Google Workspace Updates
 
 ## ジャンル別AEOインデックス
-### 生成AI（181本）
+### 生成AI（183本）
 - ジャンルURL: https://manapick.app/genre/ai/
 - ガイドURL: https://manapick.app/guide/generative-ai/
 - 主なトピック: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Cline / ComfyUI / Copilot / DeepL / DeepSeek / ElevenLabs / Figma(Figma AI) / Gamma / Gemini / Gemma / GitHub Copilot / Google AI Mode / Google Veo / Google翻訳 / Grok / Hailuo AI / HeyGen / Kling AI / Manus / Midjourney / Notion AI / Ollama / OpenAI Codex / OpenClaw / Perplexity / PixVerse / Qwen / Replit Agent / Runway / Siri AI / Stable Diffusion / Suno / Supabase / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
@@ -159,10 +159,10 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【2025年改訂版】危険物乙4「危険物の性質」を20分で完全解説｜特殊引火物〜動植物油類まで網羅｜聞き流しOK・試験直前対策にも！（資格・検定 / 危険物乙4 / 31/35 / 21分 / publishedAt=2025-03-20T09:00:39Z） https://manapick.app/video/YRnaxaX46pY/
 5. [セルフネイル🔰初心者] 知らないと損するベースジェルの作り方をプロが徹底解説（反り爪、下地作り）（資格・検定 / ネイリスト / 31/35 / 18分 / publishedAt=2025-06-14T11:05:06Z） https://manapick.app/video/zqz3bnvSg9I/
 
-### 会計・経営系資格（62本）
+### 会計・経営系資格（63本）
 - ジャンルURL: https://manapick.app/genre/kaikei/
 - ガイドURL: https://manapick.app/guide/bookkeeping/
-- 主なトピック: FP / ビジネス会計検定試験 / 中小企業診断士 / 税理士 / 簿記
+- 主なトピック: FP / ビジネス会計検定試験 / 中小企業診断士 / 公認会計士 / 税理士 / 簿記
 - ロードマップ: 会計・経営系資格ロードマップ
   - STEP1（初級）: 簿記3級の範囲で、仕訳と決算書の基本構造がわかる。｜動画: ✧第1回✧【簿記3級】入門①（簿記とは？） / ✧第2回✧【簿記3級】入門②（決算書・5要素） / ✧第3回✧【簿記3級】入門③（一連の流れ）
   - STEP2（中級）: 簿記2級・FP3級へ進み、ビジネスとお金の知識を体系化する。｜動画: 【初心者も必見】簿記3級の次に「簿記2級・1級」を学ぶ5つのメリット【お金の勉強初級編】：（アニメ動画）第358回 / FP3級爆速講義 #5 難しい公的年金のしくみを初学者でも基礎からスッキリ理解（ライフ） / 【FP2級】ここからFP2級に簡単合格！FPの職業倫理と関連法規から始まるNo.1FP講師のプロ講義（完全A01）
@@ -221,7 +221,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 ## 主要URL
 - トップ: https://manapick.app/
 - YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
-- YouTube学習動画842本の独自集計: https://manapick.app/research/youtube-learning-data/
+- YouTube学習動画845本の独自集計: https://manapick.app/research/youtube-learning-data/
 - 7日学習プラン: https://manapick.app/study-plan/
 - Manapick Network（学ぶ・AI・資格・仕事・企業）: https://manapick.app/network/
 - 学習ロードマップ一覧: https://manapick.app/guide/

@@ -1602,5 +1602,29 @@
    "name": "賃貸の敷金と更新料の仕組み",
    "url": "https://politics.manapick.app/law/rent-deposit-renewal/"
   }
+ ],
+ "bpU_0L9ARkw": [
+  {
+   "site": "license",
+   "slug": "cpa",
+   "name": "公認会計士",
+   "url": "https://license.manapick.app/license/cpa/"
+  }
+ ],
+ "dnowmijRY_8": [
+  {
+   "site": "ai",
+   "slug": "kling",
+   "name": "Kling AI",
+   "url": "https://ai.manapick.app/tool/kling/"
+  }
+ ],
+ "EMhYorxAjso": [
+  {
+   "site": "ai",
+   "slug": "veo",
+   "name": "Google Veo",
+   "url": "https://ai.manapick.app/tool/veo/"
+  }
  ]
 }
