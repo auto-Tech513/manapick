@@ -4,6 +4,7 @@ import AdSlot from "@/components/AdSlot";
 import BrandLogo from "@/components/BrandLogo";
 import { absoluteUrl } from "@/lib/manapick";
 import { newsItems, newsPath, newsReadingMinutes } from "@/lib/news";
+import Phrase from "@/components/Phrase";
 
 const title = "学びニュース | 公式発表を学習と仕事に生かす | Manapick";
 const description = "生成AI、Google Workspace、Excelなどの公式発表を確認し、学習や仕事で何を確認すべきかまで整理するManapickの学びニュース。";
@@ -96,7 +97,7 @@ export default function NewsPage() {
       </nav>
       <section className="knowledge-hero news-index-hero">
         <p className="section-eyebrow">Learning News</p>
-        <h1>公式発表を、学びに使える形へ</h1>
+        <h1><Phrase>公式発表を、学びに使える形へ</Phrase></h1>
         <p>{description}</p>
         <div className="news-index-principles" aria-label="編集方針">
           <span>公式一次情報を確認</span>

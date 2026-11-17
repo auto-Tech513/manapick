@@ -5,6 +5,8 @@ import { eligibleSubPagePath, eligibleSubPagesForGenre } from "@/lib/sub-pages";
 import { guides, guidePath } from "@/lib/guides";
 import { learningIntentPath, learningIntents } from "@/lib/learning-intents";
 import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_LICENSE_URL } from "@/lib/brand-links";
+import Phrase from "@/components/Phrase";
+import BrandLogo from "@/components/BrandLogo";
 
 export const dynamic = "force-static";
 
@@ -39,80 +41,106 @@ const mainPages: { label: string; href: string }[] = [
 
 export default function AllPagesIndex() {
   return (
-    <main className="static-page" style={{ maxWidth: 880, margin: "0 auto", padding: "24px 16px 64px", lineHeight: 1.8 }}>
-      <h1>サイトマップ（全ページ一覧）</h1>
-      <p>
-        Manapickの全ジャンル・サブカテゴリ・ロードマップ・主要ページの一覧です。学び直したいテーマから、運営者が7軸35点で採点し“見る順”に整理した無料YouTube学習動画へ進めます。登録不要・全部無料です。
-      </p>
+    <main className="knowledge-page mp-sitemap-page">
+      <header className="knowledge-header">
+        <Link href="/" aria-label="Manapick トップへ">
+          <BrandLogo compact />
+        </Link>
+        <Link className="knowledge-header-link" href="/guide/">ロードマップ</Link>
+      </header>
+      <nav className="knowledge-breadcrumb" aria-label="パンくず">
+        <Link href="/">ホーム</Link>
+        <span aria-hidden="true">›</span>
+        <span>サイトマップ</span>
+      </nav>
+      <section className="knowledge-hero">
+        <p className="section-eyebrow">Sitemap</p>
+        <h1><Phrase>サイトマップ（全ページ一覧）</Phrase></h1>
+        <p>
+          Manapickの全ジャンル・サブカテゴリ・ロードマップ・主要ページの一覧です。学び直したいテーマから、運営者が7軸35点で採点し“見る順”に整理した無料YouTube学習動画へ進めます。登録不要・全部無料です。
+        </p>
+      </section>
 
-      <h2>ジャンルとサブカテゴリ</h2>
-      {publishedGenreKeys.map((key) => {
-        const subs = eligibleSubPagesForGenre(key);
-        return (
-          <section key={key} style={{ margin: "18px 0" }}>
-            <h3 style={{ margin: "0 0 6px" }}>
-              <Link href={`/genre/${key}/`}>{genreDisplayName(key)}の学習動画一覧</Link>
-            </h3>
-            {subs.length > 0 ? (
-              <ul>
-                {subs.map((item) => (
-                  <li key={item.sub}>
-                    <Link href={eligibleSubPagePath(item)}>
-                      {genreDisplayName(key)}：{item.sub}（{item.count}本）
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            ) : null}
-          </section>
-        );
-      })}
+      <section className="knowledge-section" aria-labelledby="sitemap-genres">
+        <h2 id="sitemap-genres">ジャンルとサブカテゴリ</h2>
+        <div className="mp-sitemap-genres">
+          {publishedGenreKeys.map((key) => {
+            const subs = eligibleSubPagesForGenre(key);
+            return (
+              <section key={key} className="mp-sitemap-genre">
+                <h3>
+                  <Link href={`/genre/${key}/`}>{genreDisplayName(key)}の学習動画一覧</Link>
+                </h3>
+                {subs.length > 0 ? (
+                  <ul className="mp-sitemap-list">
+                    {subs.map((item) => (
+                      <li key={item.sub}>
+                        <Link href={eligibleSubPagePath(item)}>
+                          {genreDisplayName(key)}：{item.sub}（{item.count}本）
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </section>
+            );
+          })}
+        </div>
+      </section>
 
-      <h2>ロードマップ（見る順ガイド）</h2>
-      <ul>
-        {guides.map((guide) => (
-          <li key={guide.slug}>
-            <Link href={guidePath(guide.slug)}>{guide.title}</Link>
+      <section className="knowledge-section" aria-labelledby="sitemap-guides">
+        <h2 id="sitemap-guides">ロードマップ（見る順ガイド）</h2>
+        <ul className="mp-sitemap-list">
+          {guides.map((guide) => (
+            <li key={guide.slug}>
+              <Link href={guidePath(guide.slug)}>{guide.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="knowledge-section" aria-labelledby="sitemap-intents">
+        <h2 id="sitemap-intents">検索で多い学習テーマ</h2>
+        <ul className="mp-sitemap-list">
+          {learningIntents.map((intent) => (
+            <li key={intent.slug}>
+              <Link href={learningIntentPath(intent.slug)}>{intent.query}：{intent.h1}</Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="knowledge-section" aria-labelledby="sitemap-main">
+        <h2 id="sitemap-main">主要ページ</h2>
+        <ul className="mp-sitemap-list">
+          {mainPages.map((page) => (
+            <li key={page.href}>
+              <Link href={page.href}>{page.label}</Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="knowledge-section" aria-labelledby="sitemap-sisters">
+        <h2 id="sitemap-sisters">姉妹サイト</h2>
+        <ul className="mp-sitemap-list">
+          <li>
+            <a href={MANAPICK_AI_URL} target="_blank" rel="noopener">
+              manapick AI（使えるAIと使い方を料金・無料枠つきで比較）
+            </a>
           </li>
-        ))}
-      </ul>
-
-      <h2>検索で多い学習テーマ</h2>
-      <ul>
-        {learningIntents.map((intent) => (
-          <li key={intent.slug}>
-            <Link href={learningIntentPath(intent.slug)}>{intent.query}：{intent.h1}</Link>
+          <li>
+            <a href={MANAPICK_LICENSE_URL} target="_blank" rel="noopener">
+              manapick license（資格・検定の要件、費用、申込方法を比較）
+            </a>
           </li>
-        ))}
-      </ul>
-
-      <h2>主要ページ</h2>
-      <ul>
-        {mainPages.map((page) => (
-          <li key={page.href}>
-            <Link href={page.href}>{page.label}</Link>
+          <li>
+            <a href={MANAPICK_CAREER_URL} target="_blank" rel="noopener">
+              manapick career（仕事内容、必要スキル、学ぶ順番を公式情報から確認）
+            </a>
           </li>
-        ))}
-      </ul>
-
-      <h2>姉妹サイト</h2>
-      <ul>
-        <li>
-          <a href={MANAPICK_AI_URL} target="_blank" rel="noopener">
-            manapick AI（使えるAIと使い方を料金・無料枠つきで比較）
-          </a>
-        </li>
-        <li>
-          <a href={MANAPICK_LICENSE_URL} target="_blank" rel="noopener">
-            manapick license（資格・検定の要件、費用、申込方法を比較）
-          </a>
-        </li>
-        <li>
-          <a href={MANAPICK_CAREER_URL} target="_blank" rel="noopener">
-            manapick career（仕事内容、必要スキル、学ぶ順番を公式情報から確認）
-          </a>
-        </li>
-      </ul>
+        </ul>
+      </section>
     </main>
   );
 }

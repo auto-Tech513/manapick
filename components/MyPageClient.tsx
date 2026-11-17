@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import BrandLogo, { BrandMark } from "@/components/BrandLogo";
+import BrandLogo from "@/components/BrandLogo";
 import MetricHelp from "@/components/MetricHelp";
 import PwaInstallButton from "@/components/PwaInstallButton";
 import genresData from "@/content/genres.json";
@@ -50,6 +50,24 @@ export default function MyPageClient() {
 
   useEffect(() => {
     sendGaEvent("my_open", { source: "my_page" });
+  }, []);
+
+  // 下部タブの「あとで見る」（/my/#my-saved）など、#付きで来たときは該当の折りたたみを開いてその位置に着地させる。
+  useEffect(() => {
+    function openHashTarget() {
+      const id = decodeURIComponent(window.location.hash.slice(1));
+      if (!id) return;
+      const target = document.getElementById(id);
+      if (!target) return;
+      if (target instanceof HTMLDetailsElement) target.open = true;
+      window.setTimeout(() => target.scrollIntoView({ block: "start", behavior: "auto" }), 50);
+    }
+    const timer = window.setTimeout(openHashTarget, 200);
+    window.addEventListener("hashchange", openHashTarget);
+    return () => {
+      window.clearTimeout(timer);
+      window.removeEventListener("hashchange", openHashTarget);
+    };
   }, []);
 
   const watchedSet = useMemo(() => new Set(watched.items), [watched.items]);
@@ -496,7 +514,7 @@ export default function MyPageClient() {
       </details>
 
       <footer className="my-footer">
-        <p><BrandMark className="h-7 w-7" /> <span>Manapick</span></p>
+        <p className="lb-wordmark mp-foot-wordmark">manapick</p>
         <Link href="/">トップへ戻る</Link>
       </footer>
     </main>

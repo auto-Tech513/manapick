@@ -8,6 +8,7 @@ import BrandLogo from "@/components/BrandLogo";
 import NetworkContextBand from "@/components/NetworkContextBand";
 import {
   absoluteUrl,
+  genreDisplayName,
   scoreText,
   videoPath,
   youtubeThumbnail,
@@ -22,6 +23,21 @@ import {
   relatedLearningIntents,
   type LearningIntent
 } from "@/lib/learning-intents";
+
+// 「関連ページへ進む」だけでは行き先が分からないため、行き先の種類に合わせた文言にする。
+function stepLinkLabel(href: string) {
+  const url = new URL(href, "https://manapick.app");
+  const parts = url.pathname.split("/").filter(Boolean).map((part) => decodeURIComponent(part));
+  if (parts[0] === "guide" && parts[1]) return "ロードマップを見る";
+  if (parts[0] === "genre" && parts[1] && parts[2]) return `${parts[2]}の動画一覧を見る`;
+  if (parts[0] === "genre" && parts[1]) return `${genreDisplayName(parts[1])}の動画一覧を見る`;
+  if (parts.length === 0 && url.searchParams.get("sub")) return `${url.searchParams.get("sub")}の動画を探す`;
+  if (parts.length === 0 && url.searchParams.get("genre")) return `${genreDisplayName(url.searchParams.get("genre") ?? "")}の動画を探す`;
+  if (parts[0] === "shop") return "manapi商店で見る";
+  if (parts[0] === "start") return "今日の1本診断へ";
+  if (parts[0] === "learn" && parts[1]) return "関連テーマを見る";
+  return "関連ページへ進む";
+}
 
 type LearnPageProps = {
   params: Promise<{ slug: string }>;
@@ -155,7 +171,7 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
                   {isExternal ? (
                     <a href={step.href} target="_blank" rel="noopener noreferrer">公式サイトで確認する</a>
                   ) : (
-                    <Link href={step.href}>関連ページへ進む</Link>
+                    <Link href={step.href}>{stepLinkLabel(step.href)}</Link>
                   )}
                 </div>
               </li>

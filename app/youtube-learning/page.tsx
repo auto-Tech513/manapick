@@ -8,6 +8,7 @@ import { learningIntentPath, learningIntents } from "@/lib/learning-intents";
 import { absoluteUrl, genreDisplayName, genreLabel, scoreText, videoPath, youtubeThumbnail, type Video } from "@/lib/manapick";
 import { rankedVideos } from "@/lib/rankings";
 import { siteStats } from "@/lib/site-stats";
+import Phrase from "@/components/Phrase";
 
 const pageTitle = "YouTube学習動画おすすめ｜無料で何から始めるか迷わない | Manapick";
 const pageDescription =
@@ -52,7 +53,7 @@ const steps = [
   {
     title: "15〜30分で見切れる1本から始める",
     body: "最初から長尺を選ぶと続きにくくなります。短めの動画で全体像をつかみ、必要なら長尺や教材で補う順番にします。",
-    href: "/ranking/#score"
+    href: "/?time=medium#search"
   },
   {
     title: "視聴済みを残して次へ進む",
@@ -198,8 +199,10 @@ export default function YoutubeLearningPage() {
       <section className="knowledge-hero youtube-learning-hero">
         <p className="section-eyebrow">無料動画で学び直す</p>
         <h1>
+          <Phrase>
           YouTube学習動画のおすすめを、
           <span className="knowledge-title-phrase">見る順まで決める。</span>
+          </Phrase>
         </h1>
         <p>
           「youtube おすすめ」「動画 勉強」「リスキリング 何から始める」で迷う人向けに、採点済み{siteStats.totalVideos}本から、最初の1本と次の順番を整理しました。

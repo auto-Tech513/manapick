@@ -14,6 +14,7 @@ import {
 import { absoluteUrl, genreDisplayName, publishedGenreKeys } from "@/lib/manapick";
 import { genreVideoCount } from "@/lib/site-stats";
 import professions from "@/content/professions.json";
+import Phrase from "@/components/Phrase";
 
 const pageTitle = "Manapick Network｜学ぶ・AI・資格・仕事・企業情報";
 const pageDescription = "Manapick、manapick AI、manapick license、manapick careerの役割と使い分けに加え、企業の業績や給与水準を一次情報で読めるmanapick companyへの導線を案内します。";
@@ -184,7 +185,7 @@ export default function NetworkPage() {
 
       <section className="network-page-hero">
         <p className="section-eyebrow">MANAPICK NETWORK</p>
-        <h1>学ぶところから、仕事の入口まで。</h1>
+        <h1><Phrase>学ぶところから、仕事の入口まで。</Phrase></h1>
         <p>
           Manapick Networkは、学習向けの4サイト（動画・AI・資格・仕事）と、企業情報のmanapick companyを合わせた5サイトです。企業の業績や給与水準は、manapick companyで一次情報をもとに確認できます。どこから入っても、同じ学習テーマを保ったまま次の判断へ進めます。
         </p>

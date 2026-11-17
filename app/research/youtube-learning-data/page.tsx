@@ -7,6 +7,7 @@ import {
   videos
 } from "@/lib/manapick";
 import { averageScoreOf, medianOf } from "@/lib/site-stats";
+import Phrase from "@/components/Phrase";
 
 const REVIEWED_AT = "2026-11-01";
 const reviewedLabel = (() => { const [y, m, d] = REVIEWED_AT.split("-").map(Number); return `${y}年${m}月${d}日`; })();
@@ -126,7 +127,7 @@ export default function YoutubeLearningDataPage() {
 
       <section className="knowledge-hero research-data-hero">
         <p className="section-eyebrow">Manapick独自集計</p>
-        <h1>YouTube学習動画{videos.length}本を分析して分かった、選びやすい1本の条件</h1>
+        <h1><Phrase>YouTube学習動画{videos.length}本を分析して分かった、選びやすい1本の条件</Phrase></h1>
         <p>
           Manapick掲載動画を、長さ・ジャンル・公開日・スコアで集計しました。最初の1本は「30分以下」と「次に見る順番」がある動画を候補にすると、選択肢を絞りやすくなります。
         </p>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import BrandLogo from "@/components/BrandLogo";
 import { siteFaqItems } from "@/content/site-faq";
 import { absoluteUrl } from "@/lib/manapick";
+import Phrase from "@/components/Phrase";
 
 const faqTitle = "よくある質問 | Manapick";
 const faqDescription = "Manapickの使い方、採点方法、確認・採点の方針、manapick AIとの違いをまとめました。動画の選び方、7軸35点スコアの見方、掲載・除外の基準、姉妹サイトとの役割分担など、よくある質問に運営者が回答しています。";
@@ -73,7 +74,7 @@ export default function FaqPage() {
       </nav>
       <section className="knowledge-hero">
         <p className="section-eyebrow">FAQ</p>
-        <h1>よくある質問</h1>
+        <h1><Phrase>よくある質問</Phrase></h1>
         <p>{faqDescription}</p>
       </section>
       <section className="knowledge-section" aria-labelledby="faq-list-title">

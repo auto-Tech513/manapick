@@ -4143,3 +4143,283 @@ input, select, textarea { min-width: 0; max-width: 100%; }
     word-break: normal;
   }
 }
+
+/* =====================================================================
+   全ページ作り込み（2026-11-17 full audit）
+   ===================================================================== */
+
+/* ---------- メニュー（components/SiteMenu）：トップ・ヘッダーと同じ紙・黒線・明朝・Barlow ---------- */
+.mp-menu-layer { position: fixed; inset: 0; z-index: 2000; }
+.mp-menu-backdrop { position: absolute; inset: 0; border: 0; padding: 0; background: rgba(17, 19, 24, 0.52); cursor: pointer; }
+.mp-menu {
+  position: absolute; top: 0; right: 0; bottom: 0;
+  display: flex; flex-direction: column;
+  width: min(420px, 100vw);
+  background: var(--nw-paper); color: var(--nw-ink);
+  border-left: 1px solid var(--nw-ink);
+  animation: mp-menu-in 220ms ease-out;
+}
+@keyframes mp-menu-in { from { transform: translateX(100%); } to { transform: translateX(0); } }
+@media (prefers-reduced-motion: reduce) { .mp-menu { animation: none; } }
+.mp-menu-head {
+  display: flex; align-items: center; gap: 12px;
+  padding: max(12px, env(safe-area-inset-top)) 14px 12px 20px;
+  border-bottom: 2px solid var(--nw-ink);
+}
+.mp-menu-mark { font-size: 24px; }
+.mp-menu-kicker { display: flex; align-items: baseline; gap: 8px; margin: 0; font-size: 12px; font-weight: 700; color: var(--nw-ink-2); }
+.mp-menu-kicker .num { font-family: var(--font-num); font-size: 14px; font-weight: 700; letter-spacing: 0.18em; color: var(--nw-mp); }
+.mp-menu-close {
+  display: grid; place-items: center; flex: none; margin-left: auto;
+  width: 44px; height: 44px; padding: 0;
+  border: 1.5px solid var(--nw-ink); border-radius: 999px; background: #fff; color: var(--nw-ink); cursor: pointer;
+}
+.mp-menu-close svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+.mp-menu-close:hover { background: var(--nw-ink); color: #fff; }
+.mp-menu-body {
+  flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain;
+  display: grid; align-content: start; gap: 24px;
+  padding: 16px 20px calc(32px + env(safe-area-inset-bottom));
+}
+.mp-menu-here { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 14px; font-weight: 700; color: var(--nw-ink); }
+.mp-menu-here b, .mp-menu em {
+  flex: none; padding: 3px 10px; border-radius: 999px; background: var(--nw-mp); color: #fff;
+  font-size: 12px; font-style: normal; font-weight: 700; line-height: 1.5;
+}
+.mp-menu-sec h3 {
+  display: flex; align-items: baseline; gap: 10px; margin: 0;
+  padding-bottom: 8px; border-bottom: 1px solid var(--nw-ink);
+  font-family: var(--font-mincho); font-size: 19px; font-weight: 700; line-height: 1.4; letter-spacing: 0.02em;
+}
+.mp-menu-no { font-family: var(--font-num); font-size: 16px; font-weight: 600; letter-spacing: 0.06em; color: var(--nw-mp); }
+.mp-menu-en { margin-left: auto; font-family: var(--font-num); font-size: 12px; font-weight: 600; letter-spacing: 0.18em; color: var(--nw-ink-2); }
+.mp-menu-list, .mp-menu-chips, .mp-menu-genres, .mp-menu-info, .mp-menu-net ul { list-style: none; margin: 0; padding: 0; }
+.mp-menu-list li + li { border-top: 1px solid var(--nw-rule); }
+.mp-menu-list a {
+  display: flex; align-items: center; gap: 12px;
+  min-height: 62px; padding: 10px 2px 10px 0;
+  color: var(--nw-ink); text-decoration: none;
+}
+.mp-menu-t { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.mp-menu-t b { font-size: 16px; font-weight: 700; line-height: 1.45; }
+.mp-menu-t small { font-size: 12.5px; font-weight: 500; line-height: 1.55; color: var(--nw-ink-2); }
+.mp-menu-go {
+  flex: none; width: 30px; height: 30px; border: 1.5px solid var(--nw-ink); border-radius: 999px;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231f3a8a' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h13M13 6l6 6-6 6'/%3E%3C/svg%3E") center / 15px no-repeat;
+}
+.mp-menu-list a:hover b, .mp-menu-list a:focus-visible b { color: var(--nw-mp); }
+.mp-menu-list a:hover .mp-menu-go { background-color: var(--nw-tint); }
+.mp-menu-list a.is-current { margin-inline: -8px; padding-inline: 12px 8px; background: var(--nw-tint); box-shadow: inset 4px 0 0 var(--nw-mp); }
+.mp-menu-more { border-top: 1px solid var(--nw-rule); }
+.mp-menu-more summary {
+  display: flex; align-items: center; gap: 10px; min-height: 52px;
+  list-style: none; cursor: pointer; font-size: 15px; font-weight: 700;
+}
+.mp-menu-more summary::-webkit-details-marker { display: none; }
+.mp-menu-more summary small { font-family: var(--font-num); font-size: 15px; font-weight: 600; color: var(--nw-mp); }
+.mp-menu-more summary::after {
+  content: "+"; margin-left: auto; display: grid; place-items: center; flex: none;
+  width: 30px; height: 30px; border: 1.5px solid var(--nw-ink); border-radius: 999px; background: #fff;
+  font-family: var(--font-num); font-size: 20px; font-weight: 600; line-height: 1;
+}
+.mp-menu-more[open] summary::after { content: "−"; }
+.mp-menu-chips, .mp-menu-genres { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding: 2px 0 14px; }
+.mp-menu-chips a, .mp-menu-genres a {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  min-height: 48px; height: 100%; padding: 8px 12px; box-sizing: border-box;
+  border: 1px solid var(--nw-ink); border-radius: 10px; background: #fff;
+  color: var(--nw-ink); font-size: 13.5px; font-weight: 700; line-height: 1.45; text-decoration: none;
+}
+.mp-menu-genres small { flex: none; font-family: var(--font-num); font-size: 14px; font-weight: 600; color: var(--nw-mp); }
+.mp-menu-genres a.is-current { background: var(--nw-tint); border-color: var(--nw-mp); box-shadow: inset 3px 0 0 var(--nw-mp); }
+.mp-menu-chips a:hover, .mp-menu-genres a:hover { border-color: var(--nw-mp); color: var(--nw-mp); }
+.mp-menu-install:empty { display: none; }
+.mp-menu-install { margin-top: 10px; }
+.mp-menu-install .pwa-install-wrap { display: grid; width: 100%; }
+.mp-menu-install .pwa-install-button {
+  width: 100%; min-height: 48px; border: 1.5px solid var(--nw-ink); border-radius: 999px; background: #fff;
+  color: var(--nw-ink); box-shadow: none; font-size: 14px; font-weight: 700;
+}
+.mp-menu-info { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; }
+.mp-menu-info li { border-bottom: 1px solid var(--nw-rule); }
+.mp-menu-info a { display: flex; align-items: center; min-height: 46px; color: var(--nw-ink); font-size: 14px; font-weight: 500; text-decoration: none; }
+.mp-menu-info a:hover { color: var(--nw-mp); }
+.mp-menu-info a.is-current { color: var(--nw-mp); font-weight: 700; box-shadow: inset 0 -2px 0 var(--nw-mp); }
+.mp-menu-net { padding: 16px 16px 6px; border-radius: 18px; background: var(--nw-night); color: #fff; }
+.mp-menu-net h3 { margin: 0 0 4px; font-family: var(--font-num); font-size: 13px; font-weight: 600; letter-spacing: 0.18em; color: rgba(255, 255, 255, 0.72); }
+.mp-menu-net li + li { border-top: 1px solid rgba(255, 255, 255, 0.14); }
+.mp-menu-stn { display: flex; align-items: center; gap: 12px; min-height: 58px; padding: 8px 0; color: #fff; text-decoration: none; }
+.mp-menu-stn > i { flex: none; width: 16px; height: 16px; border: 4px solid var(--stc); border-radius: 999px; background: var(--nw-night); box-sizing: border-box; }
+.mp-menu-stn .mp-menu-t b { color: #fff; font-size: 15px; }
+.mp-menu-stn .mp-menu-t small { color: rgba(255, 255, 255, 0.74); }
+.mp-menu-stn.is-current em { background: #fff; color: var(--nw-night); }
+.mp-menu-ext { flex: none; font-family: var(--font-num); font-size: 18px; color: rgba(255, 255, 255, 0.72); }
+.mp-menu-stn:hover .mp-menu-t b { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- 検索欄（components/SiteSearchForm）：メニュー・フッターの欄もトップと同じ候補パネルを出す ---------- */
+.site-search-field { position: relative; min-width: 0; }
+.site-search-form .lb-ls { left: 0; right: auto; width: min(560px, 100%); min-width: min(340px, calc(100vw - 32px)); }
+.site-search-form.is-menu { border: 0; border-radius: 0; background: transparent; padding: 0; gap: 8px; }
+.site-search-form.is-menu label { color: var(--nw-ink-2); font-size: 12.5px; font-weight: 700; }
+.site-search-form.is-menu .site-search-row input {
+  min-height: 48px; border: 1.5px solid var(--nw-ink); border-radius: 999px; padding: 8px 18px; color: var(--nw-ink); background: #fff;
+}
+.site-search-form.is-menu .site-search-row button { min-height: 48px; border-radius: 999px; padding: 8px 20px; background: var(--nw-mp); }
+@media (max-width: 640px) {
+  /* SP は全画面：入力欄を上端に固定し、不透明な地で背後を覆う（トップの検索欄と同じ） */
+  .site-search-form.is-panel-open {
+    position: fixed; inset: 0; z-index: 2100;
+    display: flex; flex-direction: column; gap: 8px;
+    max-width: none; margin: 0;
+    padding: max(12px, env(safe-area-inset-top)) 16px calc(12px + env(safe-area-inset-bottom));
+    background: var(--nw-paper);
+  }
+  .site-search-form.is-panel-open label { color: var(--nw-ink-2); }
+  .site-search-form.is-panel-open .site-search-field { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 10px; }
+  .site-search-form.is-panel-open .lb-ls { position: static; flex: 1; min-height: 0; width: auto; min-width: 0; overflow-y: auto; }
+}
+.lb-ls-popular { border-top: 1px solid var(--nw-rule); }
+.lb-ls-popular { padding-top: 10px; }
+.lb-ls-recent + .lb-ls-popular { border-top: 1px solid var(--nw-rule); }
+
+/* ---------- 人気キーワード：ラベルの横に1つだけ並び、残りが不揃いに折り返していた → ラベルを上の行に、チップは揃った並びに ---------- */
+.lb-srch .popular-keyword-chips { display: grid; gap: 10px; align-items: start; }
+.lb-srch .popular-keyword-chips > span { margin: 0; }
+.lb-srch .popular-keyword-chips > div { display: flex; flex-wrap: wrap; gap: 8px; }
+@media (max-width: 640px) {
+  .lb-srch .popular-keyword-chips > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lb-srch .popular-keyword-chips button {
+    justify-content: center; text-align: center; min-width: 0;
+    padding: 6px 10px; font-size: 13.5px; line-height: 1.4;
+  }
+  .lb-srch .popular-keyword-chips button:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+
+/* ---------- 動画ページ：スコアカード「この動画 ○点」の吹き出しが端でカード外へはみ出す → 端では内側に寄せる ---------- */
+.vd-plot-label.is-end { transform: translateX(calc(-100% + 9px)); }
+.vd-plot-label.is-start { transform: translateX(-9px); }
+
+/* ---------- 動画ページ：「YouTubeで視聴」と直下の注記が密着 → 間隔をとって並べる ---------- */
+.vd-watch-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-top: 18px; }
+.vd-watch-row .vd-watch { margin-top: 0; }
+.vd-watch-row .video-embed-note { margin: 0; flex: 1 1 220px; font-size: 12.5px; font-weight: 500; line-height: 1.6; color: var(--nw-ink-2); }
+@media (max-width: 640px) {
+  .vd-watch-row { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .vd-watch-row .video-embed-note { flex: none; }
+}
+
+/* ---------- 学びニュース一覧：「Verified Updates／新しい順に読む」が枠の左端に密着 → 枠内の余白を他のセクションと同じに ---------- */
+.knowledge-section.news-index-section { padding: clamp(18px, 4vw, 28px); }
+@media (max-width: 640px) {
+  .knowledge-section.news-index-section { padding: 20px 16px; }
+}
+
+/* ---------- トップの検索候補（SP 全画面）が下部タブの下に隠れていた → 下部タブより前に出す（メニューより後ろ） ---------- */
+@media (max-width: 640px) {
+  .top-search-wrap.is-panel-open,
+  .lb-kw-wrap.is-panel-open { z-index: 1400; }
+}
+
+/* ---------- 動画ページ：「YouTube公開／日」のように語の途中で折れる → 項目ごとに改行させない（チャンネル名は除く） ---------- */
+.vd-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 22px; overflow: hidden; }
+.vd-meta > span { position: relative; white-space: nowrap; }
+.vd-meta > span:first-child { white-space: normal; min-width: 0; }
+/* 区切りの「・」は項目の左の余白に置き、行頭に来たものは枠の外（overflow: hidden）で見えなくする */
+.vd-meta > span + span::before { position: absolute; left: -18px; width: 14px; margin: 0; text-align: center; }
+
+/* ---------- 姉妹サイトの関連欄（NetworkContextBand）：旧デザイン（淡いグラデーションの箱）のまま → 駅のデザイン（白地・黒の細線・駅色の帯）に ---------- */
+.network-context-band {
+  background: #fff; border: 1px solid var(--nw-ink); border-radius: 18px; box-shadow: none;
+  padding: clamp(18px, 4vw, 26px);
+}
+.network-context-heading { gap: 6px; margin-bottom: 16px; }
+.network-context-heading .section-eyebrow {
+  font-family: var(--font-num); font-size: 12px; font-weight: 600; letter-spacing: 0.18em; color: var(--nw-mp);
+}
+.network-context-heading h2 { font-family: var(--font-mincho); font-weight: 700; letter-spacing: 0.02em; color: var(--nw-ink); }
+.network-context-heading > p:last-child { color: var(--nw-ink-2); font-weight: 500; }
+.network-context-links { gap: 12px; }
+div.network-context-link,
+div.network-context-link.is-ai,
+div.network-context-link.is-license,
+div.network-context-link.is-career,
+div.network-context-link.is-company {
+  --stc: var(--nw-mp);
+  min-height: 0; padding: 16px; gap: 8px;
+  border: 1px solid var(--nw-rule); border-top: 4px solid var(--stc); border-radius: 12px;
+  background: var(--nw-paper); box-shadow: none;
+}
+div.network-context-link.is-ai { --stc: var(--nw-ai); }
+div.network-context-link.is-license { --stc: var(--nw-li); }
+div.network-context-link.is-career { --stc: var(--nw-ca); }
+div.network-context-link.is-company { --stc: var(--nw-co); }
+div.network-context-link > span { font-size: 12px; font-weight: 700; letter-spacing: 0.04em; color: var(--nw-ink-2); }
+div.network-context-link.is-ai > span { color: var(--nw-ai-ink); }
+div.network-context-link.is-license > span { color: var(--nw-li); }
+div.network-context-link.is-career > span { color: var(--nw-ca-ink); }
+div.network-context-link.is-company > span { color: var(--nw-co); }
+div.network-context-link strong,
+div.network-context-link.is-ai strong,
+div.network-context-link.is-license strong,
+div.network-context-link.is-career strong,
+div.network-context-link.is-company strong { color: var(--nw-ink); font-size: 16px; font-weight: 700; }
+.network-context-items { gap: 8px; }
+.network-context-items a {
+  padding: 8px 14px; border: 1px solid var(--nw-ink); border-radius: 999px; background: #fff;
+  color: var(--nw-ink); font-weight: 700; box-shadow: none;
+}
+.network-context-items a:hover, .network-context-items a:focus-visible { border-color: var(--nw-mp); color: var(--nw-mp); background: #fff; }
+.network-context-more { color: var(--nw-ink); }
+.network-context-overview { color: var(--nw-mp); }
+
+/* ---------- 学びニュース記事：表の見出し「変更前」が1文字ずつ折れる → 見出しは折り返さない ---------- */
+.news-figure thead th { white-space: nowrap; }
+/* 「1,500／文字」のように数値と単位の間で折れないよう、値のセルは語の途中で折らない（値は最長15字程度） */
+.news-figure td { word-break: keep-all; overflow-wrap: break-word; }
+/* 折りたたみ（月・トピック）の見出し行：SP で左右16pxの余白に */
+@media (max-width: 640px) { .fold-group > summary { padding-inline: 16px; } }
+
+/* ---------- ロードマップ（ガイド）：STEP2 の番号の丸が地と同色で見えなかった → 番号はすべて本家の紺・Barlow に ---------- */
+.guide-step-block,
+.guide-step-block.is-step-2,
+.guide-step-block.is-step-3,
+.guide-step-block.is-step-4 { --step-accent: var(--nw-mp); }
+.guide-step-number { background: var(--nw-mp); box-shadow: none; font-family: var(--font-num); font-size: 20px !important; font-weight: 600; }
+
+/* ---------- PC：レールの右端に「メニュー」（SP は下部タブのメニューを使う） ---------- */
+.nw-rail-menu {
+  position: relative; flex: none; margin-left: auto;
+  display: inline-flex; align-items: center; gap: 6px;
+  min-height: 30px; padding: 0 14px 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.45); border-radius: 999px;
+  background: transparent; color: #fff; font: inherit; font-size: 12px; font-weight: 700; cursor: pointer;
+}
+.nw-rail-menu::after { content: ""; position: absolute; inset: -6px -4px; }
+.nw-rail-menu svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+.nw-rail-menu:hover { background: #fff; color: var(--nw-night); }
+.nw-rail-side + .nw-rail-menu { margin-left: 0; }
+@media (min-width: 1241px) { .nw-rail-side + .nw-rail-menu { margin-left: 4px; } }
+@media (max-width: 1240px) { .nw-rail-side + .nw-rail-menu { margin-left: auto; } }
+@media (max-width: 640px) { .nw-rail-menu { display: none; } }
+
+/* ---------- マイページ・採点方法の下端：旧ロゴ（✓＋Manapick）→ トップと同じワードマーク ---------- */
+.mp-foot-wordmark { margin: 0; font-size: 22px; color: var(--nw-ink); }
+
+/* ---------- サイトマップ（/all/）：見出しも余白もない素の一覧だった → 下層ページの型（ヘッダー・パンくず・ヒーロー・番号つきセクション）に ---------- */
+.mp-sitemap-page .knowledge-section h2 { margin-bottom: 14px; }
+.mp-sitemap-genres { display: grid; gap: 22px; }
+.mp-sitemap-genre h3 { margin: 0 0 6px; font-size: 16px; font-weight: 700; line-height: 1.5; }
+.mp-sitemap-genre h3 a { color: var(--nw-mp); text-decoration: none; }
+.mp-sitemap-genre h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.mp-sitemap-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); column-gap: 24px; }
+.mp-sitemap-list li { border-bottom: 1px solid var(--nw-rule); }
+.mp-sitemap-list a {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  min-height: 46px; padding: 8px 0; color: var(--nw-ink); font-size: 15px; line-height: 1.55; text-decoration: none;
+}
+.mp-sitemap-list a::after { content: "→"; flex: none; color: var(--nw-mp); font-family: var(--font-num); }
+.mp-sitemap-list a:hover { color: var(--nw-mp); }
+@media (max-width: 640px) { .my-stat-card { padding-left: 14px; padding-right: 14px; } }
+/* レールにメニューのボタンを足した分、メルマガ・X のリンクは 1400px 以下で畳む（1280px で横にはみ出していた） */
+@media (max-width: 1400px) { .nw-rail-side { display: none; } .nw-rail-side + .nw-rail-menu { margin-left: auto; } }
+section[id], details[id], article[id] { scroll-margin-top: 16px; }

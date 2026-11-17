@@ -5,6 +5,7 @@ import AdSlot from "@/components/AdSlot";
 import BrandLogo from "@/components/BrandLogo";
 import { absoluteUrl, genreLabel, publishedGenreKeys, scoreText, videoPath, videos, youtubeThumbnail, type Video } from "@/lib/manapick";
 import { rankedVideos, type RankingMode } from "@/lib/rankings";
+import Phrase from "@/components/Phrase";
 
 const rankingTitle = "人気の学習動画ランキング | Manapick";
 // 各ランキングで最初から表示する本数。4位以降は折りたたむ（ページ内リンクと掲載本数は変えない）。
@@ -89,7 +90,7 @@ export default function RankingPage() {
       </nav>
       <section className="knowledge-hero">
         <p className="section-eyebrow">Ranking</p>
-        <h1>人気の学習動画ランキング</h1>
+        <h1><Phrase>人気の学習動画ランキング</Phrase></h1>
         <p>{rankingDescription}</p>
         <div className="ranking-tab-row" role="list" aria-label="ランキングの種類">
           {rankingSections.map((section) => (

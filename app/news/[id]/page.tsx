@@ -9,6 +9,7 @@ import { absoluteUrl } from "@/lib/manapick";
 import { findNews, newsItems, newsPath, newsReadingMinutes, relatedNewsItems } from "@/lib/news";
 import NetworkContextBand from "@/components/NetworkContextBand";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import Phrase from "@/components/Phrase";
 
 type NewsDetailPageProps = {
   params: Promise<{ id: string }>;
@@ -114,7 +115,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
           <span>{item.categoryLabel}</span>
           <span>公式情報を確認</span>
         </div>
-        <h1>{item.headline}</h1>
+        <h1><Phrase>{item.headline}</Phrase></h1>
         <p>{item.description}</p>
         <div className="news-article-dates">
           <time dateTime={item.publishedAt}>発表 {formatDate(item.publishedAt)}</time>
