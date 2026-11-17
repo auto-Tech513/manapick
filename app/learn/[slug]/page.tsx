@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Phrase from "@/components/Phrase";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import AdSlot from "@/components/AdSlot";
@@ -94,7 +95,7 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
 
       <section className="knowledge-hero learning-intent-hero">
         <p className="section-eyebrow">検索テーマ: {intent.query}</p>
-        <h1>{intent.h1}</h1>
+        <h1><Phrase>{intent.h1}</Phrase></h1>
         <p>{intent.lead}</p>
         <div className="learning-intent-meta" aria-label="ページの対象">
           <span>無料YouTube動画</span>
@@ -225,7 +226,7 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
 
       <section className="knowledge-section" aria-labelledby="intent-faq-title">
         <p className="section-eyebrow">FAQ</p>
-        <h2 id="intent-faq-title">{intent.query}のよくある質問</h2>
+        <h2 id="intent-faq-title"><Phrase>{intent.query}のよくある質問</Phrase></h2>
         <div className="guide-faq-list">
           {intent.faq.map((item) => (
             <details key={item.question}>

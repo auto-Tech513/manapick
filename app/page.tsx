@@ -6,8 +6,13 @@ import roadmapsData from "@/content/roadmaps.json";
 import { absoluteUrl, genreDisplayName, isoDuration, videoPath, videos } from "@/lib/manapick";
 import { rankedVideos } from "@/lib/rankings";
 import { siteStats } from "@/lib/site-stats";
+import { phraseBreaks } from "@/lib/phrase-breaks";
 
 const buildReferenceTime = Date.now();
+// 動画タイトルの文節境界（BudouX、ビルド時）。クライアント部品 ManapickApp へオフセットだけ渡す。
+const videoTitleBreaks: Record<string, number[]> = Object.fromEntries(
+  videos.map((video) => [video.ytid, phraseBreaks(video.title)] as const).filter(([, breaks]) => breaks.length > 0)
+);
 const homeTitle = "Manapick | 無料YouTube学習動画を、見る順まで整理";
 const homeDescription =
   "社会人の学び直し・リスキリングに役立つ無料YouTube学習動画" +
@@ -206,7 +211,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
-      <ManapickApp referenceTime={buildReferenceTime} />
+      <ManapickApp referenceTime={buildReferenceTime} titleBreaks={videoTitleBreaks} />
       <LatestNewsBand />
       <section className="lb-sec" aria-labelledby="home-faq-title">
         <div className="lb-faq">

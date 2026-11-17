@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Phrase from "@/components/Phrase";
 import { notFound } from "next/navigation";
 import BrandLogo from "@/components/BrandLogo";
 import GuidePrCard from "@/components/GuidePrCard";
@@ -294,7 +295,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
                   <div className="guide-step-heading">
                     <h3>
                       <span className="guide-step-number" aria-hidden="true">{stepIndex + 1}</span>
-                      <span>{step.title}</span>
+                      <span><Phrase>{step.title}</Phrase></span>
                     </h3>
                     <span>{items.length}本・約{stepMinutes}分</span>
                   </div>
@@ -390,7 +391,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           <h2 id="guide-cta-title">関連ロードマップ</h2>
           <div className="guide-cta-row">
             {relatedLinks.map((link) => (
-              <a key={link.href + link.label} href={link.href}>{link.label}</a>
+              <a key={link.href + link.label} href={link.href}><Phrase>{link.label}</Phrase></a>
             ))}
           </div>
         </section>
@@ -607,7 +608,7 @@ function GuideVideoCard({ video, why }: { video: Video; why: string }) {
           </a>
         </div>
         <h4>
-          <a href={videoPath(video.ytid)}>{video.title}</a>
+          <a href={videoPath(video.ytid)}><Phrase>{video.title}</Phrase></a>
         </h4>
         <p className="guide-video-why">
           <strong>なぜ選んだか：</strong>{why}
@@ -624,14 +625,14 @@ function guideTitle(title: string) {
     const prefix = title.slice(0, -suffix.length);
     return (
       <>
-        <span>{prefix}</span>
+        <span><Phrase>{prefix}</Phrase></span>
         <span className="guide-title-nowrap">完全ロードマップ</span>
         <span className="guide-title-nowrap">【YouTube無料・</span>
         <span className="guide-title-nowrap">2026年版】</span>
       </>
     );
   }
-  return title;
+  return <Phrase>{title}</Phrase>;
 }
 
 function GuideLevelBadge({ level }: { level: Video["level"] }) {

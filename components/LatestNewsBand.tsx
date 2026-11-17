@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Phrase from "@/components/Phrase";
 import { newsItems, newsPath, newsReadingMinutes } from "@/lib/news";
 
 const intentLinks = [
@@ -44,7 +45,7 @@ export default function LatestNewsBand() {
                 {formatDate(item.publishedAt)}
               </time>
             </span>
-            <h3>{item.headline}</h3>
+            <h3><Phrase>{item.headline}</Phrase></h3>
             <p>{item.description}</p>
             <span className="lb-ni-rd">約{newsReadingMinutes(item)}分で読む →</span>
           </Link>

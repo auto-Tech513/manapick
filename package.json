@@ -30,6 +30,7 @@
     "videos:maxres": "node scripts/backfill-maxres.mjs"
   },
   "dependencies": {
+    "budoux": "^0.6.4",
     "fuse.js": "^7.0.0",
     "gray-matter": "^4.0.3",
     "next": "^16.4.2",
