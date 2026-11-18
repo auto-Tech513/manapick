@@ -216,7 +216,12 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
-      <ManapickApp referenceTime={buildReferenceTime} titleBreaks={videoTitleBreaks} menuBreaks={siteMenuBreaks()} />
+      <ManapickApp
+        referenceTime={buildReferenceTime}
+        titleBreaks={videoTitleBreaks}
+        menuBreaks={siteMenuBreaks()}
+        afterContent={
+          <>
       <LatestNewsBand />
       <section className="lb-sec" aria-labelledby="home-faq-title">
         <div className="lb-faq">
@@ -253,6 +258,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+          </>
+        }
+      />
     </>
   );
 }

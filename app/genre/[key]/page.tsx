@@ -516,7 +516,7 @@ export default async function GenrePage({ params }: GenrePageProps) {
                     <span className="genre-hub-channel-meta">
                       掲載{item.count}本{item.scored > 0 ? `・平均${Math.round((item.total / item.scored) * 10) / 10}/35` : ""}
                     </span>
-                    <span className="genre-hub-channel-top">代表動画：{item.top.title}</span>
+                    <span className="genre-hub-channel-top"><Phrase>代表動画：{item.top.title}</Phrase></span>
                   </span>
                 </Link>
               </li>

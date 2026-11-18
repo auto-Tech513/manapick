@@ -3,7 +3,7 @@
 import Fuse from "fuse.js";
 import Image from "next/image";
 import Link from "next/link";
-import { createContext, type CSSProperties, type KeyboardEvent as ReactKeyboardEvent, type RefObject, useContext, useEffect, useMemo, useRef, useState } from "react";
+import { createContext, type CSSProperties, type ReactNode, type KeyboardEvent as ReactKeyboardEvent, type RefObject, useContext, useEffect, useMemo, useRef, useState } from "react";
 import BreakText from "@/components/BreakText";
 import LiveSearchPanel from "@/components/LiveSearchPanel";
 import SiteMenu from "@/components/SiteMenu";
@@ -569,20 +569,31 @@ const roadmapGuideLinks: Record<string, { href: string }> = {
 export default function ManapickApp({
   referenceTime,
   titleBreaks,
-  menuBreaks
+  menuBreaks,
+  afterContent
 }: {
   referenceTime: number;
   titleBreaks: Record<string, number[]>;
   menuBreaks: Record<string, number[]>;
+  /** main の末尾に置くサーバー側の区切り（学びニュース・よくある質問）。本文を main の中に収める */
+  afterContent?: ReactNode;
 }) {
   return (
     <TitleBreaksContext.Provider value={titleBreaks}>
-      <ManapickAppMain referenceTime={referenceTime} menuBreaks={menuBreaks} />
+      <ManapickAppMain referenceTime={referenceTime} menuBreaks={menuBreaks} afterContent={afterContent} />
     </TitleBreaksContext.Provider>
   );
 }
 
-function ManapickAppMain({ referenceTime, menuBreaks }: { referenceTime: number; menuBreaks: Record<string, number[]> }) {
+function ManapickAppMain({
+  referenceTime,
+  menuBreaks,
+  afterContent
+}: {
+  referenceTime: number;
+  menuBreaks: Record<string, number[]>;
+  afterContent?: ReactNode;
+}) {
   const [selectedGenre, setSelectedGenre] = useState("all");
   const [selectedSub, setSelectedSub] = useState("all");
   const [selectedLevel, setSelectedLevel] = useState<(typeof levels)[number]>("すべて");
@@ -1922,6 +1933,8 @@ function ManapickAppMain({ referenceTime, menuBreaks }: { referenceTime: number;
         </section>
       ) : null}
 
+      {afterContent}
+
       <MobileBottomNav
         watchlistOnly={watchlistOnly}
         onHome={scrollToTop}
@@ -2448,8 +2461,10 @@ function FeaturedVideoCard({ video, likeCounts }: { video: Video; likeCounts: Li
         <p className="featured-video-eyebrow">まず見るべき1本</p>
         <h3><a href={videoDetailHref(video)}><VideoTitle video={video} /></a></h3>
         <p>{video.review[0]}</p>
-        <LikeButton ytid={video.ytid} initialCount={likeCounts[video.ytid] ?? 0} className="is-card-action" />
-        <a href={videoDetailHref(video)}>詳細を見る</a>
+        <div className="featured-video-actions">
+          <LikeButton ytid={video.ytid} initialCount={likeCounts[video.ytid] ?? 0} className="is-card-action" />
+          <a href={videoDetailHref(video)}>詳細を見る</a>
+        </div>
       </div>
     </article>
   );

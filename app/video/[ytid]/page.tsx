@@ -328,7 +328,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
             eventName="next_video_click"
             eventParams={{ placement: "quick_next", from_video_id: video.ytid, to_video_id: nextPick.video.ytid }}
           >
-            次に見る1本：{nextPick.video.title}
+            <Phrase>次に見る1本：{nextPick.video.title}</Phrase>
           </TrackedGaLink>
         ) : null}
         {guide ? (
@@ -635,7 +635,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
                   <span className="vd-card-meta">
                     {scoreText(nextPick.video)} ・ {nextPick.video.minutes}分
                   </span>
-                  <span className="vd-next-reason">{nextPick.reason}</span>
+                  <span className="vd-next-reason"><Phrase>{nextPick.reason}</Phrase></span>
                 </span>
               </TrackedGaLink>
             </section>
