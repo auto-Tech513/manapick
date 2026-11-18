@@ -1,7 +1,5 @@
 import { publishedGenreKeys } from "@/lib/manapick";
-import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_URL, MANAPICK_LICENSE_URL, MANAPICK_POLITICS_URL } from "@/lib/brand-links";
 import { siteStats } from "@/lib/site-stats";
-import SiteSearchForm from "@/components/SiteSearchForm";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import NetworkRoute from "@/components/NetworkRoute";
 
@@ -13,38 +11,29 @@ type FooterLink = {
 
 const genreCount = publishedGenreKeys.length;
 
+// フッターの骨格は7サイト共通（pwcheck-run/FOOTER_SPEC.md）：メルマガ → サイトの案内（ロゴ＋3列×6件まで）
+// → ネットワーク帯 → 注記＋最下段。6件を超えるリンクは「すべてのページ」（/all/）へ集約する。
 const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
   {
-    title: "探す・学ぶ",
+    title: "探す",
     links: [
-      { label: "今日の1本診断", href: "/start/" },
-      { label: "7日学習プラン", href: "/study-plan/" },
-      { label: "YouTube学習動画おすすめ", href: "/youtube-learning/" },
-      { label: `${siteStats.totalVideos}本の学習動画データ`, href: "/research/youtube-learning-data/" },
-      { label: "検索で多い学習テーマ", href: "/learn/" },
-      { label: "学ぶ順番（ロードマップ）から選ぶ", href: "/guide/" },
       { label: `${genreCount}ジャンル一覧`, href: "/#genre-picker" },
+      { label: "ロードマップ一覧", href: "/guide/" },
+      { label: "検索で多い学習テーマ", href: "/learn/" },
       { label: "ランキング", href: "/ranking/" },
       { label: "新着動画", href: "/new/" },
-      { label: "学びニュース", href: "/news/" },
-      { label: "マイページ", href: "/my/" },
-      { label: "manapi商店", href: "/shop/" }
+      { label: "学びニュース", href: "/news/" }
     ]
   },
   {
-    title: "ロードマップ",
+    title: "使う",
     links: [
-      { label: "ロードマップ一覧", href: "/guide/" },
-      { label: "生成AI", href: "/guide/generative-ai/" },
-      { label: "Python", href: "/guide/python/" },
-      { label: "動画編集", href: "/guide/video-editing/" },
-      { label: "英語", href: "/guide/english/" },
-      { label: "Excelデータ分析", href: "/guide/excel-data/" },
-      { label: "Webマーケ", href: "/guide/web-marketing/" },
-      { label: "Office・資料", href: "/guide/office-skills/" },
-      { label: "資格", href: "/guide/certification/" },
-      { label: "会計資格", href: "/guide/bookkeeping/" },
-      { label: "お金・投資", href: "/guide/money-basics/" }
+      { label: "今日の1本診断", href: "/start/" },
+      { label: "7日学習プラン", href: "/study-plan/" },
+      { label: "マイページ", href: "/my/" },
+      { label: "YouTube学習動画おすすめ", href: "/youtube-learning/" },
+      { label: `${siteStats.totalVideos}本の学習動画データ`, href: "/research/youtube-learning-data/" },
+      { label: "manapi商店", href: "/shop/" }
     ]
   },
   {
@@ -54,122 +43,69 @@ const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
       { label: "よくある質問", href: "/faq/" },
       { label: "用語集", href: "/glossary/" },
       { label: "Manapick Network", href: "/network/" },
-      { label: "サイトマップ", href: "/all/" },
-      { label: "運営者情報", href: "/operator/" },
-      { label: "広告・アフィリエイト", href: "/affiliate/" },
-      { label: "プライバシーポリシー", href: "/privacy/" },
-      { label: "免責事項", href: "/disclaimer/" },
-      { label: "お問い合わせ", href: "/contact/" },
-      { label: "公式X", href: "https://x.com/manapick_app", external: true }
+      { label: "公式X", href: "https://x.com/manapick_app", external: true },
+      { label: "すべてのページ", href: "/all/" }
     ]
   }
 ];
 
-const networkLinks = [
-  {
-    label: "Manapick",
-    description: "動画で学ぶ",
-    href: "/",
-    className: "is-current"
-  },
-  {
-    label: "manapick AI",
-    description: "AIを選ぶ",
-    href: MANAPICK_AI_URL,
-    className: "is-ai",
-    external: true
-  },
-  {
-    label: "manapick license",
-    description: "資格を選ぶ",
-    href: MANAPICK_LICENSE_URL,
-    className: "is-license",
-    external: true
-  },
-  {
-    label: "manapick career",
-    description: "仕事を知る",
-    href: MANAPICK_CAREER_URL,
-    className: "is-career",
-    external: true
-  },
-  {
-    label: "manapick company",
-    description: "企業を読む",
-    href: MANAPICK_COMPANY_URL,
-    className: "is-company",
-    external: true
-  },
-  {
-    label: "manapick politics",
-    description: "政治と法律を易しく",
-    href: MANAPICK_POLITICS_URL,
-    className: "is-politics",
-    external: true
-  }
+const legalLinks: FooterLink[] = [
+  { label: "運営者情報", href: "/operator/" },
+  { label: "プライバシーポリシー", href: "/privacy/" },
+  { label: "広告・アフィリエイト", href: "/affiliate/" },
+  { label: "免責事項", href: "/disclaimer/" },
+  { label: "お問い合わせ", href: "/contact/" }
 ];
+
+function FooterAnchor({ link }: { link: FooterLink }) {
+  return (
+    <a href={link.href} {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
+      {link.label}
+      {link.external ? <span aria-hidden="true">↗</span> : null}
+    </a>
+  );
+}
 
 export default function SiteFooter() {
   return (
-    <footer className="site-footer-main">
-      <NetworkRoute />
-      <div className="site-footer-search">
-        <SiteSearchForm id="site-footer-search" />
+    <footer className="site-footer-main ft">
+      <div className="ft-newsletter" id="footer-newsletter">
+        <NewsletterSignup placement="footer" dark />
       </div>
-      <div className="site-footer-inner">
-        <div className="site-footer-brand">
-          <div>
-            <p className="lb-wordmark site-footer-wordmark">manapick</p>
-            <span>学び直しを、最短ルートに。</span>
-          </div>
-          <small>
-            無料のYouTube学習動画を運営者が7軸35点で採点。次に見る一本と学ぶ順番を整理しています。
-          </small>
-        </div>
 
-        <nav className="site-footer-sections" aria-label="フッターナビゲーション">
+      <div className="ft-guide">
+        <div className="ft-brand">
+          <p className="lb-wordmark ft-wordmark">manapick</p>
+          <p>学び直しを、最短ルートに。</p>
+        </div>
+        <nav className="ft-cols" aria-label="フッターナビゲーション">
           {footerLinkGroups.map((group) => (
-            <section key={group.title} className="site-footer-section">
+            <section key={group.title} className="ft-col">
               <h2>{group.title}</h2>
-              <div className="site-footer-links">
+              <ul>
                 {group.links.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  >
-                    {link.label}
-                    {link.external ? <span aria-hidden="true">↗</span> : null}
-                  </a>
+                  <li key={link.label}>
+                    <FooterAnchor link={link} />
+                  </li>
                 ))}
-              </div>
+              </ul>
             </section>
           ))}
         </nav>
       </div>
 
-      <div className="site-footer-newsletter" id="footer-newsletter">
-        <NewsletterSignup placement="footer" dark />
-      </div>
+      <NetworkRoute />
 
-      <div className="site-footer-lower">
-        <nav className="site-footer-network" aria-label="Manapick姉妹サイト">
-          {networkLinks.map((link) => (
-            <a
-              key={link.label}
-              className={link.className}
-              href={link.href}
-              aria-current={link.className === "is-current" ? "page" : undefined}
-              {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            >
-              <strong>{link.label}</strong>
-              <small>{link.description}</small>
-              {link.external ? <span aria-hidden="true">↗</span> : null}
-            </a>
-          ))}
-        </nav>
-        <p>一部のリンクには広告・アフィリエイトを含む場合があります。</p>
-        <p>© Manapick</p>
+      <div className="ft-bottom">
+        <p className="ft-note">一部のリンクには広告・アフィリエイトを含む場合があります。</p>
+        <div className="ft-legal">
+          <nav aria-label="運営・規約">
+            {legalLinks.map((link) => (
+              <FooterAnchor key={link.label} link={link} />
+            ))}
+          </nav>
+          <p>© Manapick</p>
+        </div>
       </div>
     </footer>
   );

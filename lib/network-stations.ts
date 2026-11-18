@@ -73,7 +73,7 @@ export const NETWORK_STATIONS: NetworkStation[] = [
     name: "manapick politics",
     shortName: "politics",
     role: "政治と法律",
-    description: "政治と法律を易しく",
+    description: "コミカルに易しく",
     url: MANAPICK_POLITICS_URL,
     color: "#6D28D9"
   }

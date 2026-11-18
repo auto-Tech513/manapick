@@ -4428,3 +4428,424 @@ div.network-context-link.is-company strong { color: var(--nw-ink); font-size: 16
 /* レールにメニューのボタンを足した分、メルマガ・X のリンクは 1400px 以下で畳む（1280px で横にはみ出していた） */
 @media (max-width: 1400px) { .nw-rail-side { display: none; } .nw-rail-side + .nw-rail-menu { margin-left: auto; } }
 section[id], details[id], article[id] { scroll-margin-top: 16px; }
+
+/* =====================================================================
+   フッター（2026-11-18、7サイト共通の骨格 FOOTER_SPEC.md・politics の形が基準）
+   メルマガ → サイトの案内（ロゴ＋3列×6件まで）→ ネットワーク帯 → 注記＋最下段。墨色の1枚の帯。
+   ===================================================================== */
+.site-footer-main.ft {
+  border-top: 0;
+  background: var(--nw-night);
+  color: #fff;
+}
+
+.ft-newsletter,
+.ft-guide,
+.ft-bottom,
+.ft .nw-route {
+  width: min(1184px, calc(100% - 96px));
+  margin-inline: auto;
+}
+
+/* 1. メルマガ：PC は左に見出しと説明、右に入力欄・登録ボタン・注記 */
+.ft-newsletter {
+  padding: 48px 0 36px;
+}
+
+.ft .newsletter-signup.is-dark {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: auto auto 1fr;
+  column-gap: 64px;
+  width: auto;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.ft .newsletter-signup.is-dark > * {
+  grid-column: 1;
+}
+
+.ft .newsletter-signup.is-dark > form {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  align-self: end;
+  margin: 0;
+}
+
+.ft .newsletter-signup.is-dark > small {
+  grid-column: 2;
+  grid-row: 3;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+}
+
+.ft .newsletter-signup .section-eyebrow {
+  margin: 0;
+  color: color-mix(in srgb, var(--nw-mp) 40%, #fff);
+  font-family: var(--font-num);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.ft .newsletter-signup h2 {
+  margin: 6px 0 8px;
+  color: #fff;
+  font-family: var(--font-mincho);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.ft .newsletter-signup h2 + p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.ft .newsletter-signup label {
+  color: #fff;
+  font-size: 13px;
+}
+
+.ft .newsletter-signup-row {
+  flex-wrap: nowrap;
+}
+
+.ft .newsletter-signup-row input {
+  min-height: 52px;
+  border: 1px solid #3a404c;
+  background: #1c2028;
+  color: #fff;
+}
+
+.ft .newsletter-signup-row input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.ft .newsletter-signup-row button {
+  min-height: 52px;
+  border: 1px solid color-mix(in srgb, var(--nw-mp) 60%, #fff);
+  background: var(--nw-mp);
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* 2. サイトの案内：ロゴ＋1行、リンク3列（各6件まで） */
+.ft-guide {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+  gap: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 36px 0;
+}
+
+.ft-brand p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.ft-brand .ft-wordmark {
+  margin: 0 0 6px;
+  color: #fff;
+  font-size: 26px;
+}
+
+.ft-cols {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.ft-col h2 {
+  margin: 0 0 10px;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+}
+
+.ft-col ul {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ft-col a,
+.ft-legal a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 28px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.ft-col a:hover,
+.ft-legal a:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* 3. ネットワーク帯（路線図）：フッターの帯の中に置き、上に区切り線 */
+.ft .nw-route {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  padding: 36px 0 24px;
+}
+
+.ft .nw-route .lead {
+  margin-bottom: 24px;
+}
+
+@media (min-width: 641px) {
+  .ft .nw-route .st i {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 10px;
+  }
+
+  .ft .nw-route .map::before {
+    top: 19px;
+  }
+}
+
+/* 4. 注記＋最下段 */
+.ft-bottom {
+  padding: 0 0 32px;
+}
+
+.ft-note {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.ft-legal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 10px;
+}
+
+.ft-legal nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+}
+
+.ft-legal a {
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 13px;
+}
+
+.ft-legal p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-num);
+  font-size: 13px;
+}
+
+@media (max-width: 1023px) {
+  .ft-guide {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ft-newsletter,
+  .ft-guide,
+  .ft-bottom,
+  .ft .nw-route {
+    width: calc(100% - 40px);
+  }
+
+  .ft-newsletter {
+    padding: 32px 0 24px;
+  }
+
+  .ft .newsletter-signup.is-dark {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+  }
+
+  .ft .newsletter-signup.is-dark > form,
+  .ft .newsletter-signup.is-dark > small {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .ft .newsletter-signup.is-dark > form {
+    margin-top: 18px;
+  }
+
+  .ft-guide {
+    padding: 28px 0;
+  }
+
+  /* SP は2列のリンク格子。見出しは小さく */
+  .ft-cols {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .ft-col h2 {
+    margin-bottom: 4px;
+    font-size: 12px;
+  }
+
+  .ft-col ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 12px;
+  }
+
+  .ft-col a,
+  .ft-legal a {
+    min-height: 44px;
+  }
+
+  .ft .nw-route {
+    padding: 32px 0 20px;
+  }
+
+  .ft .nw-route .st {
+    padding: 3px 0;
+  }
+
+  .ft-bottom {
+    padding-bottom: 28px;
+  }
+
+  /* SP の下部タブの分（body の padding-bottom）も墨色にする（フッターの下に紙色の帯が出ないよう） */
+  body:has(.mobile-bottom-nav) .ft {
+    margin-bottom: calc(-84px - env(safe-area-inset-bottom));
+    padding-bottom: calc(84px + env(safe-area-inset-bottom));
+  }
+
+  .ft-legal nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 12px;
+  }
+}
+
+/* =====================================================================
+   PC（1025px 以上）の間延び・揃いの是正（2026-11-18）。この中の指定は SP には効かない
+   ===================================================================== */
+@media (min-width: 1025px) {
+  /* 動画ページ：左右 64px 固定だと広い画面で本文が横に間延びするため、内容の幅を 1200px までに */
+  .video-page {
+    --vd-pad: max(64px, calc((100% - 1200px) / 2));
+  }
+
+  .video-page .video-page-header,
+  .video-page .video-breadcrumb,
+  .vd-head,
+  .vd-body,
+  .vd-wide {
+    padding-inline: var(--vd-pad);
+  }
+
+  /* 「次に見る1本」「◯◯ロードマップへ」の札が本文の左端（64px）から16pxずれていた */
+  .video-page .video-quick-next {
+    width: auto;
+    margin-inline: 0;
+    padding-inline: var(--vd-pad);
+  }
+
+  .vd-score-note {
+    padding-inline: var(--vd-pad);
+  }
+
+  /* 学びニュース一覧：月の先頭記事を2列幅にすると、3件の月で3件目が1列ぶんだけ残り右に大きな空白が出る。
+     2列幅にするのは、件数が「3の倍数－1」のとき（並べるとちょうど行が埋まるとき）だけにする */
+  .news-index-grid > .news-index-card:first-child {
+    grid-column: auto;
+  }
+
+  .news-index-grid > .news-index-card:first-child:nth-last-child(3n + 2) {
+    grid-column: span 2;
+  }
+
+  /* サブジャンル（トピック）ページの h1 が 19 字幅に制限され、PC で4行に折れて右半分が空いていた */
+  .sub-topic-hero h1 {
+    max-width: 24em;
+  }
+
+  /* ヘッダーの検索欄：⌘K の札が入力欄の上に重なり、プレースホルダーの末尾が隠れていた → 札を欄の右に並べる */
+  .lb-hd .top-search-key {
+    position: static;
+    flex: none;
+  }
+
+  /* ガイド記事：h1 が 52px・5行になり、動画カードは2列で画像が高さ270pxと大きすぎた */
+  .guide-hero h1 {
+    font-size: clamp(2rem, 3.2vw, 2.6rem);
+  }
+
+  .guide-video-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* 新着動画：1列で横幅 1060px の行に短い題名が並び、右側が空いていた → 2列 */
+  .new-video-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* 学習テーマ「迷わない3ステップ」：短い手順が横幅いっぱいの行で縦に3つ並び、右が空いていた → 横に並べる */
+  .learning-step-list {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  /* 動画ページの姉妹サイト欄：4列だと札の少ないカード（企業・仕事）が縦に間延びして空く → 2列×2段で札を横に流す */
+  .video-page .network-context-links,
+  .video-page .network-context-links.has-four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* 本文の1行が全角48字を超える段落（動画の要約・ニュースのリード・ガイドの結論・運営者情報など）を 42字前後に */
+  .vd-review p,
+  .vd-sec .editor-note,
+  .news-article-hero > p,
+  .guide-answer-box p,
+  .genre-summary-panel .genre-note,
+  .network-company-section p,
+  main article.mx-auto > div > section > p {
+    max-width: 42em;
+  }
+
+  /* 動画ページ：閉じた折りたたみ節が 56px＋見出しの余白で縦に間延びしていた → 続く節は線でつなげて一覧に。開いた節は下に余白 */
+  .vd-anchor:has(> .vd-fold) + .vd-anchor > .vd-fold {
+    margin-top: 0;
+  }
+
+  .vd-fold .fold-section-details[open] {
+    padding-bottom: 40px;
+  }
+
+  /* トップの大きいタイル：題名の右の余白（90px）で幅が 174px しかなく「【完全マ｜スター】」と語の途中で折れていた */
+  .lb-tile.is-big .lb-tile-title {
+    right: 24px;
+  }
+}

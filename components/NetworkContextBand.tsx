@@ -5,6 +5,7 @@ import {
   manapickLicenseUrlForGenre
 } from "@/lib/brand-links";
 import TrackedGaLink from "@/components/TrackedGaLink";
+import Phrase from "@/components/Phrase";
 import { genreDisplayName } from "@/lib/manapick";
 import aiDeepLinks from "@/content/ai-deep-links.json";
 import networkRelated from "@/content/network-related.json";
@@ -111,7 +112,7 @@ export default function NetworkContextBand({ genreKey, sub, skipHrefs = [], page
                       eventName="network_click"
                       eventParams={{ destination_site: card.site, placement: "context_band_item", genre: genreKey }}
                     >
-                      {item.label} <span aria-hidden="true">↗</span>
+                      <Phrase>{item.label}</Phrase> <span aria-hidden="true">↗</span>
                     </TrackedGaLink>
                   </li>
                 ))}
