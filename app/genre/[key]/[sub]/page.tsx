@@ -290,17 +290,17 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
           <div className="sub-topic-related-links">
             {relatedPages.map((item) => (
               <Link key={item.key + item.sub} href={eligibleSubPagePath(item)}>
-                <span>{item.sub}</span>
+                <span><Phrase>{item.sub}</Phrase></span>
                 <span className="sub-topic-related-count">{item.count}本</span>
               </Link>
             ))}
-            <Link href={`/genre/${key}/`}>
-              <span>{genreName}の動画一覧へ</span>
+            <Link className="is-wide" href={`/genre/${key}/`}>
+              <span><Phrase>{genreName}の動画一覧へ</Phrase></span>
               <span className="sub-topic-related-count" aria-hidden="true">→</span>
             </Link>
             {guide ? (
-              <Link href={guidePath(guide.slug)}>
-                <span>{genreName}ロードマップを読む</span>
+              <Link className="is-wide" href={guidePath(guide.slug)}>
+                <span><Phrase>{genreName}ロードマップを読む</Phrase></span>
                 <span className="sub-topic-related-count" aria-hidden="true">→</span>
               </Link>
             ) : null}

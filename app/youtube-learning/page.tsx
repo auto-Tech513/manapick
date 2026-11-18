@@ -215,7 +215,7 @@ export default function YoutubeLearningPage() {
 
       <section className="knowledge-section youtube-answer-section" aria-labelledby="youtube-answer-title">
         <p className="section-eyebrow">結論</p>
-        <h2 id="youtube-answer-title">無料動画で勉強するなら、まず「目的・レベル・時間」を1つずつ決める</h2>
+        <h2 id="youtube-answer-title"><Phrase>無料動画で勉強するなら、まず「目的・レベル・時間」を1つずつ決める</Phrase></h2>
         <p>
           YouTubeには良い動画が多い一方で、サムネイルの強さや再生数だけでは学習向きか判断しにくいことがあります。Manapickでは、誇大な成果保証や情報商材誘導が強い動画を外し、YouTube上の公開動画を7軸35点で採点しています。
         </p>

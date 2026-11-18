@@ -1053,11 +1053,9 @@ img {
   max-width: 100%;
 }
 
-/* Manual .ad-slot units are intentional; Auto ads must not split navigation, heroes, or cards. */
-ins.adsbygoogle:not(.ad-slot),
-.google-auto-placed {
-  display: none !important;
-}
+/* 自動広告（アンカー広告・記事内の自動配置）は表示する（2026-11-18 オーナー決定：収益が第一）。
+   以前はここで display:none にしていたため、AdSense が付ける body の余白だけが残っていた。
+   固定部品がアンカー広告に隠れないための調整は components/AdSenseScript.tsx と lookbook.css 末尾。 */
 
 .site-header {
   position: relative;
@@ -9225,6 +9223,9 @@ ins.adsbygoogle:not(.ad-slot),
 
 .guide-video-card {
   display: grid;
+  /* 3列で行の高さにそろえて伸びたとき、余りを画像の行に配らない（札・題名の開始位置をそろえる） */
+  grid-template-rows: auto 1fr;
+  align-content: start;
   overflow: hidden;
   border: 1px solid var(--color-line);
   border-radius: 18px;
@@ -9281,6 +9282,7 @@ ins.adsbygoogle:not(.ad-slot),
 
 .guide-video-body {
   display: grid;
+  align-content: start;
   gap: 10px;
   min-width: 0;
   padding: 14px;
@@ -11523,6 +11525,22 @@ ins.adsbygoogle:not(.ad-slot),
   transition: border-color 160ms var(--ease-standard), box-shadow 160ms var(--ease-standard);
 }
 
+/* 「◯◯の動画一覧へ」「◯◯ロードマップを読む」は文が長いので2列分の幅に（158px では「読｜む」と折れていた） */
+.sub-topic-related-links a.is-wide {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 640px) {
+  .sub-topic-related-links a.is-wide {
+    grid-column: span 2;
+  }
+}
+
+.sub-topic-related-links a > span:first-child {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
 .sub-topic-related-links a:hover,
 .sub-topic-related-links a:focus-visible {
   border-color: color-mix(in srgb, var(--color-accent) 36%, var(--color-line));
@@ -13524,7 +13542,9 @@ ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; height: 0
 .research-method-grid h3 { margin: 0 0 6px; font-size: 0.85rem; }
 .research-method-grid p { margin: 0; color: var(--color-muted); font-size: 0.78rem; line-height: 1.7; }
 .research-method-grid strong { color: var(--color-primary-ink); font-size: 1.25rem; }
-.research-method-section { margin-bottom: 42px; }
+/* 最後の区切りの下の余白は main の中に持たせる（margin が main の外へ抜けてフッターとの間に地色の帯ができていた） */
+.research-method-section { margin-bottom: 0; }
+.research-data-page { padding-bottom: 42px; }
 .research-method-section ul { display: grid; gap: 9px; margin: 18px 0 0; padding-left: 1.3rem; }
 .research-method-section li { color: var(--color-muted); font-weight: 700; line-height: 1.75; }
 .research-method-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }

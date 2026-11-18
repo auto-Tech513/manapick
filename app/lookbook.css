@@ -4734,7 +4734,7 @@ section[id], details[id], article[id] { scroll-margin-top: 16px; }
   }
 
   .ft-bottom {
-    padding-bottom: 28px;
+    padding-bottom: 24px;
   }
 
   /* SP の下部タブの分（body の padding-bottom）も墨色にする（フッターの下に紙色の帯が出ないよう） */
@@ -4847,5 +4847,120 @@ section[id], details[id], article[id] { scroll-margin-top: 16px; }
   /* トップの大きいタイル：題名の右の余白（90px）で幅が 174px しかなく「【完全マ｜スター】」と語の途中で折れていた */
   .lb-tile.is-big .lb-tile-title {
     right: 24px;
+  }
+}
+
+/* =====================================================================
+   独立監査（2026-11-18 critic）の指摘への対応。PC（1025px 以上）だけ
+   ===================================================================== */
+@media (min-width: 1025px) {
+  /* PC-M4 動画ページ：上の指定（.vd-head 等）は video-detail.css の同じ強さの指定に負けて効いていなかった。
+     .video-page を付けて強め、内容の幅を他のテンプレート・フッターと同じ 1,184px までにする */
+  .video-page {
+    --vd-pad: max(64px, calc((100% - 1184px) / 2));
+  }
+
+  .video-page .vd-head,
+  .video-page .vd-body,
+  .video-page .vd-wide,
+  .video-page .vd-score-note,
+  main.video-page .video-page-header,
+  main.video-page .video-breadcrumb {
+    padding-inline: var(--vd-pad);
+  }
+
+  /* PC-M4 トップ：区切り・検索欄・結果の内容を 1,184px までに（ヒーローのモザイクは全幅のデザインのまま） */
+  .lb-main .lb-sec,
+  .lb-main .lb-road-sec,
+  .lb-main .lb-srch-inner,
+  .lb-main .lb-strip .lb-eh,
+  .lb-main .lb-reel {
+    padding-inline: max(64px, calc((100% - 1184px) / 2));
+  }
+
+  .lb-main .lb-reel {
+    scroll-padding-inline: max(64px, calc((100% - 1184px) / 2));
+  }
+
+  /* PC-L5 トップの区切りの間（96px＋96px＝192px）を 144px に */
+  .lb-main .lb-sec,
+  .lb-main .lb-road-sec {
+    padding-block: 72px;
+  }
+
+  /* PC-L2 採点方法：レベルの定義（3つ）は3列に（2列だと「上級」だけ2段目に1枚） */
+  #level-definitions .score-axis-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* PC-L3 1行が全角48字を超える本文 */
+  .score-section > p,
+  .research-method-section li,
+  .lb-faq .lb-ans {
+    max-width: 42em;
+  }
+}
+
+/* SP-L2 / PC-M5 ジャンル一覧の PR 欄：枠と内側の余白がなく文字が端に接していた。
+   ほかの区切りと同じ白地＋1px 黒枠＋角丸にし、講座カードは件数に合わせて横いっぱいに並べる */
+.genre-hub-pr {
+  margin: 28px 0;
+  border: 1px solid var(--nw-ink);
+  border-radius: 18px;
+  background: #fff;
+  padding: clamp(18px, 4vw, 28px);
+}
+
+@media (min-width: 640px) {
+  .genre-hub-pr .guide-pr-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* SP-L1 / PC-L1「まず見るべき1本」：「役に立った」と「詳細を見る」が隙間なく接し、高さもそろっていなかった */
+.featured-video-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 18px;
+  margin-top: 12px;
+}
+
+.featured-video-actions > a {
+  min-height: 44px;
+  align-items: center;
+  margin-top: 0;
+}
+
+/* =====================================================================
+   AdSense のアンカー広告（上端・下端に固定）と、サイトの固定部品が重ならないようにする（2026-11-18）
+   --ad-anchor-top / --ad-anchor-bottom は components/AdSenseScript.tsx が表示中のアンカー広告の高さを入れる（無ければ 0）。
+   広告の位置・大きさは変えず、サイト側の部品を広告の内側に収める。
+   ===================================================================== */
+.site-menu-layer,
+.mp-menu-layer,
+.nw-sheet-layer {
+  top: var(--ad-anchor-top, 0px);
+  bottom: var(--ad-anchor-bottom, 0px);
+}
+
+@media (max-width: 767px) {
+  /* SP の下部ナビは下部アンカー広告の上に置く。ページ末尾もその分だけ余白を足す */
+  .mobile-bottom-nav {
+    bottom: calc(10px + env(safe-area-inset-bottom) + var(--ad-anchor-bottom, 0px));
+  }
+
+  body:has(.mobile-bottom-nav) .ft {
+    padding-bottom: calc(84px + env(safe-area-inset-bottom) + var(--ad-anchor-bottom, 0px));
+  }
+}
+
+@media (max-width: 640px) {
+  /* 全画面の検索候補も広告の内側に */
+  .top-search-wrap.is-panel-open,
+  .lb-kw-wrap.is-panel-open,
+  .site-search-form.is-panel-open {
+    top: var(--ad-anchor-top, 0px);
+    bottom: var(--ad-anchor-bottom, 0px);
   }
 }

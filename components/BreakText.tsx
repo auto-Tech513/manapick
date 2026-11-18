@@ -5,8 +5,9 @@ import { Fragment } from "react";
 // One inline wrapper (`.bx`) holds the text so that a flex/grid parent sees a single item, and
 // `.bx` resets every style (`all: unset`) so descendant `span` rules elsewhere cannot restyle it.
 export default function BreakText({ text: raw, breaks }: { text: string; breaks?: number[] }) {
-  // 閉じ括弧の直前の空白（「【ダビンチリゾルブ19 】」）で折れると括弧が行頭に来るので、改行しない空白にする（1字→1字で位置は不変）
-  const text = raw.replace(/[ \u3000](?=[】」』）)〉》］\]])/g, "\u00a0");
+  // 閉じ括弧などの直前の空白（「【ダビンチリゾルブ19 】」）で折れると括弧が行頭に来るので、改行しない空白にする（1字→1字で位置は不変）
+  // 「作れちゃう！ 〜Python」の 〜・！・？ なども同じ（空白で折れて行頭に来る）
+  const text = raw.replace(/[ \u3000](?=[】」』）)〉》］\]〜～！？!?、。ー])/g, "\u00a0");
   if (!breaks?.length) return <>{text}</>;
   const parts: string[] = [];
   let prev = 0;

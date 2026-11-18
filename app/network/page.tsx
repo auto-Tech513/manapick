@@ -292,7 +292,7 @@ export default function NetworkPage() {
       <section className="network-policy-section" aria-labelledby="network-policy-title">
         <div>
           <p className="section-eyebrow">収益と編集を分ける</p>
-          <h2 id="network-policy-title">無料で試してから、必要な選択肢だけ比較</h2>
+          <h2 id="network-policy-title"><Phrase>無料で試してから、必要な選択肢だけ比較</Phrase></h2>
           <p>
             Manapickは無料動画を先に案内します。教材・講座などのPRリンクは明示し、報酬の有無で動画採点やランキングを操作しません。価格や申込条件は、リンク先の最新情報を確認してください。
           </p>
