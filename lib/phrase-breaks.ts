@@ -213,14 +213,33 @@ function splitLongSegments(text: string, breaks: number[]): number[] {
     const s = bounds[j], e = bounds[j + 1];
     if (e - s <= 12) continue;
     let last = s;
+    let added = false;
     for (let i = s + 2; i <= e - 2; i++) {
+      // 文末の区切りは、後ろに3字以上（閉じ括弧などは数えない）残す（「アドビ｜公式」「Mac｜対応】」の最終行2字を防ぐ）
+      if (e === text.length && tailLength(text, i) <= 2) break;
       if (i - last >= 2 && isClassBoundary(text, i)) {
         out.push(i);
         last = i;
+        added = true;
+      }
+    }
+    // 字種の変わり目が無い長い文節（「高校情報Ⅰ教科書完全準拠版」）は、よく使う語の手前で区切る（両側3字以上）
+    if (!added) {
+      for (const w of KANJI_SPLIT_BEFORE) {
+        const at = text.indexOf(w, s + 3);
+        if (at > 0 && at <= e - 3 && tailLength(text, at) >= 3 && !NO_LINE_START.test(text[at])) {
+          out.push(at);
+          break;
+        }
       }
     }
   }
   return Array.from(new Set(out)).sort((a, b) => a - b);
+}
+
+/** 区切り b の後ろの文字数（末尾の閉じ括弧・句読点・！？は数えない） */
+function tailLength(text: string, b: number): number {
+  return text.slice(b).replace(/[\s】」』）)〕］\]〉》＞、。，．,.！？!?]+$/, "").length;
 }
 
 function protectCompounds(text: string, breaks: number[]): number[] {
@@ -257,12 +276,13 @@ function mergeTinySegments(text: string, breaks: number[]): number[] {
   }
   // 末尾の1〜2字だけの文節は残さない（見出しの最終行が「拡大」「格」だけになる）。前の文節が長い（8字以上）ときは、
   // 前の文節の中の字種の変わり目へ区切りを移し（「スプレッドシート｜にも拡大」）、無ければ前の文節につなぐ
-  while (kept.length && text.length - kept[kept.length - 1] <= 2) {
+  // 末尾の閉じ括弧・句読点は数えない（「Mac｜対応】」も2字扱い）
+  while (kept.length && tailLength(text, kept[kept.length - 1]) <= 2) {
     const last = kept.pop() as number;
     const start = kept[kept.length - 1] ?? 0;
     if (last - start < 8) continue;
     for (let i = last - 1; i >= start + 3; i--) {
-      if (text.length - i >= 3 && isClassBoundary(text, i)) {
+      if (tailLength(text, i) >= 3 && isClassBoundary(text, i)) {
         kept.push(i);
         break;
       }

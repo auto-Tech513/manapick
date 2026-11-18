@@ -296,7 +296,9 @@ export default function YoutubeLearningPage() {
         <div className="youtube-section-head">
           <div>
             <p className="section-eyebrow">比較用</p>
-            <h2 id="youtube-popular-title">再生数ベースの総合人気も確認する</h2>
+            <h2 id="youtube-popular-title">
+              <Phrase>再生数ベースの総合人気も確認する</Phrase>
+            </h2>
           </div>
           <Link href="/ranking/#popular">総合人気を見る</Link>
         </div>

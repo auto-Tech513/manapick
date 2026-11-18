@@ -45,33 +45,63 @@
   border-radius: 10px;
 }
 
+/* 再生前の画像：再生ボタンと「このページで再生」は画像に重ねず、画像の下の帯に置く（独立監査2 M6）。
+   /og/videos/ の題名入りカードは中央に題名、左下にロゴ、右下に manapick.app があり、重ねるとどこかの文字を隠すため。
+   帯は再生後の埋め込み（黒）と同じ暗い色で、画像と帯を合わせた全体が1つのボタン。 */
+.video-page .video-embed-facade {
+  overflow: hidden;
+  border-radius: 10px;
+  background: var(--nw-night);
+  text-align: left;
+}
+
+.video-page .video-embed-facade .video-detail-thumb {
+  border-radius: 0;
+}
+
+.video-page .video-embed-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 8px 16px;
+  color: #fff;
+}
+
 .video-page .video-embed-play {
-  width: 84px;
-  height: 84px;
+  position: static;
+  inset: auto;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  margin: 0;
   border-radius: 50%;
   background: #fff;
   color: var(--nw-mp);
-  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.25);
+  box-shadow: none;
 }
 
 .video-page .video-embed-play svg {
-  width: 34px;
-  height: 34px;
+  width: 18px;
+  height: 18px;
+  margin-left: 2px;
 }
 
 .video-page .video-embed-facade:hover .video-embed-play,
 .video-page .video-embed-facade:focus-visible .video-embed-play {
   background: #fff;
-  transform: scale(1.06);
+  transform: scale(1.08);
 }
 
 .video-page .video-embed-hint {
-  right: auto;
-  left: 14px;
-  bottom: 14px;
-  background: rgba(255, 255, 255, 0.94);
-  color: var(--nw-ink);
+  position: static;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  color: #fff;
+  font-size: 15px;
   font-weight: 700;
+  line-height: 1.4;
 }
 
 .vd-tags {
@@ -1022,10 +1052,16 @@
     width: calc(100% + 40px);
   }
 
+  .video-page .video-embed-facade,
   .video-page .video-embed-facade .video-detail-thumb,
   .video-page .video-detail-thumb,
   .video-page .video-embed-frame {
     border-radius: 0;
+  }
+
+  .video-page .video-embed-bar {
+    min-height: 48px;
+    padding: 6px 20px;
   }
 
   .vd-title {

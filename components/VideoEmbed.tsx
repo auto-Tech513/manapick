@@ -49,12 +49,16 @@ export default function VideoEmbed({
         sizes="(min-width: 980px) 520px, 100vw"
         className="video-detail-thumb"
       />
-      <span className="video-embed-play" aria-hidden="true">
-        <svg viewBox="0 0 24 24" focusable="false">
-          <path d="M8 5v14l11-7z" fill="currentColor" />
-        </svg>
+      {/* 再生ボタンと「このページで再生」は画像の下の帯にまとめる。画像（/og/videos/ の題名入りカード）の中央や左下に
+          重ねると、題名の文字やロゴを隠していた（独立監査2 M6）。画像そのものは変えない */}
+      <span className="video-embed-bar">
+        <span className="video-embed-play" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M8 5v14l11-7z" fill="currentColor" />
+          </svg>
+        </span>
+        <span className="video-embed-hint">このページで再生</span>
       </span>
-      <span className="video-embed-hint">このページで再生</span>
     </button>
   );
 }

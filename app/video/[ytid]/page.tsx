@@ -372,7 +372,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
             <li>
               <a href="#vd-network">
                 <span>06</span>
-                {video.sub ?? genreDisplayName(video.genre)}の次に調べる
+                <Phrase>{video.sub ?? genreDisplayName(video.genre)}の次に調べる</Phrase>
               </a>
             </li>
             <li>
@@ -577,22 +577,30 @@ export default async function VideoPage({ params }: VideoPageProps) {
                     {link.site === "ai" ? (
                       <>
                         <span aria-hidden="true">🔧</span>
-                        <span>「{link.name}」の料金・無料枠・使い方を manapick AI で見る</span>
+                        <span>
+                          <Phrase>「{link.name}」の料金・無料枠・使い方を manapick AI で見る</Phrase>
+                        </span>
                       </>
                     ) : link.site === "license" ? (
                       <>
                         <span aria-hidden="true">📜</span>
-                        <span>「{link.name}」の難易度・費用・申込を manapick license で見る</span>
+                        <span>
+                          <Phrase>「{link.name}」の難易度・費用・申込を manapick license で見る</Phrase>
+                        </span>
                       </>
                     ) : link.site === "politics" ? (
                       <>
                         <span aria-hidden="true">§</span>
-                        <span>「{link.name}」を manapick politics で見る</span>
+                        <span>
+                          <Phrase>「{link.name}」を manapick politics で見る</Phrase>
+                        </span>
                       </>
                     ) : (
                       <>
                         <span aria-hidden="true">→</span>
-                        <span>「{link.name}」の仕事内容・必要スキルを manapick career で見る</span>
+                        <span>
+                          <Phrase>「{link.name}」の仕事内容・必要スキルを manapick career で見る</Phrase>
+                        </span>
                       </>
                     )}
                     <span className="sister-item-arrow" aria-hidden="true">→</span>

@@ -33,7 +33,9 @@ export default function PolicyPage({ title, lead, sections, children }: PolicyPa
         <div className="mt-8 grid gap-6">
           {sections.map((section) => (
             <section key={section.heading} className="border-t border-ink/10 pt-5">
-              <h2 className="text-xl font-black">{section.heading}</h2>
+              <h2 className="text-xl font-black">
+                <Phrase>{section.heading}</Phrase>
+              </h2>
               <p className="mt-3 leading-8 text-ink/76 [&_a]:font-black [&_a]:text-primary [&_a]:underline [&_a]:underline-offset-4">
                 {section.body}
               </p>

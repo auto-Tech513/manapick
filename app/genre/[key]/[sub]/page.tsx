@@ -220,7 +220,9 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
         <section className="sub-topic-section" aria-labelledby="sub-roadmap-title">
           <div className="sub-topic-heading">
             <p className="section-eyebrow">見る順ロードマップ</p>
-            <h2 id="sub-roadmap-title">{roadmap.title}</h2>
+            <h2 id="sub-roadmap-title">
+              <Phrase>{roadmap.title}</Phrase>
+            </h2>
           </div>
           <div className="sub-topic-roadmap">
             {roadmap.steps.map((step, index) => (
@@ -268,7 +270,9 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
         <section className="sub-topic-section" aria-labelledby="sub-faq-title">
           <div className="sub-topic-heading">
             <p className="section-eyebrow">FAQ</p>
-            <h2 id="sub-faq-title">{sub}の独学でよくある質問</h2>
+            <h2 id="sub-faq-title">
+              <Phrase>{sub}の独学でよくある質問</Phrase>
+            </h2>
           </div>
           <div className="guide-faq-list">
             {faqs.map((item) => (
@@ -346,7 +350,9 @@ function SubTopicEarlyPr({ items, genreName, sub }: { items: GuidePrLink[]; genr
       <div className="guide-pr-heading">
         <div>
           <p className="section-eyebrow">【PR】広告</p>
-          <h2 id="sub-early-pr-title">{sub}を本格対策するなら（PR）</h2>
+          <h2 id="sub-early-pr-title">
+            <Phrase>{sub}を本格対策するなら（PR）</Phrase>
+          </h2>
           <p className="guide-pr-disclosure">本ページにはアフィリエイト広告（PR）を含みます。</p>
           <p className="guide-pr-lead">独学で一番つらいのは、「この進め方で合っているのか」が見えないことです。ロードマップで全体像が見えた今が、問題演習と体系学習で対策を固めるタイミング。この分野に直結する講座です。</p>
         </div>
@@ -369,7 +375,9 @@ function SubTopicPrSection({ items, genreName, sub }: { items: GuidePrLink[]; ge
       <div className="guide-pr-heading">
         <div>
           <p className="section-eyebrow">【PR】広告</p>
-          <h2 id="sub-pr-title">{hasMatch ? `${sub}の対策に直結する講座・教材(PR)` : `${genreName}の学習にあわせて使いたい教材・講座(PR)`}</h2>
+          <h2 id="sub-pr-title">
+            <Phrase>{hasMatch ? `${sub}の対策に直結する講座・教材(PR)` : `${genreName}の学習にあわせて使いたい教材・講座(PR)`}</Phrase>
+          </h2>
           <p className="guide-pr-disclosure">本ページにはアフィリエイト広告（PR）を含みます。</p>
           <p className="guide-pr-lead">
             {hasMatch

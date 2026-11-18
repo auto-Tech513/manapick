@@ -441,7 +441,9 @@ export default async function GenrePage({ params }: GenrePageProps) {
 
       <section className="genre-hub-videos" id="videos" aria-labelledby="genre-hub-videos-title">
         <p className="section-eyebrow">掲載動画</p>
-        <h2 id="genre-hub-videos-title">{label}の掲載動画{list.length}本</h2>
+        <h2 id="genre-hub-videos-title">
+          <Phrase>{label}の掲載動画{list.length}本</Phrase>
+        </h2>
         <p className="genre-hub-videos-note">
           {rest.length > 0
             ? videoGroups.length > 1
@@ -502,7 +504,9 @@ export default async function GenrePage({ params }: GenrePageProps) {
       {channelStats.length > 0 ? (
         <section className="genre-hub-channels" aria-labelledby="genre-hub-channels-title">
           <p className="section-eyebrow">チャンネルから選ぶ</p>
-          <h2 id="genre-hub-channels-title">{label}で掲載本数が多いYouTubeチャンネル</h2>
+          <h2 id="genre-hub-channels-title">
+            <Phrase>{label}で掲載本数が多いYouTubeチャンネル</Phrase>
+          </h2>
           <p className="genre-hub-channels-note">
             Manapickに掲載している{list.length}本のうち、同じチャンネルの動画が2本以上あるものを掲載本数の多い順に表示しています。チャンネル自体の評価や公式な順位ではありません。
           </p>
@@ -523,7 +527,9 @@ export default async function GenrePage({ params }: GenrePageProps) {
             ))}
           </ol>
           <p className="genre-hub-research-link">
-            <Link href="/research/youtube-learning-data/">掲載動画全体の集計（長さ・スコアの分布）も見る <span aria-hidden="true">→</span></Link>
+            <Link href="/research/youtube-learning-data/">
+              <Phrase>掲載動画全体の集計（長さ・スコアの分布）も見る</Phrase> <span aria-hidden="true">→</span>
+            </Link>
           </p>
         </section>
       ) : null}
@@ -531,7 +537,9 @@ export default async function GenrePage({ params }: GenrePageProps) {
       <AdSlot slot="1438236565" />
       {seo.faq.length > 0 ? (
         <section className="genre-hub-faq" aria-labelledby="genre-hub-faq-title">
-          <h2 id="genre-hub-faq-title">{label}を学ぶ前によくある質問</h2>
+          <h2 id="genre-hub-faq-title">
+            <Phrase>{label}を学ぶ前によくある質問</Phrase>
+          </h2>
           <div className="genre-hub-faq-list">
             {seo.faq.map((item) => (
               <details key={item.question}>
