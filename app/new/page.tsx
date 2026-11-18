@@ -105,8 +105,8 @@ export default function NewPage() {
         <p className="section-eyebrow">New Videos</p>
         <h1>
           <Phrase>
-          <span className="knowledge-title-phrase">最近追加・更新した</span>
-          <span className="knowledge-title-phrase">動画</span>
+          <span className="knowledge-title-phrase">最近追加・</span>
+          <span className="knowledge-title-phrase">更新した動画</span>
           </Phrase>
         </h1>
         <p>{newDescription}</p>
@@ -141,7 +141,7 @@ export default function NewPage() {
           {latestByGenre.map((video) => (
             <Link key={video.genre} className="new-genre-latest-card" href={videoPath(video.ytid)}>
               <span>{genreDisplayName(video.genre)}</span>
-              <strong>{video.title}</strong>
+              <strong><Phrase>{video.title}</Phrase></strong>
               <small>{formatPublishedDate(video.publishedAt)} / {scoreText(video)} / {video.minutes}分</small>
             </Link>
           ))}
@@ -174,7 +174,7 @@ function NewVideoCard({ video }: { video: Video }) {
       </span>
       <span className="new-video-body">
         <span className="new-video-meta">{genreLabel(video.genre)} / {video.sub} / {scoreText(video)} / {video.minutes}分</span>
-        <strong>{video.title}</strong>
+        <strong><Phrase>{video.title}</Phrase></strong>
         <span>{formatPublishedDate(video.publishedAt)}</span>
       </span>
     </Link>

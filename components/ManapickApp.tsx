@@ -122,6 +122,11 @@ function VideoTitle({ video }: { video: Pick<Video, "ytid" | "title"> }) {
   const breaks = useContext(TitleBreaksContext);
   return <BreakText text={video.title} breaks={breaks[video.ytid]} />;
 }
+
+function SubName({ sub }: { sub: string }) {
+  const breaks = useContext(TitleBreaksContext);
+  return <BreakText text={sub} breaks={breaks["sub:" + sub]} />;
+}
 const roadmaps = roadmapsData as Roadmap[];
 const professionRoutes = professionRoutesData as ProfessionRoute[];
 
@@ -2413,7 +2418,7 @@ function GenreSummaryPanel({
       <div className="topic-chip-row" role="group" aria-label="サブジャンルトピック">
         {topics.map(([sub, count]) => (
           <button key={sub} type="button" className={selectedSub === sub ? "topic-chip is-active" : "topic-chip"} onClick={() => onTopicSelect(sub)}>
-            <span>{sub}</span>
+            <span><SubName sub={sub} /></span>
             <strong>{count}</strong>
           </button>
         ))}

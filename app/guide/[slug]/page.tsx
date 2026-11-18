@@ -341,7 +341,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
               <ul className="guide-advice-list">
                 {extraBlocks.map((item) => (
                   <li key={item.label}>
-                    <strong>{item.label}</strong>
+                    <strong><Phrase>{item.label}</Phrase></strong>
                     <span>{item.text}</span>
                   </li>
                 ))}
@@ -475,7 +475,7 @@ function GuidePrSection({ guide }: { guide: Guide }) {
       <div className="guide-pr-grid">
         {placeholderItems.map((item) => (
           <div key={item.title} className="guide-pr-card" aria-disabled="true">
-            <strong>{item.title}</strong>
+            <strong><Phrase>{item.title}</Phrase></strong>
             <span>{item.body}</span>
             <em>掲載準備中</em>
           </div>

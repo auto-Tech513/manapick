@@ -20,6 +20,7 @@ import { useLocalList } from "@/lib/useLocalList";
 import { useStreakState } from "@/lib/useStreakState";
 import PwaInstallButton from "@/components/PwaInstallButton";
 import StudyPlanCalendar from "@/components/StudyPlanCalendar";
+import BreakText from "@/components/BreakText";
 
 // プランの型と構築ロジックは lib/study-plan.ts に切り出し済み（マイページの
 // 進捗表示と共有するため）。ここでは従来の import 元として型だけ再公開する。
@@ -262,7 +263,7 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
                       />
                       <span className="study-plan-video-copy">
                         <small>{video.level}・{video.sub}</small>
-                        <strong>{video.title}</strong>
+                        <strong><BreakText text={video.title} breaks={video.titleBreaks} /></strong>
                         <span>{video.score === null ? "スコア準備中" : `${video.score}/35`} ／ {video.minutes}分</span>
                       </span>
                     </Link>

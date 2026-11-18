@@ -83,7 +83,7 @@ export default function GuideIndexPage() {
             <span className="guide-index-number">{String(index + 1).padStart(2, "0")}</span>
             <span className="guide-index-copy">
               <small>{genreDisplayName(guide.genre)}</small>
-              <strong>{guide.title}</strong>
+              <strong><Phrase>{guide.title}</Phrase></strong>
               <span>{guide.description}</span>
             </span>
             <span className="guide-index-arrow" aria-hidden="true">→</span>

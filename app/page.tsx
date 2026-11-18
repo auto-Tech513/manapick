@@ -6,13 +6,17 @@ import roadmapsData from "@/content/roadmaps.json";
 import { absoluteUrl, genreDisplayName, isoDuration, videoPath, videos } from "@/lib/manapick";
 import { rankedVideos } from "@/lib/rankings";
 import { siteStats } from "@/lib/site-stats";
-import { phraseBreaks } from "@/lib/phrase-breaks";
+import { chipBreaks, phraseBreaks } from "@/lib/phrase-breaks";
 import { siteMenuBreaks } from "@/lib/site-menu-breaks";
 
 const buildReferenceTime = Date.now();
 // 動画タイトルの文節境界（BudouX、ビルド時）。クライアント部品 ManapickApp へオフセットだけ渡す。
 const videoTitleBreaks: Record<string, number[]> = Object.fromEntries(
-  videos.map((video) => [video.ytid, phraseBreaks(video.title)] as const).filter(([, breaks]) => breaks.length > 0)
+  [
+    ...videos.map((video) => [video.ytid, phraseBreaks(video.title)] as const),
+    // 「トピックから絞り込む」のチップ（サブジャンル名）。「国家公務員採｜用一般職試験」のような語中改行を防ぐ
+    ...Array.from(new Set(videos.map((video) => video.sub).filter(Boolean))).map((sub) => ["sub:" + sub, chipBreaks(sub)] as const)
+  ].filter(([, breaks]) => breaks.length > 0)
 );
 const homeTitle = "Manapick | 無料YouTube学習動画を、見る順まで整理";
 const homeDescription =
