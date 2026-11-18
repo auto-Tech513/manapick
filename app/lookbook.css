@@ -4944,6 +4944,28 @@ section[id], details[id], article[id] { scroll-margin-top: 16px; }
   bottom: var(--ad-anchor-bottom, 0px);
 }
 
+/* 乗り換えシートはレイヤーの下端に付く。82vh のままだと上部アンカー広告（305〜427px）が出ているときにレイヤーより上へ
+   はみ出し、見出しと「×」が広告の下に隠れていた（独立監査2 H1）。高さを「画面の高さ − 広告の高さ」の内側に収め、
+   上に暗幕を 16px 残す（はみ出す分はシートの中でスクロール）。上部アンカーの下端には畳むための「^」つまみ（約25px）が
+   ぶら下がるので、上部アンカーがあるときは暗幕をさらに 16px 足す（min() で、広告が無いときは 0）。 */
+.nw-sheet {
+  max-height: min(82vh, calc(100% - 16px - min(var(--ad-anchor-top, 0px), 16px)));
+  max-height: min(82vh, calc(100dvh - var(--ad-anchor-top, 0px) - var(--ad-anchor-bottom, 0px) - 16px - min(var(--ad-anchor-top, 0px), 16px)), calc(100% - 16px - min(var(--ad-anchor-top, 0px), 16px)));
+}
+
+/* SP のメニュー：上部アンカーの「^」つまみの下に、メニューの文字（スクロールした検索欄のラベル等）が入り込まないよう、
+   上部アンカーがあるときだけ上端に 28px の帯（メニューと同じ地色の枠線。スクロールしない）を置く（独立監査2 L3） */
+.mp-menu {
+  border-top: min(var(--ad-anchor-top, 0px), 28px) solid var(--nw-paper);
+}
+
+/* PC：下部アンカー広告が body の下余白より高い分だけ、フッター最下段の下に余白を足す（独立監査2 M1。広告が無ければ 0） */
+@media (min-width: 768px) {
+  .ft-bottom {
+    padding-bottom: calc(32px + var(--ad-anchor-bottom-cover, 0px));
+  }
+}
+
 @media (max-width: 767px) {
   /* SP の下部ナビは下部アンカー広告の上に置く。ページ末尾もその分だけ余白を足す */
   .mobile-bottom-nav {
@@ -4962,5 +4984,119 @@ section[id], details[id], article[id] { scroll-margin-top: 16px; }
   .site-search-form.is-panel-open {
     top: var(--ad-anchor-top, 0px);
     bottom: var(--ad-anchor-bottom, 0px);
+  }
+
+  /* 上部アンカーの「^」つまみ（約25px）が「動画を検索」ラベル等の左端に重なっていた（独立監査2 L3）。
+     上部アンカーがあるときだけ、パネルの上の余白を 28px 足す（広告が無いときは min() で 0） */
+  .top-search-wrap.is-panel-open,
+  .lb-kw-wrap.is-panel-open {
+    padding-top: calc(12px + min(var(--ad-anchor-top, 0px), 28px));
+  }
+
+  .site-search-form.is-panel-open {
+    padding-top: max(calc(12px + min(var(--ad-anchor-top, 0px), 28px)), env(safe-area-inset-top));
+  }
+}
+
+/* =====================================================================
+   独立監査2（2026-11-19）
+   ===================================================================== */
+/* L6（PC）ガイドの「▶ 目次」の帯だけ上下の余白が小さく文字が枠の左端に寄っていた → 前後の折りたたみの区切り
+   （guide-section：内側の余白 28px・角丸・影、右端の「＋」の丸）とそろえる */
+@media (min-width: 768px) {
+  .guide-toc {
+    margin-top: 18px;
+    padding: 20px 28px;
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow-card);
+  }
+
+  .guide-toc > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 44px;
+    list-style: none;
+    font-size: 18px;
+  }
+
+  .guide-toc > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .guide-toc > summary::after {
+    content: "+";
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--color-line);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--color-primary-ink);
+    font-size: 1.15rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .guide-toc[open] > summary::after {
+    content: "−";
+  }
+}
+
+/* L1 /faq/・/new/：main の最後の要素の margin-bottom（42px・20px）が main の外へ抜け、main とフッターの間に地色のすき間が
+   出ていた（フッターの高さの計測も 42px 多くなる）。main の中に収める */
+.knowledge-page {
+  display: flow-root;
+}
+
+/* 乗り換えシートは SP の下部ナビ（.mobile-bottom-nav）の中に描かれるため、下部ナビのボタン・リンク向けの指定
+   （.mobile-bottom-nav a / button：display:grid・中央寄せ・12px・padding 4px 2px・background:none・border:0）が
+   シートの中まで効き、閉じる用の暗幕が透明に、「×」が枠なしの12pxに、駅の行がアイコンの下に文字が来る中央寄せになっていた
+   （独立監査2 H1 の「背景（閉じる用の暗幕）も見えない」）。シート本来の指定（2286 行目付近）に戻す */
+@media (max-width: 767px) {
+  .mobile-bottom-nav .nw-sheet-backdrop {
+    display: block;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: rgba(17, 19, 24, 0.55);
+  }
+
+  .mobile-bottom-nav .nw-sheet-close {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    min-height: 44px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .mobile-bottom-nav .nw-sheet-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    min-height: 56px;
+    padding: 10px 8px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: inherit;
+    line-height: inherit;
+    text-align: left;
+  }
+
+  .mobile-bottom-nav .nw-sheet-row.is-current {
+    background: rgba(255, 255, 255, 0.08);
   }
 }

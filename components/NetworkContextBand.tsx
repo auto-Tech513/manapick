@@ -93,8 +93,12 @@ export default function NetworkContextBand({ genreKey, sub, skipHrefs = [], page
     <section id={`network-context-${genreKey}`} className="network-context-band" aria-labelledby={`network-context-title-${genreKey}`}>
       <div className="network-context-heading">
         <p className="section-eyebrow">MANAPICK NETWORK</p>
-        <h2 id={`network-context-title-${genreKey}`}>{subject}の次に調べる</h2>
-        <p>関連する資格・仕事・AI{hasCompany ? "・企業" : ""}を姉妹サイトで確認できます。</p>
+        <h2 id={`network-context-title-${genreKey}`}>
+          <Phrase>{subject}の次に調べる</Phrase>
+        </h2>
+        <p>
+          <Phrase>関連する資格・仕事・AI{hasCompany ? "・企業" : ""}を姉妹サイトで確認できます。</Phrase>
+        </p>
       </div>
       <div className={`network-context-links${cards.length === 4 ? " has-four" : ""}`}>
         {cards.map((card) => (
