@@ -4056,6 +4056,11 @@ a.nw-rail-station {
   background: var(--nw-paper);
   color: var(--nw-ink);
 }
+/* 本文の幅が画面より狭いページ（manapi商店など）で、左右に旧い地色（#f6f8fb）の帯が出ないよう body も紙色に */
+body:has(.knowledge-page, .score-page, .guide-page, .guide-index-page, .study-plan-page, .network-page,
+  .sub-topic-page, .genre-hub, .static-page, .mp-shop-page, .video-page, main.bg-paper) {
+  background: var(--nw-paper);
+}
 .knowledge-header, .score-page-header, .guide-page-header { min-height: 72px; }
 .knowledge-header-link {
   display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px;

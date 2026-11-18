@@ -168,7 +168,7 @@ export default function RankingPage() {
                     <li key={video.ytid}>
                       <Link href={videoPath(video.ytid)}>
                         <span>{index + 1}</span>
-                        <strong>{video.title}</strong>
+                        <strong><Phrase>{video.title}</Phrase></strong>
                         <small>{scoreText(video)} / {video.minutes}分</small>
                       </Link>
                     </li>
@@ -200,7 +200,7 @@ function RankingVideoCard({ video, rank, priority }: { video: Video; rank: numbe
       </span>
       <span className="ranking-video-body">
         <span className="ranking-video-meta">{genreLabel(video.genre)} / {scoreText(video)} / {video.minutes}分</span>
-        <strong>{video.title}</strong>
+        <strong><Phrase>{video.title}</Phrase></strong>
       </span>
     </Link>
   );

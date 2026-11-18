@@ -340,7 +340,7 @@ export default async function GenrePage({ params }: GenrePageProps) {
             />
             {freshness ? <span className={`freshness-badge is-${freshness.tone}`}>{freshness.label}</span> : null}
           </span>
-          <span className="genre-hub-card-title">{video.title}</span>
+          <span className="genre-hub-card-title"><Phrase>{video.title}</Phrase></span>
           <span className="genre-hub-card-meta">{scoreText(video)}・{video.minutes}分・{video.sub}</span>
         </Link>
       </li>
@@ -427,11 +427,11 @@ export default async function GenrePage({ params }: GenrePageProps) {
       </FoldSection>
       {subPages.length > 0 ? (
         <section className="genre-hub-subpages" aria-labelledby="genre-hub-subpages-title">
-          <h2 id="genre-hub-subpages-title">{label}のトピック別ロードマップ</h2>
+          <h2 id="genre-hub-subpages-title"><Phrase>{label}のトピック別ロードマップ</Phrase></h2>
           <div className="genre-hub-subpage-grid">
             {subPages.map((item) => (
               <Link key={item.key + item.sub} href={eligibleSubPagePath(item)}>
-                <span>{item.sub}</span>
+                <span><Phrase>{item.sub}</Phrase></span>
                 <strong>{item.count}本</strong>
               </Link>
             ))}

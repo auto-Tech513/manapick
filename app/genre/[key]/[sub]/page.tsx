@@ -229,7 +229,7 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
                   <span>{step.label}</span>
                   <strong>{step.stage}</strong>
                 </div>
-                <h3>{step.goal}</h3>
+                <h3><Phrase>{step.goal}</Phrase></h3>
                 <div className="sub-topic-step-videos">
                   {step.videos.map((ytid) => {
                     const video = list.find((item) => item.ytid === ytid);
@@ -254,7 +254,7 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
                   <small>/35</small>
                 </span>
                 <span className="sub-topic-list-main">
-                  <span className="sub-topic-list-title">{video.title}</span>
+                  <span className="sub-topic-list-title"><Phrase>{video.title}</Phrase></span>
                   <span className="sub-topic-list-meta">{video.level}・{video.minutes}分・{video.channel}</span>
                   <span className="sub-topic-list-review">{video.review[0] ?? "学習の入口として確認しやすい動画です。"}</span>
                 </span>
@@ -330,7 +330,7 @@ function SubTopicVideoCard({ video, priority }: { video: Video; priority?: boole
         />
       </span>
       <span className="sub-topic-video-body">
-        <strong>{video.title}</strong>
+        <strong><Phrase>{video.title}</Phrase></strong>
         <span>{scoreText(video)}・{video.minutes}分</span>
         <em>{video.review[0] ?? "学習の入口として確認しやすい動画です。"}</em>
       </span>

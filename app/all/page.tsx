@@ -76,7 +76,7 @@ export default function AllPagesIndex() {
                     {subs.map((item) => (
                       <li key={item.sub}>
                         <Link href={eligibleSubPagePath(item)}>
-                          {genreDisplayName(key)}：{item.sub}（{item.count}本）
+                          <Phrase>{genreDisplayName(key)}：{item.sub}（{item.count}本）</Phrase>
                         </Link>
                       </li>
                     ))}
@@ -93,7 +93,7 @@ export default function AllPagesIndex() {
         <ul className="mp-sitemap-list">
           {guides.map((guide) => (
             <li key={guide.slug}>
-              <Link href={guidePath(guide.slug)}>{guide.title}</Link>
+              <Link href={guidePath(guide.slug)}><Phrase>{guide.title}</Phrase></Link>
             </li>
           ))}
         </ul>
@@ -104,7 +104,7 @@ export default function AllPagesIndex() {
         <ul className="mp-sitemap-list">
           {learningIntents.map((intent) => (
             <li key={intent.slug}>
-              <Link href={learningIntentPath(intent.slug)}>{intent.query}：{intent.h1}</Link>
+              <Link href={learningIntentPath(intent.slug)}><Phrase>{intent.query}：{intent.h1}</Phrase></Link>
             </li>
           ))}
         </ul>

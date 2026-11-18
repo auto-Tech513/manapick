@@ -13,6 +13,7 @@ import {
   youtubeThumbnail
 } from "@/lib/manapick";
 import Phrase from "@/components/Phrase";
+import { withTitleBreaks } from "@/lib/phrase-breaks";
 
 type Roadmap = {
   genre: string;
@@ -33,7 +34,7 @@ const genreOptions: StudyPlanGenre[] = publishedGenreKeys.map((key) => ({
 }));
 
 // プラン候補の動画列は lib/study-plan.ts の buildPlanVideos で作る（マイページの進捗再計算と共有）。
-const planVideos = buildPlanVideos(videos, roadmaps, publishedGenreKeys);
+const planVideos = buildPlanVideos(videos, roadmaps, publishedGenreKeys).map(withTitleBreaks);
 
 const faq = [
   {

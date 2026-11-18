@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import {
   genreDisplayName,
   publishedGenreKeys,
@@ -186,14 +186,23 @@ export default function StartQuiz() {
               <button
                 key={key}
                 type="button"
-                className="min-h-14 rounded-lg border border-line bg-surface px-3 py-3 text-left text-sm font-black text-ink shadow-sm transition hover:-translate-y-0.5 hover:border-leaf hover:shadow-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary motion-reduce:transform-none"
+                className="min-h-14 break-keep rounded-lg border border-line bg-surface px-3 py-3 text-left text-sm font-black text-ink shadow-sm transition hover:-translate-y-0.5 hover:border-leaf hover:shadow-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary motion-reduce:transform-none"
                 onClick={() => {
                   sendGaEvent("diagnosis_start", { genre: key });
                   setGenre(key);
                   setStep(2);
                 }}
               >
-                {genreDisplayName(key)}
+                {/* 語の途中で折れないよう語単位（keep-all）にし、「・」の後ろでだけ折り返す（動画編集・｜クリエイティブ） */}
+                {genreDisplayName(key)
+                  .split("・")
+                  .map((part, index) => (
+                    <Fragment key={index}>
+                      {index ? "・" : null}
+                      {index ? <wbr /> : null}
+                      {part}
+                    </Fragment>
+                  ))}
               </button>
             ))}
           </div>

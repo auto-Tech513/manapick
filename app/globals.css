@@ -7358,6 +7358,8 @@ ins.adsbygoogle:not(.ad-slot),
   .my-stat-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, max((397px - 100%) * 999, (100% - 12px) / 2 - 0.1px)), 1fr));
     padding-block: 12px;
+    /* 説明つきのカード（has-help）は全幅。半幅のカード（視聴済み・あとで見る）が1枚ずつ取り残されないよう詰めて並べる */
+    grid-auto-flow: row dense;
   }
 
   .my-hero-actions > a{
@@ -7622,8 +7624,10 @@ ins.adsbygoogle:not(.ad-slot),
     white-space: nowrap;
   }
 
+  /* 日本語は12px未満にしない。入りきらない幅（360など）では1行に詰めず折り返す */
   .my-stat-card.has-help span:not(.metric-help-body) {
-    font-size: clamp(0.72rem, 3.05vw, 0.78rem);
+    font-size: clamp(0.75rem, 3.05vw, 0.78rem);
+    white-space: normal;
   }
 
   .my-section {
@@ -10266,6 +10270,17 @@ ins.adsbygoogle:not(.ad-slot),
   gap: 7px;
 }
 
+/* トピック名は文節（<wbr>）で折る。flex の中で文字列が縮まずに枠から出ないよう、名前の側を縮められるようにする
+   （「情報セキュリティマネジメント試験」「AWS認定 ソリューションアーキテクト」など長い名前） */
+.topic-chip > span {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.topic-chip strong {
+  flex: 0 0 auto;
+}
+
 .topic-chip strong {
   display: inline-flex;
   min-width: 22px;
@@ -10574,6 +10589,9 @@ ins.adsbygoogle:not(.ad-slot),
   font-weight: 900;
   line-break: strict;
   word-break: keep-all;
+  /* keep-all だけでは「クリエイティブのトピック別ロードマップ」が1語になり画面の外へ出る（/genre/video/ ほか）。
+     文節の <wbr>（Phrase）で折り、それでも入らない語は枠内で折る */
+  overflow-wrap: break-word;
   text-wrap: balance;
 }
 
@@ -10901,8 +10919,11 @@ ins.adsbygoogle:not(.ad-slot),
     gap: 3px;
   }
 
+  /* keep-all だけだと「ビジネス実務法務検定試験」のような長い名前が枠から出る。文節の <wbr>（Phrase）で折り、
+     それでも入らない1語は枠内で折る */
   .genre-hub-subpage-grid a > span {
-    overflow-wrap: normal;
+    max-width: 100%;
+    overflow-wrap: break-word;
     word-break: keep-all;
   }
 
@@ -14872,4 +14893,49 @@ article li .text-sm {
   display: inline !important;
   word-break: keep-all !important;
   overflow-wrap: break-word !important;
+}
+
+/* 行数を切る（line-clamp）文の折り返し（2026-11-17 全ページレイアウト監査）
+   pretty / balance は隠れる行まで含めて行長をそろえるため、iPhone Safari では見えている2〜3行が右に5字ほど空いて
+   途切れ、カードが縦に長く見えていた（学びニュース一覧の要約・ランキングの題名など）。切る文は通常の折り返しに戻す。 */
+.featured-video-card h3,
+.genre-hub-card-title,
+.genre-hub-channel-top,
+.genre-ranking-card li strong,
+.guide-breadcrumb span:last-child,
+.guide-index-copy > span,
+.hero-carousel-title,
+.highlight-title,
+.latest-news-summary,
+.lb-film-title,
+.lb-hero-lead,
+.lb-ni p,
+.lb-road-sec .roadmap-mini-title,
+.lb-tile-title,
+.lb-tile:not(.is-big) .lb-tile-title,
+.lb-vc h3,
+.learning-intent-video-card .youtube-video-body em,
+.line-clamp-2,
+.live-search-empty button,
+.live-suggestion-title,
+.my-video-body strong,
+.new-genre-latest-card strong,
+.new-video-body strong,
+.news-index-card > p,
+.profession-feature-title,
+.ranked-body h3,
+.ranking-video-body strong,
+.recent-update-body strong,
+.recent-video-title,
+.roadmap-mini-title,
+.study-plan-video-copy strong,
+.today-pick-copy strong,
+.video-breadcrumb span:last-child,
+.video-related-title,
+.weekly-pick-body > p:not(.weekly-pick-eyebrow):not(.editor-note),
+.weekly-pick-body h2,
+.weekly-pick-section .highlight-title,
+.youtube-popular-list strong,
+.youtube-video-body strong {
+  text-wrap: wrap !important;
 }

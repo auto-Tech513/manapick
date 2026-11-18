@@ -223,7 +223,7 @@ export default function YoutubeLearningPage() {
           {intentCards.map((item) => (
             <Link key={item.label} href={item.href}>
               <span>{item.label}</span>
-              <strong>{item.title}</strong>
+              <strong><Phrase>{item.title}</Phrase></strong>
               <small>{item.body}</small>
             </Link>
           ))}
@@ -237,7 +237,7 @@ export default function YoutubeLearningPage() {
           {steps.map((step, index) => (
             <Link key={step.title} href={step.href} className="youtube-step-card">
               <span>{String(index + 1).padStart(2, "0")}</span>
-              <strong>{step.title}</strong>
+              <strong><Phrase>{step.title}</Phrase></strong>
               <small>{step.body}</small>
             </Link>
           ))}
@@ -254,7 +254,7 @@ export default function YoutubeLearningPage() {
           {learningIntents.map((intent) => (
             <Link key={intent.slug} href={learningIntentPath(intent.slug)} className="learning-intent-card">
               <span>{intent.query}</span>
-              <strong>{intent.h1}</strong>
+              <strong><Phrase>{intent.h1}</Phrase></strong>
               <small>{intent.audience}</small>
             </Link>
           ))}
@@ -305,7 +305,7 @@ export default function YoutubeLearningPage() {
             <li key={video.ytid}>
               <Link href={videoPath(video.ytid)}>
                 <span>{index + 1}</span>
-                <strong>{video.title}</strong>
+                <strong><Phrase>{video.title}</Phrase></strong>
                 <small>{genreLabel(video.genre)} / {scoreText(video)} / {video.minutes}分</small>
               </Link>
             </li>
@@ -357,7 +357,7 @@ function LearningVideoCard({ video, rank }: { video: Video; rank: number }) {
       </span>
       <span className="youtube-video-body">
         <small>{genreLabel(video.genre)} / {scoreText(video)} / {video.minutes}分</small>
-        <strong>{video.title}</strong>
+        <strong><Phrase>{video.title}</Phrase></strong>
       </span>
     </Link>
   );

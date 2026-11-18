@@ -15,6 +15,8 @@ export type StudyPlanVideo = {
   detailUrl: string;
   thumbnailUrl: string;
   sequence: number;
+  /** 題名の文節区切り（ビルド時に app/study-plan で計算。iPhone Safari の語中改行対策） */
+  titleBreaks?: number[];
 };
 
 export type StudyPlanSession = {

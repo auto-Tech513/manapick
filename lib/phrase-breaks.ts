@@ -13,8 +13,9 @@ const JAPANESE = /[぀-ヿ㐀-鿿]/;
 const KATAKANA = /[ァ-ヺ]/; // excludes ー (U+30FC), which joins the previous run
 const KANJI = /[㐀-鿿々]/;
 const LONG_PHRASE = 8;
-const OPENING = /[「『（(【〔［\[〈《]/;
-const NO_LINE_START = /[」』）)】〕］\]〉》、。，．,.・：:；;！？!?ー～ぁぃぅぇぉっゃゅょゎァィゥェォッャュョヮヵヶ]/;
+const OPENING = /[「『（(【〔［\[〈《＜]/;
+// 〜（U+301C 波ダッシュ）と ＞ も行頭禁則（「始め方｜〜アニメーション」「＜初心者・入門＞」で行頭に来ていた）
+const NO_LINE_START = /[」』）)】〕］\]〉》＞、。，．,.・：:；;！？!?ー～〜ぁぃぅぇぉっゃゅょゎァィゥェォッャュョヮヵヶ]/;
 const cache = new Map<string, number[]>();
 
 /** Card data with title break points (GuideCard). */
@@ -41,16 +42,21 @@ export function phraseBreaks(text: string): number[] {
         const a = chunk[i - 1], b = chunk[i];
         if ((KATAKANA.test(a) || a === "ー") && KANJI.test(b)) breaks.push(offset + i);
         else if (KANJI.test(a) && KATAKANA.test(b)) breaks.push(offset + i);
+        // 英字と漢字・カタカナの境目（「【無料｜YouTube｜動画4本】」）。長い文節が行幅を超えて「4｜本】」と折れるのを防ぐ
+        else if (/[A-Za-z]/.test(a) && (KANJI.test(b) || KATAKANA.test(b))) breaks.push(offset + i);
+        else if ((KANJI.test(a) || KATAKANA.test(a) || a === "ー") && /[A-Za-z]/.test(b)) breaks.push(offset + i);
+        // 助詞などのひらがなの後ろに漢字が続く所（「スプレッドシートにも｜拡大」「初期設定まで｜解説」）
+        else if (/[ぁ-ゖ]/.test(a) && KANJI.test(b)) breaks.push(offset + i);
       }
     }
     // 「ChatGPT・Claude・Gemini」のように中黒・スラッシュで並べた語は BudouX が1文節にまとめるため、
     // SP で文節が行幅を超えると英単語の途中（Gem｜ini）で折れる。区切り記号の直後にも改行位置を置く。
     for (let i = 1; i < chunk.length; i++) {
-      if (/[・／/→]/.test(chunk[i - 1]) && !/[・／/→]/.test(chunk[i])) breaks.push(offset + i);
+      if (/[・／/→｜|_＿：〜～]/.test(chunk[i - 1]) && !/[・／/→｜|_＿：〜～]/.test(chunk[i])) breaks.push(offset + i);
       // manapick 追加: 長い動画タイトル（「【何年かかる？】英語力…」「アンソロピック「Claude…」）が1文節にまとまり、
       // 行幅を超えて任意の位置で折れるのを防ぐ。開き括弧の手前と、閉じ括弧・！？・読点の直後も改行位置にする。
       else if (OPENING.test(chunk[i]) && !OPENING.test(chunk[i - 1])) breaks.push(offset + i);
-      else if (/[】」』）)！？!?、。]/.test(chunk[i - 1])) breaks.push(offset + i);
+      else if (/[】」』）)〉》＞！？!?、。]/.test(chunk[i - 1])) breaks.push(offset + i);
     }
     offset += chunk.length;
     if (offset < text.length) breaks.push(offset);
@@ -116,6 +122,27 @@ function mergeTinySegments(text: string, breaks: number[]): number[] {
     kept.push(b);
     prev = b;
   }
-  while (kept.length && text.length - kept[kept.length - 1] <= 2) kept.pop();
+  // 末尾の1〜2字は前の文節に付ける。ただし前の文節が長い（8字以上）と、つないだ文節が行幅を超えて
+  // 「拡｜大」「解｜説」のように語の途中で強制的に折れるため、その場合は区切りを残す（見出しは balance で行長をそろえる）
+  while (kept.length && text.length - kept[kept.length - 1] <= 2 && kept[kept.length - 1] - (kept[kept.length - 2] ?? 0) < 8) kept.pop();
   return kept;
+}
+
+/**
+ * 幅の狭い札（トピックチップ）用。文節の区切りに加えて、長いカタカナ語（7字以上）の中にも
+ * 行頭禁則にならない位置（ー・小書き仮名の前を除く、語の端から3字以上内側）に区切りを置く。
+ * 1語が札の幅を超えると keep-all の強制改行で「ア｜ーキテクト」「プラクテ｜ィショナー」と禁則が崩れるため。
+ */
+export function chipBreaks(text: string): number[] {
+  const set = new Set(phraseBreaks(text));
+  const KANA_RUN = /[ァ-ヺー]{7,}/g;
+  let m: RegExpExecArray | null;
+  while ((m = KANA_RUN.exec(text))) {
+    const start = m.index;
+    const end = start + m[0].length;
+    for (let i = start + 3; i <= end - 3; i++) {
+      if (!NO_LINE_START.test(text[i])) set.add(i);
+    }
+  }
+  return Array.from(set).sort((a, b) => a - b);
 }

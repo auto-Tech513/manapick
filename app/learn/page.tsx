@@ -92,7 +92,7 @@ export default function LearnIndexPage() {
           {learningIntents.map((intent) => (
             <Link key={intent.slug} href={learningIntentPath(intent.slug)} className="learning-intent-card">
               <span>{intent.query}</span>
-              <strong>{intent.h1}</strong>
+              <strong><Phrase>{intent.h1}</Phrase></strong>
               <small>{intent.audience}</small>
             </Link>
           ))}

@@ -386,8 +386,10 @@
 
 .vd-sec-head {
   display: flex;
+  /* 右の「◯◯の一覧へ」はジャンル名で長さが変わる（nowrap）。入りきらないときは見出しを押しつぶさず次の行へ送る */
+  flex-wrap: wrap;
   align-items: baseline;
-  gap: 14px;
+  gap: 4px 14px;
   border-top: 1.5px solid var(--nw-ink);
   padding-top: 22px;
   margin-bottom: 20px;
@@ -897,6 +899,9 @@
 
 .vd-next-body {
   display: grid;
+  /* 1語が長い題名（「（ソリューションアーキテクトアソシエイト）」）でも列が広がって枠から出ないよう、列の最小幅を0に */
+  grid-template-columns: minmax(0, 1fr);
+  min-width: 0;
   gap: 8px;
   align-content: center;
   padding: 20px 22px;
@@ -910,7 +915,7 @@
 
 .vd-card-genre {
   font-family: var(--font-num);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.14em;
   color: var(--nw-mp);
@@ -947,6 +952,8 @@
 
 .vd-rel-body {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-width: 0;
   gap: 6px;
   padding: 14px 16px 16px;
 }

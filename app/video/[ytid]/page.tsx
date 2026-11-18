@@ -631,7 +631,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
                 </span>
                 <span className="vd-next-body">
                   <span className="vd-card-genre">{genreLabel(nextPick.video.genre)}</span>
-                  <strong>{nextPick.video.title}</strong>
+                  <strong><Phrase>{nextPick.video.title}</Phrase></strong>
                   <span className="vd-card-meta">
                     {scoreText(nextPick.video)} ・ {nextPick.video.minutes}分
                   </span>
@@ -662,7 +662,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
                   </span>
                   <span className="vd-rel-body">
                     <span className="vd-card-genre">{genreLabel(item.genre)}</span>
-                    <span className="vd-rel-title">{item.title}</span>
+                    <span className="vd-rel-title"><Phrase>{item.title}</Phrase></span>
                     <span className="vd-card-meta">
                       {scoreText(item)} ・ {item.minutes}分
                     </span>

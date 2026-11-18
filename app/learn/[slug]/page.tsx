@@ -147,7 +147,7 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
           <div className="learning-source-list">
             {intent.officialSources.map((source) => (
               <a key={source.href} href={source.href} target="_blank" rel="noopener noreferrer">
-                <strong>{source.label}</strong>
+                <strong><Phrase>{source.label}</Phrase></strong>
                 <small>{source.note}</small>
                 <span aria-hidden="true">公式サイト ↗</span>
               </a>
@@ -166,7 +166,7 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
               <li key={step.title}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <div>
-                  <strong>{step.title}</strong>
+                  <strong><Phrase>{step.title}</Phrase></strong>
                   <p>{step.body}</p>
                   {isExternal ? (
                     <a href={step.href} target="_blank" rel="noopener noreferrer">公式サイトで確認する</a>
@@ -205,7 +205,7 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
             const isExternal = link.href.startsWith("http");
             const content = (
               <>
-                <strong>{link.label}</strong>
+                <strong><Phrase>{link.label}</Phrase></strong>
                 <small>{link.note}</small>
               </>
             );
@@ -344,7 +344,7 @@ function IntentVideoCard({ video, rank }: { video: Video; rank: number }) {
       </span>
       <span className="youtube-video-body">
         <small>{intentVideoSummary(video)}</small>
-        <strong>{video.title}</strong>
+        <strong><Phrase>{video.title}</Phrase></strong>
         <em>{video.review[0] ?? scoreText(video)}</em>
       </span>
     </Link>
