@@ -887,66 +887,6 @@
   "scoreConfirmedAt": "2026-11-14"
  },
  {
-  "genre": "data",
-  "sub": "Excel",
-  "ytid": "M4UjGiUrGaM",
-  "level": "初級",
-  "minutes": 6,
-  "channel": "和から",
-  "score": 26,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "実務スキルの入口の考え方が中心で、操作の実演は範囲が限られる"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 4,
-    "note": "2025年10月公開で、根拠となる元記事へのリンクが示されている"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 4,
-    "note": "数字が苦手な人を対象に、難しい統計知識や複雑な数式は必要ないと明示して進める"
-   },
-   {
-    "axis": "体系性",
-    "score": 2,
-    "note": "6分の概要紹介で、分析手法を体系的に学ぶ内容ではない"
-   },
-   {
-    "axis": "信頼性",
-    "score": 3,
-    "note": "大人の数学教室の運営だが、本動画はAI生成の利用を自ら注記しており、正確さは元記事で補う前提になる"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "6分で見切れる短さ"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "誘導は元記事へのリンクのみ"
-   }
-  ],
-  "title": "文系でもわかるデータ分析入門｜Excelで始める実務データ活用",
-  "url": "https://www.youtube.com/watch?v=M4UjGiUrGaM",
-  "tags": [
-   "Excel",
-   "実務"
-  ],
-  "review": [
-   "数字が苦手な文系ビジネスパーソン向けに、データ分析の第一歩を6分でまとめた入門。",
-   "Excelでまず押さえたい実務スキルと、集める→集計・可視化する→仮説に落とし込む3ステップを扱う。",
-   "NotebookLMと一緒に作られた動画で、AI生成による表現の乱れがありうる旨が概要欄に注記されている。"
-  ],
-  "publishedAt": "2025-10-26T00:00:20Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-14"
- },
- {
   "genre": "marke",
   "sub": "Webマーケ",
   "ytid": "kt5GIVHtCPM",
@@ -1067,126 +1007,6 @@
   "scoreConfirmedAt": "2026-11-14"
  },
  {
-  "genre": "marke",
-  "sub": "SEO",
-  "ytid": "SOg2c8WrdT0",
-  "level": "中級",
-  "minutes": 40,
-  "channel": "mikimiki web スクール",
-  "score": 26,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 4,
-    "note": "コンテンツの作り方と、既存記事の改善方法まで手順がある"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 2,
-    "note": "2024年のトレンド前提の講義で、SEOを取り巻く前提はその後大きく動いている"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 5,
-    "note": "目次が細かく、超初心者向けに基礎から段階を追って進む"
-   },
-   {
-    "axis": "体系性",
-    "score": 5,
-    "note": "仕組みから実践、記事の改善までを一本で体系化している"
-   },
-   {
-    "axis": "信頼性",
-    "score": 3,
-    "note": "資料は公式LINE経由で、ツールの体験案内や、アフィリエイトの明記がない書籍リンクも並ぶ"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 4,
-    "note": "40分で講義を通せる"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 3,
-    "note": "公式LINE登録による資料・特典の配布と、オンラインスクールへの案内がある"
-   }
-  ],
-  "title": "【2024年最新版】超初心者OK！SEO対策完全講義！（基礎〜具体的対策方法まで）【資料付き】",
-  "url": "https://www.youtube.com/watch?v=SOg2c8WrdT0",
-  "tags": [
-   "SEO",
-   "実践"
-  ],
-  "review": [
-   "2024年のトレンドを前提にした、超初心者向けのSEO対策完全講義。",
-   "検索エンジンの仕組みから、コンテンツの作り方、既存記事の改善、新規記事の作成までを扱う。",
-   "資料は公式LINE経由の配布で、ツール体験やオンラインスクールへの案内も概要欄に並ぶ。"
-  ],
-  "publishedAt": "2024-05-21T11:00:55Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-14"
- },
- {
-  "genre": "biz",
-  "sub": "資料作成",
-  "ytid": "FNV4uSQkUsM",
-  "level": "初級",
-  "minutes": 18,
-  "channel": "ユースフル / 実務変革のプロ",
-  "score": 26,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 4,
-    "note": "スライドのデザインから表・グラフの挿入、保存まで、基本操作を手順で追える"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 3,
-    "note": "2020年公開で、PowerPointの基本操作は通用するが、画面は当時のものになる"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 5,
-    "note": "超入門と明示し、動画サマリーのチャプターで工程を一つずつ追える"
-   },
-   {
-    "axis": "体系性",
-    "score": 4,
-    "note": "基本の使い方に絞った入門講座の構成"
-   },
-   {
-    "axis": "信頼性",
-    "score": 3,
-    "note": "実務研修を運営する会社の発信だが、概要欄の冒頭はLINE特典の案内で、書籍リンクにアフィリエイトの明記がない"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 4,
-    "note": "約18分で基本を通せる"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 3,
-    "note": "公式LINE登録で特典を受け取る誘導が、概要欄の冒頭にある"
-   }
-  ],
-  "title": "【超入門講座】初心者にやさしいパワーポイント(PowerPoint) 基本の使い方",
-  "url": "https://www.youtube.com/watch?v=FNV4uSQkUsM",
-  "tags": [
-   "PowerPoint",
-   "入門"
-  ],
-  "review": [
-   "PowerPointの基本の使い方を扱う超入門講座。",
-   "スライドのデザイン、箇条書き、表やグラフの挿入、スマートアート、保存までの流れを扱う。",
-   "概要欄の冒頭は公式LINE登録による特典の案内で、実務研修を運営する会社の発信。"
-  ],
-  "publishedAt": "2020-10-19T11:00:05Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-14"
- },
- {
   "genre": "biz",
   "sub": "資料作成",
   "ytid": "Qfn49-nP6lY",
@@ -1303,126 +1123,6 @@
    "概要欄の冒頭は法人向け自社サービスの案内で、学習内容は目次が示す構成。"
   ],
   "publishedAt": "2025-03-02T11:00:25Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-14"
- },
- {
-  "genre": "prog",
-  "sub": "Web開発",
-  "ytid": "bzbrpkbjWe8",
-  "level": "初級",
-  "minutes": 50,
-  "channel": "いまにゅのAIプログラミング塾",
-  "score": 24,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 4,
-    "note": "環境構築からテンプレートまで、手を動かす基礎の流れを扱う"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 3,
-    "note": "2021年公開で、Flaskの基礎自体は大きく変わらないが、バージョンの前提は当時のものになる"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 4,
-    "note": "英語の公式チュートリアルを土台に、難しいところを省いて初学者向けに進める"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "全3回の第1回で、データベース操作などは続編の範囲になる"
-   },
-   {
-    "axis": "信頼性",
-    "score": 3,
-    "note": "公式ドキュメントへのリンクはあるが、無料LINE登録の誘導も目立つ位置にある"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 3,
-    "note": "50分の動画で、チャプターは前半30分までしか付いていない"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 4,
-    "note": "Udemyへのリンクは講師のページで、強い販売誘導ではない"
-   }
-  ],
-  "title": "たった50分でFlaskの基礎を習得！PythonによるWebアプリ開発 ~Flask超入門 vol.1~",
-  "url": "https://www.youtube.com/watch?v=bzbrpkbjWe8",
-  "tags": [
-   "Flask",
-   "Web開発"
-  ],
-  "review": [
-   "PythonのWebフレームワークFlaskの基礎を、初学者向けにエッセンスを抽出して解説する全3回の第1回。",
-   "環境構築、単一ファイルでの起動、ルーティング、HTMLとテンプレートまでを扱う。",
-   "チャプターは動画の前半30分までしか付いておらず、公式ドキュメントへのリンクがある。"
-  ],
-  "publishedAt": "2021-09-11T10:45:01Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-14"
- },
- {
-  "genre": "video",
-  "sub": "After Effects",
-  "ytid": "P3uuxoN35V8",
-  "level": "初級",
-  "minutes": 52,
-  "channel": "Adobe Creative Cloud Japan",
-  "score": 27,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 4,
-    "note": "Premiere Proとの連携や実写合成など、仕事の幅に直結する基礎を扱う"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 4,
-    "note": "2024年8月の公式イベントのアーカイブで、機能の説明は公式準拠"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "リレー形式のイベント収録でチャプターがなく、入門者が区切って追うには工夫が要る"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "基礎知識を幅広くカバーする構成で、順序立てた講座の形ではない"
-   },
-   {
-    "axis": "信頼性",
-    "score": 5,
-    "note": "Adobe公式チャンネルの配信で、発信主体と内容の権威が明確"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 3,
-    "note": "約52分のイベント収録で、通しで見る負荷はある"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "誘導は公式サイト・公式ブログ・公式SNSの案内のみ"
-   }
-  ],
-  "title": "【After Effects】仕事の幅が広がる！After Effects入門講座 | アドビ公式",
-  "url": "https://www.youtube.com/watch?v=P3uuxoN35V8",
-  "tags": [
-   "After Effects",
-   "公式"
-  ],
-  "review": [
-   "Adobe公式イベントのアーカイブで、After Effectsの基礎をリレー形式で学ぶ入門講座。",
-   "Premiere Proとの連携、モーショングラフィックステンプレート、3Dカメラトラッカーと実写合成までを扱う。",
-   "アドビ公式チャンネルの配信で、誘導は公式サイトや公式SNSの案内のみ。"
-  ],
-  "publishedAt": "2024-08-26T06:31:50Z",
   "scoreStatus": "confirmed",
   "scoreConfirmedAt": "2026-11-14"
  },
@@ -40646,68 +40346,6 @@
   "publishedAt": "2022-08-07T11:00:01Z"
  },
  {
-  "genre": "shikaku",
-  "sub": "測量士補",
-  "ytid": "cEYf1yumgoA",
-  "level": "上級",
-  "minutes": 10,
-  "channel": "日本一やさしい「測量士補」試験対策講座",
-  "score": 27,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 4,
-    "note": "問1の測量法に特化し、過去問のポイントに絞るため、直前の確認に使いやすい"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 3,
-    "note": "2025年11月公開だが、測量分野は2024年の準則改正で用語変更があり、過去問ベースの内容は現行準則と照合して使う必要がある"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 4,
-    "note": "「わかりやすい解説」を掲げる専門チャンネルの入門向け構成"
-   },
-   {
-    "axis": "体系性",
-    "score": 2,
-    "note": "問1の前編のみで、試験全体を体系化する内容ではない"
-   },
-   {
-    "axis": "信頼性",
-    "score": 4,
-    "note": "測量士補試験の対策を専門とするチャンネルで、過去問10年分の分析を根拠に挙げている"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "約10分で問1の要点を確認できる"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "誘導はInstagram・Xの告知のみで、有料講座やアフィリエイトは概要欄にない"
-   }
-  ],
-  "title": "【測量士補試験】問１測量法をマスターしよう・前編【～出題率過去１０年１００％～　過去問完全攻略！】",
-  "url": "https://www.youtube.com/watch?v=cEYf1yumgoA",
-  "tags": [
-   "測量士補",
-   "勉強法",
-   "独学"
-  ],
-  "review": [
-   "測量士補試験の問1（測量法）を、過去問ベースで解説する前編。",
-   "過去問10年分を繰り返し解いた投稿者が、無駄なく学べるポイントに絞って解説する。",
-   "測量士補専門チャンネルの入門向けの回で、後編とあわせて問1を扱う。"
-  ],
-  "scoreStatus": "confirmed",
-  "viewCount": 8914,
-  "publishedAt": "2025-11-04T04:31:58Z",
-  "scoreConfirmedAt": "2026-11-14"
- },
- {
   "genre": "ai",
   "sub": "Figma(Figma AI)",
   "ytid": "akd5pyd4TnU",
@@ -41458,68 +41096,6 @@
   "editorNote": "全字幕と操作の流れを確認。AI開発に進む前のGit/GitHub入門として選定。"
  },
  {
-  "genre": "shikaku",
-  "sub": "ITパスポート",
-  "ytid": "AcQqmTHsvU4",
-  "level": "初級",
-  "minutes": 46,
-  "channel": "みみスタ",
-  "score": 25,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年10月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない。チャプター7個"
-   },
-   {
-    "axis": "信頼性",
-    "score": 2,
-    "note": "再生回数14,396回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 4,
-    "note": "約46分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "出る順！「ITパスポート」2026年 頻出用語200 直前対策",
-  "url": "https://www.youtube.com/watch?v=AcQqmTHsvU4",
-  "tags": [
-   "用語",
-   "直前対策"
-  ],
-  "review": [
-   "ITパスポート試験の頻出用語200語を、出題頻度順に確認する回。",
-   "概要欄によると、令和6〜8年の出題から選び、★5（3年で5回以上）〜★1（令和8年の新傾向）に分類。",
-   "チャプターは頻出度（★5〜★1）ごとに区切られている。"
-  ],
-  "viewCount": 14396,
-  "publishedAt": "2026-10-26T08:00:23Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
   "genre": "ai",
   "sub": "Claude",
   "ytid": "zh4OQqQOJzw",
@@ -41576,68 +41152,6 @@
   ],
   "viewCount": 53180,
   "publishedAt": "2026-10-19T10:15:10Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "english",
-  "sub": "英会話",
-  "ytid": "5BkUP-Ng1Xs",
-  "level": "初級",
-  "minutes": 53,
-  "channel": "みんなの英語ランド",
-  "score": 27,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年10月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 5,
-    "note": "タイトルに「初心者」を含む"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない。チャプター7個"
-   },
-   {
-    "axis": "信頼性",
-    "score": 2,
-    "note": "再生回数11,963回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 4,
-    "note": "約53分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "【初心者向け】チャンク英語｜街中で使える英語フレーズ50選｜かたまりで覚える日常表現",
-  "url": "https://www.youtube.com/watch?v=5BkUP-Ng1Xs",
-  "tags": [
-   "初心者",
-   "フレーズ"
-  ],
-  "review": [
-   "道案内など街中で使う英語フレーズ50個を、意味のかたまり（チャンク）で練習する回。",
-   "概要欄によると、日本語→英語→カタカナ発音の順で繰り返す構成。",
-   "チャプターは10フレーズごとに区切られ、最後に2回リピートがある。"
-  ],
-  "viewCount": 11963,
-  "publishedAt": "2026-10-17T23:00:37Z",
   "scoreStatus": "confirmed",
   "scoreConfirmedAt": "2026-11-01",
   "scoreBasis": "public-metadata"
@@ -41705,68 +41219,6 @@
   "scoreBasis": "public-metadata"
  },
  {
-  "genre": "shikaku",
-  "sub": "基本情報技術者",
-  "ytid": "KFVrgexxyms",
-  "level": "初級",
-  "minutes": 31,
-  "channel": "みみスタ",
-  "score": 26,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年10月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 4,
-    "note": "タイトルに「まとめ」を含む。チャプター8個"
-   },
-   {
-    "axis": "信頼性",
-    "score": 1,
-    "note": "再生回数8,047回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "約31分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "【基本情報技術者】英字・カタカナ用語87選｜聞き流しでまとめて覚える！",
-  "url": "https://www.youtube.com/watch?v=KFVrgexxyms",
-  "tags": [
-   "用語",
-   "聞き流し"
-  ],
-  "review": [
-   "基本情報技術者試験の英字・カタカナ用語87語をまとめた、聞き流し形式の回。",
-   "チャプターはネットワーク、クラウド・セキュリティ、開発・Web、データ・メディアなどの分野別。",
-   "概要欄によると、略語は元の英単語の意味もあわせて扱う。"
-  ],
-  "viewCount": 8047,
-  "publishedAt": "2026-10-13T08:00:18Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
   "genre": "ai",
   "sub": "ChatGPT",
   "ytid": "DcSHyHYA69w",
@@ -41823,129 +41275,6 @@
   ],
   "viewCount": 28208,
   "publishedAt": "2026-09-30T10:15:12Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "shikaku",
-  "sub": "ITパスポート",
-  "ytid": "1dFaUFY6p_A",
-  "level": "初級",
-  "minutes": 93,
-  "channel": "銀行で資格王と呼ばれし男",
-  "score": 25,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 4,
-    "note": "タイトルに「解説」を含む"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年9月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 4,
-    "note": "タイトルに「解説」を含む"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない。チャプター4個"
-   },
-   {
-    "axis": "信頼性",
-    "score": 1,
-    "note": "再生回数9,631回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 3,
-    "note": "約94分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "【ITパスポート聞き流し】頻出単語厳選400！頻出度順で解説！",
-  "url": "https://www.youtube.com/watch?v=1dFaUFY6p_A",
-  "tags": [
-   "聞き流し",
-   "解説"
-  ],
-  "review": [
-   "ITパスポート試験の頻出単語400語を、頻出度順に解説する聞き流し形式の回。",
-   "チャプターはストラテジ系・マネジメント系・テクノロジ系の3区分。",
-   "約94分の長尺。概要欄の説明文はない。"
-  ],
-  "viewCount": 9631,
-  "publishedAt": "2026-09-25T07:28:13Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "video",
-  "sub": "After Effects",
-  "ytid": "0mZXZZ6xLxE",
-  "level": "初級",
-  "minutes": 7,
-  "channel": "Akiyama Yuta(AI活用術)",
-  "score": 25,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 5,
-    "note": "タイトルに「使い方」を含む"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年9月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない。チャプター7個"
-   },
-   {
-    "axis": "信頼性",
-    "score": 1,
-    "note": "再生回数3,498回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 3,
-    "note": "約7分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "ChatGPTでAfter Effectsを操作！Higgsfieldの使い方・設定から動画制作まで",
-  "url": "https://www.youtube.com/watch?v=0mZXZZ6xLxE",
-  "tags": [
-   "使い方"
-  ],
-  "review": [
-   "ChatGPTからAfter Effectsを操作して「動くポスター」を作る手順を扱う回。",
-   "チャプターはHiggsfieldの追加、画像・動画の生成、AEプラグインの導入、ChatGPTとAEの接続、書き出し。",
-   "概要欄に使用ツール（ChatGPT、Higgsfield、Adobe After Effects）を記載。"
-  ],
-  "viewCount": 3498,
-  "publishedAt": "2026-09-21T10:00:39Z",
   "scoreStatus": "confirmed",
   "scoreConfirmedAt": "2026-11-01",
   "scoreBasis": "public-metadata"
@@ -42443,128 +41772,6 @@
   "scoreBasis": "public-metadata"
  },
  {
-  "genre": "money",
-  "sub": "家計",
-  "ytid": "nHuEsMQgBaU",
-  "level": "初級",
-  "minutes": 10,
-  "channel": "ぱん⌇ ごきげん貯金🪄",
-  "score": 27,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 5,
-    "note": "タイトルに「作り方」を含む"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年8月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない"
-   },
-   {
-    "axis": "信頼性",
-    "score": 1,
-    "note": "再生回数2,327回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "約10分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "【つけるだけ家計簿から卒業🔰】項目分けに迷ったらコレ！家計改善につながる家計簿の作り方👩🏼‍💻",
-  "url": "https://www.youtube.com/watch?v=nHuEsMQgBaU",
-  "tags": [
-   "家計"
-  ],
-  "review": [
-   "家計簿の項目分けの考え方を、投稿者自身の家計管理の例で紹介する回。",
-   "概要欄によると、固定費・変動費・特別費それぞれの管理方法を扱う。",
-   "個人の実践例としての紹介（概要欄より）。チャプターはない。"
-  ],
-  "viewCount": 2327,
-  "publishedAt": "2026-08-17T09:00:05Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "video",
-  "sub": "DaVinci",
-  "ytid": "zKa77N-m2hs",
-  "level": "初級",
-  "minutes": 32,
-  "channel": "ふぶダビ | DaVinci Resolve 動画編集",
-  "score": 26,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年8月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない"
-   },
-   {
-    "axis": "信頼性",
-    "score": 2,
-    "note": "再生回数21,922回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "約32分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "【2026最新版】必ず通る「一本目のチュートリアル」 │ DaVinci Resolve 21",
-  "url": "https://www.youtube.com/watch?v=zKa77N-m2hs",
-  "tags": [
-   "DaVinci"
-  ],
-  "review": [
-   "DaVinci Resolve 21で最初の1本を完成させるまでの流れを扱うチュートリアル。",
-   "概要欄によると、動画編集が完全未経験の人や他ソフトからの移行者向け。",
-   "インストール方法は別動画（概要欄にリンク）。チャプターはない。"
-  ],
-  "viewCount": 21922,
-  "publishedAt": "2026-08-16T00:00:03Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
   "genre": "prog",
   "sub": "Python",
   "ytid": "yWRRnYrtBns",
@@ -42750,129 +41957,6 @@
   "scoreBasis": "public-metadata"
  },
  {
-  "genre": "shikaku",
-  "sub": "宅建",
-  "ytid": "SCQvCHaffWQ",
-  "level": "初級",
-  "minutes": 15,
-  "channel": "ゆうじ式・宅建ラボ",
-  "score": 27,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 5,
-    "note": "タイトルに「勉強法」を含む"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年8月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない"
-   },
-   {
-    "axis": "信頼性",
-    "score": 1,
-    "note": "再生回数8,756回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "約15分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "【宅建試験】勉強法には「合格できる」という根拠が大事",
-  "url": "https://www.youtube.com/watch?v=SCQvCHaffWQ",
-  "tags": [
-   "勉強法"
-  ],
-  "review": [
-   "宅建試験の問題を「未知の論点」「教科書のみの論点」「過去問で問われた論点」に分け、勉強の優先順位を考える回。",
-   "概要欄によると、令和7年度試験で過去問論点だけを覚えた場合の期待値を36.3点と検証。",
-   "同年度の合格点33点との比較も概要欄に記載。"
-  ],
-  "viewCount": 8756,
-  "publishedAt": "2026-08-09T04:18:57Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "english",
-  "sub": "英会話",
-  "ytid": "8QQmHkjUvgE",
-  "level": "初級",
-  "minutes": 60,
-  "channel": "耳で覚えるネイティブ英語　ねこの「ミミ」",
-  "score": 27,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年8月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 5,
-    "note": "タイトルに「初心者」を含む"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない。チャプター7個"
-   },
-   {
-    "axis": "信頼性",
-    "score": 2,
-    "note": "再生回数30,279回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 4,
-    "note": "約60分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "128【英語初心者】これだけ覚えればOK！「I have」で話せるネイティブ日常英会話50選｜聞き流しOK",
-  "url": "https://www.youtube.com/watch?v=8QQmHkjUvgE",
-  "tags": [
-   "初心者",
-   "聞き流し"
-  ],
-  "review": [
-   "「I have」を使う日常英会話フレーズ50個を扱う回。",
-   "チャプターは10フレーズごとの区切りとリピート。概要欄に聞き流し向けと記載。",
-   "概要欄によると、予定・体調・気持ちなどを表す使い方を扱う。"
-  ],
-  "viewCount": 30279,
-  "publishedAt": "2026-08-08T06:00:23Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
   "genre": "kaikei",
   "sub": "FP",
   "ytid": "lenv7hZRvQw",
@@ -42931,250 +42015,6 @@
   ],
   "viewCount": 16339,
   "publishedAt": "2026-08-06T14:30:39Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "kaikei",
-  "sub": "FP",
-  "ytid": "iH8_q5udXg4",
-  "level": "初級",
-  "minutes": 22,
-  "channel": "ほんださん / 東大式FPチャンネル",
-  "score": 26,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年8月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない"
-   },
-   {
-    "axis": "信頼性",
-    "score": 2,
-    "note": "再生回数15,153回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "約22分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "【FP3級】ゼロから理解できる借地と借家のルール。この大原則を聞けば、暗記要らずで楽々1点（爆速講義E4）",
-  "url": "https://www.youtube.com/watch?v=iH8_q5udXg4",
-  "tags": [
-   "講義"
-  ],
-  "review": [
-   "FP3級の不動産分野から、借地と借家のルールを扱う回。",
-   "概要欄によると、図や具体例、覚え方を交えて試験に出る内容を解説する講義シリーズの1本。",
-   "講義番号E4。チャプターはない。"
-  ],
-  "viewCount": 15153,
-  "publishedAt": "2026-08-06T14:29:38Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "data",
-  "sub": "BI",
-  "ytid": "6bnYbavsKHY",
-  "level": "初級",
-  "minutes": 16,
-  "channel": "業務効率化・データ活用ちゃんねる",
-  "score": 25,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年8月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない。チャプター4個"
-   },
-   {
-    "axis": "信頼性",
-    "score": 1,
-    "note": "再生回数2,794回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "約16分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "Power BIのデータをAIに分析させる3つの方法 ～Copilot Studio × Power BI MCP / Cowork / 動的DAX～",
-  "url": "https://www.youtube.com/watch?v=6bnYbavsKHY",
-  "tags": [
-   "BI"
-  ],
-  "review": [
-   "Power BIのデータをAIで分析させる3つの方法を、検証結果とあわせて紹介する回。",
-   "チャプターはFabricライセンスなしで使える方法、検証結果のまとめ、用途別の選び方。",
-   "扱う方式はCopilot Studio×Power BI MCP、Cowork、動的DAX（タイトルより）。"
-  ],
-  "viewCount": 2794,
-  "publishedAt": "2026-08-04T10:00:23Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "shikaku",
-  "sub": "基本情報技術者",
-  "ytid": "lNldXmdWnzo",
-  "level": "中級",
-  "minutes": 16,
-  "channel": "【資格100個合格廃人】脱線おじさんの独学記",
-  "score": 27,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 5,
-    "note": "タイトルに「勉強法」を含む"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年7月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない"
-   },
-   {
-    "axis": "信頼性",
-    "score": 1,
-    "note": "再生回数6,664回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "約16分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "情報処理技術者試験（基本情報・応用情報・情報処理安全確保支援士）を全部一発合格した勉強法  #応用情報 #基本情報  #国家資格 #ITエンジニア  #資格取得 #独学 #勉強法",
-  "url": "https://www.youtube.com/watch?v=lNldXmdWnzo",
-  "tags": [
-   "勉強法"
-  ],
-  "review": [
-   "基本情報・応用情報・情報処理安全確保支援士に合格した投稿者が、学習戦略を話す回。",
-   "概要欄によると、科目A・Bの時間配分、過去問道場の使い方、平日・休日の勉強スケジュールを扱う。",
-   "投稿者個人の体験にもとづく内容（概要欄より）。チャプターはない。"
-  ],
-  "viewCount": 6664,
-  "publishedAt": "2026-07-31T10:00:17Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "shikaku",
-  "sub": "生成AIパスポート",
-  "ytid": "rdjrfEP7IZ4",
-  "level": "初級",
-  "minutes": 103,
-  "channel": "デジつよ |  AI実践戦略士・トシゾー【西俊明】",
-  "score": 27,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 4,
-    "note": "タイトルに「講座」を含む"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年7月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 5,
-    "note": "タイトルに「完全」を含む。チャプター6個"
-   },
-   {
-    "axis": "信頼性",
-    "score": 2,
-    "note": "再生回数20,800回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 3,
-    "note": "約104分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "【完全攻略・超まとめ】生成AIパスポート合格講座 全5回＋試験紹介｜1本で試験範囲を総ざらい（約1時間43分）",
-  "url": "https://www.youtube.com/watch?v=rdjrfEP7IZ4",
-  "tags": [
-   "講座"
-  ],
-  "review": [
-   "生成AIパスポート試験の範囲を、全5回の講座と試験紹介で通して扱う回。",
-   "チャプターはAIの基礎、生成AIの仕組み、最新動向（RAG・AIエージェント等）、情報リテラシーとAI社会原則、プロンプト。",
-   "概要欄によると、各回に確認問題があり、各回の個別動画も公開されている。"
-  ],
-  "viewCount": 20800,
-  "publishedAt": "2026-07-22T20:57:12Z",
   "scoreStatus": "confirmed",
   "scoreConfirmedAt": "2026-11-01",
   "scoreBasis": "public-metadata"
@@ -43244,67 +42084,6 @@
  {
   "genre": "biz",
   "sub": "プレゼン",
-  "ytid": "TWGkNaS_y60",
-  "level": "初級",
-  "minutes": 27,
-  "channel": "じゅりん│AIビジネス活用塾",
-  "score": 25,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年7月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない。チャプター19個"
-   },
-   {
-    "axis": "信頼性",
-    "score": 1,
-    "note": "再生回数5,330回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "約27分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "Googleスライド新機能！Geminiで資料からスライド全体を自動作成する方法",
-  "url": "https://www.youtube.com/watch?v=TWGkNaS_y60",
-  "tags": [
-   "プレゼン"
-  ],
-  "review": [
-   "GeminiでGoogleスライドのプレゼン全体を生成する機能を扱う回。",
-   "チャプターは対応プランと注意点、参照資料・Web検索の設定、構成を確認して承認する流れなど。",
-   "概要欄によると、公開時点では英語環境のみ対応で、言語設定を英語にして利用している。"
-  ],
-  "viewCount": 5330,
-  "publishedAt": "2026-07-04T11:00:13Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "biz",
-  "sub": "プレゼン",
   "ytid": "07JbFCoZgn4",
   "level": "初級",
   "minutes": 21,
@@ -43359,67 +42138,6 @@
   ],
   "viewCount": 67223,
   "publishedAt": "2026-06-24T10:15:00Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "video",
-  "sub": "デザイン",
-  "ytid": "svJUmG1mGaI",
-  "level": "初級",
-  "minutes": 5,
-  "channel": "Canva 公式 (キャンバ)",
-  "score": 23,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年6月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない。チャプター11個"
-   },
-   {
-    "axis": "信頼性",
-    "score": 1,
-    "note": "再生回数8,356回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 3,
-    "note": "約5分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "【5分で作成】YouTubeサムネイルを作る方法！テンプレート活用術 | Canva 公式 (キャンバ)",
-  "url": "https://www.youtube.com/watch?v=svJUmG1mGaI",
-  "tags": [
-   "デザイン"
-  ],
-  "review": [
-   "CanvaでYouTubeのサムネイルをテンプレートから作る手順を扱う、Canva公式チャンネルの回。",
-   "チャプターはテンプレート検索、写真の差し替え、AI画像生成、背景透過、テキスト編集、ダウンロード、共有設定。",
-   "概要欄によると、スマホ・パソコンのどちらでも無料で作成できる。"
-  ],
-  "viewCount": 8356,
-  "publishedAt": "2026-06-23T10:00:10Z",
   "scoreStatus": "confirmed",
   "scoreConfirmedAt": "2026-11-01",
   "scoreBasis": "public-metadata"
@@ -43610,67 +42328,6 @@
   "scoreBasis": "public-metadata"
  },
  {
-  "genre": "biz",
-  "sub": "プレゼン",
-  "ytid": "FRsZQ04-5MU",
-  "level": "初級",
-  "minutes": 6,
-  "channel": "佐藤辰則 / スマホ・AI教室",
-  "score": 25,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 4,
-    "note": "タイトルに「解説」を含む"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年6月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 4,
-    "note": "タイトルに「解説」を含む"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない。チャプター4個"
-   },
-   {
-    "axis": "信頼性",
-    "score": 1,
-    "note": "再生回数8,659回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 3,
-    "note": "約6分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "【2026年最新】ChatGPTでパワポスライド自動作成解説！【AIスライド作成AI / チャットGPTパワーポイント】",
-  "url": "https://www.youtube.com/watch?v=FRsZQ04-5MU",
-  "tags": [
-   "解説"
-  ],
-  "review": [
-   "ChatGPTでパワーポイントのスライド資料を自動作成する方法を扱う回。",
-   "チャプターには無料版ChatGPTでの作成実験と、Geminiでの作成例が含まれる。",
-   "約6分の短い構成。"
-  ],
-  "viewCount": 8659,
-  "publishedAt": "2026-06-03T11:00:05Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
   "genre": "ai",
   "sub": "Claude",
   "ytid": "qfDYg8q_D_Y",
@@ -43727,129 +42384,6 @@
   ],
   "viewCount": 50901,
   "publishedAt": "2026-05-18T09:15:03Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "kaikei",
-  "sub": "簿記",
-  "ytid": "YZ7Dlj6yndA",
-  "level": "中級",
-  "minutes": 20,
-  "channel": "【簿記】マネトク（独学応援ちゃんねる！）",
-  "score": 26,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年5月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない"
-   },
-   {
-    "axis": "信頼性",
-    "score": 2,
-    "note": "再生回数13,716回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "約20分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "【2026年度版】日商簿記2級 試験対策｜解く順番はこれ！時間配分と直前対策",
-  "url": "https://www.youtube.com/watch?v=YZ7Dlj6yndA",
-  "tags": [
-   "直前対策"
-  ],
-  "review": [
-   "日商簿記2級の大問ごとの攻略法、解く順番、時間配分、直前対策を扱う回。",
-   "概要欄に解く順番の例（第1問→第4問→第5問→第2問→第3問）と時間配分の目安を記載。",
-   "概要欄によると、統一試験・ネット試験の両方に共通する内容。"
-  ],
-  "viewCount": 13716,
-  "publishedAt": "2026-05-07T15:01:03Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "shikaku",
-  "sub": "社労士",
-  "ytid": "dscqvMrV7Io",
-  "level": "初級",
-  "minutes": 21,
-  "channel": "tomo@資格挑戦&趣味アカウント",
-  "score": 27,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 5,
-    "note": "タイトルに「勉強法」を含む"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年5月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない"
-   },
-   {
-    "axis": "信頼性",
-    "score": 1,
-    "note": "再生回数4,617回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "約21分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "社労士試験【ぶん回して知識定着】択一式「問題集の回し方」2026年版！忙しい人こそ時間を確保してツボ高回転の勉強法",
-  "url": "https://www.youtube.com/watch?v=dscqvMrV7Io",
-  "tags": [
-   "勉強法",
-   "問題"
-  ],
-  "review": [
-   "社労士試験の択一式対策として、問題集の回し方を紹介する回（2026年版）。",
-   "概要欄によると、1周を1〜2週間で回すペースを想定。",
-   "概要欄に「個人の経験からの紹介」と明記。チャプターはない。"
-  ],
-  "viewCount": 4617,
-  "publishedAt": "2026-05-04T09:11:36Z",
   "scoreStatus": "confirmed",
   "scoreConfirmedAt": "2026-11-01",
   "scoreBasis": "public-metadata"
@@ -43980,128 +42514,6 @@
   "scoreBasis": "public-metadata"
  },
  {
-  "genre": "kaikei",
-  "sub": "簿記",
-  "ytid": "VLVLMlqPano",
-  "level": "初級",
-  "minutes": 16,
-  "channel": "お金の図書館 / ブッキー",
-  "score": 25,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年2月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない。チャプター5個"
-   },
-   {
-    "axis": "信頼性",
-    "score": 1,
-    "note": "再生回数6,308回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "約16分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "【簿記3級】チャレンジ問題①｜第2問・個別問題　勘定記入（2026年版）",
-  "url": "https://www.youtube.com/watch?v=VLVLMlqPano",
-  "tags": [
-   "問題"
-  ],
-  "review": [
-   "簿記3級の第2問（勘定記入）の個別問題を解く回。",
-   "チャプターは問題の概要、勘定記入のテクニック、問題1・問題2。",
-   "概要欄によると、問題・解答用紙・模範解答を無料でダウンロードできる。"
-  ],
-  "viewCount": 6308,
-  "publishedAt": "2026-02-14T12:01:01Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "biz",
-  "sub": "Word",
-  "ytid": "ibKL7zbFKI8",
-  "level": "初級",
-  "minutes": 17,
-  "channel": "パソコン上達!Nagomiチャンネル",
-  "score": 26,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年2月公開（2026年11月1日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない"
-   },
-   {
-    "axis": "信頼性",
-    "score": 2,
-    "note": "再生回数18,523回（2026年11月1日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "約17分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月1日）"
-   }
-  ],
-  "title": "Word【文書作成の練習】入力ができればOK！動画を見ながら一緒に作成できます。たくさんの機能を詰め込みました。",
-  "url": "https://www.youtube.com/watch?v=ibKL7zbFKI8",
-  "tags": [
-   "Word"
-  ],
-  "review": [
-   "Wordで文書を1枚作りながら操作を練習する回。",
-   "概要欄の説明は「入力が出来ればOK」「動画を見ながら一緒に操作」。",
-   "概要欄に「office365を使って解説」と記載。チャプターはない。"
-  ],
-  "viewCount": 18523,
-  "publishedAt": "2026-02-12T23:32:37Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-01",
-  "scoreBasis": "public-metadata"
- },
- {
   "genre": "data",
   "sub": "統計",
   "ytid": "GOJ01pkv2b4",
@@ -44167,69 +42579,6 @@
  {
   "genre": "shikaku",
   "sub": "IT",
-  "ytid": "0R3m6gTji4g",
-  "level": "中級",
-  "minutes": 141,
-  "channel": "石田宏実の情報処理技術者試験講座",
-  "score": 24,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年10月公開（2026年11月3日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない。チャプター23個"
-   },
-   {
-    "axis": "信頼性",
-    "score": 2,
-    "note": "再生回数40,035回（2026年11月3日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 3,
-    "note": "約141分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
-   }
-  ],
-  "title": "【応用情報技術者試験】一問一答 574問　聞き流し｜科目A 全分野【ちょいむず】",
-  "url": "https://www.youtube.com/watch?v=0R3m6gTji4g",
-  "tags": [
-   "一問一答",
-   "聞き流し",
-   "科目A"
-  ],
-  "review": [
-   "応用情報技術者試験の科目A向けに、一問一答574問を読み上げる聞き流し動画。",
-   "概要欄によると、IPAのシラバスVer.7.2の用語例から、テクノロジ系・マネジメント系・ストラテジ系の全分野を選んでいる。",
-   "計算問題や図が必要な問題は入れていないと明記。チャプターは分野ごとに23個。"
-  ],
-  "viewCount": 40035,
-  "publishedAt": "2026-10-27T22:00:09Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-03",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "shikaku",
-  "sub": "IT",
   "ytid": "GBXantggKhU",
   "level": "中級",
   "minutes": 15,
@@ -44285,254 +42634,6 @@
   ],
   "viewCount": 1813,
   "publishedAt": "2026-07-11T08:13:19Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-03",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "shikaku",
-  "sub": "ITパスポート",
-  "ytid": "guTJ3zjAONs",
-  "level": "初級",
-  "minutes": 55,
-  "channel": "資格応援隊",
-  "score": 25,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年5月公開（2026年11月3日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない"
-   },
-   {
-    "axis": "信頼性",
-    "score": 2,
-    "note": "再生回数14,899回（2026年11月3日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 4,
-    "note": "約55分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
-   }
-  ],
-  "title": "ITパスポート 令和8年度 過去問(公開問題) 240問 [一問一答]",
-  "url": "https://www.youtube.com/watch?v=guTJ3zjAONs",
-  "tags": [
-   "過去問",
-   "一問一答"
-  ],
-  "review": [
-   "2026年4月30日に公開された令和8年度ITパスポート試験の公開問題を、一問一答形式にした回。",
-   "概要欄によると、文章問題や計算問題など一問一答に合わない問題は除いている。",
-   "約55分で240問。"
-  ],
-  "viewCount": 14899,
-  "publishedAt": "2026-05-04T09:30:32Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-03",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "kaikei",
-  "sub": "FP",
-  "ytid": "yJS1A1JEVtc",
-  "level": "初級",
-  "minutes": 53,
-  "channel": "みみスタ",
-  "score": 24,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年10月公開（2026年11月3日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない。チャプター4個"
-   },
-   {
-    "axis": "信頼性",
-    "score": 1,
-    "note": "再生回数1,732回（2026年11月3日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 4,
-    "note": "約53分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
-   }
-  ],
-  "title": "【FP3級】予想問題100問！2026年版｜試験直前の総復習・聞き流しにも",
-  "url": "https://www.youtube.com/watch?v=yJS1A1JEVtc",
-  "tags": [
-   "予想問題",
-   "直前対策"
-  ],
-  "review": [
-   "FP3級の試験直前向けに、オリジナルの予想問題100問を出す回。",
-   "概要欄によると、○×問題78問と短答問題22問。問題のあとに解答時間がある。",
-   "前半が○×問題、後半が短答問題。計算問題は一時停止して解く想定と概要欄に記載。"
-  ],
-  "viewCount": 1732,
-  "publishedAt": "2026-10-05T08:00:00Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-03",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "kaikei",
-  "sub": "簿記",
-  "ytid": "X-iZFnuwXjI",
-  "level": "中級",
-  "minutes": 25,
-  "channel": "ヨーコのわかりやすい簿記",
-  "score": 25,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年9月公開（2026年11月3日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない。チャプター6個"
-   },
-   {
-    "axis": "信頼性",
-    "score": 1,
-    "note": "再生回数1,541回（2026年11月3日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "約25分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
-   }
-  ],
-  "title": "【工業簿記２級】総合原価計算２（直接材料の投入方法の違いを完璧にマスターしよう・加工費の予定配賦）",
-  "url": "https://www.youtube.com/watch?v=X-iZFnuwXjI",
-  "tags": [
-   "工業簿記",
-   "原価計算"
-  ],
-  "review": [
-   "日商簿記2級の工業簿記から、総合原価計算（直接材料の投入方法・加工費の予定配賦）を扱う回。",
-   "チャプターは、直接材料の4つの投入方法の考え方、問題と解説、加工費の予定配賦と勘定連絡図、問題と解説の順。",
-   "解答用紙は概要欄のリンクからダウンロードできる。"
-  ],
-  "viewCount": 1541,
-  "publishedAt": "2026-09-04T09:00:22Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-03",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "kaikei",
-  "sub": "簿記",
-  "ytid": "62JcKRHh18s",
-  "level": "中級",
-  "minutes": 29,
-  "channel": "ヨーコのわかりやすい簿記",
-  "score": 25,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年6月公開（2026年11月3日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 3,
-    "note": "タイトルに対象者・難易度を示す語はない"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない。チャプター9個"
-   },
-   {
-    "axis": "信頼性",
-    "score": 1,
-    "note": "再生回数2,301回（2026年11月3日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "約29分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
-   }
-  ],
-  "title": "【工業簿記２級】個別原価計算１（個別原価計算と原価計算表・製造間接費の予定配賦と製造間接費配賦差異・仕損費・実践問題にチャレンジ）",
-  "url": "https://www.youtube.com/watch?v=62JcKRHh18s",
-  "tags": [
-   "工業簿記",
-   "原価計算"
-  ],
-  "review": [
-   "日商簿記2級の工業簿記から、個別原価計算を扱う回。",
-   "原価計算表（製造間接費の実際配賦・予定配賦）、勘定連絡図、仕損費、実践問題の順にチャプターがある。",
-   "解答用紙は概要欄のリンクからダウンロードできる。"
-  ],
-  "viewCount": 2301,
-  "publishedAt": "2026-06-19T09:00:07Z",
   "scoreStatus": "confirmed",
   "scoreConfirmedAt": "2026-11-03",
   "scoreBasis": "public-metadata"
@@ -44725,68 +42826,6 @@
   "scoreBasis": "public-metadata"
  },
  {
-  "genre": "prog",
-  "sub": "アプリ",
-  "ytid": "cClpzva20AA",
-  "level": "初級",
-  "minutes": 17,
-  "channel": "AIエンジニアらむね・村井宗明",
-  "score": 27,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2025年11月公開（2026年11月3日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 5,
-    "note": "タイトルに初心者向けを示す語あり"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない"
-   },
-   {
-    "axis": "信頼性",
-    "score": 1,
-    "note": "再生回数6,861回（2026年11月3日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "約17分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
-   }
-  ],
-  "title": "初心者でも簡単にできる！Google AI Studioでアプリ作成と公開",
-  "url": "https://www.youtube.com/watch?v=cClpzva20AA",
-  "tags": [
-   "Google AI Studio",
-   "デプロイ"
-  ],
-  "review": [
-   "Google AI StudioのBuildモードで作ったアプリを、公開するまでの手順を解説する回。",
-   "概要欄によると、GitHubにそのまま上げるとtsxファイルが動かない、FTPではAPIキーが危ないという課題に対し、Google Cloudへデプロイする方法を説明している。",
-   "概要欄の手順にはGoogle Cloudプロジェクトの作成と課金設定が含まれる。手順をまとめたPDFへのリンクがある。"
-  ],
-  "viewCount": 6861,
-  "publishedAt": "2025-11-03T01:39:26Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-03",
-  "scoreBasis": "public-metadata"
- },
- {
   "genre": "data",
   "sub": "Excel",
   "ytid": "-b2jmF653sw",
@@ -44969,131 +43008,6 @@
   ],
   "viewCount": 2435,
   "publishedAt": "2026-09-05T10:50:06Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-03",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "ai",
-  "sub": "Copilot",
-  "ytid": "-l8SzZP1XOg",
-  "level": "初級",
-  "minutes": 6,
-  "channel": "yuriask_ai",
-  "score": 27,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 5,
-    "note": "タイトルに手順・実務を示す語あり"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2025年10月公開（2026年11月3日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 4,
-    "note": "タイトルに入門・基礎・解説の語あり"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない。チャプター10個"
-   },
-   {
-    "axis": "信頼性",
-    "score": 2,
-    "note": "再生回数20,681回（2026年11月3日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 3,
-    "note": "約6分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
-   }
-  ],
-  "title": "【解説】Excelがついに自動で働く！Copilot Agent Modeの全貌と使い方。",
-  "url": "https://www.youtube.com/watch?v=-l8SzZP1XOg",
-  "tags": [
-   "Excel",
-   "Copilot",
-   "Agent Mode"
-  ],
-  "review": [
-   "Microsoft 365 CopilotのExcel向け「Agent Mode」の概要と設定方法を紹介する約6分の回。",
-   "チャプターは、書式の統一、空白セルの補完、表記ゆれの修正、外部情報の取得、ダッシュボード生成など。",
-   "概要欄に記載の動作環境はExcel Labs（Web版Excel）。"
-  ],
-  "viewCount": 20681,
-  "publishedAt": "2025-10-07T22:00:01Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-03",
-  "scoreBasis": "public-metadata"
- },
- {
-  "genre": "money",
-  "sub": "家計",
-  "ytid": "AFAH0RqDZyM",
-  "level": "初級",
-  "minutes": 15,
-  "channel": "よーこ 凸凹だらけの家計と暮らし",
-  "score": 27,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 3,
-    "note": "タイトルに手順・実務を示す語はない（概要欄・チャプターで内容を確認）"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年7月公開（2026年11月3日確認）"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 5,
-    "note": "タイトルに初心者向けを示す語あり"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "タイトルに体系を示す語はない。チャプター7個"
-   },
-   {
-    "axis": "信頼性",
-    "score": 1,
-    "note": "再生回数1,498回（2026年11月3日時点）"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "約15分"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "公開中・埋め込み可をYouTube Data APIで確認（2026年11月3日）"
-   }
-  ],
-  "title": "【初心者向け】家計管理の始め方｜家計簿が続かなかった私が実践した4ステップ",
-  "url": "https://www.youtube.com/watch?v=AFAH0RqDZyM",
-  "tags": [
-   "家計簿",
-   "家計管理"
-  ],
-  "review": [
-   "家計管理を始めたい人向けに、投稿者が実践した4つのステップを紹介する回。",
-   "チャプターは、目的を決める、まず記録する、自分に合った予算を決める、管理方法を育てる、やらない方がよいことの順。",
-   "概要欄によると、家計簿が続かなかった投稿者が3回目で1年続いた経験にもとづく。"
-  ],
-  "viewCount": 1498,
-  "publishedAt": "2026-07-20T09:00:20Z",
   "scoreStatus": "confirmed",
   "scoreConfirmedAt": "2026-11-03",
   "scoreBasis": "public-metadata"
@@ -45844,68 +43758,6 @@
  },
  {
   "genre": "shikaku",
-  "sub": "衛生管理者",
-  "ytid": "scrpDXab9c0",
-  "level": "初級",
-  "minutes": 22,
-  "channel": "これだけ!安全衛生Ch【ウェルネット】",
-  "score": 27,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "note": "出題傾向の分析からテキストの選び方と学習法まで、受験準備の進め方を具体的に示す",
-    "score": 4
-   },
-   {
-    "axis": "正確性・鮮度",
-    "note": "紹介される講座料金は2021年3月時点のもので、現在の料金とは異なる",
-    "score": 3
-   },
-   {
-    "axis": "分かりやすさ",
-    "note": "試験概要から学習法へ、受験の流れに沿って章立てされている",
-    "score": 4
-   },
-   {
-    "axis": "体系性",
-    "note": "試験の全体像、出題傾向、教材選び、学習法と、独学の準備段階を一通りカバーする",
-    "score": 4
-   },
-   {
-    "axis": "信頼性",
-    "note": "運営元であるウェルネット自身の受験対策講座の紹介が含まれる一方で、会社名と問い合わせ先は明示されている",
-    "score": 3
-   },
-   {
-    "axis": "視聴体験",
-    "note": "22分を試験概要、傾向分析、学習法の章で区切って視聴できる",
-    "score": 4
-   },
-   {
-    "axis": "規約・権利",
-    "note": "YouTubeの公式埋め込みで視聴でき、案内先は運営会社の公式サイト",
-    "score": 5
-   }
-  ],
-  "title": "まるっとわかる！衛生管理者合格学習法",
-  "url": "https://www.youtube.com/watch?v=scrpDXab9c0",
-  "tags": [
-   "衛生管理者",
-   "勉強法",
-   "独学"
-  ],
-  "review": [
-   "衛生管理者試験の概要と出題傾向の分析から、テキストの選び方と学習法までをまとめた、独学の準備に向けた解説。",
-   "後半には運営元の受験対策講座の紹介が入り、料金は2021年3月時点の表示である点に注意。",
-   "講座の受講を検討している場合の判断材料としても使える。"
-  ],
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-11",
-  "viewCount": 116762,
-  "publishedAt": "2021-03-25T08:02:50Z"
- },
- {
-  "genre": "shikaku",
   "sub": "ビジネス実務法務検定試験",
   "ytid": "_RvytXBYJY0",
   "level": "初級",
@@ -46526,68 +44378,6 @@
  },
  {
   "genre": "ai",
-  "sub": "DeepSeek",
-  "ytid": "7jrOqwBAWKY",
-  "level": "中級",
-  "minutes": 10,
-  "channel": "安野貴博の自由研究",
-  "score": 27,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "note": "利用のレベル別に、DeepSeekを使う際の危険性と注意点を整理している",
-    "score": 4
-   },
-   {
-    "axis": "正確性・鮮度",
-    "note": "根拠資料へのリンクが概要欄になく、個別の主張の出典は動画の内容で確かめる必要がある",
-    "score": 3
-   },
-   {
-    "axis": "分かりやすさ",
-    "note": "危険なのかという問いをレベルに分けて説く構成で、論点が追いやすい",
-    "score": 4
-   },
-   {
-    "axis": "体系性",
-    "note": "概要欄に目次や出典の記載がなく、全体の構成は視聴して確かめる形になる",
-    "score": 3
-   },
-   {
-    "axis": "信頼性",
-    "note": "AI研究と政策に関わる実務家で、経歴と所属の履歴が概要欄に詳しく明示されている",
-    "score": 4
-   },
-   {
-    "axis": "視聴体験",
-    "note": "10分で論点を確認できる長さ",
-    "score": 4
-   },
-   {
-    "axis": "規約・権利",
-    "note": "YouTubeの公式埋め込みで視聴できる通常の解説動画",
-    "score": 5
-   }
-  ],
-  "title": "【レベル別】DeepSeekの利用は危険なのか？【解説】",
-  "url": "https://www.youtube.com/watch?v=7jrOqwBAWKY",
-  "tags": [
-   "DeepSeek",
-   "セキュリティ",
-   "リスク"
-  ],
-  "review": [
-   "DeepSeekの利用は危険なのかを、利用レベル別に整理して解説する動画。",
-   "解説はAIスタートアップの創業やデジタル政策の実務に関わってきた安野貴博氏で、概要欄に経歴が詳しく示されている。",
-   "概要欄に目次や出典リンクはなく、根拠は動画の内容で確かめる形になる。"
-  ],
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-11",
-  "viewCount": 87776,
-  "publishedAt": "2025-02-02T09:29:19Z"
- },
- {
-  "genre": "ai",
   "sub": "Stable Diffusion",
   "ytid": "N1tXVR9lplM",
   "level": "上級",
@@ -47145,68 +44935,6 @@
   "publishedAt": "2023-11-04T05:38:47Z"
  },
  {
-  "genre": "kaikei",
-  "sub": "ビジネス会計検定試験",
-  "ytid": "ahdSvdkCO8M",
-  "level": "中級",
-  "minutes": 13,
-  "channel": "ネットスクール  公式チャンネル.",
-  "score": 27,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "note": "財務分析の考え方を、比率の分子と分母の意味から理解できるよう講義している",
-    "score": 4
-   },
-   {
-    "axis": "正確性・鮮度",
-    "note": "2020年刊行のテキストに付随する講義で、検定の現在の出題範囲とは異なる場合がある",
-    "score": 3
-   },
-   {
-    "axis": "分かりやすさ",
-    "note": "簿記の学習では触れる機会の少ない財務分析を、初学者向けに説いている",
-    "score": 4
-   },
-   {
-    "axis": "体系性",
-    "note": "財務分析という1単元の講義で、検定全体を扱うものではない",
-    "score": 3
-   },
-   {
-    "axis": "信頼性",
-    "note": "検定テキストの出版社の公式チャンネルで、著者本人が講義している",
-    "score": 4
-   },
-   {
-    "axis": "視聴体験",
-    "note": "13分で単元を確認できる長さ",
-    "score": 4
-   },
-   {
-    "axis": "規約・権利",
-    "note": "YouTubeの公式埋め込みで視聴できる通常の講義動画",
-    "score": 5
-   }
-  ],
-  "title": "『簿記学習者のためのビジネス会計検定試験(Ｒ)３級テキスト＆厳選過去問』 ～ワンポイント講義 ”財務分析”は怖くない！～",
-  "url": "https://www.youtube.com/watch?v=ahdSvdkCO8M",
-  "tags": [
-   "ビジネス会計検定",
-   "財務分析",
-   "講義"
-  ],
-  "review": [
-   "ビジネス会計検定3級の財務分析を扱うワンポイント講義で、検定テキストの著者が解説する動画。",
-   "比率の意味を分子と分母から理解する進め方で、簿記学習者向けに作られている。",
-   "2020年刊行のテキストの購入者特典として公開された講義である。"
-  ],
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-11",
-  "viewCount": 15525,
-  "publishedAt": "2020-11-24T09:16:47Z"
- },
- {
   "genre": "video",
   "sub": "Webクリエイター能力認定試験",
   "ytid": "cTDTETumGxc",
@@ -47453,68 +45181,6 @@
   "scoreConfirmedAt": "2026-11-11",
   "viewCount": 176105,
   "publishedAt": "2023-03-09T08:00:04Z"
- },
- {
-  "genre": "shikaku",
-  "sub": "衛生管理者",
-  "ytid": "EfF0jRP5vec",
-  "level": "初級",
-  "minutes": 6,
-  "channel": "衛生管理者合格チャンネル",
-  "score": 27,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "note": "やらない方がよい勉強法を理由つきで3点に絞り、進め方の判断材料になる",
-    "score": 4
-   },
-   {
-    "axis": "正確性・鮮度",
-    "note": "概要欄は主張の提示のみで、出典や根拠の記載がない",
-    "score": 3
-   },
-   {
-    "axis": "分かりやすさ",
-    "note": "注意点が3件に整理され、それぞれに理由が添えられている",
-    "score": 4
-   },
-   {
-    "axis": "体系性",
-    "note": "3つの注意点の提示で、試験範囲を順に教える構成ではない",
-    "score": 3
-   },
-   {
-    "axis": "信頼性",
-    "note": "衛生管理者試験の専門チャンネルで、販売や登録への誘導は概要欄にない",
-    "score": 4
-   },
-   {
-    "axis": "視聴体験",
-    "note": "6分で注意点を確認できる長さ",
-    "score": 4
-   },
-   {
-    "axis": "規約・権利",
-    "note": "YouTubeの公式埋め込みで視聴できる通常の解説動画",
-    "score": 5
-   }
-  ],
-  "title": "第一種衛生管理者に合格するために絶対にやってはいけない勉強法３選",
-  "url": "https://www.youtube.com/watch?v=EfF0jRP5vec",
-  "tags": [
-   "衛生管理者",
-   "勉強法",
-   "注意点"
-  ],
-  "review": [
-   "第一種衛生管理者の合格に向けて、やってはいけない勉強法を3つに絞って理由とともに示す動画。",
-   "第二種の勉強から始めないこと、テキストで全体像を追わないこと、専門的に学びすぎないことが挙げられている。",
-   "衛生管理者試験の専門チャンネルからの発信で、問題集中心の進め方を説く。"
-  ],
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-11",
-  "viewCount": 15594,
-  "publishedAt": "2021-07-05T14:00:41Z"
  },
  {
   "genre": "shikaku",
@@ -48371,67 +46037,6 @@
    "級選びで迷う段階の人が、学習計画を立てる前に見る1本。"
   ],
   "publishedAt": "2022-12-29T00:00:00Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-13"
- },
- {
-  "genre": "kaikei",
-  "sub": "簿記",
-  "ytid": "NxpBwx9A690",
-  "level": "初級",
-  "minutes": 55,
-  "channel": "FINACラーニング",
-  "score": 27,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 4,
-    "note": "頻出論点の仕訳を演習感覚で学べる"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 3,
-    "note": "2023年公開で、扱うのは範囲改定後の基礎論点に絞られる"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 4,
-    "note": "考え方と試験対策を分けて説く"
-   },
-   {
-    "axis": "体系性",
-    "score": 3,
-    "note": "36回コースの第1回で、商品売買に特化した構成"
-   },
-   {
-    "axis": "信頼性",
-    "score": 4,
-    "note": "会計専門の無料講座として継続提供される"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 4,
-    "note": "55分で一論点を深く掘れる"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "無料講座として公開され視聴は完結する"
-   }
-  ],
-  "title": "#1 商品売買（三分法・先入先出法・棚卸減耗損）を徹底解説｜初心者向けネット試験対策",
-  "url": "https://www.youtube.com/watch?v=NxpBwx9A690",
-  "tags": [
-   "簿記",
-   "簿記2級",
-   "商業簿記"
-  ],
-  "review": [
-   "簿記2級商業簿記の商品売買を、三分法、先入先出法、棚卸減耗損と商品評価損まで掘る講義。",
-   "無料講座の全36回コースの第1回で、試験頻出ポイントとネット試験の解き方を扱う。",
-   "仕訳の基本から試験対策の考え方まで、初心者向けに段階を踏む。"
-  ],
-  "publishedAt": "2023-10-04T00:00:00Z",
   "scoreStatus": "confirmed",
   "scoreConfirmedAt": "2026-11-13"
  },
@@ -52217,5 +49822,3039 @@
   "publishedAt": "2025-01-22T11:00:48Z",
   "scoreStatus": "confirmed",
   "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "ai",
+  "sub": "Cursor",
+  "ytid": "CsSWQyIc-r4",
+  "level": "初級",
+  "minutes": 26,
+  "channel": "Oh my week",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "基本操作から記事・X投稿・画像生成までの一括アウトプットまで、実践例の手順がそのまま仕事に使える"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2025年6月公開で、扱うモデルや保存機能の説明も現行の使い方に近い"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "対談形式で専門用語を避けて進むため、非エンジニアでも追いやすい"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "23のチャプターで基本操作→機能→実践例→整理術と段階を踏んだ構成"
+   },
+   {
+    "axis": "信頼性",
+    "score": 3,
+    "note": "実務家同士の実演で具体性はあるが、概要欄は自社採用やサービス宣伝が多く公式リンクもない"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 3,
+    "note": "26分の対談形式で、トークの寄り道も含む長さ"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "権利面で問題となる要素は見当たらない"
+   }
+  ],
+  "title": "【非エンジニアのCursor活用術】超必見！話題のAIコードエディタを徹底解剖！年商30億円CEOが最近ハマっているAI系YouTube「ジェネトピ」コンビが活用例まで解説！",
+  "url": "https://www.youtube.com/watch?v=CsSWQyIc-r4",
+  "tags": [
+   "使い方",
+   "活用術",
+   "非エンジニア向け"
+  ],
+  "review": [
+   "非エンジニアの視点で、Cursorを情報整理と文章作成に使う方法が学べる。",
+   "基本操作やタブ補完、メンション機能を挟みながら、文字起こしから記事・X投稿・画像生成まで作る実践例で進む。",
+   "コードを書かないが、AIエディタを仕事の相棒にしたい人向け。"
+  ],
+  "publishedAt": "2025-06-27T14:46:47Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "ai",
+  "sub": "Notta",
+  "ytid": "lqWUoRust0s",
+  "level": "初級",
+  "minutes": 14,
+  "channel": "Appleが大好きなんだよ",
+  "score": 28,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "録音・Web会議・ファイル取り込み・翻訳・要約と、主要機能を実演で確認できる"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2025年3月公開で、価格は同日時点のものと明記されている"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "Apple製品の解説に慣れたチャンネルで、操作画面中心に分かりやすい"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "12のタイムライン見出しで機能を一巡する構成"
+   },
+   {
+    "axis": "信頼性",
+    "score": 3,
+    "note": "有償PRであることを明記し透明性はあるが、提供元PRのため中立性は割り引いて評価"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "14分で機能を一通り確認できる長さ"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "PR表記が明示されており、権利面も適正"
+   }
+  ],
+  "title": "なにコレ超便利！AI自動文字起こしアプリ『Notta』：録音/Web会議/ファイルから・iPhone/iPad/Macなど全部で使えるぞ",
+  "url": "https://www.youtube.com/watch?v=lqWUoRust0s",
+  "tags": [
+   "文字起こし",
+   "議事録",
+   "使い方"
+  ],
+  "review": [
+   "録音、Web会議、ファイル取り込みからAI要約まで、Nottaの主要機能の使い心地が分かる。",
+   "基本機能→録音→複数話者→リアルタイム翻訳→会議→要約と、利用シーンの順に実演が進む。",
+   "議事録やインタビューの文字起こしを手軽に始めたい人向け。"
+  ],
+  "publishedAt": "2025-03-18T09:00:04Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "ai",
+  "sub": "Vrew",
+  "ytid": "eAYckIaGJUE",
+  "level": "初級",
+  "minutes": 28,
+  "channel": "ひとみマンのOBS学校",
+  "score": 30,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "基本操作の実演が長く、テキスト動画生成やAIショート作成までそのまま実践できる"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 5,
+    "note": "2025年11月公開で、最新版の画面に沿った内容"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "初心者向けを明示し、操作画面中心で追いやすい"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "概要→基本操作→生成機能→まとめの流れが明確"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "配信・編集教育を専門とするチャンネルで、公式サイトへのリンクも明記"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "28分で密度の高い実演が続く"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "クーポン付きアフィリエイトリンクは明示されており適正"
+   }
+  ],
+  "title": "【2025年度最新】最も簡単な動画編集ソフト「Vrew」の使い方これ1本！初心者におすすめ＋20%オフクーポンも配布中！",
+  "url": "https://www.youtube.com/watch?v=eAYckIaGJUE",
+  "tags": [
+   "動画編集",
+   "使い方",
+   "テロップ"
+  ],
+  "review": [
+   "テキストベースで動画を編集するVrewの基本操作と、AI生成機能の使い方が学べる。",
+   "基本操作に時間を割いて実演し、テキストから動画生成、AIショート作成へ進む構成。",
+   "テロップ入れや切り抜きを効率化したい動画編集の初心者向け。"
+  ],
+  "publishedAt": "2025-11-08T11:00:06Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "ai",
+  "sub": "Suno",
+  "ytid": "_AC4G6519A8",
+  "level": "初級",
+  "minutes": 10,
+  "channel": "SLEEP FREAKS",
+  "score": 28,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "歌入り・ジャンル指定・プロンプト入力など、実際の作曲手順に沿った解説"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 5,
+    "note": "2025年11月公開で、現行バージョンを扱う復習記事へのリンクもある"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "DTM教育の専門チャンネルで、初心者向けに噛み砕いた解説"
+   },
+   {
+    "axis": "体系性",
+    "score": 3,
+    "note": "概要欄にチャプターがなく、単発解説のため構成の全体像は掴みにくい"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "DTMスクールとして継続的にチュートリアルを出す専門チャンネルで、公式サイトへのリンクを明示"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "10分に要点が凝縮され視聴負担が小さい"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "自社コースへの誘導はあるが適正な範囲"
+   }
+  ],
+  "title": "SUNO AIの使い方｜初心者でも無料で曲が作れるAI作曲ツール解説！【DTM】",
+  "url": "https://www.youtube.com/watch?v=_AC4G6519A8",
+  "tags": [
+   "使い方",
+   "AI作曲"
+  ],
+  "review": [
+   "歌入りの曲をジャンル指定やプロンプト入力で作る、Sunoの基本的な作曲の流れが分かる。",
+   "DTMスクールの講師が、初心者のつまずきを避けながら機能を順に紹介する。",
+   "AI作曲を初めて触る人や、DTMの補助に使いたい人向け。"
+  ],
+  "publishedAt": "2025-11-13T09:00:26Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "ai",
+  "sub": "GitHub Copilot",
+  "ytid": "oMm8tdYheZ4",
+  "level": "中級",
+  "minutes": 13,
+  "channel": "まさおAIじっくり解説ch",
+  "score": 30,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "Agent HQやSlack・Linear連携など、開発フローに直結する新機能の使いどころを解説"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 5,
+    "note": "2025年10月のアップデート当日に公開され、公式ブログへのリンクで裏付けが取れる"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "現役エンジニアが現場目線で噛み砕く解説スタイル"
+   },
+   {
+    "axis": "体系性",
+    "score": 3,
+    "note": "概要欄にチャプターがなく、アップデート紹介の単発構成"
+   },
+   {
+    "axis": "信頼性",
+    "score": 5,
+    "note": "一次情報としてGitHub公式ブログ（変更履歴と日本語記事）へのリンクを明示し、開発実務者が解説"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "13分で要点を追える"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "使用素材のクレジット表記があり適正"
+   }
+  ],
+  "title": "Github Copilotの最新アプデが凄すぎた！AgentHQやSlack連携、Github完結の開発が便利すぎる！",
+  "url": "https://www.youtube.com/watch?v=oMm8tdYheZ4",
+  "tags": [
+   "使い方",
+   "アップデート",
+   "エージェント"
+  ],
+  "review": [
+   "Agent HQを中心に、Copilotの大規模アップデートで開発フローがどう変わるかが分かる。",
+   "GitHub公式ブログの情報を基に、SlackやLinearなど外部連携の広がりを実務目線で解説する。",
+   "Copilotをすでに使っていて、新機能を開発に取り入れたいエンジニア向け。"
+  ],
+  "publishedAt": "2025-10-29T11:01:48Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "ai",
+  "sub": "Grok",
+  "ytid": "nFLZL7jfGCE",
+  "level": "初級",
+  "minutes": 12,
+  "channel": "AI大学",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "チャット画面・サイドバー・設定画面と、アプリ限定機能まで実際の操作範囲をカバー"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2025年7月の大型アップデートに即した内容で、公式サイトへのリンクも明示されている"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "三章構成と細かい目次で追いやすい"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "特徴・プラン→使い方→アプリ限定機能と、全体像から操作へ進む構成が明確"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "「すべてソースを基に制作」と明記し、公式サイトや報道など参照元へのリンクを列挙"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "12分に要点が凝縮されている"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "問題となる要素は見当たらない"
+   }
+  ],
+  "title": "xAIのAIチャット「Grok」の全機能徹底解説！ ～Grok 4、コンパニオン機能(Ani)、DeepSearch、音声会話機能など～",
+  "url": "https://www.youtube.com/watch?v=nFLZL7jfGCE",
+  "tags": [
+   "使い方",
+   "機能解説"
+  ],
+  "review": [
+   "Grok 4やDeepSearch、コンパニオン機能まで、Grokの全機能の概要が掴める。",
+   "特徴とプラン、Web版の使い方、モバイルアプリ限定機能の三章で整理して解説する。",
+   "Grokをこれから使い始める人や、プラン選びで迷っている人向け。"
+  ],
+  "publishedAt": "2025-07-23T09:05:32Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "ai",
+  "sub": "OpenAI Codex",
+  "ytid": "H5TGzM_PCW4",
+  "level": "中級",
+  "minutes": 63,
+  "channel": "Vibe Coding Studio",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "IDE版とCLI版の両方を、セットアップから実サイト・LP作成のデモまで手を動かして学べる"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2025年9月公開で、AGENTS.mdなど現行の使い方に沿った内容"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "「学べること」が明示され、IDE版とCLI版の違いという疑問に応える構成"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "11のタイムスタンプで基礎→導入→実践→設定ファイル活用まで段階的に進む"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "AI駆動開発を専門に発信する実践チャンネルで、関連する比較・実践動画も継続している"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 3,
+    "note": "63分と長尺だが、タイムスタンプで必要な部分へ飛べる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "Udemy講座への誘導はあるが適正範囲"
+   }
+  ],
+  "title": "【1時間で速習】Codex完全入門！IDE版・CLI版の使い方と違いを徹底解説｜ChatGPTユーザー必見",
+  "url": "https://www.youtube.com/watch?v=H5TGzM_PCW4",
+  "tags": [
+   "入門",
+   "IDE",
+   "CLI"
+  ],
+  "review": [
+   "IDE版とCLI版の両方について、導入から実践、使い分けまでを一気に学べる。",
+   "サブスク登録と拡張機能の導入から始め、WebサイトやLPを作るデモ、AGENTS.mdの設定まで段階的に進む。",
+   "ChatGPTの契約はあるがCodexをまだ使いこなせていない開発者向け。"
+  ],
+  "publishedAt": "2025-09-09T02:07:29Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "ai",
+  "sub": "OpenAI Codex",
+  "ytid": "YMZ6YZelTO0",
+  "level": "初級",
+  "minutes": 18,
+  "channel": "mikimiki web スクール",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "ダウンロードから3つのハンズオンで、基本操作と活用の流れを実際に試せる"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 5,
+    "note": "2026年5月公開で、現行のCodexアプリ前提の内容"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "初心者向けスクールチャンネルで、基礎講座として噛み砕いた解説"
+   },
+   {
+    "axis": "体系性",
+    "score": 3,
+    "note": "目次は開始10分あたりまでしかなく、後半の構成が概要欄からは追いにくい"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "書籍も出す教育系クリエイターの実演解説で、誇大な収益宣伝はない"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "18分で基礎を一巡できる長さ"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "資料配布のLINE誘導はあるが適正範囲"
+   }
+  ],
+  "title": "【超便利‼️】ChatGPT「Codex」使い方基礎講座！活用法まで分かりやすく解説！",
+  "url": "https://www.youtube.com/watch?v=YMZ6YZelTO0",
+  "tags": [
+   "使い方",
+   "基礎",
+   "初心者向け"
+  ],
+  "review": [
+   "ChatGPTのCodexの特徴と基本操作、活用の入り口が短時間で掴める。",
+   "特徴の説明のあと、ダウンロードと使い方、3つのハンズオンで実際に触っていく。",
+   "コード経験が少なくてもCodexを試してみたい初心者向け。"
+  ],
+  "publishedAt": "2026-05-08T10:15:09Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "ai",
+  "sub": "Notion AI",
+  "ytid": "mIUDzP0h-jg",
+  "level": "初級",
+  "minutes": 14,
+  "channel": "円谷 | Notion公式アンバサダー",
+  "score": 31,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "料金プランの前提から活用方法・ミーティングノート・エージェントまで、使い始める判断と操作をカバー"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 5,
+    "note": "2026年1月公開で現行仕様に沿い、概要欄にはさらに新しい動画への案内もある"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "初学者向けに全体感を掴むことを目的とした丁寧な解説"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "前提（プラン）→活用→機能→まとめの流れが明快"
+   },
+   {
+    "axis": "信頼性",
+    "score": 5,
+    "note": "Notion公式アンバサダーによる解説で、料金プランの条件も正確に明示している"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "14分で要点がまとまっている"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 4,
+    "note": "自身の講座への案内はあるが適正範囲"
+   }
+  ],
+  "title": "【2026年最新】Notion AI初心者向け解説｜料金、基礎的な使い方、AIエージェントについて解説",
+  "url": "https://www.youtube.com/watch?v=mIUDzP0h-jg",
+  "tags": [
+   "使い方",
+   "入門",
+   "料金"
+  ],
+  "review": [
+   "Notion AIで何ができるか、料金プランの前提を含めて全体像が掴める。",
+   "ビジネスプランの条件、活用方法、ミーティングノート、AIエージェントの順に要点を絞って解説する。",
+   "Notion AIの導入を検討している初学者やチームの担当者向け。"
+  ],
+  "publishedAt": "2026-01-30T00:06:48Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "note": "Pythonとgitの導入からgit clone、モデル配置、初回起動まで、手順どおりに進めれば生成まで到達できる構成",
+    "score": 5
+   },
+   {
+    "axis": "正確性・鮮度",
+    "note": "2023年2月時点の導入方法に基づいており、Pythonのバージョン指定など現在の環境と異なる部分がある",
+    "score": 3
+   },
+   {
+    "axis": "分かりやすさ",
+    "note": "フォルダ名に半角スペースを入れないなど、つまずきやすい注意点を繰り返し強調して説明している",
+    "score": 5
+   },
+   {
+    "axis": "体系性",
+    "note": "インストール手順が番号付きで概要欄にも転記され、前提条件から動作確認まで順序立てられている",
+    "score": 5
+   },
+   {
+    "axis": "信頼性",
+    "note": "本家GitHubのAUTOMATIC1111リポジトリへのリンクを明示し、技術研究目的である旨も開示している。投稿チャンネルは当サイト掲載済みの解説チャンネル",
+    "score": 4
+   },
+   {
+    "axis": "視聴体験",
+    "note": "導入の全工程を扱う長尺で、特定の手順だけを拾う視聴には向かない",
+    "score": 3
+   },
+   {
+    "axis": "規約・権利",
+    "note": "概要欄に宣伝や外部誘導はなく、対象がローカル版のみである旨の注意書きがある",
+    "score": 5
+   }
+  ],
+  "channel": "テルルとロビン旧やすらぼ",
+  "genre": "ai",
+  "level": "初級",
+  "minutes": 30,
+  "publishedAt": "2023-02-27T08:00:03Z",
+  "review": [
+   "Stable Diffusion WebUI（AUTOMATIC1111・ローカル版）のインストールから初回起動、生成までの全手順を解説する入門動画。",
+   "Pythonとgitの導入、git clone、モデル配置の順に進み、フォルダ名に半角スペースを入れないなど失敗しやすい注意点を繰り返し押さえる。",
+   "自分のPCでローカル環境を一から構築したい初心者向け。"
+  ],
+  "score": 30,
+  "scoreConfirmedAt": "2026-11-19",
+  "scoreStatus": "confirmed",
+  "sub": "Stable Diffusion",
+  "tags": [
+   "インストール",
+   "WebUI",
+   "ローカル環境"
+  ],
+  "title": "日本一わかりやすいStableDiffusion WebUI AUTOMATIC1111(ローカル版)のインストール方法と基本的な使い方",
+  "url": "https://www.youtube.com/watch?v=8QIJMGW_-LM",
+  "ytid": "8QIJMGW_-LM"
+ },
+ {
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "note": "プロンプトが効く仕組みと構文を理解でき、狙った画像に近づけるための書き方に応用できる",
+    "score": 4
+   },
+   {
+    "axis": "正確性・鮮度",
+    "note": "2023年9月公開で、プロンプト構文の基礎は現在も通用するが、最新の記法やモデル事情は扱っていない",
+    "score": 3
+   },
+   {
+    "axis": "分かりやすさ",
+    "note": "初心者向けに、仕組みの解説から構文の説明へ段階を踏んで進む",
+    "score": 5
+   },
+   {
+    "axis": "体系性",
+    "note": "関連動画で生成の仕組み編と役割分担し、本編はプロンプトの仕組みと構文に絞っている",
+    "score": 4
+   },
+   {
+    "axis": "信頼性",
+    "note": "引用元・参考サイトとしてAUTOMATIC1111公式wikiやHugging Faceの配布ページなどを概要欄に明記している",
+    "score": 5
+   },
+   {
+    "axis": "視聴体験",
+    "note": "合成音声のナレーションで、抑揚の面では実声の解説に劣る",
+    "score": 3
+   },
+   {
+    "axis": "規約・権利",
+    "note": "使用音声と使用楽曲のクレジットを概要欄に明記している",
+    "score": 5
+   }
+  ],
+  "channel": "とうや",
+  "genre": "ai",
+  "level": "初級",
+  "minutes": 11,
+  "publishedAt": "2023-09-16T10:22:16Z",
+  "review": [
+   "Stable Diffusionで思い通りの画像を作るための、プロンプトの仕組みと構文を解説する動画。",
+   "プロンプトがどう機能するかの原理から入り、構文の組み立て方を初心者向けに段階的に説明する。",
+   "プロンプトをなんとなく書いていて、狙った絵柄にならない人向け。"
+  ],
+  "score": 29,
+  "scoreConfirmedAt": "2026-11-19",
+  "scoreStatus": "confirmed",
+  "sub": "Stable Diffusion",
+  "tags": [
+   "プロンプト",
+   "構文",
+   "AIイラスト"
+  ],
+  "title": "AIイラストのプロンプトの仕組みと構文をわかりやすく解説（Stable Diffusion）",
+  "url": "https://www.youtube.com/watch?v=mLXa1vY04Hg",
+  "ytid": "mLXa1vY04Hg"
+ },
+ {
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "note": "Text to VideoとImage to Videoの両方を実演し、プロンプトのコツと料金プランの選び方まで扱う",
+    "score": 5
+   },
+   {
+    "axis": "正確性・鮮度",
+    "note": "2025年11月公開で、現行のKlingの機能構成と料金プランに沿った内容",
+    "score": 5
+   },
+   {
+    "axis": "分かりやすさ",
+    "note": "この動画で学べることが箇条書きで示され、目次も細かく区切られている",
+    "score": 4
+   },
+   {
+    "axis": "体系性",
+    "note": "基本操作から画像の準備、動画化、他ツールとの連携、料金の順に進む",
+    "score": 4
+   },
+   {
+    "axis": "信頼性",
+    "note": "映像クリエイターの実演に基づく解説で、関連動画へのリンクはあるが公式情報への引用はない",
+    "score": 3
+   },
+   {
+    "axis": "視聴体験",
+    "note": "短い尺に実演を凝縮し、章立てで追いやすい",
+    "score": 4
+   },
+   {
+    "axis": "規約・権利",
+    "note": "概要欄に宣伝や特典誘導はなく、関連動画とSNSのみ",
+    "score": 5
+   }
+  ],
+  "channel": "NOMAN AI",
+  "genre": "ai",
+  "level": "初級",
+  "minutes": 7,
+  "publishedAt": "2025-11-24T09:00:36Z",
+  "review": [
+   "Kling AIの基本操作と、Text to Video／Image to Videoの使い方、プロンプトのコツを学べる動画。",
+   "動画生成、画像の準備、画像の動画化、Midjourneyとの連携、料金プランの順に実演を交えて進む。",
+   "AI動画を初めて作る人や、画像生成と組み合わせたいクリエイター向け。"
+  ],
+  "score": 30,
+  "scoreConfirmedAt": "2026-11-19",
+  "scoreStatus": "confirmed",
+  "sub": "Kling AI",
+  "tags": [
+   "動画生成",
+   "プロンプト",
+   "料金プラン"
+  ],
+  "title": "Kling AIの使い方を完全解説！プロンプトのコツ＆チュートリアルあり",
+  "url": "https://www.youtube.com/watch?v=MU8HFoxyQ6g",
+  "ytid": "MU8HFoxyQ6g"
+ },
+ {
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "note": "導入手順ではなくモデルの特徴と評価の解説が中心で、モデル選びの判断材料になる",
+    "score": 3
+   },
+   {
+    "axis": "正確性・鮮度",
+    "note": "2026年4月公開で、Gemma 4の公開直後の仕様と評価を扱っている",
+    "score": 5
+   },
+   {
+    "axis": "分かりやすさ",
+    "note": "Gemmaとは何かから入り、パラメーター数やベンチマークへ順に進む目次構成",
+    "score": 4
+   },
+   {
+    "axis": "体系性",
+    "note": "概要、公式紹介動画の読み解き、スペック、外部評価、まとめの流れが整っている",
+    "score": 4
+   },
+   {
+    "axis": "信頼性",
+    "note": "Google公式のモデルカードへのリンクがあり、解説者は自治体のICT部門での勤務など実務経歴を明示している",
+    "score": 4
+   },
+   {
+    "axis": "視聴体験",
+    "note": "中尺でチャプターが完備され、関心のある部分だけ追える",
+    "score": 4
+   },
+   {
+    "axis": "規約・権利",
+    "note": "出典が公式紹介動画であることが明確で、宣伝誘導はない",
+    "score": 5
+   }
+  ],
+  "channel": "こーすけ先生のGoogle塾",
+  "genre": "ai",
+  "level": "中級",
+  "minutes": 14,
+  "publishedAt": "2026-04-15T09:00:00Z",
+  "review": [
+   "GoogleのオープンモデルGemma 4について、何がすごいのかを公式紹介動画をもとに解説する動画。",
+   "Gemmaの概要、パラメーター数、LM Arenaでの評価という順に、スペックと世間の評価を読み解いていく。",
+   "ローカルで動くAIモデルの選び方を知りたい、非エンジニアを含むビジネス層向け。"
+  ],
+  "score": 29,
+  "scoreConfirmedAt": "2026-11-19",
+  "scoreStatus": "confirmed",
+  "sub": "Gemma",
+  "tags": [
+   "Gemma 4",
+   "オープンモデル",
+   "モデル解説"
+  ],
+  "title": "GoogleのオープンAIモデル「Gemma 4」が凄すぎるので徹底解説します",
+  "url": "https://www.youtube.com/watch?v=KJPmqpCwmZk",
+  "ytid": "KJPmqpCwmZk"
+ },
+ {
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "note": "LM Studioのインストールからモデル取得、設定調整、オフライン実演、表形式への整形まで仕事の手順として再現できる",
+    "score": 5
+   },
+   {
+    "axis": "正確性・鮮度",
+    "note": "2026年4月公開で、Gemma 4の公開日と対応づけて解説している",
+    "score": 5
+   },
+   {
+    "axis": "分かりやすさ",
+    "note": "エンジニア向けの難しい話はしないと明言し、目次も平易な言葉で段階を追える",
+    "score": 5
+   },
+   {
+    "axis": "体系性",
+    "note": "メリット、クラウドとの比較、活用例、導入手順、実演、まとめの流れが一貫している",
+    "score": 5
+   },
+   {
+    "axis": "信頼性",
+    "note": "LM Studio公式サイトへのリンクがあり、推奨スペックの目安も提示している",
+    "score": 4
+   },
+   {
+    "axis": "視聴体験",
+    "note": "長尺だが実演が中心で、章立てにより必要な部分を追える",
+    "score": 4
+   },
+   {
+    "axis": "規約・権利",
+    "note": "機密情報を守る観点を主題に据え、宣伝や外部誘導はない",
+    "score": 5
+   }
+  ],
+  "channel": "じゅりん│AIビジネス活用塾",
+  "genre": "ai",
+  "level": "初級",
+  "minutes": 26,
+  "publishedAt": "2026-04-04T02:38:32Z",
+  "review": [
+   "オフラインで動くGemma 4を、機密情報を守りながら仕事に使うメリットと導入方法を解説する動画。",
+   "クラウドAIとの使い分け、LM Studioの導入手順、ネット切断状態での実演、顧客メールを表に整形する実演で構成される。",
+   "機密データを扱うためクラウドAIに情報を渡しにくいビジネスパーソン向け。"
+  ],
+  "score": 33,
+  "scoreConfirmedAt": "2026-11-19",
+  "scoreStatus": "confirmed",
+  "sub": "Gemma",
+  "tags": [
+   "ローカルAI",
+   "機密保持",
+   "導入手順"
+  ],
+  "title": "無料で機密保持も完璧。オフラインで動くGoogle最新AI『Gemma 4』をビジネスで使う最強のメリット＆カンタンな導入方法を解説！",
+  "url": "https://www.youtube.com/watch?v=iVefoFsilsQ",
+  "ytid": "iVefoFsilsQ"
+ },
+ {
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "note": "編集ツールを1つずつ実際の操作画面で示し、拡張・修正・合成の作業をそのまま再現できる",
+    "score": 5
+   },
+   {
+    "axis": "正確性・鮮度",
+    "note": "2025年5月公開で、V7時代の編集機能（エディター）の内容に沿っている",
+    "score": 4
+   },
+   {
+    "axis": "分かりやすさ",
+    "note": "初心者向けにステップバイステップで進み、レイヤーの概念も噛み砕いて説明している",
+    "score": 5
+   },
+   {
+    "axis": "体系性",
+    "note": "基本操作から各ツール、レイヤー、リテクスチャへと機能単位で積み上がる",
+    "score": 4
+   },
+   {
+    "axis": "信頼性",
+    "note": "Midjourney公式サイトへのリンクがあり、実画面の操作で内容を裏付けている",
+    "score": 4
+   },
+   {
+    "axis": "視聴体験",
+    "note": "目次がツール単位で区切られ、目的の機能にすぐ飛べる",
+    "score": 4
+   },
+   {
+    "axis": "規約・権利",
+    "note": "概要欄に宣伝や有料誘導はなく、関連リンクは公式と自チャンネルのみ",
+    "score": 5
+   }
+  ],
+  "channel": "Dr.slump-J / クリエイティブツール解説",
+  "genre": "ai",
+  "level": "中級",
+  "minutes": 17,
+  "publishedAt": "2025-05-10T10:00:18Z",
+  "review": [
+   "Midjourneyの編集機能（エディター）の使い方を、拡張・修正・合成までツール単位で学べる講座形式の動画。",
+   "基本操作からMove/Resize、Paint、Smart Select、レイヤー、Retextureへと、実際の操作画面でステップごとに進む。",
+   "生成した画像をMidjourney内で仕上げたい初心者から中級者向け。"
+  ],
+  "score": 31,
+  "scoreConfirmedAt": "2026-11-19",
+  "scoreStatus": "confirmed",
+  "sub": "Midjourney",
+  "tags": [
+   "画像編集",
+   "エディター",
+   "レイヤー"
+  ],
+  "title": "初心者でもわかる編集機能の使い方講座｜拡張・修正・合成まで徹底解説！レイヤーの概念もわかりやすく解説してます",
+  "url": "https://www.youtube.com/watch?v=BHgJH2Junxw",
+  "ytid": "BHgJH2Junxw"
+ },
+ {
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "note": "登録方法からプロンプトのコツ、生成後の操作、各ページの役割、参照機能まで実務の全工程を扱う",
+    "score": 5
+   },
+   {
+    "axis": "正確性・鮮度",
+    "note": "2025年3月公開で、Web版の画面構成と機能に沿った内容",
+    "score": 4
+   },
+   {
+    "axis": "分かりやすさ",
+    "note": "プロンプトのコツを項目別に分け、初心者が順に追える目次になっている",
+    "score": 5
+   },
+   {
+    "axis": "体系性",
+    "note": "基礎、プロンプト、生成操作、ページ解説、参照機能、プロフィール設定と体系立てられている",
+    "score": 5
+   },
+   {
+    "axis": "信頼性",
+    "note": "実画面ベースの解説で、同一分野の関連動画と相互に参照し合う構成になっている",
+    "score": 4
+   },
+   {
+    "axis": "視聴体験",
+    "note": "長尺だが目次が細かく、必要な章だけの視聴ができる",
+    "score": 4
+   },
+   {
+    "axis": "規約・権利",
+    "note": "有料講座の案内が概要欄にあるが明示されており、動画自体は無料で完結している",
+    "score": 4
+   }
+  ],
+  "channel": "Dr.slump-J / クリエイティブツール解説",
+  "genre": "ai",
+  "level": "初級",
+  "minutes": 53,
+  "publishedAt": "2025-03-22T10:00:30Z",
+  "review": [
+   "Midjourney Web版の見方と使い方を、登録からプロンプトの基礎・応用まで網羅するパーフェクトガイド。",
+   "プロンプトのコツを複数項目に分け、バリエーションやアップスケール、各ページの役割、各種参照機能まで順に解説する。",
+   "Midjourneyをこれから始める初心者から、機能を体系的に学び直したい人向け。"
+  ],
+  "score": 31,
+  "scoreConfirmedAt": "2026-11-19",
+  "scoreStatus": "confirmed",
+  "sub": "Midjourney",
+  "tags": [
+   "使い方",
+   "プロンプト",
+   "Web版"
+  ],
+  "title": "初心者向けMidjourneyの使い方！Web版の見方と使い方、プロンプトの基礎から応用まで分かるパーフェクトガイド！",
+  "url": "https://www.youtube.com/watch?v=KZ1wLoLPfrM",
+  "ytid": "KZ1wLoLPfrM"
+ },
+ {
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "note": "ライブ翻訳の準備、ボタン操作、モードの使い分けに加え、ホテルや市場での実践会話例まで示している",
+    "score": 5
+   },
+   {
+    "axis": "正確性・鮮度",
+    "note": "2026年4月公開で、Gemini搭載のライブ翻訳という最新機能を扱い、続報も概要欄に追記されている",
+    "score": 5
+   },
+   {
+    "axis": "分かりやすさ",
+    "note": "初心者向けに、準備するものから操作手順までを目次どおりに段階的に進める",
+    "score": 5
+   },
+   {
+    "axis": "体系性",
+    "note": "機能の概要、準備、基本操作、言語設定、モード選択、実践例、注意点の順で構成されている",
+    "score": 4
+   },
+   {
+    "axis": "信頼性",
+    "note": "テキスト解説版へのリンクがあり、会話履歴が残らない点など注意点も明記している",
+    "score": 4
+   },
+   {
+    "axis": "視聴体験",
+    "note": "短い尺に実践サンプルを含み、要点が追いやすい",
+    "score": 4
+   },
+   {
+    "axis": "規約・権利",
+    "note": "概要欄に宣伝や外部誘導はない",
+    "score": 5
+   }
+  ],
+  "channel": "スマホの知恵袋",
+  "genre": "ai",
+  "level": "初級",
+  "minutes": 9,
+  "publishedAt": "2026-04-03T10:00:01Z",
+  "review": [
+   "Google翻訳の同時通訳機能「ライブ翻訳」の使い方を、準備から実践会話例まで解説する動画。",
+   "ライブ翻訳の概要、準備するもの、基本操作、言語設定、モード選択の順に進み、英語と韓国語の会話サンプルで実演する。",
+   "海外旅行や外国語での接客に、スマホの同時通訳を使いたい初心者向け。"
+  ],
+  "score": 32,
+  "scoreConfirmedAt": "2026-11-19",
+  "scoreStatus": "confirmed",
+  "sub": "Google翻訳",
+  "tags": [
+   "同時通訳",
+   "ライブ翻訳",
+   "海外旅行"
+  ],
+  "title": "Google翻訳の超進化で同時通訳に対応！もう英語学習不要",
+  "url": "https://www.youtube.com/watch?v=0aBk0R3SlYQ",
+  "ytid": "0aBk0R3SlYQ"
+ },
+ {
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "note": "デスクトップ版での実行手順に加え、Python SDKから呼び出す方法まで扱い、開発用途にも応用できる",
+    "score": 5
+   },
+   {
+    "axis": "正確性・鮮度",
+    "note": "2025年8月公開で、gpt-ossの公開直後に作られた内容で現行性がある",
+    "score": 4
+   },
+   {
+    "axis": "分かりやすさ",
+    "note": "初心者向けを明言し、モデル自体の説明から実行手順へ進む",
+    "score": 4
+   },
+   {
+    "axis": "体系性",
+    "note": "概要説明、GUIでの実行、SDKでの実行と段階が分かれている",
+    "score": 4
+   },
+   {
+    "axis": "信頼性",
+    "note": "LM Studio公式サイトとベンチマークサイトへのリンクがあり、投稿チャンネルは当サイト掲載本数の多いプログラミング解説チャンネル",
+    "score": 4
+   },
+   {
+    "axis": "視聴体験",
+    "note": "チャプターが完備され、GUI部分とSDK部分を選んで観られる",
+    "score": 4
+   },
+   {
+    "axis": "規約・権利",
+    "note": "イラストや音楽のクレジットと著作権表記が丁寧に明記されている",
+    "score": 5
+   }
+  ],
+  "channel": "Pythonプログラミング VTuber サプー",
+  "genre": "ai",
+  "level": "中級",
+  "minutes": 17,
+  "publishedAt": "2025-08-08T10:01:11Z",
+  "review": [
+   "OpenAIの公開モデルgpt-ossを、LM StudioでローカルPCで動かす方法を解説する動画。",
+   "gpt-ossの説明、デスクトップ版での実行、Python SDKでの実行という三部構成で、GUIとコードの両方を扱う。",
+   "ローカルLLMを試したい初心者から、Pythonからモデルを呼び出したい開発者向け。"
+  ],
+  "score": 30,
+  "scoreConfirmedAt": "2026-11-19",
+  "scoreStatus": "confirmed",
+  "sub": "LM Studio",
+  "tags": [
+   "gpt-oss",
+   "ローカルLLM",
+   "Python"
+  ],
+  "title": "gpt-ossをLM Studioで動かしてみよう！〜初心者向け〜 Python SDKで動かす方法も解説！",
+  "url": "https://www.youtube.com/watch?v=cm140jJiwwc",
+  "ytid": "cm140jJiwwc"
+ },
+ {
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "note": "Windows環境でPythonのセットアップからCUDA有効化、動作テストまで、構築の全手順を再現できる",
+    "score": 5
+   },
+   {
+    "axis": "正確性・鮮度",
+    "note": "2025年2月公開でR1公開直後の手順のため、ツールの更新で画面や手順が変わっている可能性がある",
+    "score": 3
+   },
+   {
+    "axis": "分かりやすさ",
+    "note": "この動画でわかることが箇条書きで示され、3ツールの役割分担から入る",
+    "score": 4
+   },
+   {
+    "axis": "体系性",
+    "note": "各ツールの紹介、インストール、GPU設定、検証、クラウドとの比較まで流れが完結している",
+    "score": 5
+   },
+   {
+    "axis": "信頼性",
+    "note": "出典・参考としてOllamaやOpen WebUI、NVIDIA、Pythonの公式サイトを明記し、速度と精度の実測テストも行っている",
+    "score": 5
+   },
+   {
+    "axis": "視聴体験",
+    "note": "長尺で合成音声の解説形式のため、集中して観る視聴向け",
+    "score": 3
+   },
+   {
+    "axis": "規約・権利",
+    "note": "使用楽曲の出典を明記している",
+    "score": 5
+   }
+  ],
+  "channel": "よろずごと ゆっくり解説ch",
+  "genre": "ai",
+  "level": "中級",
+  "minutes": 34,
+  "publishedAt": "2025-02-10T09:42:04Z",
+  "review": [
+   "DeepSeek R1をOllamaとOpen WebUIで動かす、ローカルAI環境の構築方法を解説する動画。",
+   "3ツールの役割紹介、Windowsへのインストール、CUDAによる高速化設定、質問応答と速度・精度の検証までを順に進める。",
+   "クラウドに頼らず自分のPCでAIを動かしたい中級者向け。"
+  ],
+  "score": 30,
+  "scoreConfirmedAt": "2026-11-19",
+  "scoreStatus": "confirmed",
+  "sub": "DeepSeek",
+  "tags": [
+   "DeepSeek R1",
+   "Ollama",
+   "環境構築"
+  ],
+  "title": "ローカルAI環境構築方法 DeepSeek R1 × Ollama × OpenWebUI",
+  "url": "https://www.youtube.com/watch?v=HsJFWFIdQfc",
+  "ytid": "HsJFWFIdQfc"
+ },
+ {
+  "genre": "shikaku",
+  "sub": "管理業務主任者",
+  "ytid": "3ipjQ1EHGGk",
+  "level": "初級",
+  "minutes": 31,
+  "channel": "アガルートの最短ルートTV",
+  "score": 31,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "出題科目ごとに勉強法を具体的に示し、初学者がそのまま学習計画に落とし込める"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "予備校の現行講座に基づく解説で、科目構成も現在の試験に沿っている"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "担当講師が科目の特徴をかみ砕いて説明し、初学者向けに進行する"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "民法等から適正化法まで全出題科目をチャプターで網羅する構成"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "大手予備校の公式チャンネルで、担当講師の氏名と所属が明示されている"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "チャプター区切りが細かく、必要な科目だけを拾って視聴できる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "公式チャンネルの講義動画で、権利上の問題は見当たらない"
+   }
+  ],
+  "title": "これ1本で合格に近づく！マンション管理士試験・管理業務主任者試験の科目別勉強法を解説！",
+  "url": "https://www.youtube.com/watch?v=3ipjQ1EHGGk",
+  "tags": [
+   "管理業務主任者",
+   "勉強法",
+   "科目別"
+  ],
+  "review": [
+   "管理業務主任者試験の全出題科目について、科目ごとの特徴と勉強法を学べる。",
+   "民法等・区分所有法等・標準管理規約・管理実務・建築設備・適正化法の順に講師が解説する。",
+   "マンション管理士とのダブル受験も視野に入れる初学者に最適な出発点。"
+  ],
+  "publishedAt": "2024-05-10T11:00:08Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "shikaku",
+  "sub": "賃貸不動産経営管理士",
+  "ytid": "fqi5mjR2iUo",
+  "level": "初級",
+  "minutes": 11,
+  "channel": "アガルートの最短ルートTV",
+  "score": 28,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "避けるべき勉強法を具体例で示し、学習の遠回りを防げる"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "予備校の現行シリーズの解説で、試験の現行形式に沿った内容"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "ランキング形式で失敗パターンを提示し、理由もあわせて説明する"
+   },
+   {
+    "axis": "体系性",
+    "score": 3,
+    "note": "勉強法の注意点に特化した内容で、試験範囲そのものの解説ではない"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "大手予備校の公式チャンネルで、担当講師が明示されている"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "短時間に要点が凝縮され、チャプターで該当箇所へ移動できる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "公式チャンネルの講義動画で、権利上の問題は見当たらない"
+   }
+  ],
+  "title": "実はNG！？絶対にやってはいけない勉強法ランキングTOP5！｜アガルートアカデミー",
+  "url": "https://www.youtube.com/watch?v=fqi5mjR2iUo",
+  "tags": [
+   "賃貸不動産経営管理士",
+   "勉強法",
+   "注意点"
+  ],
+  "review": [
+   "賃貸不動産経営管理士試験でやってはいけない勉強法と、自分に合った勉強法の探し方を学べる。",
+   "避けるべき勉強法を順位形式で挙げ、最後に適切な学習法の選び方へつなげる構成。",
+   "独学を始める前に失敗パターンを知っておきたい初学者向け。"
+  ],
+  "publishedAt": "2023-09-28T10:00:39Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "shikaku",
+  "sub": "二級ボイラー技士",
+  "ytid": "zayMq-wk680",
+  "level": "初級",
+  "minutes": 7,
+  "channel": "脱線おじさんの独学記",
+  "score": 28,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "短期間の学習スケジュールを工程ごとに示し、すぐ実践に移せる"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "近年の受験経験に基づく内容で、実技講習を含む現行の取得手順に沿う"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "目次が明快で、各工程の狙いが短時間で把握できる"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "テキストの読み込みから過去問、実技講習、総仕上げ、受験までを順序立てて示す"
+   },
+   {
+    "axis": "信頼性",
+    "score": 3,
+    "note": "個人の合格体験に基づく内容で、裏付けは本人の受験経験と連動ブログ記事"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "短い尺に工程が凝縮され、チャプターで見返しやすい"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "自作の解説動画で、権利上の問題は見当たらない"
+   }
+  ],
+  "title": "2級ボイラー技士の最短攻略法！ #ビルメン #ボイラー技士 #設備管理 #資格 #試験",
+  "url": "https://www.youtube.com/watch?v=zayMq-wk680",
+  "tags": [
+   "二級ボイラー技士",
+   "勉強法",
+   "独学"
+  ],
+  "review": [
+   "二級ボイラー技士を短期間で取得するための学習スケジュールと進め方を学べる。",
+   "テキストの読み込み、過去問演習、実技講習の受講、総仕上げ、受験の流れを工程順に紹介する。",
+   "ビルメン系資格を効率よく揃えたい初学者向けの実践的な道筋になる。"
+  ],
+  "publishedAt": "2025-03-22T22:00:42Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "prog",
+  "sub": "情報セキュリティマネジメント試験",
+  "ytid": "3aUoko1JNLs",
+  "level": "初級",
+  "minutes": 17,
+  "channel": "LEC東京リーガルマインド",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "試験概要と出題範囲、合格への取り組み方を短時間で一通り把握できる"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 3,
+    "note": "使用テキストの年度はやや古いが、試験制度と出題範囲の骨格は現在のものと一致する"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "専任講師が目次に沿ってコンパクトに解説し、初学者でも置いていかれない"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "資格の位置づけから試験概要、出題範囲、活用法、合格法まで一貫した構成"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "大手資格スクールの公式チャンネルで、担当講師の氏名と肩書きが明示されている"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "目次とタイムスタンプがあり、気になる部分だけを拾って視聴できる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "公式チャンネルのガイダンス動画で、権利上の問題は見当たらない"
+   }
+  ],
+  "title": "情報セキュリティマネジメント試験の概要・合格方法・活用方法や魅力をITコンサルタントがわかりやすく解説｜LEC東京リーガルマインド",
+  "url": "https://www.youtube.com/watch?v=3aUoko1JNLs",
+  "tags": [
+   "情報セキュリティマネジメント試験",
+   "ガイダンス",
+   "試験概要"
+  ],
+  "review": [
+   "情報セキュリティマネジメント試験の概要、出題範囲、合格のための勉強方法と資格の活用法を学べる。",
+   "どんな資格か、試験概要、出題範囲、取るべき資格か、合格のつかみ方の順に専任講師が解説する。",
+   "ITパスポートからのステップアップを考える初学者の入門に最適。"
+  ],
+  "publishedAt": "2023-02-14T08:59:30Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "shikaku",
+  "sub": "第二種電気工事士",
+  "ytid": "IwpAPx1q0Zo",
+  "level": "初級",
+  "minutes": 11,
+  "channel": "ガミデンキちゃんねる",
+  "score": 30,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "筆記試験の基礎を計算なしで押さえ、初学者が最初のつまずきを避けられる"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "近年の試験対策シリーズとして公開され、現行の筆記試験の範囲に沿う"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "直流と交流、覚えるべき用語を平易に説き、習熟度チェックで理解を確認できる"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "シリーズ第1回として基礎からまとめまでを段階的に進める構成"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "電気科の講師歴を持つ運営者の専門チャンネルで、教材のアフィリエイト利用も明記されている"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "チャプター区切りがあり、授業形式で集中して視聴できる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "自作の講義動画で、権利上の問題は見当たらない"
+   }
+  ],
+  "title": "#1 難しい公式なんていらない。筆記試験を楽々突破したいなら、ここがスタートです。",
+  "url": "https://www.youtube.com/watch?v=IwpAPx1q0Zo",
+  "tags": [
+   "第二種電気工事士",
+   "筆記試験",
+   "講義"
+  ],
+  "review": [
+   "第二種電気工事士の筆記試験対策として、電気回路の基礎と覚えるべき用語を学べる。",
+   "直流と交流の違いから入り、計算に頼らず概念を押さえ、最後に習熟度チェックで確認する授業形式。",
+   "電気の知識ゼロから筆記対策を始める初学者の最初の一本に最適。"
+  ],
+  "publishedAt": "2025-02-15T10:30:08Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "shikaku",
+  "sub": "衛生管理者",
+  "ytid": "wqW0D-lGU-w",
+  "level": "初級",
+  "minutes": 9,
+  "channel": "とある31歳独身会社員の資格勉強チャレンジ",
+  "score": 28,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "試験制度の確認から使用テキスト、学習の進め方まで受験準備を一通りそろえられる"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "近年の受験経験に基づき、受験資格や合格基準など現行制度に沿って説明している"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "目次が細かく、資格概要からまとめまで迷わず追える"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "制度説明、勉強期間と時間、使用教材、進め方の順に一貫して構成される"
+   },
+   {
+    "axis": "信頼性",
+    "score": 3,
+    "note": "個人の合格体験に基づく内容で、裏付けは本人の第一種合格と概要欄の詳細な目次"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "短い尺に情報が整理され、チャプターで必要な箇所へ移動できる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "自作の解説動画で、権利上の問題は見当たらない"
+   }
+  ],
+  "title": "たった1ヶ月で独学一発合格できる勉強法大公開❗️(合格率、参考書など)",
+  "url": "https://www.youtube.com/watch?v=wqW0D-lGU-w",
+  "tags": [
+   "衛生管理者",
+   "勉強法",
+   "独学"
+  ],
+  "review": [
+   "第一種衛生管理者の試験制度と、短期間で独学するための勉強の進め方を学べる。",
+   "資格概要、受験資格、科目と問題数、合格基準を確認したうえで、勉強期間、使用テキスト、進め方を紹介する。",
+   "仕事と両立しながら短期間で受験準備を整えたい初学者向け。"
+  ],
+  "publishedAt": "2024-11-10T10:01:00Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "shikaku",
+  "sub": "国家公務員採用一般職試験",
+  "ytid": "aQBibeQQk9U",
+  "level": "中級",
+  "minutes": 13,
+  "channel": "スタディング公務員チャンネル",
+  "score": 31,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "捨て科目の作り方など、限られた時間で得点を最大化する具体的な戦略を示す"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 5,
+    "note": "直近の試験を振り返り、次回試験に向けた最新の動向と注意点を扱っている"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "講師陣の対話形式で、反論も交えながら論点を多面的に説明する"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "勉強法、面接戦略、試験制度の動向までを一本で網羅する構成"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "大手通信講座の公式チャンネルで、複数の専門講師の氏名と経歴が明示されている"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "目次が細かく、関心のある論点だけを拾って視聴できる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "公式チャンネルの解説動画で、権利上の問題は見当たらない"
+   }
+  ],
+  "title": "これ勉強するな！社会人・大学生が2026年試験を楽に合格する方法",
+  "url": "https://www.youtube.com/watch?v=aQBibeQQk9U",
+  "tags": [
+   "国家公務員",
+   "公務員試験",
+   "勉強法"
+  ],
+  "review": [
+   "公務員試験で全科目を追わずに合格へ近づくための、捨て科目を軸にした学習戦略を学べる。",
+   "専門科目の取捨選択、面接に向けた早期の行動、SPIなど新形式試験の動向を講師陣が分担して解説する。",
+   "学習時間に制約のある社会人・大学生の中級者向け。"
+  ],
+  "publishedAt": "2026-01-09T11:00:03Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "prog",
+  "sub": "Python3エンジニア認定基礎試験",
+  "ytid": "1Q4u3-7cBqc",
+  "level": "初級",
+  "minutes": 10,
+  "channel": "Pythonアカデミア",
+  "score": 30,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "試験範囲の教科書に沿った講義で、そのまま試験対策の学習に使える"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "試験範囲である公式チュートリアルに準拠し、出題数にも触れて現行の試験に沿う"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "目次に沿って言語の特徴をかみ砕き、初学者が前提知識をそろえられる"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "試験概要から各章へ続くシリーズ構成で、範囲全体を順に学べる設計"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "試験対策専門のチャンネルで、公式ページと公式問題集へのリンクが明示されている"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "チャプター区切りがあり、苦手な章だけを繰り返し視聴できる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "自作の講義動画で、権利上の問題は見当たらない"
+   }
+  ],
+  "title": "Python3エンジニア認定基礎試験 1章 食欲をそそってみようか",
+  "url": "https://www.youtube.com/watch?v=1Q4u3-7cBqc",
+  "tags": [
+   "Python",
+   "資格",
+   "講義"
+  ],
+  "review": [
+   "Python3エンジニア認定基礎試験の範囲である公式チュートリアルの第1章を、Pythonの特徴から学べる。",
+   "出題数を確認したうえで、プログラミングの始め方、Pythonでできること、インタープリタ型言語の考え方を順に解説する。",
+   "章ごとの講義シリーズで基礎試験に備えたい初学者向け。"
+  ],
+  "publishedAt": "2022-11-29T20:11:03Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "shikaku",
+  "sub": "看護師",
+  "ytid": "UDP0kmwhVCQ",
+  "level": "中級",
+  "minutes": 16,
+  "channel": "みんなの国家資格アカデミー",
+  "score": 31,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "第114回の一般問題10問を誤答選択肢まで解説し、覚えるポイント付きでそのまま演習に使える"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "厚生労働省が公表した問題・正答に基づく明記があり、制度変更への注意喚起も記載"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "問題文と選択肢をすべて読み上げ、6秒のカウントダウンで自分で考えてから答え合わせできる"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "全24回・240問のシリーズ第9回として必修・一般・状況設定の全体構成が示されている"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "出典として厚生労働省の問題・正答を明示し、厚労省の制作・監修ではないことも明記する透明性"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "テンポよく進む聞き流し対応の構成"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "公表済みの過去問を出典明示のうえ独自解説として制作"
+   }
+  ],
+  "title": "【2027】第114回709 看護師国家試験 過去問解説 第9回 一般問題（全10問）",
+  "url": "https://www.youtube.com/watch?v=UDP0kmwhVCQ",
+  "tags": [
+   "過去問解説",
+   "一般問題"
+  ],
+  "review": [
+   "第114回看護師国家試験の一般問題10問（午前56～65）を、誤答選択肢まで含めて解説する過去問演習。",
+   "問題と選択肢を読み上げ、6秒考える時間を置いてから正解と「覚えるポイント」を提示する構成。",
+   "老年・小児・母性など一般問題の頻出テーマを、本番形式で力試ししたい受験生向け。"
+  ],
+  "publishedAt": "2026-11-16T19:16:51Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "shikaku",
+  "sub": "看護師",
+  "ytid": "eaRcr8VIX20",
+  "level": "中級",
+  "minutes": 71,
+  "channel": "みんなの国家資格アカデミー",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "必修から状況設定まで60問を本番形式で解き、採点の目安で現在地を測れる"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 3,
+    "note": "出題基準をもとに作成者が作ったオリジナル予想問題で、実際の過去問ではない"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "難しい言葉にふりがなを付け、全選択肢の解説と全体のまとめで復習まで導く"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "6分野×10問で試験範囲全体をカバーする章立て"
+   },
+   {
+    "axis": "信頼性",
+    "score": 3,
+    "note": "厚生労働省の出題基準への言及はあるが、概要欄に「合格間違いなし」という断定表現がある"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 3,
+    "note": "71分の長尺で、カウントダウン形式のため集中力の持続が要る"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "オリジナル問題の自作教材で、出典と位置づけが明示されている"
+   }
+  ],
+  "title": "【2027】701 看護師国家試験 模擬試験＜第1弾＞ 全60問",
+  "url": "https://www.youtube.com/watch?v=eaRcr8VIX20",
+  "tags": [
+   "模擬試験",
+   "本番形式"
+  ],
+  "review": [
+   "出題基準をもとに作られた全60問のオリジナル模擬試験を、本番形式で通しで解ける。",
+   "必修・人体の構造と機能・疾病・基礎看護・老年小児母性・精神在宅の6章立てで、全問に解説とまとめが付く構成。",
+   "直前期に弱点分野を洗い出したい受験生や、時間を計って解く練習をしたい人向け。"
+  ],
+  "publishedAt": "2026-11-17T22:16:51Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "shikaku",
+  "sub": "薬剤師",
+  "ytid": "CPNhwkxI0BE",
+  "level": "中級",
+  "minutes": 9,
+  "channel": "ゴロナビ 薬剤師国家試験に勝つ",
+  "score": 30,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "頻出テーマを国試形式の問題3問まで含めて確認でき、暗記の抜けをその場で潰せる"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "薬剤学の基礎事項として陳腐化しにくく、近年の出題範囲に沿った内容"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "「見分ける3つのルール」とマスター表で、分類の覚え方を型として示す"
+   },
+   {
+    "axis": "体系性",
+    "score": 3,
+    "note": "高分子の分類という単一テーマ完結で、科目全体の体系ではない"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "薬剤師国家試験対策を専門に掲げるチャンネルで、学べる項目が具体的に列挙されている"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 5,
+    "note": "9分で完結し、秒単位まで細かいタイムスタンプで復習箇所へすぐ戻れる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "自作の解説とオリジナル形式の問題で構成"
+   }
+  ],
+  "title": "【薬剤師国家試験対策】薬剤の高分子の分類を完全攻略！天然・半合成・合成の見分け方",
+  "url": "https://www.youtube.com/watch?v=CPNhwkxI0BE",
+  "tags": [
+   "薬剤",
+   "頻出テーマ"
+  ],
+  "review": [
+   "薬剤師国試の頻出テーマ「高分子の分類」を、天然・半合成・合成の見分け方から学べる。",
+   "3つの分類ルールとマスター表で整理し、国試形式の3問で確認する構成。",
+   "薬剤の暗記でつまずく受験生が、短時間で頻出テーマを固めるのに向く。"
+  ],
+  "publishedAt": "2026-10-26T21:05:44Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "shikaku",
+  "sub": "歯科衛生士",
+  "ytid": "wNBQekQGnyw",
+  "level": "中級",
+  "minutes": 9,
+  "channel": "Anna |フリーランス歯科衛生士",
+  "score": 28,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "保存修復学の頻出範囲を過去問ベースで確認でき、試験直前の総点検に使える"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2026年8月公開で、現行の出題範囲に沿った過去問解説"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "トピックごとのタイムスタンプで、苦手な項目だけを繰り返し聴ける"
+   },
+   {
+    "axis": "体系性",
+    "score": 3,
+    "note": "保存修復学1科目内のトピック解説で、科目横断の体系ではない"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "歯科衛生士本人による発信で、過去問に基づく内容であることが明示されている"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "9分の聞き流し形式で、倍速再生などの活用法も提示されている"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "過去問の聞き流し解説で、権利上の問題が見当たらない"
+   }
+  ],
+  "title": "【保存修復学】歯科衛生士国家試験過去問完全聞き流し",
+  "url": "https://www.youtube.com/watch?v=wNBQekQGnyw",
+  "tags": [
+   "保存修復学",
+   "聞き流し"
+  ],
+  "review": [
+   "保存修復学の頻出テーマを、過去問ベースで一気に確認できる聞き流し解説。",
+   "Toothwearから窩洞形成・修復材料まで、トピックごとのタイムスタンプで区切る構成。",
+   "通学中などのスキマ時間に、苦手トピックだけ繰り返し聴きたい受験生向け。"
+  ],
+  "publishedAt": "2026-08-25T09:00:29Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "shikaku",
+  "sub": "司法書士",
+  "ytid": "fucQTA59fnE",
+  "level": "中級",
+  "minutes": 17,
+  "channel": "松本雅典(司法書士試験講師)のリアリスティックチャンネル",
+  "score": 30,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "ほぼ毎年出題される177条の適用要件を押さえ、関連知識を横断的につなげられる"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "条文と講師の著書テキストに沿った講義で、改正影響の小さい物権分野を扱う"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "具体例から入る2部構成で、論点の核心を短く突く進め方"
+   },
+   {
+    "axis": "体系性",
+    "score": 3,
+    "note": "単一論点の深掘りで、科目全体の体系ではない"
+   },
+   {
+    "axis": "信頼性",
+    "score": 5,
+    "note": "辰已法律研究所の講師で著書があり、使用テキストの抜粋データまで公開されている"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "17分で冒頭・本論・応用の流れがチャプターで示されている"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "自身の講義とテキスト抜粋の公開で、出典が明確"
+   }
+  ],
+  "title": "【１問出るのに９割が知らない】民法177条の核心（司法書士試験・行政書士試験）",
+  "url": "https://www.youtube.com/watch?v=fucQTA59fnE",
+  "tags": [
+   "民法",
+   "対抗要件"
+  ],
+  "review": [
+   "司法書士試験でほぼ毎年出題される民法177条（対抗要件）の核心を、適用の必要条件から学べる。",
+   "具体例で論点を掴み、「どこまで使えるか」まで広げる2部構成の講義。",
+   "物権変動の論点で知識がバラバラになっている受験生が、知識を横断的につなぎ直すのに向く。"
+  ],
+  "publishedAt": "2026-06-06T08:02:12Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "shikaku",
+  "sub": "司法書士",
+  "ytid": "ZxR48pFt-6A",
+  "level": "初級",
+  "minutes": 5,
+  "channel": "LEC司法書士",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "最新の本試験の傾向から、過去問中心の学習が有効かを判断する材料が得られる"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 5,
+    "note": "令和8年度本試験の平均正答率や科目別傾向など、具体的な集計値をもとに分析"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "この動画でわかることが箇条書きで明快に示されている"
+   },
+   {
+    "axis": "体系性",
+    "score": 3,
+    "note": "出題分析の動画で、知識そのものの体系的な講義ではない"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "LEC公式チャンネルで、同校講師の根本正次氏が分析を担当している"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "5分で要点がまとまり、学習方針の確認に使いやすい"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "予備校公式の分析コンテンツで、権利上の問題が見当たらない"
+   }
+  ],
+  "title": "傾向の変化あり？ 学習経験が短い方でも十分戦える試験へ【令和8年司法書士試験択一式分析会】【ねももりch／根本正次】",
+  "url": "https://www.youtube.com/watch?v=ZxR48pFt-6A",
+  "tags": [
+   "出題傾向",
+   "択一式"
+  ],
+  "review": [
+   "令和8年度司法書士試験の択一式について、午前・午後の難易度と科目別の出題傾向を分析する。",
+   "平均正答率や「過去問知識で解けた問題数」といった具体データをもとに、学習の力点を示す構成。",
+   "学習経験が短く、どこに力を入れるべきか迷っている受験生の方向づけに向く。"
+  ],
+  "publishedAt": "2026-10-31T08:00:19Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "shikaku",
+  "sub": "CCNA",
+  "ytid": "IQGI_Zjzbhs",
+  "level": "中級",
+  "minutes": 16,
+  "channel": "資格スタディラボ",
+  "score": 32,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "6分野を例題つきで総ざらいでき、出題比率を踏まえた優先順位づけができる"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 5,
+    "note": "Cisco公式ページとExam Topicsで2026年10月に確認し、v2.0への切替予定まで明記"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "分野ごとに重要項目を列挙し、概要欄の目次で追いやすい"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "公式Exam Topicsの6分野全体を1本で網羅する構成"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "技術仕様をCiscoの文書とRFCで確認した旨が明記され、情報源への姿勢が明確"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "短時間で全範囲を扱う密度の高い総まとめ"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "自作のまとめ講義で、公式ページへのリンクも提示"
+   }
+  ],
+  "title": "【CCNA 200-301】CCNA 認定 出題範囲の総まとめ｜6分野を例題つきで解説（v1.1）",
+  "url": "https://www.youtube.com/watch?v=IQGI_Zjzbhs",
+  "tags": [
+   "総まとめ",
+   "200-301"
+  ],
+  "review": [
+   "CCNA（200-301 v1.1）の出題範囲6分野を、例題を交えながら1本で総ざらいできる。",
+   "公式Exam Topicsに沿って分野ごとの出題比率も示し、重要項目を順に押さえる構成。",
+   "学習の抜け漏れを点検したい受験生や、試験全体像を掴みたい初学者向け。"
+  ],
+  "publishedAt": "2026-10-28T11:00:19Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "shikaku",
+  "sub": "PMP",
+  "ytid": "w5k1AglFAu0",
+  "level": "中級",
+  "minutes": 11,
+  "channel": "PMP Career Playbook",
+  "score": 30,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "リスク対応の正しい順序という、状況問題で繰り返し問われる判断パターンを練習問題2問つきで示す"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 5,
+    "note": "2026年11月公開で、現行の試験内容アウトラインの配分とPMBOK第7版に整合している"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "5つの答えに構造化され、リスクとイシューの区別など平易な言い換えで説明する"
+   },
+   {
+    "axis": "体系性",
+    "score": 3,
+    "note": "リスク管理という単一領域の深掘りで、試験全体の体系ではない"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "練習問題が本試験問題ではなくオリジナルであること、PMI非提携であることを明示する透明性"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "チャプターが完備され、要点の振り返りまで含む構成"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "オリジナル問題であることを明記し、PMI商標への配慮を示す免責がある"
+   }
+  ],
+  "title": "PMP Risk Management: The 5 Answers They Keep Testing",
+  "url": "https://www.youtube.com/watch?v=w5k1AglFAu0",
+  "tags": [
+   "リスク管理",
+   "状況問題"
+  ],
+  "review": [
+   "PMPのリスク管理問題で繰り返し問われる「対応の正しい順序」を、5つの答えで学べる（英語）。",
+   "リスクとイシューの区別から、登録・評価・対応計画・オーナーと予備費・監視の流れを、オリジナル練習問題2問で確認する構成。",
+   "定義の暗記はできているのに状況問題で落とす受験生が、判断の型を固めるのに向く。"
+  ],
+  "publishedAt": "2026-11-17T12:30:30Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "kaikei",
+  "sub": "USCPA",
+  "ytid": "H49QdgF0ZiU",
+  "level": "初級",
+  "minutes": 16,
+  "channel": "USCPAどこチャンネル",
+  "score": 30,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "合格者の実践に基づく具体的な勉強法が並び、そのまま自分の学習へ取り入れられる"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "勉強法の内容で陳腐化しにくく、現行制度向けの発信を続けるチャンネルの動画"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "「効果があった方法」と「遠回りだった方法」を対比して整理する進め方"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "演習の繰り返しから優先順位づけまで、勉強法全体を両面から網羅する"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "運営者自身がUSCPA合格者であることを明示し、複数の合格者の実践を集約している"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "16分で要点がまとまっている"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "自身の経験に基づく発信で、権利上の問題が見当たらない"
+   }
+  ],
+  "title": "USCPA 合格者の勉強法｜効果ありの方法と遠回りの方法を実例で解説@USCPAどこチャンネル #uscpa #米国公認会計士 #勉強法  #合格者",
+  "url": "https://www.youtube.com/watch?v=H49QdgF0ZiU",
+  "tags": [
+   "勉強法",
+   "合格者"
+  ],
+  "review": [
+   "USCPA合格者が実際に効果を感じた勉強法7選と、遠回りだった方法3選を実例で学べる。",
+   "繰り返し演習、苦手分野の可視化、「なぜ」を問う習慣など、共通する考え方を整理する構成。",
+   "勉強法が定まらず、問題演習の量と質で悩む受験生の立て直しに向く。"
+  ],
+  "publishedAt": "2025-10-07T08:49:06Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "kaikei",
+  "sub": "USCPA",
+  "ytid": "skT4wh1lpfU",
+  "level": "初級",
+  "minutes": 14,
+  "channel": "USCPAどこチャンネル",
+  "score": 30,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "受験を判断するための難易度・勉強時間・科目特性が整理され、計画づくりに使える"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "必須3科目と選択科目からなる現行の新試験制度を前提に解説している"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "章立てが細かく、負荷感をたとえ話で具体化して伝える"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "難易度を合格率・時間・科目別の3視点から捉え、自己診断まで含む"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "合格者本人の運営で、合格率の数字の裏側（受験層の特性）まで含めて誇張なく説明する姿勢が明示されている"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "14分でチャプターに沿って要点を追える"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "自身の経験に基づく発信で、権利上の問題が見当たらない"
+   }
+  ],
+  "title": "USCPA試験の難易度は？合格率・勉強時間・科目別しんどさを整理＠USCPAどこチャンネル",
+  "url": "https://www.youtube.com/watch?v=skT4wh1lpfU",
+  "tags": [
+   "難易度",
+   "試験概要"
+  ],
+  "review": [
+   "USCPAの難易度を、合格率・必要勉強時間・科目ごとの特徴の3つの視点から整理する。",
+   "合格率の数字の読み方や絶対評価の仕組みまで踏み込み、科目別の「しんどさ」を順に解説する構成。",
+   "英語と4科目に尻込みして、挑戦するか迷っている検討段階の人向け。"
+  ],
+  "publishedAt": "2025-11-29T00:20:28Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "shikaku",
+  "sub": "ケアマネジャー",
+  "ytid": "RNcT0aiivYU",
+  "level": "中級",
+  "minutes": 54,
+  "channel": "ケアマネ一発合格塾・ナオさん",
+  "score": 33,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "認定申請から給付までの流れと混同しやすい用語の区別、確認問題まで含み試験に直結する"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 5,
+    "note": "2027年試験向けの講座で、制度改正は施行済みと施行予定を区別して解説する旨が明記されている"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "事例と図解で手続きを一つの流れとして整理し、誤解しやすい問いを先に提示する"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "完全講座シリーズの第5回で、テーマ内も申請・判定・給付・負担と体系的に進む"
+   },
+   {
+    "axis": "信頼性",
+    "score": 5,
+    "note": "講師が介護福祉士で元介護認定審査会委員・元施設長と、扱う制度の実務経験が明示されている"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 3,
+    "note": "54分の長尺で、腰を据えて学ぶ講義形式"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "自作講義で、権利上の問題が見当たらない"
+   }
+  ],
+  "title": "【2027ケアマネ試験完全講座5】要介護認定と保険給付｜申請・判定・自己負担を総整理",
+  "url": "https://www.youtube.com/watch?v=RNcT0aiivYU",
+  "tags": [
+   "要介護認定",
+   "介護保険"
+  ],
+  "review": [
+   "ケアマネ試験の要介護認定と保険給付を、申請から認定、サービス利用と費用負担まで一つの流れで学べる。",
+   "混同しやすい用語を事例と図解で区別し、最後に過去問論点の確認問題5問で理解を確かめる構成。",
+   "丸暗記ではなく仕組みから理解したい受験生が、介護保険の土台を固めるのに向く。"
+  ],
+  "publishedAt": "2026-11-15T00:00:33Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "shikaku",
+  "sub": "保育士",
+  "ytid": "bIk32uF9yNk",
+  "level": "中級",
+  "minutes": 17,
+  "channel": "保育士&発達支援応援チャンネル　たっきんず",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "実際の過去問1問から頻出概念を横断的に深掘りでき、周辺知識まで固められる"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "令和8年前期（2026年4月実施）の最新過去問を扱い、独自解釈である旨の注記がある"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "概念ごとにチャプターを分け、図による説明も含む丁寧な進め方"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "過去問を軸に関連概念を体系づけて広げる構成"
+   },
+   {
+    "axis": "信頼性",
+    "score": 3,
+    "note": "個人チャンネルの独自解釈ベースで、出典や監修の明示は限定的"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "17分で目次が完備され、概念ごとに追いやすい"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "過去問の解説で、権利上の問題が見当たらない"
+   }
+  ],
+  "title": "【保育士試験過去問】「観察学習、アンダーマイニング、最近接、オペラント」保育の心理学 問7 令和8年前期",
+  "url": "https://www.youtube.com/watch?v=bIk32uF9yNk",
+  "tags": [
+   "保育の心理学",
+   "過去問"
+  ],
+  "review": [
+   "令和8年前期の保育の心理学・問7を題材に、観察学習やアンダーマイニング効果などの頻出概念を深掘りする。",
+   "問題文の確認から概念ごとの解説、図解、最後の問題振り返りまで、1問を講義形式で展開する構成。",
+   "心理学の用語が混同しやすく、過去問の周辺知識まで固めたい受験生向け。"
+  ],
+  "publishedAt": "2026-10-23T11:00:31Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "shikaku",
+  "sub": "社会福祉士",
+  "ytid": "UCyh5EiycYg",
+  "level": "初級",
+  "minutes": 22,
+  "channel": "3福祉士資格合格チャンネル",
+  "score": 28,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "受験ルート・日程・合格基準・0点科目群の回避など、受験開始時に必要な実務情報が揃う"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2027年2月試験に向けて作成され、政府や自治体の資料も参照する旨が示されている"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "タイムテーブルが詳細で、論点を順に追いやすい"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "試験概要の全体像をカバーするシリーズ初回"
+   },
+   {
+    "axis": "信頼性",
+    "score": 3,
+    "note": "個人の合格経験ベースの発信で、講師の監修体制などの明示は限定的"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "22分でチャプターが完備されている"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "自身の経験に基づく発信で、権利上の問題が見当たらない"
+   }
+  ],
+  "title": "社福士試験対策1【試験概要と対策】",
+  "url": "https://www.youtube.com/watch?v=UCyh5EiycYg",
+  "tags": [
+   "試験概要",
+   "対策"
+  ],
+  "review": [
+   "社会福祉士国家試験の受験ルート、日程、出題形式、合格基準といった試験の全体像を学べる。",
+   "19科目・6科目群の攻略や「0点科目群」を避ける条件など、落とし穴を先に示す構成。",
+   "2027年2月試験に向けて、これから対策を始める人の最初の一本に向く。"
+  ],
+  "publishedAt": "2026-09-22T09:00:24Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "genre": "shikaku",
+  "sub": "行政書士",
+  "ytid": "NbxAR267YVc",
+  "level": "中級",
+  "minutes": 12,
+  "channel": "クフウヤ | 行政書士 聞き流しラボ",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "契約不適合責任の手段と1年通知期限など、試験で問われる条文知識をそのまま使える形で整理している"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "令和8年版として、現行民法の条文に沿って解説している"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "条文順の目次と「学べること」の列挙で、見通しを持って聴ける"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "シリーズ第140回と位置づけられ、テーマ内は条文の流れに沿って体系的に進む"
+   },
+   {
+    "axis": "信頼性",
+    "score": 3,
+    "note": "個人運営の講義チャンネルで、講師の資格や監修の明示は概要欄からは確認できない"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "単一テーマが完結する講義"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "自作の講義で、条文引用の範囲にとどまる"
+   }
+  ],
+  "title": "（令和8年版）【講義動画｜行政書士・民法・140】売主は知らん顔できない？契約不適合責任を条文順に整理（追完請求・代金減額請求・1年の通知期限）",
+  "url": "https://www.youtube.com/watch?v=NbxAR267YVc",
+  "tags": [
+   "民法",
+   "契約不適合責任"
+  ],
+  "review": [
+   "行政書士試験の民法で問われる契約不適合責任を、民法562条から566条まで条文順に整理して学べる。",
+   "追完請求・代金減額請求・損害賠償・解除の関係と、1年以内の通知期限の例外までを対話形式で解説する構成。",
+   "売買の担保責任が条文レベルで曖昧な受験生が、権利関係を正確に押さえ直すのに向く。"
+  ],
+  "publishedAt": "2026-09-25T22:57:53Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-19"
+ },
+ {
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "note": "労働条件の明示から解雇まで10テーマを「ルール→トラブル事例→実務ポイント」の型で示し、現場の対応に直結する",
+    "score": 5
+   },
+   {
+    "axis": "正確性・鮮度",
+    "note": "2026年10月時点の法令に基づく旨を明記し、2024年・2025年の改正やカスハラ対策の義務化まで反映している",
+    "score": 5
+   },
+   {
+    "axis": "分かりやすさ",
+    "note": "テーマごとのチャプター目次があり、必要な論点から視聴できる",
+    "score": 4
+   },
+   {
+    "axis": "体系性",
+    "note": "採用時の明示から退職・解雇まで、労働条件の全体を一連の流れで網羅する",
+    "score": 5
+   },
+   {
+    "axis": "信頼性",
+    "note": "社労士による解説で、個別の事案は専門家へ相談するよう明記している",
+    "score": 4
+   },
+   {
+    "axis": "視聴体験",
+    "note": "テーマごとに区切られており、通しでも部分視聴でも追いやすい",
+    "score": 4
+   },
+   {
+    "axis": "規約・権利",
+    "note": "自作の講義で、他者素材の流用や権利上の問題は見当たらない",
+    "score": 5
+   }
+  ],
+  "channel": "N山",
+  "genre": "shikaku",
+  "level": "中級",
+  "minutes": 26,
+  "publishedAt": "2026-11-01T09:39:16Z",
+  "review": [
+   "労働条件の明示から退職・解雇まで、労基法の主要10テーマを社労士が整理する経営者・人事向けの講座。",
+   "各テーマを「基本ルール→よくあるトラブル事例→実務のポイント3つ」の順で解説し、実務の落とし穴が見える。",
+   "2026年10月時点の法令に沿った内容で、カスハラ対策の義務化など新しい論点まで含む。"
+  ],
+  "score": 32,
+  "scoreConfirmedAt": "2026-11-19",
+  "scoreStatus": "confirmed",
+  "sub": "社労士",
+  "tags": [
+   "労働基準法",
+   "労務管理",
+   "社労士"
+  ],
+  "title": "会社を守るために知っておくべき労働条件の基礎",
+  "url": "https://www.youtube.com/watch?v=KctXjEWLvVA",
+  "ytid": "KctXjEWLvVA"
+ },
+ {
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "note": "「店長だから残業代は不要」という典型的な誤解を題材に、判断基準と注意点まで示す",
+    "score": 5
+   },
+   {
+    "axis": "正確性・鮮度",
+    "note": "労働基準法第41条の条文を引用したうえで、管理監督者に当たるかどうかを解説している",
+    "score": 4
+   },
+   {
+    "axis": "分かりやすさ",
+    "note": "判断基準→名ばかり管理職→注意点と、チャプターで論点が追いやすい",
+    "score": 4
+   },
+   {
+    "axis": "体系性",
+    "note": "管理監督者という単一の論点に絞った構成で、範囲は狭い",
+    "score": 3
+   },
+   {
+    "axis": "信頼性",
+    "note": "社労士事務所の公式チャンネルで、事務所の公式サイトへの導線も明示されている",
+    "score": 4
+   },
+   {
+    "axis": "視聴体験",
+    "note": "ナレーションは音読さん（合成音声）で、対話形式の工夫はあるが機械音声である",
+    "score": 3
+   },
+   {
+    "axis": "規約・権利",
+    "note": "合成音声の利用を明記した自作コンテンツで、権利上の問題は見当たらない",
+    "score": 5
+   }
+  ],
+  "channel": "労務サポート channel",
+  "genre": "shikaku",
+  "level": "中級",
+  "minutes": 9,
+  "publishedAt": "2026-11-06T06:00:30Z",
+  "review": [
+   "店長などの管理職に残業代が不要とは限らない理由を、社労士が条文から解説する1本。",
+   "管理監督者の判断基準と「名ばかり管理職」の注意点を、短時間で確認できる。",
+   "労務管理の入口として、労働時間のルールの例外を学びたい人に向く。"
+  ],
+  "score": 28,
+  "scoreConfirmedAt": "2026-11-19",
+  "scoreStatus": "confirmed",
+  "sub": "社労士",
+  "tags": [
+   "労働基準法",
+   "管理監督者",
+   "残業代"
+  ],
+  "title": "店長は管理監督者？社労士解説！",
+  "url": "https://www.youtube.com/watch?v=BppQFtIbHQE",
+  "ytid": "BppQFtIbHQE"
+ },
+ {
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "note": "各章に例題を挟み、得点源の業法を解きながら学べる",
+    "score": 4
+   },
+   {
+    "axis": "正確性・鮮度",
+    "note": "2027年度版として、最新の法改正に対応した教材と連動している旨が概要欄に明記されている",
+    "score": 4
+   },
+   {
+    "axis": "分かりやすさ",
+    "note": "細かいチャプター目次で、長尺でも論点ごとに追える",
+    "score": 4
+   },
+   {
+    "axis": "体系性",
+    "note": "基本・免許・取引士・営業保証金・保証協会・事務所規制・業務規制まで、業法の体系を順にたどる",
+    "score": 5
+   },
+   {
+    "axis": "信頼性",
+    "note": "講師自身が宅建士・行政書士などの資格保有者であることを明示している",
+    "score": 4
+   },
+   {
+    "axis": "視聴体験",
+    "note": "2時間超の長尺で、前編だけでは業法全体が完結しない",
+    "score": 3
+   },
+   {
+    "axis": "規約・権利",
+    "note": "自作の講義で権利上の問題は見当たらないが、概要欄の大半は有料講座とLINEへの誘導である",
+    "score": 4
+   }
+  ],
+  "channel": "1発合格! まめだいの宅建道場",
+  "genre": "shikaku",
+  "level": "中級",
+  "minutes": 122,
+  "publishedAt": "2026-08-05T10:08:48Z",
+  "review": [
+   "宅建業法の前半を、免許・取引士・営業保証金から事務所規制まで順に学ぶ長尺講義。",
+   "章ごとに例題があり、聞くだけでなく解きながら体系を押さえられる。",
+   "2027年度版の講義で、業法を得点源にしたい受験生の総整理に向く。"
+  ],
+  "score": 28,
+  "scoreConfirmedAt": "2026-11-19",
+  "scoreStatus": "confirmed",
+  "sub": "宅建",
+  "tags": [
+   "宅建",
+   "宅建業法",
+   "資格試験"
+  ],
+  "title": "たった2時間で完全攻略！『宅建業法』 (前編)",
+  "url": "https://www.youtube.com/watch?v=MDt7-7MhOHM",
+  "ytid": "MDt7-7MhOHM"
+ },
+ {
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "note": "夫婦それぞれの遺言書の文例まで示し、備えの具体的な形が分かる",
+    "score": 5
+   },
+   {
+    "axis": "正確性・鮮度",
+    "note": "収録時点（2026年10月27日）の法令に基づく旨と、成立済み・未施行の改正民法への注意まで明記している",
+    "score": 5
+   },
+   {
+    "axis": "分かりやすさ",
+    "note": "具体的な家族ケースと金額例で、相続人の範囲と分け方を追える",
+    "score": 5
+   },
+   {
+    "axis": "体系性",
+    "note": "相続人の範囲→法定相続分→遺言の書き方→遺留分と、一つのケースを軸に周辺論点をカバーする",
+    "score": 4
+   },
+   {
+    "axis": "信頼性",
+    "note": "現役の司法書士が実名・所属会・事務所情報を明示し、遺言書の著書もある",
+    "score": 5
+   },
+   {
+    "axis": "視聴体験",
+    "note": "文例を見ながら進む構成で、必要な場面を目次から選べる",
+    "score": 4
+   },
+   {
+    "axis": "規約・権利",
+    "note": "自作の解説で、アフィリエイトの表示も概要欄に明記されている",
+    "score": 5
+   }
+  ],
+  "channel": "司法書士柴崎智哉",
+  "genre": "shikaku",
+  "level": "初級",
+  "minutes": 18,
+  "publishedAt": "2026-10-31T05:00:38Z",
+  "review": [
+   "子のいない夫婦では配偶者だけが相続人とは限らない、という落とし穴を司法書士が文例つきで解説する。",
+   "相続人の範囲と法定相続分を確認し、夫婦それぞれが遺言書を用意する対策まで具体的に示す。",
+   "成立したばかりの改正民法への注意もあり、遺言を考え始める最初の1本に向く。"
+  ],
+  "score": 33,
+  "scoreConfirmedAt": "2026-11-19",
+  "scoreStatus": "confirmed",
+  "sub": "司法書士",
+  "tags": [
+   "相続",
+   "遺言書",
+   "司法書士"
+  ],
+  "title": "子のいない夫婦、夫の遺産は妻が全部もらえるとは限らない｜兄弟姉妹の取り分を0円にする遺言書",
+  "url": "https://www.youtube.com/watch?v=CCr7UoDZnXs",
+  "ytid": "CCr7UoDZnXs"
+ },
+ {
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "note": "期限のある手続きを時系列で並べ、いざというときの手順書代わりになる",
+    "score": 5
+   },
+   {
+    "axis": "正確性・鮮度",
+    "note": "相続登記の義務化など現行制度に沿い、公開時点の法令に基づく旨と個別事情への注意を明記している",
+    "score": 4
+   },
+   {
+    "axis": "分かりやすさ",
+    "note": "「何を・いつまでに・どんな順番で」と疑問に答える形で整理されている",
+    "score": 4
+   },
+   {
+    "axis": "体系性",
+    "note": "死亡直後の届出から相続登記まで、手続き全体を期限の軸で網羅する",
+    "score": 5
+   },
+   {
+    "axis": "信頼性",
+    "note": "司法書士法人が運営し、代表者名と事務所情報が明示されている",
+    "score": 4
+   },
+   {
+    "axis": "視聴体験",
+    "note": "全体の流れを短時間でつかめる長さに収まっている",
+    "score": 4
+   },
+   {
+    "axis": "規約・権利",
+    "note": "自作の解説で、権利上の問題は見当たらない",
+    "score": 5
+   }
+  ],
+  "channel": "なるほど相続教室",
+  "genre": "shikaku",
+  "level": "初級",
+  "minutes": 11,
+  "publishedAt": "2026-10-30T09:00:34Z",
+  "review": [
+   "相続が発生した直後から相続登記まで、期限のある手続きを司法書士が時系列で案内する保存版。",
+   "相続放棄や相続税など、過ぎると困る期限の全体像がつかめる。",
+   "個別の事情で起算日が異なる注意もあり、まず流れを知りたい人の入口に向く。"
+  ],
+  "score": 31,
+  "scoreConfirmedAt": "2026-11-19",
+  "scoreStatus": "confirmed",
+  "sub": "司法書士",
+  "tags": [
+   "相続",
+   "相続手続き",
+   "司法書士"
+  ],
+  "title": "相続手続きの流れは？期限のある手続きは？司法書士が解説！ #相続 #司法書士 #やまぐち中央事務所 #相続手続き",
+  "url": "https://www.youtube.com/watch?v=vGo2MpygRss",
+  "ytid": "vGo2MpygRss"
+ },
+ {
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "note": "学校だより・研究紀要・Webという具体的な場面で、引用のOK・NG判断に使える",
+    "score": 4
+   },
+   {
+    "axis": "正確性・鮮度",
+    "note": "著作権法第32条の引用の条件を、文化庁サイトへのリンクとともに整理している",
+    "score": 4
+   },
+   {
+    "axis": "分かりやすさ",
+    "note": "主従関係をNG例とOK例で対比し、場面別に判断のしかたを示す",
+    "score": 5
+   },
+   {
+    "axis": "体系性",
+    "note": "授業の特例（第35条）との使い分けから引用の条件、場面別の適用までをカバーする",
+    "score": 4
+   },
+   {
+    "axis": "信頼性",
+    "note": "SARTRAS・JASRACの有識者委員を務める学校著作権の専門講師で、経歴と一次情報へのリンクを明示している。ただし法律の資格者ではない",
+    "score": 4
+   },
+   {
+    "axis": "視聴体験",
+    "note": "チャプターが整い、必要な場面へすぐ飛べる",
+    "score": 4
+   },
+   {
+    "axis": "規約・権利",
+    "note": "自作の解説で、外部リンクも公的機関を中心に構成されている",
+    "score": 5
+   }
+  ],
+  "channel": "原口 直の学校著作権ナビ",
+  "genre": "shikaku",
+  "level": "初級",
+  "minutes": 12,
+  "publishedAt": "2025-12-24T21:00:17Z",
+  "review": [
+   "著作権法第32条「引用」の条件を、学校だよりや研究紀要という具体的な場面で解説する専門講師の動画。",
+   "主従関係のNG例・OK例の対比があり、「出典を書けばOK」ではない理由がつかめる。",
+   "授業の特例との違いも整理され、引用の判断を学ぶ入口として使いやすい。"
+  ],
+  "score": 30,
+  "scoreConfirmedAt": "2026-11-19",
+  "scoreStatus": "confirmed",
+  "sub": "著作権",
+  "tags": [
+   "著作権",
+   "引用",
+   "著作権法"
+  ],
+  "title": "その引用、本当に大丈夫？学校だより・研究紀要で使える著作権法第32条の条件",
+  "url": "https://www.youtube.com/watch?v=EW-kelWvvhg",
+  "ytid": "EW-kelWvvhg"
+ },
+ {
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "note": "データベース作成からピボット集計、レポート作成まで実務の流れを通しで実演",
+    "score": 5
+   },
+   {
+    "axis": "正確性・鮮度",
+    "note": "2022年公開。Excelの基礎仕様は現行でも通用するが画面は当時のもの",
+    "score": 3
+   },
+   {
+    "axis": "分かりやすさ",
+    "note": "目次が分単位で細かく、つまずきどころを先回りして説明",
+    "score": 4
+   },
+   {
+    "axis": "体系性",
+    "note": "第1章まとめとして表作成の正しい手順から関数連携まで章立てが通っている",
+    "score": 5
+   },
+   {
+    "axis": "信頼性",
+    "note": "Excel解説を専門にする講師の著書連動講座で、出典が概要欄に明示",
+    "score": 4
+   },
+   {
+    "axis": "視聴体験",
+    "note": "158分と長いがチャプター分割で必要な章だけ追える",
+    "score": 3
+   },
+   {
+    "axis": "規約・権利",
+    "note": "自チャンネルの講座動画で紹介に問題なし",
+    "score": 5
+   }
+  ],
+  "channel": "金子晃之",
+  "genre": "data",
+  "level": "中級",
+  "minutes": 158,
+  "publishedAt": "2022-04-28T04:30:09-07:00",
+  "review": [
+   "Excelで「正しい表の作り方」からピボット集計、見やすいレポート作成までを一気通貫で学べる中級編のまとめ動画。",
+   "複合参照やGETPIVOTDATA関数まで扱い、実務の集計作業に直結する手順がチャプターで追える。",
+   "基礎操作は身についていて、データ活用の実践力を上げたい人向け。"
+  ],
+  "score": 29,
+  "scoreConfirmedAt": "2026-11-19",
+  "scoreStatus": "confirmed",
+  "sub": "Excel",
+  "tags": [
+   "データ分析",
+   "ピボットテーブル",
+   "データベース"
+  ],
+  "title": "実践スキルが身につく本",
+  "url": "https://www.youtube.com/watch?v=VJRJNV8OTEM",
+  "ytid": "VJRJNV8OTEM"
+ },
+ {
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "note": "初心者が最初にやるべき3ステップが具体的に示され、着手順を決められる",
+    "score": 4
+   },
+   {
+    "axis": "正確性・鮮度",
+    "note": "2026年公開で、AI前提の現在のSEO観に沿った内容",
+    "score": 5
+   },
+   {
+    "axis": "分かりやすさ",
+    "note": "「キーワードを入れるだけではない」など誤解を先に潰す構成",
+    "score": 4
+   },
+   {
+    "axis": "体系性",
+    "note": "5つの基本と3ステップで、始める前の全体像が整理されている",
+    "score": 4
+   },
+   {
+    "axis": "信頼性",
+    "note": "SEO専門会社の公式チャンネルで、順位保証のような誇張がない",
+    "score": 4
+   },
+   {
+    "axis": "視聴体験",
+    "note": "9分に目次付きで凝縮され、要点を素早く掴める",
+    "score": 5
+   },
+   {
+    "axis": "規約・権利",
+    "note": "公式チャンネルの解説動画で紹介に問題なし",
+    "score": 5
+   }
+  ],
+  "channel": "東京SEOメーカーAIO戦略室",
+  "genre": "marke",
+  "level": "初級",
+  "minutes": 9,
+  "publishedAt": "2026-04-08T00:28:31-07:00",
+  "review": [
+   "SEOを始める前に知っておくべき基本を、専門会社が9分で整理した入門動画。",
+   "「すぐ結果は出ない」「記事を書けば上がるわけではない」という現実から入り、最初にやるべき3ステップを示す。",
+   "これからサイトやブログの集客を学び始める人向け。"
+  ],
+  "score": 31,
+  "scoreConfirmedAt": "2026-11-19",
+  "scoreStatus": "confirmed",
+  "sub": "SEO",
+  "tags": [
+   "SEO",
+   "基本",
+   "初心者"
+  ],
+  "title": "SEOの初心者が始める前に知るべきこと",
+  "url": "https://www.youtube.com/watch?v=2Iz7ejGJ1_Q",
+  "ytid": "2Iz7ejGJ1_Q"
+ },
+ {
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "note": "損益計算書の仕訳問題10問を解く演習形式で、試験の出題感覚が掴める",
+    "score": 4
+   },
+   {
+    "axis": "正確性・鮮度",
+    "note": "2023年公開。会計の基礎論点は安定しているが試験年度の確認は別途必要",
+    "score": 3
+   },
+   {
+    "axis": "分かりやすさ",
+    "note": "1問ごとのチャプターで、解きたい問題だけを繰り返せる",
+    "score": 4
+   },
+   {
+    "axis": "体系性",
+    "note": "損益計算書に絞った単元ドリルで、全体体系はシリーズ側に委ねられる",
+    "score": 3
+   },
+   {
+    "axis": "信頼性",
+    "note": "大阪商工会議所から許諾を得た対策講座の運営事業者で、公式サイト・公式テキストへのリンクを明示",
+    "score": 5
+   },
+   {
+    "axis": "視聴体験",
+    "note": "5分で10問をテンポよく回せる短さ",
+    "score": 4
+   },
+   {
+    "axis": "規約・権利",
+    "note": "許諾事業者の公式チャンネル動画で紹介に問題なし",
+    "score": 5
+   }
+  ],
+  "channel": "ZAIMの教室 財務諸表専門の学校",
+  "genre": "kaikei",
+  "level": "初級",
+  "minutes": 5,
+  "publishedAt": "2023-08-07T02:00:32-07:00",
+  "review": [
+   "ビジネス会計検定3級の損益計算書を題材に、仕訳問題10問へ挑戦できる演習動画。",
+   "試験主催の大阪商工会議所から許諾を得た講座運営者が出しており、公式テキストへの導線も概要欄にある。",
+   "簿記の学習者にも向く、財務諸表の入口として使える1本。"
+  ],
+  "score": 28,
+  "scoreConfirmedAt": "2026-11-19",
+  "scoreStatus": "confirmed",
+  "sub": "ビジネス会計検定試験",
+  "tags": [
+   "ビジネス会計検定",
+   "仕訳",
+   "演習"
+  ],
+  "title": "仕訳問題10問！ビジネス会計検定試験®３級（簿記学習者にもおすすめ）",
+  "url": "https://www.youtube.com/watch?v=Z6V4GFu5eMk",
+  "ytid": "Z6V4GFu5eMk"
  }
 ]
