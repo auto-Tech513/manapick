@@ -1910,5 +1910,29 @@
    "name": "生成AIパスポート試験",
    "url": "https://license.manapick.app/license/seisei-ai-passport/"
   }
+ ],
+ "sK447WD9Mtk": [
+  {
+   "site": "company",
+   "slug": "kiyo-learning",
+   "name": "KIYOラーニング",
+   "url": "https://company.manapick.app/company/kiyo-learning/"
+  }
+ ],
+ "u4EO47IyCYc": [
+  {
+   "site": "company",
+   "slug": "rakuten-group",
+   "name": "楽天グループ",
+   "url": "https://company.manapick.app/company/rakuten-group/"
+  }
+ ],
+ "jUQG-U2GOrw": [
+  {
+   "site": "company",
+   "slug": "mynavi",
+   "name": "株式会社マイナビ",
+   "url": "https://company.manapick.app/company/mynavi/"
+  }
  ]
 }

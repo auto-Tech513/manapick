@@ -6449,6 +6449,12 @@ img {
   color: var(--color-career-navy);
 }
 
+.sister-item-link.is-company {
+  border-color: color-mix(in srgb, var(--color-company-pink) 28%, var(--color-line));
+  background: linear-gradient(135deg, #fff, var(--color-company-pink-soft));
+  color: var(--color-company-pink-dark);
+}
+
 .sister-item-link:hover,
 .sister-item-link:focus-visible {
   box-shadow: var(--shadow-card);
@@ -6471,6 +6477,12 @@ img {
 .sister-item-link.is-career:focus-visible {
   border-color: color-mix(in srgb, #c9a200 58%, var(--color-line));
   color: #473a00;
+}
+
+.sister-item-link.is-company:hover,
+.sister-item-link.is-company:focus-visible {
+  border-color: color-mix(in srgb, var(--color-company-pink) 54%, var(--color-company-pink-line));
+  color: var(--color-company-pink-dark);
 }
 
 .video-embed-note {

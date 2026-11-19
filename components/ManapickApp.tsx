@@ -18,7 +18,7 @@ import roadmapsData from "@/content/roadmaps.json";
 import videosData from "@/content/videos.json";
 import { RECENT_KEY, WATCHED_KEY, WATCHLIST_KEY, sendGaEvent } from "@/lib/retention";
 import { genericAxisNoteCount, isGenericAxisNote, youtubeThumbnail } from "@/lib/manapick";
-import sisterItemLinks from "@/content/sister-item-links.json";
+import { sisterItemLinksByVideo } from "@/lib/sister-item-links";
 import { XFER_AI_FALLBACK, XFER_CAREER_BY_GENRE, XFER_COMPANY_BY_GENRE, XFER_CTA, XFER_LICENSE_BY_GENRE, XFER_ORDER, XFER_ORDER_DEFAULT, XFER_POLITICS_BY_GENRE } from "@/lib/xfer-links";
 import { averageScoreOf, medianOf, siteStats } from "@/lib/site-stats";
 import { buildSubRoadmap } from "@/lib/sub-roadmap";
@@ -1832,9 +1832,7 @@ function ManapickAppMain({
           <div className="lb-xfer-grid">
             {(() => {
               const genreKey = weeklyPick.genre;
-              const aiLink = (
-                (sisterItemLinks as Record<string, { site: string; name: string; url: string }[]>)[weeklyPick.ytid] ?? []
-              ).find((link) => link.site === "ai");
+              const aiLink = (sisterItemLinksByVideo[weeklyPick.ytid] ?? []).find((link) => link.site === "ai");
               const aiTarget = aiLink ? { name: aiLink.name, url: aiLink.url } : XFER_AI_FALLBACK;
               const licenseTarget = XFER_LICENSE_BY_GENRE[genreKey];
               const careerTarget = XFER_CAREER_BY_GENRE[genreKey];

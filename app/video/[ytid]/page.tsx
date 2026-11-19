@@ -10,7 +10,7 @@ import FoldSection from "@/components/FoldSection";
 import VideoActions from "@/components/VideoActions";
 import VideoEmbed from "@/components/VideoEmbed";
 import TrackedGaLink from "@/components/TrackedGaLink";
-import sisterItemLinks from "@/content/sister-item-links.json";
+import { sisterItemLinksByVideo, type SisterItemLink } from "@/lib/sister-item-links";
 import roadmapsData from "@/content/roadmaps.json";
 import { guidePath, guides } from "@/lib/guides";
 import {
@@ -48,13 +48,6 @@ import Phrase from "@/components/Phrase";
 
 type VideoPageProps = {
   params: Promise<{ ytid: string }>;
-};
-
-type SisterItemLink = {
-  site: "ai" | "license" | "career" | "politics";
-  slug: string;
-  name: string;
-  url: string;
 };
 
 type RoadmapStepShape = {
@@ -142,7 +135,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
   // quick-next ナビ・独自解説・下部の次カードが別々の動画を指す矛盾をなくす（UX改善 P0-1）。
   const editorialSummary = videoEditorialSummary(video, nextPick?.video ?? related[0]);
   const freshness = videoFreshness(video);
-  const sisterLinks = (sisterItemLinks as Record<string, SisterItemLink[]>)[video.ytid] ?? [];
+  const sisterLinks = sisterItemLinksByVideo[video.ytid] ?? [];
   const linkedSisterHrefs = sisterLinks.map((link) => link.url);
   // ロードマップに載っている動画は、その段階名（例：仕事で使う）を出す。無ければレベル名をテキストで出す。
   const roadmapStage = (() => {
@@ -574,35 +567,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
                     eventName="network_click"
                     eventParams={{ destination_site: link.site, placement: "video_detail_items", genre: video.genre, video_id: video.ytid }}
                   >
-                    {link.site === "ai" ? (
-                      <>
-                        <span aria-hidden="true">🔧</span>
-                        <span>
-                          <Phrase>「{link.name}」の料金・無料枠・使い方を manapick AI で見る</Phrase>
-                        </span>
-                      </>
-                    ) : link.site === "license" ? (
-                      <>
-                        <span aria-hidden="true">📜</span>
-                        <span>
-                          <Phrase>「{link.name}」の難易度・費用・申込を manapick license で見る</Phrase>
-                        </span>
-                      </>
-                    ) : link.site === "politics" ? (
-                      <>
-                        <span aria-hidden="true">§</span>
-                        <span>
-                          <Phrase>「{link.name}」を manapick politics で見る</Phrase>
-                        </span>
-                      </>
-                    ) : (
-                      <>
-                        <span aria-hidden="true">→</span>
-                        <span>
-                          <Phrase>「{link.name}」の仕事内容・必要スキルを manapick career で見る</Phrase>
-                        </span>
-                      </>
-                    )}
+                    <SisterItemLinkLabel link={link} />
                     <span className="sister-item-arrow" aria-hidden="true">→</span>
                   </TrackedGaLink>
                 ))}
@@ -685,6 +650,62 @@ export default async function VideoPage({ params }: VideoPageProps) {
       </div>
     </main>
   );
+}
+
+// 「姉妹サイトで詳細を見る」の1件分のアイコンと文言。
+// 5サイトすべてを明示し、どれにも当たらない値は別サイトの文言に落とさずビルドを失敗させる。
+function SisterItemLinkLabel({ link }: { link: SisterItemLink }) {
+  switch (link.site) {
+    case "ai":
+      return (
+        <>
+          <span aria-hidden="true">🔧</span>
+          <span>
+            <Phrase>「{link.name}」の料金・無料枠・使い方を manapick AI で見る</Phrase>
+          </span>
+        </>
+      );
+    case "license":
+      return (
+        <>
+          <span aria-hidden="true">📜</span>
+          <span>
+            <Phrase>「{link.name}」の難易度・費用・申込を manapick license で見る</Phrase>
+          </span>
+        </>
+      );
+    case "career":
+      return (
+        <>
+          <span aria-hidden="true">→</span>
+          <span>
+            <Phrase>「{link.name}」の仕事内容・必要スキルを manapick career で見る</Phrase>
+          </span>
+        </>
+      );
+    case "company":
+      return (
+        <>
+          <span aria-hidden="true">🏢</span>
+          <span>
+            <Phrase>「{link.name}」の事業・業績を manapick company で読む</Phrase>
+          </span>
+        </>
+      );
+    case "politics":
+      return (
+        <>
+          <span aria-hidden="true">§</span>
+          <span>
+            <Phrase>「{link.name}」を manapick politics で見る</Phrase>
+          </span>
+        </>
+      );
+    default: {
+      const unknownSite: never = link.site;
+      throw new Error(`[sister-item-links] 表示の分岐が無い site です: ${String(unknownSite)}`);
+    }
+  }
 }
 
 function videoGuideLinkLabel(genre: string) {
