@@ -21,15 +21,18 @@ export default function AdSlot({ slot }: { slot: string }) {
     if (!element) return;
 
     let disposed = false;
-    // 未配信（unfilled／AdSense が配信を見送った unfill-optimized）は枠ごと畳む。配信待ちの間は高さ 0・余白 0（globals.css）で
-    // 空白を残さず、filled になってから高さを取る。以前は 2.4 秒で配信待ちの枠も畳んでいたため、AdSense の処理が
+    // 畳むのは未配信（unfilled）のときだけ。配信待ちの間は高さ 0・余白 0（globals.css）で空白を残さず、
+    // filled になってから高さを取る。以前は 2.4 秒で配信待ちの枠も畳んでいたため、AdSense の処理が
     // それより遅れたページ下部の枠が二度と配信されなかった（2026-11-19 本番の実測：data-ad-status が付かないまま畳まれた枠あり）
+    // unfill-optimized は AdSense が「空のページ内広告を埋める」設定で枠を最適化し、ページに関連する候補を表示している状態。
+    // 公式ヘルプ（answer/10762946・16302564）では、display:none で隠す手法は最適化されていない unfilled の枠にだけ効くとされ、
+    // 最適化は未配信枠の収益を守るためのものとされているので、畳まずに filled と同じ枠として表示する（2026-11-19）
     const inspect = () => {
       if (disposed) return;
       const status = element.getAttribute("data-ad-status");
       const hasIframe = Boolean(element.querySelector("iframe"));
-      if (status === "unfilled" || status === "unfill-optimized") setState("empty");
-      else if (status === "filled" || hasIframe) setState("filled");
+      if (status === "unfilled") setState("empty");
+      else if (status === "filled" || status === "unfill-optimized" || hasIframe) setState("filled");
     };
 
     const observer = new MutationObserver(inspect);
