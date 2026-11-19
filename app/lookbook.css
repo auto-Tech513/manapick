@@ -4959,6 +4959,16 @@ section[id], details[id], article[id] { scroll-margin-top: 16px; }
   border-top: min(var(--ad-anchor-top, 0px), 28px) solid var(--nw-paper);
 }
 
+/* 下部アンカー（2026-11-19 アンカーを下部に寄せた）：広告の上端の「v」つまみ（約25px）の上に、メニューと乗り換えシートの
+   最下行が入り込まないよう、下部アンカーがあるときだけ下端に 28px の帯（それぞれと同じ地色の枠線。スクロールしない）を置く */
+.mp-menu {
+  border-bottom: min(var(--ad-anchor-bottom, 0px), 28px) solid var(--nw-paper);
+}
+
+.nw-sheet {
+  border-bottom: min(var(--ad-anchor-bottom, 0px), 28px) solid var(--nw-night);
+}
+
 /* PC：下部アンカー広告が body の下余白より高い分だけ、フッター最下段の下に余白を足す（独立監査2 M1。広告が無ければ 0） */
 @media (min-width: 768px) {
   .ft-bottom {
@@ -4967,13 +4977,15 @@ section[id], details[id], article[id] { scroll-margin-top: 16px; }
 }
 
 @media (max-width: 767px) {
-  /* SP の下部ナビは下部アンカー広告の上に置く。ページ末尾もその分だけ余白を足す */
+  /* SP の下部ナビは下部アンカー広告の上に置く。ページ末尾もその分だけ余白を足す。
+     下部アンカーの上端には畳むための「v」つまみ（約25px）が出るので、下部アンカーがあるときだけ、さらに 18px 上げて
+     つまみが下ナビのボタンにかからないようにする（min() で、広告が無いときは 0。2026-11-19 アンカーを下部に寄せたため） */
   .mobile-bottom-nav {
-    bottom: calc(10px + env(safe-area-inset-bottom) + var(--ad-anchor-bottom, 0px));
+    bottom: calc(10px + env(safe-area-inset-bottom) + var(--ad-anchor-bottom, 0px) + min(var(--ad-anchor-bottom, 0px), 18px));
   }
 
   body:has(.mobile-bottom-nav) .ft {
-    padding-bottom: calc(84px + env(safe-area-inset-bottom) + var(--ad-anchor-bottom, 0px));
+    padding-bottom: calc(84px + env(safe-area-inset-bottom) + var(--ad-anchor-bottom, 0px) + min(var(--ad-anchor-bottom, 0px), 18px));
   }
 }
 

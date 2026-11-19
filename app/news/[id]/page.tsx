@@ -100,7 +100,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
-      <header className="knowledge-header">
+      <header className="knowledge-header google-anno-skip">
         <Link href="/" aria-label="Manapick トップへ"><BrandLogo compact /></Link>
         <Link className="knowledge-header-link" href="/news/">ニュース一覧</Link>
       </header>
@@ -157,6 +157,9 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
               </table>
             </section>
           ) : null}
+
+          {/* 手動枠（2026-11-19 上部アンカー広告をやめた分の補い）：本文の導入（公式発表で確認できたこと）の直後 */}
+          <AdSlot slot="1438236565" />
 
           <section className="news-why-care" aria-labelledby="why-care-title">
             <p className="section-eyebrow">Why It Matters</p>
@@ -216,12 +219,15 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
         </section>
       ) : null}
 
+      {/* 手動枠（2026-11-19 ページ末尾の共有ボタンの下から移動）：本文と「同じカテゴリのニュース」を読み終えた位置。
+          末尾より見られやすく、本文の導入直後の枠との間に本文の節をはさむ（PC・SP とも1画面に2つ並ばない） */}
+      <AdSlot slot="1438236565" />
+
       <NetworkContextBand genreKey={NEWS_GENRE[item.category] ?? "biz"} skipHrefs={item.relatedLinks.map((link) => link.href)} />
 
       <NewsletterSignup placement="news_article" />
 
       <NewsShareBar title={item.headline} url={url} />
-      <AdSlot slot="1438236565" />
     </main>
   );
 }

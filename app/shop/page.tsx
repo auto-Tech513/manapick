@@ -47,7 +47,7 @@ export default function ShopPage() {
   return (
     <main className="mp-shop-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
-      <header className="mp-shop-topbar"><Link href="/" aria-label="Manapickトップへ"><BrandLogo /></Link><Link href="/">学習動画へ戻る</Link></header>
+      <header className="mp-shop-topbar google-anno-skip"><Link href="/" aria-label="Manapickトップへ"><BrandLogo /></Link><Link href="/">学習動画へ戻る</Link></header>
       <nav className="mp-shop-breadcrumbs" aria-label="パンくず"><Link href="/">トップ</Link><span>/</span><span>manapi商店</span></nav>
       <header className="mp-shop-hero">
         <span aria-hidden="true">MP</span>

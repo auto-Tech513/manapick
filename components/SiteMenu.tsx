@@ -58,7 +58,7 @@ export default function SiteMenu({
   const titleId = `${id}-title`;
 
   return (
-    <div className="mp-menu-layer">
+    <div className="mp-menu-layer google-anno-skip">
       <button type="button" className="mp-menu-backdrop" aria-label="メニューを閉じる" tabIndex={-1} onClick={onClose} />
       <aside id={id} ref={drawerRef} className="mp-menu" role="dialog" aria-modal="true" aria-labelledby={titleId} onKeyDown={onKeyDown}>
         <div className="mp-menu-head">

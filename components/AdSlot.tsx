@@ -21,11 +21,14 @@ export default function AdSlot({ slot }: { slot: string }) {
     if (!element) return;
 
     let disposed = false;
+    // 未配信（unfilled／AdSense が配信を見送った unfill-optimized）は枠ごと畳む。配信待ちの間は高さ 0・余白 0（globals.css）で
+    // 空白を残さず、filled になってから高さを取る。以前は 2.4 秒で配信待ちの枠も畳んでいたため、AdSense の処理が
+    // それより遅れたページ下部の枠が二度と配信されなかった（2026-11-19 本番の実測：data-ad-status が付かないまま畳まれた枠あり）
     const inspect = () => {
       if (disposed) return;
       const status = element.getAttribute("data-ad-status");
       const hasIframe = Boolean(element.querySelector("iframe"));
-      if (status === "unfilled") setState("empty");
+      if (status === "unfilled" || status === "unfill-optimized") setState("empty");
       else if (status === "filled" || hasIframe) setState("filled");
     };
 
@@ -47,12 +50,13 @@ export default function AdSlot({ slot }: { slot: string }) {
     }
 
     const t1 = window.setTimeout(inspect, 1200);
+    // AdSense のスクリプト自体が読み込まれない環境（広告ブロック等）では配信待ちのまま残るので畳む。
+    // スクリプトが読み込まれていれば（adsbygoogle.loaded）、data-ad-status が付くまで待つ
     const t2 = window.setTimeout(() => {
       if (disposed) return;
-      const status = element.getAttribute("data-ad-status");
-      const hasIframe = Boolean(element.querySelector("iframe"));
-      if (status !== "filled" && !hasIframe) setState("empty");
-    }, 2400);
+      const loaded = (window as AdsWindow & { adsbygoogle?: { loaded?: boolean } }).adsbygoogle?.loaded === true;
+      if (!loaded && !element.getAttribute("data-ad-status") && !element.querySelector("iframe")) setState("empty");
+    }, 8000);
 
     return () => {
       disposed = true;

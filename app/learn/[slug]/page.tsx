@@ -94,7 +94,7 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
-      <header className="knowledge-header">
+      <header className="knowledge-header google-anno-skip">
         <Link href="/" aria-label="Manapick トップへ">
           <BrandLogo compact />
         </Link>

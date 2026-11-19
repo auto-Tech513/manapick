@@ -1222,7 +1222,7 @@ function ManapickAppMain({
 
   return (
     <main className="lb-main">
-      <header className="site-header lb-hd">
+      <header className="site-header lb-hd google-anno-skip">
         <div className="lb-hd-inner">
           <a href="#top" className="lb-wordmark min-w-0 shrink-0" aria-label="Manapick トップ">
             manapick
@@ -1591,7 +1591,7 @@ function ManapickAppMain({
               </div>
               <div className="lb-fld">
                 <label htmlFor="lb-keyword-input">キーワード</label>
-                <div className={suggestionsOpen && suggestionsAnchor === "section" ? "lb-kw-wrap is-panel-open" : "lb-kw-wrap"}>
+                <div className={suggestionsOpen && suggestionsAnchor === "section" ? "lb-kw-wrap is-panel-open google-anno-skip" : "lb-kw-wrap google-anno-skip"}>
                   <div className="lb-in">
                     <svg viewBox="0 0 24 24" aria-hidden="true">
                       <circle cx="11" cy="11" r="6.5" />
@@ -2046,7 +2046,7 @@ function MobileBottomNav({
   onMenu: () => void;
 }) {
   return (
-    <nav className="mobile-bottom-nav" aria-label="クイックナビ">
+    <nav className="mobile-bottom-nav google-anno-skip" aria-label="クイックナビ">
       <button type="button" onClick={onHome}>
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <path d="M4 11l8-7 8 7v9H4z" />

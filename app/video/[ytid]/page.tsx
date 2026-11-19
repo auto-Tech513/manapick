@@ -218,7 +218,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
-      <header className="video-page-header">
+      <header className="video-page-header google-anno-skip">
         <Link href="/" aria-label="Manapick トップへ">
           <BrandLogo compact />
         </Link>
@@ -679,6 +679,9 @@ export default async function VideoPage({ params }: VideoPageProps) {
               ))}
             </div>
           </section>
+
+          {/* 手動枠（2026-11-19 上部アンカー広告をやめた分の補い）：「次に見る6本」を見終えた位置 */}
+          <AdSlot slot="1438236565" />
       </div>
     </main>
   );

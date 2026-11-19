@@ -5,7 +5,7 @@ import { NETWORK_STATIONS } from "@/lib/network-stations";
 // 駅データは lib/network-stations.ts の配列が正で、6駅目の追加はそちらへ1要素足すだけ。
 export default function NetworkRail() {
   return (
-    <div className="nw-rail">
+    <div className="nw-rail google-anno-skip">
       <span className="nw-rail-label">manapick network</span>
       <nav className="nw-rail-line" aria-label="manapick network の姉妹サイト">
         {NETWORK_STATIONS.map((station) =>
