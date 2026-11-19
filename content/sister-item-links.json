@@ -1650,5 +1650,29 @@
    "slug": "openclaw",
    "url": "https://ai.manapick.app/tool/openclaw/"
   }
+ ],
+ "kyADa0xbIhI": [
+  {
+   "site": "ai",
+   "slug": "adobe-firefly",
+   "name": "Adobe Firefly",
+   "url": "https://ai.manapick.app/tool/adobe-firefly/"
+  }
+ ],
+ "jzXZb9kMYqM": [
+  {
+   "site": "ai",
+   "slug": "elevenlabs",
+   "name": "ElevenLabs",
+   "url": "https://ai.manapick.app/tool/elevenlabs/"
+  }
+ ],
+ "blUeLIwAMBo": [
+  {
+   "site": "ai",
+   "slug": "gamma",
+   "name": "Gamma",
+   "url": "https://ai.manapick.app/tool/gamma/"
+  }
  ]
 }

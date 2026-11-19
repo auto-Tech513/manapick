@@ -5,7 +5,47 @@
     <link>https://manapick.app/news/</link>
     <description>公式発表を、学びと仕事に使える形へ整理します。</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 10 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>ファイルの仕分けはAIに任せる時代へ。GoogleドライブのAI分類が正式版に</title>
+      <link>https://manapick.app/news/2026-11-17-gemini-data-classification-in-drive-ga-4cd3ebbc/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-17-gemini-data-classification-in-drive-ga-4cd3ebbc/</guid>
+      <description>GoogleドライブのGeminiによるデータ分類（AI classification）が正式提供になりました。管理者が自然言語の指示を書くだけでファイルへ分類ラベルを自動付与でき、導入前のテストとリアルタイムなレポートも用意されています。</description>
+      <category>仕事・整理</category>
+      <pubDate>Mon, 16 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>「GMT+9って現地では何時？」の暗算から解放。Googleカレンダーがタイムゾーン略称表示に</title>
+      <link>https://manapick.app/news/2026-11-17-time-zone-abbreviations-in-google-calendar-f43531f4/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-17-time-zone-abbreviations-in-google-calendar-f43531f4/</guid>
+      <description>Googleカレンダー（ウェブ版）のタイムゾーン表示が、GMT±の数値からETやMEZのような地域に即した略称に変わります。「予定を探す」では参加者ごとの現地時刻も略称付きで表示され、ホバーで正式名称も確認できます。</description>
+      <category>仕事・整理</category>
+      <pubDate>Mon, 16 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>自分のGeminiの「必殺技」、チームに配れるようになった。スキル共有とDriveファイル添付が解禁</title>
+      <link>https://manapick.app/news/2026-11-16-share-skills-and-add-files-to-gemini-skills-085949c6/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-16-share-skills-and-add-files-to-gemini-skills-085949c6/</guid>
+      <description>Geminiアプリの「スキル」を他のユーザーと共有できるようになりました。閲覧・編集の権限を選んで配布でき、GoogleドライブやGemini Notebook、Googleフォトのファイルをスキルに組み込むことも可能です。</description>
+      <category>生成AI</category>
+      <pubDate>Sun, 15 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>コードが書けなくても、もう自動化をあきらめなくていい。Apps ScriptにGeminiが正式搭載</title>
+      <link>https://manapick.app/news/2026-11-16-gemini-in-apps-script-generally-available-beae0a0b/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-16-gemini-in-apps-script-generally-available-beae0a0b/</guid>
+      <description>Google Apps ScriptのGeminiサイドパネルが一般提供になりました。やりたいことを言葉で伝えるだけでスクリプトを作成でき、コードの変更はブロック単位で確認、エラーはワンクリックで診断と修正提案が受けられます。</description>
+      <category>生成AI</category>
+      <pubDate>Sun, 15 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Wordファイル、変換の手間が消えた。Googleドキュメントの比較が.docxに直接対応</title>
+      <link>https://manapick.app/news/2026-11-16-compare-docx-files-in-google-docs-f2539572/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-16-compare-docx-files-in-google-docs-f2539572/</guid>
+      <description>Googleドキュメントの「ドキュメントを比較」がMicrosoft Word（.docx）ファイルに対応しました。変換せずにそのまま比較できるため、複製ファイルでドライブが散らからず、WordとDocsを行き来するレビューが滑らかになります。</description>
+      <category>仕事・整理</category>
+      <pubDate>Sun, 15 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>スプレッドシート、ファイルごと渡さなくていい。Sheets canvasが単独リンクで公開可能に</title>
       <link>https://manapick.app/news/2026-11-11-publish-a-sheets-canvas-as-a-standalone-link-d58ce595ea/</link>
