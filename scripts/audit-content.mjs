@@ -8,11 +8,12 @@ async function readJson(relativePath) {
   return JSON.parse(await readFile(path.join(repoRoot, relativePath), "utf8"));
 }
 
-const [videos, genres, roadmaps, newsItems] = await Promise.all([
+const [videos, genres, roadmaps, newsItems, sisterItemLinks] = await Promise.all([
   readJson("content/videos.json"),
   readJson("content/genres.json"),
   readJson("content/roadmaps.json"),
-  readJson("content/news.json")
+  readJson("content/news.json"),
+  readJson("content/sister-item-links.json")
 ]);
 
 const errors = [];
@@ -68,6 +69,58 @@ for (const roadmap of roadmaps) {
     for (const ytid of step.videos || []) {
       if (!ids.has(ytid)) errors.push(`roadmap:${roadmap.genre}: missing video ${ytid}`);
     }
+  }
+}
+
+// 動画詳細「姉妹サイトで詳細を見る」の1対1リンク（2026-11-20）。
+// site が許可した5サイト以外だと、表示側で別サイトの文言に化けるため、ビルド前に止める。
+// 同じ検査は lib/sister-item-links.ts（読み込み時）にもある。許可サイトを足すときは両方を直すこと。
+const SISTER_SITE_HOSTS = {
+  ai: "ai.manapick.app",
+  license: "license.manapick.app",
+  career: "career.manapick.app",
+  company: "company.manapick.app",
+  politics: "politics.manapick.app"
+};
+if (!sisterItemLinks || typeof sisterItemLinks !== "object" || Array.isArray(sisterItemLinks)) {
+  errors.push("sister-item-links: top level must be an object of ytid -> links");
+} else {
+  for (const [ytid, links] of Object.entries(sisterItemLinks)) {
+    if (!ids.has(ytid)) warnings.push(`sister-item-links:${ytid}: video is not in videos.json`);
+    if (!Array.isArray(links)) {
+      errors.push(`sister-item-links:${ytid}: links must be an array`);
+      continue;
+    }
+    const seenUrls = new Set();
+    let companyCount = 0;
+    links.forEach((link, index) => {
+      const label = `sister-item-links:${ytid}[${index}]`;
+      const host = Object.hasOwn(SISTER_SITE_HOSTS, link?.site) ? SISTER_SITE_HOSTS[link.site] : null;
+      if (!host) {
+        errors.push(`${label}: site "${link?.site}" is not allowed (${Object.keys(SISTER_SITE_HOSTS).join("/")})`);
+      }
+      if (typeof link?.slug !== "string" || !link.slug.trim()) errors.push(`${label}: slug is empty`);
+      if (typeof link?.name !== "string" || !link.name.trim()) errors.push(`${label}: name is empty`);
+      let url = null;
+      try {
+        url = new URL(link?.url);
+      } catch {
+        errors.push(`${label}: url "${link?.url}" is invalid`);
+      }
+      if (url) {
+        if (url.protocol !== "https:") errors.push(`${label}: url must be https`);
+        if (host && url.host !== host) errors.push(`${label}: url host ${url.host} does not match site "${link.site}" (${host})`);
+        const segments = url.pathname.split("/").filter(Boolean);
+        if (segments[segments.length - 1] !== link.slug) errors.push(`${label}: url does not end with slug "${link.slug}"`);
+        if (link.site === "company" && url.pathname !== `/company/${link.slug}/`) {
+          errors.push(`${label}: company url must be /company/<slug>/ (${url.pathname})`);
+        }
+        if (seenUrls.has(url.href)) errors.push(`${label}: duplicate url ${url.href}`);
+        seenUrls.add(url.href);
+      }
+      if (link?.site === "company") companyCount += 1;
+    });
+    if (companyCount > 1) warnings.push(`sister-item-links:${ytid}: ${companyCount} company links (原則1件)`);
   }
 }
 
