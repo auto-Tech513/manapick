@@ -42,7 +42,7 @@ const mainPages: { label: string; href: string }[] = [
 export default function AllPagesIndex() {
   return (
     <main className="knowledge-page mp-sitemap-page">
-      <header className="knowledge-header">
+      <header className="knowledge-header google-anno-skip">
         <Link href="/" aria-label="Manapick トップへ">
           <BrandLogo compact />
         </Link>

@@ -12704,6 +12704,12 @@ img {
 /* AdSense 記事内広告枠：未充填/空は即畳んで空白の穴を作らない（UX配慮） */
 .ad-slot { display: block; overflow: hidden; border-radius: 12px; margin: 20px auto; width: min(100% - 32px, 1120px); }
 .ad-slot.is-empty { display: none !important; height: 0 !important; min-height: 0 !important; margin: 0 !important; padding: 0 !important; }
+/* 配信待ちの枠は高さ 0・上下の余白 0 で空白を残さない（AdSense が幅を測れるよう display は block のまま）。filled になってから余白と高さを取る（2026-11-19） */
+.ad-slot.is-pending { margin-top: 0; margin-bottom: 0; }
+/* ニュース本文の導入直後の枠：直後の「この更新が学びにどう関係するか」は、これまで section + section の上余白（32px／SP 26px）を
+   受けていた。枠が間に入ってもこれまでと同じ見た目にする */
+.news-article-body > .ad-slot + section { padding-top: 32px; }
+@media (max-width: 640px) { .news-article-body > .ad-slot + section { padding-top: 26px; } }
 
 .home-faq-section {
   width: min(calc(100% - 32px), 1120px);

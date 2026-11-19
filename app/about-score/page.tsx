@@ -93,7 +93,7 @@ export default function AboutScorePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }}
       />
       <main className="score-page">
-        <header className="score-page-header">
+        <header className="score-page-header google-anno-skip">
           <Link href="/" aria-label="Manapick トップへ">
             <BrandLogo compact />
           </Link>

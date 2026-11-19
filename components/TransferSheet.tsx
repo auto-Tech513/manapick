@@ -54,7 +54,7 @@ export default function TransferNavItem() {
       </button>
 
       {open ? (
-        <div className="nw-sheet-layer">
+        <div className="nw-sheet-layer google-anno-skip">
           <button type="button" className="nw-sheet-backdrop" aria-label="乗り換えを閉じる" onClick={close} />
           <div
             ref={sheetRef}

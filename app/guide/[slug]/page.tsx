@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Phrase from "@/components/Phrase";
@@ -117,6 +118,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
   const directAnswer = guideDirectAnswer(guide, totalVideos, totalMinutes);
   const quickFaq = guide.faq.slice(0, 4);
   const remainingFaq = guide.faq.slice(4);
+  // STEP の一覧の中ほどに置く手動枠の位置。STEP が4つ以上のときだけ（3つ以下では前後の枠と1画面に並ぶため置かない）
+  const midStepAdIndex = guide.steps.length >= 4 ? Math.ceil(guide.steps.length / 2) - 1 : -1;
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -193,7 +196,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
-      <header className="guide-page-header">
+      <header className="guide-page-header google-anno-skip">
         <Link href="/" aria-label="Manapick トップへ">
           <BrandLogo compact />
         </Link>
@@ -287,8 +290,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
               const stepMinutes = items.reduce((sum, item) => sum + item.video.minutes, 0);
 
               return (
+                <Fragment key={step.title}>
                 <section
-                  key={step.title}
                   id={`step-${stepIndex + 1}`}
                   className={`guide-step-block is-step-${stepIndex + 1}`}
                 >
@@ -305,6 +308,9 @@ export default async function GuidePage({ params }: GuidePageProps) {
                     ))}
                   </div>
                 </section>
+                {/* 手動枠（2026-11-19 上部アンカー広告をやめた分の補い）：STEP の一覧の中ほど。前後に STEP をはさむ */}
+                {stepIndex === midStepAdIndex ? <AdSlot slot="1438236565" /> : null}
+                </Fragment>
               );
             })}
           </div>
@@ -412,6 +418,10 @@ export default async function GuidePage({ params }: GuidePageProps) {
         <NewsletterSignup placement="guide_article" />
 
         <NetworkContextBand genreKey={guide.genre} pagePath={`/guide/${guide.slug}/`} />
+
+        {/* 手動枠（2026-11-19 上部アンカー広告をやめた分の補い）：記事を読み終えた位置。直前の枠との間に、
+            つまずき・学習プラン・関連ロードマップ・メルマガ・関連情報の節をはさむ（1画面に2つ並ばない） */}
+        <AdSlot slot="1438236565" />
 
         <GuidePrSection guide={guide} />
       </article>

@@ -83,7 +83,7 @@ export default function SiteMobileNav({
 
   return (
     <>
-      <nav className="mobile-bottom-nav site-bottom-nav" aria-label="クイックナビ">
+      <nav className="mobile-bottom-nav site-bottom-nav google-anno-skip" aria-label="クイックナビ">
         <a href="/">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <path d="M4 11.5 12 5l8 6.5" />

@@ -152,7 +152,7 @@ export default function SiteSearchForm({ id, className = "" }: { id: string; cla
       action="/"
       method="get"
       role="search"
-      className={["site-search-form", className, open ? "is-panel-open" : ""].filter(Boolean).join(" ")}
+      className={["site-search-form", "google-anno-skip", className, open ? "is-panel-open" : ""].filter(Boolean).join(" ")}
       onSubmit={() => saveRecent(draft)}
     >
       <label htmlFor={id}>動画を検索</label>

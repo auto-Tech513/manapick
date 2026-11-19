@@ -76,7 +76,7 @@ export default function LiveSearchPanel({
         : "キーワードで全動画を検索できます";
 
   return (
-    <div id={id} className={open ? "lb-ls is-open" : "lb-ls"} role="listbox" aria-label="検索候補">
+    <div id={id} className={open ? "lb-ls is-open google-anno-skip" : "lb-ls google-anno-skip"} role="listbox" aria-label="検索候補">
       <div className="lb-ls-status">
         <span aria-live="polite">{statusText}</span>
         <button type="button" onClick={onClose} aria-label="候補を閉じる">閉じる</button>

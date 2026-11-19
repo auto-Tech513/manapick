@@ -18,8 +18,10 @@ function measureAnchors() {
     if (el.getAttribute("data-anchor-shown") === "false") return;
     const r = el.getBoundingClientRect();
     if (r.width < 1 || r.height < 1 || getComputedStyle(el).visibility === "hidden") return;
-    // 画面の上半分にあるものは上部アンカー、下半分にあるものは下部アンカー（見えている部分の高さだけ数える）
-    if (r.top < vh / 2) top = Math.max(top, Math.max(0, Math.min(r.bottom, vh)));
+    // 画面の上端に近いものは上部アンカー、下端に近いものは下部アンカー（見えている部分の高さだけ数える）。
+    // 「画面の上半分にあるか」で分けると、画面の半分より高い下部アンカー（SP 360 幅で 427px 等）を上部と取り違えるため、
+    // 上端からの距離と下端からの距離を比べる（2026-11-19 下部アンカーに寄せたため）
+    if (r.top <= vh - r.bottom) top = Math.max(top, Math.max(0, Math.min(r.bottom, vh)));
     else bottom = Math.max(bottom, Math.max(0, vh - Math.max(r.top, 0)));
   });
   // 下部アンカーのうち、AdSense が body に付ける下余白（padding-bottom）では足りずにページ末尾を覆う分。
@@ -44,6 +46,10 @@ export default function AdSenseScript({ client }: { client: string }) {
     script.id = SCRIPT_ID;
     script.async = true;
     script.crossOrigin = "anonymous";
+    // アンカー広告は画面の下端だけに出す（上部アンカーは SP で 330〜427px あり、ヘッダーと画面の4〜5割を覆っていた。
+    // オーナー判断 2026-11-19 14:38）。https://support.google.com/adsense/answer/7478225
+    // 折りたたみ型をやめる "collapsed-bottom" は収益が下がるおそれがあるため使わない。
+    script.setAttribute("data-overlays", "bottom");
     script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${encodeURIComponent(client)}`;
     document.head.appendChild(script);
   }, [client]);
