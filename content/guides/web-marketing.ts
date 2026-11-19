@@ -38,7 +38,7 @@ const webMarketingGuide = {
       title: "STEP2：SEOと計測を学ぶ",
       videos: [
         { ytid: "vn1BTbqlvY4", why: "AI時代のSEOを含めて基礎を整理でき、検索流入の考え方が掴める" },
-        { ytid: "SOg2c8WrdT0", why: "SEOの基礎から具体策までを体系的に確認できる" },
+        { ytid: "2Iz7ejGJ1_Q", why: "専門会社が9分でSEOの基本と最初にやるべき3ステップを整理しており、始める前の全体像づくりに向いている" },
         { ytid: "hWVqaNkmHzE", why: "GA4で見るべき指標を学び、改善判断の入口を作れる" }
       ]
     },

@@ -47,7 +47,7 @@ const videoEditingGuide = {
       videos: [
         { ytid: "WP31TWXtvlU", why: "DaVinci Resolveの入口を短時間で確認でき、別ソフトの選択肢を増やせる" },
         { ytid: "XozGuvi2gLQ", why: "動画の入口になるサムネイル制作を学び、編集後の見せ方まで考えられる" },
-        { ytid: "P3uuxoN35V8", why: "公式系のAfter Effects入門として、仕事の幅を広げる次の一歩に向いている" }
+        { ytid: "rAHC_p4G2ng", why: "有名ボカロMVの作者が制作工程を1から解説し、After Effectsの実践的な演出やエフェクトの作り方が学べる" }
       ]
     }
   ],

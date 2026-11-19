@@ -56,7 +56,7 @@ const pythonGuide = {
       title: "STEP3：作って広げる",
       videos: [
         {
-          title: "たった50分でFlaskの基礎を習得！PythonによるWebアプリ開発 ~Flask超入門 vol.1~",
+          title: "【PythonでWebアプリ作成】Flask入門 ！この動画１本でWebアプリが作れちゃう！ 〜 Pythonプログラミング初心者用 〜",
           why: "「Webアプリが動く」体験までの最短距離。次の学習目標が自然に見える"
         }
       ]
