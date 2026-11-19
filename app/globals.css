@@ -12706,6 +12706,20 @@ img {
 .ad-slot.is-empty { display: none !important; height: 0 !important; min-height: 0 !important; margin: 0 !important; padding: 0 !important; }
 /* 配信待ちの枠は高さ 0・上下の余白 0 で空白を残さない（AdSense が幅を測れるよう display は block のまま）。filled になってから余白と高さを取る（2026-11-19） */
 .ad-slot.is-pending { margin-top: 0; margin-bottom: 0; }
+/* AdSense が最適化した未配信枠（unfill-optimized）は畳まずに表示する。中身は「詳細を見る」などの候補の一覧で、
+   広告であることを示す印が付かず本文のリンクと見分けにくいので、枠の上に「広告」の札を付ける。
+   AdSense はこの状態の枠に height:auto を付けるため、札のぶん中身が切れることはない（2026-11-19 本番 PC で確認）。
+   ins 要素の既定の下線が札に付かないよう、この状態の枠だけ下線を外す */
+.ad-slot.is-filled[data-ad-status="unfill-optimized"] { text-decoration: none; }
+.ad-slot.is-filled[data-ad-status="unfill-optimized"]::before {
+  content: "広告";
+  display: block;
+  padding: 0 2px 6px;
+  color: var(--color-muted);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.5;
+}
 /* ニュース本文の導入直後の枠：直後の「この更新が学びにどう関係するか」は、これまで section + section の上余白（32px／SP 26px）を
    受けていた。枠が間に入ってもこれまでと同じ見た目にする */
 .news-article-body > .ad-slot + section { padding-top: 32px; }
