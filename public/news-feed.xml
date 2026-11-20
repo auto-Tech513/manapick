@@ -5,7 +5,23 @@
     <link>https://manapick.app/news/</link>
     <description>公式発表を、学びと仕事に使える形へ整理します。</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 17 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Google Workspace Studioでフローのコラボレーション動作を制御する新管理者設定が追加</title>
+      <link>https://manapick.app/news/2026-11-19-new-admin-setting-to-control-collaboration-steps-in-wo-07567b301e/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-19-new-admin-setting-to-control-collaboration-steps-in-wo-07567b301e/</guid>
+      <description>Googleは、Workspace Studioフローでの情報共有や共有リソース変更を制御する管理者設定「Collaboration steps」を追加しました。メール送信等の組織共有許可から作成者限定のアクションへの制限まで細かく設定可能です。2026年11月19日より段階的に展開されています。</description>
+      <category>仕事・整理</category>
+      <pubDate>Wed, 18 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>「何ができるの？」を開いた瞬間に答える。Google Chatアプリにスタータープロンプト</title>
+      <link>https://manapick.app/news/2026-11-18-starter-prompts-for-google-chat-apps-85b6d1eb/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-18-starter-prompts-for-google-chat-apps-85b6d1eb/</guid>
+      <description>Google ChatのアプリやAIエージェントに、説明文とスタータープロンプトを設定できるようになりました。利用者がダイレクトメッセージを開くと、アプリの説明と最大3つの提案プロンプトが表示され、最初の一歩で迷わなくなります。</description>
+      <category>仕事・整理</category>
+      <pubDate>Tue, 17 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>図表の番号直し、もう卒業していい。Googleドキュメントに自動採番と相互参照が来た</title>
       <link>https://manapick.app/news/2026-11-18-inline-captions-cross-references-in-google-docs-3691cfce/</link>
@@ -23,26 +39,18 @@
       <pubDate>Tue, 17 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>「何ができるの？」を開いた瞬間に答える。Google Chatアプリにスタータープロンプト</title>
-      <link>https://manapick.app/news/2026-11-18-starter-prompts-for-google-chat-apps-85b6d1eb/</link>
-      <guid isPermaLink="true">https://manapick.app/news/2026-11-18-starter-prompts-for-google-chat-apps-85b6d1eb/</guid>
-      <description>Google ChatのアプリやAIエージェントに、説明文とスタータープロンプトを設定できるようになりました。利用者がダイレクトメッセージを開くと、アプリの説明と最大3つの提案プロンプトが表示され、最初の一歩で迷わなくなります。</description>
+      <title>「GMT+9って現地では何時？」の暗算から解放。Googleカレンダーがタイムゾーン略称表示に</title>
+      <link>https://manapick.app/news/2026-11-17-time-zone-abbreviations-in-google-calendar-f43531f4/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-17-time-zone-abbreviations-in-google-calendar-f43531f4/</guid>
+      <description>Googleカレンダー（ウェブ版）のタイムゾーン表示が、GMT±の数値からETやMEZのような地域に即した略称に変わります。「予定を探す」では参加者ごとの現地時刻も略称付きで表示され、ホバーで正式名称も確認できます。</description>
       <category>仕事・整理</category>
-      <pubDate>Tue, 17 Nov 2026 15:00:00 GMT</pubDate>
+      <pubDate>Mon, 16 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
       <title>ファイルの仕分けはAIに任せる時代へ。GoogleドライブのAI分類が正式版に</title>
       <link>https://manapick.app/news/2026-11-17-gemini-data-classification-in-drive-ga-4cd3ebbc/</link>
       <guid isPermaLink="true">https://manapick.app/news/2026-11-17-gemini-data-classification-in-drive-ga-4cd3ebbc/</guid>
       <description>GoogleドライブのGeminiによるデータ分類（AI classification）が正式提供になりました。管理者が自然言語の指示を書くだけでファイルへ分類ラベルを自動付与でき、導入前のテストとリアルタイムなレポートも用意されています。</description>
-      <category>仕事・整理</category>
-      <pubDate>Mon, 16 Nov 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>「GMT+9って現地では何時？」の暗算から解放。Googleカレンダーがタイムゾーン略称表示に</title>
-      <link>https://manapick.app/news/2026-11-17-time-zone-abbreviations-in-google-calendar-f43531f4/</link>
-      <guid isPermaLink="true">https://manapick.app/news/2026-11-17-time-zone-abbreviations-in-google-calendar-f43531f4/</guid>
-      <description>Googleカレンダー（ウェブ版）のタイムゾーン表示が、GMT±の数値からETやMEZのような地域に即した略称に変わります。「予定を探す」では参加者ごとの現地時刻も略称付きで表示され、ホバーで正式名称も確認できます。</description>
       <category>仕事・整理</category>
       <pubDate>Mon, 16 Nov 2026 15:00:00 GMT</pubDate>
     </item>
