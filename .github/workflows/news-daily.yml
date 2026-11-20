@@ -20,7 +20,9 @@ jobs:
     # install step (exit 100) twice in a row and taking the whole pipeline
     # down. Revisit the pin once the resolute image's archive access is fixed.
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    # 20分では冷えたランナーでの npm ci + 生成 + 検証が収まらず、11-18 の実行が
+    # 検証ステップ中にタイムアウトでキャンセルされた。30分に緩和する。
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v6
         with:

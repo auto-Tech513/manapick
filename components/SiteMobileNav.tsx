@@ -31,6 +31,14 @@ export default function SiteMobileNav({
     return () => window.removeEventListener(OPEN_MENU_EVENT, handleOpen);
   }, []);
 
+  // restoreFocus は下の useEffect 内の handleKey から参照されるため、宣言を先に置く。
+  function restoreFocus() {
+    const target = returnFocusRef.current;
+    returnFocusRef.current = null;
+    if (target && document.contains(target) && target.getClientRects().length > 0) target.focus();
+    else buttonRef.current?.focus();
+  }
+
   useEffect(() => {
     if (!open) return;
     const previousOverflow = document.body.style.overflow;
@@ -51,13 +59,6 @@ export default function SiteMobileNav({
       window.removeEventListener("keydown", handleKey);
     };
   }, [open]);
-
-  function restoreFocus() {
-    const target = returnFocusRef.current;
-    returnFocusRef.current = null;
-    if (target && document.contains(target) && target.getClientRects().length > 0) target.focus();
-    else buttonRef.current?.focus();
-  }
 
   function close() {
     setOpen(false);
@@ -84,6 +85,7 @@ export default function SiteMobileNav({
   return (
     <>
       <nav className="mobile-bottom-nav site-bottom-nav google-anno-skip" aria-label="クイックナビ">
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- 意図した全ページ読み直し（トップへ着地）。client遷移では前ページのスクロール位置を引き継ぐため <Link> にしない。 */}
         <a href="/">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <path d="M4 11.5 12 5l8 6.5" />
@@ -91,6 +93,7 @@ export default function SiteMobileNav({
           </svg>
           <span>ホーム</span>
         </a>
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- 意図した全ページ読み直し（検索位置へ着地）。client遷移では前ページのスクロール位置を引き継ぐため <Link> にしない。 */}
         <a href="/#search">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <circle cx="11" cy="11" r="7" />

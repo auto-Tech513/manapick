@@ -62,6 +62,7 @@ export default function SiteMenu({
       <button type="button" className="mp-menu-backdrop" aria-label="メニューを閉じる" tabIndex={-1} onClick={onClose} />
       <aside id={id} ref={drawerRef} className="mp-menu" role="dialog" aria-modal="true" aria-labelledby={titleId} onKeyDown={onKeyDown}>
         <div className="mp-menu-head">
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- 意図した全ページ読み直し（トップへ着地）。client遷移では前ページのスクロール位置を引き継ぐため <Link> にしない。 */}
           <a className="lb-wordmark mp-menu-mark" href="/" aria-label="manapick トップへ">
             manapick
           </a>

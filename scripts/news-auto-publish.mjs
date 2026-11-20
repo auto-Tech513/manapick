@@ -80,7 +80,7 @@ ${candidate.sourceText}`;
   const requestBody = JSON.stringify({
     model: provider.model,
     temperature: 0.15,
-    max_tokens: 5000,
+    max_tokens: 7000,
     messages: [
       { role: "system", content: "Use only the supplied official source. Return valid JSON and no markdown." },
       { role: "user", content: prompt }
@@ -88,29 +88,43 @@ ${candidate.sourceText}`;
   });
   // The free-tier provider intermittently needs longer than 120s for a full
   // article; a single 120s cap silently dropped whole days (2026-11-09..11).
-  // Allow up to 240s per attempt and retry once on timeout / 429 / 5xx.
-  let response;
+  // Allow up to 240s per attempt and retry up to 3 attempts on timeout /
+  // 429 / 5xx, and on an empty or malformed generated JSON (503 on 11-19,
+  // empty response on 11-20, truncated JSON on 11-17). A persistently bad
+  // generation still throws, so no unverified article is ever published.
+  const maxAttempts = 3;
+  let generated;
   let lastError;
-  for (let attempt = 1; attempt <= 2; attempt++) {
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
     try {
-      response = await fetch(provider.apiUrl, {
+      const response = await fetch(provider.apiUrl, {
         method: "POST",
         headers: { "content-type": "application/json", authorization: `Bearer ${provider.apiKey}` },
         body: requestBody,
         signal: AbortSignal.timeout(240000)
       });
+      if (!response.ok) {
+        if (response.status !== 429 && response.status < 500) {
+          throw new Error(`news provider HTTP ${response.status}: ${(await response.text()).slice(0, 500)}`);
+        }
+        throw new Error(`news provider HTTP ${response.status}: ${(await response.text()).slice(0, 500)}`);
+      }
+      const payload = await response.json();
+      const content = payload.choices?.[0]?.message?.content || "";
+      if (!content.trim()) throw new Error("news provider returned an empty response");
+      generated = extractJson(content);
+      break;
     } catch (error) {
       lastError = error;
-      response = undefined;
+      // Non-retryable provider errors (auth, bad request, etc.) fail fast.
+      if (/news provider HTTP (4\d\d)/.test(error.message) && !/429/.test(error.message)) throw error;
+      if (attempt < maxAttempts) {
+        console.log(`news publish: generation attempt ${attempt} failed (${error.message}); retrying in 15s`);
+        await new Promise((resolve) => setTimeout(resolve, 15000));
+      }
     }
-    if (response?.ok) break;
-    if (response && response.status !== 429 && response.status < 500) break;
-    if (attempt < 2) await new Promise((resolve) => setTimeout(resolve, 15000));
   }
-  if (!response) throw lastError ?? new Error("news provider request failed");
-  if (!response.ok) throw new Error(`news provider HTTP ${response.status}: ${(await response.text()).slice(0, 500)}`);
-  const payload = await response.json();
-  const generated = extractJson(payload.choices?.[0]?.message?.content || "");
+  if (!generated) throw lastError ?? new Error("news provider request failed");
   const sourceHash = createHash("sha256").update(candidate.sourceUrl).digest("hex").slice(0, 10);
   const titleSlug = slugify(candidate.title);
   const suffix = titleSlug ? `${titleSlug}-${sourceHash}` : `${candidate.sourceId}-${sourceHash}`;
