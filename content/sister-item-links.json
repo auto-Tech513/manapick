@@ -1681,6 +1681,12 @@
    "slug": "kokka-komuin",
    "name": "国家公務員採用一般職試験（大卒程度）",
    "url": "https://license.manapick.app/license/kokka-komuin/"
+  },
+  {
+   "site": "company",
+   "slug": "kiyo-learning",
+   "name": "KIYOラーニング",
+   "url": "https://company.manapick.app/company/kiyo-learning/"
   }
  ],
  "1Q4u3-7cBqc": [
@@ -1957,6 +1963,38 @@
    "slug": "ollama",
    "name": "Ollama",
    "url": "https://ai.manapick.app/tool/ollama/"
+  }
+ ],
+ "li6FCoes5VE": [
+  {
+   "site": "company",
+   "slug": "faber-company",
+   "name": "Faber Company",
+   "url": "https://company.manapick.app/company/faber-company/"
+  }
+ ],
+ "15uUa_hJWWk": [
+  {
+   "site": "company",
+   "slug": "faber-company",
+   "name": "Faber Company",
+   "url": "https://company.manapick.app/company/faber-company/"
+  }
+ ],
+ "EzGWibHKsDI": [
+  {
+   "site": "company",
+   "slug": "faber-company",
+   "name": "Faber Company",
+   "url": "https://company.manapick.app/company/faber-company/"
+  }
+ ],
+ "ppsGy2jJsSU": [
+  {
+   "site": "company",
+   "slug": "faber-company",
+   "name": "Faber Company",
+   "url": "https://company.manapick.app/company/faber-company/"
   }
  ]
 }
