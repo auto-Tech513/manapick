@@ -1934,5 +1934,29 @@
    "name": "株式会社マイナビ",
    "url": "https://company.manapick.app/company/mynavi/"
   }
+ ],
+ "lwpzgpkXGCw": [
+  {
+   "site": "ai",
+   "slug": "siri",
+   "name": "Siri AI",
+   "url": "https://ai.manapick.app/tool/siri/"
+  }
+ ],
+ "YxMue4MEyaA": [
+  {
+   "site": "ai",
+   "slug": "qwen",
+   "name": "Qwen",
+   "url": "https://ai.manapick.app/tool/qwen/"
+  }
+ ],
+ "G1MDYlbY-Ak": [
+  {
+   "site": "ai",
+   "slug": "ollama",
+   "name": "Ollama",
+   "url": "https://ai.manapick.app/tool/ollama/"
+  }
  ]
 }

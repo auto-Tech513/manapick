@@ -52856,5 +52856,187 @@
   "title": "仕訳問題10問！ビジネス会計検定試験®３級（簿記学習者にもおすすめ）",
   "url": "https://www.youtube.com/watch?v=Z6V4GFu5eMk",
   "ytid": "Z6V4GFu5eMk"
+ },
+ {
+  "genre": "ai",
+  "sub": "Siri AI",
+  "ytid": "lwpzgpkXGCw",
+  "level": "初級",
+  "minutes": 28,
+  "channel": "みずおじさん / 誰でも分かるスマホ講座",
+  "score": 32,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "実機レビューで新機能15選+3を章立て。Siri AIの呼び出し方・アプリ追加・Spotlight統合など使い方に直結"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2026-06-11公開で約5か月前。ベータ版のため仕様変更の可能性を概要欄で明記"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "18の章に細分化され、対応機種から各機能・まとめへと追いやすい。初心者向けチャンネル"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "対応機種→Siri AI・写真編集・カメラ・ショートカット・CarPlay→おまけ→まとめの順序"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "実機での検証で章立てが具体的。Xリンクのみで販売誘導なし。ただし「Appleより特別な許可」の裏付けは概要欄にない"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "28分で18章に分かれ、章ごとに見られる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "YouTube標準リンクのみで紹介可能"
+   }
+  ],
+  "title": "【アレにも対応?!】iOS27ベータ版を実機で先行レビュー！Siri AIだけじゃない新機能が多すぎる15選+3!旧機種アップデも意味あり!",
+  "url": "https://www.youtube.com/watch?v=lwpzgpkXGCw",
+  "tags": [
+   "Siri AI",
+   "iOS 27",
+   "使い方"
+  ],
+  "review": [
+   "iOS 27ベータ版を実機で確かめた先行レビュー。新機能15選+3を章立てで追える。",
+   "Siri AIの呼び出し方やアプリ追加、Spotlight統合など、Siriの進化がまとまっている。",
+   "写真編集やショートカット自動生成まで幅広く、ベータ版の注意点も明記されている。"
+  ],
+  "publishedAt": "2026-06-11T08:00:28Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-20"
+ },
+ {
+  "genre": "ai",
+  "sub": "Qwen",
+  "ytid": "YxMue4MEyaA",
+  "level": "中級",
+  "minutes": 19,
+  "channel": "まさおAIじっくり解説ch",
+  "score": 31,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "Ollamaでの起動方法、コーディング・SVG・LP作成・ブラウザユース・スライド生成まで実機検証。Hugging Face公式リンク付き"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2026-04-27公開で約7か月前。ベンチマーク比較付きでOpus 4.5・Gemma 4との位置づけを示す"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "13のタイムスタンプで区切られ、スペック→ベンチマーク→検証の順。MoEなど専門用語はあるが構成は追いやすい"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "概要→立ち位置→スペック→ベンチマーク→Ollama起動→35B検証→27B検証→比較→採用判断→まとめ"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "M4 Max 128GB実機での検証で、開発歴14年のエンジニア。noteメンバーシップとLINE登録誘導があるため5にはしない"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "19分で章分けあり"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "YouTube標準リンクのみ。Hugging Face公式モデルページへのリンク"
+   }
+  ],
+  "title": "【確かに凄い】『Qwen3.6 27B』がClaude Opus 4.5並みと話題？！ローカルでも動かして解説",
+  "url": "https://www.youtube.com/watch?v=YxMue4MEyaA",
+  "tags": [
+   "Qwen",
+   "ローカルLLM",
+   "使い方"
+  ],
+  "review": [
+   "Qwen3.6 27BとQwen3 35B-A3BをM4 Max実機で動かし、コーディングやLP作成まで試した検証。",
+   "Ollamaでの起動方法からベンチマーク比較まで、ローカルLLMの採用判断に使える。",
+   "Opus 4.5やGemma 4との比較もあり、実用レベルを正直な使用感で伝えている。"
+  ],
+  "publishedAt": "2026-04-27T11:00:53Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-20"
+ },
+ {
+  "genre": "ai",
+  "sub": "Ollama",
+  "ytid": "G1MDYlbY-Ak",
+  "level": "初級",
+  "minutes": 13,
+  "channel": "クロノITチャンネル",
+  "score": 32,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "インストールと最初の実行、REST API連携、開発ツール連携まで手を動かせる。公式サイト・ドキュメントへのリンク付き"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2026-04-20公開で約7か月前。Ollamaの基本操作は変わりにくい入門内容で、公式ドキュメントへのリンクあり"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "10の章に細分化され、Ollamaとは→インストール→連携の順で初学者向け"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "概要→インストール→対応モデル→API連携→ツール連携→選択肢→まとめの順序。入門として整理されている"
+   },
+   {
+    "axis": "信頼性",
+    "score": 5,
+    "note": "公式サイト・GitHub・公式ドキュメントへのリンクのみ。販売・登録誘導なし"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "13分で章分けあり"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "YouTube標準リンクのみで紹介可能"
+   }
+  ],
+  "title": "無料のローカル生成AIをOllamaで始める方法",
+  "url": "https://www.youtube.com/watch?v=G1MDYlbY-Ak",
+  "tags": [
+   "Ollama",
+   "使い方"
+  ],
+  "review": [
+   "ローカルで言語モデルを動かせるOllamaを、1コマンドでの実行から紹介する入門編。",
+   "インストールと最初の実行、対応モデル、REST APIでのアプリ連携まで章立てで追える。",
+   "公式サイトやドキュメントへのリンク付きで、Claude CodeやVS Codeとの連携も分かる。"
+  ],
+  "publishedAt": "2026-04-20T08:50:01Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-20"
  }
 ]

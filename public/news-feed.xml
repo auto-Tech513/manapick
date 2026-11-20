@@ -5,7 +5,31 @@
     <link>https://manapick.app/news/</link>
     <description>公式発表を、学びと仕事に使える形へ整理します。</description>
     <language>ja</language>
-    <lastBuildDate>Mon, 16 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>図表の番号直し、もう卒業していい。Googleドキュメントに自動採番と相互参照が来た</title>
+      <link>https://manapick.app/news/2026-11-18-inline-captions-cross-references-in-google-docs-3691cfce/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-18-inline-captions-cross-references-in-google-docs-3691cfce/</guid>
+      <description>Googleドキュメントに、図表への自動採番キャプション、本文から参照する相互参照、キャプション一覧の自動生成という3つの新機能が加わりました。番号の振り直しや参照の書き換えといった手作業が不要になります。</description>
+      <category>仕事・整理</category>
+      <pubDate>Tue, 17 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>ノートが、そのまま触れるサイトになる。Gemini Notebookに「サイトを作って」が登場</title>
+      <link>https://manapick.app/news/2026-11-18-gemini-notebook-interactive-sites-5856d12f/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-18-gemini-notebook-interactive-sites-5856d12f/</guid>
+      <description>Gemini Notebookが、集めたソースをインタラクティブなサイトに変換できるようになりました。チャットで「make me a site」と頼むだけで、試験対策の視覚教材、データダッシュボード、プロジェクト管理トラッカーなどが作れます。</description>
+      <category>生成AI</category>
+      <pubDate>Tue, 17 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>「何ができるの？」を開いた瞬間に答える。Google Chatアプリにスタータープロンプト</title>
+      <link>https://manapick.app/news/2026-11-18-starter-prompts-for-google-chat-apps-85b6d1eb/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-18-starter-prompts-for-google-chat-apps-85b6d1eb/</guid>
+      <description>Google ChatのアプリやAIエージェントに、説明文とスタータープロンプトを設定できるようになりました。利用者がダイレクトメッセージを開くと、アプリの説明と最大3つの提案プロンプトが表示され、最初の一歩で迷わなくなります。</description>
+      <category>仕事・整理</category>
+      <pubDate>Tue, 17 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>ファイルの仕分けはAIに任せる時代へ。GoogleドライブのAI分類が正式版に</title>
       <link>https://manapick.app/news/2026-11-17-gemini-data-classification-in-drive-ga-4cd3ebbc/</link>
