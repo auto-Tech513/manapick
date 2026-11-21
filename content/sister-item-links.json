@@ -1996,5 +1996,29 @@
    "name": "Faber Company",
    "url": "https://company.manapick.app/company/faber-company/"
   }
+ ],
+ "8ne9BHSochA":  [
+  {
+   "site": "ai",
+   "slug": "runway",
+   "name": "Runway",
+   "url": "https://ai.manapick.app/tool/runway/"
+  }
+ ],
+ "Nl7zAb-CzNE":  [
+  {
+   "site": "ai",
+   "slug": "github-copilot",
+   "name": "GitHub Copilot",
+   "url": "https://ai.manapick.app/tool/github-copilot/"
+  }
+ ],
+ "R0jDcdFm8Fg":  [
+  {
+   "site": "ai",
+   "slug": "perplexity",
+   "name": "Perplexity",
+   "url": "https://ai.manapick.app/tool/perplexity/"
+  }
  ]
 }

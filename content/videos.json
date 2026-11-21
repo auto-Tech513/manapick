@@ -53038,5 +53038,188 @@
   "publishedAt": "2026-04-20T08:50:01Z",
   "scoreStatus": "confirmed",
   "scoreConfirmedAt": "2026-11-20"
+ },
+ {
+  "genre": "ai",
+  "sub": "Runway",
+  "ytid": "8ne9BHSochA",
+  "level": "初級",
+  "minutes": 28,
+  "channel": "動画編集の中の人",
+  "score": 28,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "Runwayとは→Gen-4.5の変更点→活用術20選→まとめと目次付きで手順を追える"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2025-12-23公開で約11か月前。Gen-4.5の基礎として扱いやすい"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "5章のタイムスタンプ付きで、Runwayとは→変更点→20選→まとめの流れが明確"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "概要→変更点→活用術20選→まとめの順で一通り追える"
+   },
+   {
+    "axis": "信頼性",
+    "score": 3,
+    "note": "概要欄の冒頭が公式LINE特典3つの誘導で、比較の根拠となる公式ソースへのリンクがない。実績の記載は自己申告のみ"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "28分で5章立て。章ごとに拾い見できる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "YouTube標準リンクで紹介可能。公式ツール紹介が中心で権利問題はない"
+   }
+  ],
+  "title": "【AI動画生成の最前線⁉︎】Runway Gen-4.5の天才的な活用術20選を完全解説します【アップデートがヤバイ】",
+  "url": "https://www.youtube.com/watch?v=8ne9BHSochA",
+  "tags": [
+   "Runway",
+   "動画生成",
+   "使い方"
+  ],
+  "review": [
+   "Runway Gen-4.5の変更点と活用術20選を、目次付きで整理した解説。Runwayとは何かから入れる。",
+   "変更点の紹介から20の活用術、まとめまで章立てで追え、動画生成AIの使い方を掴みやすい。",
+   "まとめ章で要点を振り返れるため、初めてRunwayに触れる人の入口として使いやすい。"
+  ],
+  "publishedAt": "2025-12-23T09:00:25Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-21"
+ },
+ {
+  "genre": "ai",
+  "sub": "GitHub Copilot",
+  "ytid": "Nl7zAb-CzNE",
+  "level": "初級",
+  "minutes": 47,
+  "channel": "IT屋のたなべ",
+  "score": 30,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "Universe 2024の最新情報、VSCodeでの基本操作、モデル、料金、セキュリティ、Chat・CLI・Extensions・Workspace・Spark、Cursor比較まで実践に直結。公式リンク付き"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 3,
+    "note": "2024-11-11公開で約2年前。モデル・料金は現行と異なる可能性が高く、当時版として扱う必要がある"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "17章のタイムスタンプ付きで、概要から各機能、比較、まとめへと追いやすい"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "概要→基本操作→モデル→料金→セキュリティ→Chat→CLI→PR→Extensions→Workspace→Spark→比較→まとめの流れで全体を一通り追える"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "現役エンジニア・講師による解説で、GitHub公式（Copilot・Universe・Trust Center）へのリンクあり。販売・登録誘導なし"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "47分と長めだが17章のタイムスタンプ付きで分割視聴しやすい"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "YouTube標準リンクで紹介可能。公式ツール紹介が中心で権利問題はない"
+   }
+  ],
+  "title": "GitHub CopilotはAIコード補完だけじゃない！最新情報と使い方、Cursorとの比較がわかる完全ガイド",
+  "url": "https://www.youtube.com/watch?v=Nl7zAb-CzNE",
+  "tags": [
+   "GitHub Copilot",
+   "使い方",
+   "比較"
+  ],
+  "review": [
+   "GitHub Universe 2024で発表されたCopilotの最新情報を、基本操作から解説する完全ガイド。",
+   "モデル・料金・セキュリティ、Chat・CLI・Extensions・Workspace・Sparkまで17章で一通り追える。",
+   "Cursorとの比較章もあり、自分の開発スタイルに合うツールを選ぶ材料になる。公開は2024年11月のため、最新の仕様は公式で確かめながら使うとよい。"
+  ],
+  "publishedAt": "2024-11-11T09:00:22Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-21"
+ },
+ {
+  "genre": "ai",
+  "sub": "Perplexity",
+  "ytid": "R0jDcdFm8Fg",
+  "level": "初級",
+  "minutes": 8,
+  "channel": "ぷらぐら",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "タブの自動整理・動画要約・履歴内検索・ウィジェットなどCometの機能を具体例付きで紹介し、使い方とセキュリティの注意点まで追える"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 3,
+    "note": "2025-09-24公開で約1年2か月前。概要欄のCometリンクが当時の招待制（waitlist）表記で、現行の提供形態と異なる可能性があるため当時版として扱う必要がある"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "14章の細かいタイムスタンプ付きで、結論→機能別→使い方→注意点の流れが明確。8分で追える"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "結論→機能紹介→他ブラウザとの違い→使い方→セキュリティ注意点の順で全体を追える"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "Perplexity公式のCometページへのリンクあり。機材のアフィリエイトリンクはあるが、販売・登録誘導はない"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "8分で14章に分かれ、短時間で要点を追える"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "YouTube標準リンクで紹介可能"
+   }
+  ],
+  "title": "【注意点あり】Perplexityが作ったAIブラウザが、期待を超えた凄さなので「何ができるか」解説させて",
+  "url": "https://www.youtube.com/watch?v=R0jDcdFm8Fg",
+  "tags": [
+   "Perplexity",
+   "Comet",
+   "ブラウザ"
+  ],
+  "review": [
+   "PerplexityのAIブラウザCometで何ができるかを、14章の目次付きで8分にまとめた解説。",
+   "タブの自動整理や動画要約、履歴内検索など、ブラウザとしての使い方が具体例付きで分かる。",
+   "使い方の章とセキュリティの注意点まであり、公開当時は招待制だった点に注意して見るとよい。"
+  ],
+  "publishedAt": "2025-09-24T10:00:04Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-21"
  }
 ]
