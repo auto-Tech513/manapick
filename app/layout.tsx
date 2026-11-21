@@ -148,7 +148,8 @@ export default function RootLayout({
         />
         {gaId ? (
           <>
-            <Script src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(gaId)}`} strategy="afterInteractive" />
+            {/* 自動操作のブラウザ（Playwright・Selenium 等。navigator.webdriver === true）では gtag.js を読み込まず config もしない
+                （自動確認が GA4 に記録されないように。2026-11-21 ANALYTICS_BRIEF）。通常の閲覧では false なので従来どおり */}
             <Script
               id="ga4-init"
               strategy="afterInteractive"
@@ -156,8 +157,15 @@ export default function RootLayout({
                 __html: [
                   "window.dataLayer = window.dataLayer || [];",
                   "function gtag(){dataLayer.push(arguments);}",
+                  "(function(){",
+                  "if (navigator.webdriver === true) return;",
                   "gtag('js', new Date());",
-                  `gtag('config', ${JSON.stringify(gaId)});`
+                  `gtag('config', ${JSON.stringify(gaId)});`,
+                  "var s = document.createElement('script');",
+                  "s.async = true;",
+                  `s.src = ${JSON.stringify(`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(gaId)}`)};`,
+                  "document.head.appendChild(s);",
+                  "})();"
                 ].join("\n")
               }}
             />
