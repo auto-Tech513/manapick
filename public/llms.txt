@@ -4,8 +4,8 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 動画はYouTube上で公開されているものを掲載し、YouTubeへのリンクまたはYouTube公式プレーヤーで紹介します。ダウンロードや再配布は扱いません。
 
 ## 公開中の10ジャンル
-- 生成AI（212本）: https://manapick.app/genre/ai/
-- プログラミング・IT（71本）: https://manapick.app/genre/prog/
+- 生成AI（214本）: https://manapick.app/genre/ai/
+- プログラミング・IT（72本）: https://manapick.app/genre/prog/
 - 動画編集・クリエイティブ（69本）: https://manapick.app/genre/video/
 - 語学・英語（59本）: https://manapick.app/genre/english/
 - データ分析・DX（37本）: https://manapick.app/genre/data/
@@ -39,7 +39,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 2026-11-17 「GMT+9って現地では何時？」の暗算から解放。Googleカレンダーがタイムゾーン略称表示に: https://manapick.app/news/2026-11-17-time-zone-abbreviations-in-google-calendar-f43531f4/ | 出典 Google Workspace Updates
 
 ## ジャンル別AEOインデックス
-### 生成AI（212本）
+### 生成AI（214本）
 - ジャンルURL: https://manapick.app/genre/ai/
 - ガイドURL: https://manapick.app/guide/generative-ai/
 - 主なトピック: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Cline / ComfyUI / Copilot / Cursor / DeepL / DeepSeek / ElevenLabs / Figma(Figma AI) / Gamma / Gemini / Gemma / GitHub Copilot / Google AI Mode / Google Veo / Google翻訳 / Grok / Hailuo AI / HeyGen / Kling AI / LM Studio / Manus / Midjourney / Notion AI / Notta / Ollama / OpenAI Codex / OpenClaw / Perplexity / PixVerse / Qwen / Replit Agent / Runway / Siri AI / Stable Diffusion / Suno / Supabase / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
@@ -54,7 +54,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【初心者OK🔰】アンソロピック「Claude Cowork」使い方基礎講座！活用法まで分かりやすく解説！（生成AI / Claude / 33/35 / 23分 / publishedAt=2026-03-14T10:15:05Z） https://manapick.app/video/NTFIFwmrjiw/
 5. 【完全版】Googleの最強AIツールGeminiの使い方徹底解説【初心者必見】（生成AI / Gemini / 33/35 / 31分 / publishedAt=2026-03-11T11:15:03Z） https://manapick.app/video/SfCNwzANbUY/
 
-### プログラミング・IT（71本）
+### プログラミング・IT（72本）
 - ジャンルURL: https://manapick.app/genre/prog/
 - ガイドURL: https://manapick.app/guide/python/
 - 主なトピック: AWS認定 クラウドプラクティショナー / AWS認定 ソリューションアーキテクト / Git / Java / JavaScript / Python / Python3エンジニア認定基礎試験 / SQL / Web開発 / インフラ / 基本情報技術者 / 情報セキュリティマネジメント試験
@@ -221,7 +221,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 ## 主要URL
 - トップ: https://manapick.app/
 - YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
-- YouTube学習動画868本の独自集計: https://manapick.app/research/youtube-learning-data/
+- YouTube学習動画871本の独自集計: https://manapick.app/research/youtube-learning-data/
 - 7日学習プラン: https://manapick.app/study-plan/
 - Manapick Network（学ぶ・AI・資格・仕事・企業）: https://manapick.app/network/
 - 学習ロードマップ一覧: https://manapick.app/guide/

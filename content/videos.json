@@ -53221,5 +53221,186 @@
   "publishedAt": "2025-09-24T10:00:04Z",
   "scoreStatus": "confirmed",
   "scoreConfirmedAt": "2026-11-21"
+ },
+ {
+  "genre": "prog",
+  "sub": "SQL",
+  "ytid": "AoGmv8ljC0Y",
+  "level": "初級",
+  "minutes": 75,
+  "channel": "Pythonプログラミング VTuber サプー",
+  "score": 31,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "インストールからCRUD・JOIN・トランザクション・Python連携まで手を動かせる構成で、公式PostgreSQLインストーラへのリンク付き"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 3,
+    "note": "2025-03-14公開で1年8か月前。SQL・PostgreSQLの基礎文法は安定しており陳腐化しにくいが画面は当時のもの"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "16の章立てタイムスタンプ付きで初心者向け。『PostgreSQLとは』から順を追える"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "導入→DB/テーブル作成→CRUD→制約→JOIN→トランザクション→集計→psql→Pythonへ段階的に進む"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "公式インストーラリンクと具体的な章立てあり。冒頭に自著の書籍宣伝とメンバーシップ案内があり軽い商用色"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "75分と長いが章立てで区切れる。初心者向けの丁寧な進行"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "YouTube標準リンクのみで権利上の問題なし"
+   }
+  ],
+  "title": "【SQL入門】PostgreSQLでデータベース操作を学ぼう！〜 初心者向け 〜",
+  "url": "https://www.youtube.com/watch?v=AoGmv8ljC0Y",
+  "tags": [
+   "SQL",
+   "入門",
+   "データベース"
+  ],
+  "review": [
+   "PostgreSQLのインストールからINSERT・SELECT・UPDATE・DELETEまで、SQLの基本操作を順を追って学べる入門編。",
+   "JOINやトランザクション、集計関数まで章立てで進み、最後はPythonからの操作にもつながる。",
+   "75分と長いが章ごとに区切れるので、必要な操作だけ拾って手を動かせる。"
+  ],
+  "publishedAt": "2025-03-14T10:00:13Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-22"
+ },
+ {
+  "genre": "ai",
+  "sub": "Claude",
+  "ytid": "6u-euXGNl-o",
+  "level": "中級",
+  "minutes": 33,
+  "channel": "プログラミングチュートリアル",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "Agent Teamsの構築から事業計画・LP/アプリ化まで実演付き。章立てタイムスタンプあり"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2026-02-17公開、Opus 4.6・Agent Teamsは現行機能。9か月前だが内容は現行版に沿う"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "工程順の章立てあり。起業フレーミングのため開発手順だけ拾いたい人には冗長な部分も"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "アイデア出し→事業計画→日次タスク→LP/アプリ化の流れ。実績紹介が後半に入る"
+   },
+   {
+    "axis": "信頼性",
+    "score": 3,
+    "note": "概要欄の大半が有料講座・20%OFFクーポン・月額プランの宣伝。Udemy講師実績は自己申告でアフィリエイト開示あり"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "33分で実績デモ付き。Agent Teamsの操作画面を見ながら追える"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "YouTube標準リンクのみで権利上の問題なし"
+   }
+  ],
+  "title": "【AIを社員に】Claude Code Agent Teamsで1人起業する方法を解説します【Claude Opus 4.6】",
+  "url": "https://www.youtube.com/watch?v=6u-euXGNl-o",
+  "tags": [
+   "Claude Code",
+   "Agent Teams"
+  ],
+  "review": [
+   "Claude CodeのAgent Teamsを組み、1人起業の事業アイデアから事業計画までを形にする実践解説。",
+   "draw.ioのMCP連携で事業計画を図解し、日次タスクからLP・アプリ化まで工程順に進む。",
+   "自分の開発したサムネイルAIの実績デモもあり、Agent Teamsの使い方が具体的に分かる。"
+  ],
+  "publishedAt": "2026-02-17T11:00:10Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-22"
+ },
+ {
+  "genre": "ai",
+  "sub": "Vrew",
+  "ytid": "NAZOfwvx5kA",
+  "level": "初級",
+  "minutes": 31,
+  "channel": "ひとみマンのOBS学校",
+  "score": 32,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "読み込み→編集→AI機能→保存→ショート作成まで実操作で追える。13の章立てタイムスタンプ付き"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2026-01-31公開で295日前。Vrewの基本操作は安定しておりタイトルの『2026年最新』に沿う"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "章立てが細かく工程順。初心者向けの丁寧な説明"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "導入→基本操作→AI機能→保存→ショート作成→まとめの流れ"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "冒頭にVrew 20%OFFクーポンとアフィリエイト登録リンクあり。OBS学校の体系的な解説実績あり"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "31分で章ごとに区切れる。操作画面を見ながら進められる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "YouTube標準リンクのみで権利上の問題なし"
+   }
+  ],
+  "title": "【2026年最新】最も簡単な動画編集ソフト「Vrew」の使い方これ1本！基本操作からAIテキスト生成までマスターしよう！",
+  "url": "https://www.youtube.com/watch?v=NAZOfwvx5kA",
+  "tags": [
+   "Vrew",
+   "使い方"
+  ],
+  "review": [
+   "Vrewの読み込み・フォント調整・カット編集からAIテキスト動画生成まで、基本操作を1本で追える。",
+   "AI音声モデルの変更やクラウド保存、ショート動画作成まで章立てで進み、初心者でも迷いにくい。",
+   "13のタイムスタンプ付きで、知りたい操作だけ拾って見返せる実用的な入門編。"
+  ],
+  "publishedAt": "2026-01-31T11:30:05Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-22"
  }
 ]

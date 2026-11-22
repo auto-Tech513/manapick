@@ -2020,5 +2020,21 @@
    "name": "Perplexity",
    "url": "https://ai.manapick.app/tool/perplexity/"
   }
+ ],
+ "6u-euXGNl-o": [
+  {
+   "site": "ai",
+   "slug": "claude-code",
+   "name": "Claude Code",
+   "url": "https://ai.manapick.app/tool/claude-code/"
+  }
+ ],
+ "NAZOfwvx5kA": [
+  {
+   "site": "ai",
+   "slug": "vrew",
+   "name": "Vrew",
+   "url": "https://ai.manapick.app/tool/vrew/"
+  }
  ]
 }
