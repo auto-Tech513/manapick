@@ -1365,6 +1365,7 @@ function ManapickAppMain({
                   sizes={index === 0 ? "(max-width: 640px) 100vw, 34vw" : "(max-width: 640px) 50vw, 17vw"}
                   className="lb-tile-img"
                   priority={index === 0}
+                  fetchPriority={index === 0 ? "high" : undefined}
                 />
                 <span className="lb-tile-shade" aria-hidden="true" />
                 <span className="lb-tile-score">
