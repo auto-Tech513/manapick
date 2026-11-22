@@ -28,6 +28,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 一覧: https://manapick.app/news/
 - Google Workspaceや生成AIなど、社会人の学びと仕事に関係する公式一次情報を確認し、変更点と実務への影響を整理します。
 - 2026-11-20 作った素材は使い回せる。Google VidsのAI動画生成に「Assets」保存が登場: https://manapick.app/news/2026-11-20-google-vids-assets-reuse-media/ | 出典 Google Workspace Updates
+- 2026-11-20 Google Chat、外部会話へのGoogle Vault対応を拡張。2027年2月中旬より順次適用: https://manapick.app/news/2026-11-20-expanded-google-vault-support-for-external-spaces-and--475ef49780/ | 出典 Google Workspace Updates
 - 2026-11-19 Google Workspace Studioでフローのコラボレーション動作を制御する新管理者設定が追加: https://manapick.app/news/2026-11-19-new-admin-setting-to-control-collaboration-steps-in-wo-07567b301e/ | 出典 Google Workspace Updates
 - 2026-11-19 「資料のリンクください」が消える。Google Meetが発表ファイルのリンク共有と権限変更を画面内に: https://manapick.app/news/2026-11-19-google-meet-share-presented-file-links/ | 出典 Google Workspace Updates
 - 2026-11-19 Google、Web版カレンダーからGmail作成画面を直接開く機能更新を発表: https://manapick.app/news/2026-11-19-email-meeting-guests-from-google-calendar-with-the-ful-57620a6fd9/ | 出典 Google Workspace Updates
@@ -36,7 +37,6 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 2026-11-18 ノートが、そのまま触れるサイトになる。Gemini Notebookに「サイトを作って」が登場: https://manapick.app/news/2026-11-18-gemini-notebook-interactive-sites-5856d12f/ | 出典 Google Workspace Updates
 - 2026-11-18 話しながら文字になる。ChatGPTの音声入力がリアルタイム化、10分制限も撤廃: https://manapick.app/news/2026-11-18-chatgpt-live-dictation/ | 出典 ChatGPT リリースノート（OpenAI公式ヘルプ）
 - 2026-11-17 「GMT+9って現地では何時？」の暗算から解放。Googleカレンダーがタイムゾーン略称表示に: https://manapick.app/news/2026-11-17-time-zone-abbreviations-in-google-calendar-f43531f4/ | 出典 Google Workspace Updates
-- 2026-11-17 通常のチャットには来ない新モデル。GPT-6.2 Astra／SolはWorkとCodex専用で登場: https://manapick.app/news/2026-11-17-gpt-6-2-astra-sol-work-codex/ | 出典 OpenAI公式ヘルプ
 
 ## ジャンル別AEOインデックス
 ### 生成AI（212本）

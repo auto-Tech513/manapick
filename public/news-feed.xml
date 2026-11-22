@@ -15,12 +15,12 @@
       <pubDate>Thu, 19 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>「資料のリンクください」が消える。Google Meetが発表ファイルのリンク共有と権限変更を画面内に</title>
-      <link>https://manapick.app/news/2026-11-19-google-meet-share-presented-file-links/</link>
-      <guid isPermaLink="true">https://manapick.app/news/2026-11-19-google-meet-share-presented-file-links/</guid>
-      <description>Google Meetの発表中に、Docs・Sheets・Slidesのリンク共有とDrive権限の変更が会議画面の中で完結するようになりました。参加者は画面のファイルチップから会議後でも資料を開けます。2026年11月18日から段階的に展開されています。</description>
+      <title>Google Chat、外部会話へのGoogle Vault対応を拡張。2027年2月中旬より順次適用</title>
+      <link>https://manapick.app/news/2026-11-20-expanded-google-vault-support-for-external-spaces-and--475ef49780/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-20-expanded-google-vault-support-for-external-spaces-and--475ef49780/</guid>
+      <description>Googleは、Google Chatの外部ユーザーを含むスペースやグループダイレクトメッセージに対するGoogle Vaultの対応を拡張すると発表しました。2027年2月中旬から開始され、参加組織ごとに独自メッセージコピーの保持や検索が可能になります。</description>
       <category>仕事・整理</category>
-      <pubDate>Wed, 18 Nov 2026 15:00:00 GMT</pubDate>
+      <pubDate>Thu, 19 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Google Workspace Studioでフローのコラボレーション動作を制御する新管理者設定が追加</title>
@@ -31,20 +31,20 @@
       <pubDate>Wed, 18 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
+      <title>「資料のリンクください」が消える。Google Meetが発表ファイルのリンク共有と権限変更を画面内に</title>
+      <link>https://manapick.app/news/2026-11-19-google-meet-share-presented-file-links/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-19-google-meet-share-presented-file-links/</guid>
+      <description>Google Meetの発表中に、Docs・Sheets・Slidesのリンク共有とDrive権限の変更が会議画面の中で完結するようになりました。参加者は画面のファイルチップから会議後でも資料を開けます。2026年11月18日から段階的に展開されています。</description>
+      <category>仕事・整理</category>
+      <pubDate>Wed, 18 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
       <title>Google、Web版カレンダーからGmail作成画面を直接開く機能更新を発表</title>
       <link>https://manapick.app/news/2026-11-19-email-meeting-guests-from-google-calendar-with-the-ful-57620a6fd9/</link>
       <guid isPermaLink="true">https://manapick.app/news/2026-11-19-email-meeting-guests-from-google-calendar-with-the-ful-57620a6fd9/</guid>
       <description>GoogleはWeb版Googleカレンダーの「ゲストにメール」機能を更新し、カレンダー上からネイティブなGmail作成ウィンドウを直接開けるようにすると発表した。これにより、RSVP別の宛先選択や代理人への一括置換が可能になり、Gmailのリッチテキスト装飾や送信日時指定、Drive権限チェックなどのフル機能を活用して会議連絡を送れるようになる。</description>
       <category>仕事・整理</category>
       <pubDate>Wed, 18 Nov 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>話しながら文字になる。ChatGPTの音声入力がリアルタイム化、10分制限も撤廃</title>
-      <link>https://manapick.app/news/2026-11-18-chatgpt-live-dictation/</link>
-      <guid isPermaLink="true">https://manapick.app/news/2026-11-18-chatgpt-live-dictation/</guid>
-      <description>ChatGPTの音声入力が「Live Dictation」に変わり、話している最中に文字起こしされるようになりました。これまで録音を止めてから待っていた変換がその場で進み、10分間の録音制限も撤廃されました。全プランに世界展開中です。</description>
-      <category>生成AI</category>
-      <pubDate>Tue, 17 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
       <title>「何ができるの？」を開いた瞬間に答える。Google Chatアプリにスタータープロンプト</title>
@@ -71,12 +71,12 @@
       <pubDate>Tue, 17 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>通常のチャットには来ない新モデル。GPT-6.2 Astra／SolはWorkとCodex専用で登場</title>
-      <link>https://manapick.app/news/2026-11-17-gpt-6-2-astra-sol-work-codex/</link>
-      <guid isPermaLink="true">https://manapick.app/news/2026-11-17-gpt-6-2-astra-sol-work-codex/</guid>
-      <description>OpenAIの新モデルGPT-6.2 AstraとSolは、通常のChatではなく、仕事向けのWorkと開発向けのCodexでのみ選べます。Astraは複雑な専門業務向け、Solは日常タスク向けと位置づけられています。</description>
+      <title>話しながら文字になる。ChatGPTの音声入力がリアルタイム化、10分制限も撤廃</title>
+      <link>https://manapick.app/news/2026-11-18-chatgpt-live-dictation/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-18-chatgpt-live-dictation/</guid>
+      <description>ChatGPTの音声入力が「Live Dictation」に変わり、話している最中に文字起こしされるようになりました。これまで録音を止めてから待っていた変換がその場で進み、10分間の録音制限も撤廃されました。全プランに世界展開中です。</description>
       <category>生成AI</category>
-      <pubDate>Mon, 16 Nov 2026 15:00:00 GMT</pubDate>
+      <pubDate>Tue, 17 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
       <title>「GMT+9って現地では何時？」の暗算から解放。Googleカレンダーがタイムゾーン略称表示に</title>
@@ -84,6 +84,14 @@
       <guid isPermaLink="true">https://manapick.app/news/2026-11-17-time-zone-abbreviations-in-google-calendar-f43531f4/</guid>
       <description>Googleカレンダー（ウェブ版）のタイムゾーン表示が、GMT±の数値からETやMEZのような地域に即した略称に変わります。「予定を探す」では参加者ごとの現地時刻も略称付きで表示され、ホバーで正式名称も確認できます。</description>
       <category>仕事・整理</category>
+      <pubDate>Mon, 16 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>通常のチャットには来ない新モデル。GPT-6.2 Astra／SolはWorkとCodex専用で登場</title>
+      <link>https://manapick.app/news/2026-11-17-gpt-6-2-astra-sol-work-codex/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-17-gpt-6-2-astra-sol-work-codex/</guid>
+      <description>OpenAIの新モデルGPT-6.2 AstraとSolは、通常のChatではなく、仕事向けのWorkと開発向けのCodexでのみ選べます。Astraは複雑な専門業務向け、Solは日常タスク向けと位置づけられています。</description>
+      <category>生成AI</category>
       <pubDate>Mon, 16 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
@@ -95,19 +103,19 @@
       <pubDate>Mon, 16 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>会議の連続で休めない問題に。Googleカレンダーが「5分遅く始める／5分早く終わる」をカレンダーごとに設定可能に</title>
-      <link>https://manapick.app/news/2026-11-16-google-calendar-event-buffer/</link>
-      <guid isPermaLink="true">https://manapick.app/news/2026-11-16-google-calendar-event-buffer/</guid>
-      <description>Googleカレンダーの「Speedy meetings」が、カレンダーごとに設定できる「予定の長さとバッファ」に拡張されました。新しい予定を自動で5分遅く始めるか、5分早く終わらせるかを選べます。2026年11月16日から段階的に展開されています。</description>
-      <category>仕事・整理</category>
-      <pubDate>Sun, 15 Nov 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
       <title>自分のGeminiの「必殺技」、チームに配れるようになった。スキル共有とDriveファイル添付が解禁</title>
       <link>https://manapick.app/news/2026-11-16-share-skills-and-add-files-to-gemini-skills-085949c6/</link>
       <guid isPermaLink="true">https://manapick.app/news/2026-11-16-share-skills-and-add-files-to-gemini-skills-085949c6/</guid>
       <description>Geminiアプリの「スキル」を他のユーザーと共有できるようになりました。閲覧・編集の権限を選んで配布でき、GoogleドライブやGemini Notebook、Googleフォトのファイルをスキルに組み込むことも可能です。</description>
       <category>生成AI</category>
+      <pubDate>Sun, 15 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>会議の連続で休めない問題に。Googleカレンダーが「5分遅く始める／5分早く終わる」をカレンダーごとに設定可能に</title>
+      <link>https://manapick.app/news/2026-11-16-google-calendar-event-buffer/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-16-google-calendar-event-buffer/</guid>
+      <description>Googleカレンダーの「Speedy meetings」が、カレンダーごとに設定できる「予定の長さとバッファ」に拡張されました。新しい予定を自動で5分遅く始めるか、5分早く終わらせるかを選べます。2026年11月16日から段階的に展開されています。</description>
+      <category>仕事・整理</category>
       <pubDate>Sun, 15 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
