@@ -156,7 +156,6 @@ export default async function VideoPage({ params }: VideoPageProps) {
     ...(video.publishedAt ? { uploadDate: video.publishedAt } : {}),
     duration: isoDuration(video.minutes),
     embedUrl: youtubeEmbedUrl(video.ytid),
-    contentUrl: video.url,
     url: pageUrl,
     // 再生回数は保存データがある動画だけ出す（無い動画は捏造せず省略）。
     ...(typeof video.viewCount === "number"
