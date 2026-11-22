@@ -40,7 +40,8 @@ function measureAnchors() {
 
 export default function AdSenseScript({ client }: { client: string }) {
   useEffect(() => {
-    if (window.location.hostname !== "manapick.app" || document.getElementById(SCRIPT_ID)) return;
+    // 自動操作のブラウザ（navigator.webdriver === true。Playwright・Selenium 等）では読み込まない（無効トラフィック対策。2026-11-21）
+    if (window.location.hostname !== "manapick.app" || navigator.webdriver === true || document.getElementById(SCRIPT_ID)) return;
 
     const script = document.createElement("script");
     script.id = SCRIPT_ID;
