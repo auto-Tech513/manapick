@@ -9,7 +9,7 @@ import {
 import { averageScoreOf, medianOf } from "@/lib/site-stats";
 import Phrase from "@/components/Phrase";
 
-const REVIEWED_AT = "2026-11-01";
+const REVIEWED_AT = "2026-11-22";
 const reviewedLabel = (() => { const [y, m, d] = REVIEWED_AT.split("-").map(Number); return `${y}年${m}月${d}日`; })();
 const pageUrl = absoluteUrl("/research/youtube-learning-data/");
 

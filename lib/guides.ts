@@ -10,6 +10,11 @@ import bookkeepingGuide from "@/content/guides/bookkeeping";
 import moneyBasicsGuide from "@/content/guides/money-basics";
 import takkenGuide from "@/content/guides/takken";
 import fp3Guide from "@/content/guides/fp3";
+import sharoshiGuide from "@/content/guides/sharoshi";
+import gyoseishoshiGuide from "@/content/guides/gyoseishoshi";
+import kikenbutsuOtsu4Guide from "@/content/guides/kikenbutsu-otsu4";
+import toeicGuide from "@/content/guides/toeic";
+import gitGithubGuide from "@/content/guides/git-github";
 import claudeGuide from "@/content/guides/claude";
 import { videos, type Video } from "@/lib/manapick";
 
@@ -67,11 +72,16 @@ export type GuideStepVideo = GuideStep["videos"][number];
 export const guides: readonly Guide[] = [
   takkenGuide,
   fp3Guide,
+  sharoshiGuide,
+  gyoseishoshiGuide,
+  kikenbutsuOtsu4Guide,
   claudeGuide,
   generativeAiGuide,
   pythonGuide,
+  gitGithubGuide,
   videoEditingGuide,
   englishGuide,
+  toeicGuide,
   excelDataGuide,
   webMarketingGuide,
   officeSkillsGuide,

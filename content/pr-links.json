@@ -425,16 +425,11 @@
   "shikaku": [
     {
       "label": "みんなが欲しかった！宅建士の教科書",
-      "url": "https://a.r10.to/hPRFN8",
+      "url": "https://www.amazon.co.jp/s?k=%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F%EF%BC%81%E5%AE%85%E5%BB%BA%E5%A3%AB%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8&tag=saunastampral-22",
       "note": "宅建テキスト",
       "kind": "book",
-      "store": "rakuten",
+      "store": "amazon",
       "links": [
-        {
-          "store": "rakuten",
-          "url": "https://a.r10.to/hPRFN8",
-          "label": "楽天ブックスで見る"
-        },
         {
           "store": "amazon",
           "url": "https://www.amazon.co.jp/s?k=%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F%EF%BC%81%E5%AE%85%E5%BB%BA%E5%A3%AB%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8&tag=saunastampral-22",
