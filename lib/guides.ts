@@ -16,6 +16,11 @@ import kikenbutsuOtsu4Guide from "@/content/guides/kikenbutsu-otsu4";
 import toeicGuide from "@/content/guides/toeic";
 import gitGithubGuide from "@/content/guides/git-github";
 import claudeGuide from "@/content/guides/claude";
+import tourokuHanbaishaGuide from "@/content/guides/touroku-hanbaisha";
+import itPassportGuide from "@/content/guides/it-passport";
+import kaigoFukushishiGuide from "@/content/guides/kaigo-fukushishi";
+import sqlGuide from "@/content/guides/sql";
+import powerBiGuide from "@/content/guides/power-bi";
 import { videos, type Video } from "@/lib/manapick";
 
 export type Guide = {
@@ -87,7 +92,12 @@ export const guides: readonly Guide[] = [
   officeSkillsGuide,
   certificationGuide,
   bookkeepingGuide,
-  moneyBasicsGuide
+  moneyBasicsGuide,
+  tourokuHanbaishaGuide,
+  itPassportGuide,
+  kaigoFukushishiGuide,
+  sqlGuide,
+  powerBiGuide
 ];
 
 export function guidePath(slug: string) {
