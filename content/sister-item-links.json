@@ -2036,5 +2036,29 @@
    "name": "Vrew",
    "url": "https://ai.manapick.app/tool/vrew/"
   }
+ ],
+ "Q8KF_UtYap8": [
+  {
+   "site": "ai",
+   "slug": "notta",
+   "name": "Notta",
+   "url": "https://ai.manapick.app/tool/notta/"
+  }
+ ],
+ "cEYf1yumgoA": [
+  {
+   "name": "測量士補",
+   "site": "license",
+   "slug": "sokuryo-ho",
+   "url": "https://license.manapick.app/license/sokuryo-ho/"
+  }
+ ],
+ "vIA0Ey8RzSA": [
+  {
+   "site": "ai",
+   "slug": "kling",
+   "name": "Kling AI",
+   "url": "https://ai.manapick.app/tool/kling/"
+  }
  ]
 }

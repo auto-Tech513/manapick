@@ -4,14 +4,14 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 動画はYouTube上で公開されているものを掲載し、YouTubeへのリンクまたはYouTube公式プレーヤーで紹介します。ダウンロードや再配布は扱いません。
 
 ## 公開中の10ジャンル
-- 生成AI（214本）: https://manapick.app/genre/ai/
+- 生成AI（216本）: https://manapick.app/genre/ai/
 - プログラミング・IT（72本）: https://manapick.app/genre/prog/
 - 動画編集・クリエイティブ（69本）: https://manapick.app/genre/video/
 - 語学・英語（59本）: https://manapick.app/genre/english/
 - データ分析・DX（37本）: https://manapick.app/genre/data/
 - Webマーケ・SNS運用（38本）: https://manapick.app/genre/marke/
 - Office・資料作成（39本）: https://manapick.app/genre/biz/
-- 資格・検定（255本）: https://manapick.app/genre/shikaku/
+- 資格・検定（256本）: https://manapick.app/genre/shikaku/
 - 会計・経営系資格（58本）: https://manapick.app/genre/kaikei/
 - お金・投資（30本）: https://manapick.app/genre/money/
 
@@ -39,7 +39,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 2026-11-18 話しながら文字になる。ChatGPTの音声入力がリアルタイム化、10分制限も撤廃: https://manapick.app/news/2026-11-18-chatgpt-live-dictation/ | 出典 ChatGPT リリースノート（OpenAI公式ヘルプ）
 
 ## ジャンル別AEOインデックス
-### 生成AI（214本）
+### 生成AI（216本）
 - ジャンルURL: https://manapick.app/genre/ai/
 - ガイドURL: https://manapick.app/guide/generative-ai/
 - 主なトピック: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Cline / ComfyUI / Copilot / Cursor / DeepL / DeepSeek / ElevenLabs / Figma(Figma AI) / Gamma / Gemini / Gemma / GitHub Copilot / Google AI Mode / Google Veo / Google翻訳 / Grok / Hailuo AI / HeyGen / Kling AI / LM Studio / Manus / Midjourney / Notion AI / Notta / Ollama / OpenAI Codex / OpenClaw / Perplexity / PixVerse / Qwen / Replit Agent / Runway / Siri AI / Stable Diffusion / Suno / Supabase / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
@@ -144,7 +144,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 4. 【強い組織の資料作成はここが違う】ビジネスはアウトプットが9割 資料作成は「スキルの総合格闘技」だ／AI時代だからこそ言語化･アウトプットが重要／成果を生むパワポ術「キメヘン」「QAR」とは？（Office・資料作成 / 資料作成 / 31/35 / 45分 / publishedAt=2025-01-15T00:00:00Z） https://manapick.app/video/Xp48lPTmwvU/
 5. 【2025年最新】Geminiでパワポ・スライド資料を爆速作成する裏ワザを解説します（Office・資料作成 / 資料作成 / 30/35 / 19分 / publishedAt=2025-09-07T10:01:24Z） https://manapick.app/video/vri3RfONGfM/
 
-### 資格・検定（255本）
+### 資格・検定（256本）
 - ジャンルURL: https://manapick.app/genre/shikaku/
 - ガイドURL: https://manapick.app/guide/certification/
 - 主なトピック: AI検定 / CCNA / G検定 / IT / ITパスポート / MOS / PMP / ケアマネジャー / ネイリスト / ビジネス実務法務検定試験 / 二級ボイラー技士 / 介護福祉士 / 介護職員初任者研修 / 保育士 / 医療事務 / 危険物乙4 / 司法書士 / 国家公務員採用一般職試験 / 基本情報技術者 / 宅建 / 日商PC検定 / 日本漢字能力検定 / 歯科衛生士 / 測量士補 / 生成AIパスポート / 登録販売者 / 看護師 / 社会福祉士 / 社労士 / 秘書検定 / 第二種電気工事士 / 管理栄養士 / 管理業務主任者 / 著作権 / 薬剤師 / 行政書士 / 衛生管理者 / 調理師 / 賃貸不動産経営管理士 / 電験三種 / 食生活アドバイザー
@@ -221,7 +221,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 ## 主要URL
 - トップ: https://manapick.app/
 - YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
-- YouTube学習動画871本の独自集計: https://manapick.app/research/youtube-learning-data/
+- YouTube学習動画874本の独自集計: https://manapick.app/research/youtube-learning-data/
 - 7日学習プラン: https://manapick.app/study-plan/
 - Manapick Network（学ぶ・AI・資格・仕事・企業）: https://manapick.app/network/
 - 学習ロードマップ一覧: https://manapick.app/guide/
