@@ -105,8 +105,8 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
   const prItems = guidePrLinks[key] ?? [];
   const title = `${sub}の勉強におすすめの無料YouTube動画｜見る順ロードマップ`;
   const description = introText(sub, list.length, stats);
-  // dateModified はビルド時刻ではなく、掲載動画の採点確認日の最新値を使う（なければ出さない）。
-  const articleModified = stats.latestConfirmed ? `${stats.latestConfirmed}T00:00:00+09:00` : undefined;
+  // dateModified は出さない：このページには更新日（掲載動画の採点確認日の最新値）を表示していないため、
+  // 構造化データだけに日付を載せない（表示内容との照合 2026-11-22）。表示に更新日を足すときに合わせて戻す。
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -116,7 +116,6 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
         headline: title,
         description,
         inLanguage: "ja",
-        ...(articleModified ? { dateModified: articleModified } : {}),
         mainEntityOfPage: pageUrl,
         image: ogImage,
         author: {

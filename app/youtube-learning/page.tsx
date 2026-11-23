@@ -130,7 +130,8 @@ export default function YoutubeLearningPage() {
     "@graph": [
       {
         "@type": "Article",
-        headline: pageTitle,
+        // headline はページの h1（表示の見出し）と同じ文にする（<title> の「| Manapick」付きではなく。照合 2026-11-22）
+        headline: "YouTube学習動画のおすすめを、見る順まで決める。",
         description: pageDescription,
         inLanguage: "ja",
         mainEntityOfPage: pageUrl,
