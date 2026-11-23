@@ -76,7 +76,8 @@ export default function YoutubeLearningDataPage() {
     "@graph": [
       {
         "@type": "Article",
-        headline: pageTitle,
+        // headline はページの h1（表示の見出し）と同じ文にする（<title> の「| Manapick」付きではなく。照合 2026-11-22）
+        headline: `YouTube学習動画${videos.length}本を分析して分かった、選びやすい1本の条件`,
         description: pageDescription,
         dateModified: REVIEWED_AT,
         inLanguage: "ja",
