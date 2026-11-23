@@ -15,6 +15,18 @@ const adsenseId = process.env.NEXT_PUBLIC_ADSENSE_ID?.trim() || "ca-pub-41089009
 const ogImageUrl = absoluteUrl("/brand/ogp-manapick.png");
 const xAccountUrl = "https://x.com/manapick_app";
 const xAccountHandle = "@manapick_app";
+const googleFontsHref =
+  "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@500;700;900&display=swap";
+// 描画を止めない読み込み：script で追加した stylesheet は描画をブロックしない。取得は上の preload が先に始めている
+const loadGoogleFontsScript = [
+  "(function(){",
+  `var h=${JSON.stringify(googleFontsHref)};`,
+  "var l=document.createElement('link');",
+  "l.rel='stylesheet';",
+  "l.href=h;",
+  "document.head.appendChild(l);",
+  "})();"
+].join("");
 
 const commonJsonLd = {
   "@context": "https://schema.org",
@@ -134,10 +146,14 @@ export default function RootLayout({
         {adsenseId ? <meta name="google-adsense-account" content={adsenseId} /> : null}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@500;700;900&display=swap"
-          rel="stylesheet"
-        />
+        {/* Google Fonts の CSS（約 800KB・@font-face 869個）が最初の描画を止めないよう、先に取得だけ始め（preload）、
+            stylesheet としての適用は script で後から行う（2026-11-24 オーナー判断。書体・太さ・display=swap は変えない）。
+            JavaScript が無効の環境は noscript の stylesheet で従来どおり読み込む */}
+        <link rel="preload" as="style" href={googleFontsHref} />
+        <script dangerouslySetInnerHTML={{ __html: loadGoogleFontsScript }} />
+        <noscript>
+          <link rel="stylesheet" href={googleFontsHref} />
+        </noscript>
         <link rel="preconnect" href="https://i.ytimg.com" />
         <link rel="alternate" type="application/rss+xml" title="Manapick 学びニュース" href="/news-feed.xml" />
       </head>
