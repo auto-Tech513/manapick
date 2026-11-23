@@ -5112,3 +5112,31 @@ section[id], details[id], article[id] { scroll-margin-top: 16px; }
     background: rgba(255, 255, 255, 0.08);
   }
 }
+
+/* =====================================================================
+   ネットワークレール：横のはみ出しと当たり判定（評価チーム依頼 2026-11-23）
+   見た目（色・大きさ・並び）は変えない。各幅で「すでにある表示の段階」のどれを使うかと、当たり判定だけを直す。
+   ===================================================================== */
+/* 駅名つきの表示は 1024px 以上だけ。841〜1023px では駅名とメニューが入りきらず 18〜58px はみ出していた
+   （2026-11-24 ローカル実測。Chrome、Web フォント読み込み後）→ 840px 以下と同じ「現在地だけ駅名」の段階を使う */
+@media (min-width: 841px) and (max-width: 1023px) {
+  .nw-rail-station { margin-right: 2px; padding-right: 6px; }
+  .nw-rail-station .nw-rail-name { display: none; }
+  .nw-rail-station.is-current .nw-rail-name { display: inline; font-size: 12px; }
+  .nw-rail-station.is-current b { display: none; }
+}
+/* 「manapick network」の文字は 1241px 以上だけ。1081〜1160px 前後で 22〜59px はみ出していた */
+@media (max-width: 1240px) {
+  .nw-rail-label { display: none; }
+}
+@media (min-width: 641px) {
+  /* Web フォントの読み込み前など文字幅が広い状態でも、ページを横にはみ出させない（はみ出す分はレールの中で切る）。
+     上下は切らない：下の当たり判定の拡張がレールの下端で切られないように */
+  .nw-rail { overflow-x: clip; overflow-y: visible; z-index: 121; }
+  /* 当たり判定を高さ 44px 以上に（見た目の箱は変えない）。レールの高さは約 40〜42px なので、
+     下に 2〜3px だけヘッダーの上端（何も置いていない余白）へかかる。そのためレールをヘッダー（z-index 120）より上に置く */
+  a.nw-rail-station::after,
+  .nw-rail-side a::after { content: ""; position: absolute; left: 0; right: 0; top: -6px; bottom: -8px; }
+  .nw-rail-side a { position: relative; }
+  .nw-rail-menu::after { inset: -8px -4px -10px; }
+}
