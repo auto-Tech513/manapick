@@ -31,6 +31,14 @@
       <pubDate>Thu, 19 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
+      <title>自動化の実行・保存もリージョン管理下に。Workspace StudioがData Regionsに正式対応</title>
+      <link>https://manapick.app/news/2026-11-20-workspace-studio-data-regions-ga/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-20-workspace-studio-data-regions-ga/</guid>
+      <description>Google Workspace StudioがData Regionsに正式対応しました。フローの実行・保存が米国／EUのデータリージョンポリシーに従うようになり、管理コンソールに専用の制御項目も追加。2026年11月10日から段階的に展開されています。</description>
+      <category>仕事・整理</category>
+      <pubDate>Thu, 19 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
       <title>Google Workspace Studioでフローのコラボレーション動作を制御する新管理者設定が追加</title>
       <link>https://manapick.app/news/2026-11-19-new-admin-setting-to-control-collaboration-steps-in-wo-07567b301e/</link>
       <guid isPermaLink="true">https://manapick.app/news/2026-11-19-new-admin-setting-to-control-collaboration-steps-in-wo-07567b301e/</guid>
@@ -51,6 +59,14 @@
       <link>https://manapick.app/news/2026-11-19-email-meeting-guests-from-google-calendar-with-the-ful-57620a6fd9/</link>
       <guid isPermaLink="true">https://manapick.app/news/2026-11-19-email-meeting-guests-from-google-calendar-with-the-ful-57620a6fd9/</guid>
       <description>GoogleはWeb版Googleカレンダーの「ゲストにメール」機能を更新し、カレンダー上からネイティブなGmail作成ウィンドウを直接開けるようにすると発表した。これにより、RSVP別の宛先選択や代理人への一括置換が可能になり、Gmailのリッチテキスト装飾や送信日時指定、Drive権限チェックなどのフル機能を活用して会議連絡を送れるようになる。</description>
+      <category>仕事・整理</category>
+      <pubDate>Wed, 18 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Outlookで追加したゲストも漏れない。Googleカレンダーがゲスト追加をサービス間で自動同期</title>
+      <link>https://manapick.app/news/2026-11-19-google-calendar-guest-additions-sync/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-19-google-calendar-guest-additions-sync/</guid>
+      <description>Googleカレンダーのゲスト追加が、Outlookなど他社カレンダーサービスと自動で同期するようになりました。追加した側は主催者へメール通知、受け取った側は予定のゲスト欄を自動更新します。全Workspace顧客と個人アカウントが対象です。</description>
       <category>仕事・整理</category>
       <pubDate>Wed, 18 Nov 2026 15:00:00 GMT</pubDate>
     </item>
@@ -143,6 +159,22 @@
       <pubDate>Sun, 15 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
+      <title>「直したくない所まで変わる」問題に。Google PicsがNano Banana 2.1で編集の忠実度アップ</title>
+      <link>https://manapick.app/news/2026-11-16-google-pics-nano-banana-2-1/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-16-google-pics-nano-banana-2-1/</guid>
+      <description>Google Picsの画像生成・編集モデルがNano Banana 2.1にアップグレード。画質と編集の忠実度、画像内テキストの描画が改善され、DocsやSlides内の画像編集にも同じモデルが使われます。2026年11月16日から1〜3日で全展開されます。</description>
+      <category>生成AI</category>
+      <pubDate>Sun, 15 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>「誰が・どの端末で」まで追える。Classroomのログにアプリ名とデバイスIDが追加</title>
+      <link>https://manapick.app/news/2026-11-16-google-classroom-log-events-detail/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-16-google-classroom-log-events-detail/</guid>
+      <description>Google Classroomのログイベントに「操作したアプリ名」と「ユーザーデバイスID」の2項目が追加されました。どのアプリ・どの端末からの操作かを管理コンソールで追えるようになります。対象はEducation各エディションと非営利団体向けです。</description>
+      <category>学び方</category>
+      <pubDate>Sun, 15 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
       <title>スプレッドシート、ファイルごと渡さなくていい。Sheets canvasが単独リンクで公開可能に</title>
       <link>https://manapick.app/news/2026-11-11-publish-a-sheets-canvas-as-a-standalone-link-d58ce595ea/</link>
       <guid isPermaLink="true">https://manapick.app/news/2026-11-11-publish-a-sheets-canvas-as-a-standalone-link-d58ce595ea/</guid>
@@ -164,6 +196,14 @@
       <guid isPermaLink="true">https://manapick.app/news/2026-11-05-gemini-omni-1-2-flash-now-in-vids-with-15-second-gener-6aa8935159/</guid>
       <description>Googleは、Google Vids内でGemini Omni 1.2 Flashを直接利用可能にしたと発表しました。3秒から最大15秒までのクリップ生成に対応し、参照機能による一貫性や音声のリアリズム向上が盛り込まれています。</description>
       <category>生成AI</category>
+      <pubDate>Wed, 04 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>「暗号化のし忘れ」を仕組みで防ぐ。CSEの自動適用がベータ開始、ルールに合うファイルをその場で暗号化</title>
+      <link>https://manapick.app/news/2026-11-05-cse-policy-based-enforcement-beta/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-05-cse-policy-based-enforcement-beta/</guid>
+      <description>管理者がルールを決めると、条件に合うファイルへクライアント側暗号化（CSE）を自動で適用する「Policy-Based Enforcement」のベータが始まりました。暗号化はその場で行われ、ファイルのURLは変わりません。対象はEnterprise PlusとAssured Controlsです。</description>
+      <category>仕事・整理</category>
       <pubDate>Wed, 04 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
