@@ -138,25 +138,51 @@ ${candidate.sourceText}`;
   };
 }
 
+const MAX_DAILY_ARTICLES = 3;
+
 async function main() {
   const current = JSON.parse(await readFile(newsPath, "utf8"));
   const watch = JSON.parse(await readFile(candidatesPath, "utf8"));
-  const candidate = watch.candidates.find((item) => item.autoPublish);
-  if (!candidate) {
+  const qualifying = watch.candidates.filter((item) => item.autoPublish).slice(0, MAX_DAILY_ARTICLES);
+  if (!qualifying.length) {
     console.log("news publish: no qualifying official update today");
     return;
   }
 
-  const article = await createArticle(candidate, newsProviderConfig());
-  const badLinks = article.relatedLinks.filter((link) => !allowedRelatedLinks.has(link.href));
-  if (badLinks.length) throw new Error(`generated article contains unapproved related links: ${badLinks.map((link) => link.href).join(", ")}`);
-  const unsupported = unsupportedNumericTokens(article, candidate.sourceText);
-  if (unsupported.length) throw new Error(`generated article contains numeric claims absent from source: ${unsupported.join(", ")}`);
-  const next = [article, ...current].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || b.id.localeCompare(a.id));
-  const errors = validateNewsItems(next);
-  if (errors.length) throw new Error(`generated article failed quality gate:\n${errors.join("\n")}`);
+  // Provider misconfiguration is a setup failure, not a per-article failure:
+  // resolve it once up front so it still fails the step (and opens the
+  // existing "generator needs attention" issue) exactly as before.
+  const provider = newsProviderConfig();
+  let next = current;
+  const added = [];
+  const failures = [];
+  for (const candidate of qualifying) {
+    try {
+      const article = await createArticle(candidate, provider);
+      const badLinks = article.relatedLinks.filter((link) => !allowedRelatedLinks.has(link.href));
+      if (badLinks.length) throw new Error(`generated article contains unapproved related links: ${badLinks.map((link) => link.href).join(", ")}`);
+      const unsupported = unsupportedNumericTokens(article, candidate.sourceText);
+      if (unsupported.length) throw new Error(`generated article contains numeric claims absent from source: ${unsupported.join(", ")}`);
+      const merged = [article, ...next].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || b.id.localeCompare(a.id));
+      const errors = validateNewsItems(merged);
+      if (errors.length) throw new Error(`generated article failed quality gate:\n${errors.join("\n")}`);
+      next = merged;
+      added.push(article.id);
+      console.log(`news publish: added ${article.id}`);
+    } catch (error) {
+      // A failed candidate never publishes anything unverified; skip it and
+      // continue with the remaining candidates for today.
+      failures.push(`${candidate.sourceUrl}: ${error.message}`);
+      console.log(`news publish: skipped candidate ${candidate.sourceUrl} (${error.message})`);
+    }
+  }
+  if (!added.length) {
+    // Every qualifying candidate failed: surface it like the previous
+    // single-article flow did, so the failure alerting still fires.
+    throw new Error(`news publish: all ${qualifying.length} qualifying candidate(s) failed:\n${failures.join("\n")}`);
+  }
   await writeFile(newsPath, JSON.stringify(next, null, 2) + "\n", "utf8");
-  console.log(`news publish: added ${article.id}`);
+  console.log(`news publish: ${added.length} article(s) published, ${failures.length} candidate(s) skipped`);
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) await main();

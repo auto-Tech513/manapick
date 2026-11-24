@@ -22,7 +22,9 @@ jobs:
     runs-on: ubuntu-24.04
     # 20分では冷えたランナーでの npm ci + 生成 + 検証が収まらず、11-18 の実行が
     # 検証ステップ中にタイムアウトでキャンセルされた。30分に緩和する。
-    timeout-minutes: 30
+    # 2026-11-24: 生成が1日最大3件になったため、生成3件の最悪ケース＋検証
+    # ビルドを見込んで60分に緩和する。
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v6
         with:
@@ -36,7 +38,7 @@ jobs:
       - run: npm ci
       - name: Check official sources
         run: npm run news:watch
-      - name: Publish at most one verified update
+      - name: Publish at most three verified updates
         id: publish
         continue-on-error: true
         env:
