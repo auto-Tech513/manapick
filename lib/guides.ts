@@ -21,6 +21,9 @@ import itPassportGuide from "@/content/guides/it-passport";
 import kaigoFukushishiGuide from "@/content/guides/kaigo-fukushishi";
 import sqlGuide from "@/content/guides/sql";
 import powerBiGuide from "@/content/guides/power-bi";
+import nisaGuide from "@/content/guides/nisa";
+import seoGuide from "@/content/guides/seo";
+import davinciResolveGuide from "@/content/guides/davinci-resolve";
 import { videos, type Video } from "@/lib/manapick";
 
 export type Guide = {
@@ -97,7 +100,10 @@ export const guides: readonly Guide[] = [
   itPassportGuide,
   kaigoFukushishiGuide,
   sqlGuide,
-  powerBiGuide
+  powerBiGuide,
+  nisaGuide,
+  seoGuide,
+  davinciResolveGuide
 ];
 
 export function guidePath(slug: string) {
