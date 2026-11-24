@@ -5,7 +5,31 @@
     <link>https://manapick.app/news/</link>
     <description>公式発表を、学びと仕事に使える形へ整理します。</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 19 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>「有料版だけの特権」が終わった。Google Meetの1080p送信が全ユーザーに開放、対応パソコンではデフォルトでオン</title>
+      <link>https://manapick.app/news/2026-11-23-google-meet-1080p-all-users/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-23-google-meet-1080p-all-users/</guid>
+      <description>Google MeetのWeb版で、1080p（フルHD）映像の送信が全ユーザーに広がりました。これまで一部の有料エディション限定だった機能で、対応するパソコンではデフォルトでオンになります。条件と設定の変え方を整理しました。</description>
+      <category>仕事・整理</category>
+      <pubDate>Sun, 22 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>AIエージェントの長文が、やっと区切って読める。Google Chatのアプリ投稿に「表」と「見出し」が対応</title>
+      <link>https://manapick.app/news/2026-11-23-google-chat-tables-headings/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-23-google-chat-tables-headings/</guid>
+      <description>Google Chatで、アプリやAIエージェントが「表」と「見出し」を使ったメッセージを送れるようになりました。長い要約や報告が区切って読めるようになります。開発者はChat APIから標準のMarkdownで指定できます。</description>
+      <category>仕事・整理</category>
+      <pubDate>Sun, 22 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>検索が「自分の財布」を読んで答える。Google検索のPersonal IntelligenceにWalletが接続可能に、Driveは今後数週間で対応</title>
+      <link>https://manapick.app/news/2026-11-23-google-search-personal-intelligence-wallet-drive/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-23-google-search-personal-intelligence-wallet-drive/</guid>
+      <description>Google検索のAIモードで、自分専用の文脈を使う「Personal Intelligence」にGoogle Walletを接続できるようになりました。支出の傾向を踏まえた回答が返ります。Google Driveの接続は今後数週間で対応予定です。接続は任意で、いつでも切れます。</description>
+      <category>生成AI</category>
+      <pubDate>Sun, 22 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>Googleドキュメントのクライアントサイド暗号化機能でリアルタイム共同編集のベータ版が提供開始</title>
       <link>https://manapick.app/news/2026-11-20-now-available-in-beta-collaborate-in-real-time-on-clie-e05ae42676/</link>
