@@ -262,7 +262,7 @@ export default function YoutubeLearningPage() {
         </div>
       </section>
 
-      <AdSlot slot="1438236565" />
+      <AdSlot slot="1438236565" placement="youtube-learning-list" />
 
       <section className="knowledge-section" aria-labelledby="youtube-top-title">
         <div className="youtube-section-head">

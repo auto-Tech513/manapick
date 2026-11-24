@@ -97,7 +97,7 @@ export default function TransferNavItem() {
                         {body}
                       </span>
                     ) : (
-                      <a className="nw-sheet-row" href={station.url} target="_blank" rel="noopener noreferrer">
+                      <a className="nw-sheet-row" href={station.url} target="_blank" rel="noopener">
                         {body}
                         <span className="nw-sheet-arr" aria-hidden="true">
                           ↗

@@ -1475,7 +1475,7 @@ function ManapickAppMain({
 
       <LearningDataSection />
 
-      <AdSlot slot="1438236565" />
+      <AdSlot slot="1438236565" placement="home-before-search" />
 
       <section id="search" className="lb-srch">
         <div className="lb-srch-inner">
@@ -1913,7 +1913,7 @@ function ManapickAppMain({
                   style={{ "--stc": card.color } as CSSProperties}
                   href={card.url}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener"
                   onClick={() => sendGaEvent(card.event, { placement: "xfer", target: card.url })}
                 >
                   <span className="nw-stn" style={{ "--stc": card.color } as CSSProperties}>

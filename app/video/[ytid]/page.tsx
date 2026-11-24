@@ -10,6 +10,7 @@ import FoldSection from "@/components/FoldSection";
 import VideoActions from "@/components/VideoActions";
 import VideoEmbed from "@/components/VideoEmbed";
 import TrackedGaLink from "@/components/TrackedGaLink";
+import { externalRel } from "@/lib/network-links";
 import { sisterItemLinksByVideo, type SisterItemLink } from "@/lib/sister-item-links";
 import roadmapsData from "@/content/roadmaps.json";
 import { guidePath, guides } from "@/lib/guides";
@@ -330,7 +331,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
         ) : null}
       </nav>
 
-      <AdSlot slot="1438236565" />
+      <AdSlot slot="1438236565" placement="video-after-nav" />
 
       <div className="vd-body">
         <nav className="vd-toc" aria-label="目次">
@@ -447,7 +448,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
             </FoldSection>
           </div>
 
-          <AdSlot slot="1438236565" />
+          <AdSlot slot="1438236565" placement="video-after-usage" />
 
           <div id="vd-guide" className="vd-anchor">
             <FoldSection
@@ -557,24 +558,22 @@ export default async function VideoPage({ params }: VideoPageProps) {
               </div>
               <div className="sister-item-links">
                 {sisterLinks.map((link) => (
-                  <TrackedGaLink
+                  <a
                     key={`${link.site}-${link.slug}`}
                     className={`sister-item-link is-${link.site}`}
                     href={link.url}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    eventName="network_click"
-                    eventParams={{ destination_site: link.site, placement: "video_detail_items", genre: video.genre, video_id: video.ytid }}
+                    rel={externalRel(link.url)}
                   >
                     <SisterItemLinkLabel link={link} />
                     <span className="sister-item-arrow" aria-hidden="true">→</span>
-                  </TrackedGaLink>
+                  </a>
                 ))}
               </div>
             </section>
           ) : null}
 
-          <AdSlot slot="1438236565" />
+          <AdSlot slot="1438236565" placement="video-after-sister" />
 
           {nextPick ? (
             <section id="vd-next" className="vd-sec" aria-labelledby="vd-next-title">
@@ -645,7 +644,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
           </section>
 
           {/* 手動枠（2026-11-19 上部アンカー広告をやめた分の補い）：「次に見る6本」を見終えた位置 */}
-          <AdSlot slot="1438236565" />
+          <AdSlot slot="1438236565" placement="video-after-next" />
       </div>
     </main>
   );

@@ -534,7 +534,7 @@ export default async function GenrePage({ params }: GenrePageProps) {
         </section>
       ) : null}
 
-      <AdSlot slot="1438236565" />
+      <AdSlot slot="1438236565" placement="genre-before-faq" />
       {seo.faq.length > 0 ? (
         <section className="genre-hub-faq" aria-labelledby="genre-hub-faq-title">
           <h2 id="genre-hub-faq-title">
@@ -570,7 +570,7 @@ export default async function GenrePage({ params }: GenrePageProps) {
         </section>
       ) : null}
 
-      <AdSlot slot="1438236565" />
+      <AdSlot slot="1438236565" placement="genre-after-courses" />
 
       <p className="genre-hub-back">
         <Link href="/">← すべてのジャンルを見る</Link>

@@ -27,7 +27,7 @@ export default function NetworkRoute() {
               style={{ ["--stc" as string]: station.color }}
               href={station.url}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
             >
               <i aria-hidden="true" />
               <em>{station.code}</em>

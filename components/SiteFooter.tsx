@@ -2,6 +2,7 @@ import { publishedGenreKeys } from "@/lib/manapick";
 import { siteStats } from "@/lib/site-stats";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import NetworkRoute from "@/components/NetworkRoute";
+import { externalRel } from "@/lib/network-links";
 
 type FooterLink = {
   label: string;
@@ -59,7 +60,7 @@ const legalLinks: FooterLink[] = [
 
 function FooterAnchor({ link }: { link: FooterLink }) {
   return (
-    <a href={link.href} {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
+    <a href={link.href} {...(link.external ? { target: "_blank", rel: externalRel(link.href) } : {})}>
       {link.label}
       {link.external ? <span aria-hidden="true">↗</span> : null}
     </a>

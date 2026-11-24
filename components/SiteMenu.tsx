@@ -203,7 +203,7 @@ export default function SiteMenu({
                       className="mp-menu-stn"
                       href={station.url}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noopener"
                       onClick={() => {
                         const key = STATION_EVENT[station.code];
                         if (key) sendGaEvent(`${key}_crosslink_click`, { placement: "menu", target: `manapick_${key}` });

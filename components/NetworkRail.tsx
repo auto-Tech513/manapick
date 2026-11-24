@@ -24,7 +24,7 @@ export default function NetworkRail() {
               style={{ ["--stc" as string]: station.color }}
               href={station.url}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
             >
               <i aria-hidden="true" />
               <span className="nw-rail-name">

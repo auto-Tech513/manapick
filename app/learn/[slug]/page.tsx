@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import AdSlot from "@/components/AdSlot";
 import BrandLogo from "@/components/BrandLogo";
 import NetworkContextBand from "@/components/NetworkContextBand";
+import { externalRel } from "@/lib/network-links";
 import {
   absoluteUrl,
   genreDisplayName,
@@ -146,7 +147,7 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
           </div>
           <div className="learning-source-list">
             {intent.officialSources.map((source) => (
-              <a key={source.href} href={source.href} target="_blank" rel="noopener noreferrer">
+              <a key={source.href} href={source.href} target="_blank" rel={externalRel(source.href)}>
                 <strong><Phrase>{source.label}</Phrase></strong>
                 <small>{source.note}</small>
                 <span aria-hidden="true">公式サイト ↗</span>
@@ -169,7 +170,7 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
                   <strong><Phrase>{step.title}</Phrase></strong>
                   <p>{step.body}</p>
                   {isExternal ? (
-                    <a href={step.href} target="_blank" rel="noopener noreferrer">公式サイトで確認する</a>
+                    <a href={step.href} target="_blank" rel={externalRel(step.href)}>公式サイトで確認する</a>
                   ) : (
                     <Link href={step.href}>{stepLinkLabel(step.href)}</Link>
                   )}
@@ -180,7 +181,7 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
         </ol>
       </section>
 
-      <AdSlot slot="1438236565" />
+      <AdSlot slot="1438236565" placement="learn-after-steps" />
 
       <section className="knowledge-section" aria-labelledby="intent-videos-title">
         <div className="youtube-section-head">
@@ -211,7 +212,7 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
             );
 
             return isExternal ? (
-              <a key={link.href + link.label} href={link.href} target="_blank" rel="noopener noreferrer">
+              <a key={link.href + link.label} href={link.href} target="_blank" rel={externalRel(link.href)}>
                 {content}
               </a>
             ) : (
