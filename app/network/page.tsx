@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BrandLogo from "@/components/BrandLogo";
-import TrackedGaLink from "@/components/TrackedGaLink";
+import { externalRel } from "@/lib/network-links";
 import {
   MANAPICK_AI_URL,
   MANAPICK_CAREER_URL,
@@ -200,21 +200,19 @@ export default function NetworkPage() {
         <div className="network-stage-grid">
           {stages.map((stage) =>
             stage.external ? (
-              <TrackedGaLink
+              <a
                 key={stage.key}
                 className={`network-stage-card is-${stage.key}`}
                 href={stage.href}
                 target="_blank"
-                rel="noopener noreferrer"
-                eventName="network_click"
-                eventParams={{ destination_site: stage.key, placement: "network_page_stage" }}
+                rel={externalRel(stage.href)}
               >
                 <span className="network-stage-number">{stage.number}</span>
                 <small>{stage.eyebrow}</small>
                 <strong>{stage.title}</strong>
                 <p>{stage.body}</p>
                 <span className="network-stage-action">{stage.action} <span aria-hidden="true">→</span></span>
-              </TrackedGaLink>
+              </a>
             ) : (
               <a key={stage.key} className={`network-stage-card is-${stage.key}`} href={stage.href}>
                 <span className="network-stage-number">{stage.number}</span>
@@ -234,15 +232,9 @@ export default function NetworkPage() {
           <h2 id="network-company-title">働きたい会社を、数字で読む。</h2>
           <p>manapick companyでは、上場企業の成り立ち・決算の要約・業績・給与水準を、決算短信や有価証券報告書などの一次情報で確認して整理しています。</p>
         </div>
-        <TrackedGaLink
-          href={MANAPICK_COMPANY_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          eventName="network_click"
-          eventParams={{ destination_site: "company", placement: "network_page_company" }}
-        >
+        <a href={MANAPICK_COMPANY_URL} target="_blank" rel="noopener">
           <span>manapick company</span><strong>企業を調べる <span aria-hidden="true">↗</span></strong>
-        </TrackedGaLink>
+        </a>
       </section>
 
       <section className="network-route-section" aria-labelledby="network-route-title">
@@ -260,9 +252,9 @@ export default function NetworkPage() {
               </div>
               <nav aria-label={`${genreDisplayName(genre)}の関連サービス`}>
                 <Link className="is-learn" href={`/genre/${genre}/`}>動画で学ぶ</Link>
-                <TrackedGaLink className="is-ai" href={manapickAiUrlForGenre(genre)} target="_blank" rel="noopener noreferrer" eventName="network_click" eventParams={{ destination_site: "ai", placement: "network_page_genre", genre }}>AIを選ぶ</TrackedGaLink>
-                <TrackedGaLink className="is-license" href={manapickLicenseUrlForGenre(genre)} target="_blank" rel="noopener noreferrer" eventName="network_click" eventParams={{ destination_site: "license", placement: "network_page_genre", genre }}>資格を選ぶ</TrackedGaLink>
-                <TrackedGaLink className="is-career" href={manapickCareerUrlForGenre(genre)} target="_blank" rel="noopener noreferrer" eventName="network_click" eventParams={{ destination_site: "career", placement: "network_page_genre", genre }}>仕事を知る</TrackedGaLink>
+                <a className="is-ai" href={manapickAiUrlForGenre(genre)} target="_blank" rel="noopener">AIを選ぶ</a>
+                <a className="is-license" href={manapickLicenseUrlForGenre(genre)} target="_blank" rel="noopener">資格を選ぶ</a>
+                <a className="is-career" href={manapickCareerUrlForGenre(genre)} target="_blank" rel="noopener">仕事を知る</a>
               </nav>
             </article>
           ))}
@@ -278,11 +270,11 @@ export default function NetworkPage() {
         <div className="network-career-grid">
           {careerEntrances.map((career) => (
             <article key={career.href}>
-              <TrackedGaLink href={career.href} target="_blank" rel="noopener noreferrer" eventName="network_click" eventParams={{ destination_site: "career", placement: "network_page_career" }}>
+              <a href={career.href} target="_blank" rel={externalRel(career.href)}>
                 <small>{career.profession}</small>
                 <strong>{career.label}</strong>
                 <span>仕事内容・必要スキルを見る <span aria-hidden="true">↗</span></span>
-              </TrackedGaLink>
+              </a>
               <Link href={career.guideHref}>関連する学習ロードマップ <span aria-hidden="true">→</span></Link>
             </article>
           ))}

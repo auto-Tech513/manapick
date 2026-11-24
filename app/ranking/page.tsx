@@ -140,7 +140,7 @@ export default function RankingPage() {
           })()}
         </section>
       ))}
-      <AdSlot slot="1438236565" />
+      <AdSlot slot="1438236565" placement="ranking-list" />
       <section id="genre-ranking" className="knowledge-section ranking-section" aria-labelledby="genre-ranking-title">
         <div className="ranking-section-head">
           <div>

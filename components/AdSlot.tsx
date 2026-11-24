@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { watchAdSlotStatus } from "@/lib/adsense-slot-status";
 
 type AdsWindow = Window & {
   adsbygoogle?: unknown[];
@@ -12,7 +13,8 @@ const CLIENT =
   process.env.NEXT_PUBLIC_ADSENSE_CLIENT?.trim() ||
   "ca-pub-4108900975353940";
 
-export default function AdSlot({ slot }: { slot: string }) {
+// placement：GA4 の adsense_slot_status で枠を見分ける名前（2026-11-24、■5 T1-3。表示・DOM には出さない）
+export default function AdSlot({ slot, placement }: { slot: string; placement: string }) {
   const slotRef = useRef<HTMLModElement>(null);
   const [state, setState] = useState<"pending" | "filled" | "empty">("pending");
 
@@ -21,6 +23,7 @@ export default function AdSlot({ slot }: { slot: string }) {
     if (!element) return;
 
     let disposed = false;
+    const statusWatch = watchAdSlotStatus(element, placement, slot);
     // 畳むのは未配信（unfilled）のときだけ。配信待ちの間は高さ 0・余白 0（globals.css）で空白を残さず、
     // filled になってから高さを取る。以前は 2.4 秒で配信待ちの枠も畳んでいたため、AdSense の処理が
     // それより遅れたページ下部の枠が二度と配信されなかった（2026-11-19 本番の実測：data-ad-status が付かないまま畳まれた枠あり）
@@ -46,7 +49,9 @@ export default function AdSlot({ slot }: { slot: string }) {
     try {
       const w = window as AdsWindow;
       (w.adsbygoogle = w.adsbygoogle || []).push({});
+      statusWatch.report("requested");
     } catch {
+      statusWatch.report("request_error");
       window.setTimeout(() => {
         if (!disposed) setState("empty");
       }, 0);
@@ -64,10 +69,11 @@ export default function AdSlot({ slot }: { slot: string }) {
     return () => {
       disposed = true;
       observer.disconnect();
+      statusWatch.dispose();
       window.clearTimeout(t1);
       window.clearTimeout(t2);
     };
-  }, [slot]);
+  }, [slot, placement]);
 
   return (
     <ins

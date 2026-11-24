@@ -265,7 +265,7 @@ export default async function SubGenrePage({ params }: SubGenrePageProps) {
         </FoldSection>
         </div>
 
-        <AdSlot slot="1438236565" />
+        <AdSlot slot="1438236565" placement="genre-sub-after-list" />
         <section className="sub-topic-section" aria-labelledby="sub-faq-title">
           <div className="sub-topic-heading">
             <p className="section-eyebrow">FAQ</p>

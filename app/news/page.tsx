@@ -144,7 +144,7 @@ export default function NewsPage() {
           ))}
         </div>
       </section>
-      <AdSlot slot="1438236565" />
+      <AdSlot slot="1438236565" placement="news-index-list" />
     </main>
   );
 }

@@ -147,7 +147,7 @@ export default function NewPage() {
           ))}
         </div>
       </section>
-      <AdSlot slot="1438236565" />
+      <AdSlot slot="1438236565" placement="new-list" />
     </main>
   );
 }

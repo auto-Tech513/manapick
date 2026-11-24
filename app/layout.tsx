@@ -6,6 +6,7 @@ import { MANAPICK_AI_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_ORIGIN, MANAPICK
 import SiteFooter from "@/components/SiteFooter";
 import SiteBottomNav from "@/components/SiteBottomNav";
 import NetworkRail from "@/components/NetworkRail";
+import NetworkClickTracker from "@/components/NetworkClickTracker";
 import { absoluteUrl, SITE_URL } from "@/lib/manapick";
 import "./globals.css";
 import "./lookbook.css";
@@ -193,6 +194,7 @@ export default function RootLayout({
         ) : null}
         {adsenseId ? <AdSenseScript client={adsenseId} /> : null}
         <PwaSetup />
+        <NetworkClickTracker />
         <NetworkRail />
         {children}
         <SiteFooter />

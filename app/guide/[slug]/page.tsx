@@ -268,7 +268,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           ))}
         </FoldSection>
 
-        <AdSlot slot="1438236565" />
+        <AdSlot slot="1438236565" placement="guide-after-reason" />
           <details className="guide-toc">
             <summary>目次</summary>
             <ol>
@@ -309,14 +309,14 @@ export default async function GuidePage({ params }: GuidePageProps) {
                   </div>
                 </section>
                 {/* 手動枠（2026-11-19 上部アンカー広告をやめた分の補い）：STEP の一覧の中ほど。前後に STEP をはさむ */}
-                {stepIndex === midStepAdIndex ? <AdSlot slot="1438236565" /> : null}
+                {stepIndex === midStepAdIndex ? <AdSlot slot="1438236565" placement="guide-mid-steps" /> : null}
                 </Fragment>
               );
             })}
           </div>
         </section>
 
-        <AdSlot slot="1438236565" />
+        <AdSlot slot="1438236565" placement="guide-after-steps" />
         <FoldSection className="guide-section" titleId="guide-next-title" title="つまずきポイントと回避策" hint={`${stumbleRows.length}項目`}>
           <div className="guide-table-wrap">
             <table className="guide-table">
@@ -421,7 +421,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
 
         {/* 手動枠（2026-11-19 上部アンカー広告をやめた分の補い）：記事を読み終えた位置。直前の枠との間に、
             つまずき・学習プラン・関連ロードマップ・メルマガ・関連情報の節をはさむ（1画面に2つ並ばない） */}
-        <AdSlot slot="1438236565" />
+        <AdSlot slot="1438236565" placement="guide-before-pr" />
 
         <GuidePrSection guide={guide} />
       </article>

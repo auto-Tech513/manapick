@@ -323,13 +323,13 @@ export default function StudyPlanBuilder({ genres, videos }: StudyPlanBuilderPro
           <p>先に無料動画を試し、必要性が分かってから比較先を選べます。紹介料で学習動画の順位は変えません。</p>
         </div>
         <div className="study-plan-network-grid">
-          <a className="is-ai" href={manapickAiUrlForGenre(genre)} target="_blank" rel="noopener noreferrer">
+          <a className="is-ai" href={manapickAiUrlForGenre(genre)} target="_blank" rel="noopener">
             <span>AIを選ぶ</span><strong>manapick AI</strong><small>料金・無料枠・使い方を確認</small>
           </a>
-          <a className="is-license" href={manapickLicenseUrlForGenre(genre)} target="_blank" rel="noopener noreferrer">
+          <a className="is-license" href={manapickLicenseUrlForGenre(genre)} target="_blank" rel="noopener">
             <span>資格を選ぶ</span><strong>manapick license</strong><small>要件・費用・申込方法を確認</small>
           </a>
-          <a className="is-career" href={manapickCareerUrlForGenre(genre)} target="_blank" rel="noopener noreferrer">
+          <a className="is-career" href={manapickCareerUrlForGenre(genre)} target="_blank" rel="noopener">
             <span>仕事を知る</span><strong>manapick career</strong><small>仕事内容・必要スキルを確認</small>
           </a>
           <Link className="is-shop" href="/shop/">

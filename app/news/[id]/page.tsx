@@ -8,6 +8,7 @@ import NewsShareBar from "@/components/NewsShareBar";
 import { absoluteUrl } from "@/lib/manapick";
 import { findNews, newsItems, newsPath, newsReadingMinutes, relatedNewsItems } from "@/lib/news";
 import NetworkContextBand from "@/components/NetworkContextBand";
+import { externalRel } from "@/lib/network-links";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import Phrase from "@/components/Phrase";
 
@@ -159,7 +160,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
           ) : null}
 
           {/* 手動枠（2026-11-19 上部アンカー広告をやめた分の補い）：本文の導入（公式発表で確認できたこと）の直後 */}
-          <AdSlot slot="1438236565" />
+          <AdSlot slot="1438236565" placement="news-after-facts" />
 
           <section className="news-why-care" aria-labelledby="why-care-title">
             <p className="section-eyebrow">Why It Matters</p>
@@ -192,7 +193,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
               {item.relatedLinks.map((link) => {
                 const external = link.href.startsWith("http");
                 return external ? (
-                  <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">{link.label} <span aria-hidden="true">↗</span></a>
+                  <a key={link.href} href={link.href} target="_blank" rel={externalRel(link.href)}>{link.label} <span aria-hidden="true">↗</span></a>
                 ) : (
                   <Link key={link.href} href={link.href}>{link.label} <span aria-hidden="true">→</span></Link>
                 );
@@ -221,7 +222,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
 
       {/* 手動枠（2026-11-19 ページ末尾の共有ボタンの下から移動）：本文と「同じカテゴリのニュース」を読み終えた位置。
           末尾より見られやすく、本文の導入直後の枠との間に本文の節をはさむ（PC・SP とも1画面に2つ並ばない） */}
-      <AdSlot slot="1438236565" />
+      <AdSlot slot="1438236565" placement="news-after-related" />
 
       <NetworkContextBand genreKey={NEWS_GENRE[item.category] ?? "biz"} skipHrefs={item.relatedLinks.map((link) => link.href)} />
 

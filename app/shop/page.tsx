@@ -56,8 +56,8 @@ export default function ShopPage() {
 
       <nav className="mp-shop-network" aria-label="3サイトのmanapi商店">
         <span aria-current="page"><strong>学ぶ</strong><small>manapick</small></span>
-        <a href="https://ai.manapick.app/shop/" target="_blank" rel="noopener noreferrer"><strong>AIを選ぶ</strong><small>manapick AI</small></a>
-        <a href="https://license.manapick.app/shop/" target="_blank" rel="noopener noreferrer"><strong>資格を選ぶ</strong><small>manapick license</small></a>
+        <a href="https://ai.manapick.app/shop/" target="_blank" rel="noopener"><strong>AIを選ぶ</strong><small>manapick AI</small></a>
+        <a href="https://license.manapick.app/shop/" target="_blank" rel="noopener"><strong>資格を選ぶ</strong><small>manapick license</small></a>
       </nav>
 
       <section className="mp-shop-policy" aria-label="掲載基準"><strong>掲載基準</strong><span>✓ 1用途1商品</span><span>✓ 公式仕様を確認</span><span>✓ 価格・在庫を断定しない</span></section>
@@ -74,7 +74,7 @@ export default function ShopPage() {
                   <img src={product.image} alt={`${product.name}の製品画像`} width={900} height={560} loading="lazy" />
                   <figcaption>{imageCredits[product.id]}</figcaption>
                 </figure>
-                <div><p className="mp-shop-maker"><span>PR案内</span>{product.maker}</p><h3>{product.name}</h3><p className="mp-shop-fit"><strong>向いている人</strong>{product.fit}</p><p>{product.reason}</p><ul>{product.checks.map((check) => <li key={check}>{check}</li>)}</ul><div className="mp-shop-actions"><a href={`https://ai.manapick.app/shop/#${product.id}`} target="_blank" rel="noopener noreferrer">購入先をAI版で確認 <span aria-hidden="true">↗</span></a><a href={product.officialUrl} target="_blank" rel="noopener noreferrer">公式仕様 <span aria-hidden="true">↗</span></a></div></div>
+                <div><p className="mp-shop-maker"><span>PR案内</span>{product.maker}</p><h3>{product.name}</h3><p className="mp-shop-fit"><strong>向いている人</strong>{product.fit}</p><p>{product.reason}</p><ul>{product.checks.map((check) => <li key={check}>{check}</li>)}</ul><div className="mp-shop-actions"><a href={`https://ai.manapick.app/shop/#${product.id}`} target="_blank" rel="noopener">購入先をAI版で確認 <span aria-hidden="true">↗</span></a><a href={product.officialUrl} target="_blank" rel="noopener noreferrer">公式仕様 <span aria-hidden="true">↗</span></a></div></div>
               </article>
             ))}
           </div>
