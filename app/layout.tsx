@@ -82,9 +82,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   // Google Discoverの大きな画像表示は max-image-preview:large で有効になる（Google検索セントラル）。
   // noindexが必要なページ（/my/ など）は各ページのrobots指定で上書きされる。
+  // Bing は name="robots" の max-image-preview 等を読む（googleBot だけでは Bing に伝わらない）。
   robots: {
     index: true,
     follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
     googleBot: {
       index: true,
       follow: true,
