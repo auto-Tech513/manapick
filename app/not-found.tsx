@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdFreeScreen from "@/components/AdFreeScreen";
 import BrandLogo from "@/components/BrandLogo";
 import Phrase from "@/components/Phrase";
 
@@ -12,6 +13,8 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <main className="min-h-screen bg-paper text-ink">
+      {/* 404 では AdSense を読み込まない（2026-11-26） */}
+      <AdFreeScreen />
       <header className="border-b border-ink/10 bg-white">
         <div className="mx-auto flex max-w-4xl items-center justify-between gap-4 px-4 py-4">
           <Link href="/" aria-label="Manapick トップ">

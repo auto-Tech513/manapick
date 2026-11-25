@@ -2,6 +2,8 @@ import { mkdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
+// 日本語の折り返し（行頭禁則つき）は guide・video の OG と共通の helpers を使う（2026-11-26、行頭に「。」が出ていたため）
+import { visualLength, wrapJapanese } from "./generate-guide-og-helpers.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const outputDir = path.join(repoRoot, "public/og/news");
@@ -16,27 +18,6 @@ const fontFamily = "'Noto Sans CJK JP','Noto Sans JP','Hiragino Sans','Yu Gothic
 
 function escapeXml(value) {
   return String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&apos;");
-}
-
-function visualLength(value) {
-  return [...value].reduce((sum, char) => sum + (/^[\u0000-\u00ff]$/.test(char) ? 0.62 : 1), 0);
-}
-
-export function wrapJapanese(value, limit) {
-  const segmenter = new Intl.Segmenter("ja", { granularity: "word" });
-  const tokens = [...segmenter.segment(value)].map((part) => part.segment);
-  const lines = [];
-  let current = "";
-  for (const token of tokens) {
-    if (current && visualLength(current + token) > limit) {
-      lines.push(current.trim());
-      current = token;
-    } else {
-      current += token;
-    }
-  }
-  if (current.trim()) lines.push(current.trim());
-  return lines;
 }
 
 function renderSvg(item) {

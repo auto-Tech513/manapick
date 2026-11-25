@@ -21,9 +21,15 @@ export function wrapJapanese(value, limit) {
   const tokens = [...segmenter.segment(value)].map((part) => part.segment);
   const lines = [];
   let current = "";
-  for (const token of tokens) {
-    // 行頭禁則：閉じ括弧・句読点は前の行に残す（わずかなはみ出しは許容）
-    if (current && visualLength(current + token) > limit && /^[、。，．」』】）〉》!?！？]/.test(token)) {
+  const noLineStart = /^[、。，．・：；」』】）〉》!?！？]/;
+  for (const [index, token] of tokens.entries()) {
+    // 空白の直後が行頭に置けない文字のときは、空白で行を分けない（行末に残った空白は trim で消える）
+    if (current && /^\s+$/.test(token) && noLineStart.test(tokens[index + 1] ?? "")) {
+      current += token;
+      continue;
+    }
+    // 行頭禁則：閉じ括弧・句読点・中黒は前の行に残す（わずかなはみ出しは許容）
+    if (current && visualLength(current + token) > limit && noLineStart.test(token)) {
       current += token;
       continue;
     }
