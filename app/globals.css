@@ -6455,6 +6455,12 @@ img {
   color: var(--color-company-pink-dark);
 }
 
+.sister-item-link.is-politics {
+  border-color: color-mix(in srgb, var(--color-politics-violet) 28%, var(--color-line));
+  background: linear-gradient(135deg, #fff, var(--color-politics-violet-soft));
+  color: var(--color-politics-violet-dark);
+}
+
 .sister-item-link:hover,
 .sister-item-link:focus-visible {
   box-shadow: var(--shadow-card);
@@ -6483,6 +6489,12 @@ img {
 .sister-item-link.is-company:focus-visible {
   border-color: color-mix(in srgb, var(--color-company-pink) 54%, var(--color-company-pink-line));
   color: var(--color-company-pink-dark);
+}
+
+.sister-item-link.is-politics:hover,
+.sister-item-link.is-politics:focus-visible {
+  border-color: color-mix(in srgb, var(--color-politics-violet) 54%, var(--color-politics-violet-line));
+  color: var(--color-politics-violet-dark);
 }
 
 .video-embed-note {
