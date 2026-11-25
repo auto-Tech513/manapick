@@ -24,6 +24,9 @@ import powerBiGuide from "@/content/guides/power-bi";
 import nisaGuide from "@/content/guides/nisa";
 import seoGuide from "@/content/guides/seo";
 import davinciResolveGuide from "@/content/guides/davinci-resolve";
+import geminiGuide from "@/content/guides/gemini";
+import premiereProGuide from "@/content/guides/premiere-pro";
+import statisticsGuide from "@/content/guides/statistics";
 import { videos, type Video } from "@/lib/manapick";
 
 export type Guide = {
@@ -103,7 +106,10 @@ export const guides: readonly Guide[] = [
   powerBiGuide,
   nisaGuide,
   seoGuide,
-  davinciResolveGuide
+  davinciResolveGuide,
+  geminiGuide,
+  premiereProGuide,
+  statisticsGuide
 ];
 
 export function guidePath(slug: string) {
