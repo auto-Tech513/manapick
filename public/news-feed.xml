@@ -5,7 +5,31 @@
     <link>https://manapick.app/news/</link>
     <description>公式発表を、学びと仕事に使える形へ整理します。</description>
     <language>ja</language>
-    <lastBuildDate>Mon, 23 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>AIエージェントがGmailやドライブを直接触る時代へ。WorkspaceのMCPサーバーとCLIが正式提供、利用枠の新体系も開始</title>
+      <link>https://manapick.app/news/2026-11-25-workspace-mcp-servers-cli-ga/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-25-workspace-mcp-servers-cli-ga/</guid>
+      <description>Googleは、AIエージェントをGoogle Workspaceにつなぐ公式のMCPサーバーとコマンドライン（CLI）を正式提供しました。あわせてAPI利用枠の2段階体系が始まり、エージェントへの管理者向けの統制も広がっています。</description>
+      <category>仕事・整理</category>
+      <pubDate>Tue, 24 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>簡単なはずの問題を、AIは毎回正解できるか。Googleが「Humanity&apos;s First Exam」をKaggleで公開</title>
+      <link>https://manapick.app/news/2026-11-25-humanitys-first-exam-kaggle/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-25-humanitys-first-exam-kaggle/</guid>
+      <description>Google DeepMindが、LLMの「信頼性」を測るベンチマークHumanity&apos;s First ExamをKaggleで公開しました。難しい問題ではなく、日常の平易な問題を毎回安定して解けるかを544問で測ります。</description>
+      <category>生成AI</category>
+      <pubDate>Tue, 24 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>炎のシェーダーは5分未満で生まれた。開発者がGemini 4 Neonで作った5つの作例をGoogleが紹介</title>
+      <link>https://manapick.app/news/2026-11-25-gemini-4-neon-builders/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-25-gemini-4-neon-builders/</guid>
+      <description>Googleは、Gemini 4 Neonを使って開発者が作った5つの作例を紹介しました。光る3D地球やThree.jsの蝶、ブラックホールのシェーダーなど、対話型の3D表現が中心です。Neonを試せる場所もあわせて整理しました。</description>
+      <category>生成AI</category>
+      <pubDate>Tue, 24 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>Gemini Notebookのフラッシュカード機能が強化、画像自動追加やストップウォッチ機能などが追加</title>
       <link>https://manapick.app/news/2026-11-24-new-study-enhancements-for-flashcards-in-gemini-notebo-0a64d511d3/</link>

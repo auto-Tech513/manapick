@@ -27,6 +27,9 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 ## 学びニュース
 - 一覧: https://manapick.app/news/
 - Google Workspaceや生成AIなど、社会人の学びと仕事に関係する公式一次情報を確認し、変更点と実務への影響を整理します。
+- 2026-11-25 AIエージェントがGmailやドライブを直接触る時代へ。WorkspaceのMCPサーバーとCLIが正式提供、利用枠の新体系も開始: https://manapick.app/news/2026-11-25-workspace-mcp-servers-cli-ga/ | 出典 Google Workspace Updates
+- 2026-11-25 簡単なはずの問題を、AIは毎回正解できるか。Googleが「Humanity's First Exam」をKaggleで公開: https://manapick.app/news/2026-11-25-humanitys-first-exam-kaggle/ | 出典 Google公式ブログ
+- 2026-11-25 炎のシェーダーは5分未満で生まれた。開発者がGemini 4 Neonで作った5つの作例をGoogleが紹介: https://manapick.app/news/2026-11-25-gemini-4-neon-builders/ | 出典 Google公式ブログ
 - 2026-11-24 Gemini Notebookのフラッシュカード機能が強化、画像自動追加やストップウォッチ機能などが追加: https://manapick.app/news/2026-11-24-new-study-enhancements-for-flashcards-in-gemini-notebo-0a64d511d3/ | 出典 Google Workspace Updates
 - 2026-11-23 検索が「自分の財布」を読んで答える。Google検索のPersonal IntelligenceにWalletが接続可能に、Driveは今後数週間で対応: https://manapick.app/news/2026-11-23-google-search-personal-intelligence-wallet-drive/ | 出典 Google公式ブログ
 - 2026-11-23 「有料版だけの特権」が終わった。Google Meetの1080p送信が全ユーザーに開放、対応パソコンではデフォルトでオン: https://manapick.app/news/2026-11-23-google-meet-1080p-all-users/ | 出典 Google Workspace Updates
@@ -34,9 +37,6 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 2026-11-20 自動化の実行・保存もリージョン管理下に。Workspace StudioがData Regionsに正式対応: https://manapick.app/news/2026-11-20-workspace-studio-data-regions-ga/ | 出典 Google Workspace Updates
 - 2026-11-20 Googleドキュメントのクライアントサイド暗号化機能でリアルタイム共同編集のベータ版が提供開始: https://manapick.app/news/2026-11-20-now-available-in-beta-collaborate-in-real-time-on-clie-e05ae42676/ | 出典 Google Workspace Updates
 - 2026-11-20 作った素材は使い回せる。Google VidsのAI動画生成に「Assets」保存が登場: https://manapick.app/news/2026-11-20-google-vids-assets-reuse-media/ | 出典 Google Workspace Updates
-- 2026-11-20 Google Chat、外部会話へのGoogle Vault対応を拡張。2027年2月中旬より順次適用: https://manapick.app/news/2026-11-20-expanded-google-vault-support-for-external-spaces-and--475ef49780/ | 出典 Google Workspace Updates
-- 2026-11-19 Google Workspace Studioでフローのコラボレーション動作を制御する新管理者設定が追加: https://manapick.app/news/2026-11-19-new-admin-setting-to-control-collaboration-steps-in-wo-07567b301e/ | 出典 Google Workspace Updates
-- 2026-11-19 「資料のリンクください」が消える。Google Meetが発表ファイルのリンク共有と権限変更を画面内に: https://manapick.app/news/2026-11-19-google-meet-share-presented-file-links/ | 出典 Google Workspace Updates
 
 ## ジャンル別AEOインデックス
 ### 生成AI（218本）

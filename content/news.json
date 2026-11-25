@@ -1,5 +1,190 @@
 [
   {
+    "id": "2026-11-25-workspace-mcp-servers-cli-ga",
+    "headline": "AIエージェントがGmailやドライブを直接触る時代へ。WorkspaceのMCPサーバーとCLIが正式提供、利用枠の新体系も開始",
+    "description": "Googleは、AIエージェントをGoogle Workspaceにつなぐ公式のMCPサーバーとコマンドライン（CLI）を正式提供しました。あわせてAPI利用枠の2段階体系が始まり、エージェントへの管理者向けの統制も広がっています。",
+    "category": "work",
+    "categoryLabel": "仕事・整理",
+    "publishedAt": "2026-11-25",
+    "lastChecked": "2026-11-25",
+    "sourceName": "Google Workspace Updates",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html",
+    "whyCare": "AIエージェントにメールやファイルの操作を任せる使い方が、個人の工夫ではなく公式の接続方法でできるようになります。利用枠の考え方と管理者側の統制が同時に整うため、仕事でエージェントを使う人ほど、自分の環境がどちらの枠に入るかを早めに把握しておく価値があります。",
+    "facts": [
+      "Workspace MCPサーバーと公式のWorkspace CLIが正式提供（GA）になった",
+      "MCPサーバーはGmail、ドライブ、ドキュメント、スプレッドシート、スライド、カレンダー、チャット、タスクに対応し、Keepは近日対応とされている",
+      "利用枠はStandard（無償・公開された上限）とScaled（より高い上限）の2段階で、まずGmail・ドライブ・カレンダーから適用される",
+      "Scaledの課金は2027年4月1日に始まり、日次の無料枠を超えた分だけが対象になる。何もしなければStandardの上限に制限される",
+      "稼働中の開発者の99%超はStandard枠の範囲内であり、追加費用なしで使い続けられると説明されている",
+      "AIエージェントはREST APIではなくMCP経由でのアクセスが必須になり、技術的な適用は2027年2月1日に始まる",
+      "新しいWorkspace AI Tools Addendum、管理コンソールでのエージェント管理、重要な操作での利用者確認、DLPと監査ログの自動適用が用意された"
+    ],
+    "sections": [
+      {
+        "heading": "エージェントのつなぎ方が2つ、公式になった",
+        "paragraphs": [
+          "Workspace MCPサーバーは、オープンなMCP標準に沿ったGoogle提供のサーバーです。クラウドやWeb上のAIエージェントが、Gmailやドライブなどに用意済みの道具（ツール）経由で安全につながり、個別の連携コードを書かずに操作できます。",
+          "もう一つのWorkspace CLIは、開発者のターミナルや仮想マシンなどの手元の環境からWorkspaceを操作するためのコマンドラインです。エージェント向けの技能（スキル）の同梱や、コマンドの動的な探索、範囲を絞ったサインインに対応します。"
+        ]
+      },
+      {
+        "heading": "利用枠は2段階に。課金は2027年4月から",
+        "paragraphs": [
+          "今回あわせて、Workspace APIとMCPサーバーの利用枠が標準化されました。無償で公開された上限まで使えるStandardと、より高い上限が必要なプロジェクト向けのScaledの2段階で、まずGmail・ドライブ・カレンダーから適用されます。",
+          "Scaledを選んだ場合の課金は2027年4月1日からで、日次の無料枠を超えた分だけが対象です。Googleは、稼働中の開発者の99%超がStandardの範囲内に収まると説明しています。何も手続きをしなければ、プロジェクトはStandardの上限に制限されます。"
+        ]
+      },
+      {
+        "heading": "エージェントはMCP経由が必須になる",
+        "paragraphs": [
+          "今後、AIエージェントのようなアクセス手段は、WorkspaceのREST APIを直接呼ぶのではなく、MCP経由でデータにアクセスすることが求められます。技術的な適用は2027年2月1日に始まるため、エージェントを作っている開発者は、それまでに接続方法の切り替えを計画する必要があります。",
+          "REST APIが決まった呼び出しのための仕組みであるのに対し、MCPサーバーとCLIは、エージェントが実行時に道具とスキーマを見つけて動く使い方に合わせて作られています。要約された結果が返る設計のため、トークン消費と待ち時間の削減にもつながるとされています。"
+        ]
+      },
+      {
+        "heading": "組織が握る統制も同時に広がった",
+        "paragraphs": [
+          "接続が簡単になるのと並行して、組織側の統制も用意されました。新しいWorkspace AI Tools Addendumでは、Workspace APIから得たデータの長期保存や、APIのスクレイピングなど、危険につながる使い方が禁じられています。",
+          "管理者は管理コンソールで外部エージェントのアクセスを通常のアプリと同じように管理でき、外部ファイルの読み取りやデータ共有のような重要な操作では、利用者に確認を求めるルールを設定できます。既存のDLPルールはエージェント利用時にも自動で適用され、操作と確認は監査ログに残ります。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "オフィススキル解説ガイド",
+        "href": "/guide/office-skills/",
+        "kind": "guide"
+      },
+      {
+        "label": "生成AI・自動化活用ガイド",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-25-humanitys-first-exam-kaggle",
+    "headline": "簡単なはずの問題を、AIは毎回正解できるか。Googleが「Humanity's First Exam」をKaggleで公開",
+    "description": "Google DeepMindが、LLMの「信頼性」を測るベンチマークHumanity's First ExamをKaggleで公開しました。難しい問題ではなく、日常の平易な問題を毎回安定して解けるかを544問で測ります。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "publishedAt": "2026-11-25",
+    "lastChecked": "2026-11-25",
+    "sourceName": "Google公式ブログ",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/humanitys-first-exam/",
+    "whyCare": "生成AIを使う側にとって大事なのは、難しい問題を一度だけ解けることより、簡単な依頼を毎回同じ品質でこなす安定感です。このベンチマークは、その「信頼性」を正面から測るもので、モデル選びや任せ方の判断材料が増える可能性があります。",
+    "facts": [
+      "Humanity's First Exam（HFE）はKaggleで公開されたベンチマークで、LLMが平易な日常の問題にどれだけ安定して答えられるかを測る",
+      "データセットは、基礎的な20の能力にわたる544件のテキスト・画像プロンプトで構成される",
+      "一度解けるかどうかではなく、わずかな言い換えも含めて毎回解けるかという一貫性を測る設計",
+      "過去6か月で、フロンティアモデルのHFEでの成績は大きく伸びていると報告されている",
+      "12月15日までの3週間、モデルが今も間違える日常の問題をコミュニティから募るKaggleコンペが開かれている"
+    ],
+    "sections": [
+      {
+        "heading": "測るのは「難しさ」ではなく「毎回の安定感」",
+        "paragraphs": [
+          "現在の主要モデルは、数学・コーディング・科学のような難しい領域では高い成績を出します。既存のベンチマークの多くは、その「解ける上限」を測ってきました。HFEが測るのは逆で、平易な日常の問題を、毎回もれなく正解できるかという信頼性です。",
+          "同じ問題でも、言い回しが少し変わるたびに答えがぶれるようでは、実務では安心して任せられません。HFEは、わずかなバリエーションを含めて一貫して解けるかを評価の中心に置いています。"
+        ]
+      },
+      {
+        "heading": "544問・20の基礎能力という中身",
+        "paragraphs": [
+          "データセットは544件のテキスト・画像プロンプトで、20の基礎的な能力にわたります。派手な専門知識ではなく、読み取り・数え上げ・順序の把握といった、土台になる処理の正確さを問う構成です。",
+          "Googleは、過去6か月でフロンティアモデルの成績が大きく伸びたとしています。難しい問題の上限だけでなく、簡単な問題の取りこぼしも、モデル世代ごとに減ってきていることがうかがえます。"
+        ]
+      },
+      {
+        "heading": "例題が示す、日常の落とし穴",
+        "paragraphs": [
+          "公開データセットの例題の一つは、ネオンサインの写真を見て「各単語の3文字目の色を順番に挙げる」というものです。人には他愛ない作業でも、画像の読み取りと順序の処理を同時に、間違えずに行う必要があります。",
+          "こうした問題は、AIに資料の読み取りや転記を任せるときの失敗と地続きです。ベンチマークの数字だけでなく、例題そのものが「AIがつまずく場所」の具体例として参考になります。"
+        ]
+      },
+      {
+        "heading": "コミュニティと一緒に問題を更新する",
+        "paragraphs": [
+          "HFEを最新の状態に保つため、GoogleはKaggleで3週間のコンペを開いています。締切は12月15日で、今のモデルがまだ間違える日常の問題を、参加者から募集します。",
+          "モデルが進歩すれば、簡単だった問題はさらに解けるようになります。問題の側を更新し続ける仕組みがあることで、ベンチマークがすぐに陳腐化しないよう工夫されています。リーダーボードはKaggle上で公開されています。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AI・自動化活用ガイド",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "まなぴっくAI",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-25-gemini-4-neon-builders",
+    "headline": "炎のシェーダーは5分未満で生まれた。開発者がGemini 4 Neonで作った5つの作例をGoogleが紹介",
+    "description": "Googleは、Gemini 4 Neonを使って開発者が作った5つの作例を紹介しました。光る3D地球やThree.jsの蝶、ブラックホールのシェーダーなど、対話型の3D表現が中心です。Neonを試せる場所もあわせて整理しました。",
+    "category": "ai",
+    "categoryLabel": "生成AI",
+    "publishedAt": "2026-11-25",
+    "lastChecked": "2026-11-25",
+    "sourceName": "Google公式ブログ",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-neon-builders/",
+    "whyCare": "作例はどれも、コードと3D表現を対話で組み立てていく使い方です。AIコーディングの到達点を、説明ではなく具体的な成果物で確かめられる材料であり、自分の制作や学習で試すときの題材選びの参考にもなります。",
+    "facts": [
+      "紹介された作例は5件で、3D地球、Three.jsの蝶、六角形の炎シェーダー、ブラックホールのシェーダー、振り子の波のシミュレーション",
+      "炎のシェーダーは、Neonを使い5分未満で作られたと紹介されている",
+      "作例はGoogle Antigravity上で、思考レベルをhighやxhighに上げて作られたものが中心",
+      "NeonはGemini APIの有料枠として、Google AI StudioとAndroid Studioから利用できる",
+      "有料のGoogle AI Pro/Ultra契約者は、AntigravityやGeminiアプリのモデル選択からもNeonを試せる"
+    ],
+    "sections": [
+      {
+        "heading": "光る3D地球と、Three.jsの蝶",
+        "paragraphs": [
+          "最初の作例は、文字どおりネオンに光る3D地球です。開発者のHarshithLucky3氏が、Google AntigravityでNeonの思考レベルをhighにして作りました。地球の見た目そのものを作り込む、生成と調整の往復が要る題材です。",
+          "thtbee_氏は思考レベルをxhighまで上げ、Three.jsで蝶を生み出しました。どちらも、コードを書くだけでなく、画面の動きと見た目を確認しながら直していく、対話型の制作の進め方を示しています。"
+        ]
+      },
+      {
+        "heading": "5分未満で生まれた炎のシェーダー",
+        "paragraphs": [
+          "anicho氏の六角形の炎シェーダーは、5分未満で作られたと紹介されています。Antigravityの/swarmという仕組みとNeonを組み合わせ、Webで動く対話型の表現に仕上げた作例です。",
+          "短時間で形になる一方で、題材はシェーダーという専門性の高い領域です。速さの記録としてよりも、「どの題材なら短時間で成立するか」の見極め材料として読むと、自分の制作への応用が考えやすくなります。"
+        ]
+      },
+      {
+        "heading": "ブラックホールと振り子の波",
+        "paragraphs": [
+          "kimmonismus氏の作例は、対話型の3Dブラックホールシェーダーです。カメラの視点を切り替えられ、レンズ効果のゆがみをスライダーで調整できるようになっています。",
+          "goodhunt氏は、球の周期がつくる干渉模様を描く3Dの振り子の波のシミュレーションを作りました。物理の可視化のような題材でも、対話で組み立てられることが分かる作例です。"
+        ]
+      },
+      {
+        "heading": "Neonはどこで試せるか",
+        "paragraphs": [
+          "開発者は、Gemini APIの有料枠としてGoogle AI StudioとAndroid StudioからNeonを使えます。有料のGoogle AI Pro/Ultra契約者は、Antigravityでも試せます。",
+          "Pro/Ultra契約者はAI Studio、またはGeminiアプリのモデル選択でGemini 4 Neonを選ぶ形でも利用できます。企業向けには、Gemini for businessやAntigravityでの利用が案内されています。"
+        ]
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "生成AI・自動化活用ガイド",
+        "href": "/guide/generative-ai/",
+        "kind": "guide"
+      },
+      {
+        "label": "まなぴっくAI",
+        "href": "https://ai.manapick.app/",
+        "kind": "ai"
+      }
+    ]
+  },
+  {
     "id": "2026-11-24-new-study-enhancements-for-flashcards-in-gemini-notebo-0a64d511d3",
     "headline": "Gemini Notebookのフラッシュカード機能が強化、画像自動追加やストップウォッチ機能などが追加",
     "description": "Gemini Notebookのフラッシュカード機能に3つの更新が追加されました。アップロード資料からの画像自動追加、時間計測用のストップウォッチ機能、モバイルアプリでの復習リマインダー通知設定が可能になりました。個人アカウントを含む全Google Workspaceユーザーが利用可能です。",
