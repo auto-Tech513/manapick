@@ -38,60 +38,13 @@ const axes = [
   ["規約・権利", "YouTube上で視聴でき、紹介上のリスクが低いか"]
 ];
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Manapickスコアは何点満点ですか？",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Manapickスコアは、実用性、正確性・鮮度、分かりやすさ、体系性、信頼性、視聴体験、規約・権利の7軸を各5点で見た35点満点です。"
-      }
-    },
-    {
-      "@type": "Question",
-      name: "掲載動画はどのように確認していますか？",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "掲載動画は、運営者の視聴、またはYouTube上の公開情報（タイトル・概要欄・チャプター・公開日・再生回数）の確認にもとづき、7軸35点で採点しています。公開状態と埋め込み可否はYouTube Data APIで定期的に確認しています。"
-      }
-    },
-    {
-      "@type": "Question",
-      name: "どのような動画は掲載しませんか？",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "正確性・鮮度が低い動画、規約・権利面で扱いにくい動画、誤情報、釣りタイトル、情報商材への強い誘導、過度な収益保証を含む動画は不採用にします。"
-      }
-    },
-    {
-      "@type": "Question",
-      name: "レベルはどのように分けていますか？",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "初級は前提知識なしで見られる入口、中級は基礎を触れた人向けの応用・体系化、上級は実務応用や専門特化の動画です。"
-      }
-    },
-    {
-      "@type": "Question",
-      name: "編集メモは何を示していますか？",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "編集メモは、スコアとは別に人間の編集者がその動画をなぜ選んだかを1行で補足するものです。空の動画では表示しません。"
-      }
-    }
-  ]
-};
+// FAQPage の JSON-LD は外した（2026-11-25）。質問文がページに表示されておらず、
+// 構造化データは表示している内容と一致させるという Google・Bing のガイドラインに合わないため。
+// 回答の内容は本文の「確認と採点の方法」「レベルの定義」などに表示している。
 
 export default function AboutScorePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }}
-      />
       <main className="score-page">
         <header className="score-page-header google-anno-skip">
           <Link href="/" aria-label="Manapick トップへ">

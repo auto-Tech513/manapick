@@ -69,6 +69,10 @@ export default function OperatorPage() {
           body: "Manapick Networkは、動画で学ぶManapick、AIを選ぶmanapick AI、資格を比べるmanapick license、仕事を知るmanapick career、企業を調べるmanapick companyの5サイトで構成しています。各サイトはそれぞれの運営方針で一次情報の確認を行っています。役割と使い分けは /network/ で案内しています。"
         },
         {
+          heading: "検索エンジン・AIのクローラー",
+          body: "検索エンジンやAIサービスのクローラー（学習用を含む）を区別せず、robots.txtで同じ条件でアクセスを許可しています。"
+        },
+        {
           heading: "更新と免責",
           body: "動画の著作権や内容は各チャンネルに帰属します。Manapickの紹介文やスコアは掲載時点の情報をもとにした編集上の整理であり、学習成果や資格合格を保証するものではありません。詳しくは /disclaimer/ の免責事項をご確認ください。"
         }

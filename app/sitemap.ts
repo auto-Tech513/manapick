@@ -80,12 +80,26 @@ function latestVideoDate(items: readonly Video[]) {
   return timestamps.length ? new Date(Math.max(...timestamps)) : null;
 }
 
+function latestDate(values: readonly (string | undefined)[]) {
+  const timestamps = values
+    .map(safeDate)
+    .filter((date): date is Date => date !== null)
+    .map((date) => date.getTime());
+  return timestamps.length ? new Date(Math.max(...timestamps)) : null;
+}
+
+// 一覧ページは、載せている記事の日付の最新を lastmod にする（記事ページの lastmod と同じ値から作る）。
+const HUB_DATES = new Map<string, Date | null>([
+  ["/guide/", latestDate(guides.map((guide) => guide.updatedAt ?? guide.publishedAt))],
+  ["/news/", latestDate(newsItems.map((item) => item.lastChecked))]
+]);
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticRoutes.map((route) => {
       // 確認日が登録されていない静的ページは lastmod を付けない。
       // 無関係な最新日にフォールバックすると全ページが同日に見える。
-      const reviewedAt = safeDate(PAGE_REVIEW_DATES.get(route));
+      const reviewedAt = safeDate(PAGE_REVIEW_DATES.get(route)) ?? HUB_DATES.get(route) ?? null;
       return {
         url: absoluteUrl(route),
         ...(reviewedAt ? { lastModified: reviewedAt } : {}),
