@@ -128,9 +128,15 @@ export default function SiteSearchForm({ id, className = "" }: { id: string; cla
   }
 
   function handleKeyDown(event: ReactKeyboardEvent<HTMLInputElement>) {
+    // 日本語の変換中のキー（確定の Enter・候補選びの矢印など）は扱わない。
+    if (event.nativeEvent.isComposing || event.keyCode === 229) return;
     if (event.key === "Escape") {
       if (open) {
+        // 候補だけを閉じる。既定の動き（type="search" の文字消去）を止めないと、消去で onChange が走り候補が開き直す。
+        // トップのメニューは document の keydown で閉じるため、同じ document の後続の受け手にも渡さない。
+        event.preventDefault();
         event.stopPropagation();
+        event.nativeEvent.stopImmediatePropagation();
         setOpen(false);
       }
       return;

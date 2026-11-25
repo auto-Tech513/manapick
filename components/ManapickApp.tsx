@@ -1069,6 +1069,8 @@ function ManapickAppMain({
   }
 
   function handleSearchKeyDown(event: ReactKeyboardEvent<HTMLInputElement>) {
+    // 日本語の変換中のキー（確定の Enter・候補選びの矢印など）は扱わない。Safari は確定の Enter を変換の終了後に keyCode 229 で送る。
+    if (event.nativeEvent.isComposing || event.keyCode === 229) return;
     if (event.key === "Escape") {
       setSuggestionsOpen(false);
       return;
