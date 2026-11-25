@@ -27,6 +27,7 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 ## 学びニュース
 - 一覧: https://manapick.app/news/
 - Google Workspaceや生成AIなど、社会人の学びと仕事に関係する公式一次情報を確認し、変更点と実務への影響を整理します。
+- 2026-11-24 Gemini Notebookのフラッシュカード機能が強化、画像自動追加やストップウォッチ機能などが追加: https://manapick.app/news/2026-11-24-new-study-enhancements-for-flashcards-in-gemini-notebo-0a64d511d3/ | 出典 Google Workspace Updates
 - 2026-11-23 検索が「自分の財布」を読んで答える。Google検索のPersonal IntelligenceにWalletが接続可能に、Driveは今後数週間で対応: https://manapick.app/news/2026-11-23-google-search-personal-intelligence-wallet-drive/ | 出典 Google公式ブログ
 - 2026-11-23 「有料版だけの特権」が終わった。Google Meetの1080p送信が全ユーザーに開放、対応パソコンではデフォルトでオン: https://manapick.app/news/2026-11-23-google-meet-1080p-all-users/ | 出典 Google Workspace Updates
 - 2026-11-23 AIエージェントの長文が、やっと区切って読める。Google Chatのアプリ投稿に「表」と「見出し」が対応: https://manapick.app/news/2026-11-23-google-chat-tables-headings/ | 出典 Google Workspace Updates
@@ -36,7 +37,6 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 2026-11-20 Google Chat、外部会話へのGoogle Vault対応を拡張。2027年2月中旬より順次適用: https://manapick.app/news/2026-11-20-expanded-google-vault-support-for-external-spaces-and--475ef49780/ | 出典 Google Workspace Updates
 - 2026-11-19 Google Workspace Studioでフローのコラボレーション動作を制御する新管理者設定が追加: https://manapick.app/news/2026-11-19-new-admin-setting-to-control-collaboration-steps-in-wo-07567b301e/ | 出典 Google Workspace Updates
 - 2026-11-19 「資料のリンクください」が消える。Google Meetが発表ファイルのリンク共有と権限変更を画面内に: https://manapick.app/news/2026-11-19-google-meet-share-presented-file-links/ | 出典 Google Workspace Updates
-- 2026-11-19 Outlookで追加したゲストも漏れない。Googleカレンダーがゲスト追加をサービス間で自動同期: https://manapick.app/news/2026-11-19-google-calendar-guest-additions-sync/ | 出典 Google Workspace Updates
 
 ## ジャンル別AEOインデックス
 ### 生成AI（218本）

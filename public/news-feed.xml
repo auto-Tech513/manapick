@@ -5,7 +5,23 @@
     <link>https://manapick.app/news/</link>
     <description>公式発表を、学びと仕事に使える形へ整理します。</description>
     <language>ja</language>
-    <lastBuildDate>Sun, 22 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Gemini Notebookのフラッシュカード機能が強化、画像自動追加やストップウォッチ機能などが追加</title>
+      <link>https://manapick.app/news/2026-11-24-new-study-enhancements-for-flashcards-in-gemini-notebo-0a64d511d3/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-24-new-study-enhancements-for-flashcards-in-gemini-notebo-0a64d511d3/</guid>
+      <description>Gemini Notebookのフラッシュカード機能に3つの更新が追加されました。アップロード資料からの画像自動追加、時間計測用のストップウォッチ機能、モバイルアプリでの復習リマインダー通知設定が可能になりました。個人アカウントを含む全Google Workspaceユーザーが利用可能です。</description>
+      <category>生成AI</category>
+      <pubDate>Mon, 23 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>検索が「自分の財布」を読んで答える。Google検索のPersonal IntelligenceにWalletが接続可能に、Driveは今後数週間で対応</title>
+      <link>https://manapick.app/news/2026-11-23-google-search-personal-intelligence-wallet-drive/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-23-google-search-personal-intelligence-wallet-drive/</guid>
+      <description>Google検索のAIモードで、自分専用の文脈を使う「Personal Intelligence」にGoogle Walletを接続できるようになりました。支出の傾向を踏まえた回答が返ります。Google Driveの接続は今後数週間で対応予定です。接続は任意で、いつでも切れます。</description>
+      <category>生成AI</category>
+      <pubDate>Sun, 22 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>「有料版だけの特権」が終わった。Google Meetの1080p送信が全ユーザーに開放、対応パソコンではデフォルトでオン</title>
       <link>https://manapick.app/news/2026-11-23-google-meet-1080p-all-users/</link>
@@ -23,12 +39,12 @@
       <pubDate>Sun, 22 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>検索が「自分の財布」を読んで答える。Google検索のPersonal IntelligenceにWalletが接続可能に、Driveは今後数週間で対応</title>
-      <link>https://manapick.app/news/2026-11-23-google-search-personal-intelligence-wallet-drive/</link>
-      <guid isPermaLink="true">https://manapick.app/news/2026-11-23-google-search-personal-intelligence-wallet-drive/</guid>
-      <description>Google検索のAIモードで、自分専用の文脈を使う「Personal Intelligence」にGoogle Walletを接続できるようになりました。支出の傾向を踏まえた回答が返ります。Google Driveの接続は今後数週間で対応予定です。接続は任意で、いつでも切れます。</description>
-      <category>生成AI</category>
-      <pubDate>Sun, 22 Nov 2026 15:00:00 GMT</pubDate>
+      <title>自動化の実行・保存もリージョン管理下に。Workspace StudioがData Regionsに正式対応</title>
+      <link>https://manapick.app/news/2026-11-20-workspace-studio-data-regions-ga/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-20-workspace-studio-data-regions-ga/</guid>
+      <description>Google Workspace StudioがData Regionsに正式対応しました。フローの実行・保存が米国／EUのデータリージョンポリシーに従うようになり、管理コンソールに専用の制御項目も追加。2026年11月10日から段階的に展開されています。</description>
+      <category>仕事・整理</category>
+      <pubDate>Thu, 19 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Googleドキュメントのクライアントサイド暗号化機能でリアルタイム共同編集のベータ版が提供開始</title>
@@ -55,14 +71,6 @@
       <pubDate>Thu, 19 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>自動化の実行・保存もリージョン管理下に。Workspace StudioがData Regionsに正式対応</title>
-      <link>https://manapick.app/news/2026-11-20-workspace-studio-data-regions-ga/</link>
-      <guid isPermaLink="true">https://manapick.app/news/2026-11-20-workspace-studio-data-regions-ga/</guid>
-      <description>Google Workspace StudioがData Regionsに正式対応しました。フローの実行・保存が米国／EUのデータリージョンポリシーに従うようになり、管理コンソールに専用の制御項目も追加。2026年11月10日から段階的に展開されています。</description>
-      <category>仕事・整理</category>
-      <pubDate>Thu, 19 Nov 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
       <title>Google Workspace Studioでフローのコラボレーション動作を制御する新管理者設定が追加</title>
       <link>https://manapick.app/news/2026-11-19-new-admin-setting-to-control-collaboration-steps-in-wo-07567b301e/</link>
       <guid isPermaLink="true">https://manapick.app/news/2026-11-19-new-admin-setting-to-control-collaboration-steps-in-wo-07567b301e/</guid>
@@ -79,18 +87,18 @@
       <pubDate>Wed, 18 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Google、Web版カレンダーからGmail作成画面を直接開く機能更新を発表</title>
-      <link>https://manapick.app/news/2026-11-19-email-meeting-guests-from-google-calendar-with-the-ful-57620a6fd9/</link>
-      <guid isPermaLink="true">https://manapick.app/news/2026-11-19-email-meeting-guests-from-google-calendar-with-the-ful-57620a6fd9/</guid>
-      <description>GoogleはWeb版Googleカレンダーの「ゲストにメール」機能を更新し、カレンダー上からネイティブなGmail作成ウィンドウを直接開けるようにすると発表した。これにより、RSVP別の宛先選択や代理人への一括置換が可能になり、Gmailのリッチテキスト装飾や送信日時指定、Drive権限チェックなどのフル機能を活用して会議連絡を送れるようになる。</description>
-      <category>仕事・整理</category>
-      <pubDate>Wed, 18 Nov 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
       <title>Outlookで追加したゲストも漏れない。Googleカレンダーがゲスト追加をサービス間で自動同期</title>
       <link>https://manapick.app/news/2026-11-19-google-calendar-guest-additions-sync/</link>
       <guid isPermaLink="true">https://manapick.app/news/2026-11-19-google-calendar-guest-additions-sync/</guid>
       <description>Googleカレンダーのゲスト追加が、Outlookなど他社カレンダーサービスと自動で同期するようになりました。追加した側は主催者へメール通知、受け取った側は予定のゲスト欄を自動更新します。全Workspace顧客と個人アカウントが対象です。</description>
+      <category>仕事・整理</category>
+      <pubDate>Wed, 18 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google、Web版カレンダーからGmail作成画面を直接開く機能更新を発表</title>
+      <link>https://manapick.app/news/2026-11-19-email-meeting-guests-from-google-calendar-with-the-ful-57620a6fd9/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-19-email-meeting-guests-from-google-calendar-with-the-ful-57620a6fd9/</guid>
+      <description>GoogleはWeb版Googleカレンダーの「ゲストにメール」機能を更新し、カレンダー上からネイティブなGmail作成ウィンドウを直接開けるようにすると発表した。これにより、RSVP別の宛先選択や代理人への一括置換が可能になり、Gmailのリッチテキスト装飾や送信日時指定、Drive権限チェックなどのフル機能を活用して会議連絡を送れるようになる。</description>
       <category>仕事・整理</category>
       <pubDate>Wed, 18 Nov 2026 15:00:00 GMT</pubDate>
     </item>
@@ -159,6 +167,22 @@
       <pubDate>Sun, 15 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
+      <title>「直したくない所まで変わる」問題に。Google PicsがNano Banana 2.1で編集の忠実度アップ</title>
+      <link>https://manapick.app/news/2026-11-16-google-pics-nano-banana-2-1/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-16-google-pics-nano-banana-2-1/</guid>
+      <description>Google Picsの画像生成・編集モデルがNano Banana 2.1にアップグレード。画質と編集の忠実度、画像内テキストの描画が改善され、DocsやSlides内の画像編集にも同じモデルが使われます。2026年11月16日から1〜3日で全展開されます。</description>
+      <category>生成AI</category>
+      <pubDate>Sun, 15 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>「誰が・どの端末で」まで追える。Classroomのログにアプリ名とデバイスIDが追加</title>
+      <link>https://manapick.app/news/2026-11-16-google-classroom-log-events-detail/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-16-google-classroom-log-events-detail/</guid>
+      <description>Google Classroomのログイベントに「操作したアプリ名」と「ユーザーデバイスID」の2項目が追加されました。どのアプリ・どの端末からの操作かを管理コンソールで追えるようになります。対象はEducation各エディションと非営利団体向けです。</description>
+      <category>学び方</category>
+      <pubDate>Sun, 15 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
       <title>会議の連続で休めない問題に。Googleカレンダーが「5分遅く始める／5分早く終わる」をカレンダーごとに設定可能に</title>
       <link>https://manapick.app/news/2026-11-16-google-calendar-event-buffer/</link>
       <guid isPermaLink="true">https://manapick.app/news/2026-11-16-google-calendar-event-buffer/</guid>
@@ -180,22 +204,6 @@
       <guid isPermaLink="true">https://manapick.app/news/2026-11-16-compare-docx-files-in-google-docs-f2539572/</guid>
       <description>Googleドキュメントの「ドキュメントを比較」がMicrosoft Word（.docx）ファイルに対応しました。変換せずにそのまま比較できるため、複製ファイルでドライブが散らからず、WordとDocsを行き来するレビューが滑らかになります。</description>
       <category>仕事・整理</category>
-      <pubDate>Sun, 15 Nov 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>「直したくない所まで変わる」問題に。Google PicsがNano Banana 2.1で編集の忠実度アップ</title>
-      <link>https://manapick.app/news/2026-11-16-google-pics-nano-banana-2-1/</link>
-      <guid isPermaLink="true">https://manapick.app/news/2026-11-16-google-pics-nano-banana-2-1/</guid>
-      <description>Google Picsの画像生成・編集モデルがNano Banana 2.1にアップグレード。画質と編集の忠実度、画像内テキストの描画が改善され、DocsやSlides内の画像編集にも同じモデルが使われます。2026年11月16日から1〜3日で全展開されます。</description>
-      <category>生成AI</category>
-      <pubDate>Sun, 15 Nov 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>「誰が・どの端末で」まで追える。Classroomのログにアプリ名とデバイスIDが追加</title>
-      <link>https://manapick.app/news/2026-11-16-google-classroom-log-events-detail/</link>
-      <guid isPermaLink="true">https://manapick.app/news/2026-11-16-google-classroom-log-events-detail/</guid>
-      <description>Google Classroomのログイベントに「操作したアプリ名」と「ユーザーデバイスID」の2項目が追加されました。どのアプリ・どの端末からの操作かを管理コンソールで追えるようになります。対象はEducation各エディションと非営利団体向けです。</description>
-      <category>学び方</category>
       <pubDate>Sun, 15 Nov 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
