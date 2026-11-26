@@ -225,6 +225,7 @@ const lines = [
   "- 姉妹サイト（資格・検定比較）: https://license.manapick.app/",
   "- 姉妹サイト（職業情報）: https://career.manapick.app/",
   "- 姉妹サイト（企業情報）: https://company.manapick.app/",
+  "- 姉妹サイト（政治・法律）: https://politics.manapick.app/",
   "",
   "## クローラー向け補足",
   "Manapickの本文、見出し、動画タイトル、レビューはHTMLテキストとして提供しています。検索・絞り込みUIは補助機能であり、主要な動画詳細ページは静的URLで参照できます。",

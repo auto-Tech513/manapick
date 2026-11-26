@@ -1830,7 +1830,7 @@ function ManapickAppMain({
               <span className="lb-code">MP-06 · TRANSFER</span>
               <h2 id="xfer-title"><span className="bx">見たあとは、<wbr />乗り換えて<wbr />次へ。</span></h2>
             </div>
-            <p>動画で学んだ内容を、道具・資格・仕事・企業の情報へつなぎます。</p>
+            <p>動画で学んだ内容を、道具・資格・仕事・企業・政治と法律の情報へつなぎます。</p>
           </div>
           <div className="lb-xfer-grid">
             {(() => {

@@ -48,6 +48,7 @@ function relatedItems(genreKey: string, sub: string | undefined, site: NetworkSi
 
 export default function NetworkContextBand({ genreKey, sub, skipHrefs = [], pagePath }: NetworkContextBandProps) {
   const genreName = genreDisplayName(genreKey);
+  const subject = sub ?? genreName;
   const skip = new Set(skipHrefs);
   const deepLinks = pagePath ? (AI_DEEP_LINKS[pagePath] ?? []).slice(0, 2) : [];
 
@@ -57,7 +58,7 @@ export default function NetworkContextBand({ genreKey, sub, skipHrefs = [], page
       eyebrow: "資格を選ぶ",
       title: "manapick license",
       more: manapickLicenseUrlForGenre(genreKey),
-      moreLabel: "資格をもっと見る",
+      moreLabel: `${subject}の資格をもっと見る`,
       items: relatedItems(genreKey, sub, "license", skip)
     },
     {
@@ -65,7 +66,7 @@ export default function NetworkContextBand({ genreKey, sub, skipHrefs = [], page
       eyebrow: "仕事を知る",
       title: "manapick career",
       more: manapickCareerUrlForGenre(genreKey),
-      moreLabel: "仕事をもっと見る",
+      moreLabel: `${subject}の仕事をもっと見る`,
       items: relatedItems(genreKey, sub, "career", skip)
     },
     {
@@ -73,7 +74,7 @@ export default function NetworkContextBand({ genreKey, sub, skipHrefs = [], page
       eyebrow: "学習に使うAI",
       title: "manapick AI",
       more: manapickAiUrlForGenre(genreKey),
-      moreLabel: "AIをもっと見る",
+      moreLabel: `${subject}で使うAIをもっと見る`,
       items: relatedItems(genreKey, sub, "ai", skip, deepLinks)
     },
     {
@@ -86,7 +87,6 @@ export default function NetworkContextBand({ genreKey, sub, skipHrefs = [], page
     }
   ].filter((card) => card.site !== "company" || card.items.length > 0);
 
-  const subject = sub ?? genreName;
   const hasCompany = cards.some((card) => card.site === "company");
 
   return (
