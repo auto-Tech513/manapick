@@ -2067,6 +2067,29 @@
    "slug": "adobe-firefly",
    "name": "Adobe Firefly",
    "url": "https://ai.manapick.app/tool/adobe-firefly/"
+  }  ],
+ "DvARWPB4xJ4":  [
+  {
+   "site": "license",
+   "slug": "aws-clf",
+   "name": "AWS認定 クラウドプラクティショナー（CLF）",
+   "url": "https://license.manapick.app/license/aws-clf/"
+  }
+ ],
+ "UO_O6Bsoh00":  [
+  {
+   "site": "license",
+   "slug": "sharoshi",
+   "name": "社会保険労務士（社労士）",
+   "url": "https://license.manapick.app/license/sharoshi/"
+  }
+ ],
+ "aW7HKndRhyI":  [
+  {
+   "site": "ai",
+   "slug": "elevenlabs",
+   "name": "ElevenLabs",
+   "url": "https://ai.manapick.app/tool/elevenlabs/"
   }
  ]
 }
