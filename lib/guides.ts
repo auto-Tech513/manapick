@@ -27,6 +27,9 @@ import davinciResolveGuide from "@/content/guides/davinci-resolve";
 import geminiGuide from "@/content/guides/gemini";
 import premiereProGuide from "@/content/guides/premiere-pro";
 import statisticsGuide from "@/content/guides/statistics";
+import eikaiwaGuide from "@/content/guides/eikaiwa";
+import kakeiGuide from "@/content/guides/kakei";
+import instagramGuide from "@/content/guides/instagram";
 import { videos, type Video } from "@/lib/manapick";
 
 export type Guide = {
@@ -109,7 +112,10 @@ export const guides: readonly Guide[] = [
   davinciResolveGuide,
   geminiGuide,
   premiereProGuide,
-  statisticsGuide
+  statisticsGuide,
+  eikaiwaGuide,
+  kakeiGuide,
+  instagramGuide
 ];
 
 export function guidePath(slug: string) {
