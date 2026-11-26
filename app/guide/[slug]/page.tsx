@@ -118,7 +118,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
   const quickFaq = guide.faq.slice(0, 4);
   const remainingFaq = guide.faq.slice(4);
   // STEP の一覧の中ほどに置く手動枠の位置。STEP が4つ以上のときだけ（3つ以下では前後の枠と1画面に並ぶため置かない）
-  const midStepAdIndex = guide.steps.length >= 4 ? Math.ceil(guide.steps.length / 2) - 1 : -1;
+  const showStepsAd = guide.steps.length >= 4;
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -281,6 +281,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
               <li><a href="#guide-cta-title">関連ロードマップ</a></li>
             </ol>
           </details>
+        {/* 手動枠（2026-11-19 上部アンカー広告をやめた分の補い）：2026-11-26 オーナー指示で STEP の一覧の中ほどから、STEP セクションの直前（セクションの切れ目）へ移動。表示条件（STEP 4つ以上）と枠数は不変 */}
+        {showStepsAd ? <AdSlot slot="1438236565" placement="guide-before-steps" /> : null}
         <section className="guide-section" aria-labelledby="guide-videos-title">
           <h2 id="guide-videos-title">各STEPの厳選動画</h2>
           <div className="guide-step-list">
@@ -307,8 +309,6 @@ export default async function GuidePage({ params }: GuidePageProps) {
                     ))}
                   </div>
                 </section>
-                {/* 手動枠（2026-11-19 上部アンカー広告をやめた分の補い）：STEP の一覧の中ほど。前後に STEP をはさむ */}
-                {stepIndex === midStepAdIndex ? <AdSlot slot="1438236565" placement="guide-mid-steps" /> : null}
                 </Fragment>
               );
             })}
