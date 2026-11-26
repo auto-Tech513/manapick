@@ -1,19 +1,19 @@
 # Manapick
 
-Manapickは、社会人の学び直し・リスキリングに役立つYouTube学習動画を、独自レビューとManapickスコアで整理するキュレーションサイトです。
-動画はYouTube上で公開されているものを掲載し、YouTubeへのリンクまたはYouTube公式プレーヤーで紹介します。ダウンロードや再配布は扱いません。
+> Manapickは、社会人の学び直し・リスキリングに役立つYouTube学習動画を、独自レビューとManapickスコアで整理するキュレーションサイトです。
+> 動画はYouTube上で公開されているものを掲載し、YouTubeへのリンクまたはYouTube公式プレーヤーで紹介します。ダウンロードや再配布は扱いません。
 
 ## 公開中の10ジャンル
-- 生成AI（219本）: https://manapick.app/genre/ai/
-- プログラミング・IT（73本）: https://manapick.app/genre/prog/
-- 動画編集・クリエイティブ（69本）: https://manapick.app/genre/video/
-- 語学・英語（60本）: https://manapick.app/genre/english/
-- データ分析・DX（37本）: https://manapick.app/genre/data/
-- Webマーケ・SNS運用（38本）: https://manapick.app/genre/marke/
-- Office・資料作成（39本）: https://manapick.app/genre/biz/
-- 資格・検定（257本）: https://manapick.app/genre/shikaku/
-- 会計・経営系資格（58本）: https://manapick.app/genre/kaikei/
-- お金・投資（30本）: https://manapick.app/genre/money/
+- [生成AI（219本）](https://manapick.app/genre/ai/)
+- [プログラミング・IT（73本）](https://manapick.app/genre/prog/)
+- [動画編集・クリエイティブ（69本）](https://manapick.app/genre/video/)
+- [語学・英語（60本）](https://manapick.app/genre/english/)
+- [データ分析・DX（37本）](https://manapick.app/genre/data/)
+- [Webマーケ・SNS運用（38本）](https://manapick.app/genre/marke/)
+- [Office・資料作成（39本）](https://manapick.app/genre/biz/)
+- [資格・検定（257本）](https://manapick.app/genre/shikaku/)
+- [会計・経営系資格（58本）](https://manapick.app/genre/kaikei/)
+- [お金・投資（30本）](https://manapick.app/genre/money/)
 
 ## 採点方法
 - Manapickスコアは7軸×5点=35点満点です。
@@ -22,26 +22,26 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - 掲載動画は、運営者の視聴、またはYouTube上の公開情報（タイトル・概要欄・チャプター・公開日・再生回数）の確認にもとづき、7軸35点で採点しています。公開状態と埋め込み可否はYouTube Data APIで定期的に確認しています。
 
 ## ガイド記事
-- 学習ロードマップ一覧: https://manapick.app/guide/
+- [学習ロードマップ一覧](https://manapick.app/guide/)
 
 ## 学びニュース
-- 一覧: https://manapick.app/news/
+- [一覧](https://manapick.app/news/)
 - Google Workspaceや生成AIなど、社会人の学びと仕事に関係する公式一次情報を確認し、変更点と実務への影響を整理します。
-- 2026-11-26 汎用AIがタンパク質の設計者に。GPT-6が専門モデルなしで設計し、結合を実験で確認: https://manapick.app/news/2026-11-26-gpt6-protein-design/ | 出典 OpenAI公式ブログ
-- 2026-11-25 AIエージェントがGmailやドライブを直接触る時代へ。WorkspaceのMCPサーバーとCLIが正式提供、利用枠の新体系も開始: https://manapick.app/news/2026-11-25-workspace-mcp-servers-cli-ga/ | 出典 Google Workspace Updates
-- 2026-11-25 簡単なはずの問題を、AIは毎回正解できるか。Googleが「Humanity's First Exam」をKaggleで公開: https://manapick.app/news/2026-11-25-humanitys-first-exam-kaggle/ | 出典 Google公式ブログ
-- 2026-11-25 炎のシェーダーは5分未満で生まれた。開発者がGemini 4 Neonで作った5つの作例をGoogleが紹介: https://manapick.app/news/2026-11-25-gemini-4-neon-builders/ | 出典 Google公式ブログ
-- 2026-11-24 Gemini Notebookのフラッシュカード機能が強化、画像自動追加やストップウォッチ機能などが追加: https://manapick.app/news/2026-11-24-new-study-enhancements-for-flashcards-in-gemini-notebo-0a64d511d3/ | 出典 Google Workspace Updates
-- 2026-11-23 検索が「自分の財布」を読んで答える。Google検索のPersonal IntelligenceにWalletが接続可能に、Driveは今後数週間で対応: https://manapick.app/news/2026-11-23-google-search-personal-intelligence-wallet-drive/ | 出典 Google公式ブログ
-- 2026-11-23 「有料版だけの特権」が終わった。Google Meetの1080p送信が全ユーザーに開放、対応パソコンではデフォルトでオン: https://manapick.app/news/2026-11-23-google-meet-1080p-all-users/ | 出典 Google Workspace Updates
-- 2026-11-23 AIエージェントの長文が、やっと区切って読める。Google Chatのアプリ投稿に「表」と「見出し」が対応: https://manapick.app/news/2026-11-23-google-chat-tables-headings/ | 出典 Google Workspace Updates
-- 2026-11-20 自動化の実行・保存もリージョン管理下に。Workspace StudioがData Regionsに正式対応: https://manapick.app/news/2026-11-20-workspace-studio-data-regions-ga/ | 出典 Google Workspace Updates
-- 2026-11-20 Googleドキュメントのクライアントサイド暗号化機能でリアルタイム共同編集のベータ版が提供開始: https://manapick.app/news/2026-11-20-now-available-in-beta-collaborate-in-real-time-on-clie-e05ae42676/ | 出典 Google Workspace Updates
+- [2026-11-26 汎用AIがタンパク質の設計者に。GPT-6が専門モデルなしで設計し、結合を実験で確認](https://manapick.app/news/2026-11-26-gpt6-protein-design/): 出典 OpenAI公式ブログ
+- [2026-11-25 AIエージェントがGmailやドライブを直接触る時代へ。WorkspaceのMCPサーバーとCLIが正式提供、利用枠の新体系も開始](https://manapick.app/news/2026-11-25-workspace-mcp-servers-cli-ga/): 出典 Google Workspace Updates
+- [2026-11-25 簡単なはずの問題を、AIは毎回正解できるか。Googleが「Humanity's First Exam」をKaggleで公開](https://manapick.app/news/2026-11-25-humanitys-first-exam-kaggle/): 出典 Google公式ブログ
+- [2026-11-25 炎のシェーダーは5分未満で生まれた。開発者がGemini 4 Neonで作った5つの作例をGoogleが紹介](https://manapick.app/news/2026-11-25-gemini-4-neon-builders/): 出典 Google公式ブログ
+- [2026-11-24 Gemini Notebookのフラッシュカード機能が強化、画像自動追加やストップウォッチ機能などが追加](https://manapick.app/news/2026-11-24-new-study-enhancements-for-flashcards-in-gemini-notebo-0a64d511d3/): 出典 Google Workspace Updates
+- [2026-11-23 検索が「自分の財布」を読んで答える。Google検索のPersonal IntelligenceにWalletが接続可能に、Driveは今後数週間で対応](https://manapick.app/news/2026-11-23-google-search-personal-intelligence-wallet-drive/): 出典 Google公式ブログ
+- [2026-11-23 「有料版だけの特権」が終わった。Google Meetの1080p送信が全ユーザーに開放、対応パソコンではデフォルトでオン](https://manapick.app/news/2026-11-23-google-meet-1080p-all-users/): 出典 Google Workspace Updates
+- [2026-11-23 AIエージェントの長文が、やっと区切って読める。Google Chatのアプリ投稿に「表」と「見出し」が対応](https://manapick.app/news/2026-11-23-google-chat-tables-headings/): 出典 Google Workspace Updates
+- [2026-11-20 自動化の実行・保存もリージョン管理下に。Workspace StudioがData Regionsに正式対応](https://manapick.app/news/2026-11-20-workspace-studio-data-regions-ga/): 出典 Google Workspace Updates
+- [2026-11-20 Googleドキュメントのクライアントサイド暗号化機能でリアルタイム共同編集のベータ版が提供開始](https://manapick.app/news/2026-11-20-now-available-in-beta-collaborate-in-real-time-on-clie-e05ae42676/): 出典 Google Workspace Updates
 
 ## ジャンル別AEOインデックス
 ### 生成AI（219本）
-- ジャンルURL: https://manapick.app/genre/ai/
-- ガイドURL: https://manapick.app/guide/generative-ai/
+- [ジャンルページ](https://manapick.app/genre/ai/)
+- [ガイド](https://manapick.app/guide/generative-ai/)
 - 主なトピック: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Cline / ComfyUI / Copilot / Cursor / DeepL / DeepSeek / ElevenLabs / Figma(Figma AI) / Gamma / Gemini / Gemma / GitHub Copilot / Google AI Mode / Google AI Studio / Google Veo / Google翻訳 / Grok / Hailuo AI / HeyGen / Kling AI / LM Studio / Manus / Midjourney / Notion AI / Notta / Ollama / OpenAI Codex / OpenClaw / Perplexity / PixVerse / Qwen / Replit Agent / Runway / Siri AI / Stable Diffusion / Suno / Supabase / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
 - ロードマップ: 生成AIロードマップ
   - STEP1（初級）: アカウントを作り、AIに指示して回答を得られる。ChatGPT/Gemini/Claudeの違いが分かる。｜動画: 【最新版】超初心者OK！ChatGPTの使い方・基礎をわかりやすく解説！(資料付き) / 【完全マスター】AI初心者が学ぶべきGeminiの基本的な使い方を徹底解説するで。 / 【完全版】Claudeの使い方入門・全機能をまるっと解説します！〈Projects / Skills / Cowork / Claude Codeまで〉
@@ -55,8 +55,8 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 5. 【完全版】Googleの最強AIツールGeminiの使い方徹底解説【初心者必見】（生成AI / Gemini / 33/35 / 31分 / publishedAt=2026-03-11T11:15:03Z） https://manapick.app/video/SfCNwzANbUY/
 
 ### プログラミング・IT（73本）
-- ジャンルURL: https://manapick.app/genre/prog/
-- ガイドURL: https://manapick.app/guide/python/
+- [ジャンルページ](https://manapick.app/genre/prog/)
+- [ガイド](https://manapick.app/guide/python/)
 - 主なトピック: AWS認定 クラウドプラクティショナー / AWS認定 ソリューションアーキテクト / Git / Java / JavaScript / Python / Python3エンジニア認定基礎試験 / SQL / Web開発 / インフラ / 基本情報技術者 / 情報セキュリティマネジメント試験
 - ロードマップ: プログラミングロードマップ
   - STEP1（初級）: Pythonの環境と基本文法を一周し、学習の全体像をつかむ。｜動画: 【最新版】Python超入門講座（合併版）｜Pythonの超基本的な部分をたった1時間で学べます【プログラミング初心者向け入門講座】 / 【Python入門】8分で挫折知らず！プログラミングの基礎を完全攻略 / 【初心者でもわかる！】Gitの使い方講座
@@ -70,8 +70,8 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 5. 【2026年春最新】Claude Code(クロードコード)を使うなら知っておきたいGitHub超入門｜しくみ・導入・使い方をやさしく解説！（プログラミング・IT / Git / 31/35 / 23分 / publishedAt=2026-05-03T09:06:05Z） https://manapick.app/video/a_ETr9zrkQg/
 
 ### 動画編集・クリエイティブ（69本）
-- ジャンルURL: https://manapick.app/genre/video/
-- ガイドURL: https://manapick.app/guide/video-editing/
+- [ジャンルページ](https://manapick.app/genre/video/)
+- [ガイド](https://manapick.app/guide/video-editing/)
 - 主なトピック: After Effects / CapCut / DaVinci / Premiere Pro / Webクリエイター能力認定試験 / デザイン / 色彩検定
 - ロードマップ: 動画編集ロードマップ
   - STEP1（初級）: 編集の流れと初期設定を把握し、1本目の編集に着手できる。｜動画: 【2025年最新】1本で丸わかり！初心者にも優しいYouTube動画編集のやり方を徹底解説！【Premiere Pro】 / 【PremierePro入門講座#1】超初心者向けプレミアプロの始め方「新規プロジェクト・シーケンス・素材取り込み方法」 / 【2026年最新版】CapCutの使い方&編集方法を0から完全解説！動画編集初心者でも大丈夫！#CapCut使い方 #キャップカット使い方#capcut操作方法#cupcut無料#
@@ -85,8 +85,8 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 5. 【完全無料】はじめてのDavinci Resolve！無料版を使った動画編集初心者向け編集チュートリアル！超入門20分解説。【2025年最新版ダビンチリゾルブの使い方】（動画編集・クリエイティブ / DaVinci / 32/35 / 28分 / publishedAt=2025-10-30T10:45:07Z） https://manapick.app/video/vjFZXXPA888/
 
 ### 語学・英語（60本）
-- ジャンルURL: https://manapick.app/genre/english/
-- ガイドURL: https://manapick.app/guide/english/
+- [ジャンルページ](https://manapick.app/genre/english/)
+- [ガイド](https://manapick.app/guide/english/)
 - 主なトピック: TOEIC / 「ハングル」能力検定 / ビジネス英語 / 発音 / 英会話 / 英検
 - ロードマップ: 英語ロードマップ
   - STEP1（初級）: 英語学習の全体像と「やる順番」を知り、遠回りを避ける。｜動画: 【何年かかる？】英語力ゼロからペラペラ英会話を独学で作る勉強法のロードマップ完全解説（40代/50代/初心者/留学なし純ジャパ/かっこいい） / 英語力は“やる順番”でほぼ勝負がつくゾ！話せるようになるロードマップをワシが教えたる！
@@ -100,8 +100,8 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 5. 【TOEIC完全ロードマップ】これで伸びなかったら諦めてください。推奨教材と勉強方法を全て解説します（語学・英語 / TOEIC / 32/35 / 21分 / publishedAt=2026-04-28T09:31:55Z） https://manapick.app/video/yZBvdoTDjBE/
 
 ### データ分析・DX（37本）
-- ジャンルURL: https://manapick.app/genre/data/
-- ガイドURL: https://manapick.app/guide/excel-data/
+- [ジャンルページ](https://manapick.app/genre/data/)
+- [ガイド](https://manapick.app/guide/excel-data/)
 - 主なトピック: BI / Excel / データサイエンス / 統計
 - ロードマップ: データ分析・DXロードマップ
   - STEP1（初級）: Excelでデータ分析の入口を体験し、分析の考え方をつかむ。｜動画: 【40分で学習】Excel基本操作でこんなに分析できるって知ってた？｜Excelでデータ分析 / 【驚きのスピード】20分でExcelダッシュボード作成！初心者でも簡単！（エクセル/資料作成） / 【Excel講座】スタイリッシュなダッシュボードのかんたん作成★初心者でもサクッと作れる！
@@ -115,8 +115,8 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 5. 【エクセル初心者】VLOOKUP関数①(基本のしくみと使い方)（データ分析・DX / Excel / 30/35 / 15分 / publishedAt=2023-06-03T01:00:24Z） https://manapick.app/video/x1hpSd-vqYo/
 
 ### Webマーケ・SNS運用（38本）
-- ジャンルURL: https://manapick.app/genre/marke/
-- ガイドURL: https://manapick.app/guide/web-marketing/
+- [ジャンルページ](https://manapick.app/genre/marke/)
+- [ガイド](https://manapick.app/guide/web-marketing/)
 - 主なトピック: SEO / SNS / Webマーケ
 - ロードマップ: Webマーケ・SNS運用ロードマップ
   - STEP1（初級）: Webマーケティングの全体像を短時間でつかみ、学ぶ順番を決める。｜動画: Webマーケティングとは？初心者がまず学ぶべき全体像をプロがわかりやすく紹介【9分で理解】 / 【マーケティングとは？】ＵＳＪを劇的に変えた、たった１つの考え方｜日本一わかりやすい「マーケティング講座」です。 / 【神授業】Webマーケティングなんて初心者でも楽勝！この1本で基礎をマスターせよ
@@ -130,8 +130,8 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 5. GA4（Googleアナリティクス4）の見るべき指標や使い方を完全解説！（Webマーケ・SNS運用 / SEO / 31/35 / 13分 / publishedAt=2023-06-29T11:00:33Z） https://manapick.app/video/hWVqaNkmHzE/
 
 ### Office・資料作成（39本）
-- ジャンルURL: https://manapick.app/genre/biz/
-- ガイドURL: https://manapick.app/guide/office-skills/
+- [ジャンルページ](https://manapick.app/genre/biz/)
+- [ガイド](https://manapick.app/guide/office-skills/)
 - 主なトピック: Excel / Word / プレゼン / 資料作成
 - ロードマップ: Office・資料作成ロードマップ
   - STEP1（初級）: PowerPointの基本操作を押さえ、資料作成の不安を減らす。｜動画: 【初心者・自己流さん必見！】Word文書の基本（最適な作り方） / 【Wordの使い方】初心者のためのワード講座　Word文書作成の超入門 / 【2023年最新版】Excel初心者向け超入門講座！30分完全ガイド - 最も大事なエクセル基本知識を手に入れよう
@@ -145,8 +145,8 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 5. 【2025年最新】Geminiでパワポ・スライド資料を爆速作成する裏ワザを解説します（Office・資料作成 / 資料作成 / 30/35 / 19分 / publishedAt=2025-09-07T10:01:24Z） https://manapick.app/video/vri3RfONGfM/
 
 ### 資格・検定（257本）
-- ジャンルURL: https://manapick.app/genre/shikaku/
-- ガイドURL: https://manapick.app/guide/certification/
+- [ジャンルページ](https://manapick.app/genre/shikaku/)
+- [ガイド](https://manapick.app/guide/certification/)
 - 主なトピック: AI検定 / CCNA / G検定 / IT / ITパスポート / MOS / PMP / ケアマネジャー / ネイリスト / ビジネス実務法務検定試験 / 二級ボイラー技士 / 介護福祉士 / 介護職員初任者研修 / 保育士 / 医療事務 / 危険物乙4 / 司法書士 / 国家公務員採用一般職試験 / 基本情報技術者 / 宅建 / 日商PC検定 / 日本漢字能力検定 / 歯科衛生士 / 測量士補 / 生成AIパスポート / 登録販売者 / 看護師 / 社会福祉士 / 社労士 / 秘書検定 / 第二種電気工事士 / 管理栄養士 / 管理業務主任者 / 著作権 / 薬剤師 / 行政書士 / 衛生管理者 / 調理師 / 賃貸不動産経営管理士 / 電験三種 / 食生活アドバイザー
 - ロードマップ: 資格・検定ロードマップ
   - STEP1（初級）: 宅建学習のスケジュールと独学の進め方を決める。｜動画: 【2026年宅建】今年の宅建に受かりたい人は絶対見て！１月から勉強を始めた人向けに合格までのロードマップを徹底解説します / 【宅建受験生必見】一発合格ロードマップ完全版！試験本番までのスケジュールと戦略をこざりえが徹底解説 ！ / 【参考書を丸ごと１冊覚える方法】エクセルのスケジュール表を無料配布します！宅建合格までのロードマップを公開して解説します。大量記憶表ダウンロードできます。
@@ -160,8 +160,8 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 5. 会社を守るために知っておくべき労働条件の基礎（資格・検定 / 社労士 / 32/35 / 26分 / publishedAt=2026-11-01T09:39:16Z） https://manapick.app/video/KctXjEWLvVA/
 
 ### 会計・経営系資格（58本）
-- ジャンルURL: https://manapick.app/genre/kaikei/
-- ガイドURL: https://manapick.app/guide/bookkeeping/
+- [ジャンルページ](https://manapick.app/genre/kaikei/)
+- [ガイド](https://manapick.app/guide/bookkeeping/)
 - 主なトピック: FP / USCPA / ビジネス会計検定試験 / 中小企業診断士 / 公認会計士 / 税理士 / 簿記
 - ロードマップ: 会計・経営系資格ロードマップ
   - STEP1（初級）: 簿記3級の範囲で、仕訳と決算書の基本構造がわかる。｜動画: ✧第1回✧【簿記3級】入門①（簿記とは？） / ✧第2回✧【簿記3級】入門②（決算書・5要素） / ✧第3回✧【簿記3級】入門③（一連の流れ）
@@ -175,8 +175,8 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 5. 【超入門】簿記の基本を25分で完全理解！初心者でも全体の流れと基礎がスッキリ理解できる【日商簿記3級対策】（会計・経営系資格 / 簿記 / 30/35 / 26分 / publishedAt=2025-09-01T09:01:17Z） https://manapick.app/video/reHqDGh4r2Y/
 
 ### お金・投資（30本）
-- ジャンルURL: https://manapick.app/genre/money/
-- ガイドURL: https://manapick.app/guide/money-basics/
+- [ジャンルページ](https://manapick.app/genre/money/)
+- [ガイド](https://manapick.app/guide/money-basics/)
 - 主なトピック: NISA / 家計 / 投資
 - ロードマップ: お金・投資ロードマップ
   - STEP1（初級）: 家計管理の型と、新NISA・iDeCoの制度の仕組みがわかる。｜動画: 【家計管理】80万回以上再生された家計簿の書き方の徹底解説 【保存版】 / 【2026年決定版】これ一本でわかる！知識ゼロからNISAを始める完全ガイド｜投資の基本から買い方まで解説 / 【アニメで解説】iDeCo(イデコ)を初心者にもわかりやすく！～基礎編～
@@ -190,23 +190,23 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 5. 初心者必見！来月スタートの新NISA「始め方」「投資枠の違い」「毎月いくら投資する？」気になる疑問を聞いた【Nスタ解説】｜TBS NEWS DIG（お金・投資 / NISA / 31/35 / 11分 / publishedAt=2023-12-20T13:05:34Z） https://manapick.app/video/I4zjE8wUME0/
 
 ## 検索意図別の主要導線
-- YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
-- 動画 勉強 無料: https://manapick.app/youtube-learning/
-- リスキリング 何から始める: https://manapick.app/youtube-learning/#youtube-steps-title
-- YouTubeサムネイルの作り方: https://manapick.app/learn/youtube-thumbnail/
-- Pythonは難しい: https://manapick.app/learn/python-hard/
-- Python入門本の選び方: https://manapick.app/learn/python-beginner-book/
-- エクセル統計の使い方: https://manapick.app/learn/excel-statistics/
-- Copilot活用事例: https://manapick.app/learn/copilot-use-cases/
-- AIプロンプトのコツ: https://manapick.app/learn/ai-prompt-tips/
-- 社労士 YouTube おすすめ・1年学習計画: https://manapick.app/learn/sharoshi-1year/
-- マーケティング YouTube おすすめ: https://manapick.app/learn/web-marketing-youtube/
-- Power BIの使い方: https://manapick.app/learn/power-bi/
-- 資産運用を無料で勉強: https://manapick.app/learn/money-study-free/
-- FP3級 過去問: https://manapick.app/learn/fp3-past-questions/
-- ビジネス会計検定3級の勉強時間: https://manapick.app/learn/business-accounting-3-study-time/
-- 秘書検定2級の日程と勉強法: https://manapick.app/learn/secretary-test-schedule/
-- Canva 初心者: https://manapick.app/genre/marke/SNS/
+- [YouTube学習動画おすすめ](https://manapick.app/youtube-learning/)
+- [動画 勉強 無料](https://manapick.app/youtube-learning/)
+- [リスキリング 何から始める](https://manapick.app/youtube-learning/#youtube-steps-title)
+- [YouTubeサムネイルの作り方](https://manapick.app/learn/youtube-thumbnail/)
+- [Pythonは難しい](https://manapick.app/learn/python-hard/)
+- [Python入門本の選び方](https://manapick.app/learn/python-beginner-book/)
+- [エクセル統計の使い方](https://manapick.app/learn/excel-statistics/)
+- [Copilot活用事例](https://manapick.app/learn/copilot-use-cases/)
+- [AIプロンプトのコツ](https://manapick.app/learn/ai-prompt-tips/)
+- [社労士 YouTube おすすめ・1年学習計画](https://manapick.app/learn/sharoshi-1year/)
+- [マーケティング YouTube おすすめ](https://manapick.app/learn/web-marketing-youtube/)
+- [Power BIの使い方](https://manapick.app/learn/power-bi/)
+- [資産運用を無料で勉強](https://manapick.app/learn/money-study-free/)
+- [FP3級 過去問](https://manapick.app/learn/fp3-past-questions/)
+- [ビジネス会計検定3級の勉強時間](https://manapick.app/learn/business-accounting-3-study-time/)
+- [秘書検定2級の日程と勉強法](https://manapick.app/learn/secretary-test-schedule/)
+- [Canva 初心者](https://manapick.app/genre/marke/SNS/)
 
 ## よくある質問
 - Q. Manapickは無料ですか？ A. 無料で閲覧できます。紹介する動画はYouTube上で公開されている動画で、会員登録は不要です。
@@ -219,29 +219,29 @@ Manapickは、社会人の学び直し・リスキリングに役立つYouTube�
 - Q. 広告やアフィリエイトで順位は変わりますか？ A. 紹介料で掲載順位を操作せず、Manapick独自基準での採点を優先します。
 
 ## 主要URL
-- トップ: https://manapick.app/
-- YouTube学習動画おすすめ: https://manapick.app/youtube-learning/
-- YouTube学習動画880本の独自集計: https://manapick.app/research/youtube-learning-data/
-- 7日学習プラン: https://manapick.app/study-plan/
-- Manapick Network（学ぶ・AI・資格・仕事・企業）: https://manapick.app/network/
-- 学習ロードマップ一覧: https://manapick.app/guide/
-- ランキング: https://manapick.app/ranking/
-- 最近追加・更新した動画: https://manapick.app/new/
-- 学びニュース: https://manapick.app/news/
-- 学びニュースRSS: https://manapick.app/news-feed.xml
-- よくある質問: https://manapick.app/faq/
-- 用語集: https://manapick.app/glossary/
-- 採点方法: https://manapick.app/about-score/
-- お問い合わせ: https://manapick.app/contact/
-- 運営者情報: https://manapick.app/operator/
-- 免責事項: https://manapick.app/disclaimer/
-- プライバシーポリシー: https://manapick.app/privacy/
-- サイトマップ: https://manapick.app/sitemap.xml
-- 姉妹サイト（AIツール比較）: https://ai.manapick.app/
-- 姉妹サイト（資格・検定比較）: https://license.manapick.app/
-- 姉妹サイト（職業情報）: https://career.manapick.app/
-- 姉妹サイト（企業情報）: https://company.manapick.app/
-- 姉妹サイト（政治・法律）: https://politics.manapick.app/
+- [トップ](https://manapick.app/)
+- [YouTube学習動画おすすめ](https://manapick.app/youtube-learning/)
+- [YouTube学習動画880本の独自集計](https://manapick.app/research/youtube-learning-data/)
+- [7日学習プラン](https://manapick.app/study-plan/)
+- [Manapick Network（学ぶ・AI・資格・仕事・企業）](https://manapick.app/network/)
+- [学習ロードマップ一覧](https://manapick.app/guide/)
+- [ランキング](https://manapick.app/ranking/)
+- [最近追加・更新した動画](https://manapick.app/new/)
+- [学びニュース](https://manapick.app/news/)
+- [学びニュースRSS](https://manapick.app/news-feed.xml)
+- [よくある質問](https://manapick.app/faq/)
+- [用語集](https://manapick.app/glossary/)
+- [採点方法](https://manapick.app/about-score/)
+- [お問い合わせ](https://manapick.app/contact/)
+- [運営者情報](https://manapick.app/operator/)
+- [免責事項](https://manapick.app/disclaimer/)
+- [プライバシーポリシー](https://manapick.app/privacy/)
+- [サイトマップ](https://manapick.app/sitemap.xml)
+- [姉妹サイト（AIツール比較）](https://ai.manapick.app/)
+- [姉妹サイト（資格・検定比較）](https://license.manapick.app/)
+- [姉妹サイト（職業情報）](https://career.manapick.app/)
+- [姉妹サイト（企業情報）](https://company.manapick.app/)
+- [姉妹サイト（政治・法律）](https://politics.manapick.app/)
 
 ## クローラー向け補足
 Manapickの本文、見出し、動画タイトル、レビューはHTMLテキストとして提供しています。検索・絞り込みUIは補助機能であり、主要な動画詳細ページは静的URLで参照できます。

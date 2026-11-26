@@ -90,6 +90,40 @@ export function validateNewsItems(items, { today = jstToday() } = {}) {
     }
   }
 
+  // 同一発表の二重記事化を防ぐ（2026-11-26 の重複事故の再発防止）。
+  // 出典URLの完全一致は同一発表とみなし、見出しの近似は文字バイグラムの
+  // Jaccard 類似度で検出する（near-duplicate detection の基本手法）。
+  // 既存コーパスの最大類似度は 0.30（2026-11-26 実測）のため、閾値は 0.5。
+  const sourceUrls = new Map();
+  for (const item of items) {
+    if (!item?.sourceUrl) continue;
+    if (sourceUrls.has(item.sourceUrl)) {
+      errors.push(`${item.id}: duplicate sourceUrl (same announcement as ${sourceUrls.get(item.sourceUrl)})`);
+    } else {
+      sourceUrls.set(item.sourceUrl, item.id);
+    }
+  }
+  const bigrams = (text) => {
+    const normalized = (text || "").replace(/\s/g, "");
+    const set = new Set();
+    for (let i = 0; i < normalized.length - 1; i++) set.add(normalized.slice(i, i + 2));
+    return set;
+  };
+  const headlineGrams = items.map((item) => bigrams(item?.headline));
+  for (let i = 0; i < items.length; i++) {
+    for (let j = i + 1; j < items.length; j++) {
+      const a = headlineGrams[i];
+      const b = headlineGrams[j];
+      if (a.size === 0 || b.size === 0) continue;
+      let intersection = 0;
+      for (const gram of a) if (b.has(gram)) intersection++;
+      const similarity = intersection / (a.size + b.size - intersection);
+      if (similarity >= 0.5) {
+        errors.push(`${items[j].id}: headline is too similar to ${items[i].id} (similarity ${similarity.toFixed(2)}); possible duplicate announcement`);
+      }
+    }
+  }
+
   return errors;
 }
 

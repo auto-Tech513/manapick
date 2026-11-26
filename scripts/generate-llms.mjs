@@ -77,7 +77,7 @@ const guideRoutesByGenre = {
 // 後段のAEOインデックス（主なトピック）と逐語重複していたため、冒頭からは
 // 外した（SEO専門家レビュー 2026-11-04：同一ファイル内の二重情報の圧縮）。
 const genreLines = publishedGenres.map((genre) => {
-  return `- ${displayGenreName(genre)}（${genreCounts[genre.key]}本）: ${absoluteUrl(siteUrl, `/genre/${genre.key}/`)}`;
+  return `- [${displayGenreName(genre)}（${genreCounts[genre.key]}本）](${absoluteUrl(siteUrl, `/genre/${genre.key}/`)})`;
 });
 
 function videoPath(ytid) {
@@ -118,8 +118,8 @@ function genreIndexLines() {
     const subgenres = [...(subtopicsByGenre[genre.key] || [])].sort();
     return [
       `### ${displayGenreName(genre)}（${genreCounts[genre.key]}本）`,
-      `- ジャンルURL: ${absoluteUrl(siteUrl, `/genre/${genre.key}/`)}`,
-      guideRoute ? `- ガイドURL: ${absoluteUrl(siteUrl, guideRoute)}` : "- ガイドURL: 準備中",
+      `- [ジャンルページ](${absoluteUrl(siteUrl, `/genre/${genre.key}/`)})`,
+      guideRoute ? `- [ガイド](${absoluteUrl(siteUrl, guideRoute)})` : "- ガイドURL: 準備中",
       `- 主なトピック: ${subgenres.join(" / ") || "未設定"}`,
       ...roadmapLinesForGenre(genre.key),
       "- 代表動画:",
@@ -147,7 +147,7 @@ const queryIntentLines = [
   ["ビジネス会計検定3級の勉強時間", "/learn/business-accounting-3-study-time/"],
   ["秘書検定2級の日程と勉強法", "/learn/secretary-test-schedule/"],
   ["Canva 初心者", "/genre/marke/SNS/"]
-].map(([label, route]) => `- ${label}: ${absoluteUrl(siteUrl, route)}`);
+].map(([label, route]) => `- [${label}](${absoluteUrl(siteUrl, route)})`);
 
 // ガイド個別URLはジャンル別AEOインデックス側（ガイドURL）で案内するため、
 // ガイド記事セクションは一覧への1行に圧縮する（同レビュー）。
@@ -162,13 +162,13 @@ const newsLines = news
   .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || b.id.localeCompare(a.id))
   .filter((item) => new Date(item.publishedAt) >= newsCutoff)
   .slice(0, 10)
-  .map((item) => `- ${item.publishedAt} ${item.headline}: ${absoluteUrl(siteUrl, `/news/${item.id}/`)} | 出典 ${item.sourceName}`);
+  .map((item) => `- [${item.publishedAt} ${item.headline}](${absoluteUrl(siteUrl, `/news/${item.id}/`)}): 出典 ${item.sourceName}`);
 
 const lines = [
   "# Manapick",
   "",
-  "Manapickは、社会人の学び直し・リスキリングに役立つYouTube学習動画を、独自レビューとManapickスコアで整理するキュレーションサイトです。",
-  "動画はYouTube上で公開されているものを掲載し、YouTubeへのリンクまたはYouTube公式プレーヤーで紹介します。ダウンロードや再配布は扱いません。",
+  "> Manapickは、社会人の学び直し・リスキリングに役立つYouTube学習動画を、独自レビューとManapickスコアで整理するキュレーションサイトです。",
+  "> 動画はYouTube上で公開されているものを掲載し、YouTubeへのリンクまたはYouTube公式プレーヤーで紹介します。ダウンロードや再配布は扱いません。",
   "",
   `## 公開中の${publishedGenres.length}ジャンル`,
   ...genreLines,
@@ -180,10 +180,10 @@ const lines = [
   "- 掲載動画は、運営者の視聴、またはYouTube上の公開情報（タイトル・概要欄・チャプター・公開日・再生回数）の確認にもとづき、7軸35点で採点しています。公開状態と埋め込み可否はYouTube Data APIで定期的に確認しています。",
   "",
   "## ガイド記事",
-  `- 学習ロードマップ一覧: ${absoluteUrl(siteUrl, "/guide/")}`,
+  `- [学習ロードマップ一覧](${absoluteUrl(siteUrl, "/guide/")})`,
   "",
   "## 学びニュース",
-  `- 一覧: ${absoluteUrl(siteUrl, "/news/")}`,
+  `- [一覧](${absoluteUrl(siteUrl, "/news/")})`,
   "- Google Workspaceや生成AIなど、社会人の学びと仕事に関係する公式一次情報を確認し、変更点と実務への影響を整理します。",
   ...newsLines,
   "",
@@ -203,29 +203,29 @@ const lines = [
   "- Q. 広告やアフィリエイトで順位は変わりますか？ A. 紹介料で掲載順位を操作せず、Manapick独自基準での採点を優先します。",
   "",
   "## 主要URL",
-  `- トップ: ${absoluteUrl(siteUrl, "/")}`,
-  `- YouTube学習動画おすすめ: ${absoluteUrl(siteUrl, "/youtube-learning/")}`,
-  `- YouTube学習動画${videos.length}本の独自集計: ${absoluteUrl(siteUrl, "/research/youtube-learning-data/")}`,
-  `- 7日学習プラン: ${absoluteUrl(siteUrl, "/study-plan/")}`,
-  `- Manapick Network（学ぶ・AI・資格・仕事・企業）: ${absoluteUrl(siteUrl, "/network/")}`,
-  `- 学習ロードマップ一覧: ${absoluteUrl(siteUrl, "/guide/")}`,
-  `- ランキング: ${absoluteUrl(siteUrl, "/ranking/")}`,
-  `- 最近追加・更新した動画: ${absoluteUrl(siteUrl, "/new/")}`,
-  `- 学びニュース: ${absoluteUrl(siteUrl, "/news/")}`,
-  `- 学びニュースRSS: ${absoluteUrl(siteUrl, "/news-feed.xml")}`,
-  `- よくある質問: ${absoluteUrl(siteUrl, "/faq/")}`,
-  `- 用語集: ${absoluteUrl(siteUrl, "/glossary/")}`,
-  `- 採点方法: ${absoluteUrl(siteUrl, "/about-score/")}`,
-  `- お問い合わせ: ${absoluteUrl(siteUrl, "/contact/")}`,
-  `- 運営者情報: ${absoluteUrl(siteUrl, "/operator/")}`,
-  `- 免責事項: ${absoluteUrl(siteUrl, "/disclaimer/")}`,
-  `- プライバシーポリシー: ${absoluteUrl(siteUrl, "/privacy/")}`,
-  `- サイトマップ: ${absoluteUrl(siteUrl, "/sitemap.xml")}`,
-  "- 姉妹サイト（AIツール比較）: https://ai.manapick.app/",
-  "- 姉妹サイト（資格・検定比較）: https://license.manapick.app/",
-  "- 姉妹サイト（職業情報）: https://career.manapick.app/",
-  "- 姉妹サイト（企業情報）: https://company.manapick.app/",
-  "- 姉妹サイト（政治・法律）: https://politics.manapick.app/",
+  `- [トップ](${absoluteUrl(siteUrl, "/")})`,
+  `- [YouTube学習動画おすすめ](${absoluteUrl(siteUrl, "/youtube-learning/")})`,
+  `- [YouTube学習動画${videos.length}本の独自集計](${absoluteUrl(siteUrl, "/research/youtube-learning-data/")})`,
+  `- [7日学習プラン](${absoluteUrl(siteUrl, "/study-plan/")})`,
+  `- [Manapick Network（学ぶ・AI・資格・仕事・企業）](${absoluteUrl(siteUrl, "/network/")})`,
+  `- [学習ロードマップ一覧](${absoluteUrl(siteUrl, "/guide/")})`,
+  `- [ランキング](${absoluteUrl(siteUrl, "/ranking/")})`,
+  `- [最近追加・更新した動画](${absoluteUrl(siteUrl, "/new/")})`,
+  `- [学びニュース](${absoluteUrl(siteUrl, "/news/")})`,
+  `- [学びニュースRSS](${absoluteUrl(siteUrl, "/news-feed.xml")})`,
+  `- [よくある質問](${absoluteUrl(siteUrl, "/faq/")})`,
+  `- [用語集](${absoluteUrl(siteUrl, "/glossary/")})`,
+  `- [採点方法](${absoluteUrl(siteUrl, "/about-score/")})`,
+  `- [お問い合わせ](${absoluteUrl(siteUrl, "/contact/")})`,
+  `- [運営者情報](${absoluteUrl(siteUrl, "/operator/")})`,
+  `- [免責事項](${absoluteUrl(siteUrl, "/disclaimer/")})`,
+  `- [プライバシーポリシー](${absoluteUrl(siteUrl, "/privacy/")})`,
+  `- [サイトマップ](${absoluteUrl(siteUrl, "/sitemap.xml")})`,
+  "- [姉妹サイト（AIツール比較）](https://ai.manapick.app/)",
+  "- [姉妹サイト（資格・検定比較）](https://license.manapick.app/)",
+  "- [姉妹サイト（職業情報）](https://career.manapick.app/)",
+  "- [姉妹サイト（企業情報）](https://company.manapick.app/)",
+  "- [姉妹サイト（政治・法律）](https://politics.manapick.app/)",
   "",
   "## クローラー向け補足",
   "Manapickの本文、見出し、動画タイトル、レビューはHTMLテキストとして提供しています。検索・絞り込みUIは補助機能であり、主要な動画詳細ページは静的URLで参照できます。",
