@@ -15,6 +15,8 @@ const gaId = process.env.NEXT_PUBLIC_GA_ID?.trim() || "G-13BNL4Q41Z";
 const adsenseId = process.env.NEXT_PUBLIC_ADSENSE_ID?.trim() || "ca-pub-4108900975353940";
 const ogImageUrl = absoluteUrl("/brand/ogp-manapick.png");
 const xAccountUrl = "https://x.com/manapick_app";
+const youtubeAccountUrl = "https://www.youtube.com/@Manapick_app";
+const instagramAccountUrl = "https://www.instagram.com/manapick_app/";
 const xAccountHandle = "@manapick_app";
 const googleFontsHref =
   "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@500;700;900&display=swap";
@@ -38,7 +40,7 @@ const commonJsonLd = {
       name: "Manapick",
       url: absoluteUrl("/"),
       logo: absoluteUrl("/brand/manapick-logo-master.png"),
-      sameAs: [xAccountUrl, MANAPICK_AI_URL, MANAPICK_LICENSE_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_ORIGIN],
+      sameAs: [xAccountUrl, youtubeAccountUrl, instagramAccountUrl, MANAPICK_AI_URL, MANAPICK_LICENSE_URL, MANAPICK_CAREER_URL, MANAPICK_COMPANY_ORIGIN],
       subOrganization: [
         {
           "@type": "Organization",

@@ -82,6 +82,7 @@ export default function AdSlot({ slot, placement }: { slot: string; placement: s
       style={{ display: "block" }}
       data-ad-client={CLIENT}
       data-ad-slot={slot}
+      data-ad-placement={placement}
       data-ad-format="auto"
       data-full-width-responsive="true"
     />
