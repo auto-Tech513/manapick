@@ -9,7 +9,6 @@ import { absoluteUrl } from "@/lib/manapick";
 import { findNews, newsItems, newsPath, newsReadingMinutes, relatedNewsItems } from "@/lib/news";
 import NetworkContextBand from "@/components/NetworkContextBand";
 import { externalRel } from "@/lib/network-links";
-import NewsletterSignup from "@/components/NewsletterSignup";
 import Phrase from "@/components/Phrase";
 
 type NewsDetailPageProps = {
@@ -225,8 +224,6 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
       <AdSlot slot="1438236565" placement="news-after-related" />
 
       <NetworkContextBand genreKey={NEWS_GENRE[item.category] ?? "biz"} skipHrefs={item.relatedLinks.map((link) => link.href)} />
-
-      <NewsletterSignup placement="news_article" />
 
       <NewsShareBar title={item.headline} url={url} />
     </main>

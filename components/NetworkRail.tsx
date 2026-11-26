@@ -35,7 +35,6 @@ export default function NetworkRail() {
         )}
       </nav>
       <div className="nw-rail-side">
-        <a href="#footer-newsletter">メルマガ</a>
         <a href="https://x.com/manapick_app" target="_blank" rel="noopener noreferrer">
           X @manapick_app
         </a>

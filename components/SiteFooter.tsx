@@ -1,6 +1,5 @@
 import { publishedGenreKeys } from "@/lib/manapick";
 import { siteStats } from "@/lib/site-stats";
-import NewsletterSignup from "@/components/NewsletterSignup";
 import NetworkRoute from "@/components/NetworkRoute";
 import { externalRel } from "@/lib/network-links";
 
@@ -72,10 +71,6 @@ function FooterAnchor({ link }: { link: FooterLink }) {
 export default function SiteFooter() {
   return (
     <footer className="site-footer-main ft">
-      <div className="ft-newsletter" id="footer-newsletter">
-        <NewsletterSignup placement="footer" dark />
-      </div>
-
       <div className="ft-guide">
         <div className="ft-brand">
           <p className="lb-wordmark ft-wordmark">manapick</p>
