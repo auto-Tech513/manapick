@@ -501,6 +501,8 @@ export default async function GenrePage({ params }: GenrePageProps) {
         ) : null}
       </section>
 
+      <AdSlot slot="1438236565" placement="genre-after-videos" />
+
       {channelStats.length > 0 ? (
         <section className="genre-hub-channels" aria-labelledby="genre-hub-channels-title">
           <p className="section-eyebrow">チャンネルから選ぶ</p>
@@ -569,8 +571,6 @@ export default async function GenrePage({ params }: GenrePageProps) {
           </div>
         </section>
       ) : null}
-
-      <AdSlot slot="1438236565" placement="genre-after-courses" />
 
       <p className="genre-hub-back">
         <Link href="/">← すべてのジャンルを見る</Link>

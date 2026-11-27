@@ -108,6 +108,8 @@ export default function NewsPage() {
         <p className="news-index-scope">新着は<a href="/news-feed.xml">RSSフィード</a>でも受け取れます。</p>
       </section>
 
+      <AdSlot slot="1438236565" placement="news-index-after-hero" />
+
       <section className="knowledge-section news-index-section" aria-labelledby="news-list-title">
         <header className="news-list-heading">
           <div>
@@ -144,7 +146,6 @@ export default function NewsPage() {
           ))}
         </div>
       </section>
-      <AdSlot slot="1438236565" placement="news-index-list" />
     </main>
   );
 }
