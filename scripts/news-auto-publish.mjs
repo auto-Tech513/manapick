@@ -51,7 +51,11 @@ export function newsProviderConfig(env = process.env) {
 }
 
 async function createArticle(candidate, provider) {
-  const today = new Date().toISOString().slice(0, 10);
+  // 記事の日付は「公開日」（JST の当日）。公式の発表日は candidate.publishedAt として
+  // プロンプトと候補ファイルに残る。発表日で日付を付けると、サイトの最新日付が
+  // 発表の遅れ分だけ常に過去になり、鮮度要件（最新日付＝当日）を満たせない
+  // （2026-11-27 にオーナー指示で公開日方式へ変更。既存記事の日付は変えない）。
+  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo" }).format(new Date());
   const prompt = `あなたはManapickのニュース編集者です。以下の公式一次情報だけを根拠に、日本語の記事JSONを1件作成してください。
 
 厳守:
@@ -129,9 +133,9 @@ ${candidate.sourceText}`;
   const titleSlug = slugify(candidate.title);
   const suffix = titleSlug ? `${titleSlug}-${sourceHash}` : `${candidate.sourceId}-${sourceHash}`;
   return {
-    id: `${candidate.publishedAt}-${suffix}`,
+    id: `${today}-${suffix}`,
     ...generated,
-    publishedAt: candidate.publishedAt,
+    publishedAt: today,
     lastChecked: today,
     sourceName: candidate.sourceName,
     sourceUrl: candidate.sourceUrl
