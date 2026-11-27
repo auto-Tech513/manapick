@@ -1619,14 +1619,6 @@
    "url": "https://ai.manapick.app/tool/lm-studio/"
   }
  ],
- "HsJFWFIdQfc": [
-  {
-   "site": "ai",
-   "slug": "deepseek",
-   "name": "DeepSeek",
-   "url": "https://ai.manapick.app/tool/deepseek/"
-  }
- ],
  "3ipjQ1EHGGk": [
   {
    "site": "license",
@@ -2013,7 +2005,7 @@
    "url": "https://ai.manapick.app/tool/github-copilot/"
   }
  ],
- "R0jDcdFm8Fg":  [
+ "R0jDcdFm8Fg": [
   {
    "site": "ai",
    "slug": "perplexity",
@@ -2067,8 +2059,9 @@
    "slug": "adobe-firefly",
    "name": "Adobe Firefly",
    "url": "https://ai.manapick.app/tool/adobe-firefly/"
-  }  ],
- "DvARWPB4xJ4":  [
+  }
+ ],
+ "DvARWPB4xJ4": [
   {
    "site": "license",
    "slug": "aws-clf",
@@ -2076,7 +2069,7 @@
    "url": "https://license.manapick.app/license/aws-clf/"
   }
  ],
- "UO_O6Bsoh00":  [
+ "UO_O6Bsoh00": [
   {
    "site": "license",
    "slug": "sharoshi",
@@ -2084,12 +2077,28 @@
    "url": "https://license.manapick.app/license/sharoshi/"
   }
  ],
- "aW7HKndRhyI":  [
+ "aW7HKndRhyI": [
   {
    "site": "ai",
    "slug": "elevenlabs",
    "name": "ElevenLabs",
    "url": "https://ai.manapick.app/tool/elevenlabs/"
+  }
+ ],
+ "XmuNQ8mOnrw": [
+  {
+   "site": "ai",
+   "slug": "ollama",
+   "name": "Ollama",
+   "url": "https://ai.manapick.app/tool/ollama/"
+  }
+ ],
+ "YDjfUCgG8A4": [
+  {
+   "site": "ai",
+   "slug": "claude",
+   "name": "Claude",
+   "url": "https://ai.manapick.app/tool/claude/"
   }
  ]
 }

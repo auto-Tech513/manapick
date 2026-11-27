@@ -1733,7 +1733,7 @@
   "viewCount": 338589,
   "publishedAt": "2025-01-14T05:18:58Z",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-14"
+  "scoreConfirmedAt": "2026-11-25"
  },
  {
   "genre": "video",
@@ -1856,67 +1856,6 @@
   "viewCount": 156991,
   "publishedAt": "2024-02-28T11:00:02Z",
   "scoreStatus": "confirmed"
- },
- {
-  "genre": "ai",
-  "sub": "Claude",
-  "ytid": "3whmRVpLpfw",
-  "level": "初級",
-  "minutes": 68,
-  "channel": "ハム先生のAI教室【AI動画の実務活用】",
-  "score": 30,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 5,
-    "note": "ProjectsやMCPといった機能の実装例まで含み、実務での活用手順に結びつく"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 3,
-    "note": "2025年3月公開で、Claudeの機能追加の速さを考えると、現在の画面・仕様と異なる部分が出ている可能性がある"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 5,
-    "note": "図解を多用し、視覚的に追いながら基本操作から高度な機能まで進める"
-   },
-   {
-    "axis": "体系性",
-    "score": 5,
-    "note": "基本操作から高度な機能、他モデルとの比較までを1本に体系化している"
-   },
-   {
-    "axis": "信頼性",
-    "score": 3,
-    "note": "AI動画の実務活用を専門とするチャンネル（当サイト掲載4本）だが、出典の明示までは概要情報から確認できない部分がある"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 4,
-    "note": "68分の長尺で、まとまった学習時間に向く"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "概要情報の範囲では、アフィリエイトや有料講座への強い誘導は確認されていない"
-   }
-  ],
-  "title": "【1本で全てわかる】図解がヤバい！Claudeの使い方・初心者入門講座。ChatGPT/Geminiとの違いも徹底比較（活用方法/事例/無料有料版/Projects/MCP）",
-  "url": "https://www.youtube.com/watch?v=3whmRVpLpfw",
-  "tags": [
-   "Claude",
-   "使い方"
-  ],
-  "review": [
-   "視覚的な図解を多用しながら、Claudeの基本操作から高度な機能まで解説します。",
-   "ChatGPTやGeminiとの仕様の違いを比較し、各モデルの特性を整理しています。",
-   "ProjectsやMCPといった最新機能の実装例も含まれ、実用的な活用法が学べます。"
-  ],
-  "viewCount": 108429,
-  "publishedAt": "2025-03-16T00:00:04Z",
-  "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-14"
  },
  {
   "genre": "ai",
@@ -2902,7 +2841,7 @@
   "viewCount": 73802,
   "publishedAt": "2025-01-11T11:00:51Z",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-14"
+  "scoreConfirmedAt": "2026-11-25"
  },
  {
   "genre": "video",
@@ -38571,7 +38510,7 @@
   "scoreStatus": "confirmed",
   "viewCount": 768406,
   "publishedAt": "2025-04-01T12:06:08Z",
-  "scoreConfirmedAt": "2026-11-14"
+  "scoreConfirmedAt": "2026-11-25"
  },
  {
   "genre": "ai",
@@ -39365,7 +39304,7 @@
   "scoreStatus": "confirmed",
   "viewCount": 261407,
   "publishedAt": "2023-03-03T10:00:24Z",
-  "scoreConfirmedAt": "2026-11-14"
+  "scoreConfirmedAt": "2026-11-25"
  },
  {
   "genre": "ai",
@@ -44434,7 +44373,7 @@
    "2023年4月時点の仕様にもとづく内容で、技術研究目的であることが明記されている。"
   ],
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-11",
+  "scoreConfirmedAt": "2026-11-25",
   "viewCount": 221767,
   "publishedAt": "2023-04-12T07:13:17Z"
  },
@@ -50480,7 +50419,7 @@
    "プロンプトをなんとなく書いていて、狙った絵柄にならない人向け。"
   ],
   "score": 29,
-  "scoreConfirmedAt": "2026-11-19",
+  "scoreConfirmedAt": "2026-11-25",
   "scoreStatus": "confirmed",
   "sub": "Stable Diffusion",
   "tags": [
@@ -50918,67 +50857,6 @@
   "title": "gpt-ossをLM Studioで動かしてみよう！〜初心者向け〜 Python SDKで動かす方法も解説！",
   "url": "https://www.youtube.com/watch?v=cm140jJiwwc",
   "ytid": "cm140jJiwwc"
- },
- {
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "note": "Windows環境でPythonのセットアップからCUDA有効化、動作テストまで、構築の全手順を再現できる",
-    "score": 5
-   },
-   {
-    "axis": "正確性・鮮度",
-    "note": "2025年2月公開でR1公開直後の手順のため、ツールの更新で画面や手順が変わっている可能性がある",
-    "score": 3
-   },
-   {
-    "axis": "分かりやすさ",
-    "note": "この動画でわかることが箇条書きで示され、3ツールの役割分担から入る",
-    "score": 4
-   },
-   {
-    "axis": "体系性",
-    "note": "各ツールの紹介、インストール、GPU設定、検証、クラウドとの比較まで流れが完結している",
-    "score": 5
-   },
-   {
-    "axis": "信頼性",
-    "note": "出典・参考としてOllamaやOpen WebUI、NVIDIA、Pythonの公式サイトを明記し、速度と精度の実測テストも行っている",
-    "score": 5
-   },
-   {
-    "axis": "視聴体験",
-    "note": "長尺で合成音声の解説形式のため、集中して観る視聴向け",
-    "score": 3
-   },
-   {
-    "axis": "規約・権利",
-    "note": "使用楽曲の出典を明記している",
-    "score": 5
-   }
-  ],
-  "channel": "よろずごと ゆっくり解説ch",
-  "genre": "ai",
-  "level": "中級",
-  "minutes": 34,
-  "publishedAt": "2025-02-10T09:42:04Z",
-  "review": [
-   "DeepSeek R1をOllamaとOpen WebUIで動かす、ローカルAI環境の構築方法を解説する動画。",
-   "3ツールの役割紹介、Windowsへのインストール、CUDAによる高速化設定、質問応答と速度・精度の検証までを順に進める。",
-   "クラウドに頼らず自分のPCでAIを動かしたい中級者向け。"
-  ],
-  "score": 30,
-  "scoreConfirmedAt": "2026-11-19",
-  "scoreStatus": "confirmed",
-  "sub": "DeepSeek",
-  "tags": [
-   "DeepSeek R1",
-   "Ollama",
-   "環境構築"
-  ],
-  "title": "ローカルAI環境構築方法 DeepSeek R1 × Ollama × OpenWebUI",
-  "url": "https://www.youtube.com/watch?v=HsJFWFIdQfc",
-  "ytid": "HsJFWFIdQfc"
  },
  {
   "genre": "shikaku",
@@ -53951,5 +53829,125 @@
   "publishedAt": "2025-12-13T21:00:36Z",
   "scoreStatus": "confirmed",
   "scoreConfirmedAt": "2026-11-26"
+ },
+ {
+  "genre": "ai",
+  "sub": "Ollama",
+  "ytid": "XmuNQ8mOnrw",
+  "level": "中級",
+  "minutes": 19,
+  "channel": "学びを育てるリスキルの森",
+  "score": 30,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "Ollamaのインストール章があり、3モデルを業務に近いタスクで実測して、使えた範囲と限界を示す"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 5,
+    "note": "2026-08-12公開。gemma4系とgpt-oss:20bという現行世代のモデルを扱い、概要欄の公式リンクで裏取りできる（2026-11-27確認）"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "ローカルLLMとは→Ollamaとは→インストール→実測→結論と、非エンジニア向けの順序で組まれている"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "概念、導入、検証、追加検証、結論まで一連の流れがある"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "概要欄にOllama公式とGemma公式ドキュメントへのリンクがあり、長文タスクが不安定になる等の限界も実測として明示する。公式チャンネルではない"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "19分に7章。実測パートが中心で区切りが明確"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "YouTube標準リンクのみで権利上の問題なし"
+   }
+  ],
+  "title": "16GB MacでローカルLLM 3モデルを実測｜仕事に使えた範囲と限界",
+  "url": "https://www.youtube.com/watch?v=XmuNQ8mOnrw",
+  "tags": [
+   "Ollama",
+   "ローカルLLM"
+  ],
+  "review": [
+   "16GBメモリのMacBook AirにOllamaを入れ、gemma4とgpt-oss:20bなど現行世代の3モデルを仕事のタスクで実測した検証動画。",
+   "モデルの導入手順から実測結果、長文タスクが不安定になるといった限界まで正直に示され、公式のダウンロードページやモデルページへのリンクも概要欄にそろっている。",
+   "検証環境はM3・メモリ16GBのMacBook Airで、メール作成や議事録など業務に近いタスクで正確さ・指示への忠実さ・速度・負荷を測っている。"
+  ],
+  "publishedAt": "2026-08-12",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-27"
+ },
+ {
+  "genre": "ai",
+  "sub": "Claude",
+  "ytid": "YDjfUCgG8A4",
+  "level": "初級",
+  "minutes": 35,
+  "channel": "webweb_labo",
+  "score": 31,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "登録から設定、長文PDF要約・メール作成・Artifacts・CSV分析・写真→ToDoの実演5件まで、仕事への当てはめが具体的"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 5,
+    "note": "2026-07-31公開。現行世代のClaude Sonnet 5を明示して扱う（2026-11-27確認）"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "未経験者向けに登録・画面・設定から入る構成で、章立ても追える"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "モデルの違い→登録→設定→機能→実演→他AIとの違い→プランと、入門講座の流れがそろう"
+   },
+   {
+    "axis": "信頼性",
+    "score": 3,
+    "note": "解説スクール型チャンネルでcompanion記事もあるが公式ではなく、一次ソースの提示は限定的"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "35分に章が細かく分かれ、必要な部分へ飛べる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "YouTube標準リンクのみで権利上の問題なし"
+   }
+  ],
+  "title": "ChatGPTだけではもう足りない。Claude Sonnet 5で仕事が変わる 35分で完全攻略",
+  "url": "https://www.youtube.com/watch?v=YDjfUCgG8A4",
+  "tags": [
+   "Claude",
+   "Sonnet 5"
+  ],
+  "review": [
+   "Claude Sonnet 5を題材に、登録方法・画面とモデルの違い・おすすめ設定から、長文PDF要約やArtifacts、CSV分析などの実演までを35分で攻略する初心者向け講座。",
+   "無料で使える機能と有料プランの案内も含まれ、ChatGPTやGeminiとの違いも整理されている。",
+   "Claude Skillsなど現行の機能にも触れ、モデルの違いや無料で使える機能、おすすめ設定まで、入門に必要な範囲を押さえている。"
+  ],
+  "publishedAt": "2026-07-31",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-27"
  }
 ]
