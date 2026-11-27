@@ -12963,69 +12963,6 @@
  },
  {
   "genre": "ai",
-  "sub": "Copilot",
-  "ytid": "jERgptRtkdE",
-  "level": "初級",
-  "minutes": 19,
-  "channel": "トモミツの即実践AI活用術ch",
-  "score": 31,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 4,
-    "note": "Copilotの主要機能を、活用シーンに合わせて解説し、実務へ当てはめやすい"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2026年3月公開で、Copilotの現行の機能構成を扱っている"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 4,
-    "note": "基礎知識を整理しながら進むため、全体像を把握してから操作に入れる"
-   },
-   {
-    "axis": "体系性",
-    "score": 5,
-    "note": "特徴、機能、活用法を基本操作から応用まで網羅する"
-   },
-   {
-    "axis": "信頼性",
-    "score": 3,
-    "note": "AI活用術を発信するチャンネル（当サイト掲載2本）だが、出典の明示までは概要情報から確認できない部分がある"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "入門を通すのに適した長さ"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "概要情報の範囲では、強い販売誘導は確認されていない"
-   }
-  ],
-  "title": "【超完全入門】Copilotの特徴・機能・活用法を完全解説",
-  "url": "https://www.youtube.com/watch?v=jERgptRtkdE",
-  "tags": [
-   "Copilot",
-   "Microsoft",
-   "使い方",
-   "仕事"
-  ],
-  "review": [
-   "Microsoft Copilotの主要な機能を体系的に整理し、基本操作から応用までを網羅しています。",
-   "AIツールの基礎知識を整理しながら、具体的な活用シーンに合わせた機能解説が充実しています。",
-   "Copilotの特性を多角的に捉えたい初級者が、技術の全体像を把握するのに適した内容です。"
-  ],
-  "scoreStatus": "confirmed",
-  "viewCount": 127312,
-  "publishedAt": "2026-03-24T11:01:19Z",
-  "scoreConfirmedAt": "2026-11-14"
- },
- {
-  "genre": "ai",
   "sub": "画像生成",
   "ytid": "zmIuwSo7mEA",
   "level": "初級",

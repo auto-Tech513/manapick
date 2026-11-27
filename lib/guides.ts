@@ -30,6 +30,9 @@ import statisticsGuide from "@/content/guides/statistics";
 import eikaiwaGuide from "@/content/guides/eikaiwa";
 import kakeiGuide from "@/content/guides/kakei";
 import instagramGuide from "@/content/guides/instagram";
+import excelBasicsGuide from "@/content/guides/excel-basics";
+import boki2Guide from "@/content/guides/boki2";
+import idecoGuide from "@/content/guides/ideco";
 import { videos, type Video } from "@/lib/manapick";
 
 export type Guide = {
@@ -115,7 +118,10 @@ export const guides: readonly Guide[] = [
   statisticsGuide,
   eikaiwaGuide,
   kakeiGuide,
-  instagramGuide
+  instagramGuide,
+  excelBasicsGuide,
+  boki2Guide,
+  idecoGuide
 ];
 
 export function guidePath(slug: string) {
