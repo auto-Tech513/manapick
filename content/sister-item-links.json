@@ -47,7 +47,7 @@
    "url": "https://ai.manapick.app/tool/midjourney/"
   }
  ],
- "XCsQNvri5tU": [
+ "x2xT57-n5UI": [
   {
    "site": "ai",
    "slug": "adobe-firefly",
@@ -95,7 +95,7 @@
    "url": "https://ai.manapick.app/tool/vrew/"
   }
  ],
- "_PmudWdVqKQ": [
+ "QeL6Q7GVlLY": [
   {
    "site": "ai",
    "slug": "heygen",
@@ -127,7 +127,7 @@
    "url": "https://ai.manapick.app/tool/voicevox/"
   }
  ],
- "Q8mdaTGNa_A": [
+ "f_sr2DoGCCE": [
   {
    "site": "ai",
    "slug": "perplexity",
@@ -159,7 +159,7 @@
    "url": "https://ai.manapick.app/tool/zapier/"
   }
  ],
- "DFxievESxPc": [
+ "z8BBXR43cvY": [
   {
    "site": "ai",
    "slug": "gamma",
@@ -963,7 +963,7 @@
    "url": "https://ai.manapick.app/tool/veo/"
   }
  ],
- "FkqW5ol-y5A": [
+ "NmSUp4Gezc8": [
   {
    "name": "Copilot",
    "site": "ai",
@@ -987,7 +987,7 @@
    "url": "https://ai.manapick.app/tool/bolt/"
   }
  ],
- "pHTKrBcLBb0": [
+ "EdSf1gTkT9k": [
   {
    "name": "VOICEVOX",
    "site": "ai",
@@ -1275,7 +1275,7 @@
    "url": "https://ai.manapick.app/tool/gemini/"
   }
  ],
- "DTCwUOd08-I": [
+ "jERgptRtkdE": [
   {
    "site": "ai",
    "slug": "copilot",
@@ -2123,6 +2123,30 @@
    "slug": "suno",
    "name": "Suno",
    "url": "https://ai.manapick.app/tool/suno/"
+  }
+ ],
+ "lcsyDhU_ETI": [
+  {
+   "site": "ai",
+   "slug": "chatgpt",
+   "name": "ChatGPT",
+   "url": "https://ai.manapick.app/tool/chatgpt/"
+  }
+ ],
+ "Ew0_nenouKw": [
+  {
+   "site": "ai",
+   "slug": "chatgpt",
+   "name": "ChatGPT",
+   "url": "https://ai.manapick.app/tool/chatgpt/"
+  }
+ ],
+ "v7OaEaPcGtc": [
+  {
+   "site": "ai",
+   "slug": "copilot",
+   "name": "Microsoft Copilot",
+   "url": "https://ai.manapick.app/tool/copilot/"
   }
  ]
 }
