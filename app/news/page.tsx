@@ -135,7 +135,7 @@ export default function NewsPage() {
                         <time dateTime={item.publishedAt}>{formatDate(item.publishedAt)}</time>
                       </span>
                       <h3><Phrase>{item.headline}</Phrase></h3>
-                      <p>{item.description}</p>
+                      <span className="news-index-desc">{item.description}</span>
                       <span className="news-index-source">出典: {item.sourceName}</span>
                       <span className="news-index-read">約{newsReadingMinutes(item)}分 <span aria-hidden="true">→</span></span>
                     </Link>

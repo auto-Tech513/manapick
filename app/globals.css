@@ -626,7 +626,8 @@
   line-height: 1.35;
 }
 
-.network-stage-card > p {
+.network-stage-card > .network-stage-body {
+  display: block;
   margin: 12px 0 0;
   color: #5e6a7e;
   font-size: 0.85rem;
@@ -873,7 +874,7 @@
   .network-company-section > a { width: 100%; min-width: 0; }
   .network-stage-card { min-height: 0; padding: 17px; }
   .network-stage-card > small { margin-top: 12px; }
-  .network-stage-card > p { margin-top: 8px; }
+  .network-stage-card > .network-stage-body { margin-top: 8px; }
   .network-stage-action { margin-top: 16px; }
   .network-route-list article { padding: 12px; }
   .network-route-list nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -12955,7 +12956,7 @@ ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; height: 0
 }
 
 .latest-news-summary,
-.news-index-card > p {
+.news-index-card > .news-index-desc {
   display: -webkit-box;
   overflow: hidden;
   margin: 10px 0 0;
@@ -14985,7 +14986,7 @@ article li .text-sm {
 .my-video-body strong,
 .new-genre-latest-card strong,
 .new-video-body strong,
-.news-index-card > p,
+.news-index-card > .news-index-desc,
 .profession-feature-title,
 .ranked-body h3,
 .ranking-video-body strong,

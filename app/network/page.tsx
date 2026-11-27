@@ -210,7 +210,7 @@ export default function NetworkPage() {
                 <span className="network-stage-number">{stage.number}</span>
                 <small>{stage.eyebrow}</small>
                 <strong>{stage.title}</strong>
-                <p>{stage.body}</p>
+                <span className="network-stage-body">{stage.body}</span>
                 <span className="network-stage-action">{stage.action} <span aria-hidden="true">→</span></span>
               </a>
             ) : (
@@ -218,7 +218,7 @@ export default function NetworkPage() {
                 <span className="network-stage-number">{stage.number}</span>
                 <small>{stage.eyebrow}</small>
                 <strong>{stage.title}</strong>
-                <p>{stage.body}</p>
+                <span className="network-stage-body">{stage.body}</span>
                 <span className="network-stage-action">{stage.action} <span aria-hidden="true">→</span></span>
               </a>
             )
