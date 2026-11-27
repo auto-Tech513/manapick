@@ -2100,5 +2100,29 @@
    "name": "Claude",
    "url": "https://ai.manapick.app/tool/claude/"
   }
+ ],
+ "IDE0mfO9nzc": [
+  {
+   "site": "ai",
+   "slug": "lovable",
+   "name": "Lovable",
+   "url": "https://ai.manapick.app/tool/lovable/"
+  }
+ ],
+ "V61uT165m_o": [
+  {
+   "site": "ai",
+   "slug": "voicevox",
+   "name": "VOICEVOX",
+   "url": "https://ai.manapick.app/tool/voicevox/"
+  }
+ ],
+ "FIT36wCElC8": [
+  {
+   "site": "ai",
+   "slug": "suno",
+   "name": "Suno",
+   "url": "https://ai.manapick.app/tool/suno/"
+  }
  ]
 }

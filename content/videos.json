@@ -53949,5 +53949,188 @@
   "publishedAt": "2026-07-31",
   "scoreStatus": "confirmed",
   "scoreConfirmedAt": "2026-11-27"
+ },
+ {
+  "genre": "ai",
+  "sub": "Lovable",
+  "ytid": "IDE0mfO9nzc",
+  "level": "初級",
+  "minutes": 18,
+  "channel": "AIでサボろうチャンネル",
+  "score": 28,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "14のAIコーディングツールを比較し、非エンジニア向けの選択肢を示す。参考文献に各ツールの公式リンク14件がそろう"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2025-06-12公開。Codexやjulesを含む当時のツール一覧は網羅的だが、仕様は変わる可能性あり"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "ジャンル分けで整理され、公式リンク付きで追いやすい"
+   },
+   {
+    "axis": "体系性",
+    "score": 3,
+    "note": "章はイントロ・ジャンル・おすすめ・おわりの4つと粗い"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "書籍販売の案内（1,500円）があるが、参考文献は公式リンク中心で誘導色は控えめ"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "18分で要点を追える"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "YouTube公式埋め込みで視聴できる通常の解説動画"
+   }
+  ],
+  "title": "【ジャンルも全て解説】非エンジニアがAIコーディング始めるならどれ？オススメツールを教えます",
+  "url": "https://www.youtube.com/watch?v=IDE0mfO9nzc",
+  "tags": [
+   "Lovable",
+   "AIコーディング",
+   "比較"
+  ],
+  "review": [
+   "CursorやClaude Code、Lovableなど14のAIコーディングツールをジャンル別に整理し、非エンジニアが最初に選ぶべき選択肢を示す。",
+   "各ツールの公式サイトへのリンクが概要欄にそろい、気になったものをすぐ確かめられる。",
+   "18分で全体像がつかめ、プログラミング未経験でも最初の一歩を決めやすい。"
+  ],
+  "publishedAt": "2025-06-12T21:30:06Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-27"
+ },
+ {
+  "genre": "ai",
+  "sub": "VOICEVOX",
+  "ytid": "V61uT165m_o",
+  "level": "初級",
+  "minutes": 10,
+  "channel": "えーあいどりーむ",
+  "score": 29,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 4,
+    "note": "8ツールを順位付きで比較し、VOICEVOXを含む各ツールの特徴を示す。目次は0:54から9:37まで章立て"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 4,
+    "note": "2025-09-02公開で比較的最近。料金・仕様は変わる可能性あり"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "ランキング形式で分かりやすい"
+   },
+   {
+    "axis": "体系性",
+    "score": 4,
+    "note": "8位から1位への順位構成にまとめがある"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "公式LINEへの誘導が1件あるが控えめ。クレジットにVOICEVOXと音読さんを明記"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "10分で8ツールを追える"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "YouTube公式埋め込みで視聴できる通常の解説動画"
+   }
+  ],
+  "title": "【無料】リアルすぎてドン引き…！日本人のAI音声ツール8選を徹底比較してみました！",
+  "url": "https://www.youtube.com/watch?v=V61uT165m_o",
+  "tags": [
+   "VOICEVOX",
+   "AI音声",
+   "比較"
+  ],
+  "review": [
+   "にじボイスやCoefont、ElevenLabs、VOICEVOXなど日本語のAI音声ツール8選を順位付きで比べる。",
+   "VOICEVOXは第2位で、無料で使える日本語音声合成としての位置づけが分かる。",
+   "10分で8ツールの違いがつかめ、ナレーション用の声選びの出発点になる。"
+  ],
+  "publishedAt": "2025-09-02T08:30:28Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-27"
+ },
+ {
+  "genre": "ai",
+  "sub": "Suno",
+  "ytid": "FIT36wCElC8",
+  "level": "初級",
+  "minutes": 42,
+  "channel": "AI たろう",
+  "score": 31,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "始め方・料金・基本操作・カスタム設定・歌詞の作り方・各機能・活用例まで実演の構成。章立ては0:00から39:10まで13章"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 5,
+    "note": "2026-01-14公開の最新ガイド"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 4,
+    "note": "13章に分かれ、機能ごとに追える"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "とは・始め方と料金・基本・カスタム・歌詞・各機能・活用例の体系的な流れがある"
+   },
+   {
+    "axis": "信頼性",
+    "score": 3,
+    "note": "公式LINE・無料セミナー・TAOカレッジ・月額コミュニティへの誘導が概要欄の大半を占める。内容自体は無料"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "42分を13章に区切って追える"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "YouTube公式埋め込みで視聴できる通常の解説動画。Suno公式への案内あり"
+   }
+  ],
+  "title": "Sunoの使い方、完全ガイド2026！ 始め方から使い方まで全て解説します。Sunoで使用できるプロンプトも配布中。",
+  "url": "https://www.youtube.com/watch?v=FIT36wCElC8",
+  "tags": [
+   "Suno",
+   "音楽生成",
+   "使い方"
+  ],
+  "review": [
+   "Sunoの始め方と料金から基本操作、カスタム設定、歌詞の作り方まで、42分を13章に分けて解説する完全ガイド。",
+   "LibraryやSearch、Hooks、Exploreなど各機能の使い方も章立てされ、全体像がつかめる。",
+   "2026年1月公開の最新版で、見たあとすぐSunoで曲作りを試せる。"
+  ],
+  "publishedAt": "2026-01-14T09:30:09Z",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-27"
  }
 ]
