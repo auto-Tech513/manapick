@@ -4,6 +4,7 @@ import BrandLogo from "@/components/BrandLogo";
 import { guidePath, guides } from "@/lib/guides";
 import { absoluteUrl, genreDisplayName } from "@/lib/manapick";
 import Phrase from "@/components/Phrase";
+import AdSlot from "@/components/AdSlot";
 
 const pageTitle = "学習ロードマップ一覧｜無料YouTube動画で学ぶ順番 | Manapick";
 const pageDescription = "生成AI、Python、動画編集、英語、データ分析、資格など10分野の無料YouTube学習ロードマップを一覧で比較できます。各ロードマップは独学のステップ、つまずきポイント、次に進む分野までを示し、登録不要・全部無料で読めます。";
@@ -77,6 +78,7 @@ export default function GuideIndexPage() {
         <h1><Phrase>学習ロードマップ一覧</Phrase></h1>
         <p>長い動画を闇雲に見るのではなく、入口・基礎・応用の3段階で次の一本を選べます。掲載動画はYouTube上で公開されており、会員登録は不要です。</p>
       </section>
+      <AdSlot slot="1438236565" placement="guide-index-after-hero" />
       <section className="guide-index-list" aria-label="分野別ロードマップ">
         {guides.map((guide, index) => (
           <Link key={guide.slug} href={guidePath(guide.slug)}>

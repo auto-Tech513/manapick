@@ -198,6 +198,8 @@ export default async function LearnIntentPage({ params }: LearnPageProps) {
         </div>
       </section>
 
+      <AdSlot slot="1438236565" placement="learn-after-videos" />
+
       <section className="knowledge-section" aria-labelledby="intent-links-title">
         <p className="section-eyebrow">次の入口</p>
         <h2 id="intent-links-title">もっと深く探す</h2>

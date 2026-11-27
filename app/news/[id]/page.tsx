@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import FoldSection from "@/components/FoldSection";
 import { notFound } from "next/navigation";
+import { Fragment } from "react";
 import AdSlot from "@/components/AdSlot";
 import BrandLogo from "@/components/BrandLogo";
 import NewsShareBar from "@/components/NewsShareBar";
@@ -168,12 +169,17 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
           </section>
 
           {item.sections.map((section, index) => (
-            <FoldSection key={section.heading} className="news-detail-fold" titleId={`news-section-${index + 1}`} title={section.heading}>
-              {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-              {section.bullets?.length ? (
-                <ul>{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>
-              ) : null}
-            </FoldSection>
+            <Fragment key={section.heading}>
+              <FoldSection className="news-detail-fold" titleId={`news-section-${index + 1}`} title={section.heading}>
+                {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                {section.bullets?.length ? (
+                  <ul>{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>
+                ) : null}
+              </FoldSection>
+              {/* 手動枠（2026-11-27 広告配置の原則で関連ニュース後から移設）：本文の節と節の切れ目。
+                  段落内・文中への挿入ではなく、2つ目の節を読み終えた位置で目に入る */}
+              {index === 1 ? <AdSlot slot="1438236565" placement="news-mid-sections" /> : null}
+            </Fragment>
           ))}
         </article>
 
@@ -219,9 +225,8 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
         </section>
       ) : null}
 
-      {/* 手動枠（2026-11-19 ページ末尾の共有ボタンの下から移動）：本文と「同じカテゴリのニュース」を読み終えた位置。
-          末尾より見られやすく、本文の導入直後の枠との間に本文の節をはさむ（PC・SP とも1画面に2つ並ばない） */}
-      <AdSlot slot="1438236565" placement="news-after-related" />
+      {/* 手動枠は本文の節の切れ目へ移設済み（news-mid-sections、2026-11-27 広告配置の原則：
+          記事末尾寄りの位置は到達率が低く「配置した」と数えない） */}
 
       <NetworkContextBand genreKey={NEWS_GENRE[item.category] ?? "biz"} skipHrefs={item.relatedLinks.map((link) => link.href)} />
 
