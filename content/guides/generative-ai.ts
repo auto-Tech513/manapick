@@ -3,7 +3,7 @@ const generativeAiGuide = {
   genre: "ai",
   title: "ChatGPT・Gemini・Claude、何が違う？プロンプトのコツからCopilot活用まで、仕事に使う順番で学ぶ【無料動画7本】",
   description:
-    "AIプロンプトのコツ、Copilot活用事例、ChatGPT/Gemini/Claudeの違いを無料動画7本で整理。仕事に使う順番がわかります。",
+    "AIプロンプトのコツ、Copilot活用事例、ChatGPT/Gemini/Claudeの違いを無料動画7本で整理。仕事に使う順番がわかります。頼み方の型、ツールごとの得意分野の違い、業務への当てはめ方を、初めて生成AIを使う人向けに並べています。",
   publishedAt: "2026-06-07",
   intro:
     "AIプロンプトのコツやCopilot活用事例を探す前に、まずChatGPT・Gemini・Claudeを触り、次に仕事の文章作成や資料整理へ当てはめる順番がおすすめです。プロンプトは魔法の文章ではなく、目的・前提・出力形式をAIに伝えるための設計です。このページでは、無料動画7本で**「触る → 業務で使う → 任せる」**へ進めるよう整理しています。",

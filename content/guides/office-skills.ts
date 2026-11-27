@@ -3,7 +3,7 @@ const officeSkillsGuide = {
   genre: "biz",
   title: "「資料が伝わらない」から卒業する。Word・PowerPoint独学ロードマップ、AI・Canva活用まで【無料YouTube動画9本】",
   description:
-    "Office・資料作成の独学は「Word/Excelの基礎 → 伝わる資料 → AI/Canva活用」の3ステップ。無料YouTube動画9本で、2026年版の学習順を整理します。",
+    "Office・資料作成の独学は「Word/Excelの基礎 → 伝わる資料 → AI/Canva活用」の3ステップ。無料YouTube動画9本で、2026年版の学習順を整理します。文書と表の基本操作から、読み手に伝わる資料の組み立て方までを示します。",
   publishedAt: "2026-06-10",
   intro:
     "Office・資料作成は、**「基本操作 → 伝わる型 → AI/Canvaで広げる」**の順で学ぶと仕事に移しやすくなります。",
