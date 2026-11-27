@@ -5,7 +5,31 @@
     <link>https://manapick.app/news/</link>
     <description>公式発表を、学びと仕事に使える形へ整理します。</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 25 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Gemini 4 Hydrogenの作例6件をGoogleが公開。3Dの世界づくりからモデル比較まで、作り手の使い方を見せる</title>
+      <link>https://manapick.app/news/2026-11-27-gemini-4-hydrogen-builders/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-27-gemini-4-hydrogen-builders/</guid>
+      <description>Googleは、最新モデルGemini 4 Hydrogenで作られた6件のプロジェクトを公式ブログで紹介しました。雨のSF都市の3D映像、対話できる蛾のアニメーション、モデル同士の比較まで、作り手が実際にどう使ったかを見せる内容です。</description>
+      <category>生成AI</category>
+      <pubDate>Thu, 26 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>AIエージェントが系外惑星の「候補」探し。天文ファン2人の探索と、専門家による独立確認をOpenAIが紹介</title>
+      <link>https://manapick.app/news/2026-11-27-astra-exoplanet-search/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-27-astra-exoplanet-search/</guid>
+      <description>OpenAIは、AIエージェントのAstraやCodexを使って系外惑星の候補を探した天文ファン2人の取り組みを紹介しました。約10万個の星のデータから200件超の信号を見つけた例や、専門家が同じ信号を独立に確認した経過まで含む内容です。候補はまだ惑星と確定したものではありません。</description>
+      <category>生成AI</category>
+      <pubDate>Thu, 26 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>会議室のMeet端末、操作パネルの並びが12月から変わる。よく使う操作を前へ、管理者の設定は不要</title>
+      <link>https://manapick.app/news/2026-11-27-meet-hardware-panel-reorder/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-27-meet-hardware-panel-reorder/</guid>
+      <description>Googleは、会議室に置くGoogle Meetハードウェアのタッチコントローラーで、「その他の操作」パネルの並び順を12月2日から変更すると発表しました。画面提示や参加者一覧など使用頻度の高い操作が前に来て、録画や配信は後ろに下がります。管理者の作業は不要で、無効化もできません。</description>
+      <category>仕事・整理</category>
+      <pubDate>Thu, 26 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>汎用AIがタンパク質の設計者に。GPT-6が専門モデルなしで設計し、結合を実験で確認</title>
       <link>https://manapick.app/news/2026-11-26-gpt6-protein-design/</link>
