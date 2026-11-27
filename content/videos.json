@@ -57,7 +57,7 @@
   ],
   "publishedAt": "2024-12-09T11:03:54Z",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-06-07"
+  "scoreConfirmedAt": "2026-11-27"
  },
  {
   "genre": "ai",
@@ -3395,7 +3395,7 @@
   "viewCount": 17063,
   "publishedAt": "2024-08-13T06:07:43Z",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-14"
+  "scoreConfirmedAt": "2026-11-27"
  },
  {
   "genre": "shikaku",
@@ -3705,7 +3705,7 @@
   "viewCount": 554691,
   "publishedAt": "2024-10-16T10:30:06Z",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-15"
+  "scoreConfirmedAt": "2026-11-27"
  },
  {
   "genre": "data",
@@ -10313,7 +10313,8 @@
   ],
   "viewCount": 18318,
   "publishedAt": "2024-04-17T08:00:12Z",
-  "scoreStatus": "confirmed"
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-27"
  },
  {
   "genre": "ai",
@@ -15421,7 +15422,7 @@
   "scoreStatus": "confirmed",
   "viewCount": 98973,
   "publishedAt": "2024-11-21T11:00:07Z",
-  "scoreConfirmedAt": "2026-11-14"
+  "scoreConfirmedAt": "2026-11-27"
  },
  {
   "genre": "ai",
@@ -17640,7 +17641,8 @@
   ],
   "scoreStatus": "confirmed",
   "viewCount": 281668,
-  "publishedAt": "2024-07-27T05:00:21Z"
+  "publishedAt": "2024-07-27T05:00:21Z",
+  "scoreConfirmedAt": "2026-11-27"
  },
  {
   "genre": "english",
@@ -40343,7 +40345,7 @@
   "scoreStatus": "confirmed",
   "viewCount": 59429,
   "publishedAt": "2024-11-22T08:38:00Z",
-  "scoreConfirmedAt": "2026-07-12"
+  "scoreConfirmedAt": "2026-11-27"
  },
  {
   "genre": "ai",
