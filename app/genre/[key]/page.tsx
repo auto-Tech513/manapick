@@ -244,7 +244,7 @@ function genreSeoFor(key: string, label: string, count: number): GenreSeo {
   return {
     ...base,
     title: `${seoLabel}のおすすめYouTube学習動画${count}本｜${topSubs} | Manapick`,
-    description: `${seoLabel}（${topSubs}など）の無料YouTube学習動画${count}本を7軸35点で採点し、見る順に整理。登録不要・全部無料。`,
+    description: `${seoLabel}（${topSubs}など）の無料YouTube学習動画${count}本を7軸35点で採点し、見る順に整理。各動画の得点内訳とレビューも掲載。登録不要・全部無料。`,
     h1: `${seoLabel}のおすすめYouTube学習動画（${count}本）`,
     lead: leads[key] ?? base.lead
   };
