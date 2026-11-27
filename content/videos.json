@@ -39309,65 +39309,63 @@
  {
   "genre": "ai",
   "sub": "Stable Diffusion",
-  "ytid": "He5ofY2JNvE",
+  "ytid": "HkoRkNLWQzY",
   "level": "初級",
-  "minutes": 82,
-  "channel": "とうや【AIイラストLab.】",
-  "score": 30,
+  "minutes": 300,
+  "channel": "pixaroma",
+  "score": 31,
   "axisScores": [
    {
     "axis": "実用性",
     "score": 5,
-    "note": "PCのスペック選びからモデルの入手先まで示され、そのまま環境構築に取りかかれる"
+    "note": "インストールから自作ワークフロー、LoRA、エラー対処まで実作業の全域を扱う"
    },
    {
     "axis": "正確性・鮮度",
-    "score": 3,
-    "note": "2023年の解説動画をまとめた総集編で、ツールやモデルの前提は当時のもの"
+    "score": 5,
+    "note": "2026年1月公開で、Z-ImageやGGUFなど現行世代の題材がシラバスに入っている"
    },
    {
     "axis": "分かりやすさ",
-    "score": 5,
-    "note": "つまずきやすい導入手順を、チャプター8件で順に追える"
+    "score": 4,
+    "note": "ゼロから前提で23章に分かれ概念から始める。5時間の長尺自体は初級者への負荷"
    },
    {
     "axis": "体系性",
     "score": 5,
-    "note": "PCスペックからインストール、使い方、拡張機能までを総集編として体系化している"
+    "note": "セットアップから応用、エラー対処まで総集編の流れがそろっている"
    },
    {
     "axis": "信頼性",
-    "score": 3,
-    "note": "AIイラスト専門のチャンネル（とうや）の発信で、参考サイトへのリンクも示されるが、当サイトでの掲載はこの1本のみ"
+    "score": 4,
+    "note": "ComfyUI専門チャンネルのシリーズ本編で、教材ワークフローを自サイトで配布。公式ではない"
    },
    {
     "axis": "視聴体験",
-    "score": 4,
-    "note": "82分の長尺の総集編で、腰を据えて見る回"
+    "score": 3,
+    "note": "章立てで必要な部分へ飛べるが、約5時間は初級枠としては重い"
    },
    {
     "axis": "規約・権利",
     "score": 5,
-    "note": "概要欄に誘導はなく、モデルや参考サイトへのリンクのみ"
+    "note": "YouTube標準リンクのみで権利上の問題なし"
    }
   ],
-  "title": "【総集編】これ1本でStable Diffusionがわかる！ PCの選び方～インストール～拡張機能の使い方まで初心向けに2023年を総まとめして徹底解説",
-  "url": "https://www.youtube.com/watch?v=He5ofY2JNvE",
+  "title": "ComfyUIフルコース｜ゼロから学ぶ約5時間の総集編（英語動画）",
+  "url": "https://www.youtube.com/watch?v=HkoRkNLWQzY",
   "tags": [
    "Stable Diffusion",
-   "Stable",
-   "Diffusion",
+   "ComfyUI",
    "使い方"
   ],
   "review": [
-   "Stable Diffusionを、PC選びからインストール、拡張機能の使い方までまとめた総集編。",
-   "チャプターはPCスペック、インストール、基本的な使い方、プロンプト、おすすめの拡張機能など8件に分かれる。",
-   "2023年の解説動画をまとめた内容で、ツールやモデルの前提は当時のもの。"
+   "英語の動画です。ComfyUIをゼロから学ぶ約5時間のフルコースで、総集編の枠に置く1本です。",
+   "インストールと画面の見方から、ノードでのワークフロー構築、LoRAやControlNetの基礎、カスタムノード管理やエラー対処までを23章で体系化しています。",
+   "Z-ImageやGGUFモデルなど現在の世代の題材を含みます。AUTOMATIC1111系ではなく、現在の主流であるComfyUIへの移行として見てください。"
   ],
+  "publishedAt": "2026-01-15",
   "scoreStatus": "confirmed",
-  "viewCount": 117908,
-  "publishedAt": "2023-12-29T06:07:18Z",
-  "scoreConfirmedAt": "2026-11-14"
+  "scoreConfirmedAt": "2026-11-27"
  },
  {
   "genre": "ai",
@@ -45062,64 +45060,63 @@
  {
   "genre": "ai",
   "sub": "Stable Diffusion",
-  "ytid": "5uGt_t4t1iU",
+  "ytid": "k1DFCqWg3fU",
   "level": "中級",
-  "minutes": 14,
-  "channel": "テルルとロビン【てるろび】旧やすらぼ",
+  "minutes": 17,
+  "channel": "Monzon Media",
   "score": 29,
   "axisScores": [
    {
     "axis": "実用性",
-    "note": "インストールからモデルの導入、ポーズ指定や輪郭抽出の操作まで、そのまま手を動かして試せる",
-    "score": 5
+    "score": 4,
+    "note": "モデル入手からノード接続、SDXLとFluxの適用例まで具体物つきで示される"
    },
    {
     "axis": "正確性・鮮度",
-    "note": "2023年3月時点の情報と本人が明記し、現在の拡張機能の仕様とは異なる場合がある",
-    "score": 3
+    "score": 4,
+    "note": "扱うUnionモデルと手法は現行世代そのもので、一次ソースへのリンクで確認できる"
    },
    {
     "axis": "分かりやすさ",
-    "note": "機能ごとに章が分かれ、操作の流れを追いやすい",
-    "score": 4
+    "score": 4,
+    "note": "章立てと手順の粒度がそろい、初学者にも追える形になっている"
    },
    {
     "axis": "体系性",
-    "note": "導入から基本機能、その他の機能紹介まで操作手順の順に進む",
-    "score": 4
+    "score": 4,
+    "note": "入手、導入、基本構築、モデル別適用、種類別の応用まで段階を踏む"
    },
    {
     "axis": "信頼性",
-    "note": "公式のGitHubリポジトリへのリンクが示され、販売や登録への誘導はない",
-    "score": 4
+    "score": 4,
+    "note": "チュートリアル専門チャンネルのシリーズで、概要欄がモデル配布元へ直接リンクする"
    },
    {
     "axis": "視聴体験",
-    "note": "14分を目次に沿って区切って視聴できる",
-    "score": 4
+    "score": 4,
+    "note": "約17分に10章。ワークフローファイルの配布があり、手を止めずに追える"
    },
    {
     "axis": "規約・権利",
-    "note": "YouTubeの公式埋め込みで視聴できる通常の解説動画",
-    "score": 5
+    "score": 5,
+    "note": "YouTube標準リンクのみで権利上の問題なし"
    }
   ],
-  "title": "Control-Netの導入と基本的な使い方解説！自由自在にポージングしたり塗りだけAIでやってみよう！【Stable Diffusion】",
-  "url": "https://www.youtube.com/watch?v=5uGt_t4t1iU",
+  "title": "ComfyUIでControlNet入門｜SDXLとFluxのUnionモデルを使うワークフロー（英語動画）",
+  "url": "https://www.youtube.com/watch?v=k1DFCqWg3fU",
   "tags": [
    "Stable Diffusion",
    "ControlNet",
    "使い方"
   ],
   "review": [
-   "Stable Diffusionの拡張機能ControlNetの導入と基本的な使い方を解説する動画。",
-   "ポーズ指定のOpenPoseや輪郭抽出のCannyなど、機能ごとの操作手順を順に実演している。",
-   "公式のGitHubリポジトリへのリンクが示され、2023年3月時点の情報であることが明記されている。"
+   "英語の動画です。ComfyUIでSDXLとFluxの両方のControlNet Unionモデルを使うワークフローを組むチュートリアル。",
+   "モデルの入手先（Hugging Faceの公式リポジトリ）からカスタムノードの導入、ノードの接続までを章立てで進めます。",
+   "Depth・Canny・Poseの適用例があり、ワークフローファイルも配布されています。"
   ],
+  "publishedAt": "2025-02-23",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-11",
-  "viewCount": 176105,
-  "publishedAt": "2023-03-09T08:00:04Z"
+  "scoreConfirmedAt": "2026-11-27"
  },
  {
   "genre": "shikaku",
@@ -52981,63 +52978,62 @@
  {
   "genre": "ai",
   "sub": "GitHub Copilot",
-  "ytid": "Nl7zAb-CzNE",
+  "ytid": "LsA4vIX_3UY",
   "level": "初級",
-  "minutes": 47,
-  "channel": "IT屋のたなべ",
-  "score": 30,
+  "minutes": 8,
+  "channel": "GitHub",
+  "score": 31,
   "axisScores": [
    {
     "axis": "実用性",
-    "score": 5,
-    "note": "Universe 2024の最新情報、VSCodeでの基本操作、モデル、料金、セキュリティ、Chat・CLI・Extensions・Workspace・Spark、Cursor比較まで実践に直結。公式リンク付き"
+    "score": 4,
+    "note": "実際のタスクを渡してコード探索とテスト実行を見せる実演型で、最初の使い方が掴める"
    },
    {
     "axis": "正確性・鮮度",
-    "score": 3,
-    "note": "2024-11-11公開で約2年前。モデル・料金は現行と異なる可能性が高く、当時版として扱う必要がある"
+    "score": 5,
+    "note": "2026年7月公開の公式動画で、現在のエージェント型プロダクトそのものを扱う"
    },
    {
     "axis": "分かりやすさ",
     "score": 4,
-    "note": "17章のタイムスタンプ付きで、概要から各機能、比較、まとめへと追いやすい"
+    "note": "初心者向けツアーを掲げ、ホーム画面とプロジェクト一覧から順に案内する"
    },
    {
     "axis": "体系性",
-    "score": 5,
-    "note": "概要→基本操作→モデル→料金→セキュリティ→Chat→CLI→PR→Extensions→Workspace→Spark→比較→まとめの流れで全体を一通り追える"
+    "score": 4,
+    "note": "導入から並行セッション、レビュー、自動化までの流れがある。対象はCopilotアプリ単体"
    },
    {
     "axis": "信頼性",
-    "score": 4,
-    "note": "現役エンジニア・講師による解説で、GitHub公式（Copilot・Universe・Trust Center）へのリンクあり。販売・登録誘導なし"
+    "score": 5,
+    "note": "GitHub公式チャンネルで、概要欄も公式プロダクトページへリンクする"
    },
    {
     "axis": "視聴体験",
     "score": 4,
-    "note": "47分と長めだが17章のタイムスタンプ付きで分割視聴しやすい"
+    "note": "7分42秒に8章と密度が高く、初級の入口として適切な長さ"
    },
    {
     "axis": "規約・権利",
     "score": 5,
-    "note": "YouTube標準リンクで紹介可能。公式ツール紹介が中心で権利問題はない"
+    "note": "YouTube標準リンクのみで権利上の問題なし"
    }
   ],
-  "title": "GitHub CopilotはAIコード補完だけじゃない！最新情報と使い方、Cursorとの比較がわかる完全ガイド",
-  "url": "https://www.youtube.com/watch?v=Nl7zAb-CzNE",
+  "title": "GitHub Copilotアプリ入門｜公式ツアーで分かるエージェント型の使い方（英語動画）",
+  "url": "https://www.youtube.com/watch?v=LsA4vIX_3UY",
   "tags": [
    "GitHub Copilot",
-   "使い方",
-   "比較"
+   "使い方"
   ],
   "review": [
-   "GitHub Universe 2024で発表されたCopilotの最新情報を、基本操作から解説する完全ガイド。",
-   "モデル・料金・セキュリティ、Chat・CLI・Extensions・Workspace・Sparkまで17章で一通り追える。",
-   "Cursorとの比較章もあり、自分の開発スタイルに合うツールを選ぶ材料になる。公開は2024年11月のため、最新の仕様は公式で確かめながら使うとよい。"
+   "英語の動画です。GitHub公式チャンネルによる、GitHub Copilotアプリの初心者向けツアー。",
+   "セッションの開始、タスクの委任、並行セッション、変更のレビューまで、現在のエージェント型Copilotの使い方を7分強で案内します。",
+   "VS Codeの設定や料金プランの解説は含まないため、全体像は別途補う前提で見てください。"
   ],
-  "publishedAt": "2024-11-11T09:00:22Z",
+  "publishedAt": "2026-07-21",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-21"
+  "scoreConfirmedAt": "2026-11-27"
  },
  {
   "genre": "ai",
