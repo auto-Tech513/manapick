@@ -46,6 +46,7 @@ const footerLinkGroups: { title: string; links: FooterLink[] }[] = [
       { label: "公式X", href: "https://x.com/manapick_app", external: true },
       { label: "公式YouTube", href: "https://www.youtube.com/@Manapick_app", external: true },
       { label: "公式Instagram", href: "https://www.instagram.com/manapick_app/", external: true },
+      { label: "公式LINE", href: "https://lin.ee/5DpH9VV", external: true },
       { label: "すべてのページ", href: "/all/" }
     ]
   }
