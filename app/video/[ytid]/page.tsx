@@ -44,6 +44,9 @@ import {
 import { nextWatchVideo } from "@/lib/rankings";
 import { genrePosition } from "@/lib/site-stats";
 import AdSlot from "@/components/AdSlot";
+import GuidePrCard from "@/components/GuidePrCard";
+import prLinksData from "@/content/pr-links.json";
+import { prItemsForSub, prKindOf, type GuidePrLink } from "@/lib/pr-links";
 import "../../video-detail.css";
 import Phrase from "@/components/Phrase";
 
@@ -62,6 +65,8 @@ type RoadmapShape = {
 };
 
 export const dynamicParams = false;
+
+const guidePrLinks = prLinksData as Record<string, GuidePrLink[]>;
 
 export function generateStaticParams() {
   return videos.map((video) => ({ ytid: video.ytid }));
@@ -137,6 +142,16 @@ export default async function VideoPage({ params }: VideoPageProps) {
   const editorialSummary = videoEditorialSummary(video, nextPick?.video ?? related[0]);
   const freshness = videoFreshness(video);
   const sisterLinks = sisterItemLinksByVideo[video.ytid] ?? [];
+  // 教材・講座（PR）：ジャンルページと同じ教材データから、この動画の話題に合うものだけを出す
+  // （話題で絞る考え方はサブジャンルページと同じ。並びは講座を先、書籍を後）。
+  const prOrdered = (() => {
+    const items = guidePrLinks[video.genre] ?? [];
+    const { ordered } = prItemsForSub(items, video.sub ?? "");
+    return [
+      ...ordered.filter((item) => prKindOf(item) === "course"),
+      ...ordered.filter((item) => prKindOf(item) === "book")
+    ];
+  })();
   const linkedSisterHrefs = sisterLinks.map((link) => link.url);
   // ロードマップに載っている動画は、その段階名（例：仕事で使う）を出す。無ければレベル名をテキストで出す。
   const roadmapStage = (() => {
@@ -570,6 +585,28 @@ export default async function VideoPage({ params }: VideoPageProps) {
                   </a>
                 ))}
               </div>
+            </section>
+          ) : null}
+
+          {prOrdered.length > 0 ? (
+            <section className="guide-pr-section vd-pr" aria-labelledby="video-pr-title">
+              <div className="guide-pr-heading">
+                <div>
+                  <p className="section-eyebrow">【PR】広告</p>
+                  <h2 id="video-pr-title">あわせて使いたい教材・講座(PR)</h2>
+                  <p className="guide-pr-disclosure">本ページにはアフィリエイト広告（PR）を含みます。</p>
+                  <p className="guide-pr-lead">動画で要点が見えたら、あとは実践あるのみです。この動画の内容に関連する講座と教材を集めました。</p>
+                </div>
+                <span className="guide-pr-badge">PR</span>
+              </div>
+              <div className="guide-pr-grid">
+                {prOrdered.map((item) => (
+                  <GuidePrCard key={item.url} genre={video.genre} item={item} placement="video" />
+                ))}
+              </div>
+              {video.genre === "money" ? (
+                <p className="guide-pr-note">※教材・講座の紹介です。特定の金融商品の推奨ではありません。</p>
+              ) : null}
             </section>
           ) : null}
 
