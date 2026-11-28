@@ -11365,50 +11365,50 @@
  {
   "genre": "ai",
   "sub": "画像生成",
-  "ytid": "aBClTyyXCT8",
+  "ytid": "zeR-tgFPgLs",
   "level": "初級",
-  "minutes": 13,
-  "channel": "AI FREAK - 最新のAIツールをご紹介",
-  "score": 29,
+  "minutes": 16,
+  "channel": "ハム先生のAI教室【AI動画の実務活用】",
+  "score": 32,
   "axisScores": [
    {
     "axis": "実用性",
     "score": 5,
-    "note": "画像生成から動画化、口パク、MVまで、作る工程をそのまま再現できる"
+    "note": "基本操作からキーフレーム、参照素材、リップシンク、部分編集まで、作り方の操作を15項目で実演する"
    },
    {
     "axis": "正確性・鮮度",
-    "score": 4,
-    "note": "2025年5月公開で、Klingのバージョン変更にも触れている"
+    "score": 5,
+    "note": "2026-10-23公開。現行のKling 4.0と新しいUI、Flashモデルまで前提に含む"
    },
    {
     "axis": "分かりやすさ",
     "score": 5,
-    "note": "チャプター16件とサンプル動画で、初心者が工程を追いやすい"
+    "note": "目次が分単位で15項目に分かれ、目的の操作へ直接飛べる"
    },
    {
     "axis": "体系性",
     "score": 4,
-    "note": "2つの作り方と品質を上げる工夫まで、一連の制作フローとして示している"
+    "note": "操作15選の形で基礎→応用は完結するが、登録手順や料金は末尾のまとめで簡潔に扱う程度"
    },
    {
     "axis": "信頼性",
-    "score": 3,
-    "note": "無料資料へのリンクは明示されるが、有料リンクが概要欄では無表示な点に注意が要る"
+    "score": 4,
+    "note": "AI動画の実務活用チャンネルで法人制作の実績を明示。概要欄にKlingのアフィリエイトリンクと期間限定割引の案内がある"
    },
    {
     "axis": "視聴体験",
-    "score": 5,
-    "note": "13分で制作の全体像をつかめる"
+    "score": 4,
+    "note": "15分38秒。実演中心で進む"
    },
    {
     "axis": "規約・権利",
-    "score": 3,
-    "note": "固定コメントで有料と分かるTipsへのリンクが、概要欄では有料と明示されていない"
+    "score": 5,
+    "note": "YouTube標準リンクのみで権利上の問題なし"
    }
   ],
-  "title": "【最新版】『AI動画の作り方』を初心者向け🔰に徹底解説。AI猫動画・AI映画・AIアニメ・MVを作れるおすすめAIツールは？",
-  "url": "https://www.youtube.com/watch?v=aBClTyyXCT8",
+  "title": "【Seedanceの\"3倍\"安い】Kling 4.0の使い方15選！基礎から応用操作まで1本で完全解説",
+  "url": "https://www.youtube.com/watch?v=zeR-tgFPgLs",
   "tags": [
    "画像生成",
    "画像生成AI",
@@ -11416,14 +11416,13 @@
    "使い方"
   ],
   "review": [
-   "AI動画の作り方を、猫動画・映画・アニメ・MVなどの作例とともに初心者向けに解説する回。",
-   "2つの作り方を示し、Klingを中心にMidjourney併用で質を上げる方法や口パクの手順まで扱う。",
-   "無料のプロンプト一覧や講座へのリンクがある一方、固定コメントで有料と分かるリンクも混ざる。"
+   "現行のKling 4.0の使い方を15の操作で解説する実践ガイド。",
+   "新しいUIと基本操作、複数キーフレームによる展開の制御、参照画像や音声の活用、日本語リップシンク、動画の一部分の編集、Canvas、MCPでChatGPT・Claudeと連携させる応用までを実演する。",
+   "最後に料金プランを整理し、Kling 1.6／2.0世代が前提だった作り方解説に代わる現行版。"
   ],
+  "publishedAt": "2026-10-23",
   "scoreStatus": "confirmed",
-  "viewCount": 434190,
-  "publishedAt": "2025-05-20T11:21:06Z",
-  "scoreConfirmedAt": "2026-11-14"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
@@ -16848,50 +16847,50 @@
  {
   "genre": "ai",
   "sub": "画像生成",
-  "ytid": "vI6CwiI0KyY",
+  "ytid": "663b3qdIp-o",
   "level": "初級",
-  "minutes": 38,
-  "channel": "パソコン博士TAIKI",
-  "score": 29,
+  "minutes": 19,
+  "channel": "AIの中の人",
+  "score": 32,
   "axisScores": [
    {
     "axis": "実用性",
-    "score": 3,
-    "note": "実用性は視聴確認が必要"
+    "score": 5,
+    "note": "設定項目の意味と効き方から実演デモまで、無料で使いこなす実践に直結する（内容はGeminiで確認）"
    },
    {
     "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "公開から約1年半以内で鮮度が高い"
+    "score": 4,
+    "note": "2026-02-10公開。Gemini 3世代とImagen 4、Veo 3.1が前提（内容はGeminiで確認）。ただしPreview表記の世代であり、その後の正式版で画面が変わっている可能性は残る"
    },
    {
     "axis": "分かりやすさ",
-    "score": 3,
-    "note": "説明の分かりやすさは要確認"
+    "score": 5,
+    "note": "単一のシナリオ（カフェの新商品開発）を通して機能を順に使う構成で追いやすい（内容はGeminiで確認）"
    },
    {
     "axis": "体系性",
-    "score": 3,
-    "note": "単発Tipsの可能性があり要確認"
+    "score": 5,
+    "note": "チャット→画像→動画→音声→Live→Build→料金と、AI Studioの全体像が完結し、元の「無料で使いこなす活用法」の役割に最も近い"
    },
    {
     "axis": "信頼性",
-    "score": 5,
-    "note": "広く視聴されている候補"
+    "score": 4,
+    "note": "無料枠のデータ学習の可能性や機密情報への注意喚起まで含む（内容はGeminiで確認）"
    },
    {
     "axis": "視聴体験",
-    "score": 5,
-    "note": "社会人が見切りやすい長さ"
+    "score": 4,
+    "note": "18分34秒。元の38分より短く、章立てがある"
    },
    {
     "axis": "規約・権利",
     "score": 5,
-    "note": "YouTubeへの標準リンクまたは公式プレーヤーで視聴できることを前提に紹介"
+    "note": "YouTube標準リンクのみで権利上の問題なし"
    }
   ],
-  "title": "【神回！】貴方の人生を変える無料AI達！全て無料で使えるGoogle AI Studioが凄すぎる！【スマホでもOK！どれもマジ最高！】",
-  "url": "https://www.youtube.com/watch?v=vI6CwiI0KyY",
+  "title": "【知らないと損】Google AI Studioの使い方！無料でGeminiの全パワーを解放する最強の方法",
+  "url": "https://www.youtube.com/watch?v=663b3qdIp-o",
   "tags": [
    "画像生成",
    "画像生成AI",
@@ -16899,13 +16898,13 @@
    "使い方"
   ],
   "review": [
-   "Google AI Studioの機能を網羅的に解説し、基本的な操作方法を丁寧に紹介しています。",
-   "スマートフォン環境での利用法にも触れており、場所を選ばず学習できる構成です。",
-   "画像生成を含む多様なAIツールの活用法を、初心者向けに整理して提示しています。"
+   "Google AI Studioの全体像を1本で掴む総合ガイド。",
+   "Playgroundの詳細設定（System instructions、Temperature、Thinking level、Groundingなど）の意味と効き方を実演で示し、チャット、画像生成（Imagen 4）、動画生成（Veo 3.1）、音声生成、Gemini Live、Build機能までを扱う。",
+   "無料で使える範囲と従量課金になる機能、無料枠でデータが学習に使われる可能性への注意も明示し、2025年6月時点の画面構成とGemini 2.5世代が前提だった活用法に代わる現行版。"
   ],
+  "publishedAt": "2026-02-10",
   "scoreStatus": "confirmed",
-  "viewCount": 1753486,
-  "publishedAt": "2025-06-06T10:02:09Z"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "english",
@@ -40298,63 +40297,62 @@
  {
   "genre": "ai",
   "sub": "Runway",
-  "ytid": "1q0LOyUHwYA",
+  "ytid": "2-UybgJHbyw",
   "level": "初級",
-  "minutes": 40,
-  "channel": "AI たろう",
-  "score": 30,
+  "minutes": 19,
+  "channel": "動画編集の中の人",
+  "score": 32,
   "axisScores": [
    {
     "axis": "実用性",
-    "score": 3,
-    "note": "実用性は視聴確認が必要"
+    "score": 5,
+    "note": "生成から編集、キャラの一貫性、音声、MV・予告編の制作まで、制作実務の使いどころを実演する"
    },
    {
     "axis": "正確性・鮮度",
     "score": 5,
-    "note": "公開から約1年半以内で鮮度が高い"
+    "note": "2026-03-03公開。現行のGen-4.5が前提"
    },
    {
     "axis": "分かりやすさ",
     "score": 5,
-    "note": "初心者向けの説明が期待できる"
+    "note": "目次が分単位で10選＋まとめに分かれ、目的の手法へ飛べる"
    },
    {
     "axis": "体系性",
-    "score": 5,
-    "note": "体系的に学べる可能性が高い"
+    "score": 4,
+    "note": "活用法10選として完結するが、元の完全ガイドにあった料金プランの解説は含まれない"
    },
    {
     "axis": "信頼性",
-    "score": 2,
-    "note": "最低限の視聴実績。内容確認が必要"
+    "score": 4,
+    "note": "動画編集の実務チャンネルの解説。概要欄に公式LINE特典の誘導はある"
    },
    {
     "axis": "視聴体験",
-    "score": 5,
-    "note": "社会人が見切りやすい長さ"
+    "score": 4,
+    "note": "18分37秒。実演中心で進む"
    },
    {
     "axis": "規約・権利",
     "score": 5,
-    "note": "YouTubeへの標準リンクまたは公式プレーヤーで視聴できることを前提に紹介"
+    "note": "YouTube標準リンクのみで権利上の問題なし"
    }
   ],
-  "title": "【2025年版】初心者向けRunway完全ガイド｜イラスト生成・動画生成・うまく作るコツまで！",
-  "url": "https://www.youtube.com/watch?v=1q0LOyUHwYA",
+  "title": "【プロ級になれる！？】Runway Gen-4.5の最新活用法10選を完全解説します【他にない神機能は●●】",
+  "url": "https://www.youtube.com/watch?v=2-UybgJHbyw",
   "tags": [
    "Runway",
    "使い方"
   ],
   "review": [
-   "Runwayの要点を整理し、次に試すことを決めやすい。",
-   "最初に全体像をつかみ、次に試すことを決めやすい構成。",
-   "仕事の合間にも見切りやすい標準的な長さで、忙しい日でも学習のリズムを戻しやすい。"
+   "現行のRunway Gen-4.5の活用法を10の手法で解説する実践ガイド。",
+   "テキストや画像からの動画生成、不要物の除去、キャラクターの一貫性の維持、音声生成、キャラクターの差し替え、動きの直感的な指定から、実写MVや映画予告風トレーラーの生成までを実演する。",
+   "Gen-4と当時のプラン表が前提だった完全ガイドに代わる現行版。"
   ],
+  "publishedAt": "2026-03-03",
   "scoreStatus": "confirmed",
-  "viewCount": 38837,
-  "publishedAt": "2025-05-21T09:42:54Z",
-  "scoreConfirmedAt": "2026-07-12"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
@@ -43831,126 +43829,124 @@
  {
   "genre": "ai",
   "sub": "GitHub Copilot",
-  "ytid": "A6Dx8xXUcaA",
+  "ytid": "ASQt2cb-6Oc",
   "level": "中級",
-  "minutes": 52,
-  "channel": "Pythonプログラミング VTuber サプー",
+  "minutes": 41,
+  "channel": "ともすた | たにぐち まこと",
   "score": 31,
   "axisScores": [
    {
     "axis": "実用性",
-    "note": "VSCodeの導入からAI機能の準備、補完、チャット、エージェント、MCPサーバの実行までを実際にたどれる",
-    "score": 5
+    "score": 5,
+    "note": "NESからカスタム指示、MCPまで、日常の開発で効く設定と使い方を実演で示す"
    },
    {
     "axis": "正確性・鮮度",
-    "note": "VSCodeとNode.jsの公式配布元、MCPサーバの公式リポジトリへのリンクが示されている",
-    "score": 4
+    "score": 3,
+    "note": "2025-09-01公開で1年超が経つ。機能中心でモデル名に紐づかないため前提の陳腐化は緩やかだが、画面やモデル切替まわりはその後も変わっている可能性がある"
    },
    {
     "axis": "分かりやすさ",
-    "note": "全体の構成を冒頭で示し、環境構築からAI活用へ段階を追って進めている",
-    "score": 4
+    "score": 5,
+    "note": "目次が分単位で細かく、プログラミング教育のベテラン講師の解説"
    },
    {
     "axis": "体系性",
-    "note": "開発環境の基礎からAI機能の応用、使う際の注意点までを1本に体系化している",
-    "score": 5
+    "score": 5,
+    "note": "基本機能→モードとモデル→コンテキスト→カスタマイズ→MCPと、使いこなしの弧が完結している"
    },
    {
     "axis": "信頼性",
-    "note": "自身の著書とメンバーシップの案内はあるが、案内先は公式の配布元やリポジトリが中心になっている",
-    "score": 4
+    "score": 4,
+    "note": "プログラミング教育の専門チャンネル（書籍著者）。概要欄はUdemy講座への案内が多い"
    },
    {
     "axis": "視聴体験",
-    "note": "52分を機能ごとの章で区切って視聴できる",
-    "score": 4
+    "score": 4,
+    "note": "41分16秒。目次で必要な章へ飛べる"
    },
    {
     "axis": "規約・権利",
-    "note": "YouTubeの公式埋め込みで視聴できる通常の解説動画",
-    "score": 5
+    "score": 5,
+    "note": "YouTube標準リンクのみで権利上の問題なし"
    }
   ],
-  "title": "AIエージェント・MCPサーバも解説！VSCodeでAIを使ってみよう！プログラミングをAIで効率化 〜初心者向け〜",
-  "url": "https://www.youtube.com/watch?v=A6Dx8xXUcaA",
+  "title": "VSCodeのGitHub Copilotをしっかり使いこなそう！",
+  "url": "https://www.youtube.com/watch?v=ASQt2cb-6Oc",
   "tags": [
    "GitHub Copilot",
    "VSCode",
    "MCP"
   ],
   "review": [
-   "VSCodeでAIを使う方法を、環境構築からコード補完、チャット、AIエージェント、MCPサーバまで52分で体系的に解説する動画。",
-   "Pythonでの開発を例に進み、Clineの利用や注意点にも触れている。",
-   "配布元やリポジトリは公式へのリンクが示され、著書とメンバーシップの案内がある。"
+   "VS CodeのGitHub Copilotを使いこなすための中級ガイド。",
+   "NES（次編集の提案）、チャットの各モード、言語モデルの切り替え、コンテキストとメンションの指定、カスタム指示の作成、そしてMCP（Model Context Protocol）の利用までを順に実演する。",
+   "2025年4月時点のプレビューモデル群とVS Code 1.99の画面が前提だった解説に代わる、機能とカスタマイズ中心の現行編。"
   ],
+  "publishedAt": "2025-09-01",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-11",
-  "viewCount": 118350,
-  "publishedAt": "2025-04-25T10:00:13Z"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
   "sub": "Suno",
-  "ytid": "E2uVUiEapZY",
+  "ytid": "cspy2bM1_BE",
   "level": "初級",
-  "minutes": 33,
-  "channel": "あずきちゃんねる",
-  "score": 32,
+  "minutes": 27,
+  "channel": "ロシェル式作曲DTMレッスン",
+  "score": 33,
   "axisScores": [
    {
     "axis": "実用性",
-    "note": "アカウント作成から作曲、部分修正、仕上げ、楽曲の整理まで、操作のほぼ全域を手順でたどれる",
-    "score": 5
+    "score": 5,
+    "note": "登録から初めての1曲、Cover、Max Mode、ダウンロードまでを実際の画面操作で示し、視聴後すぐ再現できる"
    },
    {
     "axis": "正確性・鮮度",
-    "note": "画面デザインの変更への注記と、最新バージョンの検証動画への案内が添えられている",
-    "score": 4
+    "score": 5,
+    "note": "2026-09-29公開。現行V6の画面と機能（Max Mode、Pro・ワイルドモード）が前提で、料金プランの比較も現行のもの"
    },
    {
     "axis": "分かりやすさ",
-    "note": "機能ごとに章が細かく分かれ、目的の操作だけを選んで見られる",
-    "score": 5
+    "score": 5,
+    "note": "9つの講座内容が概要欄に明示され、疑問形式の導入から目的の章へ追える"
    },
    {
     "axis": "体系性",
-    "note": "基本操作から応用機能、プランと商用利用の条件までを1本に体系化している",
-    "score": 5
+    "score": 5,
+    "note": "登録→2つのモード→応用機能→管理→料金と、元の「完全攻略ガイド」の役割をそのまま現行化できる"
    },
    {
     "axis": "信頼性",
-    "note": "公式サイトへのリンクが示され、販売への誘導は概要欄にない",
-    "score": 4
+    "score": 4,
+    "note": "DTM講座シリーズの専門チャンネルが旧版を作り直したもの。概要欄に作曲・DTM講座全体への案内はある"
    },
    {
     "axis": "視聴体験",
-    "note": "33分を多数の章で区切って視聴できる",
-    "score": 4
+    "score": 4,
+    "note": "26分31秒。元の33分と同規模で、章立てがある"
    },
    {
     "axis": "規約・権利",
-    "note": "プランと商用利用の条件に章を割き、使う側の権利確認まで扱っている",
-    "score": 5
+    "score": 5,
+    "note": "YouTube標準リンクのみで権利上の問題なし"
    }
   ],
-  "title": "Sunoの使い方がまるわかり！初心者でも迷わないスタートガイド【2025年】",
-  "url": "https://www.youtube.com/watch?v=E2uVUiEapZY",
+  "title": "【2026年最新版】Suno V6の使い方を完全解説！登録から初めての1曲まで｜シンプルモード・カバー・Max Mode・最新機能を徹底攻略",
+  "url": "https://www.youtube.com/watch?v=cspy2bM1_BE",
   "tags": [
    "Suno",
    "音楽生成",
    "商用利用"
   ],
   "review": [
-   "音楽生成AI「Suno」の使い方を、アカウント作成から基本の作曲、部分修正、仕上げまで網羅した完全ガイド。",
-   "Extend、Replace Section、Cover、Remasterなどの編集機能と、プランと商用利用の条件まで章を分けて扱っている。",
-   "画面の変更への注記と最新版の検証動画への案内があり、公式サイトへのリンクが示されている。"
+   "現行のSuno V6に対応した完全ガイド。",
+   "登録と初めての1曲づくりから、シンプルモードとアドバンストモードの違い、Cover、Max Mode、Pro・ワイルドモードの使い分け、ライブラリ管理とダウンロード、無料・有料プランの料金比較までを実際の画面で解説する。",
+   "v4／v3.5の画面と当時の料金表が前提だった旧来のスタートガイドに代わる現行版。"
   ],
+  "publishedAt": "2026-09-29",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-11",
-  "viewCount": 86000,
-  "publishedAt": "2025-04-20T09:00:16Z"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
