@@ -37,8 +37,8 @@ const generativeAiGuide = {
           why: "登録→入力→活用まで画面そのままに追える「最初の1本」の決定版"
         },
         {
-          title: "【完全マスター】AI初心者が学ぶべきGeminiの基本的な使い方を徹底解説するで。",
-          why: "3大AIの比較が完成する1本。基本操作から自動化への入口まで体系的"
+          title: "【完全マスター】絶対に覚えるべきGeminiの基礎を全部教えます",
+          why: "Gemini 3世代の基礎をステップ式に全部扱う1本。モデル切り替えからGoogle連携・応用機能まで体系的"
         },
         {
           title: "【完全版】Claudeの使い方入門・全機能をまるっと解説します！〈Projects / Skills / Cowork / Claude Codeまで〉",

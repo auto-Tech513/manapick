@@ -1130,64 +1130,63 @@
  {
   "genre": "ai",
   "sub": "Gemini",
-  "ytid": "k1qFX5zJwLk",
+  "ytid": "Mg8aoOEkll8",
   "level": "初級",
-  "minutes": 17,
-  "channel": "【さき】のAIでええやん。",
-  "score": 34,
+  "minutes": 19,
+  "channel": "トモミツの即実践AI活用術ch",
+  "score": 31,
   "axisScores": [
    {
     "axis": "実用性",
     "score": 5,
-    "note": "Geminiの操作を入口から自動化の手前まで順に試せる初級編"
+    "note": "ステップ式に、準備からモデル切り替え、資料の要約、スマホ活用、Google連携まで実践手順を示す（内容はGeminiで確認）"
    },
    {
     "axis": "正確性・鮮度",
-    "score": 5,
-    "note": "2025年7月の公開で、Geminiの現行の基本機能を扱う"
+    "score": 4,
+    "note": "2026-02-13公開。Gemini 3世代のモデル選択UI（高速・思考・Pro）が前提。ただし無料版中心で有料プラン（Google AI Pro）の料金は扱わない"
    },
    {
     "axis": "分かりやすさ",
     "score": 5,
-    "note": "前提を初級に置き、知識を積み上げる順序で機能を紹介"
+    "note": "ステップ0〜6の構成が明快で、実践型チャンネルの解説（内容はGeminiで確認）"
    },
    {
     "axis": "体系性",
     "score": 5,
-    "note": "生成AIロードマップSTEP1の中心に置かれた入門編で、最初の一巡に使う"
+    "note": "基礎→モデル選択→頼み方→資料読解→スマホ→連携→応用機能と、「基礎を全部」の看板どおり完結している"
    },
    {
     "axis": "信頼性",
-    "score": 4,
-    "note": "AI専門チャンネルとして当サイトに6本が並ぶうちの1本"
+    "score": 3,
+    "note": "実践AI活用の専門チャンネルだが、概要欄はLINE特典と法人研修の販売導線のみで、内容情報はGeminiで確認するまで得られなかった"
    },
    {
     "axis": "視聴体験",
-    "score": 5,
-    "note": "17分で、1.5倍速なら約11分まで圧縮できる短さ"
+    "score": 4,
+    "note": "18分40秒。元の17分と同規模で、ステップの章立てがある"
    },
    {
     "axis": "規約・権利",
     "score": 5,
-    "note": "YouTubeへの標準リンクまたは公式プレーヤーで視聴できることを前提に紹介"
+    "note": "YouTube標準リンクのみで権利上の問題なし"
    }
   ],
-  "title": "【完全マスター】AI初心者が学ぶべきGeminiの基本的な使い方を徹底解説するで。",
-  "url": "https://www.youtube.com/watch?v=k1qFX5zJwLk",
+  "title": "【完全マスター】絶対に覚えるべきGeminiの基礎を全部教えます",
+  "url": "https://www.youtube.com/watch?v=Mg8aoOEkll8",
   "tags": [
    "自動化",
    "生成AI",
    "入門"
   ],
   "review": [
-   "Googleの生成AI「Gemini」の基本操作から自動化への応用までを体系的に学べる内容です。",
-   "初級者向けに設計されており、基礎知識を積み上げながら機能を使いこなす手順が示されています。",
-   "実用的な機能解説が含まれており、技術への理解を深めたい層に適した構成です。"
+   "Geminiの基礎をステップ式に全部教える完全マスター。",
+   "使える状態にする準備から、高速・思考・Proのモデル切り替え、頼み方のコツ、PDFの要約、スマホ活用、Gmail・ドライブ・カレンダーとの連携、画像生成・Deep Research・Gemsまでを順に扱う。",
+   "Gemini 2.5世代のモデル選択とGemini Advancedの料金が前提だった解説に代わる、Gemini 3世代の現行版。"
   ],
-  "viewCount": 286093,
-  "publishedAt": "2025-07-31T10:01:20Z",
+  "publishedAt": "2026-02-13",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-06-07"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
@@ -40487,50 +40486,50 @@
  {
   "genre": "ai",
   "sub": "Hailuo AI",
-  "ytid": "F2gAu3LUdZs",
+  "ytid": "TW21cCPs1T0",
   "level": "初級",
-  "minutes": 13,
-  "channel": "AI FREAK - 最新のAIツールをご紹介",
-  "score": 29,
+  "minutes": 18,
+  "channel": "AI大学【AI&ChatGPT最新情報】",
+  "score": 32,
   "axisScores": [
    {
     "axis": "実用性",
     "score": 5,
-    "note": "タイトル上は実務・手順に結びつきやすい"
+    "note": "基本の使い方から、映画品質の動画と日本語CM動画の制作までを実演する"
    },
    {
     "axis": "正確性・鮮度",
     "score": 5,
-    "note": "公開から約1年半以内で鮮度が高い"
+    "note": "2026-02-05公開。現行のHailuo 2.3とHailuo Agentが前提で、プランの章もある"
    },
    {
     "axis": "分かりやすさ",
     "score": 4,
-    "note": "初心者向けの説明が期待できる"
+    "note": "3章構成と分単位の目次が明快"
    },
    {
     "axis": "体系性",
-    "score": 3,
-    "note": "単発Tipsの可能性があり要確認"
+    "score": 5,
+    "note": "概要・プラン・使い方→作り方→応用（CM制作）と、完全ガイドとして完結している"
    },
    {
     "axis": "信頼性",
-    "score": 2,
-    "note": "最低限の視聴実績。内容確認が必要"
+    "score": 4,
+    "note": "AI解説の専門チャンネル。概要欄は公式アカウントへのリンクが中心"
    },
    {
     "axis": "視聴体験",
-    "score": 5,
-    "note": "社会人が見切りやすい長さ"
+    "score": 4,
+    "note": "17分34秒。元の13分と同規模で、章立てがある"
    },
    {
     "axis": "規約・権利",
     "score": 5,
-    "note": "YouTubeへの標準リンクまたは公式プレーヤーで視聴できることを前提に紹介"
+    "note": "YouTube標準リンクのみで権利上の問題なし"
    }
   ],
-  "title": "【AIアニメ動画の作り方】を徹底解説。話題の『Hailuo』の使い方や、他AIツールとの比較など。",
-  "url": "https://www.youtube.com/watch?v=F2gAu3LUdZs",
+  "title": "【Hailuo AI完全ガイド】映画レベルの動画を作れるAI「Hailuo 2.3」＆日本語CM動画を自動で作れるAIエージェント「Hailuo Agent」！",
+  "url": "https://www.youtube.com/watch?v=TW21cCPs1T0",
   "tags": [
    "Hailuo AI",
    "Hailuo",
@@ -40538,14 +40537,13 @@
    "使い方"
   ],
   "review": [
-   "Hailuo AIの要点を整理し、次に試すことを決めやすい。",
-   "最初に全体像をつかみ、次に試すことを決めやすい構成。",
-   "短時間で要点を拾いやすい軽めの入口のため、目的を決めて見ると吸収しやすい。"
+   "現行のHailuo 2.3とHailuo Agentに対応した完全ガイド。",
+   "Hailuo AIの概要とプラン、基本的な使い方から、映画レベルの動画の作り方、日本語CM動画を自動で作るエージェントの活用までを3章で解説する。",
+   "Hailuo 02と当時の料金表が前提だった作り方解説に代わる現行版。"
   ],
+  "publishedAt": "2026-02-05",
   "scoreStatus": "confirmed",
-  "viewCount": 33549,
-  "publishedAt": "2025-08-21T07:59:49Z",
-  "scoreConfirmedAt": "2026-07-12"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
@@ -49712,63 +49710,63 @@
  {
   "genre": "ai",
   "sub": "Cursor",
-  "ytid": "CsSWQyIc-r4",
+  "ytid": "7qmeaLiZGfo",
   "level": "初級",
-  "minutes": 26,
-  "channel": "Oh my week",
-  "score": 29,
+  "minutes": 33,
+  "channel": "飯塚浩也 | Obsidianでつくる最強の右腕",
+  "score": 32,
   "axisScores": [
    {
     "axis": "実用性",
     "score": 5,
-    "note": "基本操作から記事・X投稿・画像生成までの一括アウトプットまで、実践例の手順がそのまま仕事に使える"
+    "note": "インストールと基本操作、便利な機能、初期設定までを実演前提の目次で示し、視聴後すぐ再現できる"
    },
    {
     "axis": "正確性・鮮度",
-    "score": 4,
-    "note": "2025年6月公開で、扱うモデルや保存機能の説明も現行の使い方に近い"
+    "score": 5,
+    "note": "2026-08-16公開。現行のエージェント中心の画面での入門で、前提の陳腐化がない"
    },
    {
     "axis": "分かりやすさ",
-    "score": 4,
-    "note": "対談形式で専門用語を避けて進むため、非エンジニアでも追いやすい"
+    "score": 5,
+    "note": "目次が分単位で明示され、Udemy講座でベストセラーを得ている講師の解説"
    },
    {
     "axis": "体系性",
-    "score": 5,
-    "note": "23のチャプターで基本操作→機能→実践例→整理術と段階を踏んだ構成"
+    "score": 4,
+    "note": "入門→操作→機能→設定→連携と完結するが、後半はObsidian連携という特定の活用に寄る"
    },
    {
     "axis": "信頼性",
-    "score": 3,
-    "note": "実務家同士の実演で具体性はあるが、概要欄は自社採用やサービス宣伝が多く公式リンクもない"
+    "score": 4,
+    "note": "医師・エンジニア・CTO経験を持つ専門チャンネル。概要欄にニュースレター登録への案内はある"
    },
    {
     "axis": "視聴体験",
-    "score": 3,
-    "note": "26分の対談形式で、トークの寄り道も含む長さ"
+    "score": 4,
+    "note": "32分48秒。元の26分と同規模で、章立てがある"
    },
    {
     "axis": "規約・権利",
     "score": 5,
-    "note": "権利面で問題となる要素は見当たらない"
+    "note": "YouTube標準リンクのみで権利上の問題なし"
    }
   ],
-  "title": "【非エンジニアのCursor活用術】超必見！話題のAIコードエディタを徹底解剖！年商30億円CEOが最近ハマっているAI系YouTube「ジェネトピ」コンビが活用例まで解説！",
-  "url": "https://www.youtube.com/watch?v=CsSWQyIc-r4",
+  "title": "【2026年最新】初めてのCursor入門！基本操作からAI機能の使い倒し方まで1から徹底解説",
+  "url": "https://www.youtube.com/watch?v=7qmeaLiZGfo",
   "tags": [
    "使い方",
    "活用術",
    "非エンジニア向け"
   ],
   "review": [
-   "非エンジニアの視点で、Cursorを情報整理と文章作成に使う方法が学べる。",
-   "基本操作やタブ補完、メンション機能を挟みながら、文字起こしから記事・X投稿・画像生成まで作る実践例で進む。",
-   "コードを書かないが、AIエディタを仕事の相棒にしたい人向け。"
+   "現行のCursorに対応した初めての入門ガイド。",
+   "Cursorとは何かから、インストールと基本操作方法、便利な機能の紹介、おすすめの初期設定、そしてObsidianとの連携方法と活用方法までを順に解説する。",
+   "2025年6月時点の3列画面と当時のモデルラインナップが前提だった活用術に代わる現行版。"
   ],
-  "publishedAt": "2025-06-27T14:46:47Z",
+  "publishedAt": "2026-08-16",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-19"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
