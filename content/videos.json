@@ -2286,7 +2286,7 @@
   "viewCount": 169242,
   "publishedAt": "2025-06-05T10:01:06Z",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-14"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
@@ -2348,7 +2348,7 @@
   "viewCount": 149294,
   "publishedAt": "2025-05-09T09:45:05Z",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-14"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
@@ -2410,7 +2410,7 @@
   "viewCount": 112715,
   "publishedAt": "2025-05-27T11:01:19Z",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-14"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "data",
@@ -8908,7 +8908,8 @@
   ],
   "viewCount": 204898,
   "publishedAt": "2025-05-18T11:00:54Z",
-  "scoreStatus": "confirmed"
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "shikaku",
@@ -12530,7 +12531,8 @@
   ],
   "scoreStatus": "confirmed",
   "viewCount": 236214,
-  "publishedAt": "2025-04-27T07:00:37Z"
+  "publishedAt": "2025-04-27T07:00:37Z",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "video",
@@ -13270,7 +13272,8 @@
   ],
   "scoreStatus": "confirmed",
   "viewCount": 96640,
-  "publishedAt": "2025-04-11T09:00:08Z"
+  "publishedAt": "2025-04-11T09:00:08Z",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "video",
@@ -16352,7 +16355,7 @@
   "scoreStatus": "confirmed",
   "viewCount": 17225,
   "publishedAt": "2025-05-24T06:05:16Z",
-  "scoreConfirmedAt": "2026-11-15"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "video",
@@ -16537,7 +16540,7 @@
   "scoreStatus": "confirmed",
   "viewCount": 12629,
   "publishedAt": "2025-04-11T04:00:27Z",
-  "scoreConfirmedAt": "2026-11-15"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
@@ -38576,7 +38579,8 @@
   ],
   "scoreStatus": "confirmed",
   "viewCount": 12666,
-  "publishedAt": "2025-06-05T09:00:11Z"
+  "publishedAt": "2025-06-05T09:00:11Z",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "shikaku",
@@ -38699,7 +38703,8 @@
   ],
   "scoreStatus": "confirmed",
   "viewCount": 19899,
-  "publishedAt": "2025-05-01T09:01:20Z"
+  "publishedAt": "2025-05-01T09:01:20Z",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "shikaku",
@@ -49027,7 +49032,7 @@
   ],
   "publishedAt": "2025-04-04T12:00:56Z",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-16"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
@@ -50601,7 +50606,7 @@
    "生成した画像をMidjourney内で仕上げたい初心者から中級者向け。"
   ],
   "score": 31,
-  "scoreConfirmedAt": "2026-11-19",
+  "scoreConfirmedAt": "2026-11-29",
   "scoreStatus": "confirmed",
   "sub": "Midjourney",
   "tags": [
@@ -53460,7 +53465,7 @@
   ],
   "publishedAt": "2025-06-03T02:48:02Z",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-24"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
