@@ -5,7 +5,31 @@
     <link>https://manapick.app/news/</link>
     <description>公式発表を、学びと仕事に使える形へ整理します。</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 26 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>ファイルは丸ごと渡さなくていい。Gemini APIがページやセル範囲だけを指定して読ませる「スライシング」に対応</title>
+      <link>https://manapick.app/news/2026-11-28-gemini-api-file-slicing/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-28-gemini-api-file-slicing/</guid>
+      <description>Googleは、Gemini APIにファイルの必要な部分だけをモデルへ渡す「ファイルスライシング」を追加しました。PDFやOfficeファイル、音声、動画について、ページ範囲やシートのセル範囲、時間区間を指定でき、課金されるトークンはモデルが実際に確認した部分だけになります。</description>
+      <category>生成AI</category>
+      <pubDate>Fri, 27 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>止められないシステムを、止めずに守る。OpenAIとCiscoがLinux防護ランタイム「Shirudo」をオープンソースで公開</title>
+      <link>https://manapick.app/news/2026-11-28-openai-cisco-shirudo/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-28-openai-cisco-shirudo/</guid>
+      <description>OpenAIとCiscoは、Linuxシステムを稼働させたまま一時的な防護策を適用できるオープンソースのランタイム「Shirudo」を公開しました。パッチの検証と適用に日数や週数がかかる間も、サービスを止めずに脆弱な動作だけを遮ることを狙います。</description>
+      <category>生成AI</category>
+      <pubDate>Fri, 27 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>AIの進歩は「次の単語の当てやすさ」で測れるか。OpenAIがパープレキシティの共通指標化を提案し、自社の測定値も開示</title>
+      <link>https://manapick.app/news/2026-11-28-openai-perplexity-intelligence/</link>
+      <guid isPermaLink="true">https://manapick.app/news/2026-11-28-openai-perplexity-intelligence/</guid>
+      <description>OpenAIは、AIモデルの進歩を測る共通の物差しとして「パープレキシティ」（次に来る単語の予測の損失）を据えることを提案する論考を公開しました。GPT-3.5で約0.99、GPT-4で約0.91という自社の対数パープレキシティの測定値も示されています。</description>
+      <category>生成AI</category>
+      <pubDate>Fri, 27 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>Gemini 4 Hydrogenの作例6件をGoogleが公開。3Dの世界づくりからモデル比較まで、作り手の使い方を見せる</title>
       <link>https://manapick.app/news/2026-11-27-gemini-4-hydrogen-builders/</link>
