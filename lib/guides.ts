@@ -33,6 +33,9 @@ import instagramGuide from "@/content/guides/instagram";
 import excelBasicsGuide from "@/content/guides/excel-basics";
 import boki2Guide from "@/content/guides/boki2";
 import idecoGuide from "@/content/guides/ideco";
+import gKenteiGuide from "@/content/guides/g-kentei";
+import chatgptGuide from "@/content/guides/chatgpt";
+import capcutGuide from "@/content/guides/capcut";
 import { videos, type Video } from "@/lib/manapick";
 
 export type Guide = {
@@ -121,7 +124,10 @@ export const guides: readonly Guide[] = [
   instagramGuide,
   excelBasicsGuide,
   boki2Guide,
-  idecoGuide
+  idecoGuide,
+  gKenteiGuide,
+  chatgptGuide,
+  capcutGuide
 ];
 
 export function guidePath(slug: string) {
