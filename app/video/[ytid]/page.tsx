@@ -77,7 +77,10 @@ export async function generateMetadata({ params }: VideoPageProps): Promise<Meta
   const video = findVideo(ytid);
   if (!video) return {};
 
-  const title = video.title + " | Manapick";
+  // タイトルが70字を超える動画は接尾辞を付けない（2026-11-28 評価チーム判断）。
+  // 検索結果で実タイトルが多く表示されるようにするためで、70字以内は現行のまま。
+  const fullTitle = video.title + " | Manapick";
+  const title = fullTitle.length > 70 ? video.title : fullTitle;
   const description = videoDescription(video);
   const pageUrl = absoluteUrl(videoPath(video.ytid));
   const image = videoLargeImage(video);
