@@ -62,61 +62,62 @@
  {
   "genre": "ai",
   "sub": "ChatGPT",
-  "ytid": "UIyokWUJHck",
-  "level": "中級",
-  "minutes": 124,
-  "channel": "いけともch",
-  "score": 29,
+  "ytid": "4kAt5wXYckQ",
+  "level": "初級",
+  "minutes": 61,
+  "channel": "webweb_labo",
+  "score": 31,
   "axisScores": [
    {
     "axis": "実用性",
-    "score": 4,
-    "note": "応用機能まで使い道を広げられる"
+    "score": 5,
+    "note": "初期設定の見直しから使い方10選、料金プランの選び方まで、登録したまま使えていない層がそのまま実践できる"
    },
    {
     "axis": "正確性・鮮度",
     "score": 4,
-    "note": "2025年版の入門として扱いやすい"
+    "note": "2026-05-23公開。Agent・Codex・Atlasなど現行機能の章と料金プラン比較を含むが、モデル版名の明示は概要欄にない"
    },
    {
     "axis": "分かりやすさ",
-    "score": 4,
-    "note": "6ステップで段階的"
+    "score": 5,
+    "note": "タイムスタンプ付きで章が分かれ、対象者が冒頭で明示されている"
    },
    {
     "axis": "体系性",
     "score": 5,
-    "note": "基礎後の広げ方に向く"
+    "note": "仕組み→設定→操作→活用→最新機能→料金→注意点と、完全ガイドとして完結している"
    },
    {
     "axis": "信頼性",
-    "score": 4,
-    "note": "保存版として網羅性あり"
+    "score": 3,
+    "note": "注意点の章でハルシネーションや著作権に触れる一方、概要欄は公式LINE特典とコミュニティへの誘導が厚い"
    },
    {
     "axis": "視聴体験",
-    "score": 3,
-    "note": "長めなので分割視聴向き"
+    "score": 4,
+    "note": "60分33秒。章立てが細かく、必要な部分だけ見返せる"
    },
    {
     "axis": "規約・権利",
     "score": 5,
-    "note": "独自レビュー主体で紹介可能"
+    "note": "YouTube標準リンクのみで権利上の問題なし"
    }
   ],
-  "title": "【保存版】ChatGPT 2025年最新入門～6つのステップでChatGPTの基礎～応用機能までマスター！ChatGPT無料版に対応！これから始める初心者も、多少使ったことがある中級者も",
-  "url": "https://www.youtube.com/watch?v=UIyokWUJHck",
+  "title": "【2026年版】ChatGPTの使い方完全ガイド｜1時間で初期設定・プロンプト・最新機能まで",
+  "url": "https://www.youtube.com/watch?v=4kAt5wXYckQ",
   "tags": [
    "入門",
-   "応用"
+   "使い方"
   ],
   "review": [
-   "基礎を触った人が「次の一歩」を踏める網羅的な保存版。",
-   "6ステップで無料版の応用機能まで段階的に学べる。",
-   "広く押さえたい人向け。休日にまとめ視聴がおすすめ。"
+   "2026年版のChatGPT完全ガイド。登録後に見直したい初期設定と基本操作から解説する。",
+   "仕事・副業・文章作成に使える使い方10選、Agent・Codex・Atlasなどの最新機能、Free・Plus・Businessの料金プラン比較までを1本で扱う。",
+   "ハルシネーションや著作権などの注意点も含み、GPT-4o／o1世代の画面と上限が前提だった旧来の完全マニュアルに代わる現行版。"
   ],
-  "publishedAt": "2025-01-04T01:00:28Z",
-  "scoreStatus": "confirmed"
+  "publishedAt": "2026-05-23",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
@@ -4445,64 +4446,63 @@
  {
   "genre": "ai",
   "sub": "自動化",
-  "ytid": "L1IyOn9NoSo",
+  "ytid": "kboKn8LioPE",
   "level": "初級",
-  "minutes": 18,
-  "channel": "かいちのAI大学 / Saix(サイクス)",
-  "score": 30,
+  "minutes": 9,
+  "channel": "SmartFlow",
+  "score": 31,
   "axisScores": [
    {
     "axis": "実用性",
-    "note": "Geminiを活用したスプレッドシートの自動化手法を10選紹介し、業務にそのまま当てはめられる",
-    "score": 5
+    "score": 5,
+    "note": "日報の表化、集計と前年比、重複・空欄の修正を実演し、指示文の全文が概要欄にあってすぐ再現できる"
    },
    {
     "axis": "正確性・鮮度",
-    "note": "2025年1月公開で、Geminiと表計算ソフトの連携の進め方を扱っている",
-    "score": 5
+    "score": 5,
+    "note": "2026-10-30公開。無料Geminiの現行操作と、アクティビティ保存の現行設定名まで踏まえた説明"
    },
    {
     "axis": "分かりやすさ",
-    "note": "連携プロセスを順序立てて提示し、初級者向けに構成されている",
-    "score": 4
+    "score": 5,
+    "note": "結論→全体像→実演3つ→限界→宿題の流れで、目次から目的の実演へ直接飛べる"
    },
    {
     "axis": "体系性",
-    "note": "自動化手法の紹介が中心で、スプレッドシート自体の体系は範囲外",
-    "score": 3
+    "score": 3,
+    "note": "手法は3つで元の10選より範囲は狭く、スプレッドシート内蔵Geminiの機能解説ではない"
    },
    {
     "axis": "信頼性",
-    "note": "AI活用を発信するチャンネル（当サイト掲載4本）だが、出典の提示までは概要情報から確認できない部分がある",
-    "score": 3
+    "score": 4,
+    "note": "方法の限界の章を置き、個人情報・社外秘の扱いの注意まで含む実務チャンネルの解説"
    },
    {
     "axis": "視聴体験",
-    "note": "手法を通すのに適した長さ",
-    "score": 5
+    "score": 4,
+    "note": "8分56秒と短く、実演中心で間延びがない"
    },
    {
     "axis": "規約・権利",
-    "note": "概要情報の範囲では、強い販売誘導は確認されていない",
-    "score": 5
+    "score": 5,
+    "note": "YouTube標準リンクのみで権利上の問題なし"
    }
   ],
-  "title": "【知らないと損】AI×Googleスプレッドシートで業務自動化する方法10選【Google Geminiの使い方を徹底解説！】",
-  "url": "https://www.youtube.com/watch?v=L1IyOn9NoSo",
+  "title": "【爆速Excel】Geminiで関数不要の活用術を3つ紹介",
+  "url": "https://www.youtube.com/watch?v=kboKn8LioPE",
   "tags": [
-   "自動化",
-   "生成AI",
-   "入門"
+   "Gemini",
+   "スプレッドシート",
+   "自動化"
   ],
   "review": [
-   "Geminiを活用したGoogleスプレッドシートでの具体的な自動化手法を10選紹介。",
-   "AIと表計算ソフトを組み合わせる実用的な連携プロセスを体系的に解説。",
-   "初級者向けに構成されており、業務効率化に向けた技術要素を順序立てて提示。"
+   "無料のGeminiに表を渡して、関数なしで集計・表づくり・表の直しを進める実演動画。",
+   "営業日報を表にする、経理の集計と前年比を出す、重複と空欄を直す、の3つを実際の指示文つきで紹介する。",
+   "方法の限界や個人情報を伏せて渡す注意まで含み、2025年1月時点のモデルと画面が前提だった旧来の自動化10選に代わる現行の入門編。"
   ],
-  "viewCount": 86083,
-  "publishedAt": "2025-01-02T09:00:18Z",
+  "publishedAt": "2026-10-30",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-15"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
@@ -12352,111 +12352,110 @@
  {
   "genre": "ai",
   "sub": "Gemini",
-  "ytid": "MWmi1nmcrBA",
+  "ytid": "pXk-WYrzfYU",
   "level": "初級",
-  "minutes": 17,
-  "channel": "こーすけ先生のGoogle塾",
-  "score": 30,
-  "axisScores": [
-   {
-    "axis": "実用性",
-    "score": 4,
-    "note": "プロンプトの構造や具体的な活用術など、意図に近い出力を得るための技術を扱う"
-   },
-   {
-    "axis": "正確性・鮮度",
-    "score": 4,
-    "note": "2025年3月公開で、Geminiの基本機能と特性の理解は現行でも土台になる"
-   },
-   {
-    "axis": "分かりやすさ",
-    "score": 4,
-    "note": "Googleのモデルに特化し、基本機能を整理して伝える"
-   },
-   {
-    "axis": "体系性",
-    "score": 4,
-    "note": "基本機能と基礎知識の網羅が中心で、応用は入門の範囲に収まる"
-   },
-   {
-    "axis": "信頼性",
-    "score": 4,
-    "note": "Googleツールを専門に扱う塾の発信で、モデルの特性に絞った語り口"
-   },
-   {
-    "axis": "視聴体験",
-    "score": 5,
-    "note": "基礎を通すのに適した長さ"
-   },
-   {
-    "axis": "規約・権利",
-    "score": 5,
-    "note": "概要情報の範囲では、有料講座への誘導などは確認されていない"
-   }
-  ],
-  "title": "【生成AI】「Gemini」をもっと使いこなすための基礎知識を伝授！",
-  "url": "https://www.youtube.com/watch?v=MWmi1nmcrBA",
-  "tags": [
-   "Gemini",
-   "使い方"
-  ],
-  "review": [
-   "Googleのモデルに特化した基本機能を体系的に解説する構成となっています。",
-   "プロンプトの構造や具体的な活用術など、実用的な基礎知識が網羅されています。",
-   "Geminiの特性を理解し、より意図に近い出力を得るための技術を学べます。"
-  ],
-  "scoreStatus": "confirmed",
-  "viewCount": 286265,
-  "publishedAt": "2025-03-03T09:00:21Z",
-  "scoreConfirmedAt": "2026-11-14"
- },
- {
-  "genre": "ai",
-  "sub": "Copilot",
-  "ytid": "9XK9X_g2hYA",
-  "level": "初級",
-  "minutes": 35,
-  "channel": "ユースフル | Copilot情報局",
+  "minutes": 52,
+  "channel": "トモミツの即実践AI活用術ch",
   "score": 31,
   "axisScores": [
    {
     "axis": "実用性",
     "score": 5,
-    "note": "タイトル上は実務・手順に結びつきやすい"
+    "note": "設定画面の開き方から、調査・資料作成・画像生成・型化・自動化まで、仕事に直結する7技を実践順に示す"
    },
    {
     "axis": "正確性・鮮度",
     "score": 5,
-    "note": "公開から約1年半以内で鮮度が高い"
+    "note": "2026-10-30公開。Sparkなど現行機能まで扱い、無料範囲と有料限定の線引きも明示（内容はGeminiで確認）"
    },
    {
     "axis": "分かりやすさ",
     "score": 4,
-    "note": "初心者向けの説明が期待できる"
+    "note": "「指示を出す段階から業務を任せる段階へ」という進み方が明示され、初心者向けに考え方から説く"
    },
    {
     "axis": "体系性",
-    "score": 3,
-    "note": "単発Tipsの可能性があり要確認"
+    "score": 4,
+    "note": "機能別の7技で活用の弧は完結するが、モデルやプランの比較表のような基礎知識の整理は主題ではない"
    },
    {
     "axis": "信頼性",
     "score": 4,
-    "note": "視聴実績があり候補として有望"
+    "note": "料金の限定条件（有料・個人アカウント限定）を隠さず示す実践チャンネルの解説"
    },
    {
     "axis": "視聴体験",
-    "score": 5,
-    "note": "社会人が見切りやすい長さ"
+    "score": 4,
+    "note": "51分49秒と長尺だが、技ごとに区切られている"
    },
    {
     "axis": "規約・権利",
     "score": 5,
-    "note": "YouTubeへの標準リンクまたは公式プレーヤーで視聴できることを前提に紹介"
+    "note": "YouTube標準リンクのみで権利上の問題なし"
    }
   ],
-  "title": "【2025年最新版】Microsoft Copilotの最新動向！基本の使い方と注目機能5選をCopilotベストセラー講師が解説",
-  "url": "https://www.youtube.com/watch?v=9XK9X_g2hYA",
+  "title": "【完全解説】Geminiの使い方が全部わかる｜画像生成・Sparkまで",
+  "url": "https://www.youtube.com/watch?v=pXk-WYrzfYU",
+  "tags": [
+   "Gemini",
+   "使い方"
+  ],
+  "review": [
+   "現行Geminiの使い方が全部わかる実践ガイド。",
+   "パーソナル設定、Deep Research、Gemini Notebook、Canvas、画像生成、Gems、そして業務手順を覚えさせるGemini Sparkまで、7つのテクニックを設定画面から解説する。",
+   "無料で使える範囲と有料プラン限定の機能の線引きも明示し、2025年3月時点のモデルラインナップとプラン比較表が前提だった基礎知識の解説に代わる現行版。"
+  ],
+  "publishedAt": "2026-10-30",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-29"
+ },
+ {
+  "genre": "ai",
+  "sub": "Copilot",
+  "ytid": "XHPTmvBn9bM",
+  "level": "初級",
+  "minutes": 28,
+  "channel": "KEITO【AI&WEB ch】",
+  "score": 33,
+  "axisScores": [
+   {
+    "axis": "実用性",
+    "score": 5,
+    "note": "Word・Excel・PowerPointの資料作成からメール管理、デスクトップ操作まで、実務の使いどころを広く実演する"
+   },
+   {
+    "axis": "正確性・鮮度",
+    "score": 5,
+    "note": "2026-07-05公開。エージェント、ノートブック、Coworkを含む現行の製品体系が前提"
+   },
+   {
+    "axis": "分かりやすさ",
+    "score": 5,
+    "note": "目次が細かく、概要→セキュリティ→各アプリ→連携→展望の順で全体像を追える"
+   },
+   {
+    "axis": "体系性",
+    "score": 5,
+    "note": "製品体系の横断整理として完結し、元の「動向＋機能の整理」に最も近い"
+   },
+   {
+    "axis": "信頼性",
+    "score": 4,
+    "note": "AI活用の実務チャンネル（KEITO）の解説で、セキュリティの章も置かれている"
+   },
+   {
+    "axis": "視聴体験",
+    "score": 4,
+    "note": "28分10秒。目次で必要な章へ飛べる"
+   },
+   {
+    "axis": "規約・権利",
+    "score": 5,
+    "note": "YouTube標準リンクのみで権利上の問題なし"
+   }
+  ],
+  "title": "【2026年最新】Copilotの神機能まとめ！スケジュール機能やエージェント機能など",
+  "url": "https://www.youtube.com/watch?v=XHPTmvBn9bM",
   "tags": [
    "Copilot",
    "Microsoft",
@@ -12464,13 +12463,13 @@
    "仕事"
   ],
   "review": [
-   "最新動向から基礎的な操作方法まで、専門の講師が体系的に解説しています。",
-   "Copilotの主要な機能を5つに絞り込み、具体的な活用法を提示します。",
-   "年のトレンドを踏まえつつ、初級者がまず押さえるべき点に焦点を当てた内容です。"
+   "現行Copilotの神機能を体系的にまとめた解説。",
+   "基本概要とセキュリティ、Word・Excel・PowerPointでの資料作成、画像生成、エージェント、ノートブック、外部アプリ連携、メール管理、デスクトップ操作、アプリ内Copilot、Coworkまでを横断する。",
+   "2025年1月時点の製品体系とGPT-4前提で動向を整理していた旧来の解説に代わる現行版。"
   ],
+  "publishedAt": "2026-07-05",
   "scoreStatus": "confirmed",
-  "viewCount": 282991,
-  "publishedAt": "2025-01-19T11:00:10Z"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
@@ -21402,50 +21401,50 @@
  {
   "genre": "ai",
   "sub": "Copilot",
-  "ytid": "JyvAvSm8CMQ",
+  "ytid": "l9rtp8i3Flw",
   "level": "初級",
-  "minutes": 16,
-  "channel": "戸田覚ガジェット",
-  "score": 28,
+  "minutes": 12,
+  "channel": "ユースフル / 実務変革のプロ",
+  "score": 31,
   "axisScores": [
    {
     "axis": "実用性",
-    "score": 3,
-    "note": "実用性は視聴確認が必要"
+    "score": 5,
+    "note": "Excelの自動編集やOutlookの返信など、Office業務に直結する活用を実演で示す"
    },
    {
     "axis": "正確性・鮮度",
     "score": 5,
-    "note": "公開から約1年半以内で鮮度が高い"
+    "note": "2026-05-07公開。Copilot Chatの最新仕様やCoworkなど現行の機能構成が前提"
    },
    {
     "axis": "分かりやすさ",
-    "score": 3,
-    "note": "説明の分かりやすさは要確認"
+    "score": 4,
+    "note": "機能ごとの章立てで、アプリ別に追える"
    },
    {
     "axis": "体系性",
-    "score": 3,
-    "note": "単発Tipsの可能性があり要確認"
+    "score": 4,
+    "note": "Chatから各アプリ、Coworkまで広く扱うが、料金・プランの説明は主題ではない"
    },
    {
     "axis": "信頼性",
     "score": 4,
-    "note": "視聴実績があり候補として有望"
+    "note": "業務研修の実務チャンネル（ユースフル）の解説で、実演ベース"
    },
    {
     "axis": "視聴体験",
-    "score": 5,
-    "note": "社会人が見切りやすい長さ"
+    "score": 4,
+    "note": "11分55秒に総まとめとして密度がある"
    },
    {
     "axis": "規約・権利",
     "score": 5,
-    "note": "YouTubeへの標準リンクまたは公式プレーヤーで視聴できることを前提に紹介"
+    "note": "YouTube標準リンクのみで権利上の問題なし"
    }
   ],
-  "title": "【驚異的に便利！】Office＋Copilotの便利さを知ってください。これは業務効率化の神機能ですね。AIがいよいよやってきました。",
-  "url": "https://www.youtube.com/watch?v=JyvAvSm8CMQ",
+  "title": "【2026年版】進化が止まらないCopilotの最新活用テクニック総まとめ！",
+  "url": "https://www.youtube.com/watch?v=l9rtp8i3Flw",
   "tags": [
    "Copilot",
    "Microsoft",
@@ -21453,13 +21452,13 @@
    "仕事"
   ],
   "review": [
-   "Microsoft OfficeとCopilotを組み合わせた具体的な活用術を紹介しています。",
-   "AIが実務のどの工程をサポートするのか、機能を順序立てて解説する構成です。",
-   "基礎知識から応用への流れを整理しており、導入検討の際の指針となります。"
+   "現行のMicrosoft 365 Copilotの活用テクニック総まとめ。",
+   "Copilot Chatの最新仕様、リサーチエージェント、Excelの自動編集、Outlookの返信作成、Copilot Coworkまで、Office業務での使い方を実演で紹介する。",
+   "2025年1月時点の料金を前提に費用対効果を訴求していた旧来の紹介に代わる、現行機能の実演編。"
   ],
+  "publishedAt": "2026-05-07",
   "scoreStatus": "confirmed",
-  "viewCount": 267686,
-  "publishedAt": "2025-01-07T09:00:19Z"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "kaikei",
@@ -39499,62 +39498,62 @@
  {
   "genre": "ai",
   "sub": "DeepSeek",
-  "ytid": "snn2JbAgVc4",
+  "ytid": "HtccoMfBp2c",
   "level": "初級",
   "minutes": 22,
-  "channel": "PIVOT 公式チャンネル",
+  "channel": "ITとAIのルーティンラボ",
   "score": 30,
   "axisScores": [
    {
     "axis": "実用性",
-    "score": 4,
-    "note": "タイトル上は実務・手順に結びつきやすい"
+    "score": 3,
+    "note": "使い方と料金・性能の実測が中心で、開発寄りの題材が多い。一般向けの情勢解説という元の役割とはずれる"
    },
    {
     "axis": "正確性・鮮度",
     "score": 5,
-    "note": "公開から約1年半以内で鮮度が高い"
+    "note": "2026-10-23公開。現行のV4.1 Flash（1017版）の料金とベンチマークを実測で示す"
    },
    {
     "axis": "分かりやすさ",
     "score": 4,
-    "note": "初心者向けの説明が期待できる"
+    "note": "料金→ベンチマーク→比較→実演と比較の軸が明確"
    },
    {
     "axis": "体系性",
-    "score": 3,
-    "note": "単発Tipsの可能性があり要確認"
+    "score": 4,
+    "note": "料金、性能比較、実演、注意点まで一通りの検証の弧がある"
    },
    {
     "axis": "信頼性",
-    "score": 4,
-    "note": "視聴実績があり候補として有望"
+    "score": 5,
+    "note": "同一お題での生成比較という検証可能な方法で、注意点も明示し、解説資料を別途提供している"
    },
    {
     "axis": "視聴体験",
-    "score": 5,
-    "note": "社会人が見切りやすい長さ"
+    "score": 4,
+    "note": "21分53秒。実演と比較で進む"
    },
    {
     "axis": "規約・権利",
     "score": 5,
-    "note": "YouTubeへの標準リンクまたは公式プレーヤーで視聴できることを前提に紹介"
+    "note": "YouTube標準リンクのみで権利上の問題なし"
    }
   ],
-  "title": "【DeepSeek速報解説】40歳の超新星／超低コストで開発できた３つの工夫／OpenAIとGoogleの脅威ではない／NVIDIAのピンチか？／オープンソースで公開した狙い／米中対立への影響",
-  "url": "https://www.youtube.com/watch?v=snn2JbAgVc4",
+  "title": "DeepSeek V4.1 Flashの使い方｜1017版の料金・ベンチマークと3Dゲームの実力",
+  "url": "https://www.youtube.com/watch?v=HtccoMfBp2c",
   "tags": [
    "DeepSeek",
    "使い方"
   ],
   "review": [
-   "DeepSeekの最初の迷いを減らし、学ぶ順番を作りやすい一本。",
-   "基礎を短時間で見渡し、手を動かす前の準備に向いている。",
-   "仕事の合間にも見切りやすい標準的な長さのため、目的を決めて見ると吸収しやすい。"
+   "DeepSeek V4.1 Flash（1017版）の料金と性能を実測で確かめる検証動画。",
+   "ベンチマークの確認、他モデルとの比較、同じお題での生成比べ（3Dゲーム生成など）を通して、どこまで使えるかを示す。",
+   "注意点の明示と解説資料の提供もあり、2025年1月の登場時点の数字と情勢を前提にした速報対談に代わる現行モデルの実測編。"
   ],
+  "publishedAt": "2026-10-23",
   "scoreStatus": "confirmed",
-  "viewCount": 328019,
-  "publishedAt": "2025-01-29T03:00:56Z"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "shikaku",
@@ -45126,64 +45125,63 @@
  {
   "genre": "ai",
   "sub": "Siri AI",
-  "ytid": "UZOencQhI1g",
+  "ytid": "-WEylVZ2xVQ",
   "level": "初級",
-  "minutes": 73,
-  "channel": "あっちゃん教えて",
-  "score": 30,
+  "minutes": 38,
+  "channel": "みずおじさん / 誰でも分かるスマホ講座",
+  "score": 33,
   "axisScores": [
    {
     "axis": "実用性",
-    "note": "使うための準備から各機能の操作まで、実機で試しながら確認できる",
-    "score": 5
+    "score": 5,
+    "note": "対応機種・初期設定・呼び出し方から日常の使い方5選まで、実機操作でそのまま再現できる"
    },
    {
     "axis": "正確性・鮮度",
-    "note": "対象はiOS 18.4版と明示され、2025年4月の公開と比較的新しい",
-    "score": 5
+    "score": 5,
+    "note": "2026-11-04公開。iOS 27.2で日本語対応したSiri AIという現行の前提"
    },
    {
     "axis": "分かりやすさ",
-    "note": "機能ごとに章が分かれ、知りたい機能だけを選んで見られる",
-    "score": 4
+    "score": 5,
+    "note": "チャプターが細かく、違い→設定→使い方→注意点の順が明快"
    },
    {
     "axis": "体系性",
-    "note": "準備手順から個別機能、まとめまで、使い方の全体を扱う",
-    "score": 5
+    "score": 5,
+    "note": "設定から活用、注意点までガイドとして完結している"
    },
    {
     "axis": "信頼性",
-    "note": "概要欄下部にアフィリエイトリンクが含まれ、注記でその旨が明示されている",
-    "score": 3
+    "score": 4,
+    "note": "実機操作の実演で、気をつけたいことの章も置かれている"
    },
    {
     "axis": "視聴体験",
-    "note": "73分の長尺で、必要な機能を選んで見る前提の長さ",
-    "score": 3
+    "score": 4,
+    "note": "38分4秒。チャプターで必要な箇所へ飛べる"
    },
    {
     "axis": "規約・権利",
-    "note": "YouTubeの公式埋め込みで視聴でき、アフィリエイトの注記がある",
-    "score": 5
+    "score": 5,
+    "note": "YouTube標準リンクのみで権利上の問題なし"
    }
   ],
-  "title": "【初心者向け】iPhone日本語版Apple Intelligenceの使い方｜便利機能10選まとめ(iOS18.4版)",
-  "url": "https://www.youtube.com/watch?v=UZOencQhI1g",
+  "title": "【Siri AI完全ガイド】新しいSiriが凄すぎる。初期設定から便利な使い方5選＋1を徹底解説",
+  "url": "https://www.youtube.com/watch?v=-WEylVZ2xVQ",
   "tags": [
    "Apple Intelligence",
    "iPhone",
    "使い方"
   ],
   "review": [
-   "iPhoneの日本語版Apple Intelligenceの使い方を、iOS 18.4版として便利機能10選にまとめた動画。",
-   "ビジュアルインテリジェンス、作文ツール、文字起こしと要約、画像生成まで、機能ごとに章が分かれている。",
-   "概要欄下部にはアフィリエイトリンクが含まれ、その旨が注記されている。"
+   "iOS 27.2で日本語対応した新しいSiri AIの完全ガイド。",
+   "対応機種と初期設定、3つの呼び出し方、Siri専用アプリの使い方から、予定を理解した会話、メールや写真からの情報検索、画面の理解と操作、カメラで調べる、面倒な作業を任せる、といった便利な使い方5選＋1を実機操作で解説する。",
+   "使ううえで気をつけたいことで締め、iOS 18.4版の機能10選に代わる現行版。"
   ],
+  "publishedAt": "2026-11-04",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-11",
-  "viewCount": 62691,
-  "publishedAt": "2025-04-04T09:31:11Z"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "shikaku",
@@ -50616,65 +50614,65 @@
   "ytid": "BHgJH2Junxw"
  },
  {
+  "genre": "ai",
+  "sub": "Midjourney",
+  "ytid": "7E27R3rTKX4",
+  "level": "初級",
+  "minutes": 70,
+  "channel": "Dr.slump-J / クリエイティブツール解説",
+  "score": 32,
   "axisScores": [
    {
     "axis": "実用性",
-    "note": "登録方法からプロンプトのコツ、生成後の操作、各ページの役割、参照機能まで実務の全工程を扱う",
-    "score": 5
+    "score": 5,
+    "note": "登録から画面の見方、パラメータ、編集、各ページの機能まで、実際の生成画面を見ながら順に操作できる"
    },
    {
     "axis": "正確性・鮮度",
-    "note": "2025年3月公開で、Web版の画面構成と機能に沿った内容",
-    "score": 4
+    "score": 4,
+    "note": "2026-08-08公開で現行Web版の画面が前提。ただしデフォルトモデルの版名は概要欄で明示されていない"
    },
    {
     "axis": "分かりやすさ",
-    "note": "プロンプトのコツを項目別に分け、初心者が順に追える目次になっている",
-    "score": 5
+    "score": 5,
+    "note": "目次が分単位で細かく、初心者の疑問に沿って進む"
    },
    {
     "axis": "体系性",
-    "note": "基礎、プロンプト、生成操作、ページ解説、参照機能、プロフィール設定と体系立てられている",
-    "score": 5
+    "score": 5,
+    "note": "基本操作→パラメータ→編集→ページ別機能→参照系機能と、ガイドとして完結している"
    },
    {
     "axis": "信頼性",
-    "note": "実画面ベースの解説で、同一分野の関連動画と相互に参照し合う構成になっている",
-    "score": 4
+    "score": 4,
+    "note": "元の動画と同チャンネルの続編で実演中心。概要欄に有料講座の案内はある"
    },
    {
     "axis": "視聴体験",
-    "note": "長尺だが目次が細かく、必要な章だけの視聴ができる",
-    "score": 4
+    "score": 4,
+    "note": "69分34秒と長尺だが、目次で必要な箇所へ飛べる"
    },
    {
     "axis": "規約・権利",
-    "note": "有料講座の案内が概要欄にあるが明示されており、動画自体は無料で完結している",
-    "score": 4
+    "score": 5,
+    "note": "YouTube標準リンクのみで権利上の問題なし"
    }
   ],
-  "channel": "Dr.slump-J / クリエイティブツール解説",
-  "genre": "ai",
-  "level": "初級",
-  "minutes": 53,
-  "publishedAt": "2025-03-22T10:00:30Z",
-  "review": [
-   "Midjourney Web版の見方と使い方を、登録からプロンプトの基礎・応用まで網羅するパーフェクトガイド。",
-   "プロンプトのコツを複数項目に分け、バリエーションやアップスケール、各ページの役割、各種参照機能まで順に解説する。",
-   "Midjourneyをこれから始める初心者から、機能を体系的に学び直したい人向け。"
-  ],
-  "score": 31,
-  "scoreConfirmedAt": "2026-11-19",
-  "scoreStatus": "confirmed",
-  "sub": "Midjourney",
+  "title": "【2026年最新】初心者向けMidjourneyの使い方！Web版の見方と使い方、プロンプトの基礎から応用まで分かるパーフェクトガイド！",
+  "url": "https://www.youtube.com/watch?v=7E27R3rTKX4",
   "tags": [
    "使い方",
    "プロンプト",
    "Web版"
   ],
-  "title": "初心者向けMidjourneyの使い方！Web版の見方と使い方、プロンプトの基礎から応用まで分かるパーフェクトガイド！",
-  "url": "https://www.youtube.com/watch?v=KZ1wLoLPfrM",
-  "ytid": "KZ1wLoLPfrM"
+  "review": [
+   "2026年最新版のMidjourney Web版パーフェクトガイド。",
+   "登録方法と画面の見方、プロンプトの組み立て方、スタイライズやカオスなどのパラメータ、画像編集と拡張、Explore・Create・Edit・Personalize・Moodboardsなど各ページの機能までを実際の生成画面で解説する。",
+   "スタイル参照やキャラクター参照も含み、Version 6.1の画面が前提だった旧来のガイドに代わる現行版。"
+  ],
+  "publishedAt": "2026-08-08",
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "axisScores": [

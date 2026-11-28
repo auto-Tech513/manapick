@@ -45,7 +45,7 @@
 - 主なトピック: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Cline / ComfyUI / Copilot / Cursor / DeepL / DeepSeek / ElevenLabs / Figma(Figma AI) / Gamma / Gemini / Gemma / GitHub Copilot / Google AI Mode / Google AI Studio / Google Veo / Google翻訳 / Grok / Hailuo AI / HeyGen / Kling AI / LM Studio / Lovable / Manus / Midjourney / Notion AI / Notta / Ollama / OpenAI Codex / OpenClaw / Perplexity / PixVerse / Qwen / Replit Agent / Runway / Siri AI / Stable Diffusion / Suno / Supabase / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
 - ロードマップ: 生成AIロードマップ
   - STEP1（初級）: アカウントを作り、AIに指示して回答を得られる。ChatGPT/Gemini/Claudeの違いが分かる。｜動画: 【最新版】超初心者OK！ChatGPTの使い方・基礎をわかりやすく解説！(資料付き) / 【完全マスター】AI初心者が学ぶべきGeminiの基本的な使い方を徹底解説するで。 / 【完全版】Claudeの使い方入門・全機能をまるっと解説します！〈Projects / Skills / Cowork / Claude Codeまで〉
-  - STEP2（中級）: 無料版の応用機能・主要機能を業務に当てはめて使える。｜動画: 【保存版】ChatGPT 2025年最新入門～6つのステップでChatGPTの基礎～応用機能までマスター！ChatGPT無料版に対応！これから始める初心者も、多少使ったことがある中級者も / 【脱初心者】AIへの指示出しがうまくいくプロンプトの基礎徹底解説するで！ / 【初心者向け】APIとは何か、実際の使い方や注意点が全部分かる動画【AI自動化】
+  - STEP2（中級）: 無料版の応用機能・主要機能を業務に当てはめて使える。｜動画: 【2026年版】ChatGPTの使い方完全ガイド｜1時間で初期設定・プロンプト・最新機能まで / 【脱初心者】AIへの指示出しがうまくいくプロンプトの基礎徹底解説するで！ / 【初心者向け】APIとは何か、実際の使い方や注意点が全部分かる動画【AI自動化】
   - STEP3（中〜上級）: AIに作業を任せる自動化と、プロンプト設計の入口を理解して使い分けられる。｜動画: 【1本で全て分かる】初心者でも簡単に自動化！究極のAIエージェント「n8n」の使い方・入門講座。（活用事例：ChatGPT/Google/Slack連携） / 【40分でマスター】完全初心者でも”明日から実務で使える”Microsoft 365 Copilot完全攻略 / 【完全攻略】Googleの画像生成AI「Nano Banana Pro」の使い方を解説します
 - 代表動画:
 1. 【完全マスター】AI初心者が学ぶべきGeminiの基本的な使い方を徹底解説するで。（生成AI / Gemini / 34/35 / 17分 / publishedAt=2025-07-31T10:01:20Z） https://manapick.app/video/k1qFX5zJwLk/
