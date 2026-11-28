@@ -1917,7 +1917,8 @@
   ],
   "viewCount": 62640,
   "publishedAt": "2025-07-20T10:11:01Z",
-  "scoreStatus": "confirmed"
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "video",
@@ -2966,7 +2967,8 @@
   ],
   "viewCount": 65187,
   "publishedAt": "2025-06-26T10:00:44Z",
-  "scoreStatus": "confirmed"
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "video",
@@ -8422,7 +8424,8 @@
   ],
   "viewCount": 723053,
   "publishedAt": "2025-06-15T11:15:09Z",
-  "scoreStatus": "confirmed"
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "english",
@@ -8787,7 +8790,8 @@
   ],
   "viewCount": 214651,
   "publishedAt": "2025-08-23T09:00:48Z",
-  "scoreStatus": "confirmed"
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "english",
@@ -9890,7 +9894,8 @@
   ],
   "viewCount": 29639,
   "publishedAt": "2025-07-18T11:31:15Z",
-  "scoreStatus": "confirmed"
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "english",
@@ -16661,7 +16666,7 @@
   "scoreStatus": "confirmed",
   "viewCount": 10426,
   "publishedAt": "2025-08-09T10:30:35Z",
-  "scoreConfirmedAt": "2026-11-15"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
@@ -18573,7 +18578,8 @@
   ],
   "scoreStatus": "confirmed",
   "viewCount": 73146,
-  "publishedAt": "2025-07-24T10:01:31Z"
+  "publishedAt": "2025-07-24T10:01:31Z",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "kaikei",
@@ -18818,7 +18824,8 @@
   ],
   "scoreStatus": "confirmed",
   "viewCount": 58382,
-  "publishedAt": "2025-08-04T09:03:21Z"
+  "publishedAt": "2025-08-04T09:03:21Z",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "kaikei",
@@ -39437,7 +39444,8 @@
   ],
   "scoreStatus": "confirmed",
   "viewCount": 38374,
-  "publishedAt": "2025-06-30T12:00:17Z"
+  "publishedAt": "2025-06-30T12:00:17Z",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
@@ -45489,7 +45497,7 @@
   ],
   "publishedAt": "2025-06-23T00:00:00Z",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-13"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
@@ -47002,7 +47010,7 @@
    "導入ではなく効率化・自動化が主題の、実務開発者向けの内容。"
   ],
   "score": 29,
-  "scoreConfirmedAt": "2026-11-13",
+  "scoreConfirmedAt": "2026-11-29",
   "scoreStatus": "confirmed",
   "sub": "Claude",
   "tags": [
@@ -50785,7 +50793,7 @@
    "ローカルLLMを試したい初心者から、Pythonからモデルを呼び出したい開発者向け。"
   ],
   "score": 30,
-  "scoreConfirmedAt": "2026-11-19",
+  "scoreConfirmedAt": "2026-11-29",
   "scoreStatus": "confirmed",
   "sub": "LM Studio",
   "tags": [
@@ -53278,7 +53286,7 @@
   ],
   "publishedAt": "2025-07-08T11:07:00Z",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-23"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "shikaku",
