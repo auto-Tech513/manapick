@@ -281,8 +281,6 @@ export default async function GuidePage({ params }: GuidePageProps) {
               <li><a href="#guide-cta-title">関連ロードマップ</a></li>
             </ol>
           </details>
-        {/* 手動枠（2026-11-19 上部アンカー広告をやめた分の補い）：2026-11-26 オーナー指示で STEP の一覧の中ほどから、STEP セクションの直前（セクションの切れ目）へ移動。表示条件（STEP 4つ以上）と枠数は不変 */}
-        {showStepsAd ? <AdSlot slot="1438236565" placement="guide-before-steps" /> : null}
         <section className="guide-section" aria-labelledby="guide-videos-title">
           <h2 id="guide-videos-title">各STEPの厳選動画</h2>
           <div className="guide-step-list">
@@ -401,6 +399,11 @@ export default async function GuidePage({ params }: GuidePageProps) {
           </div>
         </section>
 
+        {/* 手動枠（2026-11-19 上部アンカー広告をやめた分の補い）。2026-11-26 に STEP の一覧の中ほどから STEP セクションの直前へ移したが、
+            直前の枠（guide-after-reason）との間が閉じた目次だけで約406px しかなく、2枠がほぼ続いて見えていた（2026-11-28 実測、HQ 02 #89）。
+            STEP・つまずき・学習プラン・補足FAQ・関連ロードマップの後（本文のまとまりの後）へ移す。表示条件（STEP 4つ以上）と枠数は不変 */}
+        {showStepsAd ? <AdSlot slot="1438236565" placement="guide-after-roadmap" /> : null}
+
         {latestNews ? (
           <section className="guide-section guide-related-news" aria-labelledby="guide-news-title">
             <p className="section-eyebrow">Related News</p>
@@ -416,8 +419,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
 
         <NetworkContextBand genreKey={guide.genre} pagePath={`/guide/${guide.slug}/`} />
 
-        {/* 手動枠（2026-11-19 上部アンカー広告をやめた分の補い）：記事を読み終えた位置。直前の枠との間に、
-            つまずき・学習プラン・関連ロードマップ・メルマガ・関連情報の節をはさむ（1画面に2つ並ばない） */}
+        {/* 手動枠（2026-11-19 上部アンカー広告をやめた分の補い）：記事を読み終えた位置。直前の枠（STEP 4つ以上のガイドは
+            guide-after-roadmap、それ以外は guide-after-steps）との間に、関連情報・ネットワークの帯をはさむ */}
         <AdSlot slot="1438236565" placement="guide-before-pr" />
 
         <GuidePrSection guide={guide} />
