@@ -1124,7 +1124,7 @@
   ],
   "publishedAt": "2025-03-02T11:00:25Z",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-14"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
@@ -4563,7 +4563,8 @@
   ],
   "viewCount": 84101,
   "publishedAt": "2025-02-05T09:01:11Z",
-  "scoreStatus": "confirmed"
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "video",
@@ -4995,7 +4996,8 @@
   ],
   "viewCount": 43601,
   "publishedAt": "2024-12-16T21:00:28Z",
-  "scoreStatus": "confirmed"
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "english",
@@ -7443,7 +7445,8 @@
   ],
   "viewCount": 52194,
   "publishedAt": "2025-01-28T11:00:48Z",
-  "scoreStatus": "confirmed"
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "video",
@@ -9640,7 +9643,8 @@
   ],
   "viewCount": 43245,
   "publishedAt": "2025-01-31T11:01:13Z",
-  "scoreStatus": "confirmed"
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
@@ -10130,7 +10134,8 @@
   ],
   "viewCount": 20645,
   "publishedAt": "2025-03-29T11:00:15Z",
-  "scoreStatus": "confirmed"
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "data",
@@ -10741,7 +10746,8 @@
   ],
   "viewCount": 10502,
   "publishedAt": "2025-01-02T13:49:49Z",
-  "scoreStatus": "confirmed"
+  "scoreStatus": "confirmed",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
@@ -13081,7 +13087,8 @@
   ],
   "scoreStatus": "confirmed",
   "viewCount": 112148,
-  "publishedAt": "2025-01-22T11:12:36Z"
+  "publishedAt": "2025-01-22T11:12:36Z",
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
@@ -43122,7 +43129,7 @@
    "運営する有料コミュニティやLINE資料への案内が概要欄にある点は分けて見ておきたい。"
   ],
   "score": 31,
-  "scoreConfirmedAt": "2026-11-11",
+  "scoreConfirmedAt": "2026-11-29",
   "scoreStatus": "confirmed",
   "sub": "Notion AI",
   "tags": [
@@ -49815,7 +49822,7 @@
   ],
   "publishedAt": "2025-03-18T09:00:04Z",
   "scoreStatus": "confirmed",
-  "scoreConfirmedAt": "2026-11-19"
+  "scoreConfirmedAt": "2026-11-29"
  },
  {
   "genre": "ai",
