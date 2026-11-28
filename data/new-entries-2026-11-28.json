@@ -1,0 +1,141 @@
+{
+ "date": "2026-11-28",
+ "videos": [
+  {
+   "genre": "prog",
+   "sub": "AWS認定 クラウドプラクティショナー",
+   "ytid": "8L02BagQUU4",
+   "title": "【入門】AWSとは？初めて学ぶ方に向けて超わかりやく解説！",
+   "score": 30,
+   "minutes": 12,
+   "channel": "AWS資格 対策講座",
+   "publishedAt": "2025-02-17T11:00:18Z"
+  },
+  {
+   "genre": "ai",
+   "sub": "DeepSeek",
+   "ytid": "eI50iOE5XMo",
+   "title": "中国AI【DeepSeek】の謎に迫る! \"なぜ世界が慌てるのか？\"一日で92兆円が飛んだ理由は？中国の狙いとは？",
+   "score": 29,
+   "minutes": 14,
+   "channel": "パソコン博士TAIKI",
+   "publishedAt": "2025-01-31T10:03:37Z"
+  },
+  {
+   "genre": "ai",
+   "sub": "Manus",
+   "ytid": "8Jqm1_R33Z4",
+   "title": "【革命】AIエージェント「Manus」の使い方を徹底解説！【誰でもアプリが作れる】",
+   "score": 28,
+   "minutes": 30,
+   "channel": "ここなのAI大学",
+   "publishedAt": "2026-02-09T08:53:05Z"
+  }
+ ],
+ "sisterLinks": {
+  "8L02BagQUU4": [
+   {
+    "site": "license",
+    "slug": "aws-clf",
+    "name": "AWS認定 クラウドプラクティショナー（CLF）",
+    "url": "https://license.manapick.app/license/aws-clf/"
+   }
+  ],
+  "eI50iOE5XMo": [
+   {
+    "site": "ai",
+    "slug": "deepseek",
+    "name": "DeepSeek",
+    "url": "https://ai.manapick.app/tool/deepseek/"
+   }
+  ],
+  "8Jqm1_R33Z4": [
+   {
+    "site": "ai",
+    "slug": "manus",
+    "name": "Manus",
+    "url": "https://ai.manapick.app/tool/manus/"
+   }
+  ]
+ },
+ "rejected": [
+  {
+   "ytid": "_A4Z0fxPkc4",
+   "approxScore": 27,
+   "reason": "NewsPicksの座談形式で概念解説が中心。目次・章立てがなく実演の手順を確認できない。プールのサブReplit Agentとも内容がゆるい一致にとどまる。",
+   "title": "【必然の未来】もう高収入のエンジニアは要らなくなる？凄すぎる「バイブコーディング」を完全解説（Replit／AIエージェント／生成AI／プログラミング／cusor／devin／解説：後藤直義、森川潤）"
+  },
+  {
+   "ytid": "fBbPiJrIAmY",
+   "approxScore": 22,
+   "reason": "概要欄の大半が書籍販売・noteマガジン・オンラインサロンの誘導で、動画の章立て・構成を確認できない。信頼性2。",
+   "title": "【無料で使える1番良いAIはコレ🌟】最新のChatGPTエージェントを超えるAIエージェントが無料で使える🆓manusの使い方超初心者向け徹底解説🔰【マナス】【マヌス】【ChatGPT Agent】"
+  },
+  {
+   "ytid": "1d0ANPjwgKI",
+   "approxScore": 27,
+   "reason": "目次・章立てがなく、2024年受験を前提にした「今年」表記の勉強法で鮮度3。基準28点に1点届かず。",
+   "title": "【緊急回答：それは絶対やらないで！】今年賃貸不動産経営管理士と宅建を受験する人に絶対にやらないでほしい勉強法を初心者向けに解説します。"
+  },
+  {
+   "ytid": "cWq1Q6-TnrI",
+   "approxScore": 23,
+   "reason": "概要欄の大半がLINE誘導（キット配布・法人相談・スクール）で章立てなし。信頼性2・体系性2。",
+   "title": "無料で今一番使える話題のAIツール『Manus』の神機能・使い方・具体的な活用法を紹介します！【AIエージェント】"
+  },
+  {
+   "ytid": "B3dbo9MGFGg",
+   "approxScore": 27,
+   "reason": "HeyGenの機能解説で章立てはあるが2024-11-04公開で鮮度3、概要欄の大半が有料講座・LINEプレゼント誘導で信頼性3。",
+   "title": "【AIと会話】分身アバター生成AI「HeyGen」が超進化！驚愕レベルなので徹底解説"
+  },
+  {
+   "ytid": "hEBZY7_4YMs",
+   "approxScore": 22,
+   "reason": "DeepSeekの検閲を試す好奇心企画で章立てなし。実用性2・体系性2。",
+   "title": "AI界に衝撃を与えた中国の生成AI「ディープシーク」、質問の回答が検閲を感じてしまうww"
+  },
+  {
+   "ytid": "d8PnbbGxD-k",
+   "approxScore": 26,
+   "reason": "2023-06-16公開で「今年受験」表記が3年半前のもの。目次・章立てなし。鮮度2。",
+   "title": "【そのやり方落ちます！】宅建と賃貸不動産経営管理士を今年受験する人絶対見て！同時受験で何度も合格してきた私が、失敗しない勉強法を初心者向けにわかりやすく解説講義。"
+  },
+  {
+   "ytid": "zL0prvb7AJc",
+   "approxScore": 27,
+   "reason": "Photoshopの勉強法で章立てはあるが2020-12-26公開で鮮度3。プールのサブ「Webクリエイター能力認定試験」と内容が不一致。",
+   "title": "【Photoshop講座】フォトショップ勉強法！独学できる？"
+  },
+  {
+   "ytid": "QVl7njtsFZM",
+   "approxScore": null,
+   "reason": "非公開動画。oEmbed 403、yt-dlpで private と確認。生存確認に失敗したため検証不可。",
+   "title": "【初心者向け】Pythonの独学完全ロードマップ【3ステップで解説】"
+  },
+  {
+   "ytid": "WVEX0x-UPnc",
+   "approxScore": 30,
+   "reason": "採点は30点だが、内容は「起業初心者におすすめの資格5選」でビジネス会計検定試験の扱いを章・タグ・概要欄のどこからも確認できない。サブを検証できないため不採用。",
+   "title": "【30代40代】これ取ってる人は勝ち組です！起業初心者におすすめの資格を徹底解説！"
+  },
+  {
+   "ytid": "s1Gjgg0MqBs",
+   "approxScore": 30,
+   "reason": "採点は30点だが、内容はPLAUD NOTEでプールのサブNottaと不一致。aiにPLAUD・文字起こしのサブがなく、Nottaの下に置くのは誤分類のため不採用。",
+   "title": "PLAUD NOTE　【 初期設定と使い方！機能紹介 】AIボイスレコーダー 、アプリで文字起こしや自動要約☆　通話も録音可能！会議やパワハラ対策に！"
+  },
+  {
+   "ytid": "_PmudWdVqKQ",
+   "approxScore": 28,
+   "reason": "算術上は28点だが、2024-08-25公開の画面操作マニュアルで正確性・鮮度2。UI陳腐化のため鮮度ルールに照らして見送り（2026-11-27のHeyGen 2023年版見送りと同一判断）。",
+   "title": "【最新版 HeyGen使い方完全解説】[初心者向け]アバターAI動画作成・編集、プロンプトから動画生成ができる「HeyGen」 #heygen #動画生成AI #AIアバター"
+  },
+  {
+   "ytid": "gAwuyVyDhxE",
+   "approxScore": 28,
+   "reason": "28点だが、同じDeepSeekショック解説ではeI50iOE5XMo（29点・14分・25章）の方が強く、1枠に2本の同テーマは置かないため次回以降の候補として保留。",
+   "title": "【DeepSeekショック】中国AIの脅威の技術革新に世界が震撼…AI大国アメリカはどう迎え撃つのか？"
+  }
+ ]
+}

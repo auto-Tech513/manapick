@@ -4,8 +4,8 @@
 > 動画はYouTube上で公開されているものを掲載し、YouTubeへのリンクまたはYouTube公式プレーヤーで紹介します。ダウンロードや再配布は扱いません。
 
 ## 公開中の10ジャンル
-- [生成AI（221本）](https://manapick.app/genre/ai/)
-- [プログラミング・IT（73本）](https://manapick.app/genre/prog/)
+- [生成AI（223本）](https://manapick.app/genre/ai/)
+- [プログラミング・IT（74本）](https://manapick.app/genre/prog/)
 - [動画編集・クリエイティブ（69本）](https://manapick.app/genre/video/)
 - [語学・英語（60本）](https://manapick.app/genre/english/)
 - [データ分析・DX（37本）](https://manapick.app/genre/data/)
@@ -39,7 +39,7 @@
 - [2026-11-23 「有料版だけの特権」が終わった。Google Meetの1080p送信が全ユーザーに開放、対応パソコンではデフォルトでオン](https://manapick.app/news/2026-11-23-google-meet-1080p-all-users/): 出典 Google Workspace Updates
 
 ## ジャンル別AEOインデックス
-### 生成AI（221本）
+### 生成AI（223本）
 - [ジャンルページ](https://manapick.app/genre/ai/)
 - [ガイド](https://manapick.app/guide/generative-ai/)
 - 主なトピック: AI資格 / Adobe Firefly / Bolt.new / ChatGPT / Claude / Cline / ComfyUI / Copilot / Cursor / DeepL / DeepSeek / ElevenLabs / Figma(Figma AI) / Gamma / Gemini / Gemma / GitHub Copilot / Google AI Mode / Google AI Studio / Google Veo / Google翻訳 / Grok / Hailuo AI / HeyGen / Kling AI / LM Studio / Lovable / Manus / Midjourney / Notion AI / Notta / Ollama / OpenAI Codex / OpenClaw / Perplexity / PixVerse / Qwen / Replit Agent / Runway / Siri AI / Stable Diffusion / Suno / Supabase / VOICEVOX / Vrew / Zapier / プロンプト / 画像生成 / 自動化
@@ -54,7 +54,7 @@
 4. 【初心者OK🔰】アンソロピック「Claude Cowork」使い方基礎講座！活用法まで分かりやすく解説！（生成AI / Claude / 33/35 / 23分 / publishedAt=2026-03-14T10:15:05Z） https://manapick.app/video/NTFIFwmrjiw/
 5. 【完全版】Googleの最強AIツールGeminiの使い方徹底解説【初心者必見】（生成AI / Gemini / 33/35 / 31分 / publishedAt=2026-03-11T11:15:03Z） https://manapick.app/video/SfCNwzANbUY/
 
-### プログラミング・IT（73本）
+### プログラミング・IT（74本）
 - [ジャンルページ](https://manapick.app/genre/prog/)
 - [ガイド](https://manapick.app/guide/python/)
 - 主なトピック: AWS認定 クラウドプラクティショナー / AWS認定 ソリューションアーキテクト / Git / Java / JavaScript / Python / Python3エンジニア認定基礎試験 / SQL / Web開発 / インフラ / 基本情報技術者 / 情報セキュリティマネジメント試験
@@ -221,7 +221,7 @@
 ## 主要URL
 - [トップ](https://manapick.app/)
 - [YouTube学習動画おすすめ](https://manapick.app/youtube-learning/)
-- [YouTube学習動画882本の独自集計](https://manapick.app/research/youtube-learning-data/)
+- [YouTube学習動画885本の独自集計](https://manapick.app/research/youtube-learning-data/)
 - [7日学習プラン](https://manapick.app/study-plan/)
 - [Manapick Network（学ぶ・AI・資格・仕事・企業）](https://manapick.app/network/)
 - [学習ロードマップ一覧](https://manapick.app/guide/)

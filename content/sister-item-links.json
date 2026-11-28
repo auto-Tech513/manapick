@@ -1989,7 +1989,7 @@
    "url": "https://company.manapick.app/company/faber-company/"
   }
  ],
- "8ne9BHSochA":  [
+ "8ne9BHSochA": [
   {
    "site": "ai",
    "slug": "runway",
@@ -1997,7 +1997,7 @@
    "url": "https://ai.manapick.app/tool/runway/"
   }
  ],
- "LsA4vIX_3UY":  [
+ "LsA4vIX_3UY": [
   {
    "site": "ai",
    "slug": "github-copilot",
@@ -2147,6 +2147,30 @@
    "slug": "copilot",
    "name": "Microsoft Copilot",
    "url": "https://ai.manapick.app/tool/copilot/"
+  }
+ ],
+ "8L02BagQUU4": [
+  {
+   "site": "license",
+   "slug": "aws-clf",
+   "name": "AWS認定 クラウドプラクティショナー（CLF）",
+   "url": "https://license.manapick.app/license/aws-clf/"
+  }
+ ],
+ "eI50iOE5XMo": [
+  {
+   "site": "ai",
+   "slug": "deepseek",
+   "name": "DeepSeek",
+   "url": "https://ai.manapick.app/tool/deepseek/"
+  }
+ ],
+ "8Jqm1_R33Z4": [
+  {
+   "site": "ai",
+   "slug": "manus",
+   "name": "Manus",
+   "url": "https://ai.manapick.app/tool/manus/"
   }
  ]
 }
